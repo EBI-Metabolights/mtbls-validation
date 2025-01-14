@@ -631,9 +631,9 @@ rule_a_200_200_001_02 contains result if {
 
 	violated_values := {sprintf("[%v invalid characters: %v]", [assignment_file, matches_str]) |
 		some assignment_file in assignment_files
-		matches = regex.find_n("[^A-Za-z0-9/._-]", assignment_file, -1)
+		matches = regex.find_all_string_submatch_n("[^A-Za-z0-9/._-]", assignment_file, -1)
 		count(matches) > 0
-		matches_set := {match | some match in matches}
+		matches_set := {match | some match in matches[_]}
 		matches_str := concat(" ", matches_set)
 	}
 

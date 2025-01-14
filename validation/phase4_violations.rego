@@ -93,8 +93,8 @@ rule_f_400_090_001_03 contains result if {
 	violated_values := { sprintf("[row: %03v, file: '%v', unexpected characters: %v]", [row, value, matches_str]) | 
 		some idx, value in sheet.table.data[header.columnName]
 		count(value) > 0
-        matches = regex.find_n("[^A-Za-z0-9/._-]", value, -1)
-        matches_set := { match | some match in matches}
+        matches = regex.find_all_string_submatch_n("[^A-Za-z0-9/._-]", value, -1)
+        matches_set := { match | some match in matches[_]}
         matches_str := concat(" ", matches_set)
         count(matches_str) > 0
         row := idx + 1 + row_offset
@@ -197,7 +197,7 @@ rule_f_400_090_001_09 contains result if {
 
     violated_values := { file | 
 		some file, _ in input.studyFolderMetadata.files
-		matches = regex.find_n("[^A-Za-z0-9/._-]", file, -1)
+		matches = regex.find_all_string_submatch_n("[^A-Za-z0-9/._-]", file, -1)
         count(matches) > 0
 	}
 

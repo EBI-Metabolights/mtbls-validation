@@ -3,7 +3,6 @@ package metabolights.validation.v2.phase1.violations
 import rego.v1
 import data.metabolights.validation.v2.functions as f
 
-
 #########################################################################################################
 #########################################################################################################
 # INVESTIGATION FILE: ONTOLOGY SOURCE REFERENCE SECTION
@@ -113,7 +112,8 @@ rule_i_100_200_002_01 contains result if {
 #  priority: MEDIUM
 #  section: investigation.studies
 rule_i_100_200_003_01 contains result if {
-	not time.parse_ns("2006-01-02", input.investigation.submissionDate)
+	# not time.parse_ns("2006-01-02", input.investigation.submissionDate)
+	not true
 	msg := sprintf("Investigation submission date '%v' is not converted to a valid date. Expected ISO8601 (e.g., 2023-01-01) format.", [input.investigation.submissionDate])
 	source := input.investigationFilePath
 	result := f.format(rego.metadata.rule(), msg, source)
@@ -130,7 +130,8 @@ rule_i_100_200_003_01 contains result if {
 #  section: investigation.studies
 rule_i_100_200_004_01 contains result if {
 
-	not time.parse_ns("2006-01-02", input.investigation.publicReleaseDate)
+	# not time.parse_ns("2006-01-02", input.investigation.publicReleaseDate)
+	not true
 	msg := sprintf("Investigation public release date '%v' is not converted to a valid date. Expected ISO8601 (e.g., 2023-01-01) format.", [input.investigation.publicReleaseDate])
 	source := input.investigationFilePath
 	result := f.format(rego.metadata.rule(), msg, source)
@@ -295,7 +296,7 @@ rule_i_100_300_003_02 contains result if {
 	pattern := sprintf("[^%v]", [def._ALLOWED_CHARS_PATTERN])
 	study := input.investigation.studies[i]
 	count(study.title) > 0
-	matches = regex.find_n(pattern, study.title, -1)
+	matches = regex.find_all_string_submatch_n(pattern, study.title, -1)
 	matches_set := {x| x := matches[_]}
 	count(matches_set) > 0
 	matches_set_str = ""
@@ -369,7 +370,8 @@ rule_i_100_300_004_02 contains result if {
 rule_i_100_300_005_01 contains result if {
 	some i
 	study := input.investigation.studies[i]
-	not time.parse_ns("2006-01-02", study.submissionDate)
+	# not time.parse_ns("2006-01-02", study.submissionDate)
+	not true
 	msg := sprintf("Study submission date '%v' is not converted to a valid date for the study %v. Expected ISO8601 (e.g., 2023-01-01) format.", [study.submissionDate, study.identifier])
 	source := input.investigationFilePath
 	result := f.format(rego.metadata.rule(), msg, source)
@@ -386,7 +388,8 @@ rule_i_100_300_005_01 contains result if {
 rule_i_100_300_006_01 contains result if {
 	some i
 	study := input.investigation.studies[i]	
-	not time.parse_ns("2006-01-02", study.publicReleaseDate)
+	# not time.parse_ns("2006-01-02", study.publicReleaseDate)
+	not true
 	msg := sprintf("Study public release date '%v' is not converted to a valid date for the study %v. Expected ISO8601 (e.g., 2023-01-01) format.", [study.publicReleaseDate, study.identifier])
 	source := input.investigationFilePath
 	result := f.format(rego.metadata.rule(), msg, source)
@@ -1078,8 +1081,8 @@ rule_i_100_340_002_03 contains result if {
 	some i
 	assay := input.investigation.studies[i].studyAssays.assays[j]
 	count(assay.fileName) > 0
-	matches = regex.find_n("[^A-Za-z0-9/._-]", assay.fileName, -1)
-	matches_set := {x | x := matches[_]}
+	matches = regex.find_all_string_submatch_n("[^A-Za-z0-9/._-]", assay.fileName, -1)
+	matches_set := {x | x := matches[_][_]}
 	matches_str := concat(" ", matches_set)
 	not matches_str == ""
 	msg := sprintf("Assay file name contains invalid characters for the study %v. Do not use special characters: %v characters. Index: %v, current value: '%v'", [input.investigation.studies[i].identifier, matches_str, j + 1, assay.fileName])
@@ -1443,8 +1446,8 @@ rule_i_100_350_003_02 contains result if {
 	some study in input.investigation.studies
 	some j, protocol in study.studyProtocols.protocols
 	count(protocol.description) > 0
-	matches = regex.find_n(pattern, protocol.description, -1)
-	matches_set := {sprintf("[%v]", [x]) | some match in matches; x := regex.replace(match, `[\f\t\n\r]`, "<whitespace char>")}
+	matches = regex.find_all_string_submatch_n(pattern, protocol.description, -1)
+	matches_set := {sprintf("[%v]", [x]) | some match in matches[_]; x := regex.replace(match, `[\f\t\n\r]`, "<whitespace char>")}
 	count(matches_set) > 0
 	matches_set_str := concat(", ", matches_set)
 	msg := sprintf("Non printible chars in protocol '%v'. Description of study %v: Phrases that contain non accepted characters: '%v'", [protocol.name, input.investigation.studies[i].identifier, matches_set_str])

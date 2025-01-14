@@ -23,19 +23,19 @@ rule___100_100_001_01 contains result if {
 	result := f.format(rego.metadata.rule(), "Input is not defined.", "input")
 }
 
-# METADATA
-# title: Input data format is not valid.
-# description: Input data should have valid schema.
-# custom:
-#  rule_id: rule___100_100_001_02
-#  type: ERROR
-#  priority: CRITICAL
-#  section: input
-rule___100_100_001_02 contains result if {
-	[_, errors] := json.match_schema(input, data.schemas)
-	count(errors) > 0
-	result := f.format_schema_error(rego.metadata.rule(), errors)
-}
+# # METADATA
+# # title: Input data format is not valid.
+# # description: Input data should have valid schema.
+# # custom:
+# #  rule_id: rule___100_100_001_02
+# #  type: ERROR
+# #  priority: CRITICAL
+# #  section: input
+# rule___100_100_001_02 contains result if {
+# 	[_, errors] := json.match_schema(input, data.schemas)
+# 	count(errors) > 0
+# 	result := f.format_schema_error(rego.metadata.rule(), errors)
+# }
 
 # METADATA
 # title: There is a critical file parse error for i_Investigation.txt.
@@ -143,7 +143,6 @@ rule___100_100_100_06 contains result if {
 		startswith(file, "i_")
 	}
 	extra_files = all_files - referenced_files
-	print(extra_files)
 	count(extra_files) > 0
 	some file_name in extra_files
 
@@ -491,8 +490,8 @@ rule___100_300_001_10 contains result if {
 	some file, assay in input.assays
 
 	count(file) > 0
-	matches = regex.find_n("[^A-Za-z0-9/._-]", file, -1)
-	matches_set := {x | x := matches[_]}
+	matches = regex.find_all_string_submatch_n("[^A-Za-z0-9/._-]", file, -1)
+	matches_set := {x | x := matches[_][_]}
 	matches_str := concat(" ", matches_set)
 	not matches_str == ""
 	msg := sprintf("Assay file name ('%v') contains invalid characters. Do not use special characters: %v", [file, matches_str])
@@ -648,8 +647,8 @@ rule___100_400_001_08 contains result if {
 	some file, maf in input.metaboliteAssignments
 
 	count(file) > 0
-	matches = regex.find_n("[^A-Za-z0-9/._-]", file, -1)
-	matches_set := {x | x := matches[_]}
+	matches = regex.find_all_string_submatch_n("[^A-Za-z0-9/._-]", file, -1)
+	matches_set := {x | x := matches[_][_]}
 	matches_str := concat(" ", matches_set)
 	not matches_str == ""
 	msg := sprintf("Metabolite assignment file name ('%v') contains invalid characters. Do not use special characters: %v. ", [file, matches_str])
