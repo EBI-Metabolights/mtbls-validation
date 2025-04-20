@@ -1,0 +1,2553 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://ebi-metabolights.github.io/mtbls-validation/prioritised-control-lists/assay-file-control-lists/nmr/">
+      
+      
+      
+      
+      <link rel="icon" href="../../../assets/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.12">
+    
+    
+      
+        <title>NMR Assay File Prioritised Control Lists Terms - MetaboLights Metadata File Templates & Validation Rules</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.2afb09e1.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#nmr-assay-file-prioritised-control-lists-terms" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="MetaboLights Metadata File Templates &amp; Validation Rules" class="md-header__button md-logo" aria-label="MetaboLights Metadata File Templates & Validation Rules" data-md-component="logo">
+      
+  <img src="../../../assets/metabolights.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            MetaboLights Metadata File Templates & Validation Rules
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              NMR Assay File Prioritised Control Lists Terms
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../README.md" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Overview
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../design/architecture.md" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Design
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../api.md" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Development
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="MetaboLights Metadata File Templates &amp; Validation Rules" class="md-nav__button md-logo" aria-label="MetaboLights Metadata File Templates & Validation Rules" data-md-component="logo">
+      
+  <img src="../../../assets/metabolights.png" alt="logo">
+
+    </a>
+    MetaboLights Metadata File Templates & Validation Rules
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../README.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Design
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Design
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../design/architecture.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Aspects
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            Aspects
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../design/aspects/dependency_inversion.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Dependency Inversion
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../design/aspects/configuration.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Configuration
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../design/aspects/logging.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Logging
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../design/aspects/auth.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Auth
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../design/aspects/async_tasks.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Async Tasks
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Presentation
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            Presentation
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../api.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    REST API
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Development
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Development
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../api.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Dependency Management
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../api.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Versioning
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../api.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Tests
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Formatting
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            Formatting
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../api.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Linters
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../api.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Pre-commit Hooks
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../api.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Documentation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#parameter-valueinstrument-column" class="md-nav__link">
+    <span class="md-ellipsis">
+      Parameter Value[Instrument] Column
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parameter-valuenmr-probe-column" class="md-nav__link">
+    <span class="md-ellipsis">
+      Parameter Value[NMR Probe] Column
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parameter-valuenmr-tube-type-column" class="md-nav__link">
+    <span class="md-ellipsis">
+      Parameter Value[NMR tube type] Column
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parameter-valuepulse-sequence-name-column" class="md-nav__link">
+    <span class="md-ellipsis">
+      Parameter Value[Pulse sequence name] Column
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parameter-valuesolvent-column" class="md-nav__link">
+    <span class="md-ellipsis">
+      Parameter Value[Solvent] Column
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="nmr-assay-file-prioritised-control-lists-terms">NMR Assay File Prioritised Control Lists Terms<a class="headerlink" href="#nmr-assay-file-prioritised-control-lists-terms" title="Permanent link">&para;</a></h1>
+<h2 id="parameter-valueinstrument-column">Parameter Value[Instrument] Column<a class="headerlink" href="#parameter-valueinstrument-column" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Term</th>
+<th>Term Source</th>
+<th>Term Accession</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Agilent DD2 600 MHz spectrometer</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000395</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Bruker 400 MHz spectrometer</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000396</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Bruker 500 MHz spectrometer</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000397</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Bruker 600 MHz Ultrashield spectrometer</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000399</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Bruker 600 MHz spectrometer</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000398</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Bruker AVANCE 500 MHz spectrometer</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000401</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Bruker AVANCE 600 MHz spectrometer</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000402</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Bruker AVANCE 700 MHz spectrometer</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000403</td>
+</tr>
+<tr>
+<td>9</td>
+<td>Bruker AVANCE 850 MHz spectrometer</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000404</td>
+</tr>
+<tr>
+<td>10</td>
+<td>Bruker AVANCE 900 MHz spectrometer</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000405</td>
+</tr>
+<tr>
+<td>11</td>
+<td>Bruker AVANCE AV 500 MHz spectrometer</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000406</td>
+</tr>
+<tr>
+<td>12</td>
+<td>Bruker AVANCE AV 600 MHz spectrometer</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000407</td>
+</tr>
+<tr>
+<td>13</td>
+<td>Bruker AVANCE DRX 500 MHz spectrometer</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000408</td>
+</tr>
+<tr>
+<td>14</td>
+<td>Bruker AVANCE DRX 600 MHz spectrometer</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000409</td>
+</tr>
+<tr>
+<td>15</td>
+<td>Bruker AVANCE DRX 700 MHz spectrometer</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000410</td>
+</tr>
+<tr>
+<td>16</td>
+<td>Bruker AVANCE HD 700 MHz spectrometer</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000411</td>
+</tr>
+<tr>
+<td>17</td>
+<td>Bruker AVANCE II 500 MHz Ultrashield spectrometer</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000413</td>
+</tr>
+<tr>
+<td>18</td>
+<td>Bruker AVANCE II 500 MHz spectrometer</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000412</td>
+</tr>
+<tr>
+<td>19</td>
+<td>Bruker AVANCE II 600 MHz spectrometer</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000416</td>
+</tr>
+<tr>
+<td>20</td>
+<td>Bruker AVANCE II 700 MHz spectrometer</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000417</td>
+</tr>
+<tr>
+<td>21</td>
+<td>Bruker AVANCE II 800 MHz US2 spectrometer</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000418</td>
+</tr>
+<tr>
+<td>22</td>
+<td>Bruker AVANCE II+ 500 MHz spectrometer</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000414</td>
+</tr>
+<tr>
+<td>23</td>
+<td>Bruker AVANCE II+ 800 MHz spectrometer</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000415</td>
+</tr>
+<tr>
+<td>24</td>
+<td>Bruker AVANCE III 400 MHz spectrometer</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000419</td>
+</tr>
+<tr>
+<td>25</td>
+<td>Bruker AVANCE III 500 MHz spectrometer</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000420</td>
+</tr>
+<tr>
+<td>26</td>
+<td>Bruker AVANCE III 600 MHz spectrometer</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000421</td>
+</tr>
+<tr>
+<td>27</td>
+<td>Bruker AVANCE III 700 MHz spectrometer</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000422</td>
+</tr>
+<tr>
+<td>28</td>
+<td>Bruker AVANCE III 800 MHz spectrometer</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000423</td>
+</tr>
+<tr>
+<td>29</td>
+<td>Bruker AVANCE III HD 600 MHz spectrometer</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000424</td>
+</tr>
+<tr>
+<td>30</td>
+<td>Bruker AVANCE III HD 700 MHz spectrometer</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000425</td>
+</tr>
+<tr>
+<td>31</td>
+<td>Bruker AVANCE III HD 800 MHz spectrometer</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000426</td>
+</tr>
+<tr>
+<td>32</td>
+<td>Bruker AVANCE NEO 500 MHz spectrometer</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002109</td>
+</tr>
+<tr>
+<td>33</td>
+<td>Bruker AVANCE NEO 800 MHz spectrometer</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002110</td>
+</tr>
+<tr>
+<td>34</td>
+<td>Bruker Ascend 700 MHz spectrometer</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000400</td>
+</tr>
+<tr>
+<td>35</td>
+<td>Varian Mercury AS400 MHz spectrometer</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000427</td>
+</tr>
+<tr>
+<td>36</td>
+<td>Varian Unity Inova 400 MHz spectrometer</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000428</td>
+</tr>
+<tr>
+<td>37</td>
+<td>Varian Unity Inova 500 MHz spectrometer</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000429</td>
+</tr>
+<tr>
+<td>38</td>
+<td>Varian Unity Inova 600 MHz spectrometer</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000430</td>
+</tr>
+<tr>
+<td>39</td>
+<td>Varian VNMR 600 MHz spectrometer</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000431</td>
+</tr>
+<tr>
+<td>40</td>
+<td>Varian VNMRS 600 MHz spectrometer</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000432</td>
+</tr>
+<tr>
+<td>41</td>
+<td>Varian VNMRS DirectDrive 600 MHz spectrometer</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000433</td>
+</tr>
+</tbody>
+</table>
+<h2 id="parameter-valuenmr-probe-column">Parameter Value[NMR Probe] Column<a class="headerlink" href="#parameter-valuenmr-probe-column" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Term</th>
+<th>Term Source</th>
+<th>Term Accession</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>1.7 mm CPTCI 1H-13C/15N/D Z-GRD</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000434</td>
+</tr>
+<tr>
+<td>2</td>
+<td>1.7 mm CPTCI 1H/13C/15N/D Z-GRD cryorobe</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000435</td>
+</tr>
+<tr>
+<td>3</td>
+<td>1.7 mm PATXI 1H/31P-13C-D Z-GRD</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002002</td>
+</tr>
+<tr>
+<td>4</td>
+<td>2.5 mm BBO-1H/D Z-GRD</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000436</td>
+</tr>
+<tr>
+<td>5</td>
+<td>2.5 mm QXI 1H/15N/13C/31P/D Z-GRD</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000437</td>
+</tr>
+<tr>
+<td>6</td>
+<td>3 mm 1H(X)-PFG inverse configuration</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000440</td>
+</tr>
+<tr>
+<td>7</td>
+<td>3 mm BB 1H/X</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000439</td>
+</tr>
+<tr>
+<td>8</td>
+<td>3 mm BB 1H</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000438</td>
+</tr>
+<tr>
+<td>9</td>
+<td>3 mm CPTCI 1H-13C/15N/D Z-GRD</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002025</td>
+</tr>
+<tr>
+<td>10</td>
+<td>3.2 mm MAS BB/1H</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000441</td>
+</tr>
+<tr>
+<td>11</td>
+<td>4 mm HR-MAS dual inverse 1H/13C with a Magic Angle gradient</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000445</td>
+</tr>
+<tr>
+<td>12</td>
+<td>4 mm HRMAS 1H/13C/15N/2H Z-GRD</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000444</td>
+</tr>
+<tr>
+<td>13</td>
+<td>4 mm HRMAS 1H/13C/2H Z-GRD</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000442</td>
+</tr>
+<tr>
+<td>14</td>
+<td>4 mm HRMAS 1H/13C/D Z-GRD</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000443</td>
+</tr>
+<tr>
+<td>15</td>
+<td>4 mm HRMAS 1H/31P/13C/D</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002026</td>
+</tr>
+<tr>
+<td>16</td>
+<td>5 mm 13C HCN cold probe</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002028</td>
+</tr>
+<tr>
+<td>17</td>
+<td>5 mm 1H-13C cryoprobe</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000446</td>
+</tr>
+<tr>
+<td>18</td>
+<td>5 mm 1H{13C,15N} triple resonance PFG salt tolerant cold probe</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000503</td>
+</tr>
+<tr>
+<td>19</td>
+<td>5 mm 1H{13C,15N} tunable triple resonance PFG probe</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000504</td>
+</tr>
+<tr>
+<td>20</td>
+<td>5 mm 4-Nucleus (13C/31P-1H/19F) (Standard Probe)</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000502</td>
+</tr>
+<tr>
+<td>21</td>
+<td>5 mm ATMA cryoprobe</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000447</td>
+</tr>
+<tr>
+<td>22</td>
+<td>5 mm AutoX DB</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000507</td>
+</tr>
+<tr>
+<td>23</td>
+<td>5 mm BBI 1H-BB Z-GRD</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000450</td>
+</tr>
+<tr>
+<td>24</td>
+<td>5 mm BBI 1H/D-BB Z-GRD</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000451</td>
+</tr>
+<tr>
+<td>25</td>
+<td>5 mm BBI 1H</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000449</td>
+</tr>
+<tr>
+<td>26</td>
+<td>5 mm BBI double resonance</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000452</td>
+</tr>
+<tr>
+<td>27</td>
+<td>5 mm BBI</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000448</td>
+</tr>
+<tr>
+<td>28</td>
+<td>5 mm BBO H&amp;F cryoprobe</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000455</td>
+</tr>
+<tr>
+<td>29</td>
+<td>5 mm BBO-1H Z-GRD</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000453</td>
+</tr>
+<tr>
+<td>30</td>
+<td>5 mm BBO-1H/D Z-GRD</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000454</td>
+</tr>
+<tr>
+<td>31</td>
+<td>5 mm CPBBO BB-1H/19F/15N/D Z/GRD cryoprobe</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000457</td>
+</tr>
+<tr>
+<td>32</td>
+<td>5 mm CPBBO BB-1H/19F/D Z-GRD cryoprobe</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000456</td>
+</tr>
+<tr>
+<td>33</td>
+<td>5 mm CPP 1H/19F-13C/15N/D Z-GRD</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000458</td>
+</tr>
+<tr>
+<td>34</td>
+<td>5 mm CPPBBO BB-1H/19F/D Z-GRD</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002029</td>
+</tr>
+<tr>
+<td>35</td>
+<td>5 mm CPQCI 1H-31P/13C/15N/D Z-GRD</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000472</td>
+</tr>
+<tr>
+<td>36</td>
+<td>5 mm CPQCI 1H/19F-13C/15N/D Z-GRD</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000471</td>
+</tr>
+<tr>
+<td>37</td>
+<td>5 mm CPQNP 1H/13C/15N/31P/D Z-GRD</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002030</td>
+</tr>
+<tr>
+<td>38</td>
+<td>5 mm CPQNP 1H/15N/13C/31P Z-GRD</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002031</td>
+</tr>
+<tr>
+<td>39</td>
+<td>5 mm CPTCI 1H-13C/15N/D Z-GRD</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000460</td>
+</tr>
+<tr>
+<td>40</td>
+<td>5 mm CPTCI 1H-13C/31P/D Z-GRD cryoprobe</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000465</td>
+</tr>
+<tr>
+<td>41</td>
+<td>5 mm CPTCI 1H-13C/31P/D cryoprobe</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000464</td>
+</tr>
+<tr>
+<td>42</td>
+<td>5 mm CPTCI 1H-31P/13C/D Z-GRD cryoprobe</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000468</td>
+</tr>
+<tr>
+<td>43</td>
+<td>5 mm CPTCI 1H-31P/13C/D Z-GRD</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000467</td>
+</tr>
+<tr>
+<td>44</td>
+<td>5 mm CPTCI 1H/13C/15N/D Z-GRD cryoprobe</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000461</td>
+</tr>
+<tr>
+<td>45</td>
+<td>5 mm CPTCI 1H/13C/31P Z-GRD cryoprobe</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000463</td>
+</tr>
+<tr>
+<td>46</td>
+<td>5 mm CPTCI 1H/13C/31P</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000462</td>
+</tr>
+<tr>
+<td>47</td>
+<td>5 mm CPTCI 1H/19F-13C/15N/D Z-GRD</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000466</td>
+</tr>
+<tr>
+<td>48</td>
+<td>5 mm CPTCI 700S4 H&amp;F/C/N-D-05 Z</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000506</td>
+</tr>
+<tr>
+<td>49</td>
+<td>5 mm CPTCI</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000459</td>
+</tr>
+<tr>
+<td>50</td>
+<td>5 mm CPTXI 1H-13C/15N/D Z-GRD</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000469</td>
+</tr>
+<tr>
+<td>51</td>
+<td>5 mm CPTXO 13C/15N-1H/D Z-GRD</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002032</td>
+</tr>
+<tr>
+<td>52</td>
+<td>5 mm CPTXO 13C/D-1H/15N Z-GRD</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000470</td>
+</tr>
+<tr>
+<td>53</td>
+<td>5 mm HCN Z-gradient PFG RT</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000475</td>
+</tr>
+<tr>
+<td>54</td>
+<td>5 mm HCN triple resonance</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000474</td>
+</tr>
+<tr>
+<td>55</td>
+<td>5 mm HRMAS BB/2H-1H MAS-GRD</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000476</td>
+</tr>
+<tr>
+<td>56</td>
+<td>5 mm HX</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000477</td>
+</tr>
+<tr>
+<td>57</td>
+<td>5 mm PABBFO BB-19F/1H/D Z-GRD</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002033</td>
+</tr>
+<tr>
+<td>58</td>
+<td>5 mm PABBI 1H-BB/D Z-GRD</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000480</td>
+</tr>
+<tr>
+<td>59</td>
+<td>5 mm PABBI 1H/D-BB Z-GRD</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000481</td>
+</tr>
+<tr>
+<td>60</td>
+<td>5 mm PABBO BB-1H/D Z-GRD</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000482</td>
+</tr>
+<tr>
+<td>61</td>
+<td>5 mm PADUL 13C-1H/D Z-GRD</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000483</td>
+</tr>
+<tr>
+<td>62</td>
+<td>5 mm PATBO BB-1H/19F/D Z-GRD</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000484</td>
+</tr>
+<tr>
+<td>63</td>
+<td>5 mm PATXI 1H-13C/15N XYZ-GRD</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000486</td>
+</tr>
+<tr>
+<td>64</td>
+<td>5 mm PATXI 1H-13C/15N/D Z-GRD</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000487</td>
+</tr>
+<tr>
+<td>65</td>
+<td>5 mm PATXI 1H/D-13C/15N Z-GRD</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000485</td>
+</tr>
+<tr>
+<td>66</td>
+<td>5 mm PATXI 1H/D/19F-13C/15N Z-GRD</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002034</td>
+</tr>
+<tr>
+<td>67</td>
+<td>5 mm QNP 1H/13C/15N/31P</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000488</td>
+</tr>
+<tr>
+<td>68</td>
+<td>5 mm QXI 1H/15N/13C/31P/D Z-GRD</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000489</td>
+</tr>
+<tr>
+<td>69</td>
+<td>5 mm TBI 1H-BB XYZ-GRD</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000490</td>
+</tr>
+<tr>
+<td>70</td>
+<td>5 mm TBO BB-1H/19F/D Z-GRD</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000491</td>
+</tr>
+<tr>
+<td>71</td>
+<td>5 mm TXI 1H/13C/15N/D Z/GRD cryoprobe</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000495</td>
+</tr>
+<tr>
+<td>72</td>
+<td>5 mm TXI 1H/D-13C/15N XYZ-GRD</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000496</td>
+</tr>
+<tr>
+<td>73</td>
+<td>5 mm TXI ATMA</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000497</td>
+</tr>
+<tr>
+<td>74</td>
+<td>5 mm TXI D/1H-13C/15N Z-GRD</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000498</td>
+</tr>
+<tr>
+<td>75</td>
+<td>5 mm TXI HCN CryoProbe</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000499</td>
+</tr>
+<tr>
+<td>76</td>
+<td>5 mm TXI</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000494</td>
+</tr>
+<tr>
+<td>77</td>
+<td>5 mm Triple 1H-13C/15N/D</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000492</td>
+</tr>
+<tr>
+<td>78</td>
+<td>5 mm Triple-resonance cryoprobe with z-gradients</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000500</td>
+</tr>
+<tr>
+<td>79</td>
+<td>5 mm Triple-resonance salt tolerant cold probe</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000501</td>
+</tr>
+<tr>
+<td>80</td>
+<td>5 mm cryogenic</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000473</td>
+</tr>
+<tr>
+<td>81</td>
+<td>5 mm inverse 1H/13C/15N/D cryoprobe</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000479</td>
+</tr>
+<tr>
+<td>82</td>
+<td>5 mm inverse</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000478</td>
+</tr>
+<tr>
+<td>83</td>
+<td>5 mm triple resonance cryoprobe</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000493</td>
+</tr>
+<tr>
+<td>84</td>
+<td>BBI</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000505</td>
+</tr>
+</tbody>
+</table>
+<h2 id="parameter-valuenmr-tube-type-column">Parameter Value[NMR tube type] Column<a class="headerlink" href="#parameter-valuenmr-tube-type-column" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Term</th>
+<th>Term Source</th>
+<th>Term Accession</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>1.7 mm (Norell)</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000374</td>
+</tr>
+<tr>
+<td>2</td>
+<td>1.7 mm SampleJet</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000372</td>
+</tr>
+<tr>
+<td>3</td>
+<td>1.7 mm standard</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000373</td>
+</tr>
+<tr>
+<td>4</td>
+<td>10 mm standard</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000394</td>
+</tr>
+<tr>
+<td>5</td>
+<td>2.5 mm standard</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000375</td>
+</tr>
+<tr>
+<td>6</td>
+<td>3 mm (Norell)</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000377</td>
+</tr>
+<tr>
+<td>7</td>
+<td>3 mm SampleJet</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000378</td>
+</tr>
+<tr>
+<td>8</td>
+<td>3 mm standard</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000376</td>
+</tr>
+<tr>
+<td>9</td>
+<td>4 mm Zirconia MAS rotor</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000380</td>
+</tr>
+<tr>
+<td>10</td>
+<td>4 mm standard MAS rotor</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000379</td>
+</tr>
+<tr>
+<td>11</td>
+<td>4.25 mm (Bruker BioSpin)</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000381</td>
+</tr>
+<tr>
+<td>12</td>
+<td>4.25 mm standard</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000382</td>
+</tr>
+<tr>
+<td>13</td>
+<td>5 mm (Bruker BioSpin)</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002027</td>
+</tr>
+<tr>
+<td>14</td>
+<td>5 mm (New Era)</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000383</td>
+</tr>
+<tr>
+<td>15</td>
+<td>5 mm (Norell Inc.)</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000384</td>
+</tr>
+<tr>
+<td>16</td>
+<td>5 mm (Wilmad-LabGlass)</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000385</td>
+</tr>
+<tr>
+<td>17</td>
+<td>5 mm 541-pp</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000386</td>
+</tr>
+<tr>
+<td>18</td>
+<td>5 mm 7 in (Wilmad-LabGlass)</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000387</td>
+</tr>
+<tr>
+<td>19</td>
+<td>5 mm 7 in 507-grade</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000388</td>
+</tr>
+<tr>
+<td>20</td>
+<td>5 mm ST500-7 (Norell)</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000392</td>
+</tr>
+<tr>
+<td>21</td>
+<td>5 mm SampleJet</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000389</td>
+</tr>
+<tr>
+<td>22</td>
+<td>5 mm Shigemi D2O matched</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000390</td>
+</tr>
+<tr>
+<td>23</td>
+<td>5 mm short</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000391</td>
+</tr>
+<tr>
+<td>24</td>
+<td>5 mm standard</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000393</td>
+</tr>
+</tbody>
+</table>
+<h2 id="parameter-valuepulse-sequence-name-column">Parameter Value[Pulse sequence name] Column<a class="headerlink" href="#parameter-valuepulse-sequence-name-column" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Term</th>
+<th>Term Source</th>
+<th>Term Accession</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>1D 13C DEPTQ dept polarization transfer with decoupling during acquisition using shaped pulse for 180 deg pulse on f1 - channel (deptqgpsp)</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002004</td>
+</tr>
+<tr>
+<td>2</td>
+<td>1D 13C with power-gated decoupling (zgpg)</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000516</td>
+</tr>
+<tr>
+<td>3</td>
+<td>1D 13C with power-gated decoupling using 30 deg flip angle (zgpg30)</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002005</td>
+</tr>
+<tr>
+<td>4</td>
+<td>1D 1H 30 deg excitation with f2 presaturation without spoiling gradient (zg30_f2pr)</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000510</td>
+</tr>
+<tr>
+<td>5</td>
+<td>1D 1H T2-filter sequence eliminating J-modulation with water presaturation</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000511</td>
+</tr>
+<tr>
+<td>6</td>
+<td>1D 1H perfect echo with water suppression using excitation sculpting with perfect echo (zgespe)</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002006</td>
+</tr>
+<tr>
+<td>7</td>
+<td>1D 1H spectrum (zg)</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000508</td>
+</tr>
+<tr>
+<td>8</td>
+<td>1D 1H spectrum (zg30)</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000509</td>
+</tr>
+<tr>
+<td>9</td>
+<td>1D 1H with f1 presaturation (zgpr30)</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002007</td>
+</tr>
+<tr>
+<td>10</td>
+<td>1D 1H with presaturation (presat)</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000512</td>
+</tr>
+<tr>
+<td>11</td>
+<td>1D 1H with presaturation (wet)</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000513</td>
+</tr>
+<tr>
+<td>12</td>
+<td>1D 1H with presaturation (zgpr)</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000514</td>
+</tr>
+<tr>
+<td>13</td>
+<td>1D 1H with presaturation excitation sculpting with double pulsed field gradient spin echo (dpfgse)</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002008</td>
+</tr>
+<tr>
+<td>14</td>
+<td>1D 1H with water suppression using excitation sculpting with gradients (zgesgp)</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000515</td>
+</tr>
+<tr>
+<td>15</td>
+<td>1D CPMG with T2 filter and presaturation (ereticcpmgpr1d)</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000518</td>
+</tr>
+<tr>
+<td>16</td>
+<td>1D CPMG with presaturation (cpmgpr1d)</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000517</td>
+</tr>
+<tr>
+<td>17</td>
+<td>1D NOESY 12C 13C custom filtered with presaturation, phase-sensitive gradients, and 13C decoupling (c12c13filternoesygpc13cpd)</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000527</td>
+</tr>
+<tr>
+<td>18</td>
+<td>1D NOESY 12C custom filtered with presaturation, phase-sensitive gradients, and 13C decoupling (c12filternoesygpc13cpd)</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000526</td>
+</tr>
+<tr>
+<td>19</td>
+<td>1D NOESY with presaturation (metnoesy)</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000520</td>
+</tr>
+<tr>
+<td>20</td>
+<td>1D NOESY with presaturation (modified) (pusenoesypr1d)</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000522</td>
+</tr>
+<tr>
+<td>21</td>
+<td>1D NOESY with presaturation (noesypr1d)</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000521</td>
+</tr>
+<tr>
+<td>22</td>
+<td>1D NOESY with presaturation (tnnoesy)</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000523</td>
+</tr>
+<tr>
+<td>23</td>
+<td>1D NOESY with presaturation and spoil gradients (noesygppr1d)</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000524</td>
+</tr>
+<tr>
+<td>24</td>
+<td>1D NOESY with presaturation during relaxation delay and mixing time and spoil gradient (noesygppr1d_kr)</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000525</td>
+</tr>
+<tr>
+<td>25</td>
+<td>1D PROJECT with presaturation (projectedpr)</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000528</td>
+</tr>
+<tr>
+<td>26</td>
+<td>1D for diffusion measurement with stimulated echo and LED, presaturation and spoil gradients (ledbpgppr2s1d)</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002009</td>
+</tr>
+<tr>
+<td>27</td>
+<td>1D homonuclear MQS with selective pulses, without gradients, selects both ZQC and DQC (SSelMQC_refoc_ph)</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000519</td>
+</tr>
+<tr>
+<td>28</td>
+<td>2D 1H-13C HSQC (hsqcetgppr)</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000529</td>
+</tr>
+<tr>
+<td>29</td>
+<td>2D COSY homonuclear shift correlation with phase sensitivity using gradient pulses for selection with multiple quantum filter according to gradient ratio using purge pulses before d1 (cosygpmfphpp)</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002010</td>
+</tr>
+<tr>
+<td>30</td>
+<td>2D COSY using purge pulses before d1 (cosygpppqf)</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002011</td>
+</tr>
+<tr>
+<td>31</td>
+<td>2D COSY with presaturation during relaxation delay and gradient pulses for selection (cosygpprqf)</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002012</td>
+</tr>
+<tr>
+<td>32</td>
+<td>2D HMBC H-1/X correlation via heteronuclear zero and double quantum coherence, phase sensitive using Echo/Antiecho gradient selection with three-fold low-pass J-filter to suppress one-bond correlations, no decoupling during acquisition (hmbcetgpl3nd)</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002013</td>
+</tr>
+<tr>
+<td>33</td>
+<td>2D HMBC using low-pass J-filter (hmbcgplpndqf)</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002014</td>
+</tr>
+<tr>
+<td>34</td>
+<td>2D HSQC H-1/X correlation via double inept transfer using sensitivity improvement phase sensitive using Echo/Antiecho-TPPI gradient selection with decoupling during acquisition using trim pulses in inept transfer (hsqcetgp)</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002018</td>
+</tr>
+<tr>
+<td>35</td>
+<td>2D HSQC H-1/X correlation via double inept transfer using sensitivity improvement phase sensitive using Echo/Antiecho-TPPI gradient selection with decoupling during acquisition using trim pulses in inept transfer using shaped pulses for all 180degree pulses on f2 - channel with gradients in back-inept with presaturation during relaxation delay (hsqcetgpprsisp2.2)</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002019</td>
+</tr>
+<tr>
+<td>36</td>
+<td>2D HSQC H-1/X correlation via double inept transfer using sensitivity improvement phase sensitive using Echo/Antiecho-TPPI gradient selection with decoupling during acquisition using trim pulses in inept transfer with multiplicity editing during selection step using shaped pulses for all 180degree pulses on f2 - channel with gradients in back-inept (hsqcedetgpsisp2.2)</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002020</td>
+</tr>
+<tr>
+<td>37</td>
+<td>2D HSQC using PEP and adiabatic pulses for inversion and refocusing with gradients in back-inept (hsqcetgpsisp2.2)</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000536</td>
+</tr>
+<tr>
+<td>38</td>
+<td>2D HSQC using PEP and adiabatic pulses for inversion and refocusing with gradients in back-inept and suppression of COSY type artefacts (hsqcetgpsisp2.3)</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000537</td>
+</tr>
+<tr>
+<td>39</td>
+<td>2D HSQC using PEP with gradients in back-inept (hsqcetgpsi2)</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002021</td>
+</tr>
+<tr>
+<td>40</td>
+<td>2D HSQC using echo-antiecho and adiabatic pulses for inversion and refocusing (hsqcetgpsp.2)</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000533</td>
+</tr>
+<tr>
+<td>41</td>
+<td>2D HSQC using echo-antiecho and adiabatic pulses for inversion and refocusing with additional water suppression (hsqcetgpsp.2.cl)</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000534</td>
+</tr>
+<tr>
+<td>42</td>
+<td>2D HSQC using echo-antiecho detection and gradient pulses (hsqcedetgp)</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000532</td>
+</tr>
+<tr>
+<td>43</td>
+<td>2D HSQC using echo-antiecho-TPPI gradient selection, constant time, trim pulses, shaped pulses for inversion, no refocussing, off-resonance pulse (hsqcctetgpsp.2)</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000535</td>
+</tr>
+<tr>
+<td>44</td>
+<td>2D HSQC with presaturation (hsqcphpr)</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000531</td>
+</tr>
+<tr>
+<td>45</td>
+<td>2D Interleaved Ultrafast COSY (iufcosy)</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000538</td>
+</tr>
+<tr>
+<td>46</td>
+<td>2D JRES with excitation sculpting &amp; additional water suppression (jresesgp2)</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000539</td>
+</tr>
+<tr>
+<td>47</td>
+<td>2D JRES with homonuclear J-resolved 2D correlation (jresesgp)</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000540</td>
+</tr>
+<tr>
+<td>48</td>
+<td>2D JRES with homonuclear J-resolved 2D correlation (jresqfpr)</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002022</td>
+</tr>
+<tr>
+<td>49</td>
+<td>2D JRES with homonuclear J-resolved 2D correlation, presaturation during relaxation delay with gradients (jresgpprqf)</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000541</td>
+</tr>
+<tr>
+<td>50</td>
+<td>2D TOCSY with homonuclear Hartman-Hahn transfer using DIPSI2 sequence for phase sensitive mixing (dipsi2phpr)</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002023</td>
+</tr>
+<tr>
+<td>51</td>
+<td>2D TOCSY with homonuclear Hartman-Hahn transfer using MLEV17 sequence for phase sensitive mixing using two power levels for excitation and spinlock using purge pulses before d1 (mlevphpp)</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002024</td>
+</tr>
+<tr>
+<td>52</td>
+<td>2D TOCSY with phase sensitive water suppression using MLEV (mlevesgpph)</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000542</td>
+</tr>
+<tr>
+<td>53</td>
+<td>2D TOCSY with presaturation using MLEV (mlevphpr)</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000543</td>
+</tr>
+<tr>
+<td>54</td>
+<td>2D Zero-quantum-filtered total correlation spectra (zTOCSY-em-3)</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000544</td>
+</tr>
+<tr>
+<td>55</td>
+<td>2D homonuclear correlation via dipolar coupling (noesyesgpph)</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000530</td>
+</tr>
+<tr>
+<td>56</td>
+<td>2D homonuclear correlation via dipolar coupling with phase sensitivity and gradient pulses in mixing time (noesygpph)</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002015</td>
+</tr>
+<tr>
+<td>57</td>
+<td>2D homonuclear shift correlation wih delay period to optimize for long-range couplings (cosylrqf)</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002016</td>
+</tr>
+<tr>
+<td>58</td>
+<td>2D homonuclear shift correlation with presaturation during relaxation delay, phase sensitive with double quantum filter (cosydfphpr)</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002017</td>
+</tr>
+<tr>
+<td>59</td>
+<td>M3S COSY</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000545</td>
+</tr>
+</tbody>
+</table>
+<h2 id="parameter-valuesolvent-column">Parameter Value[Solvent] Column<a class="headerlink" href="#parameter-valuesolvent-column" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Term</th>
+<th>Term Source</th>
+<th>Term Accession</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>0.01 M phosphate buffered D2O</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000348</td>
+</tr>
+<tr>
+<td>2</td>
+<td>0.04 M phosphate buffered D2O/H2O</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000357</td>
+</tr>
+<tr>
+<td>3</td>
+<td>0.05 mM phosphate buffered D2O</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000347</td>
+</tr>
+<tr>
+<td>4</td>
+<td>0.07 M phosphate buffered D2O/H2O</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000358</td>
+</tr>
+<tr>
+<td>5</td>
+<td>0.07 M phosphate buffered D2O</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000349</td>
+</tr>
+<tr>
+<td>6</td>
+<td>0.1 M phosphate buffered D2O/H2O</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000359</td>
+</tr>
+<tr>
+<td>7</td>
+<td>0.1 M phosphate buffered D2O</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000350</td>
+</tr>
+<tr>
+<td>8</td>
+<td>0.15 M phosphate buffered D2O</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000351</td>
+</tr>
+<tr>
+<td>9</td>
+<td>0.154 M saline D20</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000370</td>
+</tr>
+<tr>
+<td>10</td>
+<td>0.2 M phosphate buffered D2O</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000352</td>
+</tr>
+<tr>
+<td>11</td>
+<td>0.2 M potassium phosphate buffered D2O + 0.128 mM TSP</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000364</td>
+</tr>
+<tr>
+<td>12</td>
+<td>0.2 M potassium phosphate buffered D2O + 5 mM maleic acid</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002000</td>
+</tr>
+<tr>
+<td>13</td>
+<td>0.2 M potassium phosphate buffered D2O + 5 mM maleic acid</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000369</td>
+</tr>
+<tr>
+<td>14</td>
+<td>0.3 M saline D2O</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000367</td>
+</tr>
+<tr>
+<td>15</td>
+<td>0.5 M phosphate buffered D2O</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000353</td>
+</tr>
+<tr>
+<td>16</td>
+<td>0.5 M potassium phosphate buffered D2O + 0.025 mg/ml TSP</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002001</td>
+</tr>
+<tr>
+<td>17</td>
+<td>0.9% NaCl in D2O</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000366</td>
+</tr>
+<tr>
+<td>18</td>
+<td>1 M phosphate buffered D2O/H2O</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000354</td>
+</tr>
+<tr>
+<td>19</td>
+<td>10% D2O/0.04 mM sodium phosphate buffer/0.4 mM TMSP</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002003</td>
+</tr>
+<tr>
+<td>20</td>
+<td>CD3OD + 0.2 mM phosphate buffer H2O</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002121</td>
+</tr>
+<tr>
+<td>21</td>
+<td>CD3OD + phosphate sodium buffer D2O</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000363</td>
+</tr>
+<tr>
+<td>22</td>
+<td>CD3OD</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000355</td>
+</tr>
+<tr>
+<td>23</td>
+<td>CDCL3</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000361</td>
+</tr>
+<tr>
+<td>24</td>
+<td>D20/H2O</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002131</td>
+</tr>
+<tr>
+<td>25</td>
+<td>D2O + 0.35 mM TSP</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000365</td>
+</tr>
+<tr>
+<td>26</td>
+<td>D2O + 4 mM TSP d4</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002132</td>
+</tr>
+<tr>
+<td>27</td>
+<td>D2O</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000356</td>
+</tr>
+<tr>
+<td>28</td>
+<td>H20 + D20</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000362</td>
+</tr>
+<tr>
+<td>29</td>
+<td>phosphate sodium buffer</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000360</td>
+</tr>
+<tr>
+<td>30</td>
+<td>phosphate-buffered saline D2O</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000368</td>
+</tr>
+<tr>
+<td>31</td>
+<td>saline D2O</td>
+<td>MTBLS</td>
+<td>http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000371</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://x.com/MetaboLights" target="_blank" rel="noopener" title="x.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8l164.9-188.5L26.8 48h145.6l100.5 132.9zm-24.8 373.8h39.1L151.1 88h-42z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://bsky.app/profile/metabolights.bsky.social" target="_blank" rel="noopener" title="bsky.app" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M111.8 62.2C170.2 105.9 233 194.7 256 242.4c23-47.6 85.8-136.4 144.2-180.2 42.1-31.6 110.3-56 110.3 21.8 0 15.5-8.9 130.5-14.1 149.2-18.2 64.8-84.4 81.4-143.3 71.3C456 322 482.2 380 425.6 438c-107.4 110.2-154.3-27.6-166.3-62.9-1.7-4.9-2.6-7.8-3.3-7.8s-1.6 3-3.3 7.8c-12 35.3-59 173.1-166.3 62.9-56.5-58-30.4-116 72.5-133.5C100 314.6 33.8 298 15.7 233.1 10.4 214.4 1.5 99.4 1.5 83.9c0-77.8 68.2-53.4 110.3-21.8z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      <div class="md-progress" data-md-component="progress" role="progressbar"></div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.annotate", "content.code.copy", "content.footnote.tooltips", "content.tabs.link", "content.tooltips", "navigation.footer", "navigation.indexes", "navigation.instant", "navigation.instant.prefetch", "navigation.instant.progress", "navigation.path", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.follow"], "search": "../../../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+    
+  </body>
+</html>
