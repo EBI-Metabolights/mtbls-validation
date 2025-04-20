@@ -61,11 +61,6 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
-        
-        <a href="#metabolights-default-metadata-file-templates-validation-framework" class="md-skip">
-          Skip to content
-        </a>
-      
     </div>
     <div data-md-component="announce">
       
@@ -1496,34 +1491,6 @@
   
   
   
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#metabolights-validation-framework" class="md-nav__link">
-    <span class="md-ellipsis">
-      MetaboLights Validation Framework
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#default-metadata-file-templates-and-validation-rules" class="md-nav__link">
-    <span class="md-ellipsis">
-      Default Metadata File Templates and Validation Rules
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
   
 </nav>
                   </div>
@@ -1541,8 +1508,6 @@
 
 <h1 id="metabolights-default-metadata-file-templates-validation-framework">MetaboLights Default Metadata File Templates &amp; Validation Framework</h1>
 <h2 id="metabolights-validation-framework">MetaboLights Validation Framework</h2>
-<p>MetaboLights validation framework is dynamic and based on jsonschema and <a href="https://www.openpolicyagent.org/">Open Policy Agent</a> </p>
-<h2 id="default-metadata-file-templates-and-validation-rules">Default Metadata File Templates and Validation Rules</h2>
 <table>
 <thead>
 <tr>
@@ -1605,6 +1570,15 @@
 </tr>
 </tbody>
 </table>
+<h2 id="metabolights-validation-framework-building-blocks">MetaboLights Validation Framework Building Blocks</h2>
+<p>MetaboLights Validation Framework contains 4 building blocks:</p>
+<ul>
+<li><em>Study Validation Json Schema</em>: Study Validation Json Schema defines all required input data (ISA-TAB metadata content, study data file information, file parse information, study related information stored in database, etc.) to validate a MetaboLights study.</li>
+<li><em>Validation Configuration &amp; Template Files</em>: Json files contains metadata file templates, controlled vocabularies, restricted vocabularies, configurations, etc.</li>
+<li><em>Validation Rules</em>: Rego based validation rules.</li>
+<li>** </li>
+</ul>
+<p>MetaboLights validation framework is dynamic and based on jsonschema and <a href="https://www.openpolicyagent.org/">Open Policy Agent</a></p>
 
 
 
