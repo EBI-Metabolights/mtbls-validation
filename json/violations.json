@@ -1,6 +1,6 @@
 {
     "validation_version": "2.0.17",
-    "created_at": "2025-04-11T13:20:29.911489+00:00",
+    "created_at": "2025-06-04T14:28:39.420108+00:00",
     "violations": [
         {
             "rule_id": "rule___100_100_001_01",
@@ -726,7 +726,7 @@
             "rule_id": "rule_f_400_090_001_07",
             "title": "Folders are referenced in assay file.",
             "description": "Folder reference in data file column is not allowed. If data file type is a folder, compress it with zip utility tool and reference compressed data file.",
-            "type": "WARNING",
+            "type": "ERROR",
             "section": "files",
             "priority": "HIGH"
         },
@@ -734,7 +734,7 @@
             "rule_id": "rule_f_400_090_001_08",
             "title": "A file in NMR raw data folder is referenced in assay file.",
             "description": "Only .zip files are allowed in this column. If data file or its parent is a raw data folder, compress it with zip utility tool and reference only compressed data file (e.g. 0011/fid -> 0001.zip, 0001/acqu -> 0001.zip).",
-            "type": "WARNING",
+            "type": "ERROR",
             "section": "files",
             "priority": "HIGH"
         },

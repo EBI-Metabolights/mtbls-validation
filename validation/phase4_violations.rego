@@ -138,7 +138,7 @@ rule_f_400_090_001_04 contains result if {
 # description: Folder reference in data file column is not allowed. If data file type is a folder, compress it with zip utility tool and reference compressed data file.
 # custom:
 #  rule_id: rule_f_400_090_001_07
-#  type: WARNING
+#  type: ERROR
 #  priority: HIGH
 #  section: files.general
 rule_f_400_090_001_07 contains result if {
@@ -164,7 +164,7 @@ rule_f_400_090_001_07 contains result if {
 # description: Only .zip files are allowed in this column. If data file or its parent is a raw data folder, compress it with zip utility tool and reference only compressed data file (e.g. 0011/fid -> 0001.zip, 0001/acqu -> 0001.zip).
 # custom:
 #  rule_id: rule_f_400_090_001_08
-#  type: WARNING
+#  type: ERROR
 #  priority: HIGH
 #  section: files.general
 rule_f_400_090_001_08 contains result if {
