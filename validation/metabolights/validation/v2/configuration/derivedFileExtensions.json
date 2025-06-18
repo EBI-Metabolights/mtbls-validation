@@ -1,20 +1,12 @@
 {
     "derivedFileExtensions": [
         ".cdf",
-        ".cef",
-        ".cnx",
-        ".dx",
         ".imzml",
-        ".mgf",
-        ".msp",
         ".mzml",
         ".mzmlb",
         ".mzxml",
         ".nmrml",
-        ".peakml",
         ".scan",
-        ".wiff",
-        ".xy",
-        ".zip"
+        ".wiff"
     ]
 }
