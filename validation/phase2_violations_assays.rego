@@ -936,12 +936,16 @@ rule_a_200_500_001_01 contains result if {
 	some _, sample_sheet in input.samples
 	some header_index, header in sheet.table.headers
 	header.columnHeader == "Derived Spectral Data File"
+	raw_data_file_column_name = "Raw Spectral Data File"
 	row_offset := sheet.table.rowOffset
 	column_index := header.columnIndex
 	column_name := header.columnName
 
 	values := {sprintf("[row: %03v, file name: '%v']", [row, name]) |
 		some i, name in sheet.table.data[column_name]
+		raw_file_name = sheet.table.data[raw_data_file_column_name][i]
+
+		count(raw_file_name) == 0
 		count(name) > 0
 		extensions := f.extension(name, def.CL_DERIVED_FILE_EXTENSIONS)
 		count(extensions) == 0

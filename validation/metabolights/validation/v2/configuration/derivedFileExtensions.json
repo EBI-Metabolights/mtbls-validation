@@ -1,6 +1,5 @@
 {
     "derivedFileExtensions": [
-        ".abf",
         ".cdf",
         ".cef",
         ".cnx",
@@ -14,10 +13,7 @@
         ".nmrml",
         ".peakml",
         ".scan",
-        ".smp",
         ".wiff",
-        ".xlsx",
-        ".xml",
         ".xy",
         ".zip"
     ]

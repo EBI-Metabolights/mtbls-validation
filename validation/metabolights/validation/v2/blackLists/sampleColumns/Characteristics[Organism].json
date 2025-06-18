@@ -2,6 +2,9 @@
   "Characteristics[Organism]": {
     "unexpectedTerms": [
       "cat",
+      "chicken",
+      "plant",
+      "sample",
       "dog",
       "mouse",
       "horse",
@@ -37,7 +40,10 @@
       "none",
       "null",
       "not specified",
-      "not provided"
+      "not provided",
+      "-",
+      "--",
+      "---"
     ]
   }
 }

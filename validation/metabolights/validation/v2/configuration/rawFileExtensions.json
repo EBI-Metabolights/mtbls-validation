@@ -1,6 +1,5 @@
 {
     "rawFileExtensions": [
-        ".abf",
         ".cmp",
         ".d",
         ".dat",
@@ -17,6 +16,7 @@
         ".scan",
         ".wiff",
         ".xps",
-        ".zip"
+        ".zip",
+        ".smp"
     ]
 }
