@@ -935,7 +935,7 @@ rule_a_200_500_001_01 contains result if {
 	some file_name, sheet in input.assays
 	some _, sample_sheet in input.samples
 	some header_index, header in sheet.table.headers
-	header.columnHeader == "Derived Spectral Data File"
+	startswith(header.columnHeader, "Derived Spectral Data File")
 	raw_data_file_column_name = "Raw Spectral Data File"
 	row_offset := sheet.table.rowOffset
 	column_index := header.columnIndex
@@ -944,14 +944,13 @@ rule_a_200_500_001_01 contains result if {
 	values := {sprintf("[row: %03v, file name: '%v']", [row, name]) |
 		some i, name in sheet.table.data[column_name]
 		raw_file_name = sheet.table.data[raw_data_file_column_name][i]
-
-		count(raw_file_name) == 0
+		count(trim_space(raw_file_name)) == 0
 		count(name) > 0
 		extensions := f.extension(name, def.CL_DERIVED_FILE_EXTENSIONS)
 		count(extensions) == 0
 		row := (i + 1) + row_offset
 	}
-
+	count(values) > 0
 	result := f.format_with_desc(rego.metadata.rule(), file_name, column_index + 1, header.columnHeader, values, "Expected extensions", def.CL_DERIVED_FILE_EXTENSIONS_STR)
 }
 
