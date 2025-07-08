@@ -13,8 +13,8 @@
 | 9 | Parameter Value[Scan polarity] | single column | True | 1 | - |  |  |  | |
 | 10 | Parameter Value[Scan m/z range] | single column | True | 1 | - |  |  |  | |
 | 11 | Parameter Value[Instrument] | ontology column | True | 1 | - |  |  |  | |
-| 12 | Parameter Value[Ion source] | single column | False | - | - |  |  |  | |
-| 13 | Parameter Value[Mass analyzer] | single column | False | - | - |  |  |  | |
+| 12 | Parameter Value[Ion source] | ontology column | False | - | - | Where applicable to the instrument. | electron ionization |  | |
+| 13 | Parameter Value[Mass analyzer] | ontology column | False | - | - | The analyser/detector of the mass fragments generated during the assay. | quadrupole |  | |
 | 14 | MS Assay Name | single column | False | - | - |  |  |  | |
 | 15 | Raw Spectral Data File | single column | False | - | - |  |  |  | |
 | 16 | Protocol REF | single column | True | - | - |  |  |  | Data transformation|

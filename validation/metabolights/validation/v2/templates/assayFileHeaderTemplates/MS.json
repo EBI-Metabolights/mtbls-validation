@@ -136,32 +136,40 @@
                 "required": true
             },
             {
-                "columnStructure": "SINGLE_COLUMN",
                 "columnCategory": "Parameter",
                 "columnHeader": "Parameter Value[Ion source]",
                 "columnPrefix": "Parameter Value",
+                "columnStructure": "ONTOLOGY_COLUMN",
                 "controlLists": {
-                    "termSourceRef": "prioritisedStudyFactorRefSources"
+                    "termSourceRef": "prioritisedMsInstrumentRefSources"
                 },
                 "defaultColumnIndex": 15,
                 "defaultValue": null,
                 "maxLength": 0,
                 "minLength": 0,
-                "required": false
+                "required": false,
+                "description": "Where applicable to the instrument.",
+                "examples": [
+                    "electron ionization"
+                ]
             },
             {
-                "columnStructure": "SINGLE_COLUMN",
                 "columnCategory": "Parameter",
                 "columnHeader": "Parameter Value[Mass analyzer]",
                 "columnPrefix": "Parameter Value",
+                "columnStructure": "ONTOLOGY_COLUMN",
                 "controlLists": {
-                    "termSourceRef": "prioritisedStudyFactorRefSources"
+                    "termSourceRef": "prioritisedMassAnalyzerRefSources"
                 },
-                "defaultColumnIndex": 16,
+                "defaultColumnIndex": 18,
                 "defaultValue": null,
                 "maxLength": 0,
                 "minLength": 0,
-                "required": false
+                "required": false,
+                "description": "The analyser/detector of the mass fragments generated during the assay.",
+                "examples": [
+                    "quadrupole"
+                ]
             },
             {
                 "columnStructure": "SINGLE_COLUMN",
@@ -169,7 +177,7 @@
                 "columnHeader": "MS Assay Name",
                 "columnPrefix": "",
                 "controlLists": null,
-                "defaultColumnIndex": 17,
+                "defaultColumnIndex": 21,
                 "defaultValue": null,
                 "maxLength": 0,
                 "minLength": 0,
@@ -181,7 +189,7 @@
                 "columnHeader": "Raw Spectral Data File",
                 "columnPrefix": "",
                 "controlLists": null,
-                "defaultColumnIndex": 18,
+                "defaultColumnIndex": 22,
                 "defaultValue": null,
                 "maxLength": 0,
                 "minLength": 0,
@@ -195,7 +203,7 @@
                 "columnCategory": "Protocol",
                 "columnHeader": "Protocol REF",
                 "columnPrefix": "",
-                "defaultColumnIndex": 19,
+                "defaultColumnIndex": 23,
                 "defaultValue": "Data transformation",
                 "maxLength": 0,
                 "minLength": 0,
@@ -207,7 +215,7 @@
                 "columnHeader": "Normalization Name",
                 "columnPrefix": "",
                 "controlLists": null,
-                "defaultColumnIndex": 20,
+                "defaultColumnIndex": 24,
                 "defaultValue": null,
                 "maxLength": 0,
                 "minLength": 0,
@@ -219,7 +227,7 @@
                 "columnHeader": "Derived Spectral Data File",
                 "columnPrefix": "",
                 "controlLists": null,
-                "defaultColumnIndex": 21,
+                "defaultColumnIndex": 25,
                 "defaultValue": null,
                 "maxLength": 0,
                 "minLength": 0,
@@ -233,7 +241,7 @@
                 "columnCategory": "Protocol",
                 "columnHeader": "Protocol REF",
                 "columnPrefix": "",
-                "defaultColumnIndex": 22,
+                "defaultColumnIndex": 26,
                 "defaultValue": "Metabolite identification",
                 "maxLength": 0,
                 "minLength": 0,
@@ -245,7 +253,7 @@
                 "columnHeader": "Data Transformation Name",
                 "columnPrefix": "",
                 "controlLists": null,
-                "defaultColumnIndex": 23,
+                "defaultColumnIndex": 27,
                 "defaultValue": null,
                 "maxLength": 0,
                 "minLength": 0,
@@ -257,7 +265,7 @@
                 "columnHeader": "Metabolite Assignment File",
                 "columnPrefix": "",
                 "controlLists": null,
-                "defaultColumnIndex": 24,
+                "defaultColumnIndex": 28,
                 "defaultValue": null,
                 "maxLength": 0,
                 "minLength": 1,
