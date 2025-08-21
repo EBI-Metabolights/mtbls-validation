@@ -459,3 +459,26 @@ rule_f_400_100_001_07 contains result if {
 
     result := f.format_with_file_and_values(rego.metadata.rule(), "FILES", extra_files)
 }
+
+# METADATA
+# title: Data files with .imzML extensions but no data files with .ibd extensions within study FILES folder.
+# description: Data files with .ibd extensions often accompany data files with .imzML extensions within study FILES folder. Check referenced data files and re-upload.
+# custom:
+#  rule_id: rule_f_400_100_001_08
+#  type: ERROR
+#  priority: HIGH
+#  section: files.general
+rule_f_400_100_001_08 contains result if {
+    ibd_files := { file | 
+		some file, file_meta in input.studyFolderMetadata.files
+        endswith(file, ".ibd")
+	}
+    violated_values := { file | 
+		some file, file_meta in input.studyFolderMetadata.files
+        endswith(file, ".imzML")
+        expected_file_name := sprintf("%v.ibd", [trim_suffix(file, ".imzML")])
+        not expected_file_name in ibd_files
+	}
+    count(violated_values) > 0
+    
+    result := f.format_with_file_description_and_values(rego.metadata.rule(), "FILES", ".imzML files without .ibd pair",violated_values)}

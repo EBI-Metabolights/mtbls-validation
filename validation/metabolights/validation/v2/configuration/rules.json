@@ -820,6 +820,14 @@
                 "priority": "CRITICAL"
             },
             {
+                "rule_id": "rule_f_400_100_001_08",
+                "title": "Data files with .imzML extensions but no data files with .ibd extensions within study FILES folder.",
+                "description": "Data files with .ibd extensions often accompany data files with .imzML extensions within study FILES folder. Check referenced data files and re-upload.",
+                "type": "ERROR",
+                "section": "files",
+                "priority": "HIGH"
+            },
+            {
                 "rule_id": "rule_i_100_100_001_01",
                 "title": "Term Source Name length less than 2 characters in investigation file.",
                 "description": "Term Source Name should be defined with length equal or greater than 2 characters in the ONTOLOGY SOURCE REFERENCE section in i_Investigation.txt.",
