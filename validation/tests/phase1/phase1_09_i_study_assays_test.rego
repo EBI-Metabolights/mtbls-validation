@@ -408,6 +408,82 @@ test_rule_i_100_340_002_03_violation_01 if {
 }
 
 #########################################################################################################
+# rule_i_100_340_002_04
+#########################################################################################################
+
+# METADATA
+# title: Study Assay File Name must be unique.
+# description: Assay file name must be unique for each study in i_Investigation.txt
+test_rule_i_100_340_002_04_no_violation_01 if {
+	result := rules.rule_i_100_340_002_04 with input as {
+		"investigation": {"studies": [{"identifier": "MTBLS1", "studyAssays": {
+          "comments": [],
+          "assays": [
+            {
+              "fileName": "a_MTBLS1_MSImaging___metabolite_profiling.txt",
+              "measurementType": {
+                "term": "metabolite profiling",
+                "termAccessionNumber": "http://purl.obolibrary.org/obo/OBI_0000366",
+                "termSourceRef": "OBI"
+              },
+              "technologyType": {
+                "term": "mass spectrometry",
+                "termAccessionNumber": "http://purl.obolibrary.org/obo/OBI_0000470",
+                "termSourceRef": "OBI"
+              },
+              "technologyPlatform": "MS Imaging -"
+            }
+          ]
+        }}]},
+		"investigationFilePath": "i_Investigation.txt",
+	}
+	count(result) == 0
+}
+
+# METADATA
+# title: Study Assay File Name must be unique.
+# description: Assay file name must be unique for each study in i_Investigation.txt,
+test_rule_i_100_340_002_04_violation_01 if {
+	result := rules.rule_i_100_340_002_04 with input as {
+		"investigation": {"studies": [{"identifier": "MTBLS1", "studyAssays": {
+          "comments": [],
+          "assays": [
+            {
+              "fileName": "a_MTBLS1_MSImaging___metabolite_profiling.txt",
+              "measurementType": {
+                "term": "metabolite profiling",
+                "termAccessionNumber": "http://purl.obolibrary.org/obo/OBI_0000366",
+                "termSourceRef": "OBI"
+              },
+              "technologyType": {
+                "term": "mass spectrometry",
+                "termAccessionNumber": "http://purl.obolibrary.org/obo/OBI_0000470",
+                "termSourceRef": "OBI"
+              },
+              "technologyPlatform": "MS Imaging -"
+            },
+			{
+			  "fileName": "a_MTBLS1_MSImaging___metabolite_profiling.txt",
+			  "measurementType": {
+				"term": "metabolite profiling",
+				"termAccessionNumber": "http://purl.obolibrary.org/obo/OBI_0000366",
+				"termSourceRef": "OBI"
+			  },
+			  "technologyType": {
+				"term": "mass spectrometry",
+				"termAccessionNumber": "http://purl.obolibrary.org/obo/OBI_0000470",
+				"termSourceRef": "OBI"
+			  },
+			  "technologyPlatform": "MS Imaging -"
+			}
+          ]
+        }}]},
+		"investigationFilePath": "i_Investigation.txt",
+	}
+	count(result) == 1
+}
+
+#########################################################################################################
 # rule_i_100_340_003_01
 #########################################################################################################
 
