@@ -247,3 +247,4 @@
 | 245 | rule_s_200_200_002_02 | ERROR | Factor value column is not complete. | At least two values should be defined in Factor Value column. |
 | 246 | rule_s_200_200_003_01 | WARNING | Term Source REFs of the factor ontology term is not in the prioritised control list. | We highly recommend to use the prioritised Ontology Source Refs for the factor ontology term. |
 | 247 | rule_f_400_100_001_08 | ERROR | Data files with .imzML extensions but no data files with .ibd extensions within study FILES folder. | Data files with .ibd extensions often accompany data files with .imzML extensions within study FILES folder. Check referenced data files and re-upload. |
+| 248 | rule_i_100_340_002_04 | ERROR | Study Assay File Name must be unique. | Assay file name must be unique for each study in i_Investigation.txt |

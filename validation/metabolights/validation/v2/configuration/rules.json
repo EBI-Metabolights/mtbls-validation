@@ -1172,6 +1172,14 @@
                 "priority": "HIGH"
             },
             {
+                "rule_id": "rule_i_100_340_002_04",
+                "title": "Study Assay File Name must be unique.",
+                "description": "Assay file name must be unique for each study in i_Investigation.txt",
+                "type": "ERROR",
+                "section": "investigation",
+                "priority": "HIGH"
+            },
+            {
                 "rule_id": "rule_i_100_340_003_01",
                 "title": "Study Assay Measurement Type is empty.",
                 "description": "Study Assay Measurement Type should be defined.",
