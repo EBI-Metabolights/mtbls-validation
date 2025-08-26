@@ -2,7 +2,7 @@
 
 | # |RULE ID  | TYPE  | TITLE  | DESCRIPTION |
 |---|---------|-------|--------|-------------|
-| 1 | rule___100_200_001_01 | ERROR | There is a critical file parse error for the sample file. | There is a critical file parse error in the sample file. |
+| 1 | rule___100_200_001_01 | ERROR | There is a critical file parse error for the sample file. | There is a critical file parse error for the sample file. |
 | 2 | rule___100_200_001_02 | ERROR | There is a file parse error for the sample file. | There is a file parse error for the sample file. |
 | 3 | rule___100_200_001_03 | WARNING | There is a file parse warning for the sample file. | There is a file parse warning for the sample file. |
 | 4 | rule___100_200_001_04 | ERROR | There is no parser information for sample file. | Define sample file in parserMessages. |
@@ -55,6 +55,6 @@
 | 51 | rule_s_200_100_002_04 | WARNING | Term Accession Number of the user defined characteristics ontology terms is empty. | We highly recommend to define accession number of the selected term. |
 | 52 | rule_s_200_200_001_01 | ERROR | Sample name values are not unique in sample file. | All sample names should be unique in sample file. |
 | 53 | rule_s_200_200_001_02 | ERROR | Values for Sample Name column not in any assay file. | Each sample name should be referenced at least one time in assay files. |
-| 54 | rule_s_200_200_002_01 | WARNING | There are empty values in factor column. | Factor values should be set for each row. |
-| 55 | rule_s_200_200_002_02 | ERROR | Factor value column is not complete. | At least two values should be defined in Factor Value column. |
-| 56 | rule_s_200_200_003_01 | WARNING | Term Source REFs of the factor ontology term is not in the prioritised control list. | We highly recommend to use the prioritised Ontology Source Refs for the factor ontology term. |
+| 54 | rule_s_200_200_002_01 | WARNING | There are empty values in Factor Value column. | Factor values should be set for each row. |
+| 55 | rule_s_200_200_002_02 | ERROR | Factor Value column not complete. | At least two values must be defined in Factor Value column. |
+| 56 | rule_s_200_200_003_01 | WARNING | Term Source REFs of the factor ontology term not in the prioritised control list. | We highly recommend to use the prioritised Ontology Source Refs for the factor ontology term. |

@@ -1,7 +1,7 @@
 {
     "rules": {
         "validation_version": "2.0.19",
-        "created_at": "2025-07-08T10:14:46.782406+00:00",
+        "created_at": "2025-08-26T10:00:14.390411+00:00",
         "violations": [
             {
                 "rule_id": "rule___100_100_001_01",
@@ -14,7 +14,7 @@
             {
                 "rule_id": "rule___100_100_001_02",
                 "title": "Input data format is not valid.",
-                "description": "Input data should have valid schema.",
+                "description": "Input data must have valid schema.",
                 "type": "ERROR",
                 "section": "input",
                 "priority": "CRITICAL"
@@ -70,7 +70,7 @@
             {
                 "rule_id": "rule___100_200_001_01",
                 "title": "There is a critical file parse error for the sample file.",
-                "description": "There is a critical file parse error in the sample file.",
+                "description": "There is a critical file parse error for the sample file.",
                 "type": "ERROR",
                 "section": "samples",
                 "priority": "CRITICAL"
@@ -134,7 +134,7 @@
             {
                 "rule_id": "rule___100_300_001_01",
                 "title": "There is a critical file parse error for the assay file.",
-                "description": "There is a critical file parse error in the assay file.",
+                "description": "There is a critical file parse error for the assay file.",
                 "type": "ERROR",
                 "section": "assays",
                 "priority": "CRITICAL"
@@ -174,7 +174,7 @@
             {
                 "rule_id": "rule___100_300_001_06",
                 "title": "Technology type not defined for assay file.",
-                "description": "Assay file technology type should be defined to execute validation rules.",
+                "description": "Assay file technology type must be defined to execute validation rules.",
                 "type": "ERROR",
                 "section": "assays",
                 "priority": "CRITICAL"
@@ -182,7 +182,7 @@
             {
                 "rule_id": "rule___100_300_001_07",
                 "title": "Technology type not supported for assay file.",
-                "description": "Assay file technology type is not supported.",
+                "description": "Assay file technology type not supported.",
                 "type": "ERROR",
                 "section": "assays",
                 "priority": "CRITICAL"
@@ -214,7 +214,7 @@
             {
                 "rule_id": "rule___100_400_001_01",
                 "title": "There is a critical file parse error for the metabolite assignment file.",
-                "description": "There is a critical file parse error in the metabolite assignment file.",
+                "description": "There is a critical file parse error for the metabolite assignment file.",
                 "type": "ERROR",
                 "section": "metabolites",
                 "priority": "CRITICAL"
@@ -246,7 +246,7 @@
             {
                 "rule_id": "rule___100_400_001_05",
                 "title": "Technology type not defined for metabolite assignment file.",
-                "description": "Assignment file technology type should be defined to execute file type validation rules.",
+                "description": "Assignment file technology type must be defined to execute file type validation rules.",
                 "type": "ERROR",
                 "section": "metabolites",
                 "priority": "CRITICAL"
@@ -974,7 +974,7 @@
             {
                 "rule_id": "rule_i_100_320_001_01",
                 "title": "No study publications referenced in investigation file.",
-                "description": "At least one study publications should be defined in i_Investigation.txt.",
+                "description": "At least one study publications must be defined in i_Investigation.txt.",
                 "type": "ERROR",
                 "section": "investigation",
                 "priority": "HIGH"
@@ -989,15 +989,15 @@
             },
             {
                 "rule_id": "rule_i_100_320_003_01",
-                "title": "DOI is invalid for a published study publication.",
-                "description": "A publication in published status should have a valid DOI.",
+                "title": "DOI invalid for published study publication.",
+                "description": "A study publication with status published should have valid DOI.",
                 "type": "WARNING",
                 "section": "investigation",
                 "priority": "HIGH"
             },
             {
                 "rule_id": "rule_i_100_320_003_02",
-                "title": "DOI format is invalid for a study publication.",
+                "title": "DOI format invalid for study publication.",
                 "description": "If DOI is defined, its format should be a valid.",
                 "type": "WARNING",
                 "section": "investigation",
@@ -1005,15 +1005,15 @@
             },
             {
                 "rule_id": "rule_i_100_320_004_01",
-                "title": "PubMed ID is invalid for a published study publication.",
-                "description": "A published publication should have a valid PubMed ID. Valid PubMed ID contains only digits.",
+                "title": "PubMed ID invalid for published study publication.",
+                "description": "A study publication with status published should have valid PubMed ID. Valid PubMed ID contains only digits.",
                 "type": "WARNING",
                 "section": "investigation",
                 "priority": "HIGH"
             },
             {
                 "rule_id": "rule_i_100_320_004_02",
-                "title": "PubMed ID format is invalid for a study publication.",
+                "title": "PubMed ID format invalid for study publication.",
                 "description": "If PubMed ID is defined, its format should be valid PubMed ID. Valid PubMed ID contains only digits.",
                 "type": "WARNING",
                 "section": "investigation",
@@ -1022,7 +1022,7 @@
             {
                 "rule_id": "rule_i_100_320_005_01",
                 "title": "Study Publication Title length less than 25 characters.",
-                "description": "Study Publication Title should be defined with length equal or greater than 25 characters.",
+                "description": "Study Publication Title must be defined with length equal or greater than 25 characters.",
                 "type": "ERROR",
                 "section": "investigation",
                 "priority": "HIGH"
@@ -1030,7 +1030,7 @@
             {
                 "rule_id": "rule_i_100_320_006_01",
                 "title": "Study Publication Author List is empty.",
-                "description": "Study Publication Author List should be defined.",
+                "description": "Study Publication Author List must be defined.",
                 "type": "ERROR",
                 "section": "investigation",
                 "priority": "HIGH"
@@ -1038,7 +1038,7 @@
             {
                 "rule_id": "rule_i_100_320_007_01",
                 "title": "Study Publication Status is empty.",
-                "description": "Study Publication Status should be defined.",
+                "description": "Study Publication Status must be defined.",
                 "type": "ERROR",
                 "section": "investigation",
                 "priority": "HIGH"
@@ -1086,7 +1086,7 @@
             {
                 "rule_id": "rule_i_100_330_001_01",
                 "title": "No study factors referenced in investigation file.",
-                "description": "At least one study factors should be defined in i_Investigation.txt.",
+                "description": "At least one study factors must be defined in i_Investigation.txt.",
                 "type": "ERROR",
                 "section": "investigation",
                 "priority": "CRITICAL"
@@ -1094,7 +1094,7 @@
             {
                 "rule_id": "rule_i_100_330_002_01",
                 "title": "Study Factor Name is empty.",
-                "description": "Study Factor Name should be defined.",
+                "description": "Study Factor Name must be defined.",
                 "type": "ERROR",
                 "section": "investigation",
                 "priority": "HIGH"
@@ -1102,7 +1102,7 @@
             {
                 "rule_id": "rule_i_100_330_003_01",
                 "title": "Study Factor Type length less than 2 characters.",
-                "description": "Study Factor Type should be defined with length equal or greater than 2 characters.",
+                "description": "Study Factor Type must be defined with length equal or greater than 2 characters.",
                 "type": "ERROR",
                 "section": "investigation",
                 "priority": "HIGH"
@@ -1167,7 +1167,15 @@
                 "rule_id": "rule_i_100_340_002_03",
                 "title": "There are invalid characters in assay file name.",
                 "description": "Use only .-_A-Za-z0-9 characters for an assay file name.",
-                "type": "WARNING",
+                "type": "ERROR",
+                "section": "investigation",
+                "priority": "HIGH"
+            },
+            {
+                "rule_id": "rule_i_100_340_002_04",
+                "title": "Study Assay File Name must be unique.",
+                "description": "Assay file name must be unique for each study in i_Investigation.txt.",
+                "type": "ERROR",
                 "section": "investigation",
                 "priority": "HIGH"
             },
@@ -1957,7 +1965,7 @@
             },
             {
                 "rule_id": "rule_s_200_200_002_01",
-                "title": "There are empty values in factor column.",
+                "title": "There are empty values in Factor Value column.",
                 "description": "Factor values should be set for each row.",
                 "type": "WARNING",
                 "section": "samples",
@@ -1965,15 +1973,15 @@
             },
             {
                 "rule_id": "rule_s_200_200_002_02",
-                "title": "Factor value column is not complete.",
-                "description": "At least two values should be defined in Factor Value column.",
+                "title": "Factor Value column not complete.",
+                "description": "At least two values must be defined in Factor Value column.",
                 "type": "ERROR",
                 "section": "samples",
                 "priority": "HIGH"
             },
             {
                 "rule_id": "rule_s_200_200_003_01",
-                "title": "Term Source REFs of the factor ontology term is not in the prioritised control list.",
+                "title": "Term Source REFs of the factor ontology term not in the prioritised control list.",
                 "description": "We highly recommend to use the prioritised Ontology Source Refs for the factor ontology term.",
                 "type": "WARNING",
                 "section": "samples",
@@ -1981,6 +1989,14 @@
             }
         ],
         "summary": [
+            {
+                "rule_id": "",
+                "title": "Data files contain zero byte data.",
+                "description": "Check data files and re-upload.",
+                "type": "INFO",
+                "section": "",
+                "priority": ""
+            },
             {
                 "rule_id": "rule___100_000",
                 "title": "Input schema validation summary.",

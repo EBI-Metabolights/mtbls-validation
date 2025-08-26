@@ -151,7 +151,7 @@
                     "columnCategory": "Parameter",
                     "columnHeader": "Parameter Value[Temperature]",
                     "columnPrefix": "Parameter Value",
-                    "columnStructure": "SINGLE_COLUMN",
+                    "columnStructure": "SINGLE_COLUMN AND UNIT ONTOLOGY",
                     "controlLists": null,
                     "defaultColumnIndex": 14,
                     "defaultValue": null,
