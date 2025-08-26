@@ -625,7 +625,7 @@ rule_s_200_200_001_02 contains result if {
 }
 
 # METADATA
-# title: There are empty values in factor column.
+# title: There are empty values in Factor Value column.
 # description: Factor values should be set for each row.
 # custom:
 #  rule_id: rule_s_200_200_002_01
@@ -658,8 +658,8 @@ rule_s_200_200_002_01 contains result if {
 }
 
 # METADATA
-# title: Factor value column is not complete.
-# description: At least two values should be defined in Factor Value column.
+# title: Factor Value column not complete.
+# description: At least two values must be defined in Factor Value column.
 # custom:
 #  rule_id: rule_s_200_200_002_02
 #  type: ERROR
@@ -682,7 +682,7 @@ rule_s_200_200_002_02 contains result if {
 }
 
 # METADATA
-# title: Term Source REFs of the factor ontology term is not in the prioritised control list.
+# title: Term Source REFs of the factor ontology term not in the prioritised control list.
 # description: We highly recommend to use the prioritised Ontology Source Refs for the factor ontology term.
 # custom:
 #  rule_id: rule_s_200_200_003_01

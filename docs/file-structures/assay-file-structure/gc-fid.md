@@ -14,7 +14,7 @@
 | 10 | Parameter Value[Column type] | single column | True | 5 | - |  |  |  | |
 | 11 | Parameter Value[Guard column] | single column | False | - | - |  |  |  | |
 | 12 | Parameter Value[Detector] | single column | True | 1 | - |  |  |  | |
-| 13 | Parameter Value[Temperature] | single column | False | - | - |  |  |  | |
+| 13 | Parameter Value[Temperature] | single column and unit ontology | False | - | - |  |  |  | |
 | 14 | Labeled Extract Name | single column | False | - | - |  |  |  | |
 | 15 | Label | ontology column | False | - | - |  |  |  | |
 | 16 | Raw Spectral Data File | single column | False | - | - |  |  |  | |

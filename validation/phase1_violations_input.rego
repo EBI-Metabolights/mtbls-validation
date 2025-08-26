@@ -25,7 +25,7 @@ rule___100_100_001_01 contains result if {
 
 # METADATA
 # title: Input data format is not valid.
-# description: Input data should have valid schema.
+# description: Input data must have valid schema.
 # custom:
 #  rule_id: rule___100_100_001_02
 #  type: ERROR
@@ -153,7 +153,7 @@ rule___100_100_100_06 contains result if {
 
 # METADATA
 # title: There is a critical file parse error for the sample file.
-# description: There is a critical file parse error in the sample file.
+# description: There is a critical file parse error for the sample file.
 # custom:
 #  rule_id: rule___100_200_001_01
 #  type: ERROR
@@ -308,7 +308,7 @@ rule___100_200_001_09 contains result if {
 
 # METADATA
 # title: There is a critical file parse error for the assay file.
-# description: There is a critical file parse error in the assay file.
+# description: There is a critical file parse error for the assay file.
 # custom:
 #  rule_id: rule___100_300_001_01
 #  type: ERROR
@@ -398,7 +398,7 @@ rule___100_300_001_05 contains result if {
 
 # METADATA
 # title: Technology type not defined for assay file.
-# description: Assay file technology type should be defined to execute validation rules.
+# description: Assay file technology type must be defined to execute validation rules.
 # custom:
 #  rule_id: rule___100_300_001_06
 #  type: ERROR
@@ -415,7 +415,7 @@ rule___100_300_001_06 contains result if {
 
 # METADATA
 # title: Technology type not supported for assay file.
-# description: Assay file technology type is not supported.
+# description: Assay file technology type not supported.
 # custom:
 #  rule_id: rule___100_300_001_07
 #  type: ERROR
@@ -502,7 +502,7 @@ rule___100_300_001_10 contains result if {
 
 # METADATA
 # title: There is a critical file parse error for the metabolite assignment file.
-# description: There is a critical file parse error in the metabolite assignment file.
+# description: There is a critical file parse error for the metabolite assignment file.
 # custom:
 #  rule_id: rule___100_400_001_01
 #  type: ERROR
@@ -579,7 +579,7 @@ rule___100_400_001_04 contains result if {
 
 # METADATA
 # title: Technology type not defined for metabolite assignment file.
-# description: Assignment file technology type should be defined to execute file type validation rules.
+# description: Assignment file technology type must be defined to execute file type validation rules.
 # custom:
 #  rule_id: rule___100_400_001_05
 #  type: ERROR

@@ -557,7 +557,7 @@ rule_i_100_310_004_03 contains result if {
 
 # METADATA
 # title: No study publications referenced in investigation file.
-# description: At least one study publications should be defined in i_Investigation.txt.
+# description: At least one study publications must be defined in i_Investigation.txt.
 # custom:
 #  rule_id: rule_i_100_320_001_01
 #  type: ERROR
@@ -594,8 +594,8 @@ rule_i_100_320_002_01 contains result if {
 }
 
 # METADATA
-# title: DOI is invalid for a published study publication.
-# description: A publication in published status should have a valid DOI.
+# title: DOI invalid for published study publication.
+# description: A study publication with status published should have valid DOI.
 # custom:
 #  rule_id: rule_i_100_320_003_01
 #  type: WARNING
@@ -619,7 +619,7 @@ rule_i_100_320_003_01 contains result if {
 }
 
 # METADATA
-# title: DOI format is invalid for a study publication.
+# title: DOI format invalid for study publication.
 # description: If DOI is defined, its format should be a valid.
 # custom:
 #  rule_id: rule_i_100_320_003_02
@@ -640,8 +640,8 @@ rule_i_100_320_003_02 contains result if {
 }
 
 # METADATA
-# title: PubMed ID is invalid for a published study publication.
-# description: A published publication should have a valid PubMed ID. Valid PubMed ID contains only digits.
+# title: PubMed ID invalid for published study publication.
+# description: A study publication with status published should have valid PubMed ID. Valid PubMed ID contains only digits.
 # custom:
 #  rule_id: rule_i_100_320_004_01
 #  type: WARNING
@@ -662,7 +662,7 @@ rule_i_100_320_004_01 contains result if {
 }
 
 # METADATA
-# title: PubMed ID format is invalid for a study publication.
+# title: PubMed ID format invalid for study publication.
 # description: If PubMed ID is defined, its format should be valid PubMed ID. Valid PubMed ID contains only digits.
 # custom:
 #  rule_id: rule_i_100_320_004_02
@@ -684,7 +684,7 @@ rule_i_100_320_004_02 contains result if {
 
 # METADATA
 # title: Study Publication Title length less than 25 characters.
-# description: Study Publication Title should be defined with length equal or greater than 25 characters.
+# description: Study Publication Title must be defined with length equal or greater than 25 characters.
 # custom:
 #  rule_id: rule_i_100_320_005_01
 #  type: ERROR
@@ -701,7 +701,7 @@ rule_i_100_320_005_01 contains result if {
 
 # METADATA
 # title: Study Publication Author List is empty.
-# description: Study Publication Author List should be defined.
+# description: Study Publication Author List must be defined.
 # custom:
 #  rule_id: rule_i_100_320_006_01
 #  type: ERROR
@@ -721,7 +721,7 @@ rule_i_100_320_006_01 contains result if {
 
 # METADATA
 # title: Study Publication Status is empty.
-# description: Study Publication Status should be defined.
+# description: Study Publication Status must be defined.
 # custom:
 #  rule_id: rule_i_100_320_007_01
 #  type: ERROR
@@ -863,7 +863,7 @@ rule_i_100_320_009_03 contains result if {
 
 # METADATA
 # title: No study factors referenced in investigation file.
-# description: At least one study factors should be defined in i_Investigation.txt.
+# description: At least one study factors must be defined in i_Investigation.txt.
 # custom:
 #  rule_id: rule_i_100_330_001_01
 #  type: ERROR
@@ -880,7 +880,7 @@ rule_i_100_330_001_01 contains result if {
 
 # METADATA
 # title: Study Factor Name is empty.
-# description: Study Factor Name should be defined.
+# description: Study Factor Name must be defined.
 # custom:
 #  rule_id: rule_i_100_330_002_01
 #  type: ERROR
@@ -897,7 +897,7 @@ rule_i_100_330_002_01 contains result if {
 
 # METADATA
 # title: Study Factor Type length less than 2 characters.
-# description: Study Factor Type should be defined with length equal or greater than 2 characters.
+# description: Study Factor Type must be defined with length equal or greater than 2 characters.
 # custom:
 #  rule_id: rule_i_100_330_003_01
 #  type: ERROR
@@ -1071,7 +1071,7 @@ rule_i_100_340_002_02 contains result if {
 # description: Use only .-_A-Za-z0-9 characters for an assay file name.
 # custom:
 #  rule_id: rule_i_100_340_002_03
-#  type: WARNING
+#  type: ERROR
 #  priority: HIGH
 #  section: investigation.studyAssays
 rule_i_100_340_002_03 contains result if {
@@ -1083,36 +1083,6 @@ rule_i_100_340_002_03 contains result if {
 	matches_str := concat(" ", matches_set)
 	not matches_str == ""
 	msg := sprintf("Assay file name contains invalid characters for the study %v. Do not use special characters: %v characters. Index: %v, current value: '%v'", [input.investigation.studies[i].identifier, matches_str, j + 1, assay.fileName])
-	source := input.investigationFilePath
-	result := f.format(rego.metadata.rule(), msg, source)
-}
-
-
-# METADATA
-# title: Study Assay File Name must be unique.
-# description: Assay file name must be unique for each study in i_Investigation.txt
-# custom:
-#  rule_id: rule_i_100_340_002_04
-#  type: ERROR
-#  priority: HIGH
-#  section: investigation.studyAssays
-rule_i_100_340_002_04 contains result if {
-	fileNames := [assay.fileName |
-        some i, j
-        assay := input.investigation.studies[i].studyAssays.assays[j]
-    ]
-
-    duplicates := {f |
-        some i
-        f := fileNames[i]
-        count({x | fileNames[x] == f}) > 1
-    }
-    count(duplicates) > 0
-
-    msg := sprintf(
-        "Study Assay File Name must be unique. Found duplicates: %v",
-        [duplicates]
-    )
 	source := input.investigationFilePath
 	result := f.format(rego.metadata.rule(), msg, source)
 }
@@ -1217,6 +1187,7 @@ rule_i_100_340_005_03 contains result if {
 	source := input.investigationFilePath
 	result := f.format(rego.metadata.rule(), msg, source)
 }
+
 #----------------------------- Assay technologyType ----------------------------------#
 
 # METADATA

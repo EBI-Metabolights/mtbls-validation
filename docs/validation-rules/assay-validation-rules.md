@@ -2,13 +2,13 @@
 
 | # |RULE ID  | TYPE  | TITLE  | DESCRIPTION |
 |---|---------|-------|--------|-------------|
-| 1 | rule___100_300_001_01 | ERROR | There is a critical file parse error for the assay file. | There is a critical file parse error in the assay file. |
+| 1 | rule___100_300_001_01 | ERROR | There is a critical file parse error for the assay file. | There is a critical file parse error for the assay file. |
 | 2 | rule___100_300_001_02 | ERROR | There is a file parse error for the assay file. | There is a file parse error for the assay file. |
 | 3 | rule___100_300_001_03 | WARNING | There is a file parse warning for the assay file. | There is a file parse warning for the assay file. |
 | 4 | rule___100_300_001_04 | ERROR | There is no parser information for assay file. | Define assay file in parserMessages. |
 | 5 | rule___100_300_001_05 | ERROR | There is no assay file for the study. | Define an assay file for the study. |
-| 6 | rule___100_300_001_06 | ERROR | Technology type not defined for assay file. | Assay file technology type should be defined to execute validation rules. |
-| 7 | rule___100_300_001_07 | ERROR | Technology type not supported for assay file. | Assay file technology type is not supported. |
+| 6 | rule___100_300_001_06 | ERROR | Technology type not defined for assay file. | Assay file technology type must be defined to execute validation rules. |
+| 7 | rule___100_300_001_07 | ERROR | Technology type not supported for assay file. | Assay file technology type not supported. |
 | 8 | rule___100_300_001_08 | ERROR | Assay file name not correct pattern. | Assay file name must start with 'a_' and have extension '.txt'. |
 | 9 | rule___100_300_001_09 | ERROR | Assay file is not referenced in i_Investigation.txt file. | Update i_Investigation.txt  file to reference the assay file or delete it. |
 | 10 | rule___100_300_001_10 | ERROR | Assay file name contains invalid characters. | Use only .-_A-Za-z0-9 characters for an assay file name. e.g. a_REQ2025010211233_LC-MS_negative_reverse-phase_metabolite_profiling.txt |
