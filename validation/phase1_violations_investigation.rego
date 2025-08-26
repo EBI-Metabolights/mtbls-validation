@@ -1087,6 +1087,36 @@ rule_i_100_340_002_03 contains result if {
 	result := f.format(rego.metadata.rule(), msg, source)
 }
 
+
+# METADATA
+# title: Study Assay File Name must be unique.
+# description: Assay file name must be unique for each study in i_Investigation.txt
+# custom:
+#  rule_id: rule_i_100_340_002_04
+#  type: ERROR
+#  priority: HIGH
+#  section: investigation.studyAssays
+rule_i_100_340_002_04 contains result if {
+	fileNames := [assay.fileName |
+        some i, j
+        assay := input.investigation.studies[i].studyAssays.assays[j]
+    ]
+
+    duplicates := {f |
+        some i
+        f := fileNames[i]
+        count({x | fileNames[x] == f}) > 1
+    }
+    count(duplicates) > 0
+
+    msg := sprintf(
+        "Study Assay File Name must be unique. Found duplicates: %v",
+        [duplicates]
+    )
+	source := input.investigationFilePath
+	result := f.format(rego.metadata.rule(), msg, source)
+}
+
 # METADATA
 # title: Study Assay Measurement Type is empty.
 # description: Study Assay Measurement Type should be defined.
