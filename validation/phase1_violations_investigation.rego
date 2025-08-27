@@ -1090,7 +1090,7 @@ rule_i_100_340_002_03 contains result if {
 
 # METADATA
 # title: Study Assay File Name must be unique.
-# description: Assay file name must be unique for each study in i_Investigation.txt
+# description: Assay file name must be unique for each study in i_Investigation.txt.
 # custom:
 #  rule_id: rule_i_100_340_002_04
 #  type: ERROR
