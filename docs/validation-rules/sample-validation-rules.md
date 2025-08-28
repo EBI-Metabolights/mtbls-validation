@@ -55,6 +55,6 @@
 | 51 | rule_s_200_100_002_04 | WARNING | Term Accession Number of the user defined characteristics ontology terms is empty. | We highly recommend to define accession number of the selected term. |
 | 52 | rule_s_200_200_001_01 | ERROR | Sample name values are not unique in sample file. | All sample names should be unique in sample file. |
 | 53 | rule_s_200_200_001_02 | ERROR | Values for Sample Name column not in any assay file. | Each sample name should be referenced at least one time in assay files. |
-| 54 | rule_s_200_200_002_01 | WARNING | There are empty values in Factor Value column. | Factor values should be set for each row. |
+| 54 | rule_s_200_200_002_01 | WARNING | There are empty values in Factor Value column. | Factor values should be defined for each row. |
 | 55 | rule_s_200_200_002_02 | ERROR | Factor Value column not complete. | At least two values must be defined in Factor Value column. |
 | 56 | rule_s_200_200_003_01 | WARNING | Term Source REFs of the factor ontology term not in the prioritised control list. | We highly recommend to use the prioritised Ontology Source Refs for the factor ontology term. |
