@@ -379,8 +379,8 @@ result := rules.rule_f_400_090_001_03 with input as {
 
 
 # METADATA
-# title: Referenced files does not contain zero byte data.
-# description: Referenced files does not contain zero byte data.
+# title: Data files contain zero byte data.
+# description: Check data files and re-upload.
 test_rule_f_400_090_001_04_no_violation_01 if {
 	result := rules.rule_f_400_090_001_04 with input as {
         "studyFolderMetadata": {
@@ -437,8 +437,8 @@ test_rule_f_400_090_001_04_no_violation_01 if {
 }
 
 # METADATA
-# title: Referenced file contains zero byte data.
-# description: Referenced file contains zero byte data.
+# title: Data files contain zero byte data.
+# description: Check data files and re-upload.
 test_rule_f_400_090_001_04_violation_01 if {
 result := rules.rule_f_400_090_001_04 with input as {
         "studyFolderMetadata": {
@@ -490,7 +490,6 @@ result := rules.rule_f_400_090_001_04 with input as {
 		"investigation": {"studies": [{"fileName": "s_MTBLS1.txt"}]},
 		"parserMessages": {"s_MTBLS1.txt": []},
 	}
-
 	count(result) == 1
 }
 

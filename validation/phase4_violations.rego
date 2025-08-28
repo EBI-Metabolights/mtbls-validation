@@ -107,8 +107,8 @@ rule_f_400_090_001_03 contains result if {
 
 
 # METADATA
-# title: Referenced data files contain zero byte data.
-# description: Check referenced data files and re-upload.
+# title: Data files contain zero byte data.
+# description: Check data files and re-upload.
 # custom:
 #  rule_id: rule_f_400_090_001_04
 #  type: ERROR
@@ -116,20 +116,14 @@ rule_f_400_090_001_03 contains result if {
 #  section: files.general
 rule_f_400_090_001_04 contains result if {
 
-	some file_name, sheet in input.assays
-	some _, header in sheet.table.headers
-    endswith(header.columnHeader, " Data File")
-    row_offset = sheet.table.rowOffset
-	violated_values := { sprintf("[row: %03v, file: '%v']", [row, value]) | 
-		some idx, value in sheet.table.data[header.columnName]
-		count(value) > 0
-        meta := input.studyFolderMetadata.files[value]
+    violated_values := {
+        sprintf("file: '%v', sizeInBytes: %v", [file_name, meta.sizeInBytes]) |
+        some file_name
+        meta := input.studyFolderMetadata.files[file_name]
         meta.sizeInBytes < 1
-        row := idx + 1 + row_offset
-	}
+    }
     count(violated_values) > 0
-
-    result := f.format_with_values(rego.metadata.rule(), file_name, header.columnIndex + 1, header.columnHeader, violated_values)
+    result := f.format_with_file_description_and_values(rego.metadata.rule(), "FILES", "Files with zero byte size", violated_values)
 }
 
 
@@ -266,7 +260,7 @@ rule_f_400_090_003_01 contains result if {
 # custom:
 #  rule_id: rule_f_400_100_001_01
 #  type: ERROR
-#  priority: HIGH
+#  priority: zero
 #  section: files.general
 rule_f_400_100_001_01 contains result if {
 	pattern := `FILES/(.+/)?([isa]_.+\.txt|m_.+\.tsv)$`    
