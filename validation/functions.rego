@@ -449,30 +449,29 @@ term_source_ref_is_empty_for_term(meta, source, file_name, column_index, templat
 	not "Unit" in source[file_name].table.headers[column_index].additionalColumns
 	# some c
 	# source[file_name].table.headers[column_index].additionalColumns[c] == unit_column_header
-
 	column_name := source[file_name].table.headers[column_index].columnName
 	column_header := source[file_name].table.headers[column_index].columnHeader
 	control_list_key := "termSourceRef"
-
+	
 	some n, template_header in template.headers
 
 	template_header.columnHeader == column_header
 	# print(template_header.controlLists)
 	control_list_name := template_header.controlLists[control_list_key]
 
-
 	control_list := control_lists[control_list_name]
 	source_ref_column_index := (source[file_name].table.headers[column_index].columnIndex + a) + 1
 	source_ref_column_name := source[file_name].table.columns[source_ref_column_index]
 	count(source[file_name].table.data[column_name]) > 0
 	violated_values = {sprintf("[row: %v, term: '%v', 'source ref':'']", [x, value]) |
-		some j
-		value := source[file_name].table.data[column_name][j]
+		some j, value in source[file_name].table.data[column_name]		
 		count(trim_space(value)) > 0
 		source_ref := source[file_name].table.data[source_ref_column_name][j]
 		count(trim_space(source_ref)) == 0
 		x := (source[file_name].table.rowOffset + j) + 1
 	}
+	
+
 	# print(violated_values)
 	control_list_str := concat(", ", control_list)
 	file_column_header := sprintf("%v (of %v)", [term_source_column_header, column_header])

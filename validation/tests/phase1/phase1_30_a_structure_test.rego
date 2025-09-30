@@ -649,7 +649,7 @@ test_rule_a_100_100_001_10_no_violation_01 if {
 		"investigation": {"studies": [{"fileName": "s_MTBLS1.txt"}]},
 		"parserMessages": {"s_MTBLS1.txt": []},
 	}
-		with data.metabolights.validation.v2.phase1.definitions._DEFAULT_ASSAY_HEADERS as {"a_MTBLS1.txt": [{"version": "v1.0", "headers": [
+		with data.metabolights.validation.v2.phase1.definitions._DEFAULT_ASSAY_HEADERS as {"a_MTBLS1.txt": [{"version": "2.0", "headers": [
 			{"columnCategory": "Parameter Value", 
 			"columnHeader": "Parameter Value[Scan polarity]", 
 			"columnIndex": 3
@@ -680,8 +680,9 @@ test_rule_a_100_100_001_10_violation_01 if {
 		}}},
 		"investigation": {"studies": [{"fileName": "s_MTBLS1.txt"}]},
 		"parserMessages": {"s_MTBLS1.txt": []},
+		"studyDbMetadata": {"studyCategory": "other", "sampleTemplate": "minimum",  "templateVersion": "2.0"}
 	}
-		with data.metabolights.validation.v2.phase1.definitions._DEFAULT_ASSAY_HEADERS as {"a_MTBLS1.txt": [{"version": "v1.0", "headers": [
+		with data.metabolights.validation.v2.phase1.definitions._DEFAULT_ASSAY_HEADERS as {"a_MTBLS1.txt": [{"version": "2.0", "headers": [
 			{"columnCategory": "Parameter Value", 
 			"columnHeader": "Parameter Value[Scan polarity]", 
 			"columnIndex": 3
@@ -751,6 +752,7 @@ test_rule_a_100_100_001_11_violation_01 if {
 		}}},
 		"investigation": {"studies": [{"fileName": "s_MTBLS1.txt"}]},
 		"parserMessages": {"s_MTBLS1.txt": []},
+		"studyDbMetadata": {"studyCategory": "other", "sampleTemplate": "minimum",  "templateVersion": "2.0"}
 	}
 		with input.investigation.studies as [
 			{
@@ -792,7 +794,7 @@ test_rule_a_100_100_001_12_no_violation_01 if {
 		"investigation": {"studies": [{"fileName": "s_MTBLS1.txt"}]},
 		"parserMessages": {"s_MTBLS1.txt": []},
 	}
-		with data.metabolights.validation.v2.phase1.definitions._DEFAULT_ASSAY_HEADERS as {"a_MTBLS1.txt": [{"version": "v1.0", "headers": [
+		with data.metabolights.validation.v2.phase1.definitions._DEFAULT_ASSAY_HEADERS as {"a_MTBLS1.txt": [{"version": "2.0", "headers": [
 			{"columnCategory": "", 
 			"columnHeader": "Spectral Raw Data File", 
 			"columnIndex": 3
@@ -823,8 +825,9 @@ test_rule_a_100_100_001_12_violation_01 if {
 		}}},
 		"investigation": {"studies": [{"fileName": "s_MTBLS1.txt"}]},
 		"parserMessages": {"s_MTBLS1.txt": []},
+		"studyDbMetadata": {"studyCategory": "other", "sampleTemplate": "minimum",  "templateVersion": "2.0"}
 	}
-		with data.metabolights.validation.v2.phase1.definitions._DEFAULT_ASSAY_HEADERS as {"a_MTBLS1.txt": [{"version": "v1.0", "headers": [
+		with data.metabolights.validation.v2.phase1.definitions._DEFAULT_ASSAY_HEADERS as {"a_MTBLS1.txt": [{"version": "2.0", "headers": [
 			{"columnCategory": "Spectral Raw Data File", 
 			"columnHeader": "Spectral Raw Data File", 
 			"columnIndex": 3
@@ -862,11 +865,12 @@ test_rule_a_100_100_001_13_no_violation_01 if {
 			],
 		}}},
 		"investigation": {"studies": [{"fileName": "s_MTBLS1.txt"}]},
-		"parserMessages": {"s_MTBLS1.txt": []}
+		"parserMessages": {"s_MTBLS1.txt": []},
+		"studyDbMetadata": {"studyCategory": "other", "sampleTemplate": "minimum",  "templateVersion": "2.0"}
 	}
 		with data.metabolights.validation.v2.templates.assayFileHeaderTemplates as {
 			"LC-MS": [{
-				"version": "v1.0",
+				"version": "2.0",
 				"headers": [
 					{"columnCategory": "", 
 					"columnHeader": "Spectral Raw Data File", 
@@ -915,11 +919,12 @@ test_rule_a_100_100_001_13_violation_01 if {
 			],
 		}}},
 		"investigation": {"studies": [{"fileName": "s_MTBLS1.txt"}]},
-		"parserMessages": {"s_MTBLS1.txt": []}
+		"parserMessages": {"s_MTBLS1.txt": []},
+		"studyDbMetadata": {"studyCategory": "other", "sampleTemplate": "minimum",  "templateVersion": "2.0"}
 	}
 		with data.metabolights.validation.v2.templates.assayFileHeaderTemplates as {
 			"LC-MS": [{
-				"version": "v1.0",
+				"version": "2.0",
 				"headers": [
 					{"columnCategory": "", 
 					"columnHeader": "Spectral Raw Data File", 
@@ -940,7 +945,6 @@ test_rule_a_100_100_001_13_violation_01 if {
 			}
 			]
 		}
-		print(result)
 	count(result) == 3
 }
 

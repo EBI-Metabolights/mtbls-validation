@@ -188,6 +188,7 @@ test_rule_s_200_090_002_01_violation_01 if {
 			"EFO",
 			"BTO",
 		]
+		
 	count(result) == 1
 }
 
@@ -251,7 +252,6 @@ test_rule_s_200_090_002_02_no_violation_01 if {
 			"PO",
 			"UO",
 		]
-
 	count(result) == 0
 }
 
@@ -293,8 +293,8 @@ test_rule_s_200_090_002_02_violation_01 if {
 				"Term Source REF": ["UO", "EFO", "MTBLS", "NCBI"],
 				"Term Accession Number": ["UO", "EFO", "MTBLS", "NCBI"],
 				"Characteristics[Variant]": ["1", "2 ", "3", " "],
-				"Term Source REF.1": ["UO", "EFO", "MTBLS", "NCBI"],
-				"Term Accession Number.1": ["UO", "EFO", "MTBLS", "NCBI"],
+				"Term Source REF.1": ["UO", "EFO", "EFO", "EFO"],
+				"Term Accession Number.1": ["UO", "EFO", "EFO", "EFO"],
 			},
 		}}},
 		"investigation": {"studies": [{"fileName": "s_MTBLS1.txt"}]},
@@ -843,6 +843,7 @@ test_rule_s_200_090_002_07_no_violation_01 if {
 			{"sourceName": "NCBITaxon"},
 		]}},
 		"parserMessages": {"s_MTBLS1.txt": []},
+		"studyDbMetadata": {"studyCategory": "other", "sampleTemplate": "minimum",  "templateVersion": "2.0"}
 	}
 
 	count(result) == 0
@@ -897,13 +898,8 @@ test_rule_s_200_090_002_07_violation_01 if {
 			{"sourceName": "NCBITaxon"},
 		]}},
 		"parserMessages": {"s_MTBLS1.txt": []},
+		"studyDbMetadata": {"studyCategory": "other", "sampleTemplate": "minimum",  "templateVersion": "2.0"}
 	}
-		with data.metabolights.validation.v2.controlLists.prioritisedUnitRefSources as [
-			"UO",
-			"EFO",
-			"NCBI",
-		]
-
 	count(result) == 1
 }
 
@@ -1563,9 +1559,10 @@ test_rule_s_200_090_004_01_no_violation_01 if {
 			{"sourceName": "NCBITaxon"},
 		]}},
 		"parserMessages": {"s_MTBLS1.txt": []},
+		"studyDbMetadata": {"studyCategory": "other", "sampleTemplate": "minimum",  "templateVersion": "2.0"}
 	}
-		with data.metabolights.validation.v2.templates.sampleFileHeaderTemplates as [{
-			"version": "v1.0",
+		with data.metabolights.validation.v2.templates.sampleFileHeaderTemplates as { "minimum":  [{
+			"version": "2.0",
 			"headers": [
 				{
 						"columnStructure": "SINGLE_COLUMN",
@@ -1604,7 +1601,7 @@ test_rule_s_200_090_004_01_no_violation_01 if {
 					"required": false,
 				},
 			],
-		}]
+		}]}
 
 	count(result) == 0
 }
@@ -1661,9 +1658,10 @@ test_rule_s_200_090_004_01_violation_01 if {
 			{"sourceName": "NCBITaxon"},
 		]}},
 		"parserMessages": {"s_MTBLS1.txt": []},
+		"studyDbMetadata": {"studyCategory": "other", "sampleTemplate": "minimum",  "templateVersion": "2.0"}
 	}
-		with data.metabolights.validation.v2.templates.sampleFileHeaderTemplates as [{
-			"version": "v1.0",
+		with data.metabolights.validation.v2.templates.sampleFileHeaderTemplates as { "minimum":  [{
+			"version": "2.0",
 			"headers": [
 				{
 						"columnStructure": "SINGLE_COLUMN",
@@ -1702,7 +1700,7 @@ test_rule_s_200_090_004_01_violation_01 if {
 					"required": false,
 				},
 			],
-		}]
+		}]}
 	count(result) == 2
 }
 
@@ -1759,9 +1757,10 @@ test_rule_s_200_090_004_02_no_violation_01 if {
 			{"sourceName": "NCBITaxon"},
 		]}},
 		"parserMessages": {"s_MTBLS1.txt": []},
+		"studyDbMetadata": {"studyCategory": "other", "sampleTemplate": "minimum",  "templateVersion": "2.0"}
 	}
-		with data.metabolights.validation.v2.templates.sampleFileHeaderTemplates as [{
-			"version": "v1.0",
+		with data.metabolights.validation.v2.templates.sampleFileHeaderTemplates as  { "minimum": [{
+			"version": "2.0",
 			"headers": [
 				{
 					"columnStructure": "ONTOLOGY_COLUMN",
@@ -1788,7 +1787,7 @@ test_rule_s_200_090_004_02_no_violation_01 if {
 					"required": false,
 				},
 			],
-		}]
+		}]}
 
 	count(result) == 0
 }
@@ -1842,9 +1841,10 @@ test_rule_s_200_090_004_02_violation_01 if {
 			{"sourceName": "NCBITaxon"},
 		]}},
 		"parserMessages": {"s_MTBLS1.txt": []},
+		"studyDbMetadata": {"studyCategory": "other", "sampleTemplate": "minimum",  "templateVersion": "2.0"}
 	}
-		with data.metabolights.validation.v2.templates.sampleFileHeaderTemplates as [{
-			"version": "v1.0",
+		with data.metabolights.validation.v2.templates.sampleFileHeaderTemplates as  { "minimum": [{
+			"version": "2.0",
 			"headers": [
 				{
 					"columnStructure": "ONTOLOGY_COLUMN",
@@ -1871,8 +1871,7 @@ test_rule_s_200_090_004_02_violation_01 if {
 					"required": false,
 				},
 			],
-		}]
-
+		}]}
 	count(result) == 1
 }
 
@@ -1929,9 +1928,10 @@ test_rule_s_200_090_004_03_no_violation_01 if {
 			{"sourceName": "NCBITaxon"},
 		]}},
 		"parserMessages": {"s_MTBLS1.txt": []},
+		"studyDbMetadata": {"studyCategory": "other", "sampleTemplate": "minimum",  "templateVersion": "2.0"}
 	}
-		with data.metabolights.validation.v2.templates.sampleFileHeaderTemplates as [{
-			"version": "v1.0",
+		with data.metabolights.validation.v2.templates.sampleFileHeaderTemplates as { "minimum": [{
+			"version": "2.0",
 			"headers": [
 				{
 					"columnStructure": "ONTOLOGY_COLUMN",
@@ -1958,7 +1958,7 @@ test_rule_s_200_090_004_03_no_violation_01 if {
 					"required": false,
 				},
 			],
-		}]
+		}]}
 
 	count(result) == 0
 }
@@ -2012,9 +2012,10 @@ test_rule_s_200_090_004_03_violation_01 if {
 			{"sourceName": "NCBITaxon"},
 		]}},
 		"parserMessages": {"s_MTBLS1.txt": []},
+		"studyDbMetadata": {"studyCategory": "other", "sampleTemplate": "minimum",  "templateVersion": "2.0"}
 	}
-		with data.metabolights.validation.v2.templates.sampleFileHeaderTemplates as [{
-			"version": "v1.0",
+		with data.metabolights.validation.v2.templates.sampleFileHeaderTemplates as { "minimum": [{
+			"version": "2.0",
 			"headers": [
 				{
 					"columnStructure": "ONTOLOGY_COLUMN",
@@ -2041,7 +2042,7 @@ test_rule_s_200_090_004_03_violation_01 if {
 					"required": false,
 				},
 			],
-		}]
+		}]}
 
 	count(result) == 1
 }
@@ -2075,7 +2076,6 @@ test_rule_s_200_090_005_01_no_violation_01 if {
 				{"columnCategory": "", "columnStructure": "LINKED_COLUMN", "columnHeader": "Term Source REF", "columnName": "Term Source REF.1", "columnIndex": 4},
 				{"columnCategory": "", "columnStructure": "LINKED_COLUMN", "columnHeader": "Term Accession Number", "columnName": "Term Accession Number.1", "columnIndex": 5},
 				{"columnCategory": "Protocol", "columnStructure": "SINGLE_COLUMN", "columnHeader": "Protocol REF", "columnName": "Protocol REF", "columnIndex": 6},
-				{"columnCategory": "Protocol", "columnStructure": "SINGLE_COLUMN", "columnHeader": "Protocol REF", "columnName": "Protocol REF.1", "columnIndex": 7},
 			],
 			"columns": [
 				"Characteristics[Organism]",
@@ -2085,7 +2085,6 @@ test_rule_s_200_090_005_01_no_violation_01 if {
 				"Term Source REF.1",
 				"Term Accession Number.1",
 				"Protocol REF",
-				"Protocol REF.1",
 			],
 			"data": {
 				"Characteristics[Organism]": ["1", "2 ", "", "1234"],
@@ -2094,8 +2093,7 @@ test_rule_s_200_090_005_01_no_violation_01 if {
 				"Characteristics[Variant]": ["Sample Value 123", "Test Value", "Exceptional Case is", ""],
 				"Term Source REF.1": ["UO", "Sam", "MTBLS", "NCBITaxon"],
 				"Term Accession Number.1": ["UO", "MTBLS", "MTBLS", "NCBITaxon"],
-				"Protocol REF": ["Extraction", "Extraction", "Extraction", "Extraction"],
-				"Protocol REF.1": ["Metabolite identification", "Metabolite identification", "Metabolite identification", "Metabolite identification"],
+				"Protocol REF": ["Sample collection", "Sample collection", "Sample collection", "Sample collection"],
 			},
 		}}},
 		"investigation": {"studies": [{"fileName": "s_MTBLS1.txt"}], "ontologySourceReferences": {"references": [
@@ -2105,61 +2103,8 @@ test_rule_s_200_090_005_01_no_violation_01 if {
 			{"sourceName": "NCBITaxon"},
 		]}},
 		"parserMessages": {"s_MTBLS1.txt": []},
+		"studyDbMetadata": {"studyCategory": "other", "sampleTemplate": "minimum",  "templateVersion": "2.0"}
 	}
-		with data.metabolights.validation.v2.templates.sampleFileHeaderTemplates as [{
-			"version": "v1.0",
-			"headers": [
-				{
-					"columnStructure": "ONTOLOGY_COLUMN",
-					"columnCategory": "Characteristics",
-					"columnHeader": "Characteristics[Organism]",
-					"columnPrefix": "Characteristics",
-					"controlLists": {"termSourceRef": "prioritisedOrganismRefSources"},
-					"defaultColumnIndex": 1,
-					"defaultValue": null,
-					"maxLength": 0,
-					"minLength": 5,
-					"required": true,
-				},
-				{
-					"columnStructure": "ONTOLOGY_COLUMN",
-					"columnCategory": "Characteristics",
-					"columnHeader": "Characteristics[Variant]",
-					"columnPrefix": "Characteristics",
-					"controlLists": null,
-					"defaultColumnIndex": 1,
-					"defaultValue": null,
-					"maxLength": 0,
-					"minLength": 5,
-					"required": true,
-				},
-				{
-					"columnStructure": "SINGLE_COLUMN",
-					"columnCategory": "Protocol",
-					"columnHeader": "Protocol REF",
-					"columnPrefix": "",
-					"controlLists": null,
-					"defaultColumnIndex": 7,
-					"defaultValue": "Extraction",
-					"maxLength": 0,
-					"minLength": 0,
-					"required": false,
-				},
-				{
-					"columnStructure": "SINGLE_COLUMN",
-					"columnCategory": "Protocol",
-					"columnHeader": "Protocol REF",
-					"columnPrefix": "",
-					"controlLists": null,
-					"defaultColumnIndex": 7,
-					"defaultValue": "Metabolite identification",
-					"maxLength": 0,
-					"minLength": 0,
-					"required": false,
-				},
-			],
-		}]
-
 	count(result) == 0
 }
 
@@ -2218,60 +2163,9 @@ test_rule_s_200_090_005_01_violation_01 if {
 			{"sourceName": "NCBITaxon"},
 		]}},
 		"parserMessages": {"s_MTBLS1.txt": []},
+		"studyDbMetadata": {"studyCategory": "other", "sampleTemplate": "minimum",  "templateVersion": "2.0"}
 	}
-		with data.metabolights.validation.v2.templates.sampleFileHeaderTemplates as [{
-			"version": "v1.0",
-			"headers": [
-				{
-					"columnStructure": "ONTOLOGY_COLUMN",
-					"columnCategory": "Characteristics",
-					"columnHeader": "Characteristics[Organism]",
-					"columnPrefix": "Characteristics",
-					"controlLists": {"termSourceRef": "prioritisedOrganismRefSources"},
-					"defaultColumnIndex": 1,
-					"defaultValue": null,
-					"maxLength": 0,
-					"minLength": 5,
-					"required": true,
-				},
-				{
-					"columnStructure": "ONTOLOGY_COLUMN",
-					"columnCategory": "Characteristics",
-					"columnHeader": "Characteristics[Variant]",
-					"columnPrefix": "Characteristics",
-					"controlLists": null,
-					"defaultColumnIndex": 1,
-					"defaultValue": null,
-					"maxLength": 0,
-					"minLength": 5,
-					"required": true,
-				},
-				{
-					"columnStructure": "SINGLE_COLUMN",
-					"columnCategory": "Protocol",
-					"columnHeader": "Protocol REF",
-					"columnPrefix": "",
-					"controlLists": null,
-					"defaultColumnIndex": 7,
-					"defaultValue": "Extraction",
-					"maxLength": 0,
-					"minLength": 0,
-					"required": false,
-				},
-				{
-					"columnStructure": "SINGLE_COLUMN",
-					"columnCategory": "Protocol",
-					"columnHeader": "Protocol REF",
-					"columnPrefix": "",
-					"controlLists": null,
-					"defaultColumnIndex": 8,
-					"defaultValue": "Metabolite identification",
-					"maxLength": 0,
-					"minLength": 0,
-					"required": false,
-				},
-			],
-		}]
+		
 	count(result) == 1
 }
 
@@ -2329,8 +2223,8 @@ test_rule_s_200_090_006_01_no_violation_01 if {
 		]}},
 		"parserMessages": {"s_MTBLS1.txt": []},
 	}
-		with data.metabolights.validation.v2.templates.sampleFileHeaderTemplates as [{
-			"version": "v1.0",
+		with data.metabolights.validation.v2.templates.sampleFileHeaderTemplates as { "minimum": [{
+			"version": "2.0",
 			"headers": [
 				{
 					"columnStructure": "ONTOLOGY_COLUMN",
@@ -2357,7 +2251,7 @@ test_rule_s_200_090_006_01_no_violation_01 if {
 					"required": false,
 				},
 			],
-		}]
+		}]}
 
 	count(result) == 0
 }
@@ -2412,8 +2306,8 @@ test_rule_s_200_090_006_01_violation_01 if {
 		]}},
 		"parserMessages": {"s_MTBLS1.txt": []},
 	}
-		with data.metabolights.validation.v2.templates.sampleFileHeaderTemplates as [{
-			"version": "v1.0",
+		with data.metabolights.validation.v2.templates.sampleFileHeaderTemplates as { "minimum": [{
+			"version": "2.0",
 			"headers": [
 				{
 					"columnStructure": "ONTOLOGY_COLUMN",
@@ -2440,7 +2334,7 @@ test_rule_s_200_090_006_01_violation_01 if {
 					"required": false,
 				},
 			],
-		}]
+		}]}
 	count(result) == 1
 }
 
@@ -2498,8 +2392,8 @@ test_rule_s_200_100_001_03_no_violation_01 if {
 		]}},
 		"parserMessages": {"s_MTBLS1.txt": []},
 	}
-		with data.metabolights.validation.v2.templates.sampleFileHeaderTemplates as [{
-			"version": "v1.0",
+		with data.metabolights.validation.v2.templates.sampleFileHeaderTemplates as { "minimum": [{
+			"version": "2.0",
 			"headers": [
 				{
 					"columnStructure": "ONTOLOGY_COLUMN",
@@ -2526,7 +2420,7 @@ test_rule_s_200_100_001_03_no_violation_01 if {
 					"required": false,
 				},
 			],
-		}]
+		}]}
 
 	count(result) == 0
 }
@@ -2581,8 +2475,8 @@ test_rule_s_200_100_001_03_violation_01 if {
 		]}},
 		"parserMessages": {"s_MTBLS1.txt": []},
 	}
-		with data.metabolights.validation.v2.templates.sampleFileHeaderTemplates as [{
-			"version": "v1.0",
+		with data.metabolights.validation.v2.templates.sampleFileHeaderTemplates as { "minimum": [{
+			"version": "2.0",
 			"headers": [
 				{
 					"columnStructure": "ONTOLOGY_COLUMN",
@@ -2609,7 +2503,7 @@ test_rule_s_200_100_001_03_violation_01 if {
 					"required": false,
 				},
 			],
-		}]
+		}]}
 
 	count(result) == 1
 }
@@ -2636,8 +2530,8 @@ test_rule_s_200_100_002_01_no_violation_01 if {
 				{"columnCategory": "", "columnStructure": "LINKED_COLUMN", "columnHeader": "Term Source REF", "columnName": "Term Source REF", "columnIndex": 1},
 				{"columnCategory": "", "columnStructure": "LINKED_COLUMN", "columnHeader": "Term Accession Number", "columnName": "Term Accession Number", "columnIndex": 2},
 				{
-					"columnCategory": "Characteristics", "columnStructure": "ONTOLOGY_COLUMN", "columnHeader": "Characteristics[Variant]",
-					"columnName": "Characteristics[Variant]", "columnIndex": 3,
+					"columnCategory": "Characteristics", "columnStructure": "ONTOLOGY_COLUMN", "columnHeader": "Characteristics[VariantX]",
+					"columnName": "Characteristics[VariantX]", "columnIndex": 3,
 					"additionalColumns": ["Term Source REF", "Term Accession Number"],
 				},
 				{"columnCategory": "", "columnStructure": "LINKED_COLUMN", "columnHeader": "Term Source REF", "columnName": "Term Source REF.1", "columnIndex": 4},
@@ -2647,7 +2541,7 @@ test_rule_s_200_100_002_01_no_violation_01 if {
 				"Characteristics[Organism]",
 				"Term Source REF",
 				"Term Accession Number",
-				"Characteristics[Variant]",
+				"Characteristics[VariantX]",
 				"Term Source REF.1",
 				"Term Accession Number.1",
 			],
@@ -2655,7 +2549,7 @@ test_rule_s_200_100_002_01_no_violation_01 if {
 				"Characteristics[Organism]": ["samplex", "mus musculus ", "homo sapiens", "sapiens"],
 				"Term Source REF": ["UO", "EFO", "MTBLS", "NCBITaxon"],
 				"Term Accession Number": ["https://", "EFO", "MTBLS", "NCBITaxon"],
-				"Characteristics[Variant]": ["1", "2 ", "3", "4"],
+				"Characteristics[VariantX]": ["1", "2 ", "3", "4"],
 				"Term Source REF.1": ["UO", "EFO", "MTBLS", "NCBITaxon"],
 				"Term Accession Number.1": ["https://", "EFO", "MTBLS", "NCBITaxon"],
 			},
@@ -2667,37 +2561,8 @@ test_rule_s_200_100_002_01_no_violation_01 if {
 			{"sourceName": "NCBITaxon"},
 		]}},
 		"parserMessages": {"s_MTBLS1.txt": []},
+		"studyDbMetadata": {"studyCategory": "other", "sampleTemplate": "minimum",  "templateVersion": "2.0"}
 	}
-		with data.metabolights.validation.v2.templates.sampleFileHeaderTemplates as [{
-			"version": "v1.0",
-			"headers": [
-				{
-					"columnStructure": "ONTOLOGY_COLUMN",
-					"columnCategory": "Characteristics",
-					"columnHeader": "Characteristics[Organism]",
-					"columnPrefix": "Characteristics",
-					"controlLists": {"termSourceRef": "prioritisedOrganismRefSources"},
-					"defaultColumnIndex": 1,
-					"defaultValue": null,
-					"maxLength": 0,
-					"minLength": 5,
-					"required": true,
-				},
-				{
-					"columnStructure": "ONTOLOGY_COLUMN",
-					"columnCategory": "Characteristics",
-					"columnHeader": "Characteristics[Sample type]",
-					"columnPrefix": "Characteristics",
-					"controlLists": null,
-					"defaultColumnIndex": 7,
-					"defaultValue": null,
-					"maxLength": 0,
-					"minLength": 0,
-					"required": false,
-				},
-			],
-		}]
-
 	count(result) == 0
 }
 
@@ -2719,8 +2584,8 @@ test_rule_s_200_100_002_01_violation_01 if {
 				{"columnCategory": "", "columnStructure": "LINKED_COLUMN", "columnHeader": "Term Source REF", "columnName": "Term Source REF", "columnIndex": 1},
 				{"columnCategory": "", "columnStructure": "LINKED_COLUMN", "columnHeader": "Term Accession Number", "columnName": "Term Accession Number", "columnIndex": 2},
 				{
-					"columnCategory": "Characteristics", "columnStructure": "ONTOLOGY_COLUMN", "columnHeader": "Characteristics[Variant]",
-					"columnName": "Characteristics[Variant]", "columnIndex": 3,
+					"columnCategory": "Characteristics", "columnStructure": "ONTOLOGY_COLUMN", "columnHeader": "Characteristics[VariantX]",
+					"columnName": "Characteristics[VariantX]", "columnIndex": 3,
 					"additionalColumns": ["Term Source REF", "Term Accession Number"],
 				},
 				{"columnCategory": "", "columnStructure": "LINKED_COLUMN", "columnHeader": "Term Source REF", "columnName": "Term Source REF.1", "columnIndex": 4},
@@ -2730,7 +2595,7 @@ test_rule_s_200_100_002_01_violation_01 if {
 				"Characteristics[Organism]",
 				"Term Source REF",
 				"Term Accession Number",
-				"Characteristics[Variant]",
+				"Characteristics[VariantX]",
 				"Term Source REF.1",
 				"Term Accession Number.1",
 			],
@@ -2738,7 +2603,7 @@ test_rule_s_200_100_002_01_violation_01 if {
 				"Characteristics[Organism]": ["rat", "mouse", "unk:nown", "und:efined"],
 				"Term Source REF": ["UO", "EFO", "", " "],
 				"Term Accession Number": ["UOO", "EFO", "MTBLS", "NCBITaxon"],
-				"Characteristics[Variant]": ["", " ", "", ""],
+				"Characteristics[VariantX]": ["", " ", "", ""],
 				"Term Source REF.1": ["UO", "Sam", "MTBLS", "NCBITaxon"],
 				"Term Accession Number.1": ["UO", "MTBLS", "MTBLS", "NCBITaxon"],
 			},
@@ -2750,36 +2615,8 @@ test_rule_s_200_100_002_01_violation_01 if {
 			{"sourceName": "NCBITaxon"},
 		]}},
 		"parserMessages": {"s_MTBLS1.txt": []},
+		"studyDbMetadata": {"studyCategory": "other", "sampleTemplate": "minimum",  "templateVersion": "2.0"}
 	}
-		with data.metabolights.validation.v2.templates.sampleFileHeaderTemplates as [{
-			"version": "v1.0",
-			"headers": [
-				{
-					"columnStructure": "ONTOLOGY_COLUMN",
-					"columnCategory": "Characteristics",
-					"columnHeader": "Characteristics[Organism]",
-					"columnPrefix": "Characteristics",
-					"controlLists": {"termSourceRef": "prioritisedOrganismRefSources"},
-					"defaultColumnIndex": 1,
-					"defaultValue": null,
-					"maxLength": 0,
-					"minLength": 5,
-					"required": true,
-				},
-				{
-					"columnStructure": "ONTOLOGY_COLUMN",
-					"columnCategory": "Characteristics",
-					"columnHeader": "Characteristics[Sample type]",
-					"columnPrefix": "Characteristics",
-					"controlLists": null,
-					"defaultColumnIndex": 7,
-					"defaultValue": null,
-					"maxLength": 0,
-					"minLength": 0,
-					"required": false,
-				},
-			],
-		}]
 	count(result) == 1
 }
 
@@ -2836,36 +2673,11 @@ test_rule_s_200_100_002_02_no_violation_01 if {
 			{"sourceName": "NCBITaxon"},
 		]}},
 		"parserMessages": {"s_MTBLS1.txt": []},
+		"studyDbMetadata": {"studyCategory": "other", "sampleTemplate": "minimum",  "templateVersion": "2.0"}
 	}
-		with data.metabolights.validation.v2.templates.sampleFileHeaderTemplates as [{
-			"version": "v1.0",
-			"headers": [
-				{
-					"columnStructure": "ONTOLOGY_COLUMN",
-					"columnCategory": "Characteristics",
-					"columnHeader": "Characteristics[Organism]",
-					"columnPrefix": "Characteristics",
-					"controlLists": {"termSourceRef": "prioritisedOrganismRefSources"},
-					"defaultColumnIndex": 1,
-					"defaultValue": null,
-					"maxLength": 0,
-					"minLength": 5,
-					"required": true,
-				},
-				{
-					"columnStructure": "ONTOLOGY_COLUMN",
-					"columnCategory": "Characteristics",
-					"columnHeader": "Characteristics[Sample type]",
-					"columnPrefix": "Characteristics",
-					"controlLists": null,
-					"defaultColumnIndex": 7,
-					"defaultValue": null,
-					"maxLength": 0,
-					"minLength": 0,
-					"required": false,
-				},
-			],
-		}]
+		with data.metabolights.validation.v2.phase2.definitions._SAMPLES_DEFAULT_CHARACTERISTICS_HEADERS as [
+        "Characteristics[Sample type]",
+	]
 
 	count(result) == 0
 }
@@ -2919,36 +2731,12 @@ test_rule_s_200_100_002_02_violation_01 if {
 			{"sourceName": "NCBITaxon"},
 		]}},
 		"parserMessages": {"s_MTBLS1.txt": []},
+		"studyDbMetadata": {"studyCategory": "other", "sampleTemplate": "minimum",  "templateVersion": "2.0"}
 	}
-		with data.metabolights.validation.v2.templates.sampleFileHeaderTemplates as [{
-			"version": "v1.0",
-			"headers": [
-				{
-					"columnStructure": "ONTOLOGY_COLUMN",
-					"columnCategory": "Characteristics",
-					"columnHeader": "Characteristics[Organism]",
-					"columnPrefix": "Characteristics",
-					"controlLists": {"termSourceRef": "prioritisedOrganismRefSources"},
-					"defaultColumnIndex": 1,
-					"defaultValue": null,
-					"maxLength": 0,
-					"minLength": 5,
-					"required": true,
-				},
-				{
-					"columnStructure": "ONTOLOGY_COLUMN",
-					"columnCategory": "Characteristics",
-					"columnHeader": "Characteristics[Sample type]",
-					"columnPrefix": "Characteristics",
-					"controlLists": null,
-					"defaultColumnIndex": 7,
-					"defaultValue": null,
-					"maxLength": 0,
-					"minLength": 0,
-					"required": false,
-				},
-			],
-		}]
+	with data.metabolights.validation.v2.phase2.definitions._SAMPLES_DEFAULT_CHARACTERISTICS_HEADERS as [
+        "Characteristics[Organism]",
+        "Characteristics[Sample type]",
+	]
 	count(result) == 1
 }
 
@@ -3005,37 +2793,13 @@ test_rule_s_200_100_002_03_no_violation_01 if {
 			{"sourceName": "NCBITaxon"},
 		]}},
 		"parserMessages": {"s_MTBLS1.txt": []},
-	}
-		with data.metabolights.validation.v2.templates.sampleFileHeaderTemplates as [{
-			"version": "v1.0",
-			"headers": [
-				{
-					"columnStructure": "ONTOLOGY_COLUMN",
-					"columnCategory": "Characteristics",
-					"columnHeader": "Characteristics[Organism]",
-					"columnPrefix": "Characteristics",
-					"controlLists": {"termSourceRef": "prioritisedOrganismRefSources"},
-					"defaultColumnIndex": 1,
-					"defaultValue": null,
-					"maxLength": 0,
-					"minLength": 5,
-					"required": true,
-				},
-				{
-					"columnStructure": "ONTOLOGY_COLUMN",
-					"columnCategory": "Characteristics",
-					"columnHeader": "Characteristics[Sample type]",
-					"columnPrefix": "Characteristics",
-					"controlLists": null,
-					"defaultColumnIndex": 7,
-					"defaultValue": null,
-					"maxLength": 0,
-					"minLength": 0,
-					"required": false,
-				},
-			],
-		}]
 
+		"studyDbMetadata": {"studyCategory": "other", "sampleTemplate": "minimum",  "templateVersion": "2.0"}
+	}
+	with data.metabolights.validation.v2.phase2.definitions._SAMPLES_DEFAULT_CHARACTERISTICS_HEADERS as [
+        "Characteristics[Organism part]",
+        "Characteristics[Organism]",
+	]
 	count(result) == 0
 }
 
@@ -3089,36 +2853,7 @@ test_rule_s_200_100_002_03_violation_01 if {
 		]}},
 		"parserMessages": {"s_MTBLS1.txt": []},
 	}
-		with data.metabolights.validation.v2.templates.sampleFileHeaderTemplates as [{
-			"version": "v1.0",
-			"headers": [
-				{
-					"columnStructure": "ONTOLOGY_COLUMN",
-					"columnCategory": "Characteristics",
-					"columnHeader": "Characteristics[Organism]",
-					"columnPrefix": "Characteristics",
-					"controlLists": {"termSourceRef": "prioritisedOrganismRefSources"},
-					"defaultColumnIndex": 1,
-					"defaultValue": null,
-					"maxLength": 0,
-					"minLength": 5,
-					"required": true,
-				},
-				{
-					"columnStructure": "ONTOLOGY_COLUMN",
-					"columnCategory": "Characteristics",
-					"columnHeader": "Characteristics[Sample type]",
-					"columnPrefix": "Characteristics",
-					"controlLists": null,
-					"defaultColumnIndex": 7,
-					"defaultValue": null,
-					"maxLength": 0,
-					"minLength": 0,
-					"required": false,
-				},
-			],
-		}]
-
+	with data.metabolights.validation.v2.phase2.definitions._SAMPLES_DEFAULT_CHARACTERISTICS_HEADERS as ["Characteristics[Organism]", "Characteristics[Organism part]"]
 	count(result) == 1
 }
 
@@ -3176,8 +2911,8 @@ test_rule_s_200_100_002_04_no_violation_01 if {
 		]}},
 		"parserMessages": {"s_MTBLS1.txt": []},
 	}
-		with data.metabolights.validation.v2.templates.sampleFileHeaderTemplates as [{
-			"version": "v1.0",
+		with data.metabolights.validation.v2.templates.sampleFileHeaderTemplates as { "minimum": [{
+			"version": "2.0",
 			"headers": [
 				{
 					"columnStructure": "ONTOLOGY_COLUMN",
@@ -3204,7 +2939,7 @@ test_rule_s_200_100_002_04_no_violation_01 if {
 					"required": false,
 				},
 			],
-		}]
+		}]}
 
 	count(result) == 0
 }
@@ -3259,8 +2994,8 @@ test_rule_s_200_100_002_04_violation_01 if {
 		]}},
 		"parserMessages": {"s_MTBLS1.txt": []},
 	}
-		with data.metabolights.validation.v2.templates.sampleFileHeaderTemplates as [{
-			"version": "v1.0",
+		with data.metabolights.validation.v2.templates.sampleFileHeaderTemplates as { "minimum": [{
+			"version": "2.0",
 			"headers": [
 				{
 					"columnStructure": "ONTOLOGY_COLUMN",
@@ -3287,7 +3022,7 @@ test_rule_s_200_100_002_04_violation_01 if {
 					"required": false,
 				},
 			],
-		}]
+		}]}
 
 	count(result) == 1
 }
@@ -3466,8 +3201,8 @@ test_rule_s_200_200_001_02_no_violation_01 if {
 		]}},
 		"parserMessages": {"s_MTBLS1.txt": []},
 	}
-		with data.metabolights.validation.v2.templates.sampleFileHeaderTemplates as [{
-			"version": "v1.0",
+		with data.metabolights.validation.v2.templates.sampleFileHeaderTemplates as { "minimum": [{
+			"version": "2.0",
 			"headers": [
 				{
 					"columnStructure": "ONTOLOGY_COLUMN",
@@ -3506,7 +3241,7 @@ test_rule_s_200_200_001_02_no_violation_01 if {
 					"required": false,
 				},
 			],
-		}]
+		}]}
 
 	count(result) == 0
 }
@@ -3565,8 +3300,8 @@ test_rule_s_200_200_001_02_violation_01 if {
 		]}},
 		"parserMessages": {"s_MTBLS1.txt": []},
 	}
-		with data.metabolights.validation.v2.templates.sampleFileHeaderTemplates as [{
-			"version": "v1.0",
+		with data.metabolights.validation.v2.templates.sampleFileHeaderTemplates as { "minimum": [{
+			"version": "2.0",
 			"headers": [
 				{
 					"columnStructure": "ONTOLOGY_COLUMN",
@@ -3605,7 +3340,7 @@ test_rule_s_200_200_001_02_violation_01 if {
 					"required": false,
 				},
 			],
-		}]
+		}]}
 	count(result) == 1
 }
 
@@ -3667,8 +3402,8 @@ test_rule_s_200_200_002_01_no_violation_01 if {
 		]}},
 		"parserMessages": {"s_MTBLS1.txt": []},
 	}
-		with data.metabolights.validation.v2.templates.sampleFileHeaderTemplates as [{
-			"version": "v1.0",
+		with data.metabolights.validation.v2.templates.sampleFileHeaderTemplates as { "minimum": [{
+			"version": "2.0",
 			"headers": [
 				{
 					"columnStructure": "ONTOLOGY_COLUMN",
@@ -3707,7 +3442,7 @@ test_rule_s_200_200_002_01_no_violation_01 if {
 					"required": false,
 				},
 			],
-		}]
+		}]}
 
 	count(result) == 0
 }
@@ -3766,8 +3501,8 @@ test_rule_s_200_200_002_01_violation_01 if {
 		]}},
 		"parserMessages": {"s_MTBLS1.txt": []},
 	}
-		with data.metabolights.validation.v2.templates.sampleFileHeaderTemplates as [{
-			"version": "v1.0",
+		with data.metabolights.validation.v2.templates.sampleFileHeaderTemplates as { "minimum": [{
+			"version": "2.0",
 			"headers": [
 				{
 					"columnStructure": "ONTOLOGY_COLUMN",
@@ -3806,7 +3541,7 @@ test_rule_s_200_200_002_01_violation_01 if {
 					"required": false,
 				},
 			],
-		}]
+		}]}
 	count(result) == 1
 }
 
@@ -3868,8 +3603,8 @@ test_rule_s_200_200_003_01_no_violation_01 if {
 		]}},
 		"parserMessages": {"s_MTBLS1.txt": []},
 	}
-		with data.metabolights.validation.v2.templates.sampleFileHeaderTemplates as [{
-			"version": "v1.0",
+		with data.metabolights.validation.v2.templates.sampleFileHeaderTemplates as { "minimum": [{
+			"version": "2.0",
 			"headers": [
 				{
 					"columnStructure": "ONTOLOGY_COLUMN",
@@ -3908,7 +3643,7 @@ test_rule_s_200_200_003_01_no_violation_01 if {
 					"required": false,
 				},
 			],
-		}]
+		}]}
 		with data.metabolights.validation.v2.controlLists.prioritisedStudyFactorRefSources as ["MTBLS", "NCBITaxon"]
 
 	count(result) == 0
@@ -3968,8 +3703,8 @@ test_rule_s_200_200_003_01_violation_01 if {
 		]}},
 		"parserMessages": {"s_MTBLS1.txt": []},
 	}
-		with data.metabolights.validation.v2.templates.sampleFileHeaderTemplates as [{
-			"version": "v1.0",
+		with data.metabolights.validation.v2.templates.sampleFileHeaderTemplates as { "minimum": [{
+			"version": "2.0",
 			"headers": [
 				{
 					"columnStructure": "ONTOLOGY_COLUMN",
@@ -4008,7 +3743,7 @@ test_rule_s_200_200_003_01_violation_01 if {
 					"required": false,
 				},
 			],
-		}]
+		}]}
 		with data.metabolights.validation.v2.controlLists.prioritisedStudyFactorRefSources as ["MTBLS", "NCBITaxon"]
 	count(result) == 1
 }

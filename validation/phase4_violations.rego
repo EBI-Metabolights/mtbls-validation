@@ -107,8 +107,8 @@ rule_f_400_090_001_03 contains result if {
 
 
 # METADATA
-# title: Data files contain zero byte data.
-# description: Check data files and re-upload.
+# title: Referenced data files contain zero byte data.
+# description: Check referenced data files and re-upload.
 # custom:
 #  rule_id: rule_f_400_090_001_04
 #  type: ERROR
@@ -260,7 +260,7 @@ rule_f_400_090_003_01 contains result if {
 # custom:
 #  rule_id: rule_f_400_100_001_01
 #  type: ERROR
-#  priority: zero
+#  priority: HIGH
 #  section: files.general
 rule_f_400_100_001_01 contains result if {
 	pattern := `FILES/(.+/)?([isa]_.+\.txt|m_.+\.tsv)$`    

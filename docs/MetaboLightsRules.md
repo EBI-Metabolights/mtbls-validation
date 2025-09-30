@@ -89,7 +89,7 @@
 | 87 | rule_f_400_090_001_01 | ERROR | Referenced data files not within study FILES folder. | Referenced data files must exist within study FILES folder. Reference data files with format FILES/(sub folder if exists)/(file name) in assay file. |
 | 88 | rule_f_400_090_001_02 | ERROR | Referenced data files do not start with FILES/ prefix. | Reference data files with format FILES/(sub folder if exists>>/(file name>> in assay file. |
 | 89 | rule_f_400_090_001_03 | ERROR | Referenced data files contain invalid characters. There are invalid characters in a referenced file name. | Use only .- _A-Za-z0-9 characters as a referenced data file name. |
-| 90 | rule_f_400_090_001_04 | ERROR | Data files contain zero byte data. | Check data files and re-upload. |
+| 90 | rule_f_400_090_001_04 | ERROR | Referenced data files contain zero byte data. | Check referenced data files and re-upload. |
 | 91 | rule_f_400_090_001_07 | ERROR | Folders are referenced in assay file. | Folder reference in data file column is not allowed. If data file type is a folder, compress it with zip utility tool and reference compressed data file. |
 | 92 | rule_f_400_090_001_08 | ERROR | A file in NMR raw data folder is referenced in assay file. | Only .zip files are allowed in this column. If data file or its parent is a raw data folder, compress it with zip utility tool and reference only compressed data file (e.g. 0011/fid -> 0001.zip, 0001/acqu -> 0001.zip). |
 | 93 | rule_f_400_090_001_09 | ERROR | Uploaded data file names contain invalid characters. | Use only .-_A-Za-z0-9 characters for data file name. |
@@ -193,14 +193,14 @@
 | 191 | rule_m_100_100_006_02 | ERROR | There is only one row in metabolite assignment file. | Only one row is defined in metabolite assignment file. Add more than one row (assignment). Please ensure all xxx, including controls, QCs, standards, etc, are referenced. |
 | 192 | rule_m_300_090_001_01 | ERROR | Values with trailing or leading spaces in metabolite assignment file. | Values in metabolite assignment file should not start or end with space characters. |
 | 193 | rule_m_300_090_005_01 | ERROR | Values for required columns not in metabolite assignment file. | All required column values should be defined in metabolite assignment file. |
-| 194 | rule_m_300_090_005_02 | ERROR | Values do not meet minimum length requirement. | Each row must have a value equal or greater than the minimum length. |
-| 195 | rule_m_300_090_005_03 | ERROR | Values do not meet maximum length requirement. | Each row must have a value equal or less than the maximum length. |
-| 196 | rule_m_300_100_001_01 | ERROR | mass_to_charge column has empty values in metabolite assignment file. | All 'mass_to_charge' column values must be defined in metabolite assignment file. |
-| 197 | rule_m_300_100_001_02 | ERROR | retention_time column has empty values in metabolite assignment file. | All 'retention_time' column values must be defined in metabolite assignment file for LC-MS / GC-MS. |
-| 198 | rule_m_300_100_001_03 | WARNING | retention_time column values not numeric in metabolite assignment file. | All 'retention_time' column values should be numeric. |
-| 199 | rule_m_300_200_001_01 | WARNING | chemical_shift column has empty values in metabolite assignment file. | All 'chemical_shift' column values should be defined in metabolite assignment file. |
-| 200 | rule_m_300_200_001_02 | WARNING | chemical_shift column values not numeric in metabolite assignment file. | All 'chemical_shift' column values should be numeric in metabolite assignment file. |
-| 201 | rule_m_300_200_001_03 | WARNING | multiplicity column has empty values in metabolite assignment file. | All 'multiplicity' column values should be defined in metabolite assignment file. |
+| 194 | rule_m_300_090_005_02 | ERROR | Values do not meet minimum length requirement. | Each row should have a value equal or greater than the minimum length. |
+| 195 | rule_m_300_090_005_03 | ERROR | Values do not meet maximum length requirement. | Each row should have a value equal or less than the maximum length. |
+| 196 | rule_m_300_100_001_01 | ERROR | mass_to_charge column has empty values in metabolite assignment file. | All 'mass_to_charge' column values should be defined in metabolite assignment file. |
+| 197 | rule_m_300_100_001_02 | ERROR | retention_time column has empty values in metabolite assignment file. | All 'retention_time' column values should be defined in metabolite assignment file for LC-MS / GC-MS. |
+| 198 | rule_m_300_100_001_03 | WARNING | Some retention_time column values are not numeric in metabolite assignment file. | All 'retention_time' column values should be numeric. |
+| 199 | rule_m_300_200_001_01 | WARNING | Values for chemical_shift column not in metabolite assignment file. | All 'chemical_shift' column values should be defined in metabolite assignment file. |
+| 200 | rule_m_300_200_001_02 | WARNING | Values for chemical_shift column not numeric in metabolite assignment file for NMR assays. | All 'chemical_shift' column values should be numeric for NMR assays. |
+| 201 | rule_m_300_200_001_03 | WARNING | Values for multiplicity column not in metabolite assignment file for NMR assays. | All 'multiplicity' column values should be defined in metabolite assignment file for NMR assays. |
 | 202 | rule_s_100_100_001_01 | ERROR | Invalid multi-column structure in sample file. | There is an invalid multi-column structure in sample file. Check column order. |
 | 203 | rule_s_100_100_001_02 | ERROR | Unordered or unlinked column structure in sample file. | There is an unordered or unlinked column in sample file. Check column order. |
 | 204 | rule_s_100_100_001_03 | ERROR | Some default columns are missing in sample file. | All default columns should exist in sample file. |
@@ -245,6 +245,6 @@
 | 243 | rule_s_200_100_002_04 | WARNING | Term Accession Number of the user defined characteristics ontology terms is empty. | We highly recommend to define accession number of the selected term. |
 | 244 | rule_s_200_200_001_01 | ERROR | Sample name values are not unique in sample file. | All sample names should be unique in sample file. |
 | 245 | rule_s_200_200_001_02 | ERROR | Values for Sample Name column not in any assay file. | Each sample name should be referenced at least one time in assay files. |
-| 246 | rule_s_200_200_002_01 | WARNING | There are empty values in Factor Value column. | Factor values should be defined for each row. |
+| 246 | rule_s_200_200_002_01 | WARNING | There are empty values in Factor Value column. | Factor values should be set for each row. |
 | 247 | rule_s_200_200_002_02 | ERROR | Factor Value column not complete. | At least two values must be defined in Factor Value column. |
 | 248 | rule_s_200_200_003_01 | WARNING | Term Source REFs of the factor ontology term not in the prioritised control list. | We highly recommend to use the prioritised Ontology Source Refs for the factor ontology term. |

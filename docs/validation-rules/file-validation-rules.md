@@ -5,7 +5,7 @@
 | 1 | rule_f_400_090_001_01 | ERROR | Referenced data files not within study FILES folder. | Referenced data files must exist within study FILES folder. Reference data files with format FILES/(sub folder if exists)/(file name) in assay file. |
 | 2 | rule_f_400_090_001_02 | ERROR | Referenced data files do not start with FILES/ prefix. | Reference data files with format FILES/(sub folder if exists>>/(file name>> in assay file. |
 | 3 | rule_f_400_090_001_03 | ERROR | Referenced data files contain invalid characters. There are invalid characters in a referenced file name. | Use only .- _A-Za-z0-9 characters as a referenced data file name. |
-| 4 | rule_f_400_090_001_04 | ERROR | Data files contain zero byte data. | Check data files and re-upload. |
+| 4 | rule_f_400_090_001_04 | ERROR | Referenced data files contain zero byte data. | Check referenced data files and re-upload. |
 | 5 | rule_f_400_090_001_07 | ERROR | Folders are referenced in assay file. | Folder reference in data file column is not allowed. If data file type is a folder, compress it with zip utility tool and reference compressed data file. |
 | 6 | rule_f_400_090_001_08 | ERROR | A file in NMR raw data folder is referenced in assay file. | Only .zip files are allowed in this column. If data file or its parent is a raw data folder, compress it with zip utility tool and reference only compressed data file (e.g. 0011/fid -> 0001.zip, 0001/acqu -> 0001.zip). |
 | 7 | rule_f_400_090_001_09 | ERROR | Uploaded data file names contain invalid characters. | Use only .-_A-Za-z0-9 characters for data file name. |

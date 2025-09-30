@@ -3,12 +3,9 @@ package metabolights.validation.v2.phase2.definitions
 import rego.v1
 
 _SAMPLES_DEFAULT_CHARACTERISTICS_HEADERS = {x |
-	some i, j
-	templates := data.metabolights.validation.v2.templates
-	templates.sampleFileHeaderTemplates[i].version == "v1.0"
-	headers := templates.sampleFileHeaderTemplates[i].headers[j]
-	headers.columnCategory == "Characteristics"
-	x := headers.columnHeader
+	some header in data.metabolights.validation.v2.phase1.definitions.SELECTED_STUDY_SAMPLE_FILE_TEMPLATE_HEADERS
+	header.columnCategory == "Characteristics"
+	x := header.columnHeader
 }
 
 _ONTOLOGY_SOURCE_REFERENCE_NAMES := {x.sourceName | x := input.investigation.ontologySourceReferences.references[_]}

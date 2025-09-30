@@ -1,6 +1,6 @@
 {
     "validation_version": "2.0.19",
-    "created_at": "2025-08-27T09:28:07.486998+00:00",
+    "created_at": "2025-09-30T07:51:26.765549+00:00",
     "violations": [
         {
             "rule_id": "rule___100_100_001_01",
@@ -716,8 +716,8 @@
         },
         {
             "rule_id": "rule_f_400_090_001_04",
-            "title": "Data files contain zero byte data.",
-            "description": "Check data files and re-upload.",
+            "title": "Referenced data files contain zero byte data.",
+            "description": "Check referenced data files and re-upload.",
             "type": "ERROR",
             "section": "files",
             "priority": "CRITICAL"
@@ -768,7 +768,7 @@
             "description": "Metadata files must not exist within study FILES folder. Review and delete/move metadata files.",
             "type": "ERROR",
             "section": "files",
-            "priority": "zero"
+            "priority": "HIGH"
         },
         {
             "rule_id": "rule_f_400_100_001_02",
@@ -1549,7 +1549,7 @@
         {
             "rule_id": "rule_m_300_090_005_02",
             "title": "Values do not meet minimum length requirement.",
-            "description": "Each row must have a value equal or greater than the minimum length.",
+            "description": "Each row should have a value equal or greater than the minimum length.",
             "type": "ERROR",
             "section": "metabolites",
             "priority": "HIGH"
@@ -1557,7 +1557,7 @@
         {
             "rule_id": "rule_m_300_090_005_03",
             "title": "Values do not meet maximum length requirement.",
-            "description": "Each row must have a value equal or less than the maximum length.",
+            "description": "Each row should have a value equal or less than the maximum length.",
             "type": "ERROR",
             "section": "metabolites",
             "priority": "HIGH"
@@ -1565,7 +1565,7 @@
         {
             "rule_id": "rule_m_300_100_001_01",
             "title": "mass_to_charge column has empty values in metabolite assignment file.",
-            "description": "All 'mass_to_charge' column values must be defined in metabolite assignment file.",
+            "description": "All 'mass_to_charge' column values should be defined in metabolite assignment file.",
             "type": "ERROR",
             "section": "metabolites",
             "priority": "HIGH"
@@ -1573,22 +1573,22 @@
         {
             "rule_id": "rule_m_300_100_001_02",
             "title": "retention_time column has empty values in metabolite assignment file.",
-            "description": "All 'retention_time' column values must be defined in metabolite assignment file for LC-MS / GC-MS.",
+            "description": "All 'retention_time' column values should be defined in metabolite assignment file for LC-MS / GC-MS.",
             "type": "ERROR",
             "section": "metabolites",
             "priority": "HIGH"
         },
         {
             "rule_id": "rule_m_300_100_001_03",
-            "title": "retention_time column values not numeric in metabolite assignment file.",
+            "title": "Some retention_time column values are not numeric in metabolite assignment file.",
             "description": "All 'retention_time' column values should be numeric.",
             "type": "WARNING",
             "section": "metabolites",
-            "priority": "HIGH"
+            "priority": "CRITICAL"
         },
         {
             "rule_id": "rule_m_300_200_001_01",
-            "title": "chemical_shift column has empty values in metabolite assignment file.",
+            "title": "Values for chemical_shift column not in metabolite assignment file.",
             "description": "All 'chemical_shift' column values should be defined in metabolite assignment file.",
             "type": "WARNING",
             "section": "metabolites",
@@ -1596,16 +1596,16 @@
         },
         {
             "rule_id": "rule_m_300_200_001_02",
-            "title": "chemical_shift column values not numeric in metabolite assignment file.",
-            "description": "All 'chemical_shift' column values should be numeric in metabolite assignment file.",
+            "title": "Values for chemical_shift column not numeric in metabolite assignment file for NMR assays.",
+            "description": "All 'chemical_shift' column values should be numeric for NMR assays.",
             "type": "WARNING",
             "section": "metabolites",
-            "priority": "HIGH"
+            "priority": "CRITICAL"
         },
         {
             "rule_id": "rule_m_300_200_001_03",
-            "title": "multiplicity column has empty values in metabolite assignment file.",
-            "description": "All 'multiplicity' column values should be defined in metabolite assignment file.",
+            "title": "Values for multiplicity column not in metabolite assignment file for NMR assays.",
+            "description": "All 'multiplicity' column values should be defined in metabolite assignment file for NMR assays.",
             "type": "WARNING",
             "section": "metabolites",
             "priority": "CRITICAL"
@@ -1965,7 +1965,7 @@
         {
             "rule_id": "rule_s_200_200_002_01",
             "title": "There are empty values in Factor Value column.",
-            "description": "Factor values should be defined for each row.",
+            "description": "Factor values should be set for each row.",
             "type": "WARNING",
             "section": "samples",
             "priority": "HIGH"
@@ -1988,6 +1988,14 @@
         }
     ],
     "summary": [
+        {
+            "rule_id": "",
+            "title": "Data files contain zero byte data.",
+            "description": "Check data files and re-upload.",
+            "type": "INFO",
+            "section": "",
+            "priority": ""
+        },
         {
             "rule_id": "rule___100_000",
             "title": "Input schema validation summary.",

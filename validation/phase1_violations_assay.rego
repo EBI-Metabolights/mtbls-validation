@@ -250,7 +250,8 @@ rule_a_100_100_001_10 contains result if {
 	header_names := {header.columnHeader: same_headers |
 		some header_set in def._DEFAULT_ASSAY_HEADERS[file_name]
 
-		header_set.version == "v1.0"
+		header_set.version == data.metabolights.validation.v2.phase1.definitions.STUDY_TEMPLATE_VERSION
+		
 		some header in header_set.headers
 		not startswith(header.columnHeader, "Comment[")
 		not startswith(header.columnHeader, "Protocol REF")
@@ -323,7 +324,7 @@ rule_a_100_100_001_12 contains result if {
 		
 	]
 	some header_set in def._DEFAULT_ASSAY_HEADERS[file_name]
-	header_set.version == "v1.0"
+	header_set.version == def.STUDY_TEMPLATE_VERSION
 
 	matches := [header.columnHeader |
 		some header in header_set.headers
@@ -361,7 +362,7 @@ rule_a_100_100_001_13 contains result if {
 	technique_name == assay_file.assayTechnique.name
 
 	some template in templates
-	template.version == "v1.0"
+	template.version == data.metabolights.validation.v2.phase1.definitions.STUDY_TEMPLATE_VERSION
 
 	unique_header_names := {header.columnHeader: columns | 
 		some header in template.headers

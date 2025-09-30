@@ -75,7 +75,7 @@ rule_a_200_090_002_02 contains result if {
 		some technique_name, templates in data.metabolights.validation.v2.templates.assayFileHeaderTemplates
 		technique_name == sheet.assayTechnique.name
 		some _, template in templates
-		template.version == "v1.0"
+		template.version == data.metabolights.validation.v2.phase1.definitions.STUDY_TEMPLATE_VERSION
 		some _, header in template.headers
 		some "termSourceRef", _ in header.controlLists
 	}
@@ -153,12 +153,13 @@ rule_a_200_090_002_06 contains result if {
 #  priority: HIGH
 #  section: assays.general
 rule_a_200_090_002_07 contains result if {
+	print(data.metabolights.validation.v2.phase1.definitions.STUDY_TEMPLATE_VERSION)
 	some file_name, sheet in input.assays
 	some header_index, header in sheet.table.headers
 	some technique_name, template_list in data.metabolights.validation.v2.templates.assayFileHeaderTemplates
 	technique_name == sheet.assayTechnique.name
 	some _, template in template_list
-	template.version == "v1.0"
+	template.version == data.metabolights.validation.v2.phase1.definitions.STUDY_TEMPLATE_VERSION
 
 	control_lists := data.metabolights.validation.v2.controlLists
 	result := f.term_source_ref_is_empty_for_term(rego.metadata.rule(), assays, file_name, header_index, template, control_lists)
@@ -422,7 +423,7 @@ rule_a_200_090_004_01 contains result if {
 	template_list := data.metabolights.validation.v2.templates.assayFileHeaderTemplates[assay_technique]
 
 	some template in template_list
-	template.version == "v1.0"
+	template.version == data.metabolights.validation.v2.phase1.definitions.STUDY_TEMPLATE_VERSION
 	some template_header in template.headers
 	template_header.required == true
 
@@ -449,7 +450,7 @@ rule_a_200_090_004_02 contains result if {
 	template_list := data.metabolights.validation.v2.templates.assayFileHeaderTemplates[assay_technique]
 
 	some template in template_list
-	template.version == "v1.0"
+	template.version == data.metabolights.validation.v2.phase1.definitions.STUDY_TEMPLATE_VERSION
 	some template_header in template.headers
 	template_header.minLength > 0
 
@@ -475,7 +476,7 @@ rule_a_200_090_004_03 contains result if {
 	template_list := data.metabolights.validation.v2.templates.assayFileHeaderTemplates[assay_technique]
 
 	some template in template_list
-	template.version == "v1.0"
+	template.version == data.metabolights.validation.v2.phase1.definitions.STUDY_TEMPLATE_VERSION
 	some template_header in template.headers
 	template_header.maxLength > 0
 
@@ -500,7 +501,7 @@ rule_a_200_090_005_01 contains result if {
 		assay_technique := sheet.assayTechnique.name
 		template_list := data.metabolights.validation.v2.templates.assayFileHeaderTemplates[assay_technique]
 		some template in template_list
-		template.version == "v1.0"
+		template.version == data.metabolights.validation.v2.phase1.definitions.STUDY_TEMPLATE_VERSION
 		some template_header in template.headers
 		template_header.columnCategory == "Protocol"
 	]

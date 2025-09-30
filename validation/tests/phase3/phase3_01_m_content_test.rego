@@ -36,6 +36,7 @@ test_rule_m_300_090_001_01_no_violation_01 if {
 		}}},
 		"investigation": {"studies": [{"fileName": "s_MTBLS1.txt"}]},
 		"parserMessages": {"s_MTBLS1.txt": []},
+		
 	}
 
 	count(result) == 0
@@ -70,6 +71,7 @@ test_rule_m_300_090_001_01_violation_01 if {
 		}}},
 		"investigation": {"studies": [{"fileName": "s_MTBLS1.txt"}]},
 		"parserMessages": {"s_MTBLS1.txt": []},
+		"studyDbMetadata": {"studyCategory": "other", "sampleTemplate": "minimum",  "templateVersion": "2.0"}
 	}
 	count(result) == 2
 }
@@ -133,9 +135,10 @@ test_rule_m_300_090_005_01_no_violation_01 if {
 			{"sourceName": "NCBITaxon"},
 		]}},
 		"parserMessages": {"s_MTBLS1.txt": []},
+		"studyDbMetadata": {"studyCategory": "other", "sampleTemplate": "minimum",  "templateVersion": "2.0"}
 	}
 		with data.metabolights.validation.v2.templates.assignmentFileHeaderTemplates as {"MS": [{
-			"version": "v1.0",
+			"version": "2.0",
 			"headers": [
 				{
 					"columnStructure": "ONTOLOGY_COLUMN",
@@ -246,9 +249,10 @@ test_rule_m_300_090_005_01_violation_01 if {
 			{"sourceName": "NCBITaxon"},
 		]}},
 		"parserMessages": {"s_MTBLS1.txt": []},
+		"studyDbMetadata": {"studyCategory": "other", "sampleTemplate": "minimum",  "templateVersion": "2.0"}
 	}
 		with data.metabolights.validation.v2.templates.assignmentFileHeaderTemplates as {"MS": [{
-			"version": "v1.0",
+			"version": "2.0",
 			"headers": [
 				{
 					"columnStructure": "ONTOLOGY_COLUMN",
@@ -362,9 +366,10 @@ test_rule_m_300_090_005_02_no_violation_01 if {
 			{"sourceName": "NCBITaxon"},
 		]}},
 		"parserMessages": {"s_MTBLS1.txt": []},
+		"studyDbMetadata": {"studyCategory": "other", "sampleTemplate": "minimum",  "templateVersion": "2.0"}
 	}
 		with data.metabolights.validation.v2.templates.assignmentFileHeaderTemplates as {"MS": [{
-			"version": "v1.0",
+			"version": "2.0",
 			"headers": [
 				{
 					"columnStructure": "ONTOLOGY_COLUMN",
@@ -475,9 +480,10 @@ test_rule_m_300_090_005_02_violation_01 if {
 			{"sourceName": "NCBITaxon"},
 		]}},
 		"parserMessages": {"s_MTBLS1.txt": []},
+		"studyDbMetadata": {"studyCategory": "other", "sampleTemplate": "minimum",  "templateVersion": "2.0"}
 	}
 		with data.metabolights.validation.v2.templates.assignmentFileHeaderTemplates as {"MS": [{
-			"version": "v1.0",
+			"version": "2.0",
 			"headers": [
 				{
 					"columnStructure": "ONTOLOGY_COLUMN",
@@ -591,9 +597,10 @@ test_rule_m_300_090_005_03_no_violation_01 if {
 			{"sourceName": "NCBITaxon"},
 		]}},
 		"parserMessages": {"s_MTBLS1.txt": []},
+		"studyDbMetadata": {"studyCategory": "other", "sampleTemplate": "minimum",  "templateVersion": "2.0"}
 	}
 		with data.metabolights.validation.v2.templates.assignmentFileHeaderTemplates as {"MS": [{
-			"version": "v1.0",
+			"version": "2.0",
 			"headers": [
 				{
 					"columnStructure": "ONTOLOGY_COLUMN",
@@ -704,9 +711,10 @@ test_rule_m_300_090_005_03_violation_01 if {
 			{"sourceName": "NCBITaxon"},
 		]}},
 		"parserMessages": {"s_MTBLS1.txt": []},
+		"studyDbMetadata": {"studyCategory": "other", "sampleTemplate": "minimum",  "templateVersion": "2.0"}
 	}
 		with data.metabolights.validation.v2.templates.assignmentFileHeaderTemplates as {"MS": [{
-			"version": "v1.0",
+			"version": "2.0",
 			"headers": [
 				{
 					"columnStructure": "ONTOLOGY_COLUMN",
@@ -820,9 +828,10 @@ test_rule_m_300_100_001_01_no_violation_01 if {
 			{"sourceName": "NCBITaxon"},
 		]}},
 		"parserMessages": {"s_MTBLS1.txt": []},
+		"studyDbMetadata": {"studyCategory": "other", "sampleTemplate": "minimum",  "templateVersion": "2.0"}
 	}
 		with data.metabolights.validation.v2.templates.assignmentFileHeaderTemplates as {"MS": [{
-			"version": "v1.0",
+			"version": "2.0",
 			"headers": [
 				{
 					"columnStructure": "ONTOLOGY_COLUMN",
@@ -933,9 +942,10 @@ test_rule_m_300_100_001_01_violation_01 if {
 			{"sourceName": "NCBITaxon"},
 		]}},
 		"parserMessages": {"s_MTBLS1.txt": []},
+		"studyDbMetadata": {"studyCategory": "other", "sampleTemplate": "minimum",  "templateVersion": "2.0"}
 	}
 		with data.metabolights.validation.v2.templates.assignmentFileHeaderTemplates as {"MS": [{
-			"version": "v1.0",
+			"version": "2.0",
 			"headers": [
 				{
 					"columnStructure": "ONTOLOGY_COLUMN",
@@ -1062,9 +1072,10 @@ test_rule_m_300_100_001_02_no_violation_01 if {
 			}
 		},
 		"parserMessages": {"s_MTBLS1.txt": []},
+		"studyDbMetadata": {"studyCategory": "other", "sampleTemplate": "minimum",  "templateVersion": "2.0"}
 	}
 		with data.metabolights.validation.v2.templates.assignmentFileHeaderTemplates as {"MS": [{
-			"version": "v1.0",
+			"version": "2.0",
 			"headers": [
 				{
 					"columnStructure": "ONTOLOGY_COLUMN",
@@ -1190,9 +1201,10 @@ test_rule_m_300_100_001_02_no_violation_02 if {
 			}
 		},
 		"parserMessages": {"s_MTBLS1.txt": []},
+		"studyDbMetadata": {"studyCategory": "other", "sampleTemplate": "minimum",  "templateVersion": "2.0"}
 	}
 		with data.metabolights.validation.v2.templates.assignmentFileHeaderTemplates as {"MS": [{
-			"version": "v1.0",
+			"version": "2.0",
 			"headers": [
 				{
 					"columnStructure": "ONTOLOGY_COLUMN",
@@ -1316,9 +1328,10 @@ test_rule_m_300_100_001_02_violation_01 if {
 			}
 		},
 		"parserMessages": {"s_MTBLS1.txt": []},
+		"studyDbMetadata": {"studyCategory": "other", "sampleTemplate": "minimum",  "templateVersion": "2.0"}
 	}
 		with data.metabolights.validation.v2.templates.assignmentFileHeaderTemplates as {"MS": [{
-			"version": "v1.0",
+			"version": "2.0",
 			"headers": [
 				{
 					"columnStructure": "ONTOLOGY_COLUMN",
@@ -1432,9 +1445,10 @@ test_rule_m_300_100_001_03_no_violation_01 if {
 			{"sourceName": "NCBITaxon"},
 		]}},
 		"parserMessages": {"s_MTBLS1.txt": []},
+		"studyDbMetadata": {"studyCategory": "other", "sampleTemplate": "minimum",  "templateVersion": "2.0"}
 	}
 		with data.metabolights.validation.v2.templates.assignmentFileHeaderTemplates as {"MS": [{
-			"version": "v1.0",
+			"version": "2.0",
 			"headers": [
 				{
 					"columnStructure": "ONTOLOGY_COLUMN",
@@ -1545,9 +1559,10 @@ test_rule_m_300_100_001_03_violation_01 if {
 			{"sourceName": "NCBITaxon"},
 		]}},
 		"parserMessages": {"s_MTBLS1.txt": []},
+		"studyDbMetadata": {"studyCategory": "other", "sampleTemplate": "minimum",  "templateVersion": "2.0"}
 	}
 		with data.metabolights.validation.v2.templates.assignmentFileHeaderTemplates as {"MS": [{
-			"version": "v1.0",
+			"version": "2.0",
 			"headers": [
 				{
 					"columnStructure": "ONTOLOGY_COLUMN",
@@ -1633,6 +1648,7 @@ test_rule_m_300_200_001_01_no_violation_01 if {
 		}}},
 		"investigation": {"studies": [{"fileName": "s_MTBLS1.txt"}]},
 		"parserMessages": {"s_MTBLS1.txt": []},
+		"studyDbMetadata": {"studyCategory": "other", "sampleTemplate": "minimum",  "templateVersion": "2.0"}
 	}
 	count(result) == 0
 }
@@ -1663,6 +1679,7 @@ test_rule_m_300_200_001_01_violation_01 if {
 		}}},
 		"investigation": {"studies": [{"fileName": "s_MTBLS1.txt"}]},
 		"parserMessages": {"s_MTBLS1.txt": []},
+		"studyDbMetadata": {"studyCategory": "other", "sampleTemplate": "minimum",  "templateVersion": "2.0"}
 	}
 	count(result) == 1
 }
@@ -1699,6 +1716,7 @@ test_rule_m_300_200_001_02_no_violation_01 if {
 		}}},
 		"investigation": {"studies": [{"fileName": "s_MTBLS1.txt"}]},
 		"parserMessages": {"s_MTBLS1.txt": []},
+		"studyDbMetadata": {"studyCategory": "other", "sampleTemplate": "minimum",  "templateVersion": "2.0"}
 	}
 	count(result) == 0
 }
@@ -1729,6 +1747,7 @@ test_rule_m_300_200_001_02_violation_01 if {
 		}}},
 		"investigation": {"studies": [{"fileName": "s_MTBLS1.txt"}]},
 		"parserMessages": {"s_MTBLS1.txt": []},
+		"studyDbMetadata": {"studyCategory": "other", "sampleTemplate": "minimum",  "templateVersion": "2.0"}
 	}
 	count(result) == 1
 }
@@ -1762,6 +1781,7 @@ test_rule_m_300_200_001_03_no_violation_01 if {
 		}}},
 		"investigation": {"studies": [{"fileName": "s_MTBLS1.txt"}]},
 		"parserMessages": {"s_MTBLS1.txt": []},
+		"studyDbMetadata": {"studyCategory": "other", "sampleTemplate": "minimum",  "templateVersion": "2.0"}
 	}
 	count(result) == 0
 }
@@ -1789,6 +1809,7 @@ test_rule_m_300_200_001_03_violation_01 if {
 		}}},
 		"investigation": {"studies": [{"fileName": "s_MTBLS1.txt"}]},
 		"parserMessages": {"s_MTBLS1.txt": []},
+		"studyDbMetadata": {"studyCategory": "other", "sampleTemplate": "minimum",  "templateVersion": "2.0"}
 	}
 	count(result) == 1
 }
