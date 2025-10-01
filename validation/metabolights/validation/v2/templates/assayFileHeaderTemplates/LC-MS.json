@@ -1,907 +1,898 @@
 {
-    "LC-MS": [{
-        "fixedColumnCount": 1,
-        "headers": [
-            {
-                "columnStructure": "SINGLE_COLUMN",
-                "columnCategory": "Basic",
-                "columnHeader": "Sample Name",
-                "columnPrefix": "",
-                "controlLists": null,
-                "defaultColumnIndex": 0,
-                "defaultValue": null,
-                "maxLength": 0,
-                "minLength": 1,
-                "required": true,
-                "description": "A unique identifier from a particular source (a batch of samples can have a unique Sample name as identified in the Sample table). It’s usually associated with an output spectral data filename.",
-                "examples": [
-                    "ADG10003u_007",
-                    "Sample_1",
-                    "Sample1"
-                ]
-            },
-            {
-                "columnStructure": "SINGLE_COLUMN",
-                "columnCategory": "Protocol",
-                "columnHeader": "Protocol REF",
-                "columnPrefix": "",
-                "defaultColumnIndex": 1,
-                "defaultValue": "Extraction",
-                "maxLength": 0,
-                "minLength": 0,
-                "required": true,
-                "description": "This is the column marking the start of data pertaining to *Extraction protocol*. The 'Extraction' term MUST be present in all rows of this column.",
-                "examples": [
-                    "Extraction"
-                ]
-            },
-            {
-                "columnStructure": "SINGLE_COLUMN",
-                "columnCategory": "Parameter",
-                "columnHeader": "Parameter Value[Post Extraction]",
-                "columnPrefix": "Parameter Value",
-                "controlLists": null,
-                "defaultColumnIndex": 2,
-                "defaultValue": null,
-                "maxLength": 0,
-                "minLength": 0,
-                "required": false,
-                "description": "This column describes how the sample was extracted into a solvent prior to being injected into the analytical instrument of choice.",
-                "examples": [
-                    "400 µL water"
-                ]
-            },
-            {
-                "columnStructure": "SINGLE_COLUMN",
-                "columnCategory": "Parameter",
-                "columnHeader": "Parameter Value[Derivatization]",
-                "columnPrefix": "Parameter Value",
-                "controlLists": null,
-                "defaultColumnIndex": 3,
-                "defaultValue": null,
-                "maxLength": 0,
-                "minLength": 0,
-                "required": false,
-                "description": "If the sample has been subjected to chemical modification prior to injection.",
-                "examples": [
-                    "sylilation"
-                ]
-            },
-            {
-                "columnStructure": "SINGLE_COLUMN",
-                "columnCategory": "Basic",
-                "columnHeader": "Extract Name",
-                "columnPrefix": "",
-                "controlLists": null,
-                "defaultColumnIndex": 4,
-                "defaultValue": null,
-                "maxLength": 0,
-                "minLength": 0,
-                "required": false,
-                "description": "Leave blank if you don’t have one.",
-                "examples": []
-            },
-            {
-                "columnStructure": "SINGLE_COLUMN",
-                "columnCategory": "Protocol",
-                "columnHeader": "Protocol REF",
-                "columnPrefix": "",
-                "defaultColumnIndex": 5,
-                "defaultValue": "Chromatography",
-                "maxLength": 0,
-                "minLength": 0,
-                "required": true,
-                "description": "This is the column marking the start of data pertaining to *Chromatography protocol*. The 'Chromatography' term MUST be present in all rows of this column.",
-                "examples": [
-                    "Chromatography"
-                ]
-            },
-            {
-                "columnStructure": "ONTOLOGY_COLUMN",
-                "columnCategory": "Parameter",
-                "columnHeader": "Parameter Value[Chromatography Instrument]",
-                "columnPrefix": "Parameter Value",
-                "controlLists": {
-                    "termSourceRef": "prioritisedStudyFactorRefSources"
+    "LC-MS": [
+        {
+            "fixedColumnCount": 1,
+            "headers": [
+                {
+                    "columnStructure": "SINGLE_COLUMN",
+                    "columnCategory": "Basic",
+                    "columnHeader": "Sample Name",
+                    "columnPrefix": "",
+                    "controlLists": null,
+                    "defaultColumnIndex": 0,
+                    "defaultValue": null,
+                    "maxLength": 0,
+                    "minLength": 1,
+                    "required": true,
+                    "description": "A unique identifier from a particular source (a batch of samples can have a unique Sample name as identified in the Sample table). It\u2019s usually associated with an output spectral data filename.",
+                    "examples": [
+                        "ADG10003u_007",
+                        "Sample_1",
+                        "Sample1"
+                    ]
                 },
-                "defaultColumnIndex": 6,
-                "defaultValue": null,
-                "maxLength": 0,
-                "minLength": 5,
-                "required": true,
-                "description": "Add the full name of the instrument you used for the Chromatographic part of this assay, including the manufacturer and model number as reported in manufacturer’s brochures, user manuals, or on their website.",
-                "examples": [
-                    "Shimadzu Nexera UHPLC system",
-                    "Agilent 1290 Infinity UHPLC"
-                ]
-            },
-            {
-                "columnStructure": "SINGLE_COLUMN",
-                "columnCategory": "Parameter",
-                "columnHeader": "Parameter Value[Autosampler model]",
-                "columnPrefix": "Parameter Value",
-                "controlLists": null,
-                "defaultColumnIndex": 9,
-                "defaultValue": null,
-                "maxLength": 0,
-                "minLength": 0,
-                "required": false,
-                "description": "",
-                "examples": [
-                ]
-            },
-            {
-                "columnStructure": "SINGLE_COLUMN",
-                "columnCategory": "Parameter",
-                "columnHeader": "Parameter Value[Column model]",
-                "columnPrefix": "Parameter Value",
-                "controlLists": null,
-                "defaultColumnIndex": 10,
-                "defaultValue": null,
-                "maxLength": 0,
-                "minLength": 5,
-                "required": true,
-                "description": "Manufacturer, model number and dimensions of the column model.",
-                "examples": [
-                    "HSS T3 C18 (1.8 μm, 1.0 x 100 mm; Waters)"
-                ]
-            },
-            {
-                "columnStructure": "SINGLE_COLUMN",
-                "columnCategory": "Parameter",
-                "columnHeader": "Parameter Value[Column type]",
-                "columnPrefix": "Parameter Value",
-                "controlLists": null,
-                "defaultColumnIndex": 11,
-                "defaultValue": null,
-                "maxLength": 0,
-                "minLength": 5,
-                "required": true,
-                "description": "Type or phase of column used.",
-                "examples": [
-                    "reverse phase"
-                ]
-            },
-            {
-                "columnStructure": "SINGLE_COLUMN",
-                "columnCategory": "Parameter",
-                "columnHeader": "Parameter Value[Guard column]",
-                "columnPrefix": "Parameter Value",
-                "controlLists": null,
-                "defaultColumnIndex": 12,
-                "defaultValue": null,
-                "maxLength": 0,
-                "minLength": 0,
-                "required": false,
-                "description": "",
-                "examples": [
-                ]
-            },
-            {
-                "columnStructure": "SINGLE_COLUMN",
-                "columnCategory": "Basic",
-                "columnHeader": "Labeled Extract Name",
-                "columnPrefix": "",
-                "controlLists": null,
-                "defaultColumnIndex": 13,
-                "defaultValue": null,
-                "maxLength": 0,
-                "minLength": 0,
-                "required": false,
-                "description": "Leave blank if you don’t have one.",
-                "examples": [
-                ]
-            },
-            {
-                "columnStructure": "ONTOLOGY_COLUMN",
-                "columnCategory": "ontologyColumn",
-                "columnHeader": "Label",
-                "controlLists": {
-                    "termSourceRef": "prioritisedStudyFactorRefSources"
+                {
+                    "columnStructure": "SINGLE_COLUMN",
+                    "columnCategory": "Protocol",
+                    "columnHeader": "Protocol REF",
+                    "columnPrefix": "",
+                    "defaultColumnIndex": 1,
+                    "defaultValue": "Extraction",
+                    "maxLength": 0,
+                    "minLength": 0,
+                    "required": true,
+                    "description": "This is the column marking the start of data pertaining to *Extraction protocol*. The 'Extraction' term MUST be present in all rows of this column.",
+                    "examples": [
+                        "Extraction"
+                    ]
                 },
-                "defaultColumnIndex": 14,
-                "defaultValue": null,
-                "maxLength": 0,
-                "minLength": 0,
-                "required": false,
-                "description": "If you used a chemical or biochemical marker in the sample such as a radioactive isotope of fluorescent dye which is bound to a material in order to make it detectable in an analytical instrument then enter it here.",
-                "examples": [
-                ]
-            },
-            {
-                "columnStructure": "SINGLE_COLUMN",
-                "columnCategory": "Protocol",
-                "columnHeader": "Protocol REF",
-                "columnPrefix": "",
-                "defaultColumnIndex": 17,
-                "defaultValue": "Mass spectrometry",
-                "maxLength": 0,
-                "minLength": 0,
-                "required": true,
-                "description": "This is the column marking the start of data pertaining to *Mass spectrometry protocol*. The 'Mass spectrometry' term MUST be present in all rows of this column.",
-                "examples": [
-                    "Mass spectrometry"
-                ]
-            },
-            {
-                "columnStructure": "SINGLE_COLUMN",
-                "columnCategory": "Parameter",
-                "columnHeader": "Parameter Value[Scan polarity]",
-                "columnPrefix": "Parameter Value",
-                "controlLists": null,
-                "defaultColumnIndex": 18,
-                "defaultValue": null,
-                "maxLength": 0,
-                "minLength": 1,
-                "required": true,
-                "description": "Values should identical within each assay. If you have ‘positive’ or ‘negative’ values in the same assay then split them into separate ‘positive’ and ‘negative’ assays.",
-                "examples": [
-                    "positive",
-                    "negative"
-                ]
-            },
-            {
-                "columnStructure": "SINGLE_COLUMN",
-                "columnCategory": "Parameter",
-                "columnHeader": "Parameter Value[Scan m/z range]",
-                "columnPrefix": "Parameter Value",
-                "controlLists": null,
-                "defaultColumnIndex": 19,
-                "defaultValue": null,
-                "maxLength": 0,
-                "minLength": 1,
-                "required": true,
-                "description": "The range used in the assay.",
-                "examples": [
-                    "100-1000"
-                ]
-            },
-            {
-                "columnStructure": "ONTOLOGY_COLUMN",
-                "columnCategory": "Parameter",
-                "columnHeader": "Parameter Value[Instrument]",
-                "columnPrefix": "Parameter Value",
-                "controlLists": {
-                    "termSourceRef": "prioritisedStudyFactorRefSources"
+                {
+                    "columnStructure": "SINGLE_COLUMN",
+                    "columnCategory": "Parameter",
+                    "columnHeader": "Parameter Value[Post Extraction]",
+                    "columnPrefix": "Parameter Value",
+                    "controlLists": null,
+                    "defaultColumnIndex": 2,
+                    "defaultValue": null,
+                    "maxLength": 0,
+                    "minLength": 0,
+                    "required": false,
+                    "description": "This column describes how the sample was extracted into a solvent prior to being injected into the analytical instrument of choice.",
+                    "examples": [
+                        "400 \u00b5L water"
+                    ]
                 },
-                "defaultColumnIndex": 20,
-                "defaultValue": null,
-                "maxLength": 0,
-                "minLength": 1,
-                "required": true,
-                "description": "Add the full name of the mass spectrometer/detector you used for this LC/MS assay, including the instrument manufacturer and model number as reported in manufacturer’s brochures, user manuals, or on their website.",
-                "examples": [
-                    "Bruker micrOTOF-Q II"
-                ]
-            },
-            {
-                "columnStructure": "ONTOLOGY_COLUMN",
-                "columnCategory": "Parameter",
-                "columnHeader": "Parameter Value[Ion source]",
-                "columnPrefix": "Parameter Value",
-                "controlLists": {
-                    "termSourceRef": "prioritisedStudyFactorRefSources"
+                {
+                    "columnStructure": "SINGLE_COLUMN",
+                    "columnCategory": "Parameter",
+                    "columnHeader": "Parameter Value[Derivatization]",
+                    "columnPrefix": "Parameter Value",
+                    "controlLists": null,
+                    "defaultColumnIndex": 3,
+                    "defaultValue": null,
+                    "maxLength": 0,
+                    "minLength": 0,
+                    "required": false,
+                    "description": "If the sample has been subjected to chemical modification prior to injection.",
+                    "examples": [
+                        "sylilation"
+                    ]
                 },
-                "defaultColumnIndex": 23,
-                "defaultValue": null,
-                "maxLength": 0,
-                "minLength": 0,
-                "required": false,
-                "description": "Where applicable to the instrument.",
-                "examples": [
-                    "electrospray ionization"
-                ]
-            },
-            {
-                "columnStructure": "ONTOLOGY_COLUMN",
-                "columnCategory": "Parameter",
-                "columnHeader": "Parameter Value[Mass analyzer]",
-                "columnPrefix": "Parameter Value",
-                "controlLists": {
-                    "termSourceRef": "prioritisedStudyFactorRefSources"
+                {
+                    "columnStructure": "SINGLE_COLUMN",
+                    "columnCategory": "Basic",
+                    "columnHeader": "Extract Name",
+                    "columnPrefix": "",
+                    "controlLists": null,
+                    "defaultColumnIndex": 4,
+                    "defaultValue": null,
+                    "maxLength": 0,
+                    "minLength": 0,
+                    "required": false,
+                    "description": "Leave blank if you don\u2019t have one.",
+                    "examples": []
                 },
-                "defaultColumnIndex": 26,
-                "defaultValue": null,
-                "maxLength": 0,
-                "minLength": 0,
-                "required": false,
-                "description": "The analyser/detector of the mass fragments generated during the assay.",
-                "examples": [
-                    "triple quadrupole"
-                ]
-            },
-            {
-                "columnStructure": "SINGLE_COLUMN",
-                "columnCategory": "Basic",
-                "columnHeader": "MS Assay Name",
-                "columnPrefix": "",
-                "controlLists": null,
-                "defaultColumnIndex": 29,
-                "defaultValue": null,
-                "maxLength": 0,
-                "minLength": 0,
-                "required": false,
-                "description": "This can be, but doesn’t have to be, the same as the ‘Sample Name’",
-                "examples": [
-                    "Assay_1",
-                    "Run_1",
-                    "Sample1"
-                ]
-            },
-            {
-                "columnStructure": "SINGLE_COLUMN",
-                "columnCategory": "File",
-                "columnHeader": "Raw Spectral Data File",
-                "columnPrefix": "",
-                "controlLists": null,
-                "defaultColumnIndex": 30,
-                "defaultValue": null,
-                "maxLength": 0,
-                "minLength": 0,
-                "required": false,
-                "tags": {
-                    "fileType": "raw"
+                {
+                    "columnStructure": "SINGLE_COLUMN",
+                    "columnCategory": "Protocol",
+                    "columnHeader": "Protocol REF",
+                    "columnPrefix": "",
+                    "defaultColumnIndex": 5,
+                    "defaultValue": "Chromatography",
+                    "maxLength": 0,
+                    "minLength": 0,
+                    "required": true,
+                    "description": "This is the column marking the start of data pertaining to *Chromatography protocol*. The 'Chromatography' term MUST be present in all rows of this column.",
+                    "examples": [
+                        "Chromatography"
+                    ]
                 },
-                "description": "This is where you should enter the Raw (unprocessed) MS data files. Please add full path of the file in the cell.",
-                "examples": [
-                    "FILES/Sepd340.raw",
-                    "FILES/RAW_FILES/LC_MS/Sepd340.raw"
-                ]
-            },
-            {
-                "columnStructure": "SINGLE_COLUMN",
-                "columnCategory": "Protocol",
-                "columnHeader": "Protocol REF",
-                "columnPrefix": "",
-                "defaultColumnIndex": 31,
-                "defaultValue": "Data transformation",
-                "maxLength": 0,
-                "minLength": 0,
-                "required": true,
-                "description": "This is the column marking the start of data pertaining to *Data transformation protocol*. The 'Data transformation' term MUST be present in all rows of this column.",
-                "examples": [
-                    "Data transformation"
-                ]
-            },
-            {
-                "columnStructure": "SINGLE_COLUMN",
-                "columnCategory": "Basic",
-                "columnHeader": "Normalization Name",
-                "columnPrefix": "",
-                "controlLists": null,
-                "defaultColumnIndex": 32,
-                "defaultValue": null,
-                "maxLength": 0,
-                "minLength": 0,
-                "required": false,
-                "description": "These should contain the normalization data files preferably as an Excel spreadsheet file. If you don’t have these then leave the cells/column blank.",
-                "examples": [
-                    "MSpos-Ex1-Col0-48h-Ag_normalized_data.xlsx"
-                ]
-            },
-            {
-                "columnStructure": "SINGLE_COLUMN",
-                "columnCategory": "File",
-                "columnHeader": "Derived Spectral Data File",
-                "columnPrefix": "",
-                "controlLists": null,
-                "defaultColumnIndex": 33,
-                "defaultValue": null,
-                "maxLength": 0,
-                "minLength": 0,
-                "required": false,
-                "tags": {
-                    "fileType": "derived"
+                {
+                    "columnStructure": "ONTOLOGY_COLUMN",
+                    "columnCategory": "Parameter",
+                    "columnHeader": "Parameter Value[Chromatography Instrument]",
+                    "columnPrefix": "Parameter Value",
+                    "controlLists": {
+                        "termSourceRef": "prioritisedStudyFactorRefSources"
+                    },
+                    "defaultColumnIndex": 6,
+                    "defaultValue": null,
+                    "maxLength": 0,
+                    "minLength": 5,
+                    "required": true,
+                    "description": "Add the full name of the instrument you used for the Chromatographic part of this assay, including the manufacturer and model number as reported in manufacturer\u2019s brochures, user manuals, or on their website.",
+                    "examples": [
+                        "Shimadzu Nexera UHPLC system",
+                        "Agilent 1290 Infinity UHPLC"
+                    ]
                 },
-                "description": "If your data has been transformed into one of the open-source raw data formats e.g. mzML , CDF, or any other converted file, then add them here. Please add full path of the file in the cell.",
-                "examples": [
-                    "FILES/Sepd340.mzML",
-                    "FILES/DERIVED_FILES/LC_MS/Sepd340.mzML"
-                ]
-            },
-            {
-                "columnStructure": "SINGLE_COLUMN",
-                "columnCategory": "Protocol",
-                "columnHeader": "Protocol REF",
-                "columnPrefix": "",
-                "defaultColumnIndex": 34,
-                "defaultValue": "Metabolite identification",
-                "maxLength": 0,
-                "minLength": 0,
-                "required": true,
-                "description": "This is the column marking the start of data pertaining to *Metabolite identification protocol*. The 'Metabolite identification' term MUST be present in all rows of this column.",
-                "examples": [
-                    "Metabolite identification"
-                ]
-            },
-            {
-                "columnStructure": "SINGLE_COLUMN",
-                "columnCategory": "Basic",
-                "columnHeader": "Data Transformation Name",
-                "columnPrefix": "",
-                "controlLists": null,
-                "defaultColumnIndex": 35,
-                "defaultValue": null,
-                "maxLength": 0,
-                "minLength": 0,
-                "required": false,
-                "description": "These should contain the data transformation files.",
-                "examples": [
-                ]
-            },
-            {
-                "columnStructure": "SINGLE_COLUMN",
-                "columnCategory": "File",
-                "columnHeader": "Metabolite Assignment File",
-                "columnPrefix": "",
-                "controlLists": null,
-                "defaultColumnIndex": 36,
-                "defaultValue": null,
-                "maxLength": 0,
-                "minLength": 1,
-                "required": true,
-                "tags": {
-                    "fileType": "metadata_maf"
+                {
+                    "columnStructure": "SINGLE_COLUMN",
+                    "columnCategory": "Parameter",
+                    "columnHeader": "Parameter Value[Autosampler model]",
+                    "columnPrefix": "Parameter Value",
+                    "controlLists": null,
+                    "defaultColumnIndex": 9,
+                    "defaultValue": null,
+                    "maxLength": 0,
+                    "minLength": 0,
+                    "required": false,
+                    "description": "",
+                    "examples": []
                 },
-                "description": "A TSV file containing information about the metabolites investigated in the study. Information regarding database accession IDs , where in the spectra the metabolite is found and data pertaining to its abundance within the study samples should be in this file.",
-                "examples": [
-                    "m_MTBLS1_mass_spectrometry_v2_maf.tsv"
-                ]
-            }
-        ],
-        "version": "1.0"
-    },
-{
-        "fixedColumnCount": 1,
-        "headers": [
-            {
-                "columnStructure": "SINGLE_COLUMN",
-                "columnCategory": "Basic",
-                "columnHeader": "Sample Name",
-                "columnPrefix": "",
-                "controlLists": null,
-                "defaultColumnIndex": 0,
-                "defaultValue": null,
-                "maxLength": 0,
-                "minLength": 1,
-                "required": true,
-                "description": "A unique identifier from a particular source (a batch of samples can have a unique Sample name as identified in the Sample table). It’s usually associated with an output spectral data filename.",
-                "examples": [
-                    "ADG10003u_007",
-                    "Sample_1",
-                    "Sample1"
-                ]
-            },
-            {
-                "columnStructure": "SINGLE_COLUMN",
-                "columnCategory": "Protocol",
-                "columnHeader": "Protocol REF",
-                "columnPrefix": "",
-                "defaultColumnIndex": 1,
-                "defaultValue": "Extraction",
-                "maxLength": 0,
-                "minLength": 0,
-                "required": true,
-                "description": "This is the column marking the start of data pertaining to *Extraction protocol*. The 'Extraction' term MUST be present in all rows of this column.",
-                "examples": [
-                    "Extraction"
-                ]
-            },
-            {
-                "columnStructure": "SINGLE_COLUMN",
-                "columnCategory": "Parameter",
-                "columnHeader": "Parameter Value[Post Extraction]",
-                "columnPrefix": "Parameter Value",
-                "controlLists": null,
-                "defaultColumnIndex": 2,
-                "defaultValue": null,
-                "maxLength": 0,
-                "minLength": 0,
-                "required": false,
-                "description": "This column describes how the sample was extracted into a solvent prior to being injected into the analytical instrument of choice.",
-                "examples": [
-                    "400 µL water"
-                ]
-            },
-            {
-                "columnStructure": "SINGLE_COLUMN",
-                "columnCategory": "Parameter",
-                "columnHeader": "Parameter Value[Derivatization]",
-                "columnPrefix": "Parameter Value",
-                "controlLists": null,
-                "defaultColumnIndex": 3,
-                "defaultValue": null,
-                "maxLength": 0,
-                "minLength": 0,
-                "required": false,
-                "description": "If the sample has been subjected to chemical modification prior to injection.",
-                "examples": [
-                    "sylilation"
-                ]
-            },
-            {
-                "columnStructure": "SINGLE_COLUMN",
-                "columnCategory": "Basic",
-                "columnHeader": "Extract Name",
-                "columnPrefix": "",
-                "controlLists": null,
-                "defaultColumnIndex": 4,
-                "defaultValue": null,
-                "maxLength": 0,
-                "minLength": 0,
-                "required": false,
-                "description": "Leave blank if you don’t have one.",
-                "examples": []
-            },
-            {
-                "columnStructure": "SINGLE_COLUMN",
-                "columnCategory": "Protocol",
-                "columnHeader": "Protocol REF",
-                "columnPrefix": "",
-                "defaultColumnIndex": 5,
-                "defaultValue": "Chromatography",
-                "maxLength": 0,
-                "minLength": 0,
-                "required": true,
-                "description": "This is the column marking the start of data pertaining to *Chromatography protocol*. The 'Chromatography' term MUST be present in all rows of this column.",
-                "examples": [
-                    "Chromatography"
-                ]
-            },
-            {
-                "columnStructure": "ONTOLOGY_COLUMN",
-                "columnCategory": "Parameter",
-                "columnHeader": "Parameter Value[Chromatography Instrument]",
-                "columnPrefix": "Parameter Value",
-                "controlLists": {
-                    "termSourceRef": "prioritisedStudyFactorRefSources"
+                {
+                    "columnStructure": "SINGLE_COLUMN",
+                    "columnCategory": "Parameter",
+                    "columnHeader": "Parameter Value[Column model]",
+                    "columnPrefix": "Parameter Value",
+                    "controlLists": null,
+                    "defaultColumnIndex": 10,
+                    "defaultValue": null,
+                    "maxLength": 0,
+                    "minLength": 5,
+                    "required": true,
+                    "description": "Manufacturer, model number and dimensions of the column model.",
+                    "examples": [
+                        "HSS T3 C18 (1.8 \u03bcm, 1.0 x 100 mm; Waters)"
+                    ]
                 },
-                "defaultColumnIndex": 6,
-                "defaultValue": null,
-                "maxLength": 0,
-                "minLength": 5,
-                "required": true,
-                "description": "Add the full name of the instrument you used for the Chromatographic part of this assay, including the manufacturer and model number as reported in manufacturer’s brochures, user manuals, or on their website.",
-                "examples": [
-                    "Shimadzu Nexera UHPLC system",
-                    "Agilent 1290 Infinity UHPLC"
-                ]
-            },
-            {
-                "columnStructure": "SINGLE_COLUMN",
-                "columnCategory": "Parameter",
-                "columnHeader": "Parameter Value[Autosampler model]",
-                "columnPrefix": "Parameter Value",
-                "controlLists": null,
-                "defaultColumnIndex": 9,
-                "defaultValue": null,
-                "maxLength": 0,
-                "minLength": 0,
-                "required": false,
-                "description": "",
-                "examples": [
-                ]
-            },
-            {
-                "columnStructure": "SINGLE_COLUMN",
-                "columnCategory": "Parameter",
-                "columnHeader": "Parameter Value[Column model]",
-                "columnPrefix": "Parameter Value",
-                "controlLists": null,
-                "defaultColumnIndex": 10,
-                "defaultValue": null,
-                "maxLength": 0,
-                "minLength": 5,
-                "required": true,
-                "description": "Manufacturer, model number and dimensions of the column model.",
-                "examples": [
-                    "HSS T3 C18 (1.8 μm, 1.0 x 100 mm; Waters)"
-                ]
-            },
-            {
-                "columnStructure": "SINGLE_COLUMN",
-                "columnCategory": "Parameter",
-                "columnHeader": "Parameter Value[Column type]",
-                "columnPrefix": "Parameter Value",
-                "controlLists": null,
-                "defaultColumnIndex": 11,
-                "defaultValue": null,
-                "maxLength": 0,
-                "minLength": 5,
-                "required": true,
-                "description": "Type or phase of column used.",
-                "examples": [
-                    "reverse phase"
-                ]
-            },
-            {
-                "columnStructure": "SINGLE_COLUMN",
-                "columnCategory": "Parameter",
-                "columnHeader": "Parameter Value[Guard column]",
-                "columnPrefix": "Parameter Value",
-                "controlLists": null,
-                "defaultColumnIndex": 12,
-                "defaultValue": null,
-                "maxLength": 0,
-                "minLength": 0,
-                "required": false,
-                "description": "",
-                "examples": [
-                ]
-            },
-            {
-                "columnStructure": "SINGLE_COLUMN",
-                "columnCategory": "Basic",
-                "columnHeader": "Labeled Extract Name",
-                "columnPrefix": "",
-                "controlLists": null,
-                "defaultColumnIndex": 13,
-                "defaultValue": null,
-                "maxLength": 0,
-                "minLength": 0,
-                "required": false,
-                "description": "Leave blank if you don’t have one.",
-                "examples": [
-                ]
-            },
-            {
-                "columnStructure": "ONTOLOGY_COLUMN",
-                "columnCategory": "ontologyColumn",
-                "columnHeader": "Label",
-                "controlLists": {
-                    "termSourceRef": "prioritisedStudyFactorRefSources"
+                {
+                    "columnStructure": "SINGLE_COLUMN",
+                    "columnCategory": "Parameter",
+                    "columnHeader": "Parameter Value[Column type]",
+                    "columnPrefix": "Parameter Value",
+                    "controlLists": null,
+                    "defaultColumnIndex": 11,
+                    "defaultValue": null,
+                    "maxLength": 0,
+                    "minLength": 5,
+                    "required": true,
+                    "description": "Type or phase of column used.",
+                    "examples": [
+                        "reverse phase"
+                    ]
                 },
-                "defaultColumnIndex": 14,
-                "defaultValue": null,
-                "maxLength": 0,
-                "minLength": 0,
-                "required": false,
-                "description": "If you used a chemical or biochemical marker in the sample such as a radioactive isotope of fluorescent dye which is bound to a material in order to make it detectable in an analytical instrument then enter it here.",
-                "examples": [
-                ]
-            },
-            {
-                "columnStructure": "SINGLE_COLUMN",
-                "columnCategory": "Protocol",
-                "columnHeader": "Protocol REF",
-                "columnPrefix": "",
-                "defaultColumnIndex": 17,
-                "defaultValue": "Mass spectrometry",
-                "maxLength": 0,
-                "minLength": 0,
-                "required": true,
-                "description": "This is the column marking the start of data pertaining to *Mass spectrometry protocol*. The 'Mass spectrometry' term MUST be present in all rows of this column.",
-                "examples": [
-                    "Mass spectrometry"
-                ]
-            },
-            {
-                "columnStructure": "SINGLE_COLUMN",
-                "columnCategory": "Parameter",
-                "columnHeader": "Parameter Value[Scan polarity]",
-                "columnPrefix": "Parameter Value",
-                "controlLists": null,
-                "defaultColumnIndex": 18,
-                "defaultValue": null,
-                "maxLength": 0,
-                "minLength": 1,
-                "required": true,
-                "description": "Values should identical within each assay. If you have ‘positive’ or ‘negative’ values in the same assay then split them into separate ‘positive’ and ‘negative’ assays.",
-                "examples": [
-                    "positive",
-                    "negative"
-                ]
-            },
-            {
-                "columnStructure": "SINGLE_COLUMN",
-                "columnCategory": "Parameter",
-                "columnHeader": "Parameter Value[Scan m/z range]",
-                "columnPrefix": "Parameter Value",
-                "controlLists": null,
-                "defaultColumnIndex": 19,
-                "defaultValue": null,
-                "maxLength": 0,
-                "minLength": 1,
-                "required": true,
-                "description": "The range used in the assay.",
-                "examples": [
-                    "100-1000"
-                ]
-            },
-            {
-                "columnStructure": "ONTOLOGY_COLUMN",
-                "columnCategory": "Parameter",
-                "columnHeader": "Parameter Value[Instrument]",
-                "columnPrefix": "Parameter Value",
-                "controlLists": {
-                    "termSourceRef": "prioritisedStudyFactorRefSources"
+                {
+                    "columnStructure": "SINGLE_COLUMN",
+                    "columnCategory": "Parameter",
+                    "columnHeader": "Parameter Value[Guard column]",
+                    "columnPrefix": "Parameter Value",
+                    "controlLists": null,
+                    "defaultColumnIndex": 12,
+                    "defaultValue": null,
+                    "maxLength": 0,
+                    "minLength": 0,
+                    "required": false,
+                    "description": "",
+                    "examples": []
                 },
-                "defaultColumnIndex": 20,
-                "defaultValue": null,
-                "maxLength": 0,
-                "minLength": 1,
-                "required": true,
-                "description": "Add the full name of the mass spectrometer/detector you used for this LC/MS assay, including the instrument manufacturer and model number as reported in manufacturer’s brochures, user manuals, or on their website.",
-                "examples": [
-                    "Bruker micrOTOF-Q II"
-                ]
-            },
-            {
-                "columnStructure": "ONTOLOGY_COLUMN",
-                "columnCategory": "Parameter",
-                "columnHeader": "Parameter Value[Ion source]",
-                "columnPrefix": "Parameter Value",
-                "controlLists": {
-                    "termSourceRef": "prioritisedStudyFactorRefSources"
+                {
+                    "columnStructure": "SINGLE_COLUMN",
+                    "columnCategory": "Basic",
+                    "columnHeader": "Labeled Extract Name",
+                    "columnPrefix": "",
+                    "controlLists": null,
+                    "defaultColumnIndex": 13,
+                    "defaultValue": null,
+                    "maxLength": 0,
+                    "minLength": 0,
+                    "required": false,
+                    "description": "Leave blank if you don\u2019t have one.",
+                    "examples": []
                 },
-                "defaultColumnIndex": 23,
-                "defaultValue": null,
-                "maxLength": 0,
-                "minLength": 0,
-                "required": false,
-                "description": "Where applicable to the instrument.",
-                "examples": [
-                    "electrospray ionization"
-                ]
-            },
-            {
-                "columnStructure": "ONTOLOGY_COLUMN",
-                "columnCategory": "Parameter",
-                "columnHeader": "Parameter Value[Mass analyzer]",
-                "columnPrefix": "Parameter Value",
-                "controlLists": {
-                    "termSourceRef": "prioritisedStudyFactorRefSources"
+                {
+                    "columnStructure": "ONTOLOGY_COLUMN",
+                    "columnCategory": "ontologyColumn",
+                    "columnHeader": "Label",
+                    "controlLists": {
+                        "termSourceRef": "prioritisedStudyFactorRefSources"
+                    },
+                    "defaultColumnIndex": 14,
+                    "defaultValue": null,
+                    "maxLength": 0,
+                    "minLength": 0,
+                    "required": false,
+                    "description": "If you used a chemical or biochemical marker in the sample such as a radioactive isotope of fluorescent dye which is bound to a material in order to make it detectable in an analytical instrument then enter it here.",
+                    "examples": []
                 },
-                "defaultColumnIndex": 26,
-                "defaultValue": null,
-                "maxLength": 0,
-                "minLength": 0,
-                "required": false,
-                "description": "The analyser/detector of the mass fragments generated during the assay.",
-                "examples": [
-                    "triple quadrupole"
-                ]
-            },
-            {
-                "columnStructure": "SINGLE_COLUMN",
-                "columnCategory": "Basic",
-                "columnHeader": "MS Assay Name",
-                "columnPrefix": "",
-                "controlLists": null,
-                "defaultColumnIndex": 29,
-                "defaultValue": null,
-                "maxLength": 0,
-                "minLength": 0,
-                "required": false,
-                "description": "This can be, but doesn’t have to be, the same as the ‘Sample Name’",
-                "examples": [
-                    "Assay_1",
-                    "Run_1",
-                    "Sample1"
-                ]
-            },
-            {
-                "columnStructure": "SINGLE_COLUMN",
-                "columnCategory": "File",
-                "columnHeader": "Raw Spectral Data File",
-                "columnPrefix": "",
-                "controlLists": null,
-                "defaultColumnIndex": 30,
-                "defaultValue": null,
-                "maxLength": 0,
-                "minLength": 0,
-                "required": false,
-                "tags": {
-                    "fileType": "raw"
+                {
+                    "columnStructure": "SINGLE_COLUMN",
+                    "columnCategory": "Protocol",
+                    "columnHeader": "Protocol REF",
+                    "columnPrefix": "",
+                    "defaultColumnIndex": 17,
+                    "defaultValue": "Mass spectrometry",
+                    "maxLength": 0,
+                    "minLength": 0,
+                    "required": true,
+                    "description": "This is the column marking the start of data pertaining to *Mass spectrometry protocol*. The 'Mass spectrometry' term MUST be present in all rows of this column.",
+                    "examples": [
+                        "Mass spectrometry"
+                    ]
                 },
-                "description": "This is where you should enter the Raw (unprocessed) MS data files. Please add full path of the file in the cell.",
-                "examples": [
-                    "FILES/Sepd340.raw",
-                    "FILES/RAW_FILES/LC_MS/Sepd340.raw"
-                ]
-            },
-            {
-                "columnStructure": "SINGLE_COLUMN",
-                "columnCategory": "Protocol",
-                "columnHeader": "Protocol REF",
-                "columnPrefix": "",
-                "defaultColumnIndex": 31,
-                "defaultValue": "Data transformation",
-                "maxLength": 0,
-                "minLength": 0,
-                "required": true,
-                "description": "This is the column marking the start of data pertaining to *Data transformation protocol*. The 'Data transformation' term MUST be present in all rows of this column.",
-                "examples": [
-                    "Data transformation"
-                ]
-            },
-            {
-                "columnStructure": "SINGLE_COLUMN",
-                "columnCategory": "Basic",
-                "columnHeader": "Normalization Name",
-                "columnPrefix": "",
-                "controlLists": null,
-                "defaultColumnIndex": 32,
-                "defaultValue": null,
-                "maxLength": 0,
-                "minLength": 0,
-                "required": false,
-                "description": "These should contain the normalization data files preferably as an Excel spreadsheet file. If you don’t have these then leave the cells/column blank.",
-                "examples": [
-                    "MSpos-Ex1-Col0-48h-Ag_normalized_data.xlsx"
-                ]
-            },
-            {
-                "columnStructure": "SINGLE_COLUMN",
-                "columnCategory": "File",
-                "columnHeader": "Derived Spectral Data File",
-                "columnPrefix": "",
-                "controlLists": null,
-                "defaultColumnIndex": 33,
-                "defaultValue": null,
-                "maxLength": 0,
-                "minLength": 0,
-                "required": false,
-                "tags": {
-                    "fileType": "derived"
+                {
+                    "columnStructure": "SINGLE_COLUMN",
+                    "columnCategory": "Parameter",
+                    "columnHeader": "Parameter Value[Scan polarity]",
+                    "columnPrefix": "Parameter Value",
+                    "controlLists": null,
+                    "defaultColumnIndex": 18,
+                    "defaultValue": null,
+                    "maxLength": 0,
+                    "minLength": 1,
+                    "required": true,
+                    "description": "Values should identical within each assay. If you have \u2018positive\u2019 or \u2018negative\u2019 values in the same assay then split them into separate \u2018positive\u2019 and \u2018negative\u2019 assays.",
+                    "examples": [
+                        "positive",
+                        "negative"
+                    ]
                 },
-                "description": "If your data has been transformed into one of the open-source raw data formats e.g. mzML , CDF, or any other converted file, then add them here. Please add full path of the file in the cell.",
-                "examples": [
-                    "FILES/Sepd340.mzML",
-                    "FILES/DERIVED_FILES/LC_MS/Sepd340.mzML"
-                ]
-            },
-            {
-                "columnStructure": "SINGLE_COLUMN",
-                "columnCategory": "Protocol",
-                "columnHeader": "Protocol REF",
-                "columnPrefix": "",
-                "defaultColumnIndex": 34,
-                "defaultValue": "Metabolite identification",
-                "maxLength": 0,
-                "minLength": 0,
-                "required": true,
-                "description": "This is the column marking the start of data pertaining to *Metabolite identification protocol*. The 'Metabolite identification' term MUST be present in all rows of this column.",
-                "examples": [
-                    "Metabolite identification"
-                ]
-            },
-            {
-                "columnStructure": "SINGLE_COLUMN",
-                "columnCategory": "Basic",
-                "columnHeader": "Data Transformation Name",
-                "columnPrefix": "",
-                "controlLists": null,
-                "defaultColumnIndex": 35,
-                "defaultValue": null,
-                "maxLength": 0,
-                "minLength": 0,
-                "required": false,
-                "description": "These should contain the data transformation files.",
-                "examples": [
-                ]
-            },
-            {
-                "columnStructure": "SINGLE_COLUMN",
-                "columnCategory": "File",
-                "columnHeader": "Metabolite Assignment File",
-                "columnPrefix": "",
-                "controlLists": null,
-                "defaultColumnIndex": 36,
-                "defaultValue": null,
-                "maxLength": 0,
-                "minLength": 1,
-                "required": true,
-                "tags": {
-                    "fileType": "metadata_maf"
+                {
+                    "columnStructure": "SINGLE_COLUMN",
+                    "columnCategory": "Parameter",
+                    "columnHeader": "Parameter Value[Scan m/z range]",
+                    "columnPrefix": "Parameter Value",
+                    "controlLists": null,
+                    "defaultColumnIndex": 19,
+                    "defaultValue": null,
+                    "maxLength": 0,
+                    "minLength": 1,
+                    "required": true,
+                    "description": "The range used in the assay.",
+                    "examples": [
+                        "100-1000"
+                    ]
                 },
-                "description": "A TSV file containing information about the metabolites investigated in the study. Information regarding database accession IDs , where in the spectra the metabolite is found and data pertaining to its abundance within the study samples should be in this file.",
-                "examples": [
-                    "m_MTBLS1_mass_spectrometry_v2_maf.tsv"
-                ]
-            }
-        ],
-        "version": "2.0"
-    }
-]
+                {
+                    "columnStructure": "ONTOLOGY_COLUMN",
+                    "columnCategory": "Parameter",
+                    "columnHeader": "Parameter Value[Instrument]",
+                    "columnPrefix": "Parameter Value",
+                    "controlLists": {
+                        "termSourceRef": "prioritisedStudyFactorRefSources"
+                    },
+                    "defaultColumnIndex": 20,
+                    "defaultValue": null,
+                    "maxLength": 0,
+                    "minLength": 1,
+                    "required": true,
+                    "description": "Add the full name of the mass spectrometer/detector you used for this LC/MS assay, including the instrument manufacturer and model number as reported in manufacturer\u2019s brochures, user manuals, or on their website.",
+                    "examples": [
+                        "Bruker micrOTOF-Q II"
+                    ]
+                },
+                {
+                    "columnStructure": "ONTOLOGY_COLUMN",
+                    "columnCategory": "Parameter",
+                    "columnHeader": "Parameter Value[Ion source]",
+                    "columnPrefix": "Parameter Value",
+                    "controlLists": {
+                        "termSourceRef": "prioritisedStudyFactorRefSources"
+                    },
+                    "defaultColumnIndex": 23,
+                    "defaultValue": null,
+                    "maxLength": 0,
+                    "minLength": 0,
+                    "required": false,
+                    "description": "Where applicable to the instrument.",
+                    "examples": [
+                        "electrospray ionization"
+                    ]
+                },
+                {
+                    "columnStructure": "ONTOLOGY_COLUMN",
+                    "columnCategory": "Parameter",
+                    "columnHeader": "Parameter Value[Mass analyzer]",
+                    "columnPrefix": "Parameter Value",
+                    "controlLists": {
+                        "termSourceRef": "prioritisedStudyFactorRefSources"
+                    },
+                    "defaultColumnIndex": 26,
+                    "defaultValue": null,
+                    "maxLength": 0,
+                    "minLength": 0,
+                    "required": false,
+                    "description": "The analyser/detector of the mass fragments generated during the assay.",
+                    "examples": [
+                        "triple quadrupole"
+                    ]
+                },
+                {
+                    "columnStructure": "SINGLE_COLUMN",
+                    "columnCategory": "Basic",
+                    "columnHeader": "MS Assay Name",
+                    "columnPrefix": "",
+                    "controlLists": null,
+                    "defaultColumnIndex": 29,
+                    "defaultValue": null,
+                    "maxLength": 0,
+                    "minLength": 0,
+                    "required": false,
+                    "description": "This can be, but doesn\u2019t have to be, the same as the \u2018Sample Name\u2019",
+                    "examples": [
+                        "Assay_1",
+                        "Run_1",
+                        "Sample1"
+                    ]
+                },
+                {
+                    "columnStructure": "SINGLE_COLUMN",
+                    "columnCategory": "File",
+                    "columnHeader": "Raw Spectral Data File",
+                    "columnPrefix": "",
+                    "controlLists": null,
+                    "defaultColumnIndex": 30,
+                    "defaultValue": null,
+                    "maxLength": 0,
+                    "minLength": 0,
+                    "required": false,
+                    "tags": {
+                        "fileType": "raw"
+                    },
+                    "description": "This is where you should enter the Raw (unprocessed) MS data files. Please add full path of the file in the cell.",
+                    "examples": [
+                        "FILES/Sepd340.raw",
+                        "FILES/RAW_FILES/LC_MS/Sepd340.raw"
+                    ]
+                },
+                {
+                    "columnStructure": "SINGLE_COLUMN",
+                    "columnCategory": "Protocol",
+                    "columnHeader": "Protocol REF",
+                    "columnPrefix": "",
+                    "defaultColumnIndex": 31,
+                    "defaultValue": "Data transformation",
+                    "maxLength": 0,
+                    "minLength": 0,
+                    "required": true,
+                    "description": "This is the column marking the start of data pertaining to *Data transformation protocol*. The 'Data transformation' term MUST be present in all rows of this column.",
+                    "examples": [
+                        "Data transformation"
+                    ]
+                },
+                {
+                    "columnStructure": "SINGLE_COLUMN",
+                    "columnCategory": "Basic",
+                    "columnHeader": "Normalization Name",
+                    "columnPrefix": "",
+                    "controlLists": null,
+                    "defaultColumnIndex": 32,
+                    "defaultValue": null,
+                    "maxLength": 0,
+                    "minLength": 0,
+                    "required": false,
+                    "description": "These should contain the normalization data files preferably as an Excel spreadsheet file. If you don\u2019t have these then leave the cells/column blank.",
+                    "examples": [
+                        "MSpos-Ex1-Col0-48h-Ag_normalized_data.xlsx"
+                    ]
+                },
+                {
+                    "columnStructure": "SINGLE_COLUMN",
+                    "columnCategory": "File",
+                    "columnHeader": "Derived Spectral Data File",
+                    "columnPrefix": "",
+                    "controlLists": null,
+                    "defaultColumnIndex": 33,
+                    "defaultValue": null,
+                    "maxLength": 0,
+                    "minLength": 0,
+                    "required": false,
+                    "tags": {
+                        "fileType": "derived"
+                    },
+                    "description": "If your data has been transformed into one of the open-source raw data formats e.g. mzML , CDF, or any other converted file, then add them here. Please add full path of the file in the cell.",
+                    "examples": [
+                        "FILES/Sepd340.mzML",
+                        "FILES/DERIVED_FILES/LC_MS/Sepd340.mzML"
+                    ]
+                },
+                {
+                    "columnStructure": "SINGLE_COLUMN",
+                    "columnCategory": "Protocol",
+                    "columnHeader": "Protocol REF",
+                    "columnPrefix": "",
+                    "defaultColumnIndex": 34,
+                    "defaultValue": "Metabolite identification",
+                    "maxLength": 0,
+                    "minLength": 0,
+                    "required": true,
+                    "description": "This is the column marking the start of data pertaining to *Metabolite identification protocol*. The 'Metabolite identification' term MUST be present in all rows of this column.",
+                    "examples": [
+                        "Metabolite identification"
+                    ]
+                },
+                {
+                    "columnStructure": "SINGLE_COLUMN",
+                    "columnCategory": "Basic",
+                    "columnHeader": "Data Transformation Name",
+                    "columnPrefix": "",
+                    "controlLists": null,
+                    "defaultColumnIndex": 35,
+                    "defaultValue": null,
+                    "maxLength": 0,
+                    "minLength": 0,
+                    "required": false,
+                    "description": "These should contain the data transformation files.",
+                    "examples": []
+                },
+                {
+                    "columnStructure": "SINGLE_COLUMN",
+                    "columnCategory": "File",
+                    "columnHeader": "Metabolite Assignment File",
+                    "columnPrefix": "",
+                    "controlLists": null,
+                    "defaultColumnIndex": 36,
+                    "defaultValue": null,
+                    "maxLength": 0,
+                    "minLength": 1,
+                    "required": true,
+                    "tags": {
+                        "fileType": "metadata_maf"
+                    },
+                    "description": "A TSV file containing information about the metabolites investigated in the study. Information regarding database accession IDs , where in the spectra the metabolite is found and data pertaining to its abundance within the study samples should be in this file.",
+                    "examples": [
+                        "m_MTBLS1_mass_spectrometry_v2_maf.tsv"
+                    ]
+                }
+            ],
+            "version": "1.0"
+        },
+        {
+            "fixedColumnCount": 1,
+            "headers": [
+                {
+                    "columnStructure": "SINGLE_COLUMN",
+                    "columnCategory": "Basic",
+                    "columnHeader": "Sample Name",
+                    "columnPrefix": "",
+                    "controlLists": null,
+                    "defaultColumnIndex": 0,
+                    "defaultValue": null,
+                    "maxLength": 0,
+                    "minLength": 1,
+                    "required": true,
+                    "description": "A unique identifier from a particular source (a batch of samples can have a unique Sample name as identified in the Sample table). It\u2019s usually associated with an output spectral data filename.",
+                    "examples": [
+                        "ADG10003u_007",
+                        "Sample_1",
+                        "Sample1"
+                    ]
+                },
+                {
+                    "columnStructure": "SINGLE_COLUMN",
+                    "columnCategory": "Protocol",
+                    "columnHeader": "Protocol REF",
+                    "columnPrefix": "",
+                    "defaultColumnIndex": 1,
+                    "defaultValue": "Extraction",
+                    "maxLength": 0,
+                    "minLength": 0,
+                    "required": true,
+                    "description": "This is the column marking the start of data pertaining to *Extraction protocol*. The 'Extraction' term MUST be present in all rows of this column.",
+                    "examples": [
+                        "Extraction"
+                    ]
+                },
+                {
+                    "columnStructure": "ONTOLOGY_COLUMN",
+                    "columnCategory": "Parameter",
+                    "columnHeader": "Parameter Value[Post Extraction]",
+                    "columnPrefix": "Parameter Value",
+                    "controlLists": null,
+                    "defaultColumnIndex": 2,
+                    "defaultValue": null,
+                    "maxLength": 0,
+                    "minLength": 0,
+                    "required": false,
+                    "description": "This column describes how the sample was extracted into a solvent prior to being injected into the analytical instrument of choice.",
+                    "examples": [
+                        "400 \u00b5L water"
+                    ]
+                },
+                {
+                    "columnStructure": "ONTOLOGY_COLUMN",
+                    "columnCategory": "Parameter",
+                    "columnHeader": "Parameter Value[Derivatization]",
+                    "columnPrefix": "Parameter Value",
+                    "controlLists": null,
+                    "defaultColumnIndex": 5,
+                    "defaultValue": null,
+                    "maxLength": 0,
+                    "minLength": 0,
+                    "required": false,
+                    "description": "If the sample has been subjected to chemical modification prior to injection.",
+                    "examples": [
+                        "sylilation"
+                    ]
+                },
+                {
+                    "columnStructure": "SINGLE_COLUMN",
+                    "columnCategory": "Basic",
+                    "columnHeader": "Extract Name",
+                    "columnPrefix": "",
+                    "controlLists": null,
+                    "defaultColumnIndex": 8,
+                    "defaultValue": null,
+                    "maxLength": 0,
+                    "minLength": 0,
+                    "required": false,
+                    "description": "Leave blank if you don\u2019t have one.",
+                    "examples": []
+                },
+                {
+                    "columnStructure": "SINGLE_COLUMN",
+                    "columnCategory": "Protocol",
+                    "columnHeader": "Protocol REF",
+                    "columnPrefix": "",
+                    "defaultColumnIndex": 9,
+                    "defaultValue": "Chromatography",
+                    "maxLength": 0,
+                    "minLength": 0,
+                    "required": true,
+                    "description": "This is the column marking the start of data pertaining to *Chromatography protocol*. The 'Chromatography' term MUST be present in all rows of this column.",
+                    "examples": [
+                        "Chromatography"
+                    ]
+                },
+                {
+                    "columnStructure": "ONTOLOGY_COLUMN",
+                    "columnCategory": "Parameter",
+                    "columnHeader": "Parameter Value[Chromatography Instrument]",
+                    "columnPrefix": "Parameter Value",
+                    "controlLists": {
+                        "termSourceRef": "prioritisedStudyFactorRefSources"
+                    },
+                    "defaultColumnIndex": 10,
+                    "defaultValue": null,
+                    "maxLength": 0,
+                    "minLength": 5,
+                    "required": true,
+                    "description": "Add the full name of the instrument you used for the Chromatographic part of this assay, including the manufacturer and model number as reported in manufacturer\u2019s brochures, user manuals, or on their website.",
+                    "examples": [
+                        "Shimadzu Nexera UHPLC system",
+                        "Agilent 1290 Infinity UHPLC"
+                    ]
+                },
+                {
+                    "columnStructure": "ONTOLOGY_COLUMN",
+                    "columnCategory": "Parameter",
+                    "columnHeader": "Parameter Value[Autosampler model]",
+                    "columnPrefix": "Parameter Value",
+                    "controlLists": null,
+                    "defaultColumnIndex": 13,
+                    "defaultValue": null,
+                    "maxLength": 0,
+                    "minLength": 0,
+                    "required": false,
+                    "description": "",
+                    "examples": []
+                },
+                {
+                    "columnStructure": "ONTOLOGY_COLUMN",
+                    "columnCategory": "Parameter",
+                    "columnHeader": "Parameter Value[Column model]",
+                    "columnPrefix": "Parameter Value",
+                    "controlLists": null,
+                    "defaultColumnIndex": 16,
+                    "defaultValue": null,
+                    "maxLength": 0,
+                    "minLength": 5,
+                    "required": true,
+                    "description": "Manufacturer, model number and dimensions of the column model.",
+                    "examples": [
+                        "HSS T3 C18 (1.8 \u03bcm, 1.0 x 100 mm; Waters)"
+                    ]
+                },
+                {
+                    "columnStructure": "ONTOLOGY_COLUMN",
+                    "columnCategory": "Parameter",
+                    "columnHeader": "Parameter Value[Column type]",
+                    "columnPrefix": "Parameter Value",
+                    "controlLists": null,
+                    "defaultColumnIndex": 19,
+                    "defaultValue": null,
+                    "maxLength": 0,
+                    "minLength": 5,
+                    "required": true,
+                    "description": "Type or phase of column used.",
+                    "examples": [
+                        "reverse phase"
+                    ]
+                },
+                {
+                    "columnStructure": "ONTOLOGY_COLUMN",
+                    "columnCategory": "Parameter",
+                    "columnHeader": "Parameter Value[Guard column]",
+                    "columnPrefix": "Parameter Value",
+                    "controlLists": null,
+                    "defaultColumnIndex": 22,
+                    "defaultValue": null,
+                    "maxLength": 0,
+                    "minLength": 0,
+                    "required": false,
+                    "description": "",
+                    "examples": []
+                },
+                {
+                    "columnStructure": "SINGLE_COLUMN",
+                    "columnCategory": "Basic",
+                    "columnHeader": "Labeled Extract Name",
+                    "columnPrefix": "",
+                    "controlLists": null,
+                    "defaultColumnIndex": 25,
+                    "defaultValue": null,
+                    "maxLength": 0,
+                    "minLength": 0,
+                    "required": false,
+                    "description": "Leave blank if you don\u2019t have one.",
+                    "examples": []
+                },
+                {
+                    "columnStructure": "ONTOLOGY_COLUMN",
+                    "columnCategory": "ontologyColumn",
+                    "columnHeader": "Label",
+                    "controlLists": {
+                        "termSourceRef": "prioritisedStudyFactorRefSources"
+                    },
+                    "defaultColumnIndex": 26,
+                    "defaultValue": null,
+                    "maxLength": 0,
+                    "minLength": 0,
+                    "required": false,
+                    "description": "If you used a chemical or biochemical marker in the sample such as a radioactive isotope of fluorescent dye which is bound to a material in order to make it detectable in an analytical instrument then enter it here.",
+                    "examples": []
+                },
+                {
+                    "columnStructure": "SINGLE_COLUMN",
+                    "columnCategory": "Protocol",
+                    "columnHeader": "Protocol REF",
+                    "columnPrefix": "",
+                    "defaultColumnIndex": 29,
+                    "defaultValue": "Mass spectrometry",
+                    "maxLength": 0,
+                    "minLength": 0,
+                    "required": true,
+                    "description": "This is the column marking the start of data pertaining to *Mass spectrometry protocol*. The 'Mass spectrometry' term MUST be present in all rows of this column.",
+                    "examples": [
+                        "Mass spectrometry"
+                    ]
+                },
+                {
+                    "columnStructure": "ONTOLOGY_COLUMN",
+                    "columnCategory": "Parameter",
+                    "columnHeader": "Parameter Value[Scan polarity]",
+                    "columnPrefix": "Parameter Value",
+                    "controlLists": null,
+                    "defaultColumnIndex": 30,
+                    "defaultValue": null,
+                    "maxLength": 0,
+                    "minLength": 1,
+                    "required": true,
+                    "description": "Values should identical within each assay. If you have \u2018positive\u2019 or \u2018negative\u2019 values in the same assay then split them into separate \u2018positive\u2019 and \u2018negative\u2019 assays.",
+                    "examples": [
+                        "positive",
+                        "negative"
+                    ]
+                },
+                {
+                    "columnStructure": "SINGLE_COLUMN_AND_UNIT_ONTOLOGY",
+                    "columnCategory": "Parameter",
+                    "columnHeader": "Parameter Value[Scan m/z range]",
+                    "columnPrefix": "Parameter Value",
+                    "controlLists": null,
+                    "defaultColumnIndex": 33,
+                    "defaultValue": null,
+                    "maxLength": 0,
+                    "minLength": 1,
+                    "required": true,
+                    "description": "The range used in the assay.",
+                    "examples": [
+                        "100-1000"
+                    ]
+                },
+                {
+                    "columnStructure": "ONTOLOGY_COLUMN",
+                    "columnCategory": "Parameter",
+                    "columnHeader": "Parameter Value[Instrument]",
+                    "columnPrefix": "Parameter Value",
+                    "controlLists": {
+                        "termSourceRef": "prioritisedStudyFactorRefSources"
+                    },
+                    "defaultColumnIndex": 37,
+                    "defaultValue": null,
+                    "maxLength": 0,
+                    "minLength": 1,
+                    "required": true,
+                    "description": "Add the full name of the mass spectrometer/detector you used for this LC/MS assay, including the instrument manufacturer and model number as reported in manufacturer\u2019s brochures, user manuals, or on their website.",
+                    "examples": [
+                        "Bruker micrOTOF-Q II"
+                    ]
+                },
+                {
+                    "columnStructure": "ONTOLOGY_COLUMN",
+                    "columnCategory": "Parameter",
+                    "columnHeader": "Parameter Value[Ion source]",
+                    "columnPrefix": "Parameter Value",
+                    "controlLists": {
+                        "termSourceRef": "prioritisedStudyFactorRefSources"
+                    },
+                    "defaultColumnIndex": 40,
+                    "defaultValue": null,
+                    "maxLength": 0,
+                    "minLength": 0,
+                    "required": false,
+                    "description": "Where applicable to the instrument.",
+                    "examples": [
+                        "electrospray ionization"
+                    ]
+                },
+                {
+                    "columnStructure": "ONTOLOGY_COLUMN",
+                    "columnCategory": "Parameter",
+                    "columnHeader": "Parameter Value[Mass analyzer]",
+                    "columnPrefix": "Parameter Value",
+                    "controlLists": {
+                        "termSourceRef": "prioritisedStudyFactorRefSources"
+                    },
+                    "defaultColumnIndex": 43,
+                    "defaultValue": null,
+                    "maxLength": 0,
+                    "minLength": 0,
+                    "required": false,
+                    "description": "The analyser/detector of the mass fragments generated during the assay.",
+                    "examples": [
+                        "triple quadrupole"
+                    ]
+                },
+                {
+                    "columnStructure": "SINGLE_COLUMN",
+                    "columnCategory": "Basic",
+                    "columnHeader": "MS Assay Name",
+                    "columnPrefix": "",
+                    "controlLists": null,
+                    "defaultColumnIndex": 46,
+                    "defaultValue": null,
+                    "maxLength": 0,
+                    "minLength": 0,
+                    "required": false,
+                    "description": "This can be, but doesn\u2019t have to be, the same as the \u2018Sample Name\u2019",
+                    "examples": [
+                        "Assay_1",
+                        "Run_1",
+                        "Sample1"
+                    ]
+                },
+                {
+                    "columnStructure": "SINGLE_COLUMN",
+                    "columnCategory": "File",
+                    "columnHeader": "Raw Spectral Data File",
+                    "columnPrefix": "",
+                    "controlLists": null,
+                    "defaultColumnIndex": 47,
+                    "defaultValue": null,
+                    "maxLength": 0,
+                    "minLength": 0,
+                    "required": false,
+                    "tags": {
+                        "fileType": "raw"
+                    },
+                    "description": "This is where you should enter the Raw (unprocessed) MS data files. Please add full path of the file in the cell.",
+                    "examples": [
+                        "FILES/Sepd340.raw",
+                        "FILES/RAW_FILES/LC_MS/Sepd340.raw"
+                    ]
+                },
+                {
+                    "columnStructure": "SINGLE_COLUMN",
+                    "columnCategory": "Protocol",
+                    "columnHeader": "Protocol REF",
+                    "columnPrefix": "",
+                    "defaultColumnIndex": 48,
+                    "defaultValue": "Data transformation",
+                    "maxLength": 0,
+                    "minLength": 0,
+                    "required": true,
+                    "description": "This is the column marking the start of data pertaining to *Data transformation protocol*. The 'Data transformation' term MUST be present in all rows of this column.",
+                    "examples": [
+                        "Data transformation"
+                    ]
+                },
+                {
+                    "columnStructure": "SINGLE_COLUMN",
+                    "columnCategory": "Basic",
+                    "columnHeader": "Normalization Name",
+                    "columnPrefix": "",
+                    "controlLists": null,
+                    "defaultColumnIndex": 49,
+                    "defaultValue": null,
+                    "maxLength": 0,
+                    "minLength": 0,
+                    "required": false,
+                    "description": "These should contain the normalization data files preferably as an Excel spreadsheet file. If you don\u2019t have these then leave the cells/column blank.",
+                    "examples": [
+                        "MSpos-Ex1-Col0-48h-Ag_normalized_data.xlsx"
+                    ]
+                },
+                {
+                    "columnStructure": "SINGLE_COLUMN",
+                    "columnCategory": "File",
+                    "columnHeader": "Derived Spectral Data File",
+                    "columnPrefix": "",
+                    "controlLists": null,
+                    "defaultColumnIndex": 50,
+                    "defaultValue": null,
+                    "maxLength": 0,
+                    "minLength": 0,
+                    "required": false,
+                    "tags": {
+                        "fileType": "derived"
+                    },
+                    "description": "If your data has been transformed into one of the open-source raw data formats e.g. mzML , CDF, or any other converted file, then add them here. Please add full path of the file in the cell.",
+                    "examples": [
+                        "FILES/Sepd340.mzML",
+                        "FILES/DERIVED_FILES/LC_MS/Sepd340.mzML"
+                    ]
+                },
+                {
+                    "columnStructure": "SINGLE_COLUMN",
+                    "columnCategory": "Protocol",
+                    "columnHeader": "Protocol REF",
+                    "columnPrefix": "",
+                    "defaultColumnIndex": 51,
+                    "defaultValue": "Metabolite identification",
+                    "maxLength": 0,
+                    "minLength": 0,
+                    "required": true,
+                    "description": "This is the column marking the start of data pertaining to *Metabolite identification protocol*. The 'Metabolite identification' term MUST be present in all rows of this column.",
+                    "examples": [
+                        "Metabolite identification"
+                    ]
+                },
+                {
+                    "columnStructure": "SINGLE_COLUMN",
+                    "columnCategory": "Basic",
+                    "columnHeader": "Data Transformation Name",
+                    "columnPrefix": "",
+                    "controlLists": null,
+                    "defaultColumnIndex": 52,
+                    "defaultValue": null,
+                    "maxLength": 0,
+                    "minLength": 0,
+                    "required": false,
+                    "description": "These should contain the data transformation files.",
+                    "examples": []
+                },
+                {
+                    "columnStructure": "SINGLE_COLUMN",
+                    "columnCategory": "File",
+                    "columnHeader": "Metabolite Assignment File",
+                    "columnPrefix": "",
+                    "controlLists": null,
+                    "defaultColumnIndex": 53,
+                    "defaultValue": null,
+                    "maxLength": 0,
+                    "minLength": 1,
+                    "required": true,
+                    "tags": {
+                        "fileType": "metadata_maf"
+                    },
+                    "description": "A TSV file containing information about the metabolites investigated in the study. Information regarding database accession IDs , where in the spectra the metabolite is found and data pertaining to its abundance within the study samples should be in this file.",
+                    "examples": [
+                        "m_MTBLS1_mass_spectrometry_v2_maf.tsv"
+                    ]
+                }
+            ],
+            "version": "2.0"
+        }
+    ]
 }

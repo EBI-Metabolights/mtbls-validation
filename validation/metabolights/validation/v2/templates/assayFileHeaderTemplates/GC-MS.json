@@ -14,7 +14,7 @@
                     "maxLength": 0,
                     "minLength": 1,
                     "required": true,
-                    "description": "A unique identifier from a particular source (a batch of samples can have a unique Sample name as identified in the Sample table). It’s usually associated with an output spectral data filename.",
+                    "description": "A unique identifier from a particular source (a batch of samples can have a unique Sample name as identified in the Sample table). It\u2019s usually associated with an output spectral data filename.",
                     "examples": [
                         "ADG10003u_007",
                         "Example_1",
@@ -79,7 +79,7 @@
                     "maxLength": 0,
                     "minLength": 0,
                     "required": false,
-                    "description": "This can be, but doesn’t have to be, the same as the ‘Sample Name’.",
+                    "description": "This can be, but doesn\u2019t have to be, the same as the \u2018Sample Name\u2019.",
                     "examples": [
                         "Example_1"
                     ]
@@ -112,7 +112,7 @@
                     "maxLength": 0,
                     "minLength": 5,
                     "required": true,
-                    "description": "Add the full name of the instrument you used for the Chromatographic part of this assay, including the manufacturer and model number as reported in manufacturer’s brochures, user manuals, or on their website.",
+                    "description": "Add the full name of the instrument you used for the Chromatographic part of this assay, including the manufacturer and model number as reported in manufacturer\u2019s brochures, user manuals, or on their website.",
                     "examples": [
                         "Shimadzu GCMS-QP2010 Ultra"
                     ]
@@ -128,7 +128,7 @@
                     "maxLength": 0,
                     "minLength": 0,
                     "required": false,
-                    "description": "Add the full name of the autosampler used for the Chromatographic part of this assay, including the manufacturer and model number as reported in manufacturer’s brochures, user manuals or website.",
+                    "description": "Add the full name of the autosampler used for the Chromatographic part of this assay, including the manufacturer and model number as reported in manufacturer\u2019s brochures, user manuals or website.",
                     "examples": []
                 },
                 {
@@ -158,7 +158,7 @@
                     "maxLength": 0,
                     "minLength": 5,
                     "required": true,
-                    "description": "Polarity of column used. This information can be found on the manufacturer’s website.",
+                    "description": "Polarity of column used. This information can be found on the manufacturer\u2019s website.",
                     "examples": [
                         "low polarity",
                         "medium polarity",
@@ -192,7 +192,7 @@
                     "maxLength": 0,
                     "minLength": 0,
                     "required": false,
-                    "description": "Leave blank if you don’t have one.",
+                    "description": "Leave blank if you don\u2019t have one.",
                     "examples": []
                 },
                 {
@@ -236,7 +236,7 @@
                     "maxLength": 0,
                     "minLength": 1,
                     "required": true,
-                    "description": "Values should identical within each assay. If you have ‘positive’ or ‘negative’ values in the same assay then split them into separate ‘positive’ and ‘negative’ assays.",
+                    "description": "Values should identical within each assay. If you have \u2018positive\u2019 or \u2018negative\u2019 values in the same assay then split them into separate \u2018positive\u2019 and \u2018negative\u2019 assays.",
                     "examples": [
                         "positive",
                         "negative"
@@ -271,7 +271,7 @@
                     "maxLength": 0,
                     "minLength": 1,
                     "required": true,
-                    "description": "Add the full name of the mass spectrometer/detector you used for this LC/MS assay, including the instrument manufacturer and model number as reported in manufacturer’s brochures, user manuals, or on their website.",
+                    "description": "Add the full name of the mass spectrometer/detector you used for this LC/MS assay, including the instrument manufacturer and model number as reported in manufacturer\u2019s brochures, user manuals, or on their website.",
                     "examples": [
                         "Thermo Electron Trace DSQ"
                     ]
@@ -323,7 +323,7 @@
                     "maxLength": 0,
                     "minLength": 0,
                     "required": false,
-                    "description": "This can be, but doesn’t have to be, the same as the ‘Sample Name’",
+                    "description": "This can be, but doesn\u2019t have to be, the same as the \u2018Sample Name\u2019",
                     "examples": [
                         "Assay_1",
                         "Run_1",
@@ -376,7 +376,7 @@
                     "maxLength": 0,
                     "minLength": 0,
                     "required": false,
-                    "description": "These should contain the normalization data files preferably as an Excel spreadsheet file. If you don’t have these then leave the cells/column blank.",
+                    "description": "These should contain the normalization data files preferably as an Excel spreadsheet file. If you don\u2019t have these then leave the cells/column blank.",
                     "examples": [
                         "normalized-data.xlsx"
                     ]
@@ -428,8 +428,7 @@
                     "minLength": 0,
                     "required": false,
                     "description": "These should contain the data transformation files.",
-                    "examples": [
-                    ]
+                    "examples": []
                 },
                 {
                     "columnCategory": "File",
@@ -453,7 +452,7 @@
             ],
             "version": "1.0"
         },
-{
+        {
             "fixedColumnCount": 1,
             "headers": [
                 {
@@ -467,7 +466,7 @@
                     "maxLength": 0,
                     "minLength": 1,
                     "required": true,
-                    "description": "A unique identifier from a particular source (a batch of samples can have a unique Sample name as identified in the Sample table). It’s usually associated with an output spectral data filename.",
+                    "description": "A unique identifier from a particular source (a batch of samples can have a unique Sample name as identified in the Sample table). It\u2019s usually associated with an output spectral data filename.",
                     "examples": [
                         "ADG10003u_007",
                         "Example_1",
@@ -493,7 +492,7 @@
                     "columnCategory": "Parameter",
                     "columnHeader": "Parameter Value[Post Extraction]",
                     "columnPrefix": "Parameter Value",
-                    "columnStructure": "SINGLE_COLUMN",
+                    "columnStructure": "ONTOLOGY_COLUMN",
                     "controlLists": null,
                     "defaultColumnIndex": 2,
                     "defaultValue": null,
@@ -509,9 +508,9 @@
                     "columnCategory": "Parameter",
                     "columnHeader": "Parameter Value[Derivatization]",
                     "columnPrefix": "Parameter Value",
-                    "columnStructure": "SINGLE_COLUMN",
+                    "columnStructure": "ONTOLOGY_COLUMN",
                     "controlLists": null,
-                    "defaultColumnIndex": 3,
+                    "defaultColumnIndex": 5,
                     "defaultValue": null,
                     "maxLength": 0,
                     "minLength": 0,
@@ -527,12 +526,12 @@
                     "columnPrefix": "",
                     "columnStructure": "SINGLE_COLUMN",
                     "controlLists": null,
-                    "defaultColumnIndex": 4,
+                    "defaultColumnIndex": 8,
                     "defaultValue": null,
                     "maxLength": 0,
                     "minLength": 0,
                     "required": false,
-                    "description": "This can be, but doesn’t have to be, the same as the ‘Sample Name’.",
+                    "description": "This can be, but doesn\u2019t have to be, the same as the \u2018Sample Name\u2019.",
                     "examples": [
                         "Example_1"
                     ]
@@ -542,7 +541,7 @@
                     "columnHeader": "Protocol REF",
                     "columnPrefix": "",
                     "columnStructure": "SINGLE_COLUMN",
-                    "defaultColumnIndex": 5,
+                    "defaultColumnIndex": 9,
                     "defaultValue": "Chromatography",
                     "maxLength": 0,
                     "minLength": 0,
@@ -560,12 +559,12 @@
                     "controlLists": {
                         "termSourceRef": "prioritisedStudyFactorRefSources"
                     },
-                    "defaultColumnIndex": 6,
+                    "defaultColumnIndex": 10,
                     "defaultValue": null,
                     "maxLength": 0,
                     "minLength": 5,
                     "required": true,
-                    "description": "Add the full name of the instrument you used for the Chromatographic part of this assay, including the manufacturer and model number as reported in manufacturer’s brochures, user manuals, or on their website.",
+                    "description": "Add the full name of the instrument you used for the Chromatographic part of this assay, including the manufacturer and model number as reported in manufacturer\u2019s brochures, user manuals, or on their website.",
                     "examples": [
                         "Shimadzu GCMS-QP2010 Ultra"
                     ]
@@ -574,23 +573,23 @@
                     "columnCategory": "Parameter",
                     "columnHeader": "Parameter Value[Autosampler model]",
                     "columnPrefix": "Parameter Value",
-                    "columnStructure": "SINGLE_COLUMN",
+                    "columnStructure": "ONTOLOGY_COLUMN",
                     "controlLists": null,
-                    "defaultColumnIndex": 9,
+                    "defaultColumnIndex": 13,
                     "defaultValue": null,
                     "maxLength": 0,
                     "minLength": 0,
                     "required": false,
-                    "description": "Add the full name of the autosampler used for the Chromatographic part of this assay, including the manufacturer and model number as reported in manufacturer’s brochures, user manuals or website.",
+                    "description": "Add the full name of the autosampler used for the Chromatographic part of this assay, including the manufacturer and model number as reported in manufacturer\u2019s brochures, user manuals or website.",
                     "examples": []
                 },
                 {
                     "columnCategory": "Parameter",
                     "columnHeader": "Parameter Value[Column model]",
                     "columnPrefix": "Parameter Value",
-                    "columnStructure": "SINGLE_COLUMN",
+                    "columnStructure": "ONTOLOGY_COLUMN",
                     "controlLists": null,
-                    "defaultColumnIndex": 10,
+                    "defaultColumnIndex": 16,
                     "defaultValue": null,
                     "maxLength": 0,
                     "minLength": 5,
@@ -604,14 +603,14 @@
                     "columnCategory": "Parameter",
                     "columnHeader": "Parameter Value[Column type]",
                     "columnPrefix": "Parameter Value",
-                    "columnStructure": "SINGLE_COLUMN",
+                    "columnStructure": "ONTOLOGY_COLUMN",
                     "controlLists": null,
-                    "defaultColumnIndex": 11,
+                    "defaultColumnIndex": 19,
                     "defaultValue": null,
                     "maxLength": 0,
                     "minLength": 5,
                     "required": true,
-                    "description": "Polarity of column used. This information can be found on the manufacturer’s website.",
+                    "description": "Polarity of column used. This information can be found on the manufacturer\u2019s website.",
                     "examples": [
                         "low polarity",
                         "medium polarity",
@@ -622,9 +621,9 @@
                     "columnCategory": "Parameter",
                     "columnHeader": "Parameter Value[Guard column]",
                     "columnPrefix": "Parameter Value",
-                    "columnStructure": "SINGLE_COLUMN",
+                    "columnStructure": "ONTOLOGY_COLUMN",
                     "controlLists": null,
-                    "defaultColumnIndex": 12,
+                    "defaultColumnIndex": 22,
                     "defaultValue": null,
                     "maxLength": 0,
                     "minLength": 0,
@@ -640,12 +639,12 @@
                     "columnPrefix": "",
                     "columnStructure": "SINGLE_COLUMN",
                     "controlLists": null,
-                    "defaultColumnIndex": 13,
+                    "defaultColumnIndex": 25,
                     "defaultValue": null,
                     "maxLength": 0,
                     "minLength": 0,
                     "required": false,
-                    "description": "Leave blank if you don’t have one.",
+                    "description": "Leave blank if you don\u2019t have one.",
                     "examples": []
                 },
                 {
@@ -655,7 +654,7 @@
                     "controlLists": {
                         "termSourceRef": "prioritisedStudyFactorRefSources"
                     },
-                    "defaultColumnIndex": 14,
+                    "defaultColumnIndex": 26,
                     "defaultValue": null,
                     "maxLength": 0,
                     "minLength": 0,
@@ -668,7 +667,7 @@
                     "columnHeader": "Protocol REF",
                     "columnPrefix": "",
                     "columnStructure": "SINGLE_COLUMN",
-                    "defaultColumnIndex": 17,
+                    "defaultColumnIndex": 29,
                     "defaultValue": "Mass spectrometry",
                     "maxLength": 0,
                     "minLength": 0,
@@ -682,14 +681,14 @@
                     "columnCategory": "Parameter",
                     "columnHeader": "Parameter Value[Scan polarity]",
                     "columnPrefix": "Parameter Value",
-                    "columnStructure": "SINGLE_COLUMN",
+                    "columnStructure": "ONTOLOGY_COLUMN",
                     "controlLists": null,
-                    "defaultColumnIndex": 18,
+                    "defaultColumnIndex": 30,
                     "defaultValue": null,
                     "maxLength": 0,
                     "minLength": 1,
                     "required": true,
-                    "description": "Values should identical within each assay. If you have ‘positive’ or ‘negative’ values in the same assay then split them into separate ‘positive’ and ‘negative’ assays.",
+                    "description": "Values should identical within each assay. If you have \u2018positive\u2019 or \u2018negative\u2019 values in the same assay then split them into separate \u2018positive\u2019 and \u2018negative\u2019 assays.",
                     "examples": [
                         "positive",
                         "negative"
@@ -699,9 +698,9 @@
                     "columnCategory": "Parameter",
                     "columnHeader": "Parameter Value[Scan m/z range]",
                     "columnPrefix": "Parameter Value",
-                    "columnStructure": "SINGLE_COLUMN",
+                    "columnStructure": "SINGLE_COLUMN_AND_UNIT_ONTOLOGY",
                     "controlLists": null,
-                    "defaultColumnIndex": 19,
+                    "defaultColumnIndex": 33,
                     "defaultValue": null,
                     "maxLength": 0,
                     "minLength": 1,
@@ -719,12 +718,12 @@
                     "controlLists": {
                         "termSourceRef": "prioritisedMsInstrumentRefSources"
                     },
-                    "defaultColumnIndex": 20,
+                    "defaultColumnIndex": 37,
                     "defaultValue": null,
                     "maxLength": 0,
                     "minLength": 1,
                     "required": true,
-                    "description": "Add the full name of the mass spectrometer/detector you used for this LC/MS assay, including the instrument manufacturer and model number as reported in manufacturer’s brochures, user manuals, or on their website.",
+                    "description": "Add the full name of the mass spectrometer/detector you used for this LC/MS assay, including the instrument manufacturer and model number as reported in manufacturer\u2019s brochures, user manuals, or on their website.",
                     "examples": [
                         "Thermo Electron Trace DSQ"
                     ]
@@ -737,7 +736,7 @@
                     "controlLists": {
                         "termSourceRef": "prioritisedMsInstrumentRefSources"
                     },
-                    "defaultColumnIndex": 23,
+                    "defaultColumnIndex": 40,
                     "defaultValue": null,
                     "maxLength": 0,
                     "minLength": 0,
@@ -755,7 +754,7 @@
                     "controlLists": {
                         "termSourceRef": "prioritisedMassAnalyzerRefSources"
                     },
-                    "defaultColumnIndex": 26,
+                    "defaultColumnIndex": 43,
                     "defaultValue": null,
                     "maxLength": 0,
                     "minLength": 0,
@@ -771,12 +770,12 @@
                     "columnPrefix": "",
                     "columnStructure": "SINGLE_COLUMN",
                     "controlLists": null,
-                    "defaultColumnIndex": 29,
+                    "defaultColumnIndex": 46,
                     "defaultValue": null,
                     "maxLength": 0,
                     "minLength": 0,
                     "required": false,
-                    "description": "This can be, but doesn’t have to be, the same as the ‘Sample Name’",
+                    "description": "This can be, but doesn\u2019t have to be, the same as the \u2018Sample Name\u2019",
                     "examples": [
                         "Assay_1",
                         "Run_1",
@@ -789,7 +788,7 @@
                     "columnPrefix": "",
                     "columnStructure": "SINGLE_COLUMN",
                     "controlLists": null,
-                    "defaultColumnIndex": 30,
+                    "defaultColumnIndex": 47,
                     "defaultValue": null,
                     "maxLength": 0,
                     "minLength": 0,
@@ -808,7 +807,7 @@
                     "columnHeader": "Protocol REF",
                     "columnPrefix": "",
                     "columnStructure": "SINGLE_COLUMN",
-                    "defaultColumnIndex": 31,
+                    "defaultColumnIndex": 48,
                     "defaultValue": "Data transformation",
                     "maxLength": 0,
                     "minLength": 0,
@@ -824,12 +823,12 @@
                     "columnPrefix": "",
                     "columnStructure": "SINGLE_COLUMN",
                     "controlLists": null,
-                    "defaultColumnIndex": 32,
+                    "defaultColumnIndex": 49,
                     "defaultValue": null,
                     "maxLength": 0,
                     "minLength": 0,
                     "required": false,
-                    "description": "These should contain the normalization data files preferably as an Excel spreadsheet file. If you don’t have these then leave the cells/column blank.",
+                    "description": "These should contain the normalization data files preferably as an Excel spreadsheet file. If you don\u2019t have these then leave the cells/column blank.",
                     "examples": [
                         "normalized-data.xlsx"
                     ]
@@ -840,7 +839,7 @@
                     "columnPrefix": "",
                     "columnStructure": "SINGLE_COLUMN",
                     "controlLists": null,
-                    "defaultColumnIndex": 33,
+                    "defaultColumnIndex": 50,
                     "defaultValue": null,
                     "maxLength": 0,
                     "minLength": 0,
@@ -859,7 +858,7 @@
                     "columnHeader": "Protocol REF",
                     "columnPrefix": "",
                     "columnStructure": "SINGLE_COLUMN",
-                    "defaultColumnIndex": 34,
+                    "defaultColumnIndex": 51,
                     "defaultValue": "Metabolite identification",
                     "maxLength": 0,
                     "minLength": 0,
@@ -875,14 +874,13 @@
                     "columnPrefix": "",
                     "columnStructure": "SINGLE_COLUMN",
                     "controlLists": null,
-                    "defaultColumnIndex": 35,
+                    "defaultColumnIndex": 52,
                     "defaultValue": null,
                     "maxLength": 0,
                     "minLength": 0,
                     "required": false,
                     "description": "These should contain the data transformation files.",
-                    "examples": [
-                    ]
+                    "examples": []
                 },
                 {
                     "columnCategory": "File",
@@ -890,7 +888,7 @@
                     "columnPrefix": "",
                     "columnStructure": "SINGLE_COLUMN",
                     "controlLists": null,
-                    "defaultColumnIndex": 36,
+                    "defaultColumnIndex": 53,
                     "defaultValue": null,
                     "maxLength": 0,
                     "minLength": 1,

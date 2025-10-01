@@ -1,19 +1,24 @@
-[tool.poetry]
+[project]
 name = "mtbls-validation"
 version = "0.1.0"
 description = "MetaboLights Validation Framework"
-authors = ["MetaboLights Team <metabolights-help@ebi.ac.uk>"]
-license = "Apache-2.0"
+authors = [{ name = "MetaboLights Team", email = "metabolights-help@ebi.ac.uk" }]
+requires-python = "~=3.12"
 readme = "README.md"
-packages = [{include = "scripts"}]
-[tool.poetry.dependencies]
-python = "^3.12"
-pydantic = ">=2.10.2"
-pandas = ">=2.2.3"
-openpyxl = ">=3.1.5"
-metabolights-utils = "^1.4.0"
+license = "Apache-2.0"
+dependencies = [
+    "pydantic>=2.10.2",
+    "pandas>=2.2.3",
+    "openpyxl>=3.1.5",
+    "metabolights-utils>=1.4.0,<2",
+]
 
+[tool.hatch.build.targets.sdist]
+include = ["scripts"]
+
+[tool.hatch.build.targets.wheel]
+include = ["scripts"]
 
 [build-system]
-requires = ["poetry-core"]
-build-backend = "poetry.core.masonry.api"
+requires = ["hatchling"]
+build-backend = "hatchling.build"

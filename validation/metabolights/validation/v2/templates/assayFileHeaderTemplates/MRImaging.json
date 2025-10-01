@@ -157,7 +157,6 @@
                     "minLength": 0,
                     "required": false
                 },
-
                 {
                     "columnStructure": "SINGLE_COLUMN",
                     "columnCategory": "Parameter",
@@ -169,7 +168,7 @@
                     "maxLength": 0,
                     "minLength": 0,
                     "required": false
-                },         
+                },
                 {
                     "columnStructure": "SINGLE_COLUMN",
                     "columnCategory": "Parameter",
@@ -181,7 +180,7 @@
                     "maxLength": 0,
                     "minLength": 0,
                     "required": false
-                },                    
+                },
                 {
                     "columnStructure": "SINGLE_COLUMN",
                     "columnCategory": "Parameter",
@@ -193,7 +192,7 @@
                     "maxLength": 0,
                     "minLength": 0,
                     "required": false
-                },          
+                },
                 {
                     "columnStructure": "SINGLE_COLUMN_AND_UNIT_ONTOLOGY",
                     "columnCategory": "Parameter",
@@ -206,7 +205,6 @@
                     "minLength": 0,
                     "required": false
                 },
-
                 {
                     "columnStructure": "SINGLE_COLUMN",
                     "columnCategory": "File",
@@ -496,7 +494,6 @@
                     "minLength": 0,
                     "required": false
                 },
-
                 {
                     "columnStructure": "SINGLE_COLUMN",
                     "columnCategory": "Parameter",
@@ -508,9 +505,9 @@
                     "maxLength": 0,
                     "minLength": 0,
                     "required": false
-                },         
+                },
                 {
-                    "columnStructure": "SINGLE_COLUMN",
+                    "columnStructure": "SINGLE_COLUMN_AND_UNIT_ONTOLOGY",
                     "columnCategory": "Parameter",
                     "columnHeader": "Parameter Value[Number of transients]",
                     "columnPrefix": "Parameter Value",
@@ -520,39 +517,38 @@
                     "maxLength": 0,
                     "minLength": 0,
                     "required": false
-                },                    
+                },
                 {
                     "columnStructure": "SINGLE_COLUMN",
                     "columnCategory": "Parameter",
                     "columnHeader": "Parameter Value[Water inhibition pulse sequence name]",
                     "columnPrefix": "Parameter Value",
                     "controlLists": null,
-                    "defaultColumnIndex": 32,
+                    "defaultColumnIndex": 35,
                     "defaultValue": null,
                     "maxLength": 0,
                     "minLength": 0,
                     "required": false
-                },          
+                },
                 {
                     "columnStructure": "SINGLE_COLUMN_AND_UNIT_ONTOLOGY",
                     "columnCategory": "Parameter",
                     "columnHeader": "Parameter Value[Magnetic field strength]",
                     "columnPrefix": "Parameter Value",
                     "controlLists": null,
-                    "defaultColumnIndex": 33,
+                    "defaultColumnIndex": 36,
                     "defaultValue": null,
                     "maxLength": 0,
                     "minLength": 0,
                     "required": false
                 },
-
                 {
                     "columnStructure": "SINGLE_COLUMN",
                     "columnCategory": "File",
                     "columnHeader": "Acquisition Parameter Data File",
                     "columnPrefix": "",
                     "controlLists": null,
-                    "defaultColumnIndex": 37,
+                    "defaultColumnIndex": 40,
                     "defaultValue": null,
                     "maxLength": 0,
                     "minLength": 0,
@@ -566,7 +562,7 @@
                     "columnCategory": "Protocol",
                     "columnHeader": "Protocol REF",
                     "columnPrefix": "",
-                    "defaultColumnIndex": 38,
+                    "defaultColumnIndex": 41,
                     "defaultValue": "In vivo magnetic resonance assay",
                     "maxLength": 0,
                     "minLength": 0,
@@ -578,7 +574,7 @@
                     "columnHeader": "NMR Assay Name",
                     "columnPrefix": "",
                     "controlLists": null,
-                    "defaultColumnIndex": 39,
+                    "defaultColumnIndex": 42,
                     "defaultValue": null,
                     "maxLength": 0,
                     "minLength": 0,
@@ -590,7 +586,7 @@
                     "columnHeader": "Free Induction Decay Data File",
                     "columnPrefix": "",
                     "controlLists": null,
-                    "defaultColumnIndex": 40,
+                    "defaultColumnIndex": 43,
                     "defaultValue": null,
                     "maxLength": 0,
                     "minLength": 0,
@@ -604,7 +600,7 @@
                     "columnCategory": "Protocol",
                     "columnHeader": "Protocol REF",
                     "columnPrefix": "",
-                    "defaultColumnIndex": 41,
+                    "defaultColumnIndex": 44,
                     "defaultValue": "Data transformation",
                     "maxLength": 0,
                     "minLength": 0,
@@ -616,7 +612,7 @@
                     "columnHeader": "Normalization Name",
                     "columnPrefix": "",
                     "controlLists": null,
-                    "defaultColumnIndex": 42,
+                    "defaultColumnIndex": 45,
                     "defaultValue": null,
                     "maxLength": 0,
                     "minLength": 0,
@@ -628,7 +624,7 @@
                     "columnHeader": "Derived Spectral Data File",
                     "columnPrefix": "",
                     "controlLists": null,
-                    "defaultColumnIndex": 43,
+                    "defaultColumnIndex": 46,
                     "defaultValue": null,
                     "maxLength": 0,
                     "minLength": 0,
@@ -642,7 +638,7 @@
                     "columnCategory": "Protocol",
                     "columnHeader": "Protocol REF",
                     "columnPrefix": "",
-                    "defaultColumnIndex": 44,
+                    "defaultColumnIndex": 47,
                     "defaultValue": "Metabolite identification",
                     "maxLength": 0,
                     "minLength": 0,
@@ -654,7 +650,7 @@
                     "columnHeader": "Data Transformation Name",
                     "columnPrefix": "",
                     "controlLists": null,
-                    "defaultColumnIndex": 45,
+                    "defaultColumnIndex": 48,
                     "defaultValue": null,
                     "maxLength": 0,
                     "minLength": 0,
@@ -666,7 +662,7 @@
                     "columnHeader": "Metabolite Assignment File",
                     "columnPrefix": "",
                     "controlLists": null,
-                    "defaultColumnIndex": 46,
+                    "defaultColumnIndex": 49,
                     "defaultValue": null,
                     "maxLength": 0,
                     "minLength": 0,

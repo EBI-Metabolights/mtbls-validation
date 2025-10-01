@@ -181,6 +181,30 @@ __ASSAY_DEFAULT_PROTOCOL_HEADERS := {file_name: default_values |
 		]
 }
 
+# ALL_ASSAY_PARAMETER_VALUES := { template_name :params |
+# 	some template_name, template in data.metabolights.validation.v2.templates.assayFileHeaderTemplates
+# 	some template_version in template
+# 	template_version.version == "2.0"
+# 	params := [ header.columnHeader | 
+# 		some header in template_version.headers
+# 		header.columnStructure == "SINGLE_COLUMN"
+# 		startswith(header.columnHeader, "Parameter Value")
+# 	]
+# }
+
+# ALL_ASSAY_PARAMETER_VALUES2 := { header.columnHeader |
+# 	some template_name, template in data.metabolights.validation.v2.templates.assayFileHeaderTemplates
+# 	template_name != "MSImaging"
+	
+# 	template_name != "MRImaging"
+# 	some template_version in template
+# 	template_version.version == "2.0"
+# 	some header in template_version.headers
+# 	header.columnStructure == "SINGLE_COLUMN"
+# 	startswith(header.columnHeader, "Parameter Value")
+	
+# }
+
 __ASSAY_PROTOCOL_HEADER_COLUMNS := {file_name: columns | 
 		some file_name, _ in input.assays
         columns := [ header.columnIndex | 
