@@ -2,6 +2,7 @@
     "MS": [
         {
             "fixedColumnCount": 1,
+            "description": "Mass spectrometry",
             "headers": [
                 {
                     "columnStructure": "SINGLE_COLUMN",
@@ -280,6 +281,7 @@
         },
         {
             "fixedColumnCount": 1,
+            "description": "Mass spectrometry",
             "headers": [
                 {
                     "columnStructure": "SINGLE_COLUMN",

@@ -2,6 +2,7 @@
     "GC-FID": [
         {
             "fixedColumnCount": 1,
+            "description": "Flame ionisation detector MS",
             "headers": [
                 {
                     "columnCategory": "Basic",
@@ -280,6 +281,7 @@
         },
         {
             "fixedColumnCount": 1,
+            "description": "Flame ionisation detector MS",
             "headers": [
                 {
                     "columnCategory": "Basic",

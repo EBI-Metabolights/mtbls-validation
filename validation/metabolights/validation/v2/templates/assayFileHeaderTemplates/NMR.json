@@ -2,6 +2,7 @@
     "NMR": [
         {
             "fixedColumnCount": 2,
+            "description": "Nuclear Magnetic Resonance (NMR)",
             "headers": [
                 {
                     "columnStructure": "SINGLE_COLUMN",
@@ -442,6 +443,7 @@
         },
         {
             "fixedColumnCount": 2,
+            "description": "Nuclear Magnetic Resonance (NMR)",
             "headers": [
                 {
                     "columnStructure": "SINGLE_COLUMN",

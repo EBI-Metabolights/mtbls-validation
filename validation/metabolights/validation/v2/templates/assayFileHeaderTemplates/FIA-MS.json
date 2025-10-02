@@ -2,6 +2,7 @@
     "FIA-MS": [
         {
             "fixedColumnCount": 1,
+            "description": "Flow injection analysis MS",
             "headers": [
                 {
                     "columnStructure": "SINGLE_COLUMN",
@@ -287,6 +288,7 @@
         },
         {
             "fixedColumnCount": 1,
+            "description": "Flow injection analysis MS",
             "headers": [
                 {
                     "columnStructure": "SINGLE_COLUMN",

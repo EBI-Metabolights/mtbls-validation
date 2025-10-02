@@ -1,6 +1,7 @@
 {
     "CE-MS": [
         {
+            "description": "Capillary electrophoresis MS",
             "fixedColumnCount": 1,
             "headers": [
                 {
@@ -310,6 +311,7 @@
             "version": "1.0"
         },
         {
+            "description": "Capillary electrophoresis MS",
             "fixedColumnCount": 1,
             "headers": [
                 {

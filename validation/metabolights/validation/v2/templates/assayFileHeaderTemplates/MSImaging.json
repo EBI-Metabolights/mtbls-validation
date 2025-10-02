@@ -2,6 +2,7 @@
     "MSImaging": [
         {
             "fixedColumnCount": 1,
+            "description": "MS Imaging",
             "headers": [
                 {
                     "columnStructure": "SINGLE_COLUMN",
@@ -696,6 +697,7 @@
         },
         {
             "fixedColumnCount": 1,
+            "description": "MS Imaging",
             "headers": [
                 {
                     "columnStructure": "SINGLE_COLUMN",

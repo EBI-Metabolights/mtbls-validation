@@ -2,6 +2,7 @@
     "GC-MS": [
         {
             "fixedColumnCount": 1,
+            "description": "Gas Chromatography MS",
             "headers": [
                 {
                     "columnCategory": "Basic",
@@ -454,6 +455,7 @@
         },
         {
             "fixedColumnCount": 1,
+            "description": "Gas Chromatography MS",
             "headers": [
                 {
                     "columnCategory": "Basic",

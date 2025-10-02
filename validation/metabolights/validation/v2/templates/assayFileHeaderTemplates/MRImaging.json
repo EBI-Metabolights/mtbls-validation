@@ -2,6 +2,7 @@
     "MRImaging": [
         {
             "fixedColumnCount": 1,
+            "description": "Magnetic resonance imaging",
             "headers": [
                 {
                     "columnStructure": "SINGLE_COLUMN",
@@ -339,6 +340,7 @@
         },
         {
             "fixedColumnCount": 1,
+            "description": "Magnetic resonance imaging",
             "headers": [
                 {
                     "columnStructure": "SINGLE_COLUMN",

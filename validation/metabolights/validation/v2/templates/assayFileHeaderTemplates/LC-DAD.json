@@ -2,6 +2,7 @@
     "LC-DAD": [
         {
             "fixedColumnCount": 1,
+            "description": "Diode array detection MS",
             "headers": [
                 {
                     "columnStructure": "SINGLE_COLUMN",
@@ -292,6 +293,7 @@
         },
         {
             "fixedColumnCount": 1,
+            "description": "Diode array detection MS",
             "headers": [
                 {
                     "columnStructure": "SINGLE_COLUMN",

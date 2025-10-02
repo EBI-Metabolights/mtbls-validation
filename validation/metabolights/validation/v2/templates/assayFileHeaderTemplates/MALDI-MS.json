@@ -2,6 +2,7 @@
     "MALDI-MS": [
         {
             "fixedColumnCount": 1,
+            "description": "Matrix-assisted laser desorption-ionisation imaging MS",
             "headers": [
                 {
                     "columnStructure": "SINGLE_COLUMN",
@@ -272,6 +273,7 @@
         },
         {
             "fixedColumnCount": 1,
+            "description": "Matrix-assisted laser desorption-ionisation imaging MS",
             "headers": [
                 {
                     "columnStructure": "SINGLE_COLUMN",
