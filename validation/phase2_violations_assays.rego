@@ -153,7 +153,6 @@ rule_a_200_090_002_06 contains result if {
 #  priority: HIGH
 #  section: assays.general
 rule_a_200_090_002_07 contains result if {
-	print(data.metabolights.validation.v2.phase1.definitions.STUDY_TEMPLATE_VERSION)
 	some file_name, sheet in input.assays
 	some header_index, header in sheet.table.headers
 	some technique_name, template_list in data.metabolights.validation.v2.templates.assayFileHeaderTemplates

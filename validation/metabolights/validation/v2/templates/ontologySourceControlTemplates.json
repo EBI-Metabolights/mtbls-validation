@@ -1,6 +1,18 @@
 {
     "ontologySourceReferenceTemplates": [
         {
+            "sourceName": "MI",
+            "sourceFile": "http://purl.obolibrary.org/obo/mi.owl",
+            "sourceVersion": "",
+            "sourceDescription": "Molecular Interactions Controlled Vocabulary"
+        },
+        {
+            "sourceName": "AFO",
+            "sourceFile": "http://purl.allotrope.org/voc/afo/merged/REC/2025/06/merged-without-qudt-and-inferred",
+            "sourceVersion": "",
+            "sourceDescription": "Allotrope Foundation Ontology Merged Without QUDT And Inferred (REC/2025/06)"
+        },
+        {
             "sourceName": "OBI",
             "sourceFile": "http://purl.obolibrary.org/obo/obi.owl",
             "sourceVersion": "",
