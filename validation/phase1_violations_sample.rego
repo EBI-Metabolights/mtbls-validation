@@ -188,9 +188,9 @@ rule_s_100_100_001_08 contains result if {
 	default_headers := def.SELECTED_STUDY_SAMPLE_FILE_TEMPLATE_HEADERS
 	matches := [sprintf("[Column Index: %v: '%v' is expected but found '%v' ]", [x1, x2, x3]) |
 		some j, header in headers
-		header.columnHeader != default_headers[j]
+		header.columnHeader != default_headers[j].columnHeader
 		x1 := header.columnIndex + 1
-		x2 := default_headers[j]
+		x2 := default_headers[j].columnHeader
 		x3 := header.columnHeader
 	]
 	count(matches) > 0
