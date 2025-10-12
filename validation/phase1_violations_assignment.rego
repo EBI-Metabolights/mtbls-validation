@@ -64,7 +64,6 @@ rule_m_100_100_001_02 contains result if {
 		
 	some columnHeader, idx in default_headers
 		count(maf_headers[idx].columnHeader) > 0
-		# print([columnHeader, maf_headers[idx].columnHeader])
 		columnHeader != maf_headers[idx].columnHeader
 
 		x := maf_headers[idx].columnIndex + 1
@@ -214,7 +213,6 @@ rule_m_100_100_002_02 contains result if {
 		some sample_name in assay_names
 		not sample_name in assignment_headers
 	}
-	# print(values)
 	source_file := file_name
 	result := f.format_with_file_description_and_values(rego.metadata.rule(), source_file, "Missing column(s) in assignment file" ,values)
 }

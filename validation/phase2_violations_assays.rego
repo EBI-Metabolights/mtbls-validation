@@ -70,7 +70,6 @@ rule_a_200_090_002_02 contains result if {
 	some header_index, header in sheet.table.headers
 	control_list := data.metabolights.validation.v2.controlLists.prioritisedDefaultTermRefSources
 
-	# print(data.metabolights.validation.v2.templates.assayFileHeaderTemplates[sheet.assayTechnique.name])
 	default_control_list_headers = {header.columnHeader |
 		some technique_name, templates in data.metabolights.validation.v2.templates.assayFileHeaderTemplates
 		technique_name == sheet.assayTechnique.name
@@ -79,9 +78,6 @@ rule_a_200_090_002_02 contains result if {
 		some _, header in template.headers
 		some "termSourceRef", _ in header.controlLists
 	}
-
-	# print(default_control_list_headers)
-	# defaultControlListHeaders := def.__ASSAY_DEFAULT_ONTOLOGY_COLUMNS[fileName]
 	result := f.term_source_ref_not_in_default_control_list(rego.metadata.rule(), assays, file_name, header_index, default_control_list_headers, control_list)
 }
 
@@ -217,8 +213,6 @@ rule_a_200_090_002_09 contains result if {
 	}
 
 	count(violated_values) > 0
-
-	# print(header.columnHeader, violated_values)
 	result := f.format_with_values(rego.metadata.rule(), file_name, header.columnIndex + 1, header.columnHeader, violated_values)
 }
 
@@ -345,7 +339,6 @@ rule_a_200_090_002_12 contains result if {
 	]
 	count(violated_values) > 0
 
-	# print(header.columnHeader, violated_values)
 	result := f.format_with_values(rego.metadata.rule(), file_name, header.columnIndex + 1, header.columnHeader, violated_values)
 }
 
@@ -706,8 +699,6 @@ rule_a_200_300_001_01 contains result if {
 
 		row_index := (row + 1) + row_offset
 	}
-	# print(file_name)
-	# print(violated_values)
 	result := f.format_with_values(rego.metadata.rule(), file_name, header.columnIndex + 1, header.columnHeader, violated_values)
 }
 

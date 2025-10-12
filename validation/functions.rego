@@ -363,25 +363,16 @@ term_source_ref_not_in_source_references_list(meta, source, file_name, column_in
 term_source_ref_is_defined_for_empty_term(meta, source, file_name, header_index) := result if {
 	header := source[file_name].table.headers[header_index]
 	header.columnStructure == "ONTOLOGY_COLUMN"
-	# print(header.columnHeader)
-	# column_index := header.columnIndex
 	term_source_column_header := "Term Source REF"
 	some a, "Term Source REF" in header.additionalColumns
 	some b, "Term Accession Number"  in header.additionalColumns
 	not "Unit" in header.additionalColumns
-
-	# some c
-	# source[file_name].table.headers[column_index].additionalColumns[c] == unit_column_header
 	
 	column_name := header.columnName
 	column_header := header.columnHeader
 
 	source_ref_column_index := (header.columnIndex + a) + 1
 	source_ref_column_name := source[file_name].table.columns[source_ref_column_index]
-	# accession_number_column_index := source[file_name].table.headers[column_index].columnIndex + b + 1
-	# accession_number_column_name := source[file_name].table.columns[accession_number_column_index]
-
-	# count(source[file_name].table.data[source_ref_column_name]) > 0
 	violated_values = {sprintf("[row: %v, term:'%v', 'source ref':'%v']", [x1, x2, x3]) |
 		some j, value in source[file_name].table.data[column_name]
 		
@@ -456,7 +447,6 @@ term_source_ref_is_empty_for_term(meta, source, file_name, column_index, templat
 	some n, template_header in template.headers
 
 	template_header.columnHeader == column_header
-	# print(template_header.controlLists)
 	control_list_name := template_header.controlLists[control_list_key]
 
 	control_list := control_lists[control_list_name]
@@ -470,9 +460,6 @@ term_source_ref_is_empty_for_term(meta, source, file_name, column_index, templat
 		count(trim_space(source_ref)) == 0
 		x := (source[file_name].table.rowOffset + j) + 1
 	}
-	
-
-	# print(violated_values)
 	control_list_str := concat(", ", control_list)
 	file_column_header := sprintf("%v (of %v)", [term_source_column_header, column_header])
 	source_file := file_name
@@ -625,7 +612,6 @@ accession_number_is_defined_for_empty_term(meta, source, file_name, column_index
 		x3 := source_ref
 		x4 := accession
 	}
-	# print(violated_values)
 	file_column_header := sprintf("%v (of %v)", [accession_column_header, column_header])
 	source_file := file_name
 	file_column_index := accession_number_column_index + 1

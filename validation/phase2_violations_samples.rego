@@ -54,8 +54,6 @@ rule_s_200_090_001_01 contains result if {
 rule_s_200_090_002_01 contains result if {
 	some file_name, _ in input.samples
 	some column_index, header in input.samples[file_name].table.headers
-	# template := data.metabolights.validation.v2.phase1.definitions.SELECTED_STUDY_SAMPLE_FILE_TEMPLATE
-	# print(template)
 	control_lists := data.metabolights.validation.v2.controlLists
 
 	result := f.term_source_ref_not_in_control_list(rego.metadata.rule(), input.samples, file_name, column_index, control_lists)
@@ -74,12 +72,10 @@ rule_s_200_090_002_02 contains result if {
 	some column_index, header in sheet.table.headers
 	control_list := data.metabolights.validation.v2.controlLists.prioritisedDefaultTermRefSources
 	headers := data.metabolights.validation.v2.phase1.definitions.SELECTED_STUDY_SAMPLE_FILE_TEMPLATE_HEADERS
-	# print(headers)
 	default_control_list_headers := {header.columnHeader |
 		some header in headers
 		header.controlLists["termSourceRef"]
 	}
-	# print(default_control_list_headers)
 	result := f.term_source_ref_not_in_default_control_list(rego.metadata.rule(), input.samples, file_name, column_index, default_control_list_headers, control_list)
 }
 
@@ -108,9 +104,6 @@ rule_s_200_090_002_03 contains result if {
 rule_s_200_090_002_04 contains result if {
 	some file_name, sheet in input.samples
 	some header_index, header in sheet.table.headers
-
-	# sheet.table.headers[columnIndex]
-	# print(header.columnIndex)
 	result := f.term_source_ref_is_defined_for_empty_term(rego.metadata.rule(), input.samples, file_name, header_index)
 }
 
@@ -472,7 +465,6 @@ rule_s_200_100_002_02 contains result if {
 #  priority: MEDIUM
 #  section: samples.source
 rule_s_200_100_002_03 contains result if {
-	# print(def._SAMPLES_DEFAULT_CHARACTERISTICS_HEADERS)
 	searchHeader := "Term Source REF"
 	input.samples[fileName].table.headers[columnIndex].additionalColumns[t] == searchHeader
 	input.samples[fileName].table.headers[columnIndex].columnStructure == "ONTOLOGY_COLUMN"

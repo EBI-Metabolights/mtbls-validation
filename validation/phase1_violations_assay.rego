@@ -246,7 +246,6 @@ rule_a_100_100_001_10 contains result if {
 	templates := data.metabolights.validation.v2.templates
 	def := data.metabolights.validation.v2.phase1.definitions
 	some file_name, _ in input.assays
-	# print(input.assays[file_name].table.headers)
 	header_names := {header.columnHeader: same_headers |
 		some header_set in def._DEFAULT_ASSAY_HEADERS[file_name]
 

@@ -220,12 +220,3 @@ __ASSAY_TECHNIQUES := {file_name: technology |
     technology := input.assays[assay_name].assayTechnique.name
 }
 
-
-# __ASSIGNMENT_FILE_TYPES := {fileName: technology |
-#     fileName := input.referencedAssignmentFiles[a]
-# 	print(fileName)
-#     fileName in input.assays[j].referencedAssignmentFiles
-
-#     technology := __ASSAY_TECHNIQUES[j]
-# }
-

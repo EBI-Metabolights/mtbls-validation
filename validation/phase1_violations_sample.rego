@@ -62,7 +62,6 @@ rule_s_100_100_001_03 contains result if {
 	values := {default_header.columnHeader |
 		some name, default_header in def._DEFAULT_SAMPLE_FILE_HEADERS
 		# default_header.required == true
-		print(default_header.columnHeader)
 		not default_header.columnHeader in headers
 	}
 	count(values) > 0

@@ -1959,15 +1959,12 @@ rule_i_100_360_011_01 contains result if {
 rule_i_100_360_011_02 contains result if {
 	some study in input.investigation.studies
 	comments = study.studyContacts.comments
-	# print("pi_set1")
 	pi_set := { idx: person | 
 		some idx, person in study.studyContacts.people
 		some role in person.roles
 		count(role.term) > 0
 		contains(lower(role.term), "principal investigator")
 	}
-	# print("pi_set")
-	# print(count(pi_set))
 	count(pi_set) > 0
 	orcid_idx_set := { comment_idx | 
 			some comment_idx, comment in comments
