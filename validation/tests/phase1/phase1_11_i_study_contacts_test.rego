@@ -468,7 +468,7 @@ test_rule_i_100_360_006_01_no_violation_01 if {
 				"phone": "",
 				"fax": "",
 				"address": "",
-				"affiliation": "EU",
+				"affiliation": "EMBL European Bioinformatics Institute",
 				"roles": [{
 					"term": "",
 					"termAccessionNumber": "",
@@ -483,7 +483,7 @@ test_rule_i_100_360_006_01_no_violation_01 if {
 				"phone": "",
 				"fax": "",
 				"address": "",
-				"affiliation": "EMBL",
+				"affiliation": "Cambridge University",
 				"roles": [{
 					"term": "",
 					"termAccessionNumber": "",
@@ -525,17 +525,47 @@ test_rule_i_100_360_006_01_violation_01 if {
 				"phone": "",
 				"fax": "",
 				"address": "",
-				"affiliation": "",
+				"affiliation": "Cambridge",
 				"roles": [{
 					"term": "",
 					"termAccessionNumber": "",
 					"termSourceRef": "",
 				}],
 			},
+			{
+				"lastName": "",
+				"firstName": "",
+				"midInitials": "",
+				"email": "",
+				"phone": "",
+				"fax": "",
+				"address": "",
+				"affiliation": "Cambridge1",
+				"roles": [{
+					"term": "",
+					"termAccessionNumber": "",
+					"termSourceRef": "",
+				}],
+			},
+			{
+				"lastName": "",
+				"firstName": "",
+				"midInitials": "",
+				"email": "",
+				"phone": "",
+				"fax": "",
+				"address": "",
+				"affiliation": "",
+				"roles": [{
+					"term": "",
+					"termAccessionNumber": "",
+					"termSourceRef": "",
+				}],
+			}
 		]}}]},
 		"investigationFilePath": "i_Investigation.txt",
 	}
-	count(result) == 1
+	count(result) == 2
 }
 
 # METADATA
@@ -1204,7 +1234,7 @@ test_rule_i_100_360_011_01_success_02 if {
 }
 
 #########################################################################################################
-# rule_i_100_360_011_01
+# rule_i_100_360_011_02
 #########################################################################################################
 
 
@@ -1213,15 +1243,30 @@ test_rule_i_100_360_011_01_success_02 if {
 # description: Principal Investigator details are not in study.
 test_rule_i_100_360_011_02_violation_01 if {
 	result := rules.rule_i_100_360_011_02 with input as {
-		"investigation": {"studies": [{"identifier": "MTBLS1", "studyContacts": {"people": [{
-			"lastName": "",
+		"investigation": {"studies": [{"identifier": "MTBLS1", "studyContacts": {
+			"comments": [
+			{
+              "name": "Study Person ORCID",
+              "value": [
+                "0000-0002-7899-7191", "0000-0002-7899-7192"
+              ]
+            },
+            {
+              "name": "Study Person Affiliation ROR ID",
+              "value": [
+                "https://ror.org/01g8f8d13", "https://ror.org/01g8f8d12"
+              ]
+            }			
+			],
+			"people": [{
+			"lastName": "Test",
 			"firstName": "",
 			"midInitials": "",
-			"email": "",
+			"email": "help@ebi.ac.uk",
 			"phone": "",
 			"fax": "",
 			"address": "",
-			"affiliation": "E",
+			"affiliation": "EMBL European Bioinformatics Institute",
 			"roles": [
 				{
 					"term": "Author",
@@ -1237,7 +1282,6 @@ test_rule_i_100_360_011_02_violation_01 if {
 		}]}}]},
 		"investigationFilePath": "i_Investigation.txt",
 	}
-
 	count(result) == 1
 }
 
@@ -1248,15 +1292,30 @@ test_rule_i_100_360_011_02_violation_01 if {
 # description: Principal Investigator details are not in study.
 test_rule_i_100_360_011_02_violation_02 if {
 	result := rules.rule_i_100_360_011_02 with input as {
-		"investigation": {"studies": [{"identifier": "MTBLS1", "studyContacts": {"people": [{
-			"lastName": "Test",
-			"firstName": "",
+		"investigation": {"studies": [{"identifier": "MTBLS1", "studyContacts": {
+			"comments": [
+			{
+              "name": "Study Person ORCID",
+              "value": [
+                "0000-0002-7899-7191", "0000-0002-7899-7192"
+              ]
+            },
+            {
+              "name": "Study Person Affiliation ROR ID",
+              "value": [
+                "https://ror.org/01g8f8d13", "https://ror.org/01g8f8d12"
+              ]
+            }			
+			],
+			"people": [{
+			"lastName": "",
+			"firstName": "Test",
 			"midInitials": "",
-			"email": "",
+			"email": "help@ebi.ac.uk",
 			"phone": "",
 			"fax": "",
 			"address": "",
-			"affiliation": "E",
+			"affiliation": "EMBL European Bioinformatics Institute",
 			"roles": [
 				{
 					"term": "Author",
@@ -1264,7 +1323,7 @@ test_rule_i_100_360_011_02_violation_02 if {
 					"termSourceRef": "",
 				},
 				{
-					"term": "Principal Investigator",
+					"term": "Grant Principal Investigator",
 					"termAccessionNumber": "http://",
 					"termSourceRef": "",
 				},
@@ -1272,7 +1331,6 @@ test_rule_i_100_360_011_02_violation_02 if {
 		}]}}]},
 		"investigationFilePath": "i_Investigation.txt",
 	}
-
 	count(result) == 1
 }
 
@@ -1282,15 +1340,30 @@ test_rule_i_100_360_011_02_violation_02 if {
 # description: Principal Investigator details are not in study.
 test_rule_i_100_360_011_02_violation_03 if {
 	result := rules.rule_i_100_360_011_02 with input as {
-		"investigation": {"studies": [{"identifier": "MTBLS1", "studyContacts": {"people": [{
+		"investigation": {"studies": [{"identifier": "MTBLS1", "studyContacts": {
+			"comments": [
+			{
+              "name": "Study Person ORCID",
+              "value": [
+                "0000-0002-7899-7191", "0000-0002-7899-7192"
+              ]
+            },
+            {
+              "name": "Study Person Affiliation ROR ID",
+              "value": [
+                "https://ror.org/01g8f8d13", "https://ror.org/01g8f8d12"
+              ]
+            }			
+			],
+			"people": [{
 			"lastName": "Test",
 			"firstName": "Test",
-			"midInitials": "",
+			"midInitials": "Test2",
 			"email": "",
 			"phone": "",
 			"fax": "",
 			"address": "",
-			"affiliation": "E",
+			"affiliation": "EMBL European Bioinformatics Institute",
 			"roles": [
 				{
 					"term": "Author",
@@ -1298,7 +1371,7 @@ test_rule_i_100_360_011_02_violation_03 if {
 					"termSourceRef": "",
 				},
 				{
-					"term": "Principal Investigator",
+					"term": "Grant Principal Investigator",
 					"termAccessionNumber": "http://",
 					"termSourceRef": "",
 				},
@@ -1306,7 +1379,6 @@ test_rule_i_100_360_011_02_violation_03 if {
 		}]}}]},
 		"investigationFilePath": "i_Investigation.txt",
 	}
-
 	count(result) == 1
 }
 
@@ -1317,15 +1389,30 @@ test_rule_i_100_360_011_02_violation_03 if {
 # description: Principal Investigator details are not in study.
 test_rule_i_100_360_011_02_violation_04 if {
 	result := rules.rule_i_100_360_011_02 with input as {
-		"investigation": {"studies": [{"identifier": "MTBLS1", "studyContacts": {"people": [{
+		"investigation": {"studies": [{"identifier": "MTBLS1", "studyContacts": {
+			"comments": [
+			{
+              "name": "Study Person ORCID",
+              "value": [
+                "0000-0002-7899-7191", "0000-0002-7899-7192"
+              ]
+            },
+            {
+              "name": "Study Person Affiliation ROR ID",
+              "value": [
+                "https://ror.org/01g8f8d13", "https://ror.org/01g8f8d12"
+              ]
+            }			
+			],
+			"people": [{
 			"lastName": "Test",
 			"firstName": "Test",
-			"midInitials": "",
-			"email": "test@abc.com",
+			"midInitials": "Test2",
+			"email": "help@ebi.ac.uk",
 			"phone": "",
 			"fax": "",
 			"address": "",
-			"affiliation": "E",
+			"affiliation": "",
 			"roles": [
 				{
 					"term": "Author",
@@ -1333,63 +1420,7 @@ test_rule_i_100_360_011_02_violation_04 if {
 					"termSourceRef": "",
 				},
 				{
-					"term": "Principal Investigator",
-					"termAccessionNumber": "http://",
-					"termSourceRef": "",
-				},
-			],
-		},
-		{
-			"lastName": "Test",
-			"firstName": "Test",
-			"midInitials": "",
-			"email": "",
-			"phone": "",
-			"fax": "",
-			"address": "",
-			"affiliation": "E",
-			"roles": [
-				{
-					"term": "Author",
-					"termAccessionNumber": "http://",
-					"termSourceRef": "",
-				},
-				{
-					"term": "Principal Investigator",
-					"termAccessionNumber": "http://",
-					"termSourceRef": "",
-				},
-			],
-		}
-		]}}]},
-		"investigationFilePath": "i_Investigation.txt",
-	}
-
-	count(result) == 1
-}
-
-# METADATA
-# title: Principal Investigator role is not in study.
-# description: There is one Principal Investigator role in study.
-test_rule_i_100_360_011_02_success_01 if {
-	result := rules.rule_i_100_360_011_01 with input as {
-		"investigation": {"studies": [{"identifier": "MTBLS1", "studyContacts": {"people": [{
-			"lastName": "test",
-			"firstName": "test",
-			"midInitials": "",
-			"email": "test@ebi.ac.uk",
-			"phone": "",
-			"fax": "",
-			"address": "",
-			"affiliation": "E",
-			"roles": [
-				{
-					"term": "Author",
-					"termAccessionNumber": "http://",
-					"termSourceRef": "",
-				},
-				{
-					"term": "Principal Investigator",
+					"term": "Grant Principal Investigator",
 					"termAccessionNumber": "http://",
 					"termSourceRef": "",
 				},
@@ -1397,7 +1428,215 @@ test_rule_i_100_360_011_02_success_01 if {
 		}]}}]},
 		"investigationFilePath": "i_Investigation.txt",
 	}
+	count(result) == 1
+}
 
+# METADATA
+# title: Principal Investigator role details are not in study..
+# description: Principal Investigator details are not in study.
+test_rule_i_100_360_011_02_violation_05 if {
+	result := rules.rule_i_100_360_011_02 with input as {
+		"investigation": {"studies": [{"identifier": "MTBLS1", "studyContacts": {
+			"comments": [
+			{
+              "name": "Study Person ORCID",
+              "value": [
+                ""
+              ]
+            },
+            {
+              "name": "Study Person Affiliation ROR ID",
+              "value": [
+                "https://ror.org/01g8f8d13"
+              ]
+            }			
+			],
+			"people": [{
+			"lastName": "Test",
+			"firstName": "Test",
+			"midInitials": "Test2",
+			"email": "help@ebi.ac.uk",
+			"phone": "",
+			"fax": "",
+			"address": "",
+			"affiliation": "Cambridge University",
+			"roles": [
+				{
+					"term": "Author",
+					"termAccessionNumber": "http://",
+					"termSourceRef": "",
+				},
+				{
+					"term": "Grant Principal Investigator",
+					"termAccessionNumber": "http://",
+					"termSourceRef": "",
+				},
+			],
+		}]}}]},
+		"investigationFilePath": "i_Investigation.txt",
+	}
+	count(result) == 1
+}
+
+# METADATA
+# title: Principal Investigator role details are not in study..
+# description: Principal Investigator details are not in study.
+test_rule_i_100_360_011_02_violation_06 if {
+	result := rules.rule_i_100_360_011_02 with input as {
+		"investigation": {"studies": [{"identifier": "MTBLS1", "studyContacts": {
+			"comments": [
+			{
+              "name": "Study Person ORCID",
+              "value": [
+                "0000-0002-7899-7191"
+              ]
+            },
+            {
+              "name": "Study Person Affiliation ROR ID",
+              "value": [
+                ""
+              ]
+            }			
+			],
+			"people": [{
+			"lastName": "Test",
+			"firstName": "Test",
+			"midInitials": "Test2",
+			"email": "help@ebi.ac.uk",
+			"phone": "",
+			"fax": "",
+			"address": "",
+			"affiliation": "Cambridge University",
+			"roles": [
+				{
+					"term": "Author",
+					"termAccessionNumber": "http://",
+					"termSourceRef": "",
+				},
+				{
+					"term": "Grant Principal Investigator",
+					"termAccessionNumber": "http://",
+					"termSourceRef": "",
+				},
+			],
+		}]}}]},
+		"investigationFilePath": "i_Investigation.txt",
+	}
+	count(result) == 1
+}
+
+
+# METADATA
+# title: Principal Investigator role details are not in study..
+# description: Principal Investigator details are not in study.
+test_rule_i_100_360_011_02_violation_07 if {
+	result := rules.rule_i_100_360_011_02 with input as {
+		"investigation": {"studies": [{"identifier": "MTBLS1", "studyContacts": {
+			"comments": [
+			{
+              "name": "Study Person ORCID",
+              "value": [
+                "0000-0002-7899-7191", "0000-0002-7899-7192"
+              ]
+            },
+            {
+              "name": "Study Person Affiliation ROR ID",
+              "value": [
+                "https://ror.org/01g8f8d13", "https://ror.org/01g8f8d13"
+              ]
+            }			
+			],
+			"people": [{
+			"lastName": "",
+			"firstName": "",
+			"midInitials": "",
+			"email": "help@ebi.ac.uk",
+			"phone": "",
+			"fax": "",
+			"address": "",
+			"affiliation": "Cambridge University",
+			"roles": [
+				{
+					"term": "Author",
+					"termAccessionNumber": "http://",
+					"termSourceRef": "",
+				},
+				{
+					"term": "Grant Principal Investigator",
+					"termAccessionNumber": "http://",
+					"termSourceRef": "",
+				},
+			],
+		}]}}]},
+		"investigationFilePath": "i_Investigation.txt",
+	}
+	count(result) == 1
+}
+# METADATA
+# title: Principal Investigator role is not in study.
+# description: There is one Principal Investigator role in study.
+test_rule_i_100_360_011_02_success_01 if {
+	result := rules.rule_i_100_360_011_02 with input as {
+		"investigation": {"studies": [{"identifier": "MTBLS1", "studyContacts": {"comments": [
+			{
+              "name": "Study Person ORCID",
+              "value": [
+                "0000-0002-7899-7191", "0000-0002-7899-7192"
+              ]
+            },
+            {
+              "name": "Study Person Affiliation ROR ID",
+              "value": [
+                "https://ror.org/01g8f8d13", "https://ror.org/01g8f8d12"
+              ]
+            }
+		], "people": [
+			{
+			"lastName": "test",
+			"firstName": "test",
+			"midInitials": "",
+			"email": "test@ebi.ac.uk",
+			"phone": "",
+			"fax": "",
+			"address": "",
+			"affiliation": "EBML European Bioinformatics Institute",
+			"roles": [
+				{
+					"term": "Author",
+					"termAccessionNumber": "http://",
+					"termSourceRef": "",
+				},
+				{
+					"term": "Principal Investigator",
+					"termAccessionNumber": "http://",
+					"termSourceRef": "",
+				},
+			],
+			},
+			{
+			"lastName": "test2",
+			"firstName": "test3",
+			"midInitials": "",
+			"email": "test2@ebi.ac.uk",
+			"phone": "",
+			"fax": "",
+			"address": "",
+			"affiliation": "EBML European Bioinformatics Institute",
+			"roles": [
+				{
+					"term": "Author",
+					"termAccessionNumber": "http://",
+					"termSourceRef": "",
+				},
+				{
+					"term": "Grant Principal Investigator",
+					"termAccessionNumber": "http://",
+					"termSourceRef": "",
+				},
+			],
+		}]}}]},
+		"investigationFilePath": "i_Investigation.txt",
+	}
 	count(result) == 0
 }
 
@@ -1406,9 +1645,23 @@ test_rule_i_100_360_011_02_success_01 if {
 # METADATA
 # title: Principal Investigator role is not in study.
 # description: There is two Principal Investigator roles in study.
-test_rule_i_100_360_011_02_success_02 if {
-	result := rules.rule_i_100_360_011_01 with input as {
-		"investigation": {"studies": [{"identifier": "MTBLS1", "studyContacts": {"people": [{
+test_rule_i_100_360_011_02_success_01 if {
+	result := rules.rule_i_100_360_011_02 with input as {
+		"investigation": {"studies": [{"identifier": "MTBLS1", "studyContacts": {"comments": [
+			{
+              "name": "Study Person ORCID",
+              "value": [
+                "0000-0002-7899-7191", "0000-0002-7899-7192"
+              ]
+            },
+            {
+              "name": "Study Person Affiliation ROR ID",
+              "value": [
+                "https://ror.org/01g8f8d13", "https://ror.org/01g8f8d12"
+              ]
+            }
+		], "people": [
+			{
 			"lastName": "test",
 			"firstName": "test",
 			"midInitials": "",
@@ -1416,7 +1669,7 @@ test_rule_i_100_360_011_02_success_02 if {
 			"phone": "",
 			"fax": "",
 			"address": "",
-			"affiliation": "E",
+			"affiliation": "EBML European Bioinformatics Institute",
 			"roles": [
 				{
 					"term": "Author",
@@ -1424,21 +1677,21 @@ test_rule_i_100_360_011_02_success_02 if {
 					"termSourceRef": "",
 				},
 				{
-					"term": "Principal Investigator",
+					"term": "Investigator",
 					"termAccessionNumber": "http://",
 					"termSourceRef": "",
 				},
 			],
-		},
-		{
+			},
+			{
 			"lastName": "test2",
-			"firstName": "test2",
+			"firstName": "test3",
 			"midInitials": "",
 			"email": "test2@ebi.ac.uk",
 			"phone": "",
 			"fax": "",
 			"address": "",
-			"affiliation": "E",
+			"affiliation": "EBML European Bioinformatics Institute",
 			"roles": [
 				{
 					"term": "Author",
@@ -1446,15 +1699,13 @@ test_rule_i_100_360_011_02_success_02 if {
 					"termSourceRef": "",
 				},
 				{
-					"term": "Principal Investigator",
+					"term": "Grant Principal Investigator",
 					"termAccessionNumber": "http://",
 					"termSourceRef": "",
 				},
 			],
-		}
-		]}}]},
+		}]}}]},
 		"investigationFilePath": "i_Investigation.txt",
 	}
-
 	count(result) == 0
 }

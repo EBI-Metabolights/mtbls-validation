@@ -54,7 +54,6 @@ test_rule___100_100_001_02_violation_02 if {
 # description: Input has all fields and no extra fields.
 test_rule___100_100_001_02_no_violation_01 if {
 	result := rules.rule___100_100_001_02 with input as data.tests.data.schemaValidation.valid_01
-	print(result)
 	count(result) == 0
 }
 

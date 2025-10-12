@@ -408,7 +408,7 @@ rule_a_100_100_002_01 contains result if {
 
 # METADATA
 # title: There is no row in assay file.
-# description: No row is defined in assay file. Add more than one row (run). Please ensure all xxx, including controls, QCs, standards, etc, are referenced.
+# description: No row is defined in assay file. Add more than one row (run). Please ensure all samples, including controls, QCs, standards, etc, are referenced.
 # custom:
 #  rule_id: rule_a_100_100_005_01
 #  type: ERROR
@@ -426,7 +426,7 @@ rule_a_100_100_005_01 contains result if {
 
 # METADATA
 # title: There is only one row in assay file.
-# description: Only one row is defined in assay file. Add more than one row (run). Please ensure all xxx, including controls, QCs, standards, etc, are referenced.
+# description: Only one row is defined in assay file. Add more than one row (run). Please ensure all sample, including controls, QCs, standards, etc, are referenced.
 # custom:
 #  rule_id: rule_a_100_100_005_02
 #  type: ERROR

@@ -614,7 +614,7 @@ rule_s_200_200_001_02 contains result if {
 
 # METADATA
 # title: There are empty values in Factor Value column.
-# description: Factor values should be set for each row.
+# description: Factor values should be defined for each row.
 # custom:
 #  rule_id: rule_s_200_200_002_01
 #  type: WARNING

@@ -48,8 +48,8 @@
 | 46 | rule_a_100_100_001_12 | ERROR | Column name defined in MetaboLights template does not exist in assay file. | Add all missing columns defined in MetaboLights assay template. |
 | 47 | rule_a_100_100_001_13 | ERROR | Column header structure is not correct in assay file. | Column header structure is not correct in assay file. Any ontology and unit column should have the leading columns, Term Source REF and Term Accession Number. Single columns must not have leading columns. |
 | 48 | rule_a_100_100_002_01 | ERROR | Assay file not referenced in investigation file. | Assay file must be referenced in i_Investigation.txt. |
-| 49 | rule_a_100_100_005_01 | ERROR | There is no row in assay file. | No row is defined in assay file. Add more than one row (run). Please ensure all xxx, including controls, QCs, standards, etc, are referenced. |
-| 50 | rule_a_100_100_005_02 | ERROR | There is only one row in assay file. | Only one row is defined in assay file. Add more than one row (run). Please ensure all xxx, including controls, QCs, standards, etc, are referenced. |
+| 49 | rule_a_100_100_005_01 | ERROR | There is no row in assay file. | No row is defined in assay file. Add more than one row (run). Please ensure all samples, including controls, QCs, standards, etc, are referenced. |
+| 50 | rule_a_100_100_005_02 | ERROR | There is only one row in assay file. | Only one row is defined in assay file. Add more than one row (run). Please ensure all sample, including controls, QCs, standards, etc, are referenced. |
 | 51 | rule_a_200_090_001_01 | ERROR | Values with trailing or leading spaces in assay file. | Values in assay file should not start or end with space characters. |
 | 52 | rule_a_200_090_002_01 | WARNING | Ontology Term Source REF of ontology terms not in prioritised control list. | Prioritised ontology Term Source REFs should be used for ontology terms in this column if possible. |
 | 53 | rule_a_200_090_002_02 | WARNING | Ontology Term Source REF of ontology terms not in prioritised default control list. | Prioritised default ontology Term Source REFs should be used for ontology terms in this column if possible. |
@@ -89,7 +89,7 @@
 | 87 | rule_f_400_090_001_01 | ERROR | Referenced data files not within study FILES folder. | Referenced data files must exist within study FILES folder. Reference data files with format FILES/(sub folder if exists)/(file name) in assay file. |
 | 88 | rule_f_400_090_001_02 | ERROR | Referenced data files do not start with FILES/ prefix. | Reference data files with format FILES/(sub folder if exists>>/(file name>> in assay file. |
 | 89 | rule_f_400_090_001_03 | ERROR | Referenced data files contain invalid characters. There are invalid characters in a referenced file name. | Use only .- _A-Za-z0-9 characters as a referenced data file name. |
-| 90 | rule_f_400_090_001_04 | ERROR | Referenced data files contain zero byte data. | Check referenced data files and re-upload. |
+| 90 | rule_f_400_090_001_04 | ERROR | Data files contain zero byte data. | Check data files and re-upload. |
 | 91 | rule_f_400_090_001_07 | ERROR | Folders are referenced in assay file. | Folder reference in data file column is not allowed. If data file type is a folder, compress it with zip utility tool and reference compressed data file. |
 | 92 | rule_f_400_090_001_08 | ERROR | A file in NMR raw data folder is referenced in assay file. | Only .zip files are allowed in this column. If data file or its parent is a raw data folder, compress it with zip utility tool and reference only compressed data file (e.g. 0011/fid -> 0001.zip, 0001/acqu -> 0001.zip). |
 | 93 | rule_f_400_090_001_09 | ERROR | Uploaded data file names contain invalid characters. | Use only .-_A-Za-z0-9 characters for data file name. |
@@ -172,7 +172,7 @@
 | 170 | rule_i_100_360_003_01 | ERROR | Study Person Last Name length less than 2 characters. | Study Person Last Name should be defined with length equal or greater than 2 characters. |
 | 171 | rule_i_100_360_004_01 | ERROR | Study contacts have no email address. | At least one study contact must have an email address. |
 | 172 | rule_i_100_360_004_02 | ERROR | Study Person Email not valid. | Study Person Email must be valid format. |
-| 173 | rule_i_100_360_006_01 | WARNING | First Study Person Affiliation not valid. | First Study Person Affiliation should be valid. |
+| 173 | rule_i_100_360_006_01 | ERROR | Study Person affiliation length is less than 10 characters. | Define full name of contact's primary affiliation. e.g. European Bioinformatics Institute |
 | 174 | rule_i_100_360_007_01 | WARNING | Study Person Roles is empty. | At least one role should be defined for a study contact. |
 | 175 | rule_i_100_360_008_01 | WARNING | Study Person Roles length less than 2 characters. | Study Person Roles should be defined with length equal or greater than 2 characters. |
 | 176 | rule_i_100_360_009_01 | WARNING | Study Person Roles Term Accession Number is empty. | Study Person Roles Term Accession Number should be defined. |
@@ -180,71 +180,74 @@
 | 178 | rule_i_100_360_010_02 | WARNING | Study Person Roles Term Source REF not in prioritised control list. | A prioritised control list is defined. Review and select from the prioritised control list if possible. |
 | 179 | rule_i_100_360_010_03 | WARNING | Study Person Roles Term Source REF is empty. | Study Person Roles Term Source REF should be defined. |
 | 180 | rule_i_100_360_011_01 | ERROR | There is no study contact with Principal Investigator role. | At least one study contact must have Principal Investigator role. |
-| 181 | rule_i_100_360_011_02 | ERROR | Principal Investigator contact details not defined. | Principal Investigator first name, last name and email must be defined. |
-| 182 | rule_m_100_100_001_01 | ERROR | Default columns not in metabolite assignment file. | Default columns must exist in metabolite assignment file. |
-| 183 | rule_m_100_100_001_02 | ERROR | Unordered columns in metabolite assignment file. | Unordered columns in metabolite assignment file. |
-| 184 | rule_m_100_100_001_03 | ERROR | Empty columns in metabolite assignment file. | Empty columns must not exist in metabolite assignment file. All column headers should be defined. |
-| 185 | rule_m_100_100_001_04 | ERROR | Default column header name is not unique in the metabolite assignment file. | Default column header name should be unique in the metabolite assignment file. |
-| 186 | rule_m_100_100_002_01 | WARNING | Sample Name columns not in metabolite assignment file. | Sample Name columns must exist in metabolite assignment file. |
-| 187 | rule_m_100_100_002_02 | WARNING | MS Assay Name or NMR Assay Name columns not in metabolite assignment file | If Sample Name columns do not exist, MS Assay Name or NMR Assay Name columns should be defined in metabolite assignment file. |
-| 188 | rule_m_100_100_004_01 | ERROR | Metabolite assignment file not referenced in assay file. | Metabolite assignment file must be referenced in assay file. |
-| 189 | rule_m_100_100_005_01 | ERROR | Metabolite assignment file name not correct pattern. | Metabolite assignment file name must start with 'm_' and have extension '.tsv'. |
-| 190 | rule_m_100_100_006_01 | ERROR | There is no row in metabolite assignment file. | No row is defined in metabolite assignment file. Add more than one row (assignment). Please ensure all xxx, including controls, QCs, standards, etc, are referenced. |
-| 191 | rule_m_100_100_006_02 | ERROR | There is only one row in metabolite assignment file. | Only one row is defined in metabolite assignment file. Add more than one row (assignment). Please ensure all xxx, including controls, QCs, standards, etc, are referenced. |
-| 192 | rule_m_300_090_001_01 | ERROR | Values with trailing or leading spaces in metabolite assignment file. | Values in metabolite assignment file should not start or end with space characters. |
-| 193 | rule_m_300_090_005_01 | ERROR | Values for required columns not in metabolite assignment file. | All required column values should be defined in metabolite assignment file. |
-| 194 | rule_m_300_090_005_02 | ERROR | Values do not meet minimum length requirement. | Each row should have a value equal or greater than the minimum length. |
-| 195 | rule_m_300_090_005_03 | ERROR | Values do not meet maximum length requirement. | Each row should have a value equal or less than the maximum length. |
-| 196 | rule_m_300_100_001_01 | ERROR | mass_to_charge column has empty values in metabolite assignment file. | All 'mass_to_charge' column values should be defined in metabolite assignment file. |
-| 197 | rule_m_300_100_001_02 | ERROR | retention_time column has empty values in metabolite assignment file. | All 'retention_time' column values should be defined in metabolite assignment file for LC-MS / GC-MS. |
-| 198 | rule_m_300_100_001_03 | WARNING | Some retention_time column values are not numeric in metabolite assignment file. | All 'retention_time' column values should be numeric. |
-| 199 | rule_m_300_200_001_01 | WARNING | Values for chemical_shift column not in metabolite assignment file. | All 'chemical_shift' column values should be defined in metabolite assignment file. |
-| 200 | rule_m_300_200_001_02 | WARNING | Values for chemical_shift column not numeric in metabolite assignment file for NMR assays. | All 'chemical_shift' column values should be numeric for NMR assays. |
-| 201 | rule_m_300_200_001_03 | WARNING | Values for multiplicity column not in metabolite assignment file for NMR assays. | All 'multiplicity' column values should be defined in metabolite assignment file for NMR assays. |
-| 202 | rule_s_100_100_001_01 | ERROR | Invalid multi-column structure in sample file. | There is an invalid multi-column structure in sample file. Check column order. |
-| 203 | rule_s_100_100_001_02 | ERROR | Unordered or unlinked column structure in sample file. | There is an unordered or unlinked column in sample file. Check column order. |
-| 204 | rule_s_100_100_001_03 | ERROR | Some default columns are missing in sample file. | All default columns should exist in sample file. |
-| 205 | rule_s_100_100_001_04 | ERROR | Unexpected column in sample file. | Unexpected column in sample file. Only factor and characteristics columns can be defined in sample file. |
-| 206 | rule_s_100_100_001_05 | ERROR | Unexpected 'Protocol REF' column in sample file. | Unexpected 'Protocol REF' column in sample file. Only one 'Protocol REF' header is allowed in sample file. |
-| 207 | rule_s_100_100_001_06 | ERROR | There is no Factor Value column in sample file. | There should be at least one Factor Value column in sample file. |
-| 208 | rule_s_100_100_001_07 | ERROR | Empty columns in sample file. | Empty columns must not exist in sample file. All column headers should be defined. |
-| 209 | rule_s_100_100_001_08 | ERROR | Order of default column header is not correct in sample file. | Order of default column header is not correct in sample file. |
-| 210 | rule_s_100_100_001_09 | ERROR | Order of characteristics column header is not correct in sample file. | Order of characteristics column header is not correct in sample file. All characteristics columns should be defined before Sample collection Protocol REF column. |
-| 211 | rule_s_100_100_001_10 | ERROR | Order of factor column header is not correct in sample file. | Order of factor column header is not correct in sample file. All factor columns should be defined after Sample Name column. |
-| 212 | rule_s_100_100_001_11 | ERROR | Column header structure is not correct in sample file. | Column header structure is not correct in sample file. Any ontology and unit column should have the leading columns, Term Source REF and Term Accession Number. Single columns must not have leading columns. |
-| 213 | rule_s_100_100_001_12 | ERROR | Factor Value column structure is not correct in sample file. | Factor Value column structure should be ontology (with Term Source REF and Term Accession Number) or a value with unit (and Term Source REF and Term Accession Number) in sample file. |
-| 214 | rule_s_100_100_001_13 | ERROR | Additional characteristics column structure is not correct in sample file. | Additional characteristics column structure should be ontology (with Term Source REF and Term Accession Number) or a value with unit (and Term Source REF and Term Accession Number) in sample file. |
-| 215 | rule_s_100_100_001_14 | ERROR | Multiple Characteristics / Factor Value columns with same header are not allowed in sample file. | Characteristics and Factor Value column headers should be unique in sample file. |
-| 216 | rule_s_100_100_001_15 | ERROR | Missing Factor Value columns in sample file. | There should be a Factor Value column in sample file for each study factor. |
-| 217 | rule_s_100_100_001_16 | ERROR | Unexpected Factor Value columns in sample file. | There should be a study factor for each Factor Value column in sample file. |
-| 218 | rule_s_100_100_002_01 | ERROR | There is no row in sample file. | No row is defined in sample file. Add more than one row (sample). Please ensure all xxx, including controls, QCs, standards, etc, are referenced. |
-| 219 | rule_s_100_100_002_02 | ERROR | There is only one row in sample file. | Only one row is defined in sample file. Add more than one row (sample). Please ensure all xxx, including controls, QCs, standards, etc, are referenced. |
-| 220 | rule_s_100_100_003_01 | ERROR | Sample file not referenced in investigation file. | Only one sample file is allowed and its name should be 's_(accession number).txt'. |
-| 221 | rule_s_200_090_001_01 | ERROR | Values with trailing or leading spaces in sample file. | Values in sample file should not start or end with space characters. |
-| 222 | rule_s_200_090_002_01 | WARNING | Ontology Term Source REF of ontology terms not in prioritised control list. | Prioritised ontology Term Source REFs should be used for ontology terms in this column if possible. |
-| 223 | rule_s_200_090_002_02 | WARNING | Ontology Term Source REF of ontology terms not in prioritised default control list. | Prioritised default ontology Term Source REFs should be used for ontology terms in this column if possible. |
-| 224 | rule_s_200_090_002_03 | WARNING | Ontology Term Source REF not referenced in investigation file. | All ontology Term Source REFs should be referenced in ONTOLOGY SOURCE REFERENCE section in i_Investigation.txt. |
-| 225 | rule_s_200_090_002_04 | ERROR | Ontology Term Source REF defined for empty ontology terms. | Select ontology terms and/or change ontology Term Source REF. |
-| 226 | rule_s_200_090_002_05 | WARNING | Ontology Term Source REF for a unit not in prioritised control list. | We highly recommend to use the prioritised ontology Term Source REFs for an unit ontology terms. |
-| 227 | rule_s_200_090_002_06 | WARNING | Ontology Term Source REF defined for empty unit ontology terms. | Select unit ontology terms and/or change ontology Term Source REF. |
-| 228 | rule_s_200_090_002_07 | WARNING | Term Source REF of ontology terms is empty. | Term Source REF of ontology terms should be defined. A prioritised control list is defined. Review and select from the prioritised control list if possible. |
-| 229 | rule_s_200_090_002_08 | WARNING | Term Source REF of unit ontology terms is empty. | Term Source REF of unit ontology terms should be defined. A prioritised control list is defined. Review and select from the prioritised control list if possible. |
-| 230 | rule_s_200_090_003_01 | WARNING | Term Accession Number length of ontology terms less than 3 characters. | Term Accession Number of ontology terms should be defined with length equal or greater than 3 characters. |
-| 231 | rule_s_200_090_003_02 | WARNING | Term Accession Number length of unit ontology terms less than 3 characters. | Term Accession Number of unit ontology terms should be defined with length equal or greater than 3 characters. |
-| 232 | rule_s_200_090_003_03 | WARNING | Term Accession Number defined for empty ontology terms. | Select ontology terms and/or change ontology Term Accession Number. |
-| 233 | rule_s_200_090_003_04 | WARNING | Term Accession Number defined for empty unit ontology terms. | Select unit ontology terms and/or change ontology Term Accession Number. |
-| 234 | rule_s_200_090_004_01 | ERROR | Empty value is found in a required column. | Complete all values in required columns. |
-| 235 | rule_s_200_090_004_02 | ERROR | Values do not meet minimum length requirement. | Each row should have a value equal or greater than the minimum length. |
-| 236 | rule_s_200_090_004_03 | ERROR | Values do not meet maximum length requirement. | Each row should have a value equal or less than the maximum length. |
-| 237 | rule_s_200_090_005_01 | ERROR | Values for Protocol REF column not valid in sample file. | All rows should be filled with the same value (case sensitive). |
-| 238 | rule_s_200_090_006_01 | ERROR | Invalid column value. | Some column values are not allowed. Please use valid ontology term or controlled vocabulary. |
-| 239 | rule_s_200_100_001_03 | WARNING | Organism name should not contain colon (:) characters. | Organism should not contain the actual ontology/taxonomy name, please include just the appropriate taxonomy term. |
-| 240 | rule_s_200_100_002_01 | ERROR | User defined Characteristics column is empty. | At least one value should be defined in Characteristics column. |
-| 241 | rule_s_200_100_002_02 | WARNING | Term Source REF of the user defined characteristics ontology term is not in the priotirised control list. | We highly recommend to use the prioritised ontology Source Refs for the characteristics ontology term. |
-| 242 | rule_s_200_100_002_03 | WARNING | Term Source REF of the user defined characteristics ontology terms is empty | We highly recommend to use the prioritised Ontology Source Refs for the characteristics ontology term. |
-| 243 | rule_s_200_100_002_04 | WARNING | Term Accession Number of the user defined characteristics ontology terms is empty. | We highly recommend to define accession number of the selected term. |
-| 244 | rule_s_200_200_001_01 | ERROR | Sample name values are not unique in sample file. | All sample names should be unique in sample file. |
-| 245 | rule_s_200_200_001_02 | ERROR | Values for Sample Name column not in any assay file. | Each sample name should be referenced at least one time in assay files. |
-| 246 | rule_s_200_200_002_01 | WARNING | There are empty values in Factor Value column. | Factor values should be set for each row. |
-| 247 | rule_s_200_200_002_02 | ERROR | Factor Value column not complete. | At least two values must be defined in Factor Value column. |
-| 248 | rule_s_200_200_003_01 | WARNING | Term Source REFs of the factor ontology term not in the prioritised control list. | We highly recommend to use the prioritised Ontology Source Refs for the factor ontology term. |
+| 181 | rule_i_100_360_011_02 | ERROR | Principal Investigator contact details not defined. | Principal Investigator first name, last name, ORCID, affiliation, affiliation ROR id and email must be defined. |
+| 182 | rule_i_100_360_011_03 | ERROR | Study Person Affiliation ROR ID is not valid. | Study Person ROR ID must have valid format. e.g., https://ror.org/02catss52 . If your affiliation ROR ID is not defined, you may provide wikidata URL of your primary affiliation. e.g., https://www.wikidata.org/wiki/Q1341845 |
+| 183 | rule_i_100_360_011_04 | ERROR | Study Person ORCID is not valid. | Study Person ORCID must have valid format. |
+| 184 | rule_i_100_360_011_05 | ERROR | Study Person Additional Email Address is not valid. | Study Person Additional Email Address must have valid format. |
+| 185 | rule_m_100_100_001_01 | ERROR | Default columns not in metabolite assignment file. | Default columns must exist in metabolite assignment file. |
+| 186 | rule_m_100_100_001_02 | ERROR | Unordered columns in metabolite assignment file. | Unordered columns in metabolite assignment file. |
+| 187 | rule_m_100_100_001_03 | ERROR | Empty columns in metabolite assignment file. | Empty columns must not exist in metabolite assignment file. All column headers should be defined. |
+| 188 | rule_m_100_100_001_04 | ERROR | Default column header name is not unique in the metabolite assignment file. | Default column header name should be unique in the metabolite assignment file. |
+| 189 | rule_m_100_100_002_01 | WARNING | Sample Name columns not in metabolite assignment file. | Sample Name columns must exist in metabolite assignment file. |
+| 190 | rule_m_100_100_002_02 | WARNING | MS Assay Name or NMR Assay Name columns not in metabolite assignment file | If Sample Name columns do not exist, MS Assay Name or NMR Assay Name columns should be defined in metabolite assignment file. |
+| 191 | rule_m_100_100_004_01 | ERROR | Metabolite assignment file not referenced in assay file. | Metabolite assignment file must be referenced in assay file. |
+| 192 | rule_m_100_100_005_01 | ERROR | Metabolite assignment file name not correct pattern. | Metabolite assignment file name must start with 'm_' and have extension '.tsv'. |
+| 193 | rule_m_100_100_006_01 | ERROR | There is no row in metabolite assignment file. | No row is defined in metabolite assignment file. Add more than one row (assignment). Please ensure all xxx, including controls, QCs, standards, etc, are referenced. |
+| 194 | rule_m_100_100_006_02 | ERROR | There is only one row in metabolite assignment file. | Only one row is defined in metabolite assignment file. Add more than one row (assignment). Please ensure all xxx, including controls, QCs, standards, etc, are referenced. |
+| 195 | rule_m_300_090_001_01 | ERROR | Values with trailing or leading spaces in metabolite assignment file. | Values in metabolite assignment file should not start or end with space characters. |
+| 196 | rule_m_300_090_005_01 | ERROR | Values for required columns not in metabolite assignment file. | All required column values should be defined in metabolite assignment file. |
+| 197 | rule_m_300_090_005_02 | ERROR | Values do not meet minimum length requirement. | Each row must have a value equal or greater than the minimum length. |
+| 198 | rule_m_300_090_005_03 | ERROR | Values do not meet maximum length requirement. | Each row must have a value equal or less than the maximum length. |
+| 199 | rule_m_300_100_001_01 | ERROR | mass_to_charge column has empty values in metabolite assignment file. | All 'mass_to_charge' column values must be defined in metabolite assignment file. |
+| 200 | rule_m_300_100_001_02 | ERROR | retention_time column has empty values in metabolite assignment file. | All 'retention_time' column values must be defined in metabolite assignment file for LC-MS / GC-MS. |
+| 201 | rule_m_300_100_001_03 | WARNING | retention_time column values not numeric in metabolite assignment file. | All 'retention_time' column values should be numeric. |
+| 202 | rule_m_300_200_001_01 | WARNING | chemical_shift column has empty values in metabolite assignment file. | All 'chemical_shift' column values should be defined in metabolite assignment file. |
+| 203 | rule_m_300_200_001_02 | WARNING | chemical_shift column values not numeric in metabolite assignment file. | All 'chemical_shift' column values should be numeric in metabolite assignment file. |
+| 204 | rule_m_300_200_001_03 | WARNING | multiplicity column has empty values in metabolite assignment file. | All 'multiplicity' column values should be defined in metabolite assignment file. |
+| 205 | rule_s_100_100_001_01 | ERROR | Invalid multi-column structure in sample file. | There is an invalid multi-column structure in sample file. Check column order. |
+| 206 | rule_s_100_100_001_02 | ERROR | Unordered or unlinked column structure in sample file. | There is an unordered or unlinked column in sample file. Check column order. |
+| 207 | rule_s_100_100_001_03 | ERROR | Some default columns are missing in sample file. | All default columns should exist in sample file. |
+| 208 | rule_s_100_100_001_04 | ERROR | Unexpected column in sample file. | Unexpected column in sample file. Only factor and characteristics columns can be defined in sample file. |
+| 209 | rule_s_100_100_001_05 | ERROR | Unexpected 'Protocol REF' column in sample file. | Unexpected 'Protocol REF' column in sample file. Only one 'Protocol REF' header is allowed in sample file. |
+| 210 | rule_s_100_100_001_06 | ERROR | There is no Factor Value column in sample file. | There should be at least one Factor Value column in sample file. |
+| 211 | rule_s_100_100_001_07 | ERROR | Empty columns in sample file. | Empty columns must not exist in sample file. All column headers should be defined. |
+| 212 | rule_s_100_100_001_08 | ERROR | Order of default column header is not correct in sample file. | Order of default column header is not correct in sample file. |
+| 213 | rule_s_100_100_001_09 | ERROR | Order of characteristics column header is not correct in sample file. | Order of characteristics column header is not correct in sample file. All characteristics columns should be defined before Sample collection Protocol REF column. |
+| 214 | rule_s_100_100_001_10 | ERROR | Order of factor column header is not correct in sample file. | Order of factor column header is not correct in sample file. All factor columns should be defined after Sample Name column. |
+| 215 | rule_s_100_100_001_11 | ERROR | Column header structure is not correct in sample file. | Column header structure is not correct in sample file. Any ontology and unit column should have the leading columns, Term Source REF and Term Accession Number. Single columns must not have leading columns. |
+| 216 | rule_s_100_100_001_12 | ERROR | Factor Value column structure is not correct in sample file. | Factor Value column structure should be ontology (with Term Source REF and Term Accession Number) or a value with unit (and Term Source REF and Term Accession Number) in sample file. |
+| 217 | rule_s_100_100_001_13 | ERROR | Additional characteristics column structure is not correct in sample file. | Additional characteristics column structure should be ontology (with Term Source REF and Term Accession Number) or a value with unit (and Term Source REF and Term Accession Number) in sample file. |
+| 218 | rule_s_100_100_001_14 | ERROR | Multiple Characteristics / Factor Value columns with same header are not allowed in sample file. | Characteristics and Factor Value column headers should be unique in sample file. |
+| 219 | rule_s_100_100_001_15 | ERROR | Missing Factor Value columns in sample file. | There should be a Factor Value column in sample file for each study factor. |
+| 220 | rule_s_100_100_001_16 | ERROR | Unexpected Factor Value columns in sample file. | There should be a study factor for each Factor Value column in sample file. |
+| 221 | rule_s_100_100_002_01 | ERROR | There is no row in sample file. | No row is defined in sample file. Add more than one row (sample). Please ensure all xxx, including controls, QCs, standards, etc, are referenced. |
+| 222 | rule_s_100_100_002_02 | ERROR | There is only one row in sample file. | Only one row is defined in sample file. Add more than one row (sample). Please ensure all xxx, including controls, QCs, standards, etc, are referenced. |
+| 223 | rule_s_100_100_003_01 | ERROR | Sample file not referenced in investigation file. | Only one sample file is allowed and its name should be 's_(accession number).txt'. |
+| 224 | rule_s_200_090_001_01 | ERROR | Values with trailing or leading spaces in sample file. | Values in sample file should not start or end with space characters. |
+| 225 | rule_s_200_090_002_01 | WARNING | Ontology Term Source REF of ontology terms not in prioritised control list. | Prioritised ontology Term Source REFs should be used for ontology terms in this column if possible. |
+| 226 | rule_s_200_090_002_02 | WARNING | Ontology Term Source REF of ontology terms not in prioritised default control list. | Prioritised default ontology Term Source REFs should be used for ontology terms in this column if possible. |
+| 227 | rule_s_200_090_002_03 | WARNING | Ontology Term Source REF not referenced in investigation file. | All ontology Term Source REFs should be referenced in ONTOLOGY SOURCE REFERENCE section in i_Investigation.txt. |
+| 228 | rule_s_200_090_002_04 | ERROR | Ontology Term Source REF defined for empty ontology terms. | Select ontology terms and/or change ontology Term Source REF. |
+| 229 | rule_s_200_090_002_05 | WARNING | Ontology Term Source REF for a unit not in prioritised control list. | We highly recommend to use the prioritised ontology Term Source REFs for an unit ontology terms. |
+| 230 | rule_s_200_090_002_06 | WARNING | Ontology Term Source REF defined for empty unit ontology terms. | Select unit ontology terms and/or change ontology Term Source REF. |
+| 231 | rule_s_200_090_002_07 | WARNING | Term Source REF of ontology terms is empty. | Term Source REF of ontology terms should be defined. A prioritised control list is defined. Review and select from the prioritised control list if possible. |
+| 232 | rule_s_200_090_002_08 | WARNING | Term Source REF of unit ontology terms is empty. | Term Source REF of unit ontology terms should be defined. A prioritised control list is defined. Review and select from the prioritised control list if possible. |
+| 233 | rule_s_200_090_003_01 | WARNING | Term Accession Number length of ontology terms less than 3 characters. | Term Accession Number of ontology terms should be defined with length equal or greater than 3 characters. |
+| 234 | rule_s_200_090_003_02 | WARNING | Term Accession Number length of unit ontology terms less than 3 characters. | Term Accession Number of unit ontology terms should be defined with length equal or greater than 3 characters. |
+| 235 | rule_s_200_090_003_03 | WARNING | Term Accession Number defined for empty ontology terms. | Select ontology terms and/or change ontology Term Accession Number. |
+| 236 | rule_s_200_090_003_04 | WARNING | Term Accession Number defined for empty unit ontology terms. | Select unit ontology terms and/or change ontology Term Accession Number. |
+| 237 | rule_s_200_090_004_01 | ERROR | Empty value is found in a required column. | Complete all values in required columns. |
+| 238 | rule_s_200_090_004_02 | ERROR | Values do not meet minimum length requirement. | Each row should have a value equal or greater than the minimum length. |
+| 239 | rule_s_200_090_004_03 | ERROR | Values do not meet maximum length requirement. | Each row should have a value equal or less than the maximum length. |
+| 240 | rule_s_200_090_005_01 | ERROR | Values for Protocol REF column not valid in sample file. | All rows should be filled with the same value (case sensitive). |
+| 241 | rule_s_200_090_006_01 | ERROR | Invalid column value. | Some column values are not allowed. Please use valid ontology term or controlled vocabulary. |
+| 242 | rule_s_200_100_001_03 | WARNING | Organism name should not contain colon (:) characters. | Organism should not contain the actual ontology/taxonomy name, please include just the appropriate taxonomy term. |
+| 243 | rule_s_200_100_002_01 | ERROR | User defined Characteristics column is empty. | At least one value should be defined in Characteristics column. |
+| 244 | rule_s_200_100_002_02 | WARNING | Term Source REF of the user defined characteristics ontology term is not in the priotirised control list. | We highly recommend to use the prioritised ontology Source Refs for the characteristics ontology term. |
+| 245 | rule_s_200_100_002_03 | WARNING | Term Source REF of the user defined characteristics ontology terms is empty | We highly recommend to use the prioritised Ontology Source Refs for the characteristics ontology term. |
+| 246 | rule_s_200_100_002_04 | WARNING | Term Accession Number of the user defined characteristics ontology terms is empty. | We highly recommend to define accession number of the selected term. |
+| 247 | rule_s_200_200_001_01 | ERROR | Sample name values are not unique in sample file. | All sample names should be unique in sample file. |
+| 248 | rule_s_200_200_001_02 | ERROR | Values for Sample Name column not in any assay file. | Each sample name should be referenced at least one time in assay files. |
+| 249 | rule_s_200_200_002_01 | WARNING | There are empty values in Factor Value column. | Factor values should be defined for each row. |
+| 250 | rule_s_200_200_002_02 | ERROR | Factor Value column not complete. | At least two values must be defined in Factor Value column. |
+| 251 | rule_s_200_200_003_01 | WARNING | Term Source REFs of the factor ontology term not in the prioritised control list. | We highly recommend to use the prioritised Ontology Source Refs for the factor ontology term. |

@@ -2,7 +2,7 @@
     "debug": 0,
     "violatedValueListMaxLength": 10,
     "investigationFileName": "i_Investigation.txt",
-    "defaultStudyTemplateVersion": "2.0",
+    "defaultStudyTemplateVersion": "1.0",
     "defaultSampleTemplate": "minimum",
     "defaultStudyCategory": "other",
     "studyCategories": {

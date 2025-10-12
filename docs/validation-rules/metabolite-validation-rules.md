@@ -22,11 +22,11 @@
 | 18 | rule_m_100_100_006_02 | ERROR | There is only one row in metabolite assignment file. | Only one row is defined in metabolite assignment file. Add more than one row (assignment). Please ensure all xxx, including controls, QCs, standards, etc, are referenced. |
 | 19 | rule_m_300_090_001_01 | ERROR | Values with trailing or leading spaces in metabolite assignment file. | Values in metabolite assignment file should not start or end with space characters. |
 | 20 | rule_m_300_090_005_01 | ERROR | Values for required columns not in metabolite assignment file. | All required column values should be defined in metabolite assignment file. |
-| 21 | rule_m_300_090_005_02 | ERROR | Values do not meet minimum length requirement. | Each row should have a value equal or greater than the minimum length. |
-| 22 | rule_m_300_090_005_03 | ERROR | Values do not meet maximum length requirement. | Each row should have a value equal or less than the maximum length. |
-| 23 | rule_m_300_100_001_01 | ERROR | mass_to_charge column has empty values in metabolite assignment file. | All 'mass_to_charge' column values should be defined in metabolite assignment file. |
-| 24 | rule_m_300_100_001_02 | ERROR | retention_time column has empty values in metabolite assignment file. | All 'retention_time' column values should be defined in metabolite assignment file for LC-MS / GC-MS. |
-| 25 | rule_m_300_100_001_03 | WARNING | Some retention_time column values are not numeric in metabolite assignment file. | All 'retention_time' column values should be numeric. |
-| 26 | rule_m_300_200_001_01 | WARNING | Values for chemical_shift column not in metabolite assignment file. | All 'chemical_shift' column values should be defined in metabolite assignment file. |
-| 27 | rule_m_300_200_001_02 | WARNING | Values for chemical_shift column not numeric in metabolite assignment file for NMR assays. | All 'chemical_shift' column values should be numeric for NMR assays. |
-| 28 | rule_m_300_200_001_03 | WARNING | Values for multiplicity column not in metabolite assignment file for NMR assays. | All 'multiplicity' column values should be defined in metabolite assignment file for NMR assays. |
+| 21 | rule_m_300_090_005_02 | ERROR | Values do not meet minimum length requirement. | Each row must have a value equal or greater than the minimum length. |
+| 22 | rule_m_300_090_005_03 | ERROR | Values do not meet maximum length requirement. | Each row must have a value equal or less than the maximum length. |
+| 23 | rule_m_300_100_001_01 | ERROR | mass_to_charge column has empty values in metabolite assignment file. | All 'mass_to_charge' column values must be defined in metabolite assignment file. |
+| 24 | rule_m_300_100_001_02 | ERROR | retention_time column has empty values in metabolite assignment file. | All 'retention_time' column values must be defined in metabolite assignment file for LC-MS / GC-MS. |
+| 25 | rule_m_300_100_001_03 | WARNING | retention_time column values not numeric in metabolite assignment file. | All 'retention_time' column values should be numeric. |
+| 26 | rule_m_300_200_001_01 | WARNING | chemical_shift column has empty values in metabolite assignment file. | All 'chemical_shift' column values should be defined in metabolite assignment file. |
+| 27 | rule_m_300_200_001_02 | WARNING | chemical_shift column values not numeric in metabolite assignment file. | All 'chemical_shift' column values should be numeric in metabolite assignment file. |
+| 28 | rule_m_300_200_001_03 | WARNING | multiplicity column has empty values in metabolite assignment file. | All 'multiplicity' column values should be defined in metabolite assignment file. |

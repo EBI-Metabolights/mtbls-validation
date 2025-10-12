@@ -68,7 +68,7 @@ rule_m_300_090_005_01 contains result if {
 
 # METADATA
 # title: Values do not meet minimum length requirement.
-# description: Each row should have a value equal or greater than the minimum length.
+# description: Each row must have a value equal or greater than the minimum length.
 # custom:
 #  rule_id: rule_m_300_090_005_02
 #  type: ERROR
@@ -94,7 +94,7 @@ rule_m_300_090_005_02 contains result if {
 
 # METADATA
 # title: Values do not meet maximum length requirement.
-# description: Each row should have a value equal or less than the maximum length.
+# description: Each row must have a value equal or less than the maximum length.
 # custom:
 #  rule_id: rule_m_300_090_005_03
 #  type: ERROR
@@ -120,7 +120,7 @@ rule_m_300_090_005_03 contains result if {
 
 # METADATA
 # title: mass_to_charge column has empty values in metabolite assignment file.
-# description: All 'mass_to_charge' column values should be defined in metabolite assignment file.
+# description: All 'mass_to_charge' column values must be defined in metabolite assignment file.
 # custom:
 #  rule_id: rule_m_300_100_001_01
 #  type: ERROR
@@ -145,7 +145,7 @@ rule_m_300_100_001_01 contains result if {
 
 # METADATA
 # title: retention_time column has empty values in metabolite assignment file.
-# description: All 'retention_time' column values should be defined in metabolite assignment file for LC-MS / GC-MS.
+# description: All 'retention_time' column values must be defined in metabolite assignment file for LC-MS / GC-MS.
 # custom:
 #  rule_id: rule_m_300_100_001_02
 #  type: ERROR
@@ -175,12 +175,12 @@ rule_m_300_100_001_02 contains result if {
 }
 
 # METADATA
-# title: Some retention_time column values are not numeric in metabolite assignment file.
+# title: retention_time column values not numeric in metabolite assignment file.
 # description: All 'retention_time' column values should be numeric.
 # custom:
 #  rule_id: rule_m_300_100_001_03
 #  type: WARNING
-#  priority: CRITICAL
+#  priority: HIGH
 #  section: metabolites.lcms
 rule_m_300_100_001_03 contains result if {
 	pattern := `^[0-9]*(\.[0-9]+)?(\|[0-9]*(\.[0-9]+)?)*$`
@@ -201,7 +201,7 @@ rule_m_300_100_001_03 contains result if {
 }
 
 # METADATA
-# title: Values for chemical_shift column not in metabolite assignment file.
+# title: chemical_shift column has empty values in metabolite assignment file.
 # description: All 'chemical_shift' column values should be defined in metabolite assignment file.
 # custom:
 #  rule_id: rule_m_300_200_001_01
@@ -225,12 +225,12 @@ rule_m_300_200_001_01 contains result if {
 }
 
 # METADATA
-# title: Values for chemical_shift column not numeric in metabolite assignment file for NMR assays.
-# description: All 'chemical_shift' column values should be numeric for NMR assays.
+# title: chemical_shift column values not numeric in metabolite assignment file.
+# description: All 'chemical_shift' column values should be numeric in metabolite assignment file.
 # custom:
 #  rule_id: rule_m_300_200_001_02
 #  type: WARNING
-#  priority: CRITICAL
+#  priority: HIGH
 #  section: metabolites.nmr
 rule_m_300_200_001_02 contains result if {
 	pattern := `^[0-9]*(\.[0-9]+)?(\|[0-9]*(\.[0-9]+)?)*$`
@@ -251,8 +251,8 @@ rule_m_300_200_001_02 contains result if {
 }
 
 # METADATA
-# title: Values for multiplicity column not in metabolite assignment file for NMR assays.
-# description: All 'multiplicity' column values should be defined in metabolite assignment file for NMR assays.
+# title: multiplicity column has empty values in metabolite assignment file.
+# description: All 'multiplicity' column values should be defined in metabolite assignment file.
 # custom:
 #  rule_id: rule_m_300_200_001_03
 #  type: WARNING
