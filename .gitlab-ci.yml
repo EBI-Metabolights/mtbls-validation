@@ -11,7 +11,9 @@ stages:
 - build
 
 01_build_bundle:
-  image: $CI_REGISTRY_IMAGE/debian:trixie
+  image:
+    name: ${CONTAINER_REGISTRY_PREFIX}debian:trixie
+    pull_policy: if-not-present
   tags:
   - mtbls
   - docker
