@@ -276,7 +276,7 @@ test_rule_i_100_320_003_01_violation_01 if {
 		"investigation": {"studies": [{"identifier": "MTBLS1", "studyPublications": {"publications": [
 			{
 				"pubMedId": "",
-				"doi": "10.109/nar/gkad1045",
+				"doi": "doi:10.1nargkad1045",
 				"authorList": "Ehsan Irajizad, Ana Kenney",
 				"title": "Contribution of the microbiome to a metabolomic signature predictive of risk for pancreatic cancer",
 				"status": {
@@ -298,7 +298,7 @@ test_rule_i_100_320_003_01_violation_01 if {
 			},
 			{
 				"pubMedId": "",
-				"doi": "10.x1093/nar/gkad1045",
+				"doi": "10.x1093kad1045",
 				"authorList": "Ehsan Irajizad, Ana Kenney",
 				"title": "Contribution of the microbiome to a metabolomic signature predictive of risk for pancreatic cancer",
 				"status": {
@@ -370,7 +370,7 @@ test_rule_i_100_320_003_02_violation_01 if {
 		"investigation": {"studies": [{"identifier": "MTBLS1", "studyPublications": {"publications": [
 			{
 				"pubMedId": "",
-				"doi": "10.109/nar/gkad1045",
+				"doi": "10x.109/nar/gkad1045",
 				"authorList": "Ehsan Irajizad, Ana Kenney",
 				"title": "Contribution of the microbiome to a metabolomic signature predictive of risk for pancreatic cancer",
 				"status": {
@@ -392,7 +392,7 @@ test_rule_i_100_320_003_02_violation_01 if {
 			},
 			{
 				"pubMedId": "",
-				"doi": "10.x1093/nar/gkad1045",
+				"doi": "10.x1093nargkad1045",
 				"authorList": "Ehsan Irajizad, Ana Kenney",
 				"title": "Contribution of the microbiome to a metabolomic signature predictive of risk for pancreatic cancer",
 				"status": {

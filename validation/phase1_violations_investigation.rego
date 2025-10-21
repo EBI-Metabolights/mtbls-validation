@@ -604,7 +604,7 @@ rule_i_100_320_002_01 contains result if {
 rule_i_100_320_003_01 contains result if {
 	some i, j
 	studies = input.investigation.studies
-	pattern = "^10.\\.+/.+$"
+	pattern = "^10[.].+/.+$"
 	publication := studies[i].studyPublications.publications[j]
 	publication.status.term == "Published"
 
@@ -629,7 +629,7 @@ rule_i_100_320_003_01 contains result if {
 rule_i_100_320_003_02 contains result if {
 	some i, j
 	studies = input.investigation.studies
-	pattern = "^10.\\.+/.+$"
+	pattern = "^10[.].+/.+$"
 	publication := studies[i].studyPublications.publications[j]
 	publication.status.term != "Published"
 	count(publication.doi) > 0
@@ -650,7 +650,7 @@ rule_i_100_320_003_02 contains result if {
 rule_i_100_320_004_01 contains result if {
 	some i, j
 	studies = input.investigation.studies
-	pattern = "^\\d\\d{,20}$"
+	pattern = "^[1-9]([0-9]{1,8})?$"
 	publication := studies[i].studyPublications.publications[j]
 	publication.status.term == "Published"
 	count(publication.pubMedId) > 0
@@ -672,7 +672,7 @@ rule_i_100_320_004_01 contains result if {
 rule_i_100_320_004_02 contains result if {
 	some i, j
 	studies = input.investigation.studies
-	pattern = "^\\d\\d{,20}$"
+	pattern = "^[1-9]([0-9]{1,8})?$"
 	publication := studies[i].studyPublications.publications[j]
 	publication.status.term != "Published"
 	count(publication.pubMedId) > 0
