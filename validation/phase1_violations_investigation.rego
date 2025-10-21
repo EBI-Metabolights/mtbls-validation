@@ -604,7 +604,7 @@ rule_i_100_320_002_01 contains result if {
 rule_i_100_320_003_01 contains result if {
 	some i, j
 	studies = input.investigation.studies
-	pattern = "^10.\\d{4,9}/[-._;()/:a-zA-Z0-9]+$"
+	pattern = "^10.\\.+/.+$"
 	publication := studies[i].studyPublications.publications[j]
 	publication.status.term == "Published"
 
@@ -629,7 +629,7 @@ rule_i_100_320_003_01 contains result if {
 rule_i_100_320_003_02 contains result if {
 	some i, j
 	studies = input.investigation.studies
-	pattern = "^10.\\d{4,9}/[-._;()/:a-zA-Z0-9]+$"
+	pattern = "^10.\\.+/.+$"
 	publication := studies[i].studyPublications.publications[j]
 	publication.status.term != "Published"
 	count(publication.doi) > 0
@@ -650,7 +650,7 @@ rule_i_100_320_003_02 contains result if {
 rule_i_100_320_004_01 contains result if {
 	some i, j
 	studies = input.investigation.studies
-	pattern = "^\\d{1,20}$"
+	pattern = "^\\d\\d{,20}$"
 	publication := studies[i].studyPublications.publications[j]
 	publication.status.term == "Published"
 	count(publication.pubMedId) > 0
@@ -672,7 +672,7 @@ rule_i_100_320_004_01 contains result if {
 rule_i_100_320_004_02 contains result if {
 	some i, j
 	studies = input.investigation.studies
-	pattern = "^\\d{1,20}$"
+	pattern = "^\\d\\d{,20}$"
 	publication := studies[i].studyPublications.publications[j]
 	publication.status.term != "Published"
 	count(publication.pubMedId) > 0
@@ -683,15 +683,15 @@ rule_i_100_320_004_02 contains result if {
 }
 
 # METADATA
-# title: Study Publication Title length less than 25 characters.
-# description: Study Publication Title must be defined with length equal or greater than 25 characters.
+# title: Study Publication Title length less than 20 characters.
+# description: Study Publication Title must be defined with length equal or greater than 20 characters.
 # custom:
 #  rule_id: rule_i_100_320_005_01
 #  type: ERROR
 #  priority: HIGH
 #  section: investigation.studyPublications
 rule_i_100_320_005_01 contains result if {
-	min_count = 25
+	min_count = 20
 	count(input.investigation.studies[i].studyPublications.publications[j].title) < min_count
 	msg := sprintf("Study %v publication title should be at least %v characters long. Please use the abstract of the publication. Current value '%v'", [input.investigation.studies[i].identifier, min_count, input.investigation.studies[i].studyPublications.publications[j].title])
 	source := input.investigationFilePath
