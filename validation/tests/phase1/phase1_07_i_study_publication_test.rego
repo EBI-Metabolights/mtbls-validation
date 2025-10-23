@@ -74,163 +74,6 @@ test_rule_i_100_320_001_01_violation_01 if {
 }
 
 #########################################################################################################
-# rule_i_100_320_002_01
-#########################################################################################################
-
-# METADATA
-# title: Study publication is not Published
-# description: Study publication status is preprint.
-test_rule_i_100_320_002_01_no_violation_01 if {
-	result := rules.rule_i_100_320_002_01 with input as {
-		"investigation": {"studies": [{"identifier": "MTBLS1", "studyPublications": {"publications": [{
-			"pubMedId": "",
-			"doi": "",
-			"authorList": "Ehsan Irajizad, Ana Kenney",
-			"title": "Contribution of the microbiome to a metabolomic signature predictive of risk for pancreatic cancer",
-			"status": {
-				"term": "Preprint",
-				"termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000004",
-				"termSourceRef": "MTBLS",
-			},
-		}]}}]},
-		"investigationFilePath": "i_Investigation.txt",
-	}
-	count(result) == 0
-}
-
-# METADATA
-# title: Study publication is not Published
-# description: Study publication status is preprint and DOI and pubMedId exist.
-test_rule_i_100_320_002_01_no_violation_02 if {
-	result := rules.rule_i_100_320_002_01 with input as {
-		"investigation": {"studies": [{"identifier": "MTBLS1", "studyPublications": {"publications": [{
-			"pubMedId": "123443",
-			"doi": "10.xxxx",
-			"authorList": "Ehsan Irajizad, Ana Kenney",
-			"title": "Contribution of the microbiome to a metabolomic signature predictive of risk for pancreatic cancer",
-			"status": {
-				"term": "Preprint",
-				"termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000004",
-				"termSourceRef": "MTBLS",
-			},
-		}]}}]},
-		"investigationFilePath": "i_Investigation.txt",
-	}
-	count(result) == 0
-}
-
-# METADATA
-# title: Study publication is Published
-# description: Study publication status is publieshed and DOI and PubMedId are defined.
-test_rule_i_100_320_002_01_no_violation_03 if {
-	result := rules.rule_i_100_320_002_01 with input as {
-		"investigation": {"studies": [{"identifier": "MTBLS1", "studyPublications": {"publications": [
-			{
-				"pubMedId": "",
-				"doi": "10.12344/xya/asdsdd",
-				"authorList": "Ehsan Irajizad, Ana Kenney",
-				"title": "Contribution of the microbiome to a metabolomic signature predictive of risk for pancreatic cancer",
-				"status": {
-					"term": "Published",
-					"termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000004",
-					"termSourceRef": "MTBLS",
-				},
-			},
-			{
-				"pubMedId": "123443",
-				"doi": "",
-				"authorList": "Ehsan Irajizad, Ana Kenney",
-				"title": "Contribution of the microbiome to a metabolomic signature predictive of risk for pancreatic cancer",
-				"status": {
-					"term": "Published",
-					"termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000004",
-					"termSourceRef": "MTBLS",
-				},
-			},
-		]}}]},
-		"investigationFilePath": "i_Investigation.txt",
-	}
-	count(result) == 0
-}
-
-# METADATA
-# title: Study publication is published
-# description: Study publication is published and there is no DOI or PubMedId
-test_rule_i_100_320_002_01_violation_01 if {
-	result := rules.rule_i_100_320_002_01 with input as {
-		"investigation": {"studies": [{"identifier": "MTBLS1", "studyPublications": {"publications": [{
-			"pubMedId": "",
-			"doi": "",
-			"authorList": "Ehsan Irajizad, Ana Kenney",
-			"title": "Contribution of the microbiome to a metabolomic signature predictive of risk for pancreatic cancer",
-			"status": {
-				"term": "Published",
-				"termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000004",
-				"termSourceRef": "MTBLS",
-			},
-		}]}}]},
-		"investigationFilePath": "i_Investigation.txt",
-	}
-	count(result) == 1
-}
-
-# METADATA
-# title: Study publication is published
-# description: 3 published and 1 preprint study. One has DOI, one has PubmedID and One has no pubMedId no DOI
-test_rule_i_100_320_002_01_violation_02 if {
-	result := rules.rule_i_100_320_002_01 with input as {
-		"investigation": {"studies": [{"identifier": "MTBLS1", "studyPublications": {"publications": [
-			{
-				"pubMedId": "",
-				"doi": "",
-				"authorList": "Ehsan Irajizad, Ana Kenney",
-				"title": "Contribution of the microbiome to a metabolomic signature predictive of risk for pancreatic cancer",
-				"status": {
-					"term": "Preprint",
-					"termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000004",
-					"termSourceRef": "MTBLS",
-				},
-			},
-			{
-				"pubMedId": "",
-				"doi": "",
-				"authorList": "Ehsan Irajizad, Ana Kenney",
-				"title": "Contribution of the microbiome to a metabolomic signature predictive of risk for pancreatic cancer",
-				"status": {
-					"term": "Published",
-					"termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000004",
-					"termSourceRef": "MTBLS",
-				},
-			},
-			{
-				"pubMedId": "",
-				"doi": "10.xyz",
-				"authorList": "Ehsan Irajizad, Ana Kenney",
-				"title": "Contribution of the microbiome to a metabolomic signature predictive of risk for pancreatic cancer",
-				"status": {
-					"term": "Published",
-					"termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000004",
-					"termSourceRef": "MTBLS",
-				},
-			},
-			{
-				"pubMedId": "93032",
-				"doi": "",
-				"authorList": "Ehsan Irajizad, Ana Kenney",
-				"title": "Contribution of the microbiome to a metabolomic signature predictive of risk for pancreatic cancer",
-				"status": {
-					"term": "Published",
-					"termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000004",
-					"termSourceRef": "MTBLS",
-				},
-			},
-		]}}]},
-		"investigationFilePath": "i_Investigation.txt",
-	}
-	count(result) == 1
-}
-
-#########################################################################################################
 # rule_i_100_320_003_01
 #########################################################################################################
 
@@ -242,7 +85,7 @@ test_rule_i_100_320_003_01_no_violation_01 if {
 		"investigation": {"studies": [{"identifier": "MTBLS1", "studyPublications": {"publications": [
 			{
 				"pubMedId": "",
-				"doi": "10.1234/sam.-;/stest:data",
+				"doi": "10.1234/sam/stest:data",
 				"authorList": "Ehsan Irajizad, Ana Kenney",
 				"title": "Contribution of the microbiome to a metabolomic signature predictive of risk for pancreatic cancer",
 				"status": {
@@ -276,7 +119,18 @@ test_rule_i_100_320_003_01_violation_01 if {
 		"investigation": {"studies": [{"identifier": "MTBLS1", "studyPublications": {"publications": [
 			{
 				"pubMedId": "",
-				"doi": "doi:10.1nargkad1045",
+				"doi": "",
+				"authorList": "Ehsan Irajizad, Ana Kenney",
+				"title": "Contribution of the microbiome to a metabolomic signature predictive of risk for pancreatic cancer",
+				"status": {
+					"term": "Published",
+					"termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000004",
+					"termSourceRef": "MTBLS",
+				},
+			},
+			{
+				"pubMedId": "1234",
+				"doi": "",
 				"authorList": "Ehsan Irajizad, Ana Kenney",
 				"title": "Contribution of the microbiome to a metabolomic signature predictive of risk for pancreatic cancer",
 				"status": {
@@ -287,18 +141,7 @@ test_rule_i_100_320_003_01_violation_01 if {
 			},
 			{
 				"pubMedId": "",
-				"doi": "https://doi.org/10.1093/nar/gkad1045",
-				"authorList": "Ehsan Irajizad, Ana Kenney",
-				"title": "Contribution of the microbiome to a metabolomic signature predictive of risk for pancreatic cancer",
-				"status": {
-					"term": "Published",
-					"termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000004",
-					"termSourceRef": "MTBLS",
-				},
-			},
-			{
-				"pubMedId": "",
-				"doi": "10.x1093kad1045",
+				"doi": "",
 				"authorList": "Ehsan Irajizad, Ana Kenney",
 				"title": "Contribution of the microbiome to a metabolomic signature predictive of risk for pancreatic cancer",
 				"status": {
@@ -321,7 +164,7 @@ test_rule_i_100_320_003_01_violation_01 if {
 		]}}]},
 		"investigationFilePath": "i_Investigation.txt",
 	}
-	count(result) == 4
+	count(result) == 3
 }
 
 #########################################################################################################
@@ -370,7 +213,7 @@ test_rule_i_100_320_003_02_violation_01 if {
 		"investigation": {"studies": [{"identifier": "MTBLS1", "studyPublications": {"publications": [
 			{
 				"pubMedId": "",
-				"doi": "10x.109/nar/gkad1045",
+				"doi": "10.109/nar/gkad1045",
 				"authorList": "Ehsan Irajizad, Ana Kenney",
 				"title": "Contribution of the microbiome to a metabolomic signature predictive of risk for pancreatic cancer",
 				"status": {
@@ -419,100 +262,6 @@ test_rule_i_100_320_003_02_violation_01 if {
 }
 
 #########################################################################################################
-# rule_i_100_320_004_01
-#########################################################################################################
-
-# METADATA
-# title: Study publication is Published and valid PubMedId
-# description: Study publication status is publieshed and PubMedId is valid.
-test_rule_i_100_320_004_01_no_violation_01 if {
-	result := rules.rule_i_100_320_004_01 with input as {
-		"investigation": {"studies": [{"identifier": "MTBLS1", "studyPublications": {"publications": [
-			{
-				"pubMedId": "",
-				"doi": "10.1234/sam.-;/stest:data",
-				"authorList": "Ehsan Irajizad, Ana Kenney",
-				"title": "Contribution of the microbiome to a metabolomic signature predictive of risk for pancreatic cancer",
-				"status": {
-					"term": "Published",
-					"termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000004",
-					"termSourceRef": "MTBLS",
-				},
-			},
-			{
-				"pubMedId": "",
-				"doi": "10.1093/nar/gkad1045",
-				"authorList": "Ehsan Irajizad, Ana Kenney",
-				"title": "Contribution of the microbiome to a metabolomic signature predictive of risk for pancreatic cancer",
-				"status": {
-					"term": "Published",
-					"termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000004",
-					"termSourceRef": "MTBLS",
-				},
-			},
-		]}}]},
-		"investigationFilePath": "i_Investigation.txt",
-	}
-	count(result) == 0
-}
-
-# METADATA
-# title: Study publication is Published and has invalid PubMedId
-# description: Study publication status is publieshed and PubMedId is invalid.
-test_rule_i_100_320_004_01_violation_01 if {
-	result := rules.rule_i_100_320_004_01 with input as {
-		"investigation": {"studies": [{"identifier": "MTBLS1", "studyPublications": {"publications": [
-			{
-				"pubMedId": "x",
-				"doi": "10.109/nar/gkad1045",
-				"authorList": "Ehsan Irajizad, Ana Kenney",
-				"title": "Contribution of the microbiome to a metabolomic signature predictive of risk for pancreatic cancer",
-				"status": {
-					"term": "Published",
-					"termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000004",
-					"termSourceRef": "MTBLS",
-				},
-			},
-			{
-				"pubMedId": "122345667734221211122345667734221211",
-				"doi": "https://doi.org/10.1093/nar/gkad1045",
-				"authorList": "Ehsan Irajizad, Ana Kenney",
-				"title": "Contribution of the microbiome to a metabolomic signature predictive of risk for pancreatic cancer",
-				"status": {
-					"term": "Published",
-					"termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000004",
-					"termSourceRef": "MTBLS",
-				},
-			},
-			{
-				"pubMedId": "x24243423",
-				"doi": "10.x1093/nar/gkad1045",
-				"authorList": "Ehsan Irajizad, Ana Kenney",
-				"title": "Contribution of the microbiome to a metabolomic signature predictive of risk for pancreatic cancer",
-				"status": {
-					"term": "Published",
-					"termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000004",
-					"termSourceRef": "MTBLS",
-				},
-			},
-			{
-				"pubMedId": "drteww",
-				"doi": "20.1093/nar/gkad1045",
-				"authorList": "Ehsan Irajizad, Ana Kenney",
-				"title": "Contribution of the microbiome to a metabolomic signature predictive of risk for pancreatic cancer",
-				"status": {
-					"term": "Published",
-					"termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000004",
-					"termSourceRef": "MTBLS",
-				},
-			},
-		]}}]},
-		"investigationFilePath": "i_Investigation.txt",
-	}
-	count(result) == 4
-}
-
-#########################################################################################################
 # rule_i_100_320_004_02
 #########################################################################################################
 
@@ -557,7 +306,7 @@ test_rule_i_100_320_004_02_violation_01 if {
 	result := rules.rule_i_100_320_004_02 with input as {
 		"investigation": {"studies": [{"identifier": "MTBLS1", "studyPublications": {"publications": [
 			{
-				"pubMedId": "x123",
+				"pubMedId": "",
 				"doi": "10.109/nar/gkad1045",
 				"authorList": "Ehsan Irajizad, Ana Kenney",
 				"title": "Contribution of the microbiome to a metabolomic signature predictive of risk for pancreatic cancer",

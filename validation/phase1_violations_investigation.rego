@@ -266,8 +266,8 @@ rule_i_100_300_002_01 contains result if {
 }
 
 # METADATA
-# title: Study Title length less than 25 characters.
-# description: Study Title should be defined with length equal or greater than 25 characters. Please use same title as first publication.
+# title: Study Title length less than 20 characters.
+# description: Study Title should be defined with length equal or greater than 20 characters. Please use same title as first publication.
 # custom:
 #  rule_id: rule_i_100_300_003_01
 #  type: ERROR
@@ -573,47 +573,23 @@ rule_i_100_320_001_01 contains result if {
 	result := f.format(rego.metadata.rule(), msg, source)
 }
 
-# METADATA
-# title: DOI or PubMed ID is not defined for a published study publication.
-# description: A published publication should have a valid DOI or PubMed ID.
-# custom:
-#  rule_id: rule_i_100_320_002_01
-#  type: WARNING
-#  priority: HIGH
-#  section: investigation.studyPublications
-rule_i_100_320_002_01 contains result if {
-	some i, j
-	studies := input.investigation.studies
-	publication := studies[i].studyPublications.publications[j]
-	publication.status.term == "Published"
-	count(publication.pubMedId) == 0
-	count(publication.doi) == 0
-	msg := sprintf("DOI or PubMed ID is not defined for %v publication '%v'. ", [studies[i].identifier, publication.title])
-	source := input.investigationFilePath
-	result := f.format(rego.metadata.rule(), msg, source)
-}
 
 # METADATA
-# title: DOI invalid for published study publication.
+# title: DOI is required for published study publication.
 # description: A study publication with status published should have valid DOI.
 # custom:
 #  rule_id: rule_i_100_320_003_01
-#  type: WARNING
+#  type: ERROR
 #  priority: HIGH
 #  section: investigation.studyPublications
 rule_i_100_320_003_01 contains result if {
-	some i, j
-	studies = input.investigation.studies
-	pattern = "^10[.].+/.+$"
-	publication := studies[i].studyPublications.publications[j]
-	publication.status.term == "Published"
+	study = input.investigation.studies[0]
+	some idx, publication in study.studyPublications.publications
 
-	# count(publication.pubMedId) == 0
-	count(publication.doi) > 0
+	lower(publication.status.term) == "published"
+	count(publication.doi) == 0
 
-	not regex.match(pattern, publication.doi)
-
-	msg := sprintf("DOI '%v' is not valid for %v publication '%v'.", [publication.doi, studies[i].identifier, publication.title])
+	msg := sprintf("DOI '%v' is required for the published publication at index %v %v: '%v'.", [idx + 1, publication.doi, study.identifier, publication.title])
 	source := input.investigationFilePath
 	result := f.format(rego.metadata.rule(), msg, source)
 }
@@ -623,68 +599,44 @@ rule_i_100_320_003_01 contains result if {
 # description: If DOI is defined, its format should be a valid.
 # custom:
 #  rule_id: rule_i_100_320_003_02
-#  type: WARNING
+#  type: ERROR
 #  priority: MEDIUM
 #  section: investigation.studyPublications
 rule_i_100_320_003_02 contains result if {
-	some i, j
-	studies = input.investigation.studies
+	study = input.investigation.studies[0]
 	pattern = "^10[.].+/.+$"
-	publication := studies[i].studyPublications.publications[j]
-	publication.status.term != "Published"
+	some idx, publication in study.studyPublications.publications
 	count(publication.doi) > 0
 	not regex.match(pattern, publication.doi)
-	msg := sprintf("DOI '%v' is not valid for %v publication '%v'.", [publication.doi, studies[i].identifier, publication.title])
+	msg := sprintf("DOI '%v' is not valid for %v publication at index %v: '%v'.", [publication.doi, study.identifier, idx + 1, publication.title])
 	source := input.investigationFilePath
 	result := f.format(rego.metadata.rule(), msg, source)
 }
 
-# METADATA
-# title: PubMed ID invalid for published study publication.
-# description: A study publication with status published should have valid PubMed ID. Valid PubMed ID contains only digits.
-# custom:
-#  rule_id: rule_i_100_320_004_01
-#  type: WARNING
-#  priority: HIGH
-#  section: investigation.studyPublications
-rule_i_100_320_004_01 contains result if {
-	some i, j
-	studies = input.investigation.studies
-	pattern = "^[1-9]([0-9]{1,8})?$"
-	publication := studies[i].studyPublications.publications[j]
-	publication.status.term == "Published"
-	count(publication.pubMedId) > 0
-	# count(publication.doi) == 0
-	not regex.match(pattern, publication.pubMedId)
-	msg := sprintf("PubMed ID '%v' is not valid for %v publication '%v'.", [publication.pubMedId, studies[i].identifier, publication.title])
-	source := input.investigationFilePath
-	result := f.format(rego.metadata.rule(), msg, source)
-}
 
 # METADATA
 # title: PubMed ID format invalid for study publication.
 # description: If PubMed ID is defined, its format should be valid PubMed ID. Valid PubMed ID contains only digits.
 # custom:
 #  rule_id: rule_i_100_320_004_02
-#  type: WARNING
+#  type: ERROR
 #  priority: MEDIUM
 #  section: investigation.studyPublications
 rule_i_100_320_004_02 contains result if {
-	some i, j
-	studies = input.investigation.studies
+	study = input.investigation.studies[0]
 	pattern = "^[1-9]([0-9]{1,8})?$"
-	publication := studies[i].studyPublications.publications[j]
-	publication.status.term != "Published"
+	some idx, publication in study.studyPublications.publications
 	count(publication.pubMedId) > 0
+	# count(publication.doi) == 0
 	not regex.match(pattern, publication.pubMedId)
-	msg := sprintf("PubMed ID '%v' is not valid for %v publication '%v'.", [publication.pubMedId, studies[i].identifier, publication.title])
+	msg := sprintf("PubMed Id '%v' is not valid for %v publication at index %v: '%v'.", [publication.doi, study.identifier, idx + 1, publication.title])
 	source := input.investigationFilePath
 	result := f.format(rego.metadata.rule(), msg, source)
 }
 
 # METADATA
 # title: Study Publication Title length less than 20 characters.
-# description: Study Publication Title must be defined with length equal or greater than 20 characters.
+# description: Study Publication Title must be defined with length equal or greater than 25 characters.
 # custom:
 #  rule_id: rule_i_100_320_005_01
 #  type: ERROR
@@ -1742,7 +1694,7 @@ rule_i_100_360_004_01 contains result if {
 
 # METADATA
 # title: Study Person Email not valid.
-# description: Study Person Email must be valid format.
+# description: Study Person Email must have valid format.
 # custom:
 #  rule_id: rule_i_100_360_004_02
 #  type: ERROR
@@ -1801,7 +1753,7 @@ rule_i_100_360_006_01 contains result if {
 # description: At least one role should be defined for a study contact.
 # custom:
 #  rule_id: rule_i_100_360_007_01
-#  type: WARNING
+#  type: ERROR
 #  priority: HIGH
 #  section: investigation.studyContacts
 rule_i_100_360_007_01 contains result if {
