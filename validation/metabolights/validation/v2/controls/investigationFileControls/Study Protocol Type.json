@@ -1,0 +1,110 @@
+{
+    "Study Protocol Type": [
+        {
+            "ruleName": "Study Protocol Type-01",
+            "description": "",
+            "fieldName": "Study Protocol Type",
+            "selectionCriteria": {
+                "isaFileType": "investigation",
+                "studyCreatedAtOrAfter": null,
+                "studyCreatedBefore": null,
+                "studyCategoryFilter": null,
+                "templateVersionFilter": null,
+                "isaFileTemplateNameFilter": null,
+                "linkedFieldAndValueFilter": null
+            },
+            "validationType": "any-ontology-term",
+            "defaultValue": null,
+            "allowedMissingOntologyTerms": null,
+            "allowedOtherSources": [
+                {
+                    "sourceLabel": "MTBLS",
+                    "accessionPrefix": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_"
+                }
+            ],
+            "allowedPlaceholders": [
+                {
+                    "termSourceRef": "MTBLS",
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/placeholder"
+                },
+                {
+                    "termSourceRef": "",
+                    "termAccessionNumber": ""
+                }
+            ],
+            "terms": [
+                {
+                    "term": "sample collection protocol",
+                    "termSourceRef": "EFO",
+                    "termAccessionNumber": "http://www.ebi.ac.uk/efo/EFO_0005518"
+                },
+                {
+                    "term": "sample preparation",
+                    "termSourceRef": "MS",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/MS_1000831"
+                },
+                {
+                    "term": "chromatography",
+                    "termSourceRef": "CHMO",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/CHMO_0000591"
+                },
+                {
+                    "term": "mass spectrometry",
+                    "termSourceRef": "CHMO",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/CHMO_0000470"
+                },
+                {
+                    "term": "data transform",
+                    "termSourceRef": "OBI",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/OBI_0200000"
+                },
+                {
+                    "term": "metabolite identification",
+                    "termSourceRef": "MI",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/MI_2131"
+                },
+                {
+                    "term": "capillary electrophoresis",
+                    "termSourceRef": "CHMO",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/CHMO_0001024"
+
+                },
+                {
+                    "term": "flow injection analysis",
+                    "termSourceRef": "MS",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/MS_1000058"
+
+                },
+                {
+                    "term": "NMR sample",
+                    "termSourceRef": "MTBLS",
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_001110"
+                },
+                {
+                    "term": "NMR spectroscopy",
+                    "termSourceRef": "MTBLS",
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_001111"
+                },
+                {
+                    "term": "NMR assay",
+                    "termSourceRef": "MTBLS",
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_001112"
+                }
+            ],
+            "ontologies": [
+                "EFO",
+                "NCIT",
+                "MTBLS",
+                "CHEBI",
+                "CHMO",
+                "MONDO",
+                "PRIDE",
+                "GO",
+                "MESH",
+                "MI",
+                "MS"
+            ],
+            "allowedParentOntologyTerms": null
+        }
+    ]
+}

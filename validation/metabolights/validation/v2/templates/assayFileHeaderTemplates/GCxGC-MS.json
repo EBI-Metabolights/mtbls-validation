@@ -173,7 +173,7 @@
                     "required": false
                 },
                 {
-                    "columnCategory": "ontologyColumn",
+                    "columnCategory": "Label",
                     "columnHeader": "Label",
                     "columnStructure": "ONTOLOGY_COLUMN",
                     "controlLists": {
@@ -541,7 +541,7 @@
                     "required": false
                 },
                 {
-                    "columnCategory": "ontologyColumn",
+                    "columnCategory": "Label",
                     "columnHeader": "Label",
                     "columnStructure": "ONTOLOGY_COLUMN",
                     "controlLists": {

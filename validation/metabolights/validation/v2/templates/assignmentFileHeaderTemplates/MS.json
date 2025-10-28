@@ -2,6 +2,7 @@
     "MS": [
         {
             "fixedColumnCount": 21,
+            "description": "Assignment File template for mass spectrometry assays",
             "headers": [
                 {
                     "columnStructure": "SINGLE_COLUMN",
@@ -260,6 +261,7 @@
         },
         {
             "fixedColumnCount": 21,
+            "description": "Assignment File template for mass spectrometry assays",
             "headers": [
                 {
                     "columnStructure": "SINGLE_COLUMN",

@@ -1,0 +1,58 @@
+{
+    "Study Protocol Components Type": [
+        {
+            "ruleName": "Study Protocol Components Type-01",
+            "description": "",
+            "fieldName": "Study Protocol Components Type",
+            "selectionCriteria": {
+                "isaFileType": "investigation",
+                "studyCreatedAtOrAfter": null,
+                "studyCreatedBefore": null,
+                "studyCategoryFilter": null,
+                "templateVersionFilter": null,
+                "isaFileTemplateNameFilter": null,
+                "linkedFieldAndValueFilter": null
+            },
+            "validationType": "any-ontology-term",
+            "defaultValue": null,
+            "allowedMissingOntologyTerms": null,
+            "allowedOtherSources": [
+                {
+                    "sourceLabel": "MTBLS",
+                    "accessionPrefix": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_"
+                },
+                {
+                    "sourceLabel": "wikidata",
+                    "accessionPrefix": "https://www.wikidata.org/wiki/"
+                },
+                {
+                    "sourceLabel": "ILX",
+                    "accessionPrefix": "http://uri.interlex.org/base/ilx_"
+                }
+            ],
+            "allowedPlaceholders": [
+                {
+                    "termSourceRef": "MTBLS",
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/placeholder"
+                },
+                {
+                    "termSourceRef": "",
+                    "termAccessionNumber": ""
+                }
+            ],
+            "terms": [],
+            "ontologies": [
+                "EFO",
+                "NCIT",
+                "MTBLS",
+                "CHEBI",
+                "CHMO",
+                "MONDO",
+                "PRIDE",
+                "GO",
+                "MESH"
+            ],
+            "allowedParentOntologyTerms": null
+        }
+    ]
+}

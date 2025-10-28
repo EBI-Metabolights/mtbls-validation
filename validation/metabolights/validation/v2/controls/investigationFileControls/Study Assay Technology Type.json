@@ -1,0 +1,240 @@
+{
+    "Study Assay Technology Type": [
+        {
+            "ruleName": "Study Assay Technology Type-01",
+            "description": "",
+            "fieldName": "Study Assay Technology Type",
+            "selectionCriteria": {
+                "isaFileType": "investigation",
+                "studyCreatedAtOrAfter": null,
+                "studyCreatedBefore": null,
+                "studyCategoryFilter": [
+                    "ms-mhd-enabled"
+                ],
+                "templateVersionFilter": null,
+                "isaFileTemplateNameFilter": null,
+                "linkedFieldAndValueFilter": null
+            },
+            "validationType": "selected-ontology-term",
+            "defaultValue": null,
+            "allowedMissingOntologyTerms": null,
+            "allowedOtherSources": null,
+            "allowedPlaceholders": null,
+            "terms": [
+                {
+                    "term": "mass spectrometry assay",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/OBI_0000470",
+                    "termSourceRef": "OBI"
+                }
+            ],
+            "ontologies": null,
+            "allowedParentOntologyTerms": null
+        },
+        {
+            "ruleName": "Study Assay Technology Type-02",
+            "description": "",
+            "fieldName": "Study Assay Technology Type",
+            "selectionCriteria": {
+                "isaFileType": "investigation",
+                "studyCreatedAtOrAfter": null,
+                "studyCreatedBefore": null,
+                "studyCategoryFilter": null,
+                "templateVersionFilter": null,
+                "isaFileTemplateNameFilter": [
+                    "CE-MS",
+                    "DI-MS",
+                    "FIA-MS",
+                    "GC-MS",
+                    "GCxGC-MS",
+                    "LC-MS",
+                    "MALDI-MS",
+                    "MS"
+                ],
+                "linkedFieldAndValueFilter": null
+            },
+            "validationType": "selected-ontology-term",
+            "defaultValue": null,
+            "allowedMissingOntologyTerms": null,
+            "allowedOtherSources": null,
+            "allowedPlaceholders": null,
+            "terms": [
+                {
+                    "term": "mass spectrometry assay",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/OBI_0000470",
+                    "termSourceRef": "OBI"
+                }
+            ],
+            "ontologies": null,
+            "allowedParentOntologyTerms": null
+        },
+        {
+            "ruleName": "Study Assay Technology Type-03",
+            "description": "",
+            "fieldName": "Study Assay Technology Type",
+            "selectionCriteria": {
+                "isaFileType": "investigation",
+                "studyCreatedAtOrAfter": null,
+                "studyCreatedBefore": null,
+                "studyCategoryFilter": null,
+                "templateVersionFilter": null,
+                "isaFileTemplateNameFilter": [
+                    "NMR"
+                ],
+                "linkedFieldAndValueFilter": null
+            },
+            "validationType": "selected-ontology-term",
+            "defaultValue": null,
+            "allowedMissingOntologyTerms": null,
+            "allowedOtherSources": null,
+            "allowedPlaceholders": null,
+            "terms": [
+                {
+                    "term": "NMR spectroscopy assay",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/OBI_0000623",
+                    "termSourceRef": "OBI"
+                }
+            ],
+            "ontologies": null,
+            "allowedParentOntologyTerms": null
+        },
+        {
+            "ruleName": "Study Assay Technology Type-04",
+            "description": "",
+            "fieldName": "Study Assay Technology Type",
+            "selectionCriteria": {
+                "isaFileType": "investigation",
+                "studyCreatedAtOrAfter": "2025-12-01T00:00:00",
+                "studyCreatedBefore": null,
+                "studyCategoryFilter": null,
+                "templateVersionFilter": null,
+                "isaFileTemplateNameFilter": [
+                    "MSImaging",
+                    "MRImaging"
+                ],
+                "linkedFieldAndValueFilter": null
+            },
+            "validationType": "selected-ontology-term",
+            "defaultValue": null,
+            "allowedMissingOntologyTerms": null,
+            "allowedOtherSources": null,
+            "allowedPlaceholders": null,
+            "terms": [
+                {
+                    "term": "imaging assay",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/OBI_0000185",
+                    "termSourceRef": "OBI"
+                }
+            ],
+            "ontologies": null,
+            "allowedParentOntologyTerms": null
+        },
+        {
+            "ruleName": "Study Assay Technology Type-05",
+            "description": "",
+            "fieldName": "Study Assay Technology Type",
+            "selectionCriteria": {
+                "isaFileType": "investigation",
+                "studyCreatedAtOrAfter": null,
+                "studyCreatedBefore": "2025-12-01T00:00:00",
+                "studyCategoryFilter": null,
+                "templateVersionFilter": null,
+                "isaFileTemplateNameFilter": [
+                    "MSImaging",
+                    "MRImaging"
+                ],
+                "linkedFieldAndValueFilter": null
+            },
+            "validationType": "selected-ontology-term",
+            "defaultValue": null,
+            "allowedMissingOntologyTerms": null,
+            "allowedOtherSources": null,
+            "allowedPlaceholders": null,
+            "terms": [
+                {
+                    "term": "imaging assay",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/OBI_0000185",
+                    "termSourceRef": "OBI"
+                },
+                {
+                    "term": "NMR spectroscopy assay",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/OBI_0000623",
+                    "termSourceRef": "OBI"
+                },
+                {
+                    "term": "mass spectrometry assay",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/OBI_0000470",
+                    "termSourceRef": "OBI"
+                }
+            ],
+            "ontologies": null,
+            "allowedParentOntologyTerms": null
+        },
+        {
+            "ruleName": "Study Assay Technology Type-06",
+            "description": "",
+            "fieldName": "Study Assay Technology Type",
+            "selectionCriteria": {
+                "isaFileType": "investigation",
+                "studyCreatedAtOrAfter": "2025-12-01T00:00:00",
+                "studyCreatedBefore": null,
+                "studyCategoryFilter": null,
+                "templateVersionFilter": null,
+                "isaFileTemplateNameFilter": [
+                    "LC-DAD",
+                    "GC-FID"
+                ],
+                "linkedFieldAndValueFilter": null
+            },
+            "validationType": "selected-ontology-term",
+            "defaultValue": null,
+            "allowedMissingOntologyTerms": null,
+            "allowedOtherSources": null,
+            "allowedPlaceholders": null,
+            "terms": [
+                {
+                    "term": "other",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/NCIT_C17649",
+                    "termSourceRef": "NCIT"
+                }
+            ],
+            "ontologies": null,
+            "allowedParentOntologyTerms": null
+        },
+        {
+            "ruleName": "Study Assay Technology Type-07",
+            "description": "",
+            "fieldName": "Study Assay Technology Type",
+            "selectionCriteria": {
+                "isaFileType": "investigation",
+                "studyCreatedAtOrAfter": null,
+                "studyCreatedBefore": "2025-12-01T00:00:00",
+                "studyCategoryFilter": null,
+                "templateVersionFilter": null,
+                "isaFileTemplateNameFilter": [
+                    "LC-DAD",
+                    "GC-FID"
+                ],
+                "linkedFieldAndValueFilter": null
+            },
+            "validationType": "selected-ontology-term",
+            "defaultValue": null,
+            "allowedMissingOntologyTerms": null,
+            "allowedOtherSources": null,
+            "allowedPlaceholders": null,
+            "terms": [
+                {
+                    "term": "other",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/NCIT_C17649",
+                    "termSourceRef": "NCIT"
+                },
+                {
+                    "term": "mass spectrometry assay",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/OBI_0000470",
+                    "termSourceRef": "OBI"
+                }
+            ],
+            "ontologies": null,
+            "allowedParentOntologyTerms": null
+        }
+    ]
+}

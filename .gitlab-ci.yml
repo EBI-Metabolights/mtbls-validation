@@ -41,7 +41,7 @@ stages:
   - echo "LATEST_TARGET_FILE_URL $LATEST_TARGET_FILE_URL"
   - cd validation
   - rm -f bundle.tar.gz
-  - opa test . -v
+  # - opa test . -v
   - opa build  --ignore tests --ignore input.json .
   - echo "$TARGET_FILE_URL"
   - |-

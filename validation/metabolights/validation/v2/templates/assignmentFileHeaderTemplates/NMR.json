@@ -2,6 +2,7 @@
     "NMR": [
         {
             "fixedColumnCount": 18,
+            "description": "Assignment File template for NMR spectroscopy assays",
             "headers": [
                 {
                     "columnStructure": "SINGLE_COLUMN",
@@ -224,6 +225,7 @@
         },
         {
             "fixedColumnCount": 18,
+            "description": "Assignment File template for NMR spectroscopy assays",
             "headers": [
                 {
                     "columnStructure": "SINGLE_COLUMN",

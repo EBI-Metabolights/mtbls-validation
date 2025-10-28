@@ -197,7 +197,7 @@
                     "examples": []
                 },
                 {
-                    "columnCategory": "ontologyColumn",
+                    "columnCategory": "Label",
                     "columnHeader": "Label",
                     "columnStructure": "ONTOLOGY_COLUMN",
                     "controlLists": {
@@ -650,7 +650,7 @@
                     "examples": []
                 },
                 {
-                    "columnCategory": "ontologyColumn",
+                    "columnCategory": "Label",
                     "columnHeader": "Label",
                     "columnStructure": "ONTOLOGY_COLUMN",
                     "controlLists": {

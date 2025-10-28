@@ -1,0 +1,109 @@
+{
+    "Study Design Type": [
+        {
+            "ruleName": "Study Design Type-01",
+            "description": "",
+            "fieldName": "Study Design Type",
+            "selectionCriteria": {
+                "isaFileType": "investigation",
+                "studyCreatedAtOrAfter": null,
+                "studyCreatedBefore": null,
+                "studyCategoryFilter": null,
+                "templateVersionFilter": null,
+                "isaFileTemplateNameFilter": null,
+                "linkedFieldAndValueFilter": null
+            },
+            "validationType": "any-ontology-term",
+            "defaultValue": null,
+            "allowedMissingOntologyTerms": null,
+            "allowedOtherSources": [
+                {
+                    "sourceLabel": "MTBLS",
+                    "accessionPrefix": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_"
+                },
+                {
+                    "sourceLabel": "wikidata",
+                    "accessionPrefix": "https://www.wikidata.org/wiki/"
+                },
+                {
+                    "sourceLabel": "ILX",
+                    "accessionPrefix": "http://uri.interlex.org/base/ilx_"
+                }
+            ],
+            "allowedPlaceholders": [
+                {
+                    "termSourceRef": "MTBLS",
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/placeholder"
+                },
+                {
+                    "termSourceRef": "",
+                    "termAccessionNumber": ""
+                }
+            ],
+            "terms": [
+                {
+                    "term": "targeted metabolite profiling",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/MSIO_0000100",
+                    "termSourceRef": "MSIO"
+                },
+                {
+                    "term": "untargeted metabolite profiling",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/MSIO_0000101",
+                    "termSourceRef": "MSIO"
+                },
+                {
+                    "term": "nuclear magnetic resonance spectroscopy",
+                    "termSourceRef": "CHMO",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/CHMO_0000591"
+                },
+                {
+                    "term": "ultra-performance liquid chromatography-mass spectrometry",
+                    "termSourceRef": "CHMO",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/CHMO_0000715"
+                },
+                {
+                    "term": "gas chromatography-mass spectrometry",
+                    "termSourceRef": "CHMO",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/CHMO_0000497"
+                },
+                {
+                    "term": "tandem mass spectrometry",
+                    "termSourceRef": "CHMO",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/CHMO_0000575"
+                },
+                {
+                    "term": "Multi-omics study",
+                    "termSourceRef": "PRIDE",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/PRIDE_0000461"
+                },
+                {
+                    "term": "microbiome",
+                    "termSourceRef": "EFO",
+                    "termAccessionNumber": "http://www.ebi.ac.uk/efo/EFO_0004982"
+                },
+                {
+                    "term": "aging",
+                    "termSourceRef": "NCIT",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/NCIT_C16269"
+                },
+                {
+                    "term": "cancer",
+                    "termSourceRef": "MONDO",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/MONDO_0004992"
+                }
+            ],
+            "ontologies": [
+                "EFO",
+                "NCIT",
+                "MTBLS",
+                "CHEBI",
+                "CHMO",
+                "MONDO",
+                "PRIDE",
+                "GO",
+                "MESH"
+            ],
+            "allowedParentOntologyTerms": null
+        }
+    ]
+}

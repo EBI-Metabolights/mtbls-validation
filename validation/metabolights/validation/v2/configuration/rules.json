@@ -1814,7 +1814,7 @@
             {
                 "rule_id": "rule_s_200_090_002_05",
                 "title": "Ontology Term Source REF for a unit not in prioritised control list.",
-                "description": "We highly recommend to use the prioritised ontology Term Source REFs for an unit ontology terms.",
+                "description": "We highly recommend to use the prioritised ontology Term Source REFs for an unit ontology term.",
                 "type": "WARNING",
                 "section": "samples",
                 "priority": "MEDIUM"

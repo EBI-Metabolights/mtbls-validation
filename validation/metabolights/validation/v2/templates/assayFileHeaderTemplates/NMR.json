@@ -160,7 +160,7 @@
                 },
                 {
                     "columnStructure": "ONTOLOGY_COLUMN",
-                    "columnCategory": "valueUnitColumn",
+                    "columnCategory": "Label",
                     "columnHeader": "Label",
                     "columnPrefix": "",
                     "controlLists": null,
@@ -601,7 +601,7 @@
                 },
                 {
                     "columnStructure": "ONTOLOGY_COLUMN",
-                    "columnCategory": "valueUnitColumn",
+                    "columnCategory": "Label",
                     "columnHeader": "Label",
                     "columnPrefix": "",
                     "controlLists": null,

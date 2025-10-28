@@ -2,6 +2,7 @@
     "minimum": [
         {
             "fixedColumnCount": 12,
+            "description": "ISA-TAB Sample file with minimum columns.",
             "headers": [
                 {
                     "columnStructure": "SINGLE_COLUMN",

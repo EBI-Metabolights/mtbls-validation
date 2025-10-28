@@ -1,0 +1,81 @@
+{
+    "Characteristics[Sample type]": [
+        {
+            "ruleName": "Characteristics[Sample type]-01",
+            "description": "",
+            "fieldName": "Characteristics[Sample type]",
+            "selectionCriteria": {
+                "isaFileType": "sample",
+                "studyCreatedAtOrAfter": null,
+                "studyCreatedBefore": null,
+                "studyCategoryFilter": null,
+                "templateVersionFilter": null,
+                "isaFileTemplateNameFilter": null,
+                "linkedFieldAndValueFilter": [
+                    {
+                        "name": "Source Name",
+                        "value": null
+                    }
+                ]
+            },
+            "validationType": "any-ontology-term",
+            "defaultValue": null,
+            "allowedMissingOntologyTerms": null,
+            "allowedOtherSources": [
+                {
+                    "sourceLabel": "MTBLS",
+                    "accessionPrefix": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_"
+                },
+                {
+                    "sourceLabel": "WoRMs",
+                    "accessionPrefix": "http://www.marinespecies.org/aphia.php?p=taxdetails&id="
+                }
+            ],
+            "allowedPlaceholders": [
+                {
+                    "termSourceRef": "MTBLS",
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/placeholder"
+                }
+            ],
+            "terms": [
+                {
+                    "term": "experimental sample",
+                    "termSourceRef": "CHMO",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/CHMO_0002746"
+                },
+                {
+                    "term": "pooled quality control sample",
+                    "termSourceRef": "MTBLS",
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_001090"
+                },
+                {
+                    "term": "experimental blank",
+                    "termSourceRef": "MTBLS",
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000218"
+                },
+                {
+                    "term": "solvent blank",
+                    "termSourceRef": "MSIO",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/MSIO_0000026"
+                },
+                {
+                    "term": "sample preparation blank",
+                    "termSourceRef": "MSIO",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/MSIO_0000025"
+                },
+                {
+                    "term": "reference compound mix",
+                    "termSourceRef": "MSIO",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/MSIO_0000024"
+                }
+            ],
+            "ontologies": [
+                "CHMO",
+                "MSIO",
+                "WoRMs",
+                "MTBLS"
+            ],
+            "allowedParentOntologyTerms": null
+        }
+    ]
+}

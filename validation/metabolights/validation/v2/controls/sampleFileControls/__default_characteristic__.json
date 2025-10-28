@@ -1,0 +1,149 @@
+{
+    "__default_characteristic__": [
+        {
+            "ruleName": "default-sample-file-rule-01",
+            "description": "default",
+            "fieldName": "",
+            "selectionCriteria": {
+                "isaFileType": "sample",
+                "studyCreatedAtOrAfter": null,
+                "studyCreatedBefore": null,
+                "studyCategoryFilter": null,
+                "templateVersionFilter": null,
+                "isaFileTemplateNameFilter": null,
+                "linkedFieldAndValueFilter": null
+            },
+            "validationType": "any-ontology-term",
+            "defaultValue": null,
+            "allowedMissingOntologyTerms": null,
+            "allowedOtherSources": [
+                {
+                    "sourceLabel": "wikidata",
+                    "accessionPrefix": "https://www.wikidata.org/wiki/"
+                },
+                {
+                    "sourceLabel": "ILX",
+                    "accessionPrefix": "http://uri.interlex.org/base/ilx_"
+                }
+            ],
+            "allowedPlaceholders": [
+                {
+                    "termSourceRef": "MTBLS",
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/placeholder"
+                }
+            ],
+            "terms": null,
+            "ontologies": [
+                "OBI",
+                "EFO",
+                "CHMO",
+                "NCIT",
+                "NCBITAXON",
+                "MS",
+                "BTO",
+                "CHEBI",
+                "UO",
+                "MESH",
+                "BAO",
+                "OMIT",
+                "GO",
+                "ENVO",
+                "MSIO",
+                "PO",
+                "MONDO",
+                "UBERON",
+                "SNOMED",
+                "CL",
+                "CLO",
+                "MI",
+                "EDAM",
+                "HP",
+                "MP"
+            ],
+            "allowedParentOntologyTerms": null,
+            "unexpectedTerms": null
+        },
+        {
+            "ruleName": "default-sample-file-rule-02",
+            "description": "default",
+            "fieldName": "",
+            "selectionCriteria": {
+                "isaFileType": "sample",
+                "studyCreatedAtOrAfter": null,
+                "studyCreatedBefore": null,
+                "studyCategoryFilter": null,
+                "templateVersionFilter": null,
+                "isaFileTemplateNameFilter": null,
+                "linkedFieldAndValueFilter": null
+            },
+            "validationType": "any-ontology-term",
+            "defaultValue": null,
+            "allowedMissingOntologyTerms": null,
+            "allowedOtherSources": [
+                {
+                    "sourceLabel": "MTBLS",
+                    "accessionPrefix": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_"
+                },
+                {
+                    "sourceLabel": "wikidata",
+                    "accessionPrefix": "https://www.wikidata.org/wiki/"
+                },
+                {
+                    "sourceLabel": "ILX",
+                    "accessionPrefix": "http://uri.interlex.org/base/ilx_"
+                }
+            ],
+            "allowedPlaceholders": [
+                {
+                    "termSourceRef": "MTBLS",
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/placeholder"
+                }
+            ],
+            "terms": null,
+            "ontologies": [
+                "OBI",
+                "EFO",
+                "CHMO",
+                "NCIT",
+                "NCBITAXON",
+                "MS",
+                "BTO",
+                "CHEBI",
+                "UO",
+                "MESH",
+                "BAO",
+                "OMIT",
+                "GO",
+                "ENVO",
+                "MSIO",
+                "PO",
+                "MONDO",
+                "UBERON",
+                "SNOMED",
+                "CL",
+                "CLO",
+                "MI",
+                "EDAM",
+                "HP",
+                "MP"
+            ],
+            "allowedParentOntologyTerms": null,
+            "unexpectedTerms": [
+                "unknown",
+                "undefined",
+                "n/a",
+                "na",
+                "not applicable",
+                "not available",
+                "none",
+                "null",
+                "nill",
+                "not specified",
+                "not provided",
+                "-",
+                "--",
+                "---"
+            ]
+        }
+    ]
+}

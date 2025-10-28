@@ -3,7 +3,7 @@ name = "mtbls-validation"
 version = "0.1.0"
 description = "MetaboLights Validation Framework"
 authors = [{ name = "MetaboLights Team", email = "metabolights-help@ebi.ac.uk" }]
-requires-python = "~=3.12"
+requires-python = ">=3.12"
 readme = "README.md"
 license = "Apache-2.0"
 dependencies = [
@@ -11,6 +11,7 @@ dependencies = [
     "pandas>=2.2.3",
     "openpyxl>=3.1.5",
     "metabolights-utils>=1.4.0,<2",
+    "pydantic2-to-typescript>=0.0.1",
 ]
 
 [tool.hatch.build.targets.sdist]

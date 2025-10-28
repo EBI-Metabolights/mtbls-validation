@@ -1,0 +1,114 @@
+{
+    "Unit": [
+        {
+            "ruleName": "Unit-01",
+            "description": "",
+            "fieldName": "Unit",
+            "selectionCriteria": {
+                "isaFileType": "assay",
+                "studyCreatedAtOrAfter": null,
+                "studyCreatedBefore": null,
+                "studyCategoryFilter": null,
+                "templateVersionFilter": ["2.0"],
+                "isaFileTemplateNameFilter": null,
+                "linkedFieldAndValueFilter": null
+            },
+            "validationType": "child-ontology-term",
+            "defaultValue": null,
+            "allowedMissingOntologyTerms": null,
+            "allowedOtherSources": [
+                {
+                    "sourceLabel": "wikidata",
+                    "accessionPrefix": "https://www.wikidata.org/wiki/"
+                },
+                {
+                    "sourceLabel": "ILX",
+                    "accessionPrefix": "http://uri.interlex.org/base/ilx_"
+                }
+            ],
+            "allowedPlaceholders": null,
+            "terms": null,
+            "ontologies": ["UO", "EFO"],
+            "allowedParentOntologyTerms": {
+                "excludeByLabelPattern": [
+                    "^*.unit$"
+                ],
+                "excludeByAccession": [],
+                "parents": [
+                    {
+                        "term": "unit",
+                        "termSourceRef": "UO",
+                        "termAccessionNumber": "http://purl.obolibrary.org/obo/UO_0000000"
+                    },
+                    {
+                        "term": "unit",
+                        "termSourceRef": "EFO",
+                        "termAccessionNumber": "http://purl.obolibrary.org/obo/UO_0000000"
+                    }
+                    
+                ]
+            }
+        },
+        {
+            "ruleName": "Unit-02",
+            "description": "",
+            "fieldName": "Unit",
+            "selectionCriteria": {
+                "isaFileType": "sample",
+                "studyCreatedAtOrAfter": null,
+                "studyCreatedBefore": null,
+                "studyCategoryFilter": null,
+                "templateVersionFilter": [
+                    "1.0"
+                ],
+                "isaFileTemplateNameFilter": null,
+                "linkedFieldAndValueFilter": null
+            },
+            "validationType": "child-ontology-term",
+            "defaultValue": null,
+            "allowedMissingOntologyTerms": [],
+            "allowedOtherSources": [
+                {
+                    "sourceLabel": "MTBLS",
+                    "accessionPrefix": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_"
+                }
+            ],
+            "allowedPlaceholders": [
+                {
+                    "termSourceRef": "MTBLS",
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/placeholder"
+                },
+                {
+                    "termSourceRef": "",
+                    "termAccessionNumber": ""
+                }
+            ],
+            "terms": [],
+            "ontologies": [
+                "UO",
+                "EFO",
+                "MTBLS"
+            ],
+            "allowedParentOntologyTerms": {
+                "excludeByLabelPattern": [
+                    "^*.unit$"
+                ],
+                "excludeByAccession": [],
+                "parents": [
+                    {
+                        "term": "unit",
+                        "termSourceRef": "UO",
+                        "termAccessionNumber": "http://purl.obolibrary.org/obo/UO_0000000"
+                    },
+                    {
+                        "term": "unit",
+                        "termSourceRef": "EFO",
+                        "termAccessionNumber": "http://purl.obolibrary.org/obo/UO_0000000"
+                    }
+                    
+                ]
+            }
+        }
+       
+    ]
+}

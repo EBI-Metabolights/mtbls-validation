@@ -1,0 +1,51 @@
+{
+    "Factor Value[Disease]": [
+        {
+            "ruleName": "Factor Value[Disease]-01",
+            "description": "",
+            "fieldName": "Factor Value[Disease]",
+            "selectionCriteria": {
+                "isaFileType": "sample",
+                "studyCreatedAtOrAfter": null,
+                "studyCreatedBefore": null,
+                "studyCategoryFilter": null,
+                "templateVersionFilter": null,
+                "isaFileTemplateNameFilter": null,
+                "linkedFieldAndValueFilter": [
+                    {
+                        "name": "Sample Name",
+                        "value": null
+                    }
+                ]
+            },
+            "validationType": "ontology-term-in-selected-ontologies",
+            "defaultValue": null,
+            "allowedMissingOntologyTerms": [
+                {
+                    "term": "Not Applicable",
+                    "termSourceRef": "NCIT",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/NCIT_C48660"
+                }
+            ],
+            
+            "allowedOtherSources": [
+                {
+                    "sourceLabel": "wikidata",
+                    "accessionPrefix": "https://www.wikidata.org/wiki/"
+                },
+                {
+                    "sourceLabel": "ILX",
+                    "accessionPrefix": "http://uri.interlex.org/base/ilx_"
+                }
+            ],
+            "allowedPlaceholders": null,
+            "terms": null,
+            "ontologies": [
+                "MONDO",
+                "MP",
+                "SNOMED"
+            ],
+            "allowedParentOntologyTerms": null
+        }
+    ]
+}

@@ -1,0 +1,53 @@
+{
+    "Characteristics[Cell type]": [
+        {
+            "ruleName": "Characteristics[Cell type]-01",
+            "description": "",
+            "fieldName": "Characteristics[Cell type]",
+            "selectionCriteria": {
+                "isaFileType": "sample",
+                "studyCreatedAtOrAfter": null,
+                "studyCreatedBefore": null,
+                "studyCategoryFilter": null,
+                "templateVersionFilter": null,
+                "isaFileTemplateNameFilter": null,
+                "linkedFieldAndValueFilter": [
+                    {
+                        "name": "Source Name",
+                        "value": null
+                    },
+                    {
+                        "name": "Sample Name",
+                        "value": null
+                    }
+                ]
+            },
+            "validationType": "ontology-term-in-selected-ontologies",
+            "defaultValue": null,
+            "allowedMissingOntologyTerms": [
+                {
+                    "term": "Not Applicable",
+                    "termSourceRef": "NCIT",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/NCIT_C48660"
+                }
+            ],
+            "allowedOtherSources": [
+                {
+                    "sourceLabel": "wikidata",
+                    "accessionPrefix": "https://www.wikidata.org/wiki/"
+                },
+                {
+                    "sourceLabel": "ILX",
+                    "accessionPrefix": "http://uri.interlex.org/base/ilx_"
+                }
+            ],
+            "allowedPlaceholders": null,
+            "terms": null,
+            "ontologies": [
+                "CL",
+                "CLO"
+            ],
+            "allowedParentOntologyTerms": null
+        }
+    ]
+}

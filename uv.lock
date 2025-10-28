@@ -1,6 +1,6 @@
 version = 1
 revision = 3
-requires-python = ">=3.12, <4"
+requires-python = ">=3.12"
 
 [[package]]
 name = "annotated-types"
@@ -173,7 +173,7 @@ wheels = [
 
 [[package]]
 name = "metabolights-utils"
-version = "1.4.8"
+version = "1.4.9"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "beautifulsoup4" },
@@ -185,9 +185,9 @@ dependencies = [
     { name = "pydantic-settings" },
     { name = "unidecode" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/4a/2a/c5fe6c97c4f1173d986c22cae0b0235b9941b025150718b112c4fc9689ec/metabolights_utils-1.4.8.tar.gz", hash = "sha256:5b5f173d675ed4bbf445e149109b274faf19feddb92dd5bafa171e7c588ee96e", size = 154551, upload-time = "2025-09-29T08:22:51.341Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/05/53/4b95ca88cbe6559b85a38451084e0f80bbaf73682271572224119161b6d6/metabolights_utils-1.4.9.tar.gz", hash = "sha256:0e2a2a931d06270722bd33082ded09b58f4ef74fbcc3cee537f9bd5f820b2d03", size = 155125, upload-time = "2025-10-05T16:06:48.598Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/3b/64/d8ccfd13422378a2acf6dba203a3c4d498094325a282bdae914688de573a/metabolights_utils-1.4.8-py3-none-any.whl", hash = "sha256:1ef3ab42d6fbf02a8b36b9a0ad263144f16d13945b251f61c75dca3fe507612c", size = 185680, upload-time = "2025-09-29T08:22:49.291Z" },
+    { url = "https://files.pythonhosted.org/packages/6a/eb/aa5bd9a2881f4d43299ef1f06614dfd7bc4699db732963859891d426d113/metabolights_utils-1.4.9-py3-none-any.whl", hash = "sha256:3f942c6b4eab24aaa65690a1bd7a290467eab203f6813da9e6ebbbba8839c162", size = 186299, upload-time = "2025-10-05T16:06:47.289Z" },
 ]
 
 [[package]]
@@ -199,6 +199,7 @@ dependencies = [
     { name = "openpyxl" },
     { name = "pandas" },
     { name = "pydantic" },
+    { name = "pydantic2-to-typescript" },
 ]
 
 [package.metadata]
@@ -207,6 +208,7 @@ requires-dist = [
     { name = "openpyxl", specifier = ">=3.1.5" },
     { name = "pandas", specifier = ">=2.2.3" },
     { name = "pydantic", specifier = ">=2.10.2" },
+    { name = "pydantic2-to-typescript", specifier = ">=0.0.1" },
 ]
 
 [[package]]
@@ -409,6 +411,18 @@ dependencies = [
 sdist = { url = "https://files.pythonhosted.org/packages/20/c5/dbbc27b814c71676593d1c3f718e6cd7d4f00652cefa24b75f7aa3efb25e/pydantic_settings-2.11.0.tar.gz", hash = "sha256:d0e87a1c7d33593beb7194adb8470fc426e95ba02af83a0f23474a04c9a08180", size = 188394, upload-time = "2025-09-24T14:19:11.764Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/83/d6/887a1ff844e64aa823fb4905978d882a633cfe295c32eacad582b78a7d8b/pydantic_settings-2.11.0-py3-none-any.whl", hash = "sha256:fe2cea3413b9530d10f3a5875adffb17ada5c1e1bab0b2885546d7310415207c", size = 48608, upload-time = "2025-09-24T14:19:10.015Z" },
+]
+
+[[package]]
+name = "pydantic2-to-typescript"
+version = "0.0.1"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "pydantic" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/bf/5b/08ac6a2774c47cecd4e0d9ada8496a84e0f324cb038b580d4d94ec32f279/pydantic2_to_typescript-0.0.1.tar.gz", hash = "sha256:f9846adcd25db00deccd51fd5a11573a37479012ca4e056dc0502cb03a2e40c6", size = 8783, upload-time = "2024-05-06T10:02:53.543Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/e6/1b/8523589da24c2a23f36f098e6c3341160aab1534f354eb156af596d0e9ae/pydantic2_to_typescript-0.0.1-py3-none-any.whl", hash = "sha256:ce0fef880ea66db9acbada318f0372d4c70e15ad13258463648d97c86683f292", size = 8102, upload-time = "2024-05-06T10:02:51.657Z" },
 ]
 
 [[package]]

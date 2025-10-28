@@ -1,0 +1,216 @@
+{
+    "Parameter Value[Ion source]": [
+        {
+            "ruleName": "Parameter Value[Ion source]-01",
+            "description": "",
+            "fieldName": "Parameter Value[Ion source]",
+            "selectionCriteria": {
+                "isaFileType": "assay",
+                "studyCreatedAtOrAfter": null,
+                "studyCreatedBefore": null,
+                "studyCategoryFilter": null,
+                "templateVersionFilter": null,
+                "isaFileTemplateNameFilter": ["LC-MS"],
+                "linkedFieldAndValueFilter": [
+                    {
+                        "name": "Protocol REF",
+                        "value": "Mass spectrometry"
+                    }
+                ]
+            },
+            "validationType": "any-ontology-term",
+            "defaultValue": null,
+            "allowedMissingOntologyTerms": null,
+            "allowedOtherSources": [
+                {
+                    "sourceLabel": "MTBLS",
+                    "accessionPrefix": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_"
+                },
+                {
+                    "sourceLabel": "wikidata",
+                    "accessionPrefix": "https://www.wikidata.org/wiki/"
+                },
+                {
+                    "sourceLabel": "ILX",
+                    "accessionPrefix": "http://uri.interlex.org/base/ilx_"
+                }
+            ],
+            "allowedPlaceholders": [
+                {
+                    "termSourceRef": "MTBLS",
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/placeholder"
+                },
+                {
+                    "termSourceRef": "",
+                    "termAccessionNumber": ""
+                }
+            ],
+            "terms": [
+                {
+                    "term": "electrospray ionization",
+                    "termSourceRef": "MS",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/MS_1000073"
+                },
+                {
+                    "term": "nanoelectrospray",
+                    "termSourceRef": "MS",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/MS_1000398"
+                },
+                {
+                    "term": "secondary electrospray ionization",
+                    "termSourceRef": "MTBLS",
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000690"
+                },
+                {
+                    "term": "atmospheric pressure chemical ionization",
+                    "termSourceRef": "MS",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/MS_1000070"
+                },
+                {
+                    "term": "matrix-assisted laser desorption ionization",
+                    "termSourceRef": "MS",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/MS_1000075"
+                },
+                {
+                    "term": "desorption electrospray ionization",
+                    "termSourceRef": "MS",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/MS_1002011"
+                }
+            ],
+            "ontologies": [
+                "MS",
+                "MTBLS"
+            ],
+            "allowedParentOntologyTerms": null
+        },
+        {
+            "ruleName": "Parameter Value[Ion source]-02",
+            "description": "",
+            "fieldName": "Parameter Value[Ion source]",
+            "selectionCriteria": {
+                "isaFileType": "assay",
+                "studyCreatedAtOrAfter": null,
+                "studyCreatedBefore": null,
+                "studyCategoryFilter": null,
+                "templateVersionFilter": null,
+                "isaFileTemplateNameFilter": ["GC-MS"],
+                "linkedFieldAndValueFilter": [
+                    {
+                        "name": "Protocol REF",
+                        "value": "Mass spectrometry"
+                    }
+                ]
+            },
+            "validationType": "any-ontology-term",
+            "defaultValue": null,
+            "allowedMissingOntologyTerms": null,
+            "allowedOtherSources": [
+                {
+                    "sourceLabel": "MTBLS",
+                    "accessionPrefix": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_"
+                },
+                {
+                    "sourceLabel": "wikidata",
+                    "accessionPrefix": "https://www.wikidata.org/wiki/"
+                },
+                {
+                    "sourceLabel": "ILX",
+                    "accessionPrefix": "http://uri.interlex.org/base/ilx_"
+                }
+            ],
+            "allowedPlaceholders": [
+                {
+                    "termSourceRef": "MTBLS",
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/placeholder"
+                },
+                {
+                    "termSourceRef": "",
+                    "termAccessionNumber": ""
+                }
+            ],
+            "terms": [
+                    {
+                        "term": "electron ionization",
+                        "termSourceRef": "MS",
+                        "termAccessionNumber": "http://purl.obolibrary.org/obo/MS_1000389"
+                    },
+                    {
+                        "term": "chemical ionization",
+                        "termSourceRef": "MS",
+                        "termAccessionNumber": "http://purl.obolibrary.org/obo/MS_1000071"
+                    },
+                    {
+                        "term": "field ionization",
+                        "termSourceRef": "MS",
+                        "termAccessionNumber": "http://purl.obolibrary.org/obo/MS_1000258"
+                    }
+                ],
+            "ontologies": [
+                "MS",
+                "MTBLS"
+            ],
+            "allowedParentOntologyTerms": null
+        },
+        {
+            "ruleName": "Parameter Value[Ion source]-03",
+            "description": "",
+            "fieldName": "Parameter Value[Ion source]",
+            "selectionCriteria": {
+                "isaFileType": "assay",
+                "studyCreatedAtOrAfter": null,
+                "studyCreatedBefore": null,
+                "studyCategoryFilter": null,
+                "templateVersionFilter": null,
+                "isaFileTemplateNameFilter": ["DI-MS"],
+                "linkedFieldAndValueFilter": [
+                    {
+                        "name": "Protocol REF",
+                        "value": "Mass spectrometry"
+                    }
+                ]
+            },
+            "validationType": "any-ontology-term",
+            "defaultValue": null,
+            "allowedMissingOntologyTerms": null,
+            "allowedOtherSources": [
+                {
+                    "sourceLabel": "MTBLS",
+                    "accessionPrefix": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_"
+                },
+                {
+                    "sourceLabel": "wikidata",
+                    "accessionPrefix": "https://www.wikidata.org/wiki/"
+                },
+                {
+                    "sourceLabel": "ILX",
+                    "accessionPrefix": "http://uri.interlex.org/base/ilx_"
+                }
+            ],
+            "allowedPlaceholders": [
+                {
+                    "termSourceRef": "MTBLS",
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/placeholder"
+                },
+                {
+                    "termSourceRef": "",
+                    "termAccessionNumber": ""
+                }
+            ],
+            "terms": [{
+                        "term": "electrospray ionization",
+                        "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000688",
+                        "termSourceRef": "MTBLS"
+                    },
+                    {
+                        "term": "nanoelectrospray",
+                        "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000689",
+                        "termSourceRef": "MTBLS"
+                    }],
+            "ontologies": [
+                "MS",
+                "MTBLS"
+            ],
+            "allowedParentOntologyTerms": null
+        }
+    ]
+}

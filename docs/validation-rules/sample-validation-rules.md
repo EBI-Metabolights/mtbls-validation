@@ -35,7 +35,7 @@
 | 31 | rule_s_200_090_002_02 | WARNING | Ontology Term Source REF of ontology terms not in prioritised default control list. | Prioritised default ontology Term Source REFs should be used for ontology terms in this column if possible. |
 | 32 | rule_s_200_090_002_03 | WARNING | Ontology Term Source REF not referenced in investigation file. | All ontology Term Source REFs should be referenced in ONTOLOGY SOURCE REFERENCE section in i_Investigation.txt. |
 | 33 | rule_s_200_090_002_04 | ERROR | Ontology Term Source REF defined for empty ontology terms. | Select ontology terms and/or change ontology Term Source REF. |
-| 34 | rule_s_200_090_002_05 | WARNING | Ontology Term Source REF for a unit not in prioritised control list. | We highly recommend to use the prioritised ontology Term Source REFs for an unit ontology terms. |
+| 34 | rule_s_200_090_002_05 | WARNING | Ontology Term Source REF for a unit not in prioritised control list. | We highly recommend to use the prioritised ontology Term Source REFs for an unit ontology term. |
 | 35 | rule_s_200_090_002_06 | WARNING | Ontology Term Source REF defined for empty unit ontology terms. | Select unit ontology terms and/or change ontology Term Source REF. |
 | 36 | rule_s_200_090_002_07 | WARNING | Term Source REF of ontology terms is empty. | Term Source REF of ontology terms should be defined. A prioritised control list is defined. Review and select from the prioritised control list if possible. |
 | 37 | rule_s_200_090_002_08 | WARNING | Term Source REF of unit ontology terms is empty. | Term Source REF of unit ontology terms should be defined. A prioritised control list is defined. Review and select from the prioritised control list if possible. |

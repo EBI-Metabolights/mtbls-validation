@@ -1,0 +1,188 @@
+{
+    "Characteristics[Organism]": [
+        {
+            "ruleName": "Characteristics[Organism]-01",
+            "description": "",
+            "fieldName": "Characteristics[Organism]",
+            "selectionCriteria": {
+                "isaFileType": "sample",
+                "studyCreatedAtOrAfter": null,
+                "studyCreatedBefore": null,
+                "studyCategoryFilter": null,
+                "templateVersionFilter": null,
+                "isaFileTemplateNameFilter": null,
+                "linkedFieldAndValueFilter": [
+                    {
+                        "name": "Source Name",
+                        "value": null
+                    }
+                ]
+            },
+            "validationType": "ontology-term-in-selected-ontologies",
+            "defaultValue": null,
+            "allowedMissingOntologyTerms": [
+                {
+                    "term": "Not Applicable",
+                    "termSourceRef": "NCIT",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/NCIT_C48660"
+                }
+            ],
+            "allowedOtherSources": [
+                {
+                    "sourceLabel": "wikidata",
+                    "accessionPrefix": "https://www.wikidata.org/wiki/"
+                },
+                {
+                    "sourceLabel": "ILX",
+                    "accessionPrefix": "http://uri.interlex.org/base/ilx_"
+                }
+            ],
+            "allowedPlaceholders": null,
+            "terms": [
+                {
+                    "term": "Homo sapiens",
+                    "termSourceRef": "NCBITAXON",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/NCBITaxon_9606"
+                },
+                {
+                    "term": "Mus musculus",
+                    "termSourceRef": "NCBITAXON",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/NCBITaxon_10090"
+                },
+                {
+                    "term": "Rattus norvegicus",
+                    "termSourceRef": "NCBITAXON",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/NCBITaxon_10116"
+                },
+                {
+                    "term": "Arabidopsis thaliana",
+                    "termSourceRef": "NCBITAXON",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/NCBITaxon_3702"
+                },
+                {
+                    "term": "Vitis vinifera",
+                    "termSourceRef": "NCBITAXON",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/NCBITaxon_29760"
+                },
+                {
+                    "term": "Escherichia coli",
+                    "termSourceRef": "NCBITAXON",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/NCBITaxon_562"
+                },
+                {
+                    "term": "Trypanosoma brucei",
+                    "termSourceRef": "NCBITAXON",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/NCBITaxon_5691"
+                },
+                {
+                    "term": "sea water",
+                    "termSourceRef": "ENVO",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/ENVO_00002149"
+                }
+            ],
+            "ontologies": [
+                "NCBITAXON",
+                "ENVO"
+            ],
+            "allowedParentOntologyTerms": null
+        },
+        {
+            "ruleName": "Characteristics[Organism]-02",
+            "description": "",
+            "fieldName": "Characteristics[Organism]",
+            "selectionCriteria": {
+                "isaFileType": "sample",
+                "studyCreatedAtOrAfter": null,
+                "studyCreatedBefore": null,
+                "studyCategoryFilter": null,
+                "templateVersionFilter": [
+                    "1.0"
+                ],
+                "isaFileTemplateNameFilter": null,
+                "linkedFieldAndValueFilter": [
+                    {
+                        "name": "Source Name",
+                        "value": null
+                    }
+                ]
+            },
+            "validationType": "any-ontology-term",
+            "defaultValue": null,
+            "allowedMissingOntologyTerms": null,
+            "allowedOtherSources": [
+                {
+                    "sourceLabel": "MTBLS",
+                    "accessionPrefix": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_"
+                }
+            ],
+            "allowedPlaceholders": [
+                {
+                    "termSourceRef": "MTBLS",
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/placeholder"
+                }
+            ],
+            "terms": [
+                {
+                    "term": "Homo sapiens",
+                    "termSourceRef": "NCBITAXON",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/NCBITaxon_9606"
+                },
+                {
+                    "term": "Mus musculus",
+                    "termSourceRef": "NCBITAXON",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/NCBITaxon_10090"
+                },
+                {
+                    "term": "Rattus norvegicus",
+                    "termSourceRef": "NCBITAXON",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/NCBITaxon_10116"
+                },
+                {
+                    "term": "Arabidopsis thaliana",
+                    "termSourceRef": "NCBITAXON",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/NCBITaxon_3702"
+                },
+                {
+                    "term": "Vitis vinifera",
+                    "termSourceRef": "NCBITAXON",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/NCBITaxon_29760"
+                },
+                {
+                    "term": "Escherichia coli",
+                    "termSourceRef": "NCBITAXON",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/NCBITaxon_562"
+                },
+                {
+                    "term": "Trypanosoma brucei",
+                    "termSourceRef": "NCBITAXON",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/NCBITaxon_5691"
+                },
+                {
+                    "term": "sea water",
+                    "termSourceRef": "ENVO",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/ENVO_00002149"
+                },
+                {
+                    "term": "blank",
+                    "termSourceRef": "MTBLS",
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002304"
+                },
+                {
+                    "term": "reference compound",
+                    "termSourceRef": "MSIO",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/MSIO_0000023"
+                }
+            ],
+            "ontologies": [
+                "NCBITAXON",
+                "ENVO",
+                "MTBLS",
+                "WoRMs",
+                "EFO",
+                "NCIT",
+                "MSIO"
+            ],
+            "allowedParentOntologyTerms": null
+        }
+    ]
+}

@@ -4,6 +4,8 @@ import data.metabolights.validation.v2.functions as f
 import rego.v1
 
 import data.metabolights.validation.v2.phase2.definitions as def
+import data.metabolights.validation.v2.phase1.definitions as def1
+
 import data.metabolights.validation.v2.templates
 
 # import input.samples
@@ -50,11 +52,27 @@ rule_a_200_090_001_01 contains result if {
 #  priority: HIGH
 #  section: assays.general
 rule_a_200_090_002_01 contains result if {
-	some file_name, sheet in input.assays
-	some header_index, _ in sheet.table.headers
-
-	control_lists := data.metabolights.validation.v2.controlLists
-	result := f.term_source_ref_not_in_control_list(rego.metadata.rule(), assays, file_name, header_index, control_lists)
+	some file_name, file_table in input.assays
+	some column_index, header in file_table.table.headers
+	control_lists := data.metabolights.validation.v2.controls.assayFileControls
+	control_lists[header.columnHeader]
+	selected_validation_types = {"any-ontology-term"}
+	template_name := file_table.assayTechnique.name
+	result := f.term_source_ref_not_valid(
+		rego.metadata.rule(), 
+		def1.STUDY_CATEGORY,
+		def1.STUDY_TEMPLATE_VERSION,
+		def1.STUDY_CREATED_AT,
+		template_name,
+		"assay",
+		file_table.table, 
+		file_name, 
+		column_index, 
+		selected_validation_types,
+		control_lists,
+		header.columnHeader,
+		"Prioritised ontologies"
+		)
 }
 
 # METADATA
@@ -66,19 +84,27 @@ rule_a_200_090_002_01 contains result if {
 #  priority: HIGH
 #  section: assays.general
 rule_a_200_090_002_02 contains result if {
-	some file_name, sheet in input.assays
-	some header_index, header in sheet.table.headers
-	control_list := data.metabolights.validation.v2.controlLists.prioritisedDefaultTermRefSources
-
-	default_control_list_headers = {header.columnHeader |
-		some technique_name, templates in data.metabolights.validation.v2.templates.assayFileHeaderTemplates
-		technique_name == sheet.assayTechnique.name
-		some _, template in templates
-		template.version == data.metabolights.validation.v2.phase1.definitions.STUDY_TEMPLATE_VERSION
-		some _, header in template.headers
-		some "termSourceRef", _ in header.controlLists
-	}
-	result := f.term_source_ref_not_in_default_control_list(rego.metadata.rule(), assays, file_name, header_index, default_control_list_headers, control_list)
+	some file_name, file_table in input.assays
+	some column_index, header in file_table.table.headers
+	control_lists := data.metabolights.validation.v2.controls.assayFileControls
+	not control_lists[header.columnHeader]
+	selected_validation_types = {"any-ontology-term", "child-ontology-term", "ontology-term-in-selected-ontologies"}
+	template_name := file_table.assayTechnique.name
+	result := f.term_source_ref_not_valid(
+		rego.metadata.rule(), 
+		def1.STUDY_CATEGORY,
+		def1.STUDY_TEMPLATE_VERSION,
+		def1.STUDY_CREATED_AT,
+		template_name,
+		"assay",
+		file_table.table, 
+		file_name, 
+		column_index, 
+		selected_validation_types,
+		control_lists,
+		"__default__",
+		"Prioritised default ontologies"
+		)
 }
 
 # METADATA
@@ -120,10 +146,29 @@ rule_a_200_090_002_04 contains result if {
 #  priority: HIGH
 #  section: assays.general
 rule_a_200_090_002_05 contains result if {
-	some file_name, sheet in input.assays
-	some header_index, _ in sheet.table.headers
-	control_list := data.metabolights.validation.v2.controlLists.prioritisedUnitRefSources
-	result := f.term_source_ref_for_unit_not_in_control_list(rego.metadata.rule(), assays, file_name, header_index, control_list)
+	control_lists := data.metabolights.validation.v2.controls.sampleFileControls
+	some file_name, file_table in input.assays
+	some column_index, header in file_table.table.headers
+	header.columnStructure == "SINGLE_COLUMN_AND_UNIT_ONTOLOGY"
+	selected_validation_types = {"any-ontology-term"}
+	template_name := file_table.assayTechnique.name
+	result := f.term_source_ref_for_unit_not_valid(
+		rego.metadata.rule(), 
+		def1.STUDY_CATEGORY,
+		def1.STUDY_TEMPLATE_VERSION,
+		def1.STUDY_CREATED_AT,
+		template_name,
+		"assay",
+		file_table.table, 
+		file_name, 
+		column_index, 
+		selected_validation_types,
+		control_lists,
+		"Unit",
+		"Prioritised default Unit ontologies"
+		)
+
+
 }
 
 # METADATA
@@ -141,45 +186,6 @@ rule_a_200_090_002_06 contains result if {
 }
 
 # METADATA
-# title: Term Source REF of ontology terms is empty.
-# description: Term Source REF of ontology terms should be defined. A prioritised control list is defined. Review and select from the prioritised control list if possible.
-# custom:
-#  rule_id: rule_a_200_090_002_07
-#  type: WARNING
-#  priority: HIGH
-#  section: assays.general
-rule_a_200_090_002_07 contains result if {
-	some file_name, sheet in input.assays
-	some header_index, header in sheet.table.headers
-	some technique_name, template_list in data.metabolights.validation.v2.templates.assayFileHeaderTemplates
-	technique_name == sheet.assayTechnique.name
-	some _, template in template_list
-	template.version == data.metabolights.validation.v2.phase1.definitions.STUDY_TEMPLATE_VERSION
-
-	control_lists := data.metabolights.validation.v2.controlLists
-	result := f.term_source_ref_is_empty_for_term(rego.metadata.rule(), assays, file_name, header_index, template, control_lists)
-}
-
-# METADATA
-# title: Term Source REF of unit ontology terms is empty.
-# description: Term Source REF of unit ontology terms should be defined. A prioritised control list is defined. Review and select from the prioritised control list if possible.
-# custom:
-#  rule_id: rule_a_200_090_002_08
-#  type: WARNING
-#  priority: HIGH
-#  section: assays.general
-rule_a_200_090_002_08 contains result if {
-	some file_name, sheet in input.assays
-	some header_index, header in sheet.table.headers
-
-	# assayType := def.__ASSAY_TECHNIQUES[fileName]
-
-	# template := templates.assayFileHeaderTemplates[assayType]
-	control_list := data.metabolights.validation.v2.controlLists.prioritisedUnitRefSources
-	result := f.term_source_ref_is_empty_for_unit(rego.metadata.rule(), assays, file_name, header_index, control_list)
-}
-
-# METADATA
 # title: Term not in prioritised control list.
 # description: A prioritised control list is defined. Review and select from the prioritised control list if possible.
 # custom:
@@ -188,32 +194,29 @@ rule_a_200_090_002_08 contains result if {
 #  priority: HIGH
 #  section: assays.general
 rule_a_200_090_002_09 contains result if {
-	some file_name, sheet in input.assays
-	some _, header in sheet.table.headers
-	some header_name, header_control_lists in data.metabolights.validation.v2.controlLists.assayColumns
-	header_name == header.columnHeader
-
-	control_list_definitions := [control_list_definition |
-		some control_list_definition in header_control_lists.controlList
-		some _, technique in control_list_definition.techniques
-		sheet.assayTechnique.name == technique
-	]
-
-	count(control_list_definitions) > 0
-	control_list := control_list_definitions[0].values
-	terms := {ontology.term |
-		some _, ontology in control_list
-	}
-
-	violated_values := {value |
-		some row, value in sheet.table.data[header.columnName]
-		count(value) > 0
-		not value in terms
-		x := (sheet.table.rowOffset + row) + 1
-	}
-
-	count(violated_values) > 0
-	result := f.format_with_values(rego.metadata.rule(), file_name, header.columnIndex + 1, header.columnHeader, violated_values)
+	control_lists := data.metabolights.validation.v2.controls.assayFileControls
+	some file_name, file_table in input.assays
+	some column_index, header in input.assays[file_name].table.headers
+	selected_validation_types = {"selected-ontology-term"}
+	control_lists[header.columnHeader]
+	header.columnStructure == "SINGLE_COLUMN"
+	template_name := file_table.assayTechnique.name
+	# print(header.columnHeader, template_name)
+	result := f.term_value_not_in_selected_terms(
+		rego.metadata.rule(), 
+		def1.STUDY_CATEGORY,
+		def1.STUDY_TEMPLATE_VERSION,
+		def1.STUDY_CREATED_AT,
+		template_name,
+		"assay",
+		file_table.table, 
+		file_name, 
+		column_index, 
+		selected_validation_types,
+		control_lists,
+		header.columnHeader,
+		"Controlled terms"
+		)
 }
 
 # METADATA
@@ -225,123 +228,132 @@ rule_a_200_090_002_09 contains result if {
 #  priority: HIGH
 #  section: assays.general
 rule_a_200_090_002_10 contains result if {
-	some file_name, sheet in input.assays
-	some _, header in sheet.table.headers
+	control_lists := data.metabolights.validation.v2.controls.assayFileControls
+	some file_name, file_table in input.assays
+	some column_index, header in input.assays[file_name].table.headers
+	selected_validation_types = {"selected-ontology-term"}
+	control_lists[header.columnHeader]
 	header.columnStructure == "ONTOLOGY_COLUMN"
-	some header_name, header_control_lists in data.metabolights.validation.v2.controlLists.assayColumns
-	header_name == header.columnHeader
-	some i, "Term Accession Number" in header.additionalColumns
-	accession_number_column_name := sheet.table.columns[header.columnIndex + i + 1]
-	control_list_definitions := [control_list_definition |
-		some control_list_definition in header_control_lists.controlList
-		some _, technique in control_list_definition.techniques
-		sheet.assayTechnique.name == technique
-	]
-
-	count(control_list_definitions) > 0
-	control_list := control_list_definitions[0].values
-	terms := {ontology.termAccessionNumber: ontology.term |
-		some _, ontology in control_list
-	}
-	violated_values := [sprintf("Row: %v, Found: '%v', Expected: '%v' for accession number '%v'", [x, value, expected, accession_number]) |
-		some row, value in sheet.table.data[header.columnName]
-		accession_number := sheet.table.data[accession_number_column_name][row]
-		count(accession_number) > 0
-		count(value) > 0
-		expected := terms[accession_number]
-		value != expected
-		x := (sheet.table.rowOffset + row) + 1
-	]
-	count(violated_values) > 0
-
-	result := f.format_with_values(rego.metadata.rule(), file_name, header.columnIndex + 1, header.columnHeader, violated_values)
+	template_name := file_table.assayTechnique.name
+	# print(header.columnHeader, template_name)
+	result := f.ontology_term_not_in_selected_terms(
+		rego.metadata.rule(), 
+		def1.STUDY_CATEGORY,
+		def1.STUDY_TEMPLATE_VERSION,
+		def1.STUDY_CREATED_AT,
+		template_name,
+		"assay",
+		file_table.table, 
+		file_name, 
+		column_index, 
+		selected_validation_types,
+		control_lists,
+		header.columnHeader,
+		"Controlled terms"
+		)
 }
 
-# METADATA
-# title: Empty term with an accession number in control list.
-# description: Fill term value for the given accession number in control list.
-# custom:
-#  rule_id: rule_a_200_090_002_11
-#  type: WARNING
-#  priority: HIGH
-#  section: assays.general
-rule_a_200_090_002_11 contains result if {
-	some file_name, sheet in input.assays
-	some _, header in sheet.table.headers
-	header.columnStructure == "ONTOLOGY_COLUMN"
-	some header_name, header_control_lists in data.metabolights.validation.v2.controlLists.assayColumns
-	header_name == header.columnHeader
-	some i, "Term Accession Number" in header.additionalColumns
-	accession_number_column_name := sheet.table.columns[header.columnIndex + i + 1]
-	control_list_definitions := [control_list_definition |
-		some control_list_definition in header_control_lists.controlList
-		some _, technique in control_list_definition.techniques
-		sheet.assayTechnique.name == technique
-	]
-
-	count(control_list_definitions) > 0
-	control_list := control_list_definitions[0].values
-	terms := {ontology.termAccessionNumber: ontology.term |
-		some _, ontology in control_list
-	}
-	violated_values := [sprintf("Row: %v, Found: '', Expected: '%v' for accession number '%v'", [x, expected, accession_number]) |
-		some row, value in sheet.table.data[header.columnName]
-		count(value) == 0
-		accession_number := sheet.table.data[accession_number_column_name][row]
-		count(accession_number) > 0
-		expected := terms[accession_number]
-		x := (sheet.table.rowOffset + row) + 1
-	]
-	count(violated_values) > 0
-
-	result := f.format_with_values(rego.metadata.rule(), file_name, header.columnIndex + 1, header.columnHeader, violated_values)
-}
 
 
 # METADATA
-# title: Term Source REF for the given accession is different.
-# description: Use correct ontology Term Source REF for the accession number.
+# title: Term Source REFs of the factor ontology term not in the prioritised control list.
+# description: We highly recommend to use the prioritised Ontology Source Refs for the factor ontology term.
 # custom:
-#  rule_id: rule_a_200_090_002_12
-#  type: WARNING
-#  priority: HIGH
+#  rule_id: rule_a_200_090_002_13
+#  type: ERROR
+#  priority: LOW
 #  section: assays.general
-rule_a_200_090_002_12 contains result if {
-	some file_name, sheet in input.assays
-	some _, header in sheet.table.headers
+rule_a_200_090_002_13 contains result if {
+	control_lists := data.metabolights.validation.v2.controls.assayFileControls
+	some file_name, file_table in input.assays
+	some column_index, header in input.assays[file_name].table.headers
+	selected_validation_types = {"ontology-term-in-selected-ontologies"}
+	control_lists[header.columnHeader]
 	header.columnStructure == "ONTOLOGY_COLUMN"
-	some header_name, header_control_lists in data.metabolights.validation.v2.controlLists.assayColumns
-	header_name == header.columnHeader
-	some i, "Term Accession Number" in header.additionalColumns
-	accession_number_column_name := sheet.table.columns[header.columnIndex + i + 1]
-	some j, "Term Source REF" in header.additionalColumns
-	term_source_ref_column_name := sheet.table.columns[header.columnIndex + j + 1]
-	control_list_definitions := [control_list_definition |
-		some control_list_definition in header_control_lists.controlList
-		some _, technique in control_list_definition.techniques
-		sheet.assayTechnique.name == technique
-	]
-
-	count(control_list_definitions) > 0
-	control_list := control_list_definitions[0].values
-	terms := {ontology.termAccessionNumber: ontology.termSourceRef |
-		some _, ontology in control_list
-	}
-	violated_values := [sprintf("Row: %v, Found: '%v', Expected: '%v' for accession number '%v'", [x, term_source_ref, expected, accession_number]) |
-		some row, value in sheet.table.data[header.columnName]
-		accession_number := sheet.table.data[accession_number_column_name][row]
-		term_source_ref := sheet.table.data[term_source_ref_column_name][row]
-		count(accession_number) > 0
-		count(term_source_ref) > 0
-		expected := terms[accession_number]
-		term_source_ref != expected
-		x := (sheet.table.rowOffset + row) + 1
-	]
-	count(violated_values) > 0
-
-	result := f.format_with_values(rego.metadata.rule(), file_name, header.columnIndex + 1, header.columnHeader, violated_values)
+	template_name := file_table.assayTechnique.name
+	result := f.term_source_ref_not_valid(
+		rego.metadata.rule(), 
+		def1.STUDY_CATEGORY,
+		def1.STUDY_TEMPLATE_VERSION,
+		def1.STUDY_CREATED_AT,
+		template_name,
+		"assay",
+		file_table.table, 
+		file_name, 
+		column_index, 
+		selected_validation_types,
+		control_lists,
+		header.columnHeader,
+		"Valid ontologies "
+		)
 }
 
+# METADATA
+# title: Term Source REFs of the factor ontology term not in the prioritised control list.
+# description: We highly recommend to use the prioritised Ontology Source Refs for the factor ontology term.
+# custom:
+#  rule_id: rule_a_200_090_002_14
+#  type: ERROR
+#  priority: LOW
+#  section: assays.general
+rule_a_200_090_002_14 contains result if {
+	control_lists := data.metabolights.validation.v2.controls.assayFileControls
+	some file_name, file_table in input.assays
+	some column_index, header in input.assays[file_name].table.headers
+	selected_validation_types = {"child-ontology-term"}
+	control_lists[header.columnHeader]
+	header.columnStructure == "ONTOLOGY_COLUMN"
+	template_name := file_table.assayTechnique.name
+
+	result := f.term_source_ref_not_valid(
+		rego.metadata.rule(), 
+		def1.STUDY_CATEGORY,
+		def1.STUDY_TEMPLATE_VERSION,
+		def1.STUDY_CREATED_AT,
+		template_name,
+		"assay",
+		file_table.table, 
+		file_name, 
+		column_index, 
+		selected_validation_types,
+		control_lists,
+		header.columnHeader,
+		"Valid ontologies"
+		)
+}
+
+# METADATA
+# title: invalid pattern ontologies.
+# description: Review and select from the selected ontologies.
+# custom:
+#  rule_id: rule_a_200_090_002_15
+#  type: ERROR
+#  priority: HIGH
+#  section: assays.general
+rule_a_200_090_002_15 contains result if {
+	control_lists := data.metabolights.validation.v2.controls.assayFileControls
+	some file_name, file_table in input.assays
+	some column_index, header in input.assays[file_name].table.headers
+	selected_validation_types = {"selected-ontology-term"}
+	control_lists[header.columnHeader]
+	template_name := file_table.assayTechnique.name
+	# print(header.columnHeader, template_name)
+	result := f.term_value_has_invalid_pattern(
+		rego.metadata.rule(), 
+		def1.STUDY_CATEGORY,
+		def1.STUDY_TEMPLATE_VERSION,
+		def1.STUDY_CREATED_AT,
+		template_name,
+		"assay",
+		file_table.table, 
+		file_name, 
+		column_index, 
+		selected_validation_types,
+		control_lists,
+		header.columnHeader,
+		"Expected pattern"
+		)
+}
 
 # METADATA
 # title: Term Accession Number length of ontology terms less than 3 characters.
@@ -538,7 +550,7 @@ rule_a_200_090_006_01 contains result if {
 	column_name := sheet.table.columns[column_index]
 	row_offset := sheet.table.rowOffset
 
-	unexpected_terms := {term | 
+	unexpected_terms := {term |
 		some name, black_list_control in data.metabolights.validation.v2.blackLists.assayColumns
 		name == header.columnHeader
 
@@ -689,7 +701,6 @@ rule_a_200_300_001_01 contains result if {
 	total_coumn_count := count(column_names)
 	row_offset := sheet.table.rowOffset
 	violated_values := {sprintf("[row: %03v]", [row_index]) |
-		
 		some row, value in sheet.table.data[header.columnHeader]
 		total_emtpy_count := count({violated_column |
 			some violated_column in column_names
@@ -792,7 +803,6 @@ rule_a_200_300_002_01 contains result if {
 	result := f.format_with_values(rego.metadata.rule(), file_name, header.columnIndex + 1, header.columnHeader, [msg])
 }
 
-
 # METADATA
 # title: Scan Polarity column values are not same as assay file name.
 # description: Values for Scan Polarity column is not same as assay file name.
@@ -812,7 +822,7 @@ rule_a_200_300_003_01 contains result if {
 	count(scan_polarities) == 1
 	some scan_polarity in scan_polarities
 	scan_polarity in {"positive", "negative", "alternating"}
-	
+
 	techniques := {technique |
 		some header_name, items in data.metabolights.validation.v2.controlLists.assayColumns
 		header_name == "Parameter Value[Scan polarity]"
@@ -820,14 +830,13 @@ rule_a_200_300_003_01 contains result if {
 		some value in controlList.values
 		scan_polarity == value.term
 
-		some technique in controlList.techniques			
+		some technique in controlList.techniques
 	}
 	count(techniques) > 0
 	not contains(file_name, scan_polarity)
 
 	result := f.format_with_file_description_and_values(rego.metadata.rule(), file_name, "Expected scan polarity value in assay filename", scan_polarities)
 }
-
 
 # METADATA
 # title: Scan Polarity column values are not unique.
@@ -846,11 +855,10 @@ rule_a_200_300_003_02 contains result if {
 		some x in sheet.table.data[column_name]
 		count(x) > 0
 	}
-	count(scan_polarities) > 1	
+	count(scan_polarities) > 1
 
 	result := f.format_with_file_description_and_values(rego.metadata.rule(), file_name, "There are multiple scan polarity values in Parameter Value[Scan polarity] column.", scan_polarities)
 }
-
 
 # METADATA
 # title: Derived Spectral Data Files, Acquisition Parameter Data File and Free Induction Decay Data File values are empty in NMR assays.
@@ -945,7 +953,6 @@ rule_a_200_500_001_01 contains result if {
 	result := f.format_with_desc(rego.metadata.rule(), file_name, column_index + 1, header.columnHeader, values, "Expected extensions", def.CL_DERIVED_FILE_EXTENSIONS_STR)
 }
 
-
 # METADATA
 # title: Column Type column values are not same as assay file name.
 # description: if all values in Column Type are in a control list, technique name defined in control list should be in assay file name.
@@ -973,7 +980,7 @@ rule_a_200_600_001_01 contains result if {
 		some value in controlList.values
 		column_type_name == value.term
 
-		some technique in controlList.techniques			
+		some technique in controlList.techniques
 	}
 	count(techniques) == 1
 	values_str := concat(", ", techniques)

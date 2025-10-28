@@ -1,0 +1,110 @@
+{
+    "Study Assay Measurement Type": [
+        {
+            "ruleName": "Study Assay Measurement Type-01",
+            "description": "",
+            "fieldName": "Study Assay Measurement Type",
+            "selectionCriteria": {
+                "isaFileType": "investigation",
+                "studyCreatedAtOrAfter": null,
+                "studyCreatedBefore": null,
+                "studyCategoryFilter": [
+                    "ms-mhd-enabled"
+                ],
+                "templateVersionFilter": null,
+                "isaFileTemplateNameFilter": null,
+                "linkedFieldAndValueFilter": null
+            },
+            "validationType": "selected-ontology-term",
+            "defaultValue": null,
+            "allowedMissingOntologyTerms": null,
+            "allowedOtherSources": null,
+            "allowedPlaceholders": null,
+            "terms": [
+                {
+                    "term": "targeted metabolite profiling",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/MSIO_0000100",
+                    "termSourceRef": "MSIO"
+                },
+                {
+                    "term": "untargeted metabolite profiling",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/MSIO_0000101",
+                    "termSourceRef": "MSIO"
+                }
+            ],
+            "ontologies": null,
+            "allowedParentOntologyTerms": null
+        },
+        {
+            "ruleName": "Study Assay Measurement Type-02",
+            "description": "",
+            "fieldName": "Study Assay Measurement Type",
+            "selectionCriteria": {
+                "isaFileType": "investigation",
+                "studyCreatedAtOrAfter": "2025-12-01T00:00:00",
+                "studyCreatedBefore": null,
+                "studyCategoryFilter": null,
+                "templateVersionFilter": null,
+                "isaFileTemplateNameFilter": null,
+                "linkedFieldAndValueFilter": null
+            },
+            "validationType": "selected-ontology-term",
+            "defaultValue": null,
+            "allowedMissingOntologyTerms": null,
+            "allowedOtherSources": null,
+            "allowedPlaceholders": null,
+            "terms": [
+                {
+                    "term": "targeted metabolite profiling",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/MSIO_0000100",
+                    "termSourceRef": "MSIO"
+                },
+                {
+                    "term": "untargeted metabolite profiling",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/MSIO_0000101",
+                    "termSourceRef": "MSIO"
+                }
+            ],
+            "ontologies": null,
+            "allowedParentOntologyTerms": null
+        },
+        {
+            "ruleName": "Study Assay Measurement Type-03",
+            "description": "",
+            "fieldName": "Study Assay Measurement Type",
+            "selectionCriteria": {
+                "isaFileType": "investigation",
+                "studyCreatedAtOrAfter": null,
+                "studyCreatedBefore": "2025-12-01T00:00:00",
+                "studyCategoryFilter": null,
+                "templateVersionFilter": null,
+                "isaFileTemplateNameFilter": null,
+                "linkedFieldAndValueFilter": null
+            },
+            "validationType": "selected-ontology-term",
+            "defaultValue": null,
+            "allowedMissingOntologyTerms": null,
+            "allowedOtherSources": null,
+            "allowedPlaceholders": null,
+            "terms": [
+                {
+                    "term": "metabolite profiling assay",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/OBI_0000366",
+                    "termSourceRef": "OBI"
+                },
+                {
+                    "term": "targeted metabolite profiling",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/MSIO_0000100",
+                    "termSourceRef": "MSIO"
+                },
+                {
+                    "term": "untargeted metabolite profiling",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/MSIO_0000101",
+                    "termSourceRef": "MSIO"
+                }
+            ],
+            "ontologies": null,
+            "allowedParentOntologyTerms": null
+        }
+    ]
+}

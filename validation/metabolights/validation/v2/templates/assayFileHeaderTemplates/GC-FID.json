@@ -152,7 +152,7 @@
                     "columnCategory": "Parameter",
                     "columnHeader": "Parameter Value[Temperature]",
                     "columnPrefix": "Parameter Value",
-                    "columnStructure": "SINGLE_COLUMN AND UNIT ONTOLOGY",
+                    "columnStructure": "SINGLE_COLUMN_AND_UNIT_ONTOLOGY",
                     "controlLists": null,
                     "defaultColumnIndex": 14,
                     "defaultValue": null,
@@ -173,7 +173,7 @@
                     "required": false
                 },
                 {
-                    "columnCategory": "ontologyColumn",
+                    "columnCategory": "Label",
                     "columnHeader": "Label",
                     "columnStructure": "ONTOLOGY_COLUMN",
                     "controlLists": {
@@ -431,7 +431,7 @@
                     "columnCategory": "Parameter",
                     "columnHeader": "Parameter Value[Temperature]",
                     "columnPrefix": "Parameter Value",
-                    "columnStructure": "SINGLE_COLUMN AND UNIT ONTOLOGY",
+                    "columnStructure": "SINGLE_COLUMN_AND_UNIT_ONTOLOGY",
                     "controlLists": null,
                     "defaultColumnIndex": 28,
                     "defaultValue": null,
@@ -452,7 +452,7 @@
                     "required": false
                 },
                 {
-                    "columnCategory": "ontologyColumn",
+                    "columnCategory": "Label",
                     "columnHeader": "Label",
                     "columnStructure": "ONTOLOGY_COLUMN",
                     "controlLists": {

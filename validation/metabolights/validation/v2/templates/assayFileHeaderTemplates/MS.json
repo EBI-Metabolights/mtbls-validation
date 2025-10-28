@@ -77,7 +77,7 @@
                 },
                 {
                     "columnStructure": "ONTOLOGY_COLUMN",
-                    "columnCategory": "ontologyColumn",
+                    "columnCategory": "Label",
                     "columnHeader": "Label",
                     "controlLists": {
                         "termSourceRef": "prioritisedStudyFactorRefSources"
@@ -356,7 +356,7 @@
                 },
                 {
                     "columnStructure": "ONTOLOGY_COLUMN",
-                    "columnCategory": "ontologyColumn",
+                    "columnCategory": "Label",
                     "columnHeader": "Label",
                     "controlLists": {
                         "termSourceRef": "prioritisedStudyFactorRefSources"
