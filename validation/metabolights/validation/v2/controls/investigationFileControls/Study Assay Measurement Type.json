@@ -65,7 +65,7 @@
                     "termSourceRef": "MSIO"
                 }
             ],
-            "ontologies": null,
+            "ontologies": ["MSIO"],
             "allowedParentOntologyTerms": null
         },
         {
@@ -103,7 +103,7 @@
                     "termSourceRef": "MSIO"
                 }
             ],
-            "ontologies": null,
+            "ontologies": ["MSIO", "OBI"],
             "allowedParentOntologyTerms": null
         }
     ]

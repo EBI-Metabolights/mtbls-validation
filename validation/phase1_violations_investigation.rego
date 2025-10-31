@@ -2,6 +2,7 @@ package metabolights.validation.v2.phase1.violations
 
 import rego.v1
 import data.metabolights.validation.v2.functions as f
+import data.metabolights.validation.v2.phase1.definitions as def1
 
 
 #########################################################################################################
@@ -434,61 +435,80 @@ rule_i_100_310_001_01 contains result if {
 }
 
 # METADATA
-# title: Study Design Type is empty.
-# description: Study Design Type should be defined.
+# title: Study Design Type is not valid.
+# description: Study Design Type value MUST be selected from the control list.
 # custom:
 #  rule_id: rule_i_100_310_002_01
 #  type: ERROR
 #  priority: HIGH
 #  section: investigation.studyDesignDescriptors
 rule_i_100_310_002_01 contains result if {
-	min_count := 1
-	some i, j
-	count(input.investigation.studies[i].studyDesignDescriptors.designTypes[j].term) < min_count
+	some study in input.investigation.studies
+	some idx, design_descriptor in study.studyDesignDescriptors.designTypes
 
-	msg := sprintf("Study design type should be defined for the study %v. Index: %v", [input.investigation.studies[i].identifier, j + 1])
-	source := input.investigationFilePath
-	result := f.format(rego.metadata.rule(), msg, source)
+	result := f.single_ontology_term_not_in_selected_terms(
+		rego.metadata.rule(), 
+		input.investigationFilePath,
+		def1.RULE_STUDY_DESIGN_TYPE,
+		design_descriptor,
+		sprintf("Study Design Type [%v]", [idx + 1]),
+		"Select valid ontology terms ",
+		)
 }
-
 # METADATA
 # title: Study Design Type Term Accession Number is empty.
-# description: Study Design Type Term Accession Number should be defined.
+# description: Study Design Type value MUST be selected from the prioritised ontologies.
 # custom:
 #  rule_id: rule_i_100_310_003_01
-#  type: WARNING
+#  type: ERROR
 #  priority: HIGH
 #  section: investigation.studyDesignDescriptors
 rule_i_100_310_003_01 contains result if {
-	min_count = 1
-	some i, j
-	input.investigation.studies[i].studyDesignDescriptors.designTypes[j].termAccessionNumber
-	count(input.investigation.studies[i].studyDesignDescriptors.designTypes[j].termAccessionNumber) < min_count
+	def := data.metabolights.validation.v2.phase1.definitions 
+	some study in input.investigation.studies
+	some idx, design_descriptor in study.studyDesignDescriptors.designTypes
+	# selected_validation_types := {}
+	selected_validation_types = {"any-ontology-term", "child-ontology-term", "ontology-term-in-selected-ontologies"}
 
-	msg := sprintf("Study design type term accession number should be set for the study %v. Index: %v", [input.investigation.studies[i].identifier, j + 1])
-	source := input.investigationFilePath
-	result := f.format(rego.metadata.rule(), msg, source)
+	result := f.single_ontology_term_source_ref_not_valid(
+		rego.metadata.rule(), 
+		input.investigationFilePath,
+		def1.RULE_STUDY_DESIGN_TYPE,
+		design_descriptor,
+		sprintf("Study Design Type [%v]", [idx + 1]),
+		"Select valid ontologies ",
+		selected_validation_types
+		)
+		
 }
+
 
 # METADATA
 # title: Study Design Type Term Source REF is empty.
-# description: Study Design Type Term Source REF should be defined.
+# description: Study Design Type value MAY be selected from the prioritised ontologies.
 # custom:
 #  rule_id: rule_i_100_310_004_01
 #  type: WARNING
 #  priority: HIGH
 #  section: investigation.studyDesignDescriptors
 rule_i_100_310_004_01 contains result if {
-	min_count = 1
-	some i, j
-	input.investigation.studies[i].studyDesignDescriptors.designTypes[j].termSourceRef
-	count(input.investigation.studies[i].studyDesignDescriptors.designTypes[j].termSourceRef) < min_count
-
-	msg := sprintf("Study design type termSourceRef should be set for the study %v. Index: %v", [input.investigation.studies[i].identifier, j + 1])
-	source := input.investigationFilePath
-	result := f.format(rego.metadata.rule(), msg, source)
+	def := data.metabolights.validation.v2.phase1.definitions 
+	some study in input.investigation.studies
+	some idx, design_descriptor in study.studyDesignDescriptors.designTypes
+	
+	not def1.RULE_STUDY_DESIGN_TYPE.validationType
+	design_descriptor
+	selected_validation_types = {"any-ontology-term", "child-ontology-term", "ontology-term-in-selected-ontologies"}
+	result := f.single_ontology_term_source_ref_not_valid(
+		rego.metadata.rule(), 
+		input.investigationFilePath,
+		def1.RULE_DEFAULT_ONTOLOGIES,
+		design_descriptor,
+		sprintf("Study Design Type [%v]", [idx + 1]),
+		"Prioritised ontologies",
+		selected_validation_types
+		)
 }
-
 # METADATA
 # title: Study Design Type Term Source REF not referenced in investigation file.
 # description: Study Design Type Term Source REFs should be referenced in the ONTOLOGY SOURCE REFERENCE section in i_Investigation.txt.
@@ -506,27 +526,6 @@ rule_i_100_310_004_02 contains result if {
 	termSourceRef := input.investigation.studies[i].studyDesignDescriptors.designTypes[j].termSourceRef
 
 	msg := sprintf("Study design type source reference at index %v, '%v', is not in the sources reference list for study: %v.", [j + 1, termSourceRef, input.investigation.studies[i].identifier])
-	source := input.investigationFilePath
-	result := f.format(rego.metadata.rule(), msg, source)
-}
-
-# METADATA
-# title: Study Design Type Term Source REF not in prioritised control list.
-# description: A prioritised control list is defined. Review and select from the prioritised control list if possible.
-# custom:
-#  rule_id: rule_i_100_310_004_03
-#  type: WARNING
-#  priority: MEDIUM
-#  section: investigation.studyDesignDescriptors
-rule_i_100_310_004_03 contains result if {
-	def := data.metabolights.validation.v2.phase1.definitions 
-	min_count = 3
-	some i, j
-	termSourceRef := input.investigation.studies[i].studyDesignDescriptors.designTypes[j].termSourceRef
-
-	termSourceRef in def._ONTOLOGY_SOURCE_REFERENCE_NAMES
-	not termSourceRef in def.CL_STUDY_DESIGN_DESCRIPTOR_REF_SOURCES
-	msg := sprintf("Study design type source reference at index %v, '%v', is not in Metabolights control list for study: %v, expected: [%v] ", [j + 1, termSourceRef, input.investigation.studies[i].identifier, def.CL_STUDY_DESIGN_DESCRIPTOR_REF_SOURCES_STR])
 	source := input.investigationFilePath
 	result := f.format(rego.metadata.rule(), msg, source)
 }
@@ -672,8 +671,8 @@ rule_i_100_320_006_01 contains result if {
 }
 
 # METADATA
-# title: Study Publication Status is empty.
-# description: Study Publication Status must be defined.
+# title: Study Publication Status is not valid.
+# description: Study Publication Status value MUST be selected from the control list.
 # custom:
 #  rule_id: rule_i_100_320_007_01
 #  type: ERROR
@@ -681,67 +680,69 @@ rule_i_100_320_006_01 contains result if {
 #  section: investigation.studyPublications
 rule_i_100_320_007_01 contains result if {
 	def := data.metabolights.validation.v2.phase1.definitions 
-	min_count = 1
-	some i, j
-	publication := input.investigation.studies[i].studyPublications.publications[j]
-	count(publication.status.term) < min_count
-	msg := sprintf("Publication status is not valid for the study %v publication. Current value '%v', expected values: [%v]', minimum length: %v, publication: '%v'", [input.investigation.studies[i].identifier, publication.status.term, def.CL_PUBLICATION_STATUS_TERMS_STR, min_count, publication.title])
-	source := input.investigationFilePath
-	result := f.format(rego.metadata.rule(), msg, source)
+	some study in input.investigation.studies
+	some idx, publication in study.studyPublications.publications
+
+	result := f.single_ontology_term_not_in_selected_terms(
+		rego.metadata.rule(), 
+		input.investigationFilePath,
+		def1.RULE_PUBLICATION_STATUS,
+		publication.status,
+		sprintf("Publication [%v] Status", [idx + 1]),
+		"Select valid ontology terms ",
+		)
 }
 
 # METADATA
-# title: Study Publication Status not in prioritised control list.
-# description: A prioritised control list is defined. Review and select from the prioritised control list if possible.
+# title: Study Publication Status is not valid.
+# description: Study Publication Status value MUST be selected from the prioritised ontologies.
 # custom:
 #  rule_id: rule_i_100_320_007_02
-#  type: WARNING
+#  type: ERROR
 #  priority: MEDIUM
 #  section: investigation.studyPublications
 rule_i_100_320_007_02 contains result if {
 	def := data.metabolights.validation.v2.phase1.definitions 
-	some i, j
-	publication := input.investigation.studies[i].studyPublications.publications[j]
-	not publication.status.term in def.CL_PUBLICATION_STATUS_TERMS
-	msg := sprintf("Publication status is not in control list for the study %v publication. Current value '%v', expected values: [%v]', publication: '%v'", [input.investigation.studies[i].identifier, publication.status.term, def.CL_PUBLICATION_STATUS_TERMS_STR, publication.title])
-	source := input.investigationFilePath
-	result := f.format(rego.metadata.rule(), msg, source)
+	some study in input.investigation.studies
+	some idx, publication in study.studyPublications.publications
+	# selected_validation_types := {}
+	selected_validation_types = {"any-ontology-term", "child-ontology-term", "ontology-term-in-selected-ontologies"}
+
+	result := f.single_ontology_term_source_ref_not_valid(
+		rego.metadata.rule(), 
+		input.investigationFilePath,
+		def1.RULE_PUBLICATION_STATUS,
+		publication.status,
+		sprintf("Publication [%v] Status", [idx + 1]),
+		"Select valid ontologies ",
+		selected_validation_types
+		)		
 }
 
 # METADATA
-# title: Study Publication Status Term Accession Number is empty.
-# description: Study Publication Status Term Accession Number should be defined.
-# custom:
-#  rule_id: rule_i_100_320_008_01
-#  type: WARNING
-#  priority: HIGH
-#  section: investigation.studyPublications
-rule_i_100_320_008_01 contains result if {
-	min_count = 1
-	some i, j
-	publication := input.investigation.studies[i].studyPublications.publications[j]
-	count(publication.status.termAccessionNumber) < min_count
-	msg := sprintf("Study publication status accession number is not valid. Study: %v, publication index: %v, current value '%v', publication title: '%v'", [input.investigation.studies[i].identifier, j + 1, publication.status.termAccessionNumber, publication.title])
-	source := input.investigationFilePath
-	result := f.format(rego.metadata.rule(), msg, source)
-}
-
-# METADATA
-# title: Study Publication Status Term Source REF is empty.
-# description: Study Publication Status Term Source REF should be defined.
+# title: Study Publication Status is not is not selected from the prioritised ontologies.
+# description: Study Publication Status value MAY be selected from the prioritised ontologies.
 # custom:
 #  rule_id: rule_i_100_320_009_01
 #  type: WARNING
 #  priority: HIGH
 #  section: investigation.studyPublications
 rule_i_100_320_009_01 contains result if {
-	min_count = 1
-	some i, j
-	publication := input.investigation.studies[i].studyPublications.publications[j]
-	count(publication.status.termSourceRef) < min_count
-	msg := sprintf("Publication status term source reference is not valid. Study: %v, publication index: %v, current value '%v', publication: '%v'", [input.investigation.studies[i].identifier, j + 1, publication.status.termSourceRef, publication.title])
-	source := input.investigationFilePath
-	result := f.format(rego.metadata.rule(), msg, source)
+	def := data.metabolights.validation.v2.phase1.definitions 
+	some study in input.investigation.studies
+	some idx, publication in study.studyPublications.publications
+	not def1.RULE_PUBLICATION_STATUS
+	publication.status.termSourceRef
+	selected_validation_types = {"any-ontology-term", "child-ontology-term", "ontology-term-in-selected-ontologies"}
+	result := f.single_ontology_term_source_ref_not_valid(
+		rego.metadata.rule(), 
+		input.investigationFilePath,
+		def1.RULE_DEFAULT_ONTOLOGIES,
+		publication.status,
+		sprintf("Publication [%v] Status", [idx + 1]),
+		"Prioritised ontologies",
+		selected_validation_types
+		)
 }
 
 # METADATA
@@ -764,48 +765,6 @@ rule_i_100_320_009_02 contains result if {
 	result := f.format(rego.metadata.rule(), msg, source)
 }
 
-# METADATA
-# title: Study Publication Status Term Source REF not in prioritised control list.
-# description: A prioritised control list is defined. Review and select from the prioritised control list if possible.
-# custom:
-#  rule_id: rule_i_100_320_009_03
-#  type: WARNING
-#  priority: MEDIUM
-#  section: investigation.studyPublications
-rule_i_100_320_009_03 contains result if {
-	def := data.metabolights.validation.v2.phase1.definitions 
-	min_count = 3
-	some i, j
-
-	publication := input.investigation.studies[i].studyPublications.publications[j]
-	count(publication.status.termSourceRef) > 0
-	not publication.status.termSourceRef in def.CL_PUBLICATION_STATUS_REF_SOURCES
-	msg := sprintf("Publication status source reference  '%v' is not in control list. Study: %v, expected [%v], publication: '%v'", [publication.status.termSourceRef, input.investigation.studies[i].identifier, def.CL_PUBLICATION_STATUS_REF_SOURCES_STR, publication.title])
-	source := input.investigationFilePath
-	result := f.format(rego.metadata.rule(), msg, source)
-}
-
-# # METADATA
-# # title: No error message in study publications section
-# # description: No error message in study publications section
-# # custom:
-# #  rule_id: rule_i_100_320_000_01
-# #  type: SUCCESS
-# #  priority: HIGH
-# #  section: investigation.studyPublications
-# rule_i_100_320_000_01 contains result if {
-# 	count(rule_i_100_320_001_01) == 0
-# 	count(rule_i_100_320_005_01) == 0
-# 	count(rule_i_100_320_006_01) == 0
-# 	count(rule_i_100_320_007_01) == 0
-# 	count(rule_i_100_320_008_01) == 0
-# 	count(rule_i_100_320_009_01) == 0
-# 	count(rule_i_100_320_009_02) == 0
-
-# 	msg := ""
-# 	source := input.investigationFilePath
-# 	result := f.format(rego.metadata.rule(), msg, source)
-# }
 
 #########################################################################################################
 #########################################################################################################
@@ -848,59 +807,80 @@ rule_i_100_330_002_01 contains result if {
 }
 
 # METADATA
-# title: Study Factor Type length less than 2 characters.
-# description: Study Factor Type must be defined with length equal or greater than 2 characters.
+# title: Study Factor Type is not valid.
+# description: Study Factor Type value MUST be selected from the control list.
 # custom:
 #  rule_id: rule_i_100_330_003_01
 #  type: ERROR
 #  priority: HIGH
 #  section: investigation.studyFactors
 rule_i_100_330_003_01 contains result if {
-	min_count = 2
-	some i, j
-	count(input.investigation.studies[i].studyFactors.factors[j].type.term) < min_count
 
-	msg := sprintf("Study factor type name should be set for the study %v. Index: %v", [input.investigation.studies[i].identifier, j + 1])
-	source := input.investigationFilePath
-	result := f.format(rego.metadata.rule(), msg, source)
+
+	def := data.metabolights.validation.v2.phase1.definitions 
+	some study in input.investigation.studies
+	some idx, factor in study.studyFactors.factors
+
+	result := f.single_ontology_term_not_in_selected_terms(
+		rego.metadata.rule(), 
+		input.investigationFilePath,
+		def1.RULE_STUDY_FACTOR_TYPE,
+		factor.type,
+		sprintf("Study Factor [%v] Type", [idx + 1]),
+		"Select valid ontology terms ",
+		)
 }
-
 # METADATA
-# title: Study Factor Type Term Accession Number is empty.
-# description: Study Factor Type Term Accession Number should be defined.
+# title: Study Factor Type is not valid.
+# description: Study Factor Type value MUST be selected from the prioritised ontologies.
 # custom:
 #  rule_id: rule_i_100_330_004_01
-#  type: WARNING
+#  type: ERROR
 #  priority: HIGH
 #  section: investigation.studyFactors
 rule_i_100_330_004_01 contains result if {
-	min_count = 1
-	some i, j
-	factor := input.investigation.studies[i].studyFactors.factors[j]
-	
-	count(factor.type.termAccessionNumber) < min_count
-	msg := sprintf("Study factor type term accession number should be set for the study %v. Index: %v, Term: '%v'", [input.investigation.studies[i].identifier, j + 1, factor.type.term])
-	source := input.investigationFilePath
-	result := f.format(rego.metadata.rule(), msg, source)
+	def := data.metabolights.validation.v2.phase1.definitions 
+	some study in input.investigation.studies
+	some idx, factor in study.studyFactors.factors
+	selected_validation_types = {"any-ontology-term", "child-ontology-term", "ontology-term-in-selected-ontologies"}
+
+	result := f.single_ontology_term_source_ref_not_valid(
+		rego.metadata.rule(), 
+		input.investigationFilePath,
+		def1.RULE_STUDY_FACTOR_TYPE,
+		factor.type,
+		sprintf("Study Factor [%v] Type", [idx + 1]),
+		"Select valid ontologies ",
+		selected_validation_types
+		)
 }
 
 # METADATA
-# title: Study Factor Type Term Source REF is empty.
-# description: Study Factor Type Term Source REF should be defined.
+# title: Study Factor Type Term Source REF is not selected from the prioritised ontologies.
+# description: Study Factor Type value MAY be selected from the prioritised ontologies.
 # custom:
 #  rule_id: rule_i_100_330_005_01
 #  type: WARNING
 #  priority: HIGH
 #  section: investigation.studyFactors
 rule_i_100_330_005_01 contains result if {
-	min_count = 2
-	some i, j
-	factor := input.investigation.studies[i].studyFactors.factors[j]
+	def := data.metabolights.validation.v2.phase1.definitions 
+	some study in input.investigation.studies
+	some idx, factor in study.studyFactors.factors
+	selected_validation_types = {"any-ontology-term", "child-ontology-term", "ontology-term-in-selected-ontologies"}
 
-	count(factor.type.termSourceRef) < min_count
-	msg := sprintf("Study factor type term source reference should be set for the study %v. Index: %v, Term: '%v'", [input.investigation.studies[i].identifier, j + 1, factor.type.term])
-	source := input.investigationFilePath
-	result := f.format(rego.metadata.rule(), msg, source)
+	not def1.RULE_STUDY_FACTOR_TYPE
+
+	selected_validation_types = {"any-ontology-term", "child-ontology-term", "ontology-term-in-selected-ontologies"}
+	result := f.single_ontology_term_source_ref_not_valid(
+		rego.metadata.rule(), 
+		input.investigationFilePath,
+		def1.RULE_DEFAULT_ONTOLOGIES,
+		factor.type,
+		sprintf("Study Factor [%v] Type", [idx + 1]),
+		"Prioritised ontologies",
+		selected_validation_types
+		)
 }
 
 # METADATA
@@ -921,44 +901,6 @@ rule_i_100_330_005_02 contains result if {
 	result := f.format(rego.metadata.rule(), msg, source)
 }
 
-# METADATA
-# title: Study Factor Type Term Source REF not in prioritised control list.
-# description: A prioritised control list is defined. Review and select from the prioritised control list if possible.
-# custom:
-#  rule_id: rule_i_100_330_005_03
-#  type: WARNING
-#  priority: MEDIUM
-#  section: investigation.studyFactors
-rule_i_100_330_005_03 contains result if {
-	some i, j
-	def := data.metabolights.validation.v2.phase1.definitions 
-	count(input.investigation.studies[i].studyFactors.factors[j].type.termSourceRef) > 0
-	not input.investigation.studies[i].studyFactors.factors[j].type.termSourceRef in def.CL_STUDY_FACTOR_REF_SOURCES
-	msg := sprintf("Study factor type source reference is not in the control list. Study: %v, index: '%v', current value '%v', expected: [%v]", [input.investigation.studies[i].identifier, j + 1, input.investigation.studies[i].studyFactors.factors[j].type.termSourceRef, def.CL_STUDY_FACTOR_REF_SOURCES_STR])
-	source := input.investigationFilePath
-	result := f.format(rego.metadata.rule(), msg, source)
-}
-
-# # METADATA
-# # title: No error message in study factors section
-# # description: No error message in study factors section
-# # custom:
-# #  rule_id: rule_i_100_330_000_01
-# #  type: SUCCESS
-# #  priority: HIGH
-# #  section: investigation.studyFactors
-# rule_i_100_330_000_01 contains result if {
-# 	count(rule_i_100_330_001_01) == 0
-# 	count(rule_i_100_330_002_01) == 0
-# 	count(rule_i_100_330_003_01) == 0
-# 	count(rule_i_100_330_004_01) == 0
-# 	count(rule_i_100_330_005_01) == 0
-# 	count(rule_i_100_330_005_02) == 0
-
-# 	msg := ""
-# 	source := input.investigationFilePath
-# 	result := f.format(rego.metadata.rule(), msg, source)
-# }
 
 #########################################################################################################
 #########################################################################################################
@@ -1070,61 +1012,80 @@ rule_i_100_340_002_04 contains result if {
 }
 
 # METADATA
-# title: Study Assay Measurement Type is empty.
-# description: Study Assay Measurement Type should be defined.
+# title: Study Assay Measurement Type is not valid.
+# description: Study Assay Measurement Type value MUST be selected from the control list.
 # custom:
 #  rule_id: rule_i_100_340_003_01
 #  type: ERROR
 #  priority: HIGH
 #  section: investigation.studyAssays
 rule_i_100_340_003_01 contains result if {
-	min_count = 1
-	some i, j
-	assay := input.investigation.studies[i].studyAssays.assays[j]
-	count(assay.measurementType.term) < min_count
-	msg := sprintf("Assay measurement type name should be set for the study %v, assay file '%v'", [input.investigation.studies[i].identifier, assay.fileName])
-	source := input.investigationFilePath
-	result := f.format(rego.metadata.rule(), msg, source)
+	def := data.metabolights.validation.v2.phase1.definitions 
+	some study in input.investigation.studies
+	some idx, assay in study.studyAssays.assays
+
+	result := f.single_ontology_term_not_in_selected_terms(
+		rego.metadata.rule(), 
+		input.investigationFilePath,
+		def1.RULE_ASSAY_MEASUREMENT_TYPE,
+		assay.measurementType,
+		sprintf("Assay [%v] Measurement Type", [idx + 1]),
+		"Select valid ontology terms ",
+		)
 }
 
+
 # METADATA
-# title: Study Assay Measurement Type Term Accession Number is empty.
-# description: Study Assay Measurement Type Term Accession Number should be defined.
+# title: Study Assay Measurement Type is not valid.
+# description: Study Assay Measurement Type value MUST be selected from the prioritised ontologies.
 # custom:
 #  rule_id: rule_i_100_340_004_01
 #  type: ERROR
 #  priority: HIGH
 #  section: investigation.studyAssays
 rule_i_100_340_004_01 contains result if {
-	min_count = 1
-	some i, j
+	def := data.metabolights.validation.v2.phase1.definitions 
+	some study in input.investigation.studies
+	some idx, assay in study.studyAssays.assays
+	selected_validation_types = {"any-ontology-term", "child-ontology-term", "ontology-term-in-selected-ontologies"}
 
-	assay := input.investigation.studies[i].studyAssays.assays[j]
-	count(assay.measurementType.termAccessionNumber) < min_count
-
-	msg := sprintf("Assay measurement type term accession number should be set for the study %v, assay file '%v'", [input.investigation.studies[i].identifier, assay.fileName])
-	source := input.investigationFilePath
-	result := f.format(rego.metadata.rule(), msg, source)
+	result := f.single_ontology_term_source_ref_not_valid(
+		rego.metadata.rule(), 
+		input.investigationFilePath,
+		def1.RULE_ASSAY_MEASUREMENT_TYPE,
+		assay.measurementType,
+		sprintf("Assay [%v] Measurement Type", [idx + 1]),
+		"Select valid ontologies ",
+		selected_validation_types
+		)
+		
 }
 
 # METADATA
-# title: Study Assay Measurement Type Term Source REF is empty.
-# description: Study Assay Measurement Type Term Source REF should be defined.
+# title: Study Assay Measurement Type is not selected from the prioritised ontologies.
+# description: Study Assay Measurement Type value MAY be selected from the prioritised ontologies.
 # custom:
 #  rule_id: rule_i_100_340_005_01
 #  type: ERROR
 #  priority: HIGH
 #  section: investigation.studyAssays
 rule_i_100_340_005_01 contains result if {
-	min_count = 2
-	some i, j
-	assay := input.investigation.studies[i].studyAssays.assays[j]
-	term := assay.measurementType
-	count(assay.measurementType.termSourceRef) < min_count
-	msg_parameters := [input.investigation.studies[i].identifier, assay.fileName, j + 1, term.termSourceRef]
-	msg := sprintf("Assay measurement type term source reference is not set. Study: %v, assay file: '%v', index: %v, current value: '%v'", msg_parameters)
-	source := input.investigationFilePath
-	result := f.format(rego.metadata.rule(), msg, source)
+	def := data.metabolights.validation.v2.phase1.definitions 
+	some study in input.investigation.studies
+	some idx, assay in study.studyAssays.assays
+
+	not def1.RULE_ASSAY_MEASUREMENT_TYPE
+
+	selected_validation_types = {"any-ontology-term", "child-ontology-term", "ontology-term-in-selected-ontologies"}
+	result := f.single_ontology_term_source_ref_not_valid(
+		rego.metadata.rule(), 
+		input.investigationFilePath,
+		def1.RULE_DEFAULT_ONTOLOGIES,
+		assay.measurementType,
+		sprintf("Assay [%v] Measurement Type", [idx + 1]),
+		"Prioritised ontologies",
+		selected_validation_types
+		)
 }
 
 # METADATA
@@ -1142,91 +1103,89 @@ rule_i_100_340_005_02 contains result if {
 	term := assay.measurementType
 	count(term.termSourceRef) > 0
 	not term.termSourceRef in def._ONTOLOGY_SOURCE_REFERENCE_NAMES
+
 	msg_parameters := [input.investigation.studies[i].identifier, assay.fileName, j + 1, term.termSourceRef]
 	msg := sprintf("Assay measurement type source reference is not in the sources reference list. Study: %v, assay file: '%v', index: %v, current value '%v'", msg_parameters)
 	source := input.investigationFilePath
 	result := f.format(rego.metadata.rule(), msg, source)
 }
 
-# METADATA
-# title: Study Assay Measurement Type Term Source REF not in prioritised control list.
-# description: A prioritised control list is defined. Review and select from the prioritised control list if possible.
-# custom:
-#  rule_id: rule_i_100_340_005_03
-#  type: WARNING
-#  priority: HIGH
-#  section: investigation.studyAssays
-rule_i_100_340_005_03 contains result if {
-	min_count = 3
-	some i, j
-	def := data.metabolights.validation.v2.phase1.definitions 
-	assay := input.investigation.studies[i].studyAssays.assays[j]
-	term := assay.measurementType
-	count(term.termSourceRef) > 0
-	not term.termSourceRef in data.metabolights.validation.v2.phase1.definitions.CL_STUDY_ASSAY_MEASUREMENT_TYPE_REF_SOURCES
-	msg_parameters := [input.investigation.studies[i].identifier, assay.fileName, j + 1, term.termSourceRef, def.CL_STUDY_ASSAY_MEASUREMENT_TYPE_REF_SOURCES_STR]
-	msg := sprintf("Assay measurement type source reference is not in the control list. Study: %v, assay file: '%v', index: %v, current value '%v', expected: [%v]", msg_parameters)
-	source := input.investigationFilePath
-	result := f.format(rego.metadata.rule(), msg, source)
-}
 
 #----------------------------- Assay technologyType ----------------------------------#
 
 # METADATA
-# title: Study Assay Technology Type is empty.
-# description: Study Assay Technology Type should be defined.
+# title: Study Assay Technology Type is not valid.
+# description: Study Assay Technology Type value MUST be selected from the control list.
 # custom:
 #  rule_id: rule_i_100_340_006_01
 #  type: ERROR
 #  priority: HIGH
 #  section: investigation.studyAssays
 rule_i_100_340_006_01 contains result if {
-	min_count = 1
-	some i, j
+	def := data.metabolights.validation.v2.phase1.definitions 
+	some study in input.investigation.studies
+	some idx, assay in study.studyAssays.assays
 
-	assay := input.investigation.studies[i].studyAssays.assays[j]
-	count(assay.technologyType.term) < min_count
-	msg := sprintf("Assay technology type name should be set for the study %v. Index: %v", [input.investigation.studies[i].identifier, j + 1])
-	source := input.investigationFilePath
-	result := f.format(rego.metadata.rule(), msg, source)
+	result := f.single_ontology_term_not_in_selected_terms(
+		rego.metadata.rule(), 
+		input.investigationFilePath,
+		def1.RULE_ASSAY_TECHNOLOGY_TYPE,
+		assay.technologyType,
+		sprintf("Assay [%v] Technology Type", [idx + 1]),
+		"Select valid ontology terms ",
+		)
 }
 
 # METADATA
-# title: Study Assay Technology Type Term Accession Number is empty.
-# description: Study Assay Technology Type Term Accession Number should be defined.
+# title: Study Assay Technology Type is not valid.
+# description: Study Assay Technology Type value MUST be selected from the prioritised ontologies.
 # custom:
 #  rule_id: rule_i_100_340_007_01
 #  type: ERROR
 #  priority: HIGH
 #  section: investigation.studyAssays
 rule_i_100_340_007_01 contains result if {
-	min_count = 1
-	some i, j
-	assay := input.investigation.studies[i].studyAssays.assays[j]
-	assay.technologyType.termAccessionNumber == ""
+	def := data.metabolights.validation.v2.phase1.definitions 
+	some study in input.investigation.studies
+	some idx, assay in study.studyAssays.assays
+	selected_validation_types = {"any-ontology-term", "child-ontology-term", "ontology-term-in-selected-ontologies"}
 
-	msg := sprintf("Assay technology type term accession number should be set for the study %v. Index: %v", [input.investigation.studies[i].identifier, j + 1])
-	source := input.investigationFilePath
-	result := f.format(rego.metadata.rule(), msg, source)
+	result := f.single_ontology_term_source_ref_not_valid(
+		rego.metadata.rule(), 
+		input.investigationFilePath,
+		def1.RULE_ASSAY_TECHNOLOGY_TYPE,
+		assay.technologyType,
+		sprintf("Assay [%v] Technology Type", [idx + 1]),
+		"Select valid ontologies ",
+		selected_validation_types
+		)
 }
 
 # METADATA
-# title: Study Assay Technology Type Term Source REF is empty.
-# description: Study Assay Technology Type Term Source REF should be defined.
+# title: Study Assay Technology Type is not selected from the prioritised ontologies.
+# description: Study Assay Technology Type value MAY be selected from the prioritised ontologies.
 # custom:
 #  rule_id: rule_i_100_340_008_01
 #  type: ERROR
 #  priority: HIGH
 #  section: investigation.studyAssays
 rule_i_100_340_008_01 contains result if {
-	min_count = 2
-	some i, j
-
-	assay := input.investigation.studies[i].studyAssays.assays[j]
-	count(assay.technologyType.termSourceRef) < min_count
-	msg := sprintf("Assay technology type term source reference should be set for the study %v. Index: %v", [input.investigation.studies[i].identifier, j + 1])
-	source := input.investigationFilePath
-	result := f.format(rego.metadata.rule(), msg, source)
+	def := data.metabolights.validation.v2.phase1.definitions 
+	some study in input.investigation.studies
+	some idx, assay in study.studyAssays.assays
+	
+	not def1.RULE_ASSAY_TECHNOLOGY_TYPE
+	
+	selected_validation_types = {"any-ontology-term", "child-ontology-term", "ontology-term-in-selected-ontologies"}
+	result := f.single_ontology_term_source_ref_not_valid(
+		rego.metadata.rule(), 
+		input.investigationFilePath,
+		def1.RULE_DEFAULT_ONTOLOGIES,
+		assay.technologyType,
+		sprintf("Assay [%v] Technology Type", [idx + 1]),
+		"Select valid ontologies ",
+		selected_validation_types
+		)
 }
 
 # METADATA
@@ -1248,24 +1207,6 @@ rule_i_100_340_008_02 contains result if {
 	result := f.format(rego.metadata.rule(), msg, source)
 }
 
-# METADATA
-# title: Study Assay Technology Type Term Source REF not in prioritised control list.
-# description: A prioritised control list is defined. Review and select from the prioritised control list if possible.
-# custom:
-#  rule_id: rule_i_100_340_008_03
-#  type: WARNING
-#  priority: HIGH
-#  section: investigation.studyAssays
-rule_i_100_340_008_03 contains result if {
-	some i, j
-	assay := input.investigation.studies[i].studyAssays.assays[j]
-	count(assay.technologyType.termSourceRef) > 0
-	def := data.metabolights.validation.v2.phase1.definitions
-	not assay.technologyType.termSourceRef in def.CL_STUDY_ASSAY_TECHNOLOGY_TYPE_REF_SOURCES
-	msg := sprintf("Assay technology type source reference is not in the control list. Study: %v, index: '%v', current value '%v', expected: [%v]", [input.investigation.studies[i].identifier, j + 1, assay.technologyType.termSourceRef, def.CL_STUDY_ASSAY_TECHNOLOGY_TYPE_REF_SOURCES_STR])
-	source := input.investigationFilePath
-	result := f.format(rego.metadata.rule(), msg, source)
-}
 
 # METADATA
 # title: Study Assay Technology Platform is empty.
@@ -1285,32 +1226,6 @@ rule_i_100_340_009_01 contains result if {
 	source := input.investigationFilePath
 	result := f.format(rego.metadata.rule(), msg, source)
 }
-
-# # METADATA
-# # title: No error message in study assays section
-# # description: No error message in study assays section
-# # custom:
-# #  rule_id: rule_i_100_340_000_01
-# #  type: SUCCESS
-# #  priority: HIGH
-# #  section: investigation.studyAssays
-# rule_i_100_340_000_01 contains result if {
-# 	count(rule_i_100_340_001_01) == 0
-# 	count(rule_i_100_340_002_01) == 0
-# 	count(rule_i_100_340_002_02) == 0
-# 	count(rule_i_100_340_003_01) == 0
-# 	count(rule_i_100_340_004_01) == 0
-# 	count(rule_i_100_340_005_01) == 0
-# 	count(rule_i_100_340_005_02) == 0
-# 	count(rule_i_100_340_006_01) == 0
-# 	count(rule_i_100_340_007_01) == 0
-# 	count(rule_i_100_340_008_01) == 0
-# 	count(rule_i_100_340_008_02) == 0
-# 	count(rule_i_100_340_009_01) == 0
-# 	msg := ""
-# 	source := input.investigationFilePath
-# 	result := f.format(rego.metadata.rule(), msg, source)
-# }
 
 #########################################################################################################
 #########################################################################################################
@@ -1419,7 +1334,6 @@ rule_i_100_350_003_01 contains result if {
 rule_i_100_350_003_02 contains result if {
 	def := data.metabolights.validation.v2.phase1.definitions 
 	pattern := sprintf(`([\w!-~]+ )?[\w!-~]*[^%v]+[\w!-~]*( [\w!-~]+)?`, [def._ALLOWED_CHARS_PATTERN])
-	# pattern := sprintf(`[^%v]`, [def._ALLOWED_CHARS_PATTERN])
 
 	some study in input.investigation.studies
 	some j, protocol in study.studyProtocols.protocols
@@ -1767,40 +1681,51 @@ rule_i_100_360_007_01 contains result if {
 }
 
 # METADATA
-# title: Study Person Roles length less than 2 characters.
-# description: Study Person Roles should be defined with length equal or greater than 2 characters.
+# title: Study Person Role is not valid.
+# description: Study Person Role MUST be selected from the control list.
 # custom:
 #  rule_id: rule_i_100_360_008_01
-#  type: WARNING
+#  type: ERROR
 #  priority: HIGH
 #  section: investigation.studyContacts
 rule_i_100_360_008_01 contains result if {
-	min_count = 2
-	some i, j, k
-	person := input.investigation.studies[i].studyContacts.people[j]
-	count(person.roles[k].term) < min_count
-	msg := sprintf("Study contact's role term should be least %v characters for study: %v, contact index: %v, role index: %v, contact name: '%v %v'", [min_count, input.investigation.studies[i].identifier, j + 1, k + 1, person.firstName, person.lastName])
-	source := input.investigationFilePath
-	result := f.format(rego.metadata.rule(), msg, source)
+	some study in input.investigation.studies
+	some idx, contact in study.studyContacts.people
+	some s_idx, role in contact.roles
+
+	result := f.single_ontology_term_not_in_selected_terms(
+		rego.metadata.rule(), 
+		input.investigationFilePath,
+		def1.RULE_STUDY_PERSON_ROLES,
+		role,
+		sprintf("Study Contact [%v] Role [%v]", [idx + 1, s_idx  +1]),
+		"Select valid ontology terms ",
+		)
 }
 
 # METADATA
-# title: Study Person Roles Term Accession Number is empty.
-# description: Study Person Roles Term Accession Number should be defined.
+# title: Study Person Role is not valid.
+# description: Study Person Role MUST be selected from the prioritised ontologies.
 # custom:
 #  rule_id: rule_i_100_360_009_01
-#  type: WARNING
+#  type: ERROR
 #  priority: HIGH
 #  section: investigation.studyContacts
 rule_i_100_360_009_01 contains result if {
-	min_count = 1
-	some i, j, k
-	person := input.investigation.studies[i].studyContacts.people[j]
-	count(person.roles[k].termAccessionNumber) < min_count
-	value := person.roles[k].termAccessionNumber
-	msg := sprintf("Study person's (%v) role term accession number '%v' should be least %v characters for study: %v, contact index: %v, role index %v", [person.email, value, min_count, input.investigation.studies[i].identifier, j + 1, k + 1])
-	source := input.investigationFilePath
-	result := f.format(rego.metadata.rule(), msg, source)
+	some study in input.investigation.studies
+	some idx, contact in study.studyContacts.people
+	some s_idx, role in contact.roles
+	selected_validation_types = {"any-ontology-term", "child-ontology-term", "ontology-term-in-selected-ontologies"}
+
+	result := f.single_ontology_term_source_ref_not_valid(
+		rego.metadata.rule(), 
+		input.investigationFilePath,
+		def1.RULE_STUDY_PERSON_ROLES,
+		role,
+		sprintf("Study Contact [%v] Role [%v]", [idx + 1, s_idx  +1]),
+		"Select valid ontologies ",
+		selected_validation_types
+		)
 }
 
 # # METADATA
@@ -1842,22 +1767,29 @@ rule_i_100_360_010_01 contains result if {
 }
 
 # METADATA
-# title: Study Person Roles Term Source REF not in prioritised control list.
-# description: A prioritised control list is defined. Review and select from the prioritised control list if possible.
+# title: Study Person Role is not selected from the prioritised ontologies.
+# description: Study Person Role MAY be selected from the prioritised ontologies.
 # custom:
 #  rule_id: rule_i_100_360_010_02
 #  type: WARNING
 #  priority: MEDIUM
 #  section: investigation.studyContacts
 rule_i_100_360_010_02 contains result if {
-	some i, j
-	def := data.metabolights.validation.v2.phase1.definitions 
-	person := input.investigation.studies[i].studyContacts.people[j]
-	count(person.roles[k].termSourceRef) > 0
-	not person.roles[k].termSourceRef in def.CL_STUDY_CONTACT_ROLE_REF_SOURCES
-	msg := sprintf("Study contact role source reference is not in the control list. Study: %v, contact index: %v, role index: %v, current value '%v', expected: [%v]", [input.investigation.studies[i].identifier, j + 1, k + 1, input.investigation.studies[i].studyContacts.people[j].roles[k].termSourceRef, def.CL_STUDY_CONTACT_ROLE_REF_SOURCES_STR])
-	source := input.investigationFilePath
-	result := f.format(rego.metadata.rule(), msg, source)
+	some study in input.investigation.studies
+	some idx, contact in study.studyContacts.people
+	some s_idx, role in contact.roles
+	selected_validation_types = {"any-ontology-term", "child-ontology-term", "ontology-term-in-selected-ontologies"}
+	not def1.RULE_STUDY_PERSON_ROLES
+	role.term
+	result := f.single_ontology_term_source_ref_not_valid(
+		rego.metadata.rule(), 
+		input.investigationFilePath,
+		def1.RULE_DEFAULT_ONTOLOGIES,
+		role,
+		sprintf("Study Contact [%v] Role [%v]", [idx + 1, s_idx  +1]),
+		"Select priotirised ontologies ",
+		selected_validation_types
+		)
 }
 
 
@@ -1902,7 +1834,7 @@ rule_i_100_360_011_01 contains result if {
 
 # METADATA
 # title: Principal Investigator contact details not defined.
-# description: Principal Investigator first name, last name, ORCID, affiliation, affiliation ROR id and email must be defined.
+# description: Principal Investigator first name, last name, ORCID, affiliation, affiliation ROR id and email must be defined. At least one of them is not defined.
 # custom:
 #  rule_id: rule_i_100_360_011_02
 #  type: ERROR

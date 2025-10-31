@@ -100,7 +100,7 @@ format_with_file_description_and_values(meta, source_file, description, values) 
 		"values": sliced_violated_values,
 		"hasMoreViolations": has_more_violations,
 		"totalViolations": count(items),
-		"violation": sprintf("'%v', %v: %v", [source_file, description, values_str]),
+		"violation": sprintf("'%v', %v, violated values: %v", [source_file, description, values_str]),
 	}
 	debug(result)
 }
@@ -255,117 +255,6 @@ protocol_ref_column_value_check(source, file_name, column_name, expected_value, 
 
 ######################
 
-
-term_source_ref_not_in_control_list(meta, source, file_name, header_index, control_lists) := result if {
-	search_header := "Term Source REF"
-	# source[file_name].table.headers[header_index].columnIndex == column_index
-	header := source[file_name].table.headers[header_index]
-
-	some t, "Term Source REF"  in header.additionalColumns
-	not "Unit" in header.additionalColumns
-	column_header := header.columnHeader
-	control_list_name := header.controlLists[control_list_key]
-	control_list := control_lists[control_list_name]
-	source_ref_column_index := (header.columnIndex + t) + 1
-	source_ref_column_name := source[file_name].table.columns[source_ref_column_index]
-
-	# count(source[file_name].table.data[column_name]) > 0
-	violated_values = {sprintf("%v", [value]) |
-		some j
-		count(source[file_name].table.data[column_name][j]) > 0
-		count(source[file_name].table.data[source_ref_column_name][j]) > 0
-		value := source[file_name].table.data[source_ref_column_name][j]
-		not value in control_list
-	}
-	count(violated_values) > 0
-	control_list_str := concat(", ", control_list)
-	file_column_header := sprintf("%v (of %v)", [search_header, column_header])
-	file_column_index := source_ref_column_index + 1
-	result := format_with_desc(meta, file_name, file_column_index, file_column_header, violated_values, "Prioritized ontologies for this column", control_list_str)
-}
-
-term_source_ref_not_in_control_list_new(
-	meta, 
-	study_category,
-	template_version,
-	study_created_at,
-	template_name, 
-	isa_table_type, 
-	table, 
-	file_name, 
-	header_index, 
-	selected_validation_types, 
-	control_lists, 
-	control_list_key,
-	description_suffix
-) := result if {
-	search_header := "Term Source REF"
-	header := table.headers[header_index]
-	# print(header.columnHeader)
-	some t, "Term Source REF"  in header.additionalColumns
-	not "Unit" in header.additionalColumns
-	column_header := header.columnHeader
-	# print(column_header)
-	control_list := control_lists[control_list_key]
-	# print(column_header)
-	
-	# print(control_list)
-	selected_controls = [x |
-		some x in control_list
-		criteria = x.selectionCriteria
-		field_match.match_field_control_criteria(
-			criteria, 
-			template_version,
-			study_category, 
-			study_created_at,
-			isa_table_type,
-			template_name, null, null)
-	]
-	count(selected_controls) > 0
-	control := selected_controls[0]
-	control.validationType in selected_validation_types
-	# print(column_header, control.ruleName)
-	
-	ontologies = {x | some x in control.ontologies }
-	other_sources = { x.sourceLabel | some x in control.allowedOtherSources}
-	all_sources = ontologies | other_sources
-	term_name = table.columns[header.columnIndex]
-	source_ref_column_index := (header.columnIndex + t) + 1
-	source_ref_column_name := table.columns[source_ref_column_index]
-	accession_column_index := (header.columnIndex + t) + 2
-	accession_column_name := table.columns[accession_column_index]
-
-	violated_values = {sprintf("%v", [source_ref]) |
-		some j
-		count(table.data[column_name][j]) > 0
-		count(table.data[source_ref_column_name][j]) > 0
-		source_ref := table.data[source_ref_column_name][j]
-		accession := table.data[accession_column_name][j]
-		term := table.data[term_name][j]
-		missing_excludes = {x.termAccessionNumber |
-			some x in control.allowedMissingOntologyTerms
-			term == x.term 
-			accession == x.termAccessionNumber
-			source_ref == x.termSourceRef
-		}
-		placeholder_excludes = {x.termAccessionNumber |
-			some x in control.allowedPlaceholders
-			accession == x.termAccessionNumber
-			source_ref == x.termSourceRef
-		}
-		excludes = missing_excludes | placeholder_excludes
-		count(excludes) == 0
-		not source_ref in all_sources
-
-	}
-	count(violated_values) > 0
-	ontologies_str := concat(", ", ontologies)
-	file_column_header := sprintf("%v (of %v)", [search_header, column_header])
-	file_column_index := source_ref_column_index + 1
-	result := format_with_desc(meta, file_name, file_column_index, file_column_header, violated_values, description_suffix, ontologies_str)
-}
-
-
 term_source_ref_not_valid(
 	meta, 
 	study_category,
@@ -437,6 +326,198 @@ term_source_ref_not_valid(
 	desc := sprintf("%v: %v", [control.ruleName, description_suffix])
 	file_column_index := source_ref_column_index + 1
 	result := format_with_desc(meta, file_name, file_column_index, file_column_header, violated_values, desc, ontologies_str)
+}
+
+
+single_ontology_term_source_ref_not_valid(
+	meta, 
+	file_name,
+	control,
+	ontology_term,
+	field_name,
+	description_suffix,
+	selected_validation_types
+) := result if {
+	
+	control.validationType in selected_validation_types
+	ontologies = {x | some x in control.ontologies }
+	other_sources = { x.sourceLabel | some x in control.allowedOtherSources}
+	all_sources = ontologies | other_sources	
+	source_ref := ontology_term.termSourceRef
+	accession := ontology_term.termAccessionNumber
+	term := ontology_term.term
+	missing_excludes = {x.termAccessionNumber |
+		some x in control.allowedMissingOntologyTerms
+		term == x.term 
+		accession == x.termAccessionNumber
+		source_ref == x.termSourceRef
+	}
+	placeholder_excludes = {x.termAccessionNumber |
+		some x in control.allowedPlaceholders
+		accession == x.termAccessionNumber
+		source_ref == x.termSourceRef
+	}
+	excludes = missing_excludes | placeholder_excludes
+	count(excludes) == 0
+	# print(meta.custom.rule_id, source_ref, all_sources)
+
+	not all_sources[source_ref]
+
+	ontologies_str := concat(", ", ontologies)
+	# print(source_ref, all_sources)
+	file_column_header := sprintf("%v (of %v): [%v, %v, %v]", ["Term Source REF", field_name, term, source_ref, accession])
+	values = [file_column_header]
+	desc := sprintf("Rule %v: Term Source REF of %v. %v %v", [control.ruleName, field_name, description_suffix, ontologies_str])
+	result := format_with_file_description_and_values(meta, file_name, desc, values)
+}
+
+single_ontology_term_not_in_selected_terms(
+	meta, 
+	file_name,
+	control,
+	ontology_term,
+	field_name,
+	description_suffix,
+) := result if {
+	control.validationType in {"selected-ontology-term"}
+	terms = {sprintf("[%v, %v, %v]", [x.term, x.termSourceRef, x.termAccessionNumber]) | some x in control.terms }
+		
+	source_ref := ontology_term.termSourceRef
+	accession := ontology_term.termAccessionNumber
+	term := ontology_term.term
+	missing_excludes = {x.termAccessionNumber |
+		some x in control.allowedMissingOntologyTerms
+		term == x.term 
+		accession == x.termAccessionNumber
+		source_ref == x.termSourceRef
+	}
+	placeholder_excludes = {x.termAccessionNumber |
+		some x in control.allowedPlaceholders
+		accession == x.termAccessionNumber
+		source_ref == x.termSourceRef
+	}
+	excludes = missing_excludes | placeholder_excludes
+	count(excludes) == 0
+	term_str = sprintf("[%v, %v, %v]", [term, source_ref, accession])
+		
+	not term_str in terms
+
+	terms_str := concat(", ", terms)
+	file_column_header := sprintf("%v (of %v)", ["Term Source REF", field_name])
+
+	desc := sprintf("%v: %v: %v", [control.ruleName, description_suffix, terms_str])
+	result := format_with_file_description_and_values(meta, file_name, desc, [term_str])
+}
+
+single_ontology_term_has_unexpected_value(
+	meta, 
+	file_name,
+	control,
+	ontology_term,
+	field_name,
+	description_suffix,
+) := result if {
+		
+	source_ref := ontology_term.termSourceRef
+	accession := ontology_term.termAccessionNumber
+	term := ontology_term.term
+	count(term) > 0
+	missing_excludes = {x.termAccessionNumber |
+		some x in control.allowedMissingOntologyTerms
+		term == x.term 
+		accession == x.termAccessionNumber
+		source_ref == x.termSourceRef
+	}
+	placeholder_excludes = {x.termAccessionNumber |
+		some x in control.allowedPlaceholders
+		accession == x.termAccessionNumber
+		source_ref == x.termSourceRef
+	}
+	excludes = missing_excludes | placeholder_excludes
+	count(excludes) == 0		
+	lower(term) in control.unexpected_terms
+
+	terms_str := concat(", ", control.unexpected_terms)
+	file_column_header := sprintf("%v (of %v)", ["Term Source REF", field_name])
+
+	desc := sprintf("%v: %v: %v", [control.ruleName, description_suffix, terms_str])
+	result := format_with_file_description_and_values(meta, file_name, desc, term)
+}
+
+ontology_term_has_unexpected_value(
+	meta, 
+	study_category,
+	template_version,
+	study_created_at,
+	template_name, 
+	isa_table_type, 
+	table, 
+	file_name, 
+	header_index, 
+	selected_validation_types, 
+	control_lists, 
+	control_list_key,
+	description_suffix
+) := result if {
+	search_header := "Term Source REF"
+	header := table.headers[header_index]
+	some t, "Term Source REF"  in header.additionalColumns
+	column_header := header.columnHeader
+	control_list := control_lists[control_list_key]
+	selected_controls = [x |
+		some x in control_list
+		criteria = x.selectionCriteria
+		field_match.match_field_control_criteria(
+			criteria, 
+			template_version,
+			study_category, 
+			study_created_at,
+			isa_table_type,
+			template_name, null, null)
+	]
+	count(selected_controls) > 0
+	control := selected_controls[0]
+	control.validationType in selected_validation_types
+
+	term_name = table.columns[header.columnIndex]
+	source_ref_column_index := (header.columnIndex + t) + 1
+	source_ref_column_name := table.columns[source_ref_column_index]
+	accession_column_index := (header.columnIndex + t) + 2
+	accession_column_name := table.columns[accession_column_index]
+	
+
+	violated_values = {sprintf("Row: %v, column: %v, value: [%v, %v ,%v]", [j + 1, column_header, term, source_ref, accession]) |
+		some j
+		term := table.data[term_name][j]
+		count(table.data[column_name][j]) > 0
+		lower(term) in control.unexpectedTerms
+		source_ref := table.data[source_ref_column_name][j]
+		accession := table.data[accession_column_name][j]
+		
+		missing_excludes = {x.termAccessionNumber |
+			some x in control.allowedMissingOntologyTerms
+			term == x.term 
+			accession == x.termAccessionNumber
+			source_ref == x.termSourceRef
+		}
+		placeholder_excludes = {x.termAccessionNumber |
+			some x in control.allowedPlaceholders
+			accession == x.termAccessionNumber
+			source_ref == x.termSourceRef
+		}
+		excludes = missing_excludes | placeholder_excludes
+		count(excludes) == 0
+		
+	}
+	# print(meta.custom.rule_id, header.columnHeader, violated_values)
+
+	# print(meta.custom.rule_id, term_name,  control.validationType, violated_values)
+	count(violated_values) > 0
+	unexpected_terms_str := concat(", ", control.unexpectedTerms)
+	file_column_header := sprintf("%v (of %v) - %v", [search_header, column_header])
+	desc := sprintf("%v: %v.", [control.ruleName, description_suffix])
+	file_column_index := header.columnIndex + 1
+	result := format_with_desc(meta, file_name, file_column_index, file_column_header, violated_values, desc, unexpected_terms_str)
 }
 
 ontology_term_not_in_selected_terms(
@@ -622,81 +703,6 @@ term_value_has_invalid_pattern(
 	result := format_with_desc(meta, file_name, file_column_index, file_column_header, violated_values, desc, control.pattern)
 }
 
-term_source_ref_is_empty_for_term_new(
-	meta, 
-	study_category,
-	template_version,
-	study_created_at,
-	template_name, 
-	isa_table_type, 
-	table, 
-	file_name, 
-	header_index, 
-	selected_validation_types, 
-	control_lists, 
-	control_list_key,
-	description_suffix
-) := result if {
-	search_header := "Term Source REF"
-	header := table.headers[header_index]
-	some t, "Term Source REF"  in header.additionalColumns
-	not "Unit" in header.additionalColumns
-	column_header := header.columnHeader
-	control_list := control_lists[control_list_key]
-	selected_controls = [x |
-		some x in control_list
-		criteria = x.selectionCriteria
-		field_match.match_field_control_criteria(
-			criteria, 
-			template_version,
-			study_category, 
-			study_created_at,
-			isa_table_type,
-			template_name, null, null)
-	]
-	count(selected_controls) > 0
-	
-	control := selected_controls[0]
-	control.validationType in selected_validation_types
-	
-	ontologies = {x | some x in control.ontologies }
-	other_sources = { x.sourceLabel | some x in control.allowedOtherSources}
-	all_sources = ontologies | other_sources
-	term_name = table.columns[header.columnIndex]
-	source_ref_column_index := (header.columnIndex + t) + 1
-	source_ref_column_name := table.columns[source_ref_column_index]
-	accession_column_index := (header.columnIndex + t) + 2
-	accession_column_name := table.columns[accession_column_index]
-
-	violated_values = {sprintf("Row: %v, column: Term Source REF of %v", [j + 1, column_header]) |
-		some j
-		count(table.data[column_name][j]) > 0
-		source_ref := table.data[source_ref_column_name][j]
-		accession := table.data[accession_column_name][j]
-		term := table.data[term_name][j]
-		
-		missing_excludes = {x.termAccessionNumber |
-			some x in control.allowedMissingOntologyTerms
-			term == x.term 
-			accession == x.termAccessionNumber
-			source_ref == x.termSourceRef
-		}
-		placeholder_excludes = {x.termAccessionNumber |
-			some x in control.allowedPlaceholders
-			accession == x.termAccessionNumber
-			source_ref == x.termSourceRef
-		}
-		excludes = missing_excludes | placeholder_excludes
-		count(excludes) == 0
-		count(source_ref) == 0
-	}
-	count(violated_values) > 0
-	ontologies_str := concat(", ", ontologies)
-	file_column_header := sprintf("%v (of %v)", [search_header, column_header])
-	file_column_index := source_ref_column_index + 1
-	result := format_with_desc(meta, file_name, file_column_index, file_column_header, violated_values, description_suffix, ontologies_str)
-}
-
 term_source_ref_not_in_default_control_list(meta, source, file_name, header_index, default_control_list_headers, control_list) := result if {
 	search_header := "Term Source REF"
 	header := source[file_name].table.headers[header_index]
@@ -829,86 +835,6 @@ term_source_ref_for_unit_not_valid(
 	result := format_with_desc(meta, file_name, file_column_index, file_column_header, violated_values, description_suffix, ontologies_str)
 }
 
-
-term_source_ref_is_empty_for_unit_new(
-	meta, 
-	study_category,
-	template_version,
-	study_created_at,
-	template_name, 
-	isa_table_type, 
-	table, 
-	file_name, 
-	header_index, 
-	selected_validation_types, 
-	control_lists, 
-	control_list_key,
-	description_suffix
-) := result if {
-	search_header := "Term Source REF"
-	header := table.headers[header_index]
-	some t, "Term Source REF"  in header.additionalColumns
-
-	column_header := header.columnHeader
-	"Unit" in header.additionalColumns
-	control_list := control_lists[control_list_key]
-	selected_controls = [x |
-		some x in control_list
-		criteria = x.selectionCriteria
-		field_match.match_field_control_criteria(
-			criteria, 
-			template_version,
-			study_category, 
-			study_created_at,
-			isa_table_type,
-			template_name, null, null)
-	]
-
-	count(selected_controls) > 0
-
-	control := selected_controls[0]
-	# print(control)
-	control.validationType in selected_validation_types
-	ontologies = {x | some x in control.ontologies }
-	other_sources = { x.sourceLabel | some x in control.allowedOtherSources}
-	all_sources = ontologies | other_sources
-	# print(other_sources)
-	term_name = table.columns[header.columnIndex]
-	unit_column_index := (header.columnIndex + t)
-	unit_column_name := table.columns[unit_column_index]
-	source_ref_column_index := (header.columnIndex + t) + 1
-	source_ref_column_name := table.columns[source_ref_column_index]
-	accession_column_index := (header.columnIndex + t) + 2
-	accession_column_name := table.columns[accession_column_index]
-	violated_values = {sprintf("Row %v: Term source REF of '%v' Unit", [j + 1, column_header]) |
-		some j
-		count(table.data[unit_column_name][j]) > 0
-		source_ref := table.data[source_ref_column_name][j]
-		accession := table.data[accession_column_name][j]
-		term := table.data[unit_column_name][j]
-		missing_excludes = {x.termAccessionNumber |
-			some x in control.allowedMissingOntologyTerms
-			term == x.term 
-			accession == x.termAccessionNumber
-			source_ref == x.termSourceRef
-		}
-		placeholder_excludes = {x.termAccessionNumber |
-			some x in control.allowedPlaceholders
-			accession == x.termAccessionNumber
-			source_ref == x.termSourceRef
-		}
-		excludes = missing_excludes | placeholder_excludes
-		count(excludes) == 0
-		count(source_ref) == 0
-	}
-	# print(violated_values)
-	count(violated_values) > 0
-	ontologies_str := concat(", ", ontologies)
-	file_column_header := sprintf("%v (of %v)", [search_header, column_header])
-	file_column_index := source_ref_column_index + 1
-	result := format_with_desc(meta, file_name, file_column_index, file_column_header, violated_values, description_suffix, ontologies_str)
-}
-
 term_source_ref_not_in_source_references_list(meta, source, file_name, column_index, source_reference_names, source_reference_names_str) := result if {
 	search_header := "Term Source REF"
 	some t
@@ -1001,78 +927,7 @@ term_source_ref_is_defined_for_empty_unit(meta, source, file_name, header_index)
 	result := format_with_values(meta, file_name, file_column_index, file_column_header, violated_values)
 }
 
-term_source_ref_is_empty_for_term(meta, source, file_name, column_index, template, control_lists) := result if {
-	term_source_column_header := "Term Source REF"
-	accession_column_header := "Term Accession Number"
-	# unit_column_header := "Unit"
-	some a
-	source[file_name].table.headers[column_index].additionalColumns[a] == term_source_column_header
-	some b
-	source[file_name].table.headers[column_index].additionalColumns[b] == accession_column_header
-	not "Unit" in source[file_name].table.headers[column_index].additionalColumns
-	# some c
-	# source[file_name].table.headers[column_index].additionalColumns[c] == unit_column_header
-	column_name := source[file_name].table.headers[column_index].columnName
-	column_header := source[file_name].table.headers[column_index].columnHeader
-	control_list_key := "termSourceRef"
-	
-	some n, template_header in template.headers
 
-	template_header.columnHeader == column_header
-	control_list_name := template_header.controlLists[control_list_key]
-
-	control_list := control_lists[control_list_name]
-	source_ref_column_index := (source[file_name].table.headers[column_index].columnIndex + a) + 1
-	source_ref_column_name := source[file_name].table.columns[source_ref_column_index]
-	count(source[file_name].table.data[column_name]) > 0
-	violated_values = {sprintf("[row: %v, term: '%v', 'source ref':'']", [x, value]) |
-		some j, value in source[file_name].table.data[column_name]		
-		count(trim_space(value)) > 0
-		source_ref := source[file_name].table.data[source_ref_column_name][j]
-		count(trim_space(source_ref)) == 0
-		x := (source[file_name].table.rowOffset + j) + 1
-	}
-	control_list_str := concat(", ", control_list)
-	file_column_header := sprintf("%v (of %v)", [term_source_column_header, column_header])
-	source_file := file_name
-	file_column_index := source_ref_column_index + 1
-	result := format_with_desc(meta, source_file, file_column_index, file_column_header, violated_values, "Prioritized ontology reference sources for this column", control_list_str)
-}
-
-term_source_ref_is_empty_for_unit(meta, source, file_name, column_index, controlList) := result if {
-	term_source_column_header := "Term Source REF"
-	# accession_column_header := "Term Accession Number"
-	unit_column_header := "Unit"
-	some a, "Term Source REF" in source[file_name].table.headers[column_index].additionalColumns
-	some b, "Term Accession Number" in source[file_name].table.headers[column_index].additionalColumns
-	some c, "Unit" in source[file_name].table.headers[column_index].additionalColumns
-
-	column_name := source[file_name].table.headers[column_index].columnName
-	column_header := source[file_name].table.headers[column_index].columnHeader
-
-	source_ref_column_index := (source[file_name].table.headers[column_index].columnIndex + a) + 1
-	source_ref_column_name := source[file_name].table.columns[source_ref_column_index]
-
-	unit_column_index := (source[file_name].table.headers[column_index].columnIndex + c) + 1
-	unit_column_name := source[file_name].table.columns[unit_column_index]
-	count(source[file_name].table.data[column_name]) > 0
-	violated_values = {sprintf("[row: %v, value: '%v', unit: '%v', 'source ref':'']", [x, y, z]) |
-		some j
-		value := source[file_name].table.data[column_name][j]
-		unit := source[file_name].table.data[unit_column_name][j]
-		count(unit) > 0
-		source_ref := source[file_name].table.data[source_ref_column_name][j]
-		count(source_ref) == 0
-		x := (source[file_name].table.rowOffset + j) + 1
-		y := value
-		z := unit
-	}
-	control_list_str := concat(", ", controlList)
-	file_column_header := sprintf("%v (of %v for %v)", [term_source_column_header, unit_column_header, column_header])
-	source_file := file_name
-	file_column_index := source_ref_column_index + 1
-	result := format_with_desc(meta, source_file, file_column_index, file_column_header, violated_values, "Prioritized ontology reference sources for unit", control_list_str)
-}
 
 #############################################################################################################
 

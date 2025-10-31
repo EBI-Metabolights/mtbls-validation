@@ -45,12 +45,12 @@ rule_s_200_090_001_01 contains result if {
 }
 
 # METADATA
-# title: Ontology Term Source REF of ontology terms not in prioritised control list.
-# description: Prioritised ontology Term Source REFs should be used for ontology terms in this column if possible.
+# title: Ontology Term Source REF is not selected from the prioritised ontologies.
+# description: Select a term from one of the prioritised sources where possible.
 # custom:
 #  rule_id: rule_s_200_090_002_01
 #  type: WARNING
-#  priority: MEDIUM
+#  priority: HIGH
 #  section: samples.general
 rule_s_200_090_002_01 contains result if {
 	some file_name, file_table in input.samples
@@ -103,8 +103,8 @@ rule_s_200_090_002_04 contains result if {
 }
 
 # METADATA
-# title: Ontology Term Source REF for a unit not in prioritised control list.
-# description: We highly recommend to use the prioritised ontology Term Source REFs for an unit ontology term.
+# title: Ontology Term Source REF of Unit is not selected from the prioritised ontologies.
+# description: Select a unit term from one of the prioritised sources where possible.
 # custom:
 #  rule_id: rule_s_200_090_002_05
 #  type: WARNING
@@ -131,8 +131,6 @@ rule_s_200_090_002_05 contains result if {
 		"Unit",
 		"Prioritised default Unit ontologies"
 		)
-
-
 }
 
 # METADATA
@@ -150,13 +148,13 @@ rule_s_200_090_002_06 contains result if {
 
 
 # METADATA
-# title: Term Source REFs of the factor ontology term not in the prioritised control list.
-# description: We highly recommend to use the prioritised Ontology Source Refs for the factor ontology term.
+# title: Term is not in the selected ontologies.
+# description: The term MUST be defined in the the selected ontologies.
 # custom:
 #  rule_id: rule_s_200_090_002_09
 #  type: ERROR
-#  priority: LOW
-#  section: samples.sampleCollection
+#  priority: HIGH
+#  section: samples.general
 rule_s_200_090_002_09 contains result if {
 	control_lists := data.metabolights.validation.v2.controls.sampleFileControls
 	some file_name, file_table in input.samples
@@ -182,13 +180,13 @@ rule_s_200_090_002_09 contains result if {
 }
 
 # METADATA
-# title: Term Source REFs of the factor ontology term not in the prioritised control list.
-# description: We highly recommend to use the prioritised Ontology Source Refs for the factor ontology term.
+# title: Term is not a child of of the selected ontology terms.
+# description: The term MUST be a child of the selected ontology terms.
 # custom:
 #  rule_id: rule_s_200_090_002_10
 #  type: ERROR
-#  priority: LOW
-#  section: samples.sampleCollection
+#  priority: HIGH
+#  section: samples.general
 rule_s_200_090_002_10 contains result if {
 	control_lists := data.metabolights.validation.v2.controls.sampleFileControls
 	some file_name, file_table in input.samples
@@ -215,13 +213,13 @@ rule_s_200_090_002_10 contains result if {
 }
 
 # METADATA
-# title: Term Source REFs of the factor ontology term not in the prioritised control list.
-# description: We highly recommend to use the prioritised Ontology Source Refs for the factor ontology term.
+# title: Term is not in the control list.
+# description: The term MUST be in the selected ontology terms.
 # custom:
 #  rule_id: rule_s_200_090_002_11
 #  type: ERROR
-#  priority: LOW
-#  section: samples.sampleCollection
+#  priority: HIGH
+#  section: samples.general
 rule_s_200_090_002_11 contains result if {
 	control_lists := data.metabolights.validation.v2.controls.sampleFileControls
 	some file_name, file_table in input.samples
@@ -249,13 +247,13 @@ rule_s_200_090_002_11 contains result if {
 
 
 # METADATA
-# title: Term Source REFs of the factor ontology term not in the prioritised control list.
-# description: We highly recommend to use the prioritised Ontology Source Refs for the factor ontology term.
+# title: Value is not in the control list.
+# description: The value MUST be in the selected values.
 # custom:
 #  rule_id: rule_s_200_090_002_12
 #  type: ERROR
-#  priority: LOW
-#  section: assays.general
+#  priority: HIGH
+#  section: samples.general
 rule_s_200_090_002_12 contains result if {
 	control_lists := data.metabolights.validation.v2.controls.sampleFileControls
 	some file_name, file_table in input.samples
@@ -284,13 +282,13 @@ rule_s_200_090_002_12 contains result if {
 
 
 # METADATA
-# title: Term Source REFs of the factor ontology term not in the prioritised control list.
-# description: We highly recommend to use the prioritised Ontology Source Refs for the factor ontology term.
+# title: Value has not a valid pattern.
+# description: The column value MUST have a valid pattern value.
 # custom:
 #  rule_id: rule_s_200_090_002_13
 #  type: ERROR
-#  priority: LOW
-#  section: assays.general
+#  priority: HIGH
+#  section: samples.general
 rule_s_200_090_002_13 contains result if {
 	control_lists := data.metabolights.validation.v2.controls.sampleFileControls
 	some file_name, file_table in input.samples
@@ -479,56 +477,34 @@ rule_s_200_090_005_01 contains result if {
 #  priority: HIGH
 #  section: samples.general
 rule_s_200_090_006_01 contains result if {
-	some file_name, sheet in input.samples
-	some header in sheet.table.headers
-
-	column_index := header.columnIndex
-
-	column_name := sheet.table.columns[column_index]
-	row_offset := sheet.table.rowOffset
-	unexpected_terms := {term | 
-		some name, black_list_control in data.metabolights.validation.v2.blackLists.sampleColumns
-		name == header.columnHeader
-		some term in black_list_control.unexpectedTerms
-	}
-	count(unexpected_terms) > 0
-	violated_values := f.in_control_list_check(input.samples, file_name, column_name, unexpected_terms, row_offset)
-	count(violated_values) > 0
-	result := f.format_with_values(rego.metadata.rule(), file_name, column_index + 1, header.columnHeader, violated_values)
+	control_lists := data.metabolights.validation.v2.controls.sampleFileControls
+	some file_name, file_table in input.samples
+	some column_index, header in input.samples[file_name].table.headers
+	selected_validation_types = {"selected-ontology-term", "any-ontology-term", "child-ontology-term", "ontology-term-in-selected-ontologies"}
+	control_lists[header.columnHeader]
+	header.columnStructure in {"ONTOLOGY_COLUMN", "SINGLE_COLUMN_AND_UNIT_ONTOLOGY"}
+	result := f.ontology_term_has_unexpected_value(
+		rego.metadata.rule(), 
+		def1.STUDY_CATEGORY,
+		def1.STUDY_TEMPLATE_VERSION,
+		def1.STUDY_CREATED_AT,
+		def1.STUDY_SAMPLE_TEMPLATE_NAME,
+		"sample",
+		file_table.table, 
+		file_name, 
+		column_index, 
+		selected_validation_types,
+		control_lists,
+		header.columnHeader,
+		"Do not use these unexpected terms"
+		
+		)
 }
 
 # #########################################################################################################
 # # SAMPLES SHEET SOURCE SECTION VALIDATION RULES
 # #########################################################################################################
 
-# METADATA
-# title: Organism name should not contain colon ( ) characters.
-# description: Organism should not contain the actual ontology/taxonomy name, please include just the appropriate taxonomy term.
-# custom:
-#  rule_id: rule_s_200_100_001_03
-#  type: WARNING
-#  priority: HIGH
-#  section: samples.source
-rule_s_200_100_001_03 contains result if {
-	file_column_header := "Characteristics[Organism]"
-	some file_name, sheet in input.samples
-	some header in sheet.table.headers
-
-	header.columnHeader == file_column_header
-	column_index := header.columnIndex
-
-	column_name := sheet.table.columns[column_index]
-	row_offset := sheet.table.rowOffset
-	violated_values := {sprintf("[row: %03v, value: '%v']", [x, y]) |
-		some j, value in sheet.table.data[column_name]
-		contains(value, ":")
-		x := (row_offset + j) + 1
-		y := value
-	}
-	term_ref_sources = {source | some source in data.metabolights.validation.v2.controlLists.prioritisedOrganismRefSources}
-	term_ref_sources_str = concat(", ", term_ref_sources)
-	result := f.format_with_desc(rego.metadata.rule(), file_name, column_index + 1, header.columnHeader, violated_values, "Prioritized organism ontology reference sources", term_ref_sources_str)
-}
 
 
 # METADATA
@@ -565,8 +541,8 @@ rule_s_200_100_002_01 contains result if {
 
 
 # METADATA
-# title: Term Source REF of the user defined characteristics ontology terms is empty
-# description: We highly recommend to use the prioritised Ontology Source Refs for the characteristics ontology term.
+# title: Term Source REF of the user defined characteristics ontology term is not in the priotirised control list.
+# description: We highly recommend to use the prioritised ontologies for the characteristics ontology term.
 # custom:
 #  rule_id: rule_s_200_100_002_02
 #  type: WARNING
@@ -580,7 +556,7 @@ rule_s_200_100_002_02 contains result if {
 	not control_lists[header.columnHeader]
 	startswith(header.columnHeader, "Characteristics[")
 	header.columnStructure == "ONTOLOGY_COLUMN"
-	result := f.term_source_ref_not_in_control_list_new(
+	result := f.term_source_ref_not_valid(
 		rego.metadata.rule(), 
 		def1.STUDY_CATEGORY,
 		def1.STUDY_TEMPLATE_VERSION,
@@ -761,7 +737,7 @@ rule_s_200_200_002_02 contains result if {
 }
 
 # METADATA
-# title: Term Source REFs of the factor ontology term not in the prioritised control list.
+# title: Term Source REF of the factor value ontology term is not in the priotirised control list.
 # description: We highly recommend to use the prioritised Ontology Source Refs for the factor ontology term.
 # custom:
 #  rule_id: rule_s_200_200_003_01

@@ -8,11 +8,6 @@ import rego.v1
 _ONTOLOGY_SOURCE_REFERENCE_NAMES := {x.sourceName | x := input.investigation.ontologySourceReferences.references[_]}
 _ALLOWED_CHARS_PATTERN := concat("", data.metabolights.validation.v2.configuration.allowedChars)
 
-CL_INVALID_ORGANISM_TERMS := {x | x := data.metabolights.validation.v2.configuration.invalidOrganismTerms[_]}
-
-CL_PUBLICATION_STATUS_TERMS := {onto.term |
-	some onto in data.metabolights.validation.v2.controlLists.investigationFile["Study Publication Status"].terms
-}
 
 match_criteria(criteria, 
 	isa_file_type, 
@@ -31,38 +26,33 @@ match_criteria(criteria,
 	) 
 }
 
-CL_PUBLICATION_STATUS_TERMS_STR := f.to_string(CL_PUBLICATION_STATUS_TERMS)
-
-CL_PREDEFINED_SOURCE_REFERENCES := {name: source_refs |
-	some name, item in data.metabolights.validation.v2.controlLists.investigationFile
-	source_refs := {x |
-		some x in item.ontologies
-	}
+investigation_file_field_validation(field_name) := rule if {
+	control_list := data.metabolights.validation.v2.controls.investigationFileControls[field_name]
+	selected_controls = [x |
+		some x in control_list
+		criteria = x.selectionCriteria
+		field_match.match_field_control_criteria(
+			criteria, 
+			STUDY_TEMPLATE_VERSION,
+			STUDY_CATEGORY, 
+			STUDY_CREATED_AT,
+			"investigation",
+			null, null, null)
+	]
+	count(selected_controls) > 0
+	rule := selected_controls[0]
 }
 
-CL_PUBLICATION_STATUS_REF_SOURCES := CL_PREDEFINED_SOURCE_REFERENCES["Study Publication Status"]
 
-CL_PUBLICATION_STATUS_REF_SOURCES_STR := f.to_string(CL_PUBLICATION_STATUS_REF_SOURCES)
 
-CL_STUDY_ASSAY_MEASUREMENT_TYPE_REF_SOURCES := CL_PREDEFINED_SOURCE_REFERENCES["Study Assay Measurement Type"]
+RULE_PUBLICATION_STATUS = investigation_file_field_validation("Study Publication Status")
+RULE_ASSAY_MEASUREMENT_TYPE = investigation_file_field_validation("Study Assay Measurement Type")
+RULE_ASSAY_TECHNOLOGY_TYPE = investigation_file_field_validation("Study Assay Technology Type")
+RULE_STUDY_PERSON_ROLES = investigation_file_field_validation("Study Person Roles")
+RULE_STUDY_DESIGN_TYPE = investigation_file_field_validation("Study Design Type")
+RULE_STUDY_FACTOR_TYPE = investigation_file_field_validation("Study Factor Type")
 
-CL_STUDY_ASSAY_MEASUREMENT_TYPE_REF_SOURCES_STR := f.to_string(CL_STUDY_ASSAY_MEASUREMENT_TYPE_REF_SOURCES)
-
-CL_STUDY_ASSAY_TECHNOLOGY_TYPE_REF_SOURCES := CL_PREDEFINED_SOURCE_REFERENCES["Study Assay Technology Type"]
-
-CL_STUDY_ASSAY_TECHNOLOGY_TYPE_REF_SOURCES_STR := f.to_string(CL_STUDY_ASSAY_TECHNOLOGY_TYPE_REF_SOURCES)
-
-CL_STUDY_CONTACT_ROLE_REF_SOURCES := CL_PREDEFINED_SOURCE_REFERENCES["Study Person Roles"]
-
-CL_STUDY_CONTACT_ROLE_REF_SOURCES_STR := f.to_string(CL_STUDY_CONTACT_ROLE_REF_SOURCES)
-
-CL_STUDY_DESIGN_DESCRIPTOR_REF_SOURCES := CL_PREDEFINED_SOURCE_REFERENCES["Study Design Type"]
-
-CL_STUDY_DESIGN_DESCRIPTOR_REF_SOURCES_STR := f.to_string(CL_STUDY_DESIGN_DESCRIPTOR_REF_SOURCES)
-
-CL_STUDY_FACTOR_REF_SOURCES := CL_PREDEFINED_SOURCE_REFERENCES["Study Factor Type"]
-
-CL_STUDY_FACTOR_REF_SOURCES_STR := f.to_string(CL_STUDY_FACTOR_REF_SOURCES)
+RULE_DEFAULT_ONTOLOGIES = investigation_file_field_validation("__default__")
 
 DB_STUDY_CREATED_AT := input.studyDbMetadata.submissionDate
 METADATA_STUDY_CREATED_AT:= input.investigation.studies[0].submissionDate
@@ -219,30 +209,6 @@ __ASSAY_DEFAULT_PROTOCOL_HEADERS := {file_name: default_values |
 		header.columnCategory == "Protocol"
 	]
 }
-
-# ALL_ASSAY_PARAMETER_VALUES := { template_name :params |
-# 	some template_name, template in data.metabolights.validation.v2.templates.assayFileHeaderTemplates
-# 	some template_version in template
-# 	template_version.version == "2.0"
-# 	params := [ header.columnHeader |
-# 		some header in template_version.headers
-# 		header.columnStructure == "SINGLE_COLUMN"
-# 		startswith(header.columnHeader, "Parameter Value")
-# 	]
-# }
-
-# ALL_ASSAY_PARAMETER_VALUES2 := { header.columnHeader |
-# 	some template_name, template in data.metabolights.validation.v2.templates.assayFileHeaderTemplates
-# 	template_name != "MSImaging"
-
-# 	template_name != "MRImaging"
-# 	some template_version in template
-# 	template_version.version == "2.0"
-# 	some header in template_version.headers
-# 	header.columnStructure == "SINGLE_COLUMN"
-# 	startswith(header.columnHeader, "Parameter Value")
-
-# }
 
 __ASSAY_PROTOCOL_HEADER_COLUMNS := {file_name: columns |
 	some file_name, _ in input.assays

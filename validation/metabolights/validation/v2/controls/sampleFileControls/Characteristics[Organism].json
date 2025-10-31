@@ -84,7 +84,39 @@
                 "NCBITAXON",
                 "ENVO"
             ],
-            "allowedParentOntologyTerms": null
+            "allowedParentOntologyTerms": null,
+            "unexpectedTerms": [
+                "cat",
+                "chicken",
+                "plant",
+                "sample",
+                "dog",
+                "mouse",
+                "horse",
+                "flower",
+                "fish",
+                "leave",
+                "root",
+                "mice",
+                "steam",
+                "bacteria",
+                "value",
+                "food",
+                "matrix",
+                "mus",
+                "rat",
+                "blood",
+                "urine",
+                "plasma",
+                "hair",
+                "fur",
+                "skin",
+                "saliva",
+                "fly",
+                "human",
+                "man",
+                "sheep"
+            ]
         },
         {
             "ruleName": "Characteristics[Organism]-02",
@@ -182,7 +214,39 @@
                 "NCIT",
                 "MSIO"
             ],
-            "allowedParentOntologyTerms": null
+            "allowedParentOntologyTerms": null,
+            "unexpectedTerms": [
+                "cat",
+                "chicken",
+                "plant",
+                "sample",
+                "dog",
+                "mouse",
+                "horse",
+                "flower",
+                "fish",
+                "leave",
+                "root",
+                "mice",
+                "steam",
+                "bacteria",
+                "value",
+                "food",
+                "matrix",
+                "mus",
+                "rat",
+                "blood",
+                "urine",
+                "plasma",
+                "hair",
+                "fur",
+                "skin",
+                "saliva",
+                "fly",
+                "human",
+                "man",
+                "sheep"
+            ]
         }
     ]
 }

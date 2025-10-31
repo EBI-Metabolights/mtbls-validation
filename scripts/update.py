@@ -27,31 +27,31 @@ if __name__ == "__main__":
     rules = get_rules()
     create_summary_files(rules)
 
-    assay_controlled_terms = create_recommended_assay_control_lists()
+    # assay_controlled_terms = create_recommended_assay_control_lists()
 
-    templates_path = (
-        "validation/metabolights/validation/v2/controlLists/investigationFile"
-    )
-    file_name = "investigation-file"
-    title = "Investigation File"
-    create_recommended_control_lists(
-        templates_path=templates_path, file_name=file_name, title=title
-    )
-    templates_path = "validation/metabolights/validation/v2/controlLists/sampleColumns"
-    file_name = "sample-file"
-    title = "Sample File"
-    sample_controlled_terms = create_recommended_control_lists(
-        templates_path=templates_path, file_name=file_name, title=title
-    )
+    # templates_path = (
+    #     "validation/metabolights/validation/v2/controlLists/investigationFile"
+    # )
+    # file_name = "investigation-file"
+    # title = "Investigation File"
+    # create_recommended_control_lists(
+    #     templates_path=templates_path, file_name=file_name, title=title
+    # )
+    # templates_path = "validation/metabolights/validation/v2/controlLists/sampleColumns"
+    # file_name = "sample-file"
+    # title = "Sample File"
+    # sample_controlled_terms = create_recommended_control_lists(
+    #     templates_path=templates_path, file_name=file_name, title=title
+    # )
 
-    templates_path = "validation/metabolights/validation/v2/controlLists/unitColumns"
-    file_name = "unit-columns"
-    title = "Unit Columns"
-    create_recommended_control_lists(
-        templates_path=templates_path, file_name=file_name, title=title
-    )
+    # templates_path = "validation/metabolights/validation/v2/controlLists/unitColumns"
+    # file_name = "unit-columns"
+    # title = "Unit Columns"
+    # create_recommended_control_lists(
+    #     templates_path=templates_path, file_name=file_name, title=title
+    # )
 
-    create_file_structure_documentation(
-        assay_controlled_terms=assay_controlled_terms,
-        sample_controlled_terms=sample_controlled_terms,
-    )
+    # create_file_structure_documentation(
+    #     assay_controlled_terms=assay_controlled_terms,
+    #     sample_controlled_terms=sample_controlled_terms,
+    # )

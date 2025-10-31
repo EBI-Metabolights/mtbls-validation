@@ -14,18 +14,6 @@ _ONTOLOGY_SOURCE_REFERENCE_NAMES_STR := concat(", ", _ONTOLOGY_SOURCE_REFERENCE_
 
 _ALLOWED_CHARS_PATTERN := concat("", data.metabolights.validation.v2.configuration.allowedChars)
 
-CL_UNIT_TERM_REF_SOURCES = [x | x := data.metabolights.validation.v2.controlLists.prioritisedUnitRefSources[_]]
-
-CL_UNIT_TERM_REF_SOURCES_STR = concat(", ", CL_UNIT_TERM_REF_SOURCES)
-
-CL_ORGANISM_TERM_REF_SOURCES = {x | x := data.metabolights.validation.v2.controlLists.prioritisedOrganismRefSources[_]}
-
-CL_ORGANISM_TERM_REF_SOURCES_STR = concat(", ", CL_ORGANISM_TERM_REF_SOURCES)
-
-CL_ORGANISM_PART_TERM_REF_SOURCES = {x | x := data.metabolights.validation.v2.controlLists.prioritisedOrganismPartRefSources[_]}
-
-CL_ORGANISM_PART_TERM_REF_SOURCES_STR = concat(", ", CL_ORGANISM_PART_TERM_REF_SOURCES)
-
 CL_DERIVED_FILE_EXTENSIONS := data.metabolights.validation.v2.configuration.derivedFileExtensions
 
 CL_DERIVED_FILE_EXTENSIONS_STR := concat(",", CL_DERIVED_FILE_EXTENSIONS)
