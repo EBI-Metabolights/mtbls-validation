@@ -6,7 +6,7 @@ variables:
   LATEST_TARGET_FILE_URL: "${CI_API_V4_URL}/projects/${CI_PROJECT_ID}/packages/generic/${CI_PROJECT_NAME}/$CONFIGURATION/bundle.tar.gz"
 workflow:
   rules:
-  - if: $CI_COMMIT_BRANCH == "test" || $CI_COMMIT_BRANCH == "main" || $CI_COMMIT_BRANCH == "development" || $CI_COMMIT_BRANCH == "staging"
+  - if: $CI_COMMIT_BRANCH == "test" || $CI_COMMIT_BRANCH == "main" || $CI_COMMIT_BRANCH == "keycloak" || $CI_COMMIT_BRANCH == "staging"
 stages:
 - build
 
