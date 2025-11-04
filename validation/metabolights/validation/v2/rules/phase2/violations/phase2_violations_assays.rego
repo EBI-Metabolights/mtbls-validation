@@ -48,7 +48,7 @@ rule_a_200_090_001_01 contains result if {
 # description: Select a term from one of the prioritised sources where possible.
 # custom:
 #  rule_id: rule_a_200_090_002_01
-#  type: ERROR
+#  type: WARNING
 #  priority: HIGH
 #  section: assays.general
 rule_a_200_090_002_01 contains result if {

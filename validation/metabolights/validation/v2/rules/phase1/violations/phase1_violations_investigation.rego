@@ -458,7 +458,35 @@ rule_i_100_310_003_01 contains result if {
 	some idx, design_descriptor in study.studyDesignDescriptors.designTypes
 
 	# selected_validation_types := {}
-	selected_validation_types = {"any-ontology-term", "child-ontology-term", "ontology-term-in-selected-ontologies"}
+	selected_validation_types = {"child-ontology-term", "ontology-term-in-selected-ontologies"}
+
+	result := f.single_ontology_term_source_ref_not_valid(
+		rego.metadata.rule(),
+		input.investigationFilePath,
+		def1.RULE_STUDY_DESIGN_TYPE,
+		design_descriptor,
+		sprintf("Study Design Type [%v]", [idx + 1]),
+		"Select valid ontologies ",
+		selected_validation_types,
+	)
+}
+
+
+# METADATA
+# title: Study Design Type Term Accession Number is empty.
+# description: Study Design Type value MUST be selected from the prioritised ontologies.
+# custom:
+#  rule_id: rule_i_100_310_003_02
+#  type: WARNING
+#  priority: HIGH
+#  section: investigation.studyDesignDescriptors
+rule_i_100_310_003_02 contains result if {
+	def := data.metabolights.validation.v2.rules.phase1.definitions
+	some study in input.investigation.studies
+	some idx, design_descriptor in study.studyDesignDescriptors.designTypes
+
+	# selected_validation_types := {}
+	selected_validation_types = {"any-ontology-term"}
 
 	result := f.single_ontology_term_source_ref_not_valid(
 		rego.metadata.rule(),
@@ -693,7 +721,34 @@ rule_i_100_320_007_02 contains result if {
 	some idx, publication in study.studyPublications.publications
 
 	# selected_validation_types := {}
-	selected_validation_types = {"any-ontology-term", "child-ontology-term", "ontology-term-in-selected-ontologies"}
+	selected_validation_types = {"child-ontology-term", "ontology-term-in-selected-ontologies"}
+
+	result := f.single_ontology_term_source_ref_not_valid(
+		rego.metadata.rule(),
+		input.investigationFilePath,
+		def1.RULE_PUBLICATION_STATUS,
+		publication.status,
+		sprintf("Publication [%v] Status", [idx + 1]),
+		"Select valid ontologies ",
+		selected_validation_types,
+	)
+}
+
+# METADATA
+# title: Study Publication Status is not valid.
+# description: Study Publication Status value MUST be selected from the prioritised ontologies.
+# custom:
+#  rule_id: rule_i_100_320_007_03
+#  type: WARNING
+#  priority: MEDIUM
+#  section: investigation.studyPublications
+rule_i_100_320_007_03 contains result if {
+	def := data.metabolights.validation.v2.rules.phase1.definitions
+	some study in input.investigation.studies
+	some idx, publication in study.studyPublications.publications
+
+	# selected_validation_types := {}
+	selected_validation_types = {"any-ontology-term"}
 
 	result := f.single_ontology_term_source_ref_not_valid(
 		rego.metadata.rule(),
@@ -827,7 +882,7 @@ rule_i_100_330_004_01 contains result if {
 	def := data.metabolights.validation.v2.rules.phase1.definitions
 	some study in input.investigation.studies
 	some idx, factor in study.studyFactors.factors
-	selected_validation_types = {"any-ontology-term", "child-ontology-term", "ontology-term-in-selected-ontologies"}
+	selected_validation_types = {"child-ontology-term", "ontology-term-in-selected-ontologies"}
 
 	result := f.single_ontology_term_source_ref_not_valid(
 		rego.metadata.rule(),
@@ -840,6 +895,30 @@ rule_i_100_330_004_01 contains result if {
 	)
 }
 
+# METADATA
+# title: Study Factor Type is not valid.
+# description: Study Factor Type value MUST be selected from the prioritised ontologies.
+# custom:
+#  rule_id: rule_i_100_330_004_02
+#  type: WARNING
+#  priority: HIGH
+#  section: investigation.studyFactors
+rule_i_100_330_004_02 contains result if {
+	def := data.metabolights.validation.v2.rules.phase1.definitions
+	some study in input.investigation.studies
+	some idx, factor in study.studyFactors.factors
+	selected_validation_types = {"any-ontology-term"}
+
+	result := f.single_ontology_term_source_ref_not_valid(
+		rego.metadata.rule(),
+		input.investigationFilePath,
+		def1.RULE_STUDY_FACTOR_TYPE,
+		factor.type,
+		sprintf("Study Factor [%v] Type", [idx + 1]),
+		"Select valid ontologies ",
+		selected_validation_types,
+	)
+}
 # METADATA
 # title: Study Factor Type Term Source REF is not selected from the prioritised ontologies.
 # description: Study Factor Type value MAY be selected from the prioritised ontologies.
@@ -1029,7 +1108,32 @@ rule_i_100_340_004_01 contains result if {
 	def := data.metabolights.validation.v2.rules.phase1.definitions
 	some study in input.investigation.studies
 	some idx, assay in study.studyAssays.assays
-	selected_validation_types = {"any-ontology-term", "child-ontology-term", "ontology-term-in-selected-ontologies"}
+	selected_validation_types = {"child-ontology-term", "ontology-term-in-selected-ontologies"}
+
+	result := f.single_ontology_term_source_ref_not_valid(
+		rego.metadata.rule(),
+		input.investigationFilePath,
+		def1.RULE_ASSAY_MEASUREMENT_TYPE,
+		assay.measurementType,
+		sprintf("Assay [%v] Measurement Type", [idx + 1]),
+		"Select valid ontologies ",
+		selected_validation_types,
+	)
+}
+
+# METADATA
+# title: Study Assay Measurement Type is not valid.
+# description: Study Assay Measurement Type value MUST be selected from the prioritised ontologies.
+# custom:
+#  rule_id: rule_i_100_340_004_02
+#  type: WARNING
+#  priority: HIGH
+#  section: investigation.studyAssays
+rule_i_100_340_004_02 contains result if {
+	def := data.metabolights.validation.v2.rules.phase1.definitions
+	some study in input.investigation.studies
+	some idx, assay in study.studyAssays.assays
+	selected_validation_types = {"any-ontology-term"}
 
 	result := f.single_ontology_term_source_ref_not_valid(
 		rego.metadata.rule(),
@@ -1057,7 +1161,7 @@ rule_i_100_340_005_01 contains result if {
 
 	not def1.RULE_ASSAY_MEASUREMENT_TYPE
 
-	selected_validation_types = {"any-ontology-term", "child-ontology-term", "ontology-term-in-selected-ontologies"}
+	selected_validation_types = {"child-ontology-term", "ontology-term-in-selected-ontologies"}
 	result := f.single_ontology_term_source_ref_not_valid(
 		rego.metadata.rule(),
 		input.investigationFilePath,
@@ -1091,6 +1195,34 @@ rule_i_100_340_005_02 contains result if {
 	result := f.format(rego.metadata.rule(), msg, source)
 }
 
+
+
+# METADATA
+# title: Study Assay Measurement Type is not selected from the prioritised ontologies.
+# description: Study Assay Measurement Type value MAY be selected from the prioritised ontologies.
+# custom:
+#  rule_id: rule_i_100_340_005_03
+#  type: WARNING
+#  priority: HIGH
+#  section: investigation.studyAssays
+rule_i_100_340_005_03 contains result if {
+	def := data.metabolights.validation.v2.rules.phase1.definitions
+	some study in input.investigation.studies
+	some idx, assay in study.studyAssays.assays
+
+	not def1.RULE_ASSAY_MEASUREMENT_TYPE
+
+	selected_validation_types = {"any-ontology-term"}
+	result := f.single_ontology_term_source_ref_not_valid(
+		rego.metadata.rule(),
+		input.investigationFilePath,
+		def1.RULE_DEFAULT_ONTOLOGIES,
+		assay.measurementType,
+		sprintf("Assay [%v] Measurement Type", [idx + 1]),
+		"Prioritised ontologies",
+		selected_validation_types,
+	)
+}
 #----------------------------- Assay technologyType ----------------------------------#
 
 # METADATA
@@ -1128,7 +1260,32 @@ rule_i_100_340_007_01 contains result if {
 	def := data.metabolights.validation.v2.rules.phase1.definitions
 	some study in input.investigation.studies
 	some idx, assay in study.studyAssays.assays
-	selected_validation_types = {"any-ontology-term", "child-ontology-term", "ontology-term-in-selected-ontologies"}
+	selected_validation_types = {"child-ontology-term", "ontology-term-in-selected-ontologies"}
+
+	result := f.single_ontology_term_source_ref_not_valid(
+		rego.metadata.rule(),
+		input.investigationFilePath,
+		def1.RULE_ASSAY_TECHNOLOGY_TYPE,
+		assay.technologyType,
+		sprintf("Assay [%v] Technology Type", [idx + 1]),
+		"Select valid ontologies ",
+		selected_validation_types,
+	)
+}
+
+# METADATA
+# title: Study Assay Technology Type is not valid.
+# description: Study Assay Technology Type value MUST be selected from the prioritised ontologies.
+# custom:
+#  rule_id: rule_i_100_340_007_02
+#  type: WARNING
+#  priority: HIGH
+#  section: investigation.studyAssays
+rule_i_100_340_007_02 contains result if {
+	def := data.metabolights.validation.v2.rules.phase1.definitions
+	some study in input.investigation.studies
+	some idx, assay in study.studyAssays.assays
+	selected_validation_types = {"any-ontology-term"}
 
 	result := f.single_ontology_term_source_ref_not_valid(
 		rego.metadata.rule(),
@@ -1156,7 +1313,7 @@ rule_i_100_340_008_01 contains result if {
 
 	not def1.RULE_ASSAY_TECHNOLOGY_TYPE
 
-	selected_validation_types = {"any-ontology-term", "child-ontology-term", "ontology-term-in-selected-ontologies"}
+	selected_validation_types = {"child-ontology-term", "ontology-term-in-selected-ontologies"}
 	result := f.single_ontology_term_source_ref_not_valid(
 		rego.metadata.rule(),
 		input.investigationFilePath,
@@ -1187,6 +1344,34 @@ rule_i_100_340_008_02 contains result if {
 	result := f.format(rego.metadata.rule(), msg, source)
 }
 
+
+
+# METADATA
+# title: Study Assay Technology Type is not selected from the prioritised ontologies.
+# description: Study Assay Technology Type value MAY be selected from the prioritised ontologies.
+# custom:
+#  rule_id: rule_i_100_340_008_03
+#  type: WARNING
+#  priority: HIGH
+#  section: investigation.studyAssays
+rule_i_100_340_008_03 contains result if {
+	def := data.metabolights.validation.v2.rules.phase1.definitions
+	some study in input.investigation.studies
+	some idx, assay in study.studyAssays.assays
+
+	not def1.RULE_ASSAY_TECHNOLOGY_TYPE
+
+	selected_validation_types = {"any-ontology-term"}
+	result := f.single_ontology_term_source_ref_not_valid(
+		rego.metadata.rule(),
+		input.investigationFilePath,
+		def1.RULE_DEFAULT_ONTOLOGIES,
+		assay.technologyType,
+		sprintf("Assay [%v] Technology Type", [idx + 1]),
+		"Select valid ontologies ",
+		selected_validation_types,
+	)
+}
 # METADATA
 # title: Study Assay Technology Platform is empty.
 # description: Study Assay Technology Platform should be defined.
@@ -1694,7 +1879,33 @@ rule_i_100_360_009_01 contains result if {
 	some study in input.investigation.studies
 	some idx, contact in study.studyContacts.people
 	some s_idx, role in contact.roles
-	selected_validation_types = {"any-ontology-term", "child-ontology-term", "ontology-term-in-selected-ontologies"}
+	selected_validation_types = {"child-ontology-term", "ontology-term-in-selected-ontologies"}
+
+	result := f.single_ontology_term_source_ref_not_valid(
+		rego.metadata.rule(),
+		input.investigationFilePath,
+		def1.RULE_STUDY_PERSON_ROLES,
+		role,
+		sprintf("Study Contact [%v] Role [%v]", [idx + 1, s_idx + 1]),
+		"Select valid ontologies ",
+		selected_validation_types,
+	)
+}
+
+
+# METADATA
+# title: Study Person Role is not valid.
+# description: Study Person Role SHOULD be selected from the prioritised ontologies.
+# custom:
+#  rule_id: rule_i_100_360_009_02
+#  type: WARNING
+#  priority: HIGH
+#  section: investigation.studyContacts
+rule_i_100_360_009_02 contains result if {
+	some study in input.investigation.studies
+	some idx, contact in study.studyContacts.people
+	some s_idx, role in contact.roles
+	selected_validation_types = {"any-ontology-term"}
 
 	result := f.single_ontology_term_source_ref_not_valid(
 		rego.metadata.rule(),
