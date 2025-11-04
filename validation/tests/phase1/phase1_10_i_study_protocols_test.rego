@@ -1,7 +1,7 @@
-package metabolights.validation.v2.phase1.tests
+package metabolights.validation.v2.rules.phase1.tests
 
 import rego.v1
-import data.metabolights.validation.v2.phase1.violations as rules
+import data.metabolights.validation.v2.rules.phase1.violations as rules
 
 #########################################################################################################
 # rule_i_100_350_001_01
@@ -124,11 +124,11 @@ test_rule_i_100_350_001_02_no_violation_01 if {
 			"subTechnique": "LC",
 		}}},
 	}
-		with data.metabolights.validation.v2.phase1.definitions._DEFAULT_MERGED_STUDY_PROTOCOLS as [
+		with data.metabolights.validation.v2.rules.phase1.definitions._DEFAULT_MERGED_STUDY_PROTOCOLS as [
 			"Extraction",
 			"Sample collection",
 		]
-		with data.metabolights.validation.v2.phase1.definitions._PROTOCOL_TECHNOLOGY_MAP as {
+		with data.metabolights.validation.v2.rules.phase1.definitions._PROTOCOL_TECHNOLOGY_MAP as {
 			"Extraction": ["LC-MS"],
 			"Sample collection": ["LC-MS"],
 		}
@@ -176,13 +176,13 @@ test_rule_i_100_350_001_02_violation_01 if {
 			"subTechnique": "LC",
 		}}},
 	}
-		with data.metabolights.validation.v2.phase1.definitions._DEFAULT_MERGED_STUDY_PROTOCOLS as [
+		with data.metabolights.validation.v2.rules.phase1.definitions._DEFAULT_MERGED_STUDY_PROTOCOLS as [
 			"Extraction",
 			"Sample collection",
 			"Mass spectrometry",
 			"Metabolite identification",
 		]
-		with data.metabolights.validation.v2.phase1.definitions._PROTOCOL_TECHNOLOGY_MAP as {
+		with data.metabolights.validation.v2.rules.phase1.definitions._PROTOCOL_TECHNOLOGY_MAP as {
 			"Extraction": ["LC-MS"],
 			"Sample collection": ["LC-MS"],
 			"Mass spectrometry": ["LC-MS"],
@@ -240,14 +240,14 @@ test_rule_i_100_350_001_02_violation_02 if {
 			}},
 		},
 	}
-		with data.metabolights.validation.v2.phase1.definitions._DEFAULT_MERGED_STUDY_PROTOCOLS as [
+		with data.metabolights.validation.v2.rules.phase1.definitions._DEFAULT_MERGED_STUDY_PROTOCOLS as [
 			"Extraction",
 			"Sample collection",
 			"Mass spectrometry",
 			"Metabolite identification1",
 			"Metabolite identification2",
 		]
-		with data.metabolights.validation.v2.phase1.definitions._PROTOCOL_TECHNOLOGY_MAP as {
+		with data.metabolights.validation.v2.rules.phase1.definitions._PROTOCOL_TECHNOLOGY_MAP as {
 			"Extraction": ["LC-MS", "GC-MS"],
 			"Sample collection": ["LC-MS", "GC-MS"],
 			"Mass spectrometry": ["LC-MS", "GC-MS"],
@@ -759,7 +759,7 @@ test_rule_i_100_350_007_01_no_violation_01 if {
 		}]}}]},
 		"investigationFilePath": "i_Investigation.txt",
 	}
-		with data.metabolights.validation.v2.phase1.definitions._DEFAULT_MERGED_STUDY_PROTOCOL_PARAMETERS as {"Extraction": [
+		with data.metabolights.validation.v2.rules.phase1.definitions._DEFAULT_MERGED_STUDY_PROTOCOL_PARAMETERS as {"Extraction": [
 			"Derivatization",
 			"Post Extraction",
 		]}
@@ -814,7 +814,7 @@ test_rule_i_100_350_007_01_violation_01 if {
 		]}}]},
 		"investigationFilePath": "i_Investigation.txt",
 	}
-		with data.metabolights.validation.v2.phase1.definitions._DEFAULT_MERGED_STUDY_PROTOCOL_PARAMETERS as {
+		with data.metabolights.validation.v2.rules.phase1.definitions._DEFAULT_MERGED_STUDY_PROTOCOL_PARAMETERS as {
 			"Sample collection": [
 				"Instrument",
 				"Ion source",

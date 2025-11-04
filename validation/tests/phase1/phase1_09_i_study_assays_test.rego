@@ -1,7 +1,7 @@
-package metabolights.validation.v2.phase1.tests
+package metabolights.validation.v2.rules.phase1.tests
 
 import rego.v1
-import data.metabolights.validation.v2.phase1.violations as rules
+import data.metabolights.validation.v2.rules.phase1.violations as rules
 
 
 #########################################################################################################
@@ -815,7 +815,7 @@ test_rule_i_100_340_004_01_no_violation_01 if {
 		]}}]},
 		"investigationFilePath": "i_Investigation.txt",
 	}
-		with data.metabolights.validation.v2.phase1.definitions.CL_STUDY_ASSAY_MEASUREMENT_TYPE_REF_SOURCES as [
+		with data.metabolights.validation.v2.rules.phase1.definitions.CL_STUDY_ASSAY_MEASUREMENT_TYPE_REF_SOURCES as [
 			"EFO",
 			"MTBLS",
 		]
@@ -873,7 +873,7 @@ test_rule_i_100_340_004_01_violation_01 if {
 		]}}]},
 		"investigationFilePath": "i_Investigation.txt",
 	}
-		with data.metabolights.validation.v2.phase1.definitions.CL_STUDY_ASSAY_MEASUREMENT_TYPE_REF_SOURCES as ["EFO"]
+		with data.metabolights.validation.v2.rules.phase1.definitions.CL_STUDY_ASSAY_MEASUREMENT_TYPE_REF_SOURCES as ["EFO"]
 	count(result) == 2
 }
 

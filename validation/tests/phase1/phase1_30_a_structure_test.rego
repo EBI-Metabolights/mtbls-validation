@@ -1,7 +1,7 @@
-package metabolights.validation.v2.phase1.tests
+package metabolights.validation.v2.rules.phase1.tests
 
 import rego.v1
-import data.metabolights.validation.v2.phase1.violations as rules
+import data.metabolights.validation.v2.rules.phase1.violations as rules
 
 #########################################################################################################
 # rule_a_100_100_001_01
@@ -117,7 +117,7 @@ test_rule_a_100_100_001_03_no_violation_01 if {
 		"investigation": {"studies": [{"fileName": "s_MTBLS1.txt"}]},
 		"parserMessages": {"s_MTBLS1.txt": []},
 	}
-		with data.metabolights.validation.v2.phase1.definitions._DEFAULT_ASSAY_HEADERS as {"a_MTBLS1.txt": {"headers": {
+		with data.metabolights.validation.v2.rules.phase1.definitions._DEFAULT_ASSAY_HEADERS as {"a_MTBLS1.txt": {"headers": {
 			{"columnHeader": "Sample Name", "required": true},
 			{"columnHeader": "Parameter Value[Scan polarity]", "required": true},
 		}}}
@@ -142,7 +142,7 @@ test_rule_a_100_100_001_03_violation_01 if {
 		"investigation": {"studies": [{"fileName": "s_MTBLS1.txt"}]},
 		"parserMessages": {"s_MTBLS1.txt": []},
 	}
-		with data.metabolights.validation.v2.phase1.definitions._DEFAULT_ASSAY_HEADERS as {"a_MTBLS1.txt": {"headers": {
+		with data.metabolights.validation.v2.rules.phase1.definitions._DEFAULT_ASSAY_HEADERS as {"a_MTBLS1.txt": {"headers": {
 			{"columnHeader": "Sample Name", "required": true},
 			{"columnHeader": "Parameter Value[Scan polarity]", "required": true},
 			{"columnHeader": "Parameter Value[Scan m/z range]", "required": true},
@@ -179,7 +179,7 @@ test_rule_a_100_100_001_04_no_violation_01 if {
 		"investigation": {"studies": [{"fileName": "s_MTBLS1.txt"}]},
 		"parserMessages": {"s_MTBLS1.txt": []},
 	}
-		with data.metabolights.validation.v2.phase1.definitions._DEFAULT_ASSAY_HEADER_NAMES as {"a_MTBLS1.txt": {
+		with data.metabolights.validation.v2.rules.phase1.definitions._DEFAULT_ASSAY_HEADER_NAMES as {"a_MTBLS1.txt": {
 			"Sample Name",
 			"Parameter Value[Scan polarity]",
 			"Parameter Value[Scan m/z range]",
@@ -219,14 +219,14 @@ test_rule_a_100_100_001_05_no_violation_01 if {
 		"investigation": {"studies": [{"fileName": "s_MTBLS1.txt"}]},
 		"parserMessages": {"s_MTBLS1.txt": []},
 	}
-		with data.metabolights.validation.v2.phase1.definitions.__ASSAY_PROTOCOL_HEADER_COLUMNS as {"a_MTBLS1.txt": [
+		with data.metabolights.validation.v2.rules.phase1.definitions.__ASSAY_PROTOCOL_HEADER_COLUMNS as {"a_MTBLS1.txt": [
 			1,
 			5,
 			17,
 			31,
 			34,
 		]}
-		with data.metabolights.validation.v2.phase1.definitions.__ASSAY_DEFAULT_PROTOCOL_HEADERS as {"a_MTBLS1.txt": [
+		with data.metabolights.validation.v2.rules.phase1.definitions.__ASSAY_DEFAULT_PROTOCOL_HEADERS as {"a_MTBLS1.txt": [
 			"Extraction",
 			"Chromatography",
 			"Mass spectrometry",
@@ -262,7 +262,7 @@ test_rule_a_100_100_001_05_violation_01 if {
 		"investigation": {"studies": [{"fileName": "s_MTBLS1.txt"}]},
 		"parserMessages": {"s_MTBLS1.txt": []},
 	}
-		with data.metabolights.validation.v2.phase1.definitions.__ASSAY_PROTOCOL_HEADER_COLUMNS as {"a_MTBLS1.txt": [
+		with data.metabolights.validation.v2.rules.phase1.definitions.__ASSAY_PROTOCOL_HEADER_COLUMNS as {"a_MTBLS1.txt": [
 			1,
 			5,
 			17,
@@ -270,7 +270,7 @@ test_rule_a_100_100_001_05_violation_01 if {
 			34,
 			37,
 		]}
-		with data.metabolights.validation.v2.phase1.definitions.__ASSAY_DEFAULT_PROTOCOL_HEADERS as {"a_MTBLS1.txt": [
+		with data.metabolights.validation.v2.rules.phase1.definitions.__ASSAY_DEFAULT_PROTOCOL_HEADERS as {"a_MTBLS1.txt": [
 			"Extraction",
 			"Chromatography",
 			"Mass spectrometry",
@@ -310,14 +310,14 @@ test_rule_a_100_100_001_06_no_violation_01 if {
 		"investigation": {"studies": [{"fileName": "s_MTBLS1.txt"}]},
 		"parserMessages": {"s_MTBLS1.txt": []},
 	}
-		with data.metabolights.validation.v2.phase1.definitions.__ASSAY_PROTOCOL_HEADER_COLUMNS as {"a_MTBLS1.txt": [
+		with data.metabolights.validation.v2.rules.phase1.definitions.__ASSAY_PROTOCOL_HEADER_COLUMNS as {"a_MTBLS1.txt": [
 			1,
 			5,
 			17,
 			31,
 			34,
 		]}
-		with data.metabolights.validation.v2.phase1.definitions.__ASSAY_DEFAULT_PROTOCOL_HEADERS as {"a_MTBLS1.txt": [
+		with data.metabolights.validation.v2.rules.phase1.definitions.__ASSAY_DEFAULT_PROTOCOL_HEADERS as {"a_MTBLS1.txt": [
 			"Extraction",
 			"Chromatography",
 			"Mass spectrometry",
@@ -350,13 +350,13 @@ test_rule_a_100_100_001_06_violation_01 if {
 		"investigation": {"studies": [{"fileName": "s_MTBLS1.txt"}]},
 		"parserMessages": {"s_MTBLS1.txt": []},
 	}
-		with data.metabolights.validation.v2.phase1.definitions.__ASSAY_PROTOCOL_HEADER_COLUMNS as {"a_MTBLS1.txt": [
+		with data.metabolights.validation.v2.rules.phase1.definitions.__ASSAY_PROTOCOL_HEADER_COLUMNS as {"a_MTBLS1.txt": [
 			1,
 			5,
 			17,
 			31,
 		]}
-		with data.metabolights.validation.v2.phase1.definitions.__ASSAY_DEFAULT_PROTOCOL_HEADERS as {"a_MTBLS1.txt": [
+		with data.metabolights.validation.v2.rules.phase1.definitions.__ASSAY_DEFAULT_PROTOCOL_HEADERS as {"a_MTBLS1.txt": [
 			"Extraction",
 			"Chromatography",
 			"Mass spectrometry",
@@ -452,7 +452,7 @@ test_rule_a_100_100_001_08_no_violation_01 if {
 		"investigation": {"studies": [{"fileName": "s_MTBLS1.txt"}]},
 		"parserMessages": {"s_MTBLS1.txt": []},
 	}
-		with data.metabolights.validation.v2.phase1.definitions._DEFAULT_ASSAY_HEADER_NAMES as {"a_MTBLS1.txt": {
+		with data.metabolights.validation.v2.rules.phase1.definitions._DEFAULT_ASSAY_HEADER_NAMES as {"a_MTBLS1.txt": {
 			"Protocol REF",
 			"Parameter Value[Scan polarity]",
 			"Normalization Name",
@@ -460,7 +460,7 @@ test_rule_a_100_100_001_08_no_violation_01 if {
 			"Parameter Value[Scan m/z range]",
 			"Sample Name",
 		}}
-		with data.metabolights.validation.v2.phase1.definitions._DEFAULT_ASSAY_HEADERS as {"a_MTBLS1.txt": {"headers": [
+		with data.metabolights.validation.v2.rules.phase1.definitions._DEFAULT_ASSAY_HEADERS as {"a_MTBLS1.txt": {"headers": [
 			{"columnHeader": "Protocol REF"},
 			{"columnHeader": "Parameter Value[Scan polarity]"},
 			{"columnHeader": "Normalization Name"},
@@ -497,7 +497,7 @@ test_rule_a_100_100_001_08_no_violation_02 if {
 		"investigation": {"studies": [{"fileName": "s_MTBLS1.txt"}]},
 		"parserMessages": {"s_MTBLS1.txt": []},
 	}
-		with data.metabolights.validation.v2.phase1.definitions._DEFAULT_ASSAY_HEADER_NAMES as {"a_MTBLS1.txt": {
+		with data.metabolights.validation.v2.rules.phase1.definitions._DEFAULT_ASSAY_HEADER_NAMES as {"a_MTBLS1.txt": {
 			"Protocol REF",
 			"Parameter Value[Scan polarity]",
 			"Normalization Name",
@@ -505,7 +505,7 @@ test_rule_a_100_100_001_08_no_violation_02 if {
 			"Parameter Value[Scan m/z range]",
 			"Sample Name",
 		}}
-		with data.metabolights.validation.v2.phase1.definitions._DEFAULT_ASSAY_HEADERS as {"a_MTBLS1.txt": {"headers": [
+		with data.metabolights.validation.v2.rules.phase1.definitions._DEFAULT_ASSAY_HEADERS as {"a_MTBLS1.txt": {"headers": [
 			{"columnHeader": "Protocol REF"},
 			{"columnHeader": "Parameter Value[Scan polarity]"},
 			{"columnHeader": "Normalization Name"},
@@ -540,7 +540,7 @@ test_rule_a_100_100_001_08_violation_01 if {
 		"investigation": {"studies": [{"fileName": "s_MTBLS1.txt"}]},
 		"parserMessages": {"s_MTBLS1.txt": []},
 	}
-		with data.metabolights.validation.v2.phase1.definitions._DEFAULT_ASSAY_HEADER_NAMES as {"a_MTBLS1.txt": [
+		with data.metabolights.validation.v2.rules.phase1.definitions._DEFAULT_ASSAY_HEADER_NAMES as {"a_MTBLS1.txt": [
 			"Protocol REF",
 			"Parameter Value[Scan polarity]",
 			"Normalization Name",
@@ -549,7 +549,7 @@ test_rule_a_100_100_001_08_violation_01 if {
 			"Parameter Value[Scan m/z range]",
 			"Sample Name",
 		]}
-		with data.metabolights.validation.v2.phase1.definitions._DEFAULT_ASSAY_HEADERS as {"a_MTBLS1.txt": {"headers": [
+		with data.metabolights.validation.v2.rules.phase1.definitions._DEFAULT_ASSAY_HEADERS as {"a_MTBLS1.txt": {"headers": [
 			{"columnHeader": "Sample Name"},
 			{"columnHeader": "Protocol REF"},
 			{"columnHeader": "Parameter Value[Scan polarity]"},
@@ -649,7 +649,7 @@ test_rule_a_100_100_001_10_no_violation_01 if {
 		"investigation": {"studies": [{"fileName": "s_MTBLS1.txt"}]},
 		"parserMessages": {"s_MTBLS1.txt": []},
 	}
-		with data.metabolights.validation.v2.phase1.definitions._DEFAULT_ASSAY_HEADERS as {"a_MTBLS1.txt": [{"version": "2.0", "headers": [
+		with data.metabolights.validation.v2.rules.phase1.definitions._DEFAULT_ASSAY_HEADERS as {"a_MTBLS1.txt": [{"version": "2.0", "headers": [
 			{"columnCategory": "Parameter Value", 
 			"columnHeader": "Parameter Value[Scan polarity]", 
 			"columnIndex": 3
@@ -682,7 +682,7 @@ test_rule_a_100_100_001_10_violation_01 if {
 		"parserMessages": {"s_MTBLS1.txt": []},
 		"studyDbMetadata": {"studyCategory": "other", "sampleTemplate": "minimum",  "templateVersion": "2.0"}
 	}
-		with data.metabolights.validation.v2.phase1.definitions._DEFAULT_ASSAY_HEADERS as {"a_MTBLS1.txt": [{"version": "2.0", "headers": [
+		with data.metabolights.validation.v2.rules.phase1.definitions._DEFAULT_ASSAY_HEADERS as {"a_MTBLS1.txt": [{"version": "2.0", "headers": [
 			{"columnCategory": "Parameter Value", 
 			"columnHeader": "Parameter Value[Scan polarity]", 
 			"columnIndex": 3
@@ -794,7 +794,7 @@ test_rule_a_100_100_001_12_no_violation_01 if {
 		"investigation": {"studies": [{"fileName": "s_MTBLS1.txt"}]},
 		"parserMessages": {"s_MTBLS1.txt": []},
 	}
-		with data.metabolights.validation.v2.phase1.definitions._DEFAULT_ASSAY_HEADERS as {"a_MTBLS1.txt": [{"version": "2.0", "headers": [
+		with data.metabolights.validation.v2.rules.phase1.definitions._DEFAULT_ASSAY_HEADERS as {"a_MTBLS1.txt": [{"version": "2.0", "headers": [
 			{"columnCategory": "", 
 			"columnHeader": "Spectral Raw Data File", 
 			"columnIndex": 3
@@ -827,7 +827,7 @@ test_rule_a_100_100_001_12_violation_01 if {
 		"parserMessages": {"s_MTBLS1.txt": []},
 		"studyDbMetadata": {"studyCategory": "other", "sampleTemplate": "minimum",  "templateVersion": "2.0"}
 	}
-		with data.metabolights.validation.v2.phase1.definitions._DEFAULT_ASSAY_HEADERS as {"a_MTBLS1.txt": [{"version": "2.0", "headers": [
+		with data.metabolights.validation.v2.rules.phase1.definitions._DEFAULT_ASSAY_HEADERS as {"a_MTBLS1.txt": [{"version": "2.0", "headers": [
 			{"columnCategory": "Spectral Raw Data File", 
 			"columnHeader": "Spectral Raw Data File", 
 			"columnIndex": 3

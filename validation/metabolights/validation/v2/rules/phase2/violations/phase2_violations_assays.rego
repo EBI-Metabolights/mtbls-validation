@@ -1,10 +1,10 @@
-package metabolights.validation.v2.phase2.violations
+package metabolights.validation.v2.rules.phase2.violations
 
-import data.metabolights.validation.v2.functions as f
+import data.metabolights.validation.v2.utils.functions as f
 import rego.v1
 
-import data.metabolights.validation.v2.phase2.definitions as def
-import data.metabolights.validation.v2.phase1.definitions as def1
+import data.metabolights.validation.v2.rules.phase2.definitions as def
+import data.metabolights.validation.v2.rules.phase1.definitions as def1
 
 import data.metabolights.validation.v2.templates
 
@@ -493,7 +493,7 @@ rule_a_200_090_004_01 contains result if {
 	template_list := data.metabolights.validation.v2.templates.assayFileHeaderTemplates[assay_technique]
 
 	some template in template_list
-	template.version == data.metabolights.validation.v2.phase1.definitions.STUDY_TEMPLATE_VERSION
+	template.version == data.metabolights.validation.v2.rules.phase1.definitions.STUDY_TEMPLATE_VERSION
 	some template_header in template.headers
 	template_header.required == true
 
@@ -520,7 +520,7 @@ rule_a_200_090_004_02 contains result if {
 	template_list := data.metabolights.validation.v2.templates.assayFileHeaderTemplates[assay_technique]
 
 	some template in template_list
-	template.version == data.metabolights.validation.v2.phase1.definitions.STUDY_TEMPLATE_VERSION
+	template.version == data.metabolights.validation.v2.rules.phase1.definitions.STUDY_TEMPLATE_VERSION
 	some template_header in template.headers
 	template_header.minLength > 0
 
@@ -546,7 +546,7 @@ rule_a_200_090_004_03 contains result if {
 	template_list := data.metabolights.validation.v2.templates.assayFileHeaderTemplates[assay_technique]
 
 	some template in template_list
-	template.version == data.metabolights.validation.v2.phase1.definitions.STUDY_TEMPLATE_VERSION
+	template.version == data.metabolights.validation.v2.rules.phase1.definitions.STUDY_TEMPLATE_VERSION
 	some template_header in template.headers
 	template_header.maxLength > 0
 
@@ -571,7 +571,7 @@ rule_a_200_090_005_01 contains result if {
 		assay_technique := sheet.assayTechnique.name
 		template_list := data.metabolights.validation.v2.templates.assayFileHeaderTemplates[assay_technique]
 		some template in template_list
-		template.version == data.metabolights.validation.v2.phase1.definitions.STUDY_TEMPLATE_VERSION
+		template.version == data.metabolights.validation.v2.rules.phase1.definitions.STUDY_TEMPLATE_VERSION
 		some template_header in template.headers
 		template_header.columnCategory == "Protocol"
 	]

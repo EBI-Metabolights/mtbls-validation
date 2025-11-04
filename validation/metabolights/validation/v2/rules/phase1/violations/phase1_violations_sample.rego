@@ -1,7 +1,7 @@
-package metabolights.validation.v2.phase1.violations
+package metabolights.validation.v2.rules.phase1.violations
 
 import rego.v1
-import data.metabolights.validation.v2.functions as f
+import data.metabolights.validation.v2.utils.functions as f
 
 
 #########################################################################################################
@@ -58,7 +58,7 @@ rule_s_100_100_001_03 contains result if {
 	some file_name
 	input.samples[file_name]
 	headers := {header.columnHeader | some header in input.samples[file_name].table.headers}
-	def := data.metabolights.validation.v2.phase1.definitions
+	def := data.metabolights.validation.v2.rules.phase1.definitions
 	values := {default_header.columnHeader |
 		some name, default_header in def._DEFAULT_SAMPLE_FILE_HEADERS
 		# default_header.required == true
@@ -79,7 +79,7 @@ rule_s_100_100_001_03 contains result if {
 #  section: samples.columns
 rule_s_100_100_001_04 contains result if {
 	some file_name, _ in input.samples
-	def := data.metabolights.validation.v2.phase1.definitions
+	def := data.metabolights.validation.v2.rules.phase1.definitions
 	headers := {sprintf("['%v', column index: %v]", [x, y]) |
 	 	some j, header in input.samples[file_name].table.headers
 		header.columnCategory != "Characteristics"
@@ -177,7 +177,7 @@ rule_s_100_100_001_07 contains result if {
 #  section: samples.columns
 rule_s_100_100_001_08 contains result if {
 	templates := data.metabolights.validation.v2.templates
-	def := data.metabolights.validation.v2.phase1.definitions
+	def := data.metabolights.validation.v2.rules.phase1.definitions
 	some file_name, _ in input.samples
 	headers := [header |
 		some header in input.samples[file_name].table.headers
@@ -210,7 +210,7 @@ rule_s_100_100_001_08 contains result if {
 #  section: samples.columns
 rule_s_100_100_001_09 contains result if {
 	some file_name, _ in input.samples
-	def := data.metabolights.validation.v2.phase1.definitions
+	def := data.metabolights.validation.v2.rules.phase1.definitions
 	headers := [header |
 		some header in input.samples[file_name].table.headers
 		header.columnCategory == "Characteristics"
@@ -281,10 +281,10 @@ rule_s_100_100_001_11 contains result if {
 	
 	headers := {header |
 		some header in input.samples[file_name].table.headers
-		data.metabolights.validation.v2.phase1.definitions._DEFAULT_SAMPLE_FILE_HEADERS[header.columnHeader]
+		data.metabolights.validation.v2.rules.phase1.definitions._DEFAULT_SAMPLE_FILE_HEADERS[header.columnHeader]
 		not startswith(header.columnHeader, "Comment[")
 	}
-	default_headers := data.metabolights.validation.v2.phase1.definitions._DEFAULT_SAMPLE_FILE_HEADERS
+	default_headers := data.metabolights.validation.v2.rules.phase1.definitions._DEFAULT_SAMPLE_FILE_HEADERS
 	matches := [sprintf("[Column Index: %v: structure of '%v' column is '%v', but expected structure is '%v']", [x1, x2, x3, x4]) |
 		
 		some header in headers
@@ -312,7 +312,7 @@ rule_s_100_100_001_11 contains result if {
 #  section: samples.columns
 rule_s_100_100_001_12 contains result if {
 	templates := data.metabolights.validation.v2.templates
-	def := data.metabolights.validation.v2.phase1.definitions
+	def := data.metabolights.validation.v2.rules.phase1.definitions
 	some file_name, _ in input.samples
 	headers := {header |
 		some header in input.samples[file_name].table.headers
@@ -347,7 +347,7 @@ rule_s_100_100_001_12 contains result if {
 #  section: samples.columns
 rule_s_100_100_001_13 contains result if {
 	templates := data.metabolights.validation.v2.templates
-	def := data.metabolights.validation.v2.phase1.definitions
+	def := data.metabolights.validation.v2.rules.phase1.definitions
 	some file_name, _ in input.samples
 	headers := {header |
 		some header in input.samples[file_name].table.headers

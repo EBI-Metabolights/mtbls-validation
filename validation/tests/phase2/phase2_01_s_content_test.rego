@@ -1,7 +1,7 @@
-package metabolights.validation.v2.phase2.tests
+package metabolights.validation.v2.rules.phase2.tests
 
 import rego.v1
-import data.metabolights.validation.v2.phase2.violations as rules
+import data.metabolights.validation.v2.rules.phase2.violations as rules
 
 #########################################################################################################
 # rule_s_200_090_001_01
@@ -178,16 +178,6 @@ test_rule_s_200_090_002_01_violation_01 if {
 		"investigation": {"studies": [{"fileName": "s_MTBLS1.txt"}]},
 		"parserMessages": {"s_MTBLS1.txt": []},
 	}
-		with data.metabolights.validation.v2.controlLists.prioritisedOrganismRefSources as [
-			"MTBLS",
-			"EFO",
-			"NCBI",
-		]
-		with data.metabolights.validation.v2.controlLists.prioritisedOrganismPartRefSources as [
-			"MTBLS",
-			"EFO",
-			"BTO",
-		]
 		
 	count(result) == 1
 }
@@ -2158,7 +2148,7 @@ test_rule_s_200_100_002_02_no_violation_01 if {
 		"parserMessages": {"s_MTBLS1.txt": []},
 		"studyDbMetadata": {"studyCategory": "other", "sampleTemplate": "minimum",  "templateVersion": "2.0"}
 	}
-		with data.metabolights.validation.v2.phase2.definitions._SAMPLES_DEFAULT_CHARACTERISTICS_HEADERS as [
+		with data.metabolights.validation.v2.rules.phase2.definitions._SAMPLES_DEFAULT_CHARACTERISTICS_HEADERS as [
         "Characteristics[Sample type]",
 	]
 
@@ -2216,7 +2206,7 @@ test_rule_s_200_100_002_02_violation_01 if {
 		"parserMessages": {"s_MTBLS1.txt": []},
 		"studyDbMetadata": {"studyCategory": "other", "sampleTemplate": "minimum",  "templateVersion": "2.0"}
 	}
-	with data.metabolights.validation.v2.phase2.definitions._SAMPLES_DEFAULT_CHARACTERISTICS_HEADERS as [
+	with data.metabolights.validation.v2.rules.phase2.definitions._SAMPLES_DEFAULT_CHARACTERISTICS_HEADERS as [
         "Characteristics[Organism]",
         "Characteristics[Sample type]",
 	]

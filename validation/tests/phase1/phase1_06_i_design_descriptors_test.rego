@@ -1,8 +1,8 @@
-package metabolights.validation.v2.phase1.tests
+package metabolights.validation.v2.rules.phase1.tests
 
 import rego.v1
-import data.metabolights.validation.v2.phase1.violations as rules
-
+import data.metabolights.validation.v2.rules.phase1.violations as rules
+import data.metabolights.validation.v2.rules.phase1.definitions as def
 #########################################################################################################
 # rule_i_100_310_001_01
 #########################################################################################################
@@ -91,7 +91,111 @@ test_rule_i_100_310_002_01_no_violation_01 if {
 			"termSourceRef": "EFO",
 		}]}}]},
 		"investigationFilePath": "i_Investigation.txt",
-	}
+	} with def.RULE_STUDY_DESIGN_TYPE  as {
+        "allowedMissingOntologyTerms": null,
+        "allowedOtherSources": [
+          {
+            "accessionPrefix": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_",
+            "sourceLabel": "MTBLS"
+          },
+          {
+            "accessionPrefix": "https://www.wikidata.org/wiki/",
+            "sourceLabel": "wikidata"
+          },
+          {
+            "accessionPrefix": "http://uri.interlex.org/base/ilx_",
+            "sourceLabel": "ILX"
+          }
+        ],
+        "allowedParentOntologyTerms": null,
+        "allowedPlaceholders": [
+          {
+            "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/placeholder",
+            "termSourceRef": "MTBLS"
+          },
+          {
+            "termAccessionNumber": "",
+            "termSourceRef": ""
+          }
+        ],
+        "defaultValue": null,
+        "description": "",
+        "fieldName": "Study Design Type",
+        "ontologies": [
+          "EFO",
+          "NCIT",
+          "MTBLS",
+          "CHEBI",
+          "CHMO",
+          "MONDO",
+          "PRIDE",
+          "GO",
+          "MESH"
+        ],
+        "ruleName": "Study Design Type-01",
+        "selectionCriteria": {
+          "isaFileTemplateNameFilter": null,
+          "isaFileType": "investigation",
+          "linkedFieldAndValueFilter": null,
+          "studyCategoryFilter": null,
+          "studyCreatedAtOrAfter": null,
+          "studyCreatedBefore": null,
+          "templateVersionFilter": null
+        },
+        "terms": [
+          {
+            "term": "targeted metabolite profiling",
+            "termAccessionNumber": "http://purl.obolibrary.org/obo/MSIO_0000100",
+            "termSourceRef": "MSIO"
+          },
+          {
+            "term": "untargeted metabolite profiling",
+            "termAccessionNumber": "http://purl.obolibrary.org/obo/MSIO_0000101",
+            "termSourceRef": "MSIO"
+          },
+          {
+            "term": "nuclear magnetic resonance spectroscopy",
+            "termAccessionNumber": "http://purl.obolibrary.org/obo/CHMO_0000591",
+            "termSourceRef": "CHMO"
+          },
+          {
+            "term": "ultra-performance liquid chromatography-mass spectrometry",
+            "termAccessionNumber": "http://purl.obolibrary.org/obo/CHMO_0000715",
+            "termSourceRef": "CHMO"
+          },
+          {
+            "term": "gas chromatography-mass spectrometry",
+            "termAccessionNumber": "http://purl.obolibrary.org/obo/CHMO_0000497",
+            "termSourceRef": "CHMO"
+          },
+          {
+            "term": "tandem mass spectrometry",
+            "termAccessionNumber": "http://purl.obolibrary.org/obo/CHMO_0000575",
+            "termSourceRef": "CHMO"
+          },
+          {
+            "term": "Multi-omics study",
+            "termAccessionNumber": "http://purl.obolibrary.org/obo/PRIDE_0000461",
+            "termSourceRef": "PRIDE"
+          },
+          {
+            "term": "microbiome",
+            "termAccessionNumber": "http://www.ebi.ac.uk/efo/EFO_0004982",
+            "termSourceRef": "EFO"
+          },
+          {
+            "term": "aging",
+            "termAccessionNumber": "http://purl.obolibrary.org/obo/NCIT_C16269",
+            "termSourceRef": "NCIT"
+          },
+          {
+            "term": "cancer",
+            "termAccessionNumber": "http://purl.obolibrary.org/obo/MONDO_0004992",
+            "termSourceRef": "MONDO"
+          }
+        ],
+        "validationType": "any-ontology-term"
+      }
 	count(result) == 0
 }
 
@@ -106,7 +210,111 @@ test_rule_i_100_310_002_01_violation_01 if {
 			"termSourceRef": "EFO",
 		}]}}]},
 		"investigationFilePath": "i_Investigation.txt",
-	}
+	} with def.RULE_STUDY_DESIGN_TYPE as {
+        "allowedMissingOntologyTerms": null,
+        "allowedOtherSources": [
+          {
+            "accessionPrefix": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_",
+            "sourceLabel": "MTBLS"
+          },
+          {
+            "accessionPrefix": "https://www.wikidata.org/wiki/",
+            "sourceLabel": "wikidata"
+          },
+          {
+            "accessionPrefix": "http://uri.interlex.org/base/ilx_",
+            "sourceLabel": "ILX"
+          }
+        ],
+        "allowedParentOntologyTerms": null,
+        "allowedPlaceholders": [
+          {
+            "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/placeholder",
+            "termSourceRef": "MTBLS"
+          },
+          {
+            "termAccessionNumber": "",
+            "termSourceRef": ""
+          }
+        ],
+        "defaultValue": null,
+        "description": "",
+        "fieldName": "Study Design Type",
+        "ontologies": [
+          "EFO",
+          "NCIT",
+          "MTBLS",
+          "CHEBI",
+          "CHMO",
+          "MONDO",
+          "PRIDE",
+          "GO",
+          "MESH"
+        ],
+        "ruleName": "Study Design Type-01",
+        "selectionCriteria": {
+          "isaFileTemplateNameFilter": null,
+          "isaFileType": "investigation",
+          "linkedFieldAndValueFilter": null,
+          "studyCategoryFilter": null,
+          "studyCreatedAtOrAfter": null,
+          "studyCreatedBefore": null,
+          "templateVersionFilter": null
+        },
+        "terms": [
+          {
+            "term": "targeted metabolite profiling",
+            "termAccessionNumber": "http://purl.obolibrary.org/obo/MSIO_0000100",
+            "termSourceRef": "MSIO"
+          },
+          {
+            "term": "untargeted metabolite profiling",
+            "termAccessionNumber": "http://purl.obolibrary.org/obo/MSIO_0000101",
+            "termSourceRef": "MSIO"
+          },
+          {
+            "term": "nuclear magnetic resonance spectroscopy",
+            "termAccessionNumber": "http://purl.obolibrary.org/obo/CHMO_0000591",
+            "termSourceRef": "CHMO"
+          },
+          {
+            "term": "ultra-performance liquid chromatography-mass spectrometry",
+            "termAccessionNumber": "http://purl.obolibrary.org/obo/CHMO_0000715",
+            "termSourceRef": "CHMO"
+          },
+          {
+            "term": "gas chromatography-mass spectrometry",
+            "termAccessionNumber": "http://purl.obolibrary.org/obo/CHMO_0000497",
+            "termSourceRef": "CHMO"
+          },
+          {
+            "term": "tandem mass spectrometry",
+            "termAccessionNumber": "http://purl.obolibrary.org/obo/CHMO_0000575",
+            "termSourceRef": "CHMO"
+          },
+          {
+            "term": "Multi-omics study",
+            "termAccessionNumber": "http://purl.obolibrary.org/obo/PRIDE_0000461",
+            "termSourceRef": "PRIDE"
+          },
+          {
+            "term": "microbiome",
+            "termAccessionNumber": "http://www.ebi.ac.uk/efo/EFO_0004982",
+            "termSourceRef": "EFO"
+          },
+          {
+            "term": "aging",
+            "termAccessionNumber": "http://purl.obolibrary.org/obo/NCIT_C16269",
+            "termSourceRef": "NCIT"
+          },
+          {
+            "term": "cancer",
+            "termAccessionNumber": "http://purl.obolibrary.org/obo/MONDO_0004992",
+            "termSourceRef": "MONDO"
+          }
+        ],
+        "validationType": "any-ontology-term"
+      }
 	count(result) == 1
 }
 

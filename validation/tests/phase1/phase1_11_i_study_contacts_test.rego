@@ -1,7 +1,7 @@
-package metabolights.validation.v2.phase1.tests
+package metabolights.validation.v2.rules.phase1.tests
 
 import rego.v1
-import data.metabolights.validation.v2.phase1.violations as rules
+import data.metabolights.validation.v2.rules.phase1.violations as rules
 
 #########################################################################################################
 # rule_i_100_360_001_01
@@ -904,7 +904,7 @@ test_rule_i_100_360_010_01_no_violation_01 if {
 		]}}]},
 		"investigationFilePath": "i_Investigation.txt",
 	}
-		with data.metabolights.validation.v2.phase1.definitions._ONTOLOGY_SOURCE_REFERENCE_NAMES as ["EFO", "NCBI"]
+		with data.metabolights.validation.v2.rules.phase1.definitions._ONTOLOGY_SOURCE_REFERENCE_NAMES as ["EFO", "NCBI"]
 
 	count(result) == 0
 }
@@ -938,7 +938,7 @@ test_rule_i_100_360_010_01_violation_01 if {
 		}]}}]},
 		"investigationFilePath": "i_Investigation.txt",
 	}
-		with data.metabolights.validation.v2.phase1.definitions._ONTOLOGY_SOURCE_REFERENCE_NAMES as ["EFO", "NCBI"]
+		with data.metabolights.validation.v2.rules.phase1.definitions._ONTOLOGY_SOURCE_REFERENCE_NAMES as ["EFO", "NCBI"]
 
 	count(result) == 2
 }
@@ -993,7 +993,7 @@ test_rule_i_100_360_010_02_no_violation_01 if {
 		]}}]},
 		"investigationFilePath": "i_Investigation.txt",
 	}
-		with data.metabolights.validation.v2.phase1.definitions.CL_STUDY_CONTACT_ROLE_REF_SOURCES as ["EFO", "NCBI"]
+		with data.metabolights.validation.v2.rules.phase1.definitions.CL_STUDY_CONTACT_ROLE_REF_SOURCES as ["EFO", "NCBI"]
 
 	count(result) == 0
 }
@@ -1027,7 +1027,7 @@ test_rule_i_100_360_010_02_violation_01 if {
 		}]}}]},
 		"investigationFilePath": "i_Investigation.txt",
 	}
-		with data.metabolights.validation.v2.phase1.definitions.CL_STUDY_CONTACT_ROLE_REF_SOURCES as ["EFO", "NCBI"]
+		with data.metabolights.validation.v2.rules.phase1.definitions.CL_STUDY_CONTACT_ROLE_REF_SOURCES as ["EFO", "NCBI"]
 
 	count(result) == 2
 }

@@ -1,7 +1,8 @@
-package metabolights.validation.v2.phase1.tests
+package metabolights.validation.v2.rules.phase1.tests
 
 import rego.v1
-import data.metabolights.validation.v2.phase1.violations as rules
+import data.metabolights.validation.v2.rules.phase1.violations as rules
+import data.metabolights.validation.v2.utils.functions as f
 
 #########################################################################################################
 # rule_i_100_320_001_01
@@ -435,6 +436,7 @@ test_rule_i_100_320_005_01_violation_01 if {
 		]}}]},
 		"investigationFilePath": "i_Investigation.txt",
 	}
+	print(count(result))
 	count(result) == 2
 }
 
@@ -527,7 +529,7 @@ test_rule_i_100_320_006_01_violation_01 if {
 
 # METADATA
 # title: Valid study publication status.
-# description: Study publication status term greater than 0.
+# description: Study publication status term is in the selected terms.
 test_rule_i_100_320_007_01_no_violation_01 if {
 	result := rules.rule_i_100_320_007_01 with input as {
 		"investigation": {"studies": [{"identifier": "MTBLS1", "studyPublications": {"publications": [
@@ -537,9 +539,9 @@ test_rule_i_100_320_007_01_no_violation_01 if {
 				"authorList": "Ehsan Irajizad, Ana Kenney",
 				"title": "Contribution of the microbiome to a metabolomic signature predictive of risk for pancreatic cancer",
 				"status": {
-					"term": "Preprint",
-					"termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000004",
-					"termSourceRef": "MTBLS",
+					"term": "in preparation",
+					"termAccessionNumber": "http://www.ebi.ac.uk/efo/EFO_0001795",
+					"termSourceRef": "EFO"
 				},
 			},
 			{
@@ -548,20 +550,79 @@ test_rule_i_100_320_007_01_no_violation_01 if {
 				"authorList": "Ehsan Irajizad, Ana Kenney",
 				"title": "Sample test data has valid publication title.",
 				"status": {
-					"term": "In Review",
-					"termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000004",
-					"termSourceRef": "MTBLS",
+					"term": "Learning material",
+					"termAccessionNumber": "http://edamontology.org/data_3669",
+					"termSourceRef": "EDAM"
 				},
 			},
 		]}}]},
 		"investigationFilePath": "i_Investigation.txt",
-	}
+	} with data.metabolights.validation.v2.rules.phase1.definitions.RULE_PUBLICATION_STATUS as {
+        "allowedMissingOntologyTerms": null,
+        "allowedOtherSources": null,
+        "allowedParentOntologyTerms": null,
+        "allowedPlaceholders": [
+          {
+            "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/placeholder",
+            "termSourceRef": "MTBLS"
+          },
+          {
+            "termAccessionNumber": "",
+            "termSourceRef": ""
+          }
+        ],
+        "defaultValue": null,
+        "description": "",
+        "fieldName": "Study Publication Status",
+        "ontologies": [
+          "EFO",
+          "EDAM"
+        ],
+        "ruleName": "Study Publication Status-02",
+        "selectionCriteria": {
+          "isaFileTemplateNameFilter": null,
+          "isaFileType": "investigation",
+          "linkedFieldAndValueFilter": null,
+          "studyCategoryFilter": null,
+          "studyCreatedAtOrAfter": null,
+          "studyCreatedBefore": null,
+          "templateVersionFilter": null
+        },
+        "terms": [
+          {
+            "term": "published",
+            "termAccessionNumber": "http://www.ebi.ac.uk/efo/EFO_0001796",
+            "termSourceRef": "EFO"
+          },
+          {
+            "term": "submitted",
+            "termAccessionNumber": "http://www.ebi.ac.uk/efo/EFO_0001794",
+            "termSourceRef": "EFO"
+          },
+          {
+            "term": "in preparation",
+            "termAccessionNumber": "http://www.ebi.ac.uk/efo/EFO_0001795",
+            "termSourceRef": "EFO"
+          },
+          {
+            "term": "preprint",
+            "termAccessionNumber": "http://www.ebi.ac.uk/efo/EFO_0010558",
+            "termSourceRef": "EFO"
+          },
+          {
+            "term": "Learning material",
+            "termAccessionNumber": "http://edamontology.org/data_3669",
+            "termSourceRef": "EDAM"
+          }
+        ],
+        "validationType": "selected-ontology-term"
+      }
 	count(result) == 0
 }
 
 # METADATA
-# title:  Study publication's status is empty
-# description: Study publication's status is empty.
+# title:  Study publication's status is not in the selected terms
+# description: Study publication's status is not in the selected terms.
 test_rule_i_100_320_007_01_violation_01 if {
 	result := rules.rule_i_100_320_007_01 with input as {
 		"investigation": {"studies": [{"identifier": "MTBLS1", "studyPublications": {"publications": [
@@ -571,9 +632,9 @@ test_rule_i_100_320_007_01_violation_01 if {
 				"authorList": "Ehsan Irajizad, Ana Kenney",
 				"title": "Contribution of the microb",
 				"status": {
-					"term": "",
-					"termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000004",
-					"termSourceRef": "MTBLS",
+					"term": "published",
+					"termAccessionNumber": "http://www.ebi.ac.uk/efo/EFO_0001796",
+					"termSourceRef": "EFO"
 				},
 			},
 			{
@@ -589,7 +650,66 @@ test_rule_i_100_320_007_01_violation_01 if {
 			},
 		]}}]},
 		"investigationFilePath": "i_Investigation.txt",
-	}
+	} with data.metabolights.validation.v2.rules.phase1.definitions.RULE_PUBLICATION_STATUS as {
+        "allowedMissingOntologyTerms": null,
+        "allowedOtherSources": null,
+        "allowedParentOntologyTerms": null,
+        "allowedPlaceholders": [
+          {
+            "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/placeholder",
+            "termSourceRef": "MTBLS"
+          },
+          {
+            "termAccessionNumber": "",
+            "termSourceRef": ""
+          }
+        ],
+        "defaultValue": null,
+        "description": "",
+        "fieldName": "Study Publication Status",
+        "ontologies": [
+          "EFO",
+          "EDAM"
+        ],
+        "ruleName": "Study Publication Status-02",
+        "selectionCriteria": {
+          "isaFileTemplateNameFilter": null,
+          "isaFileType": "investigation",
+          "linkedFieldAndValueFilter": null,
+          "studyCategoryFilter": null,
+          "studyCreatedAtOrAfter": null,
+          "studyCreatedBefore": null,
+          "templateVersionFilter": null
+        },
+        "terms": [
+          {
+            "term": "published",
+            "termAccessionNumber": "http://www.ebi.ac.uk/efo/EFO_0001796",
+            "termSourceRef": "EFO"
+          },
+          {
+            "term": "submitted",
+            "termAccessionNumber": "http://www.ebi.ac.uk/efo/EFO_0001794",
+            "termSourceRef": "EFO"
+          },
+          {
+            "term": "in preparation",
+            "termAccessionNumber": "http://www.ebi.ac.uk/efo/EFO_0001795",
+            "termSourceRef": "EFO"
+          },
+          {
+            "term": "preprint",
+            "termAccessionNumber": "http://www.ebi.ac.uk/efo/EFO_0010558",
+            "termSourceRef": "EFO"
+          },
+          {
+            "term": "Learning material",
+            "termAccessionNumber": "http://edamontology.org/data_3669",
+            "termSourceRef": "EDAM"
+          }
+        ],
+        "validationType": "selected-ontology-term"
+      }
 	count(result) == 1
 }
 
@@ -599,8 +719,8 @@ test_rule_i_100_320_007_01_violation_01 if {
 #########################################################################################################
 
 # METADATA
-# title: Study publication status term source ref is not empty.
-# description: Study publication status term source ref is not empty.
+# title: Study publication status term is in selected ontologies.
+# description: Study publication status term is in selected ontologies.
 test_rule_i_100_320_009_01_no_violation_01 if {
 	result := rules.rule_i_100_320_009_01 with input as {
 		"investigation": {"studies": [{"identifier": "MTBLS1", "studyPublications": {"publications": [
@@ -611,8 +731,8 @@ test_rule_i_100_320_009_01_no_violation_01 if {
 				"title": "Contribution of the microbiome to a metabolomic signature predictive of risk for pancreatic cancer",
 				"status": {
 					"term": "published",
-					"termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000004",
-					"termSourceRef": "E",
+					"termAccessionNumber": "http://www.ebi.ac.uk/efo/EFO_0001796",
+					"termSourceRef": "EFO"
 				},
 			},
 			{
@@ -621,14 +741,166 @@ test_rule_i_100_320_009_01_no_violation_01 if {
 				"authorList": "Ehsan Irajizad, Ana Kenney",
 				"title": "Sample test data has valid publication title.",
 				"status": {
-					"term": "submitted",
-					"termAccessionNumber": "x",
-					"termSourceRef": "MTBLS",
+					"term": "preprint",
+					"termAccessionNumber": "http://www.ebi.ac.uk/efo/EFO_0010558",
+					"termSourceRef": "EFO"
 				},
 			},
 		]}}]},
 		"investigationFilePath": "i_Investigation.txt",
-	}
+	} with data.metabolights.validation.v2.rules.phase1.definitions.RULE_PUBLICATION_STATUS as {
+        "allowedMissingOntologyTerms": null,
+        "allowedOtherSources": null,
+        "allowedParentOntologyTerms": null,
+        "allowedPlaceholders": [
+          {
+            "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/placeholder",
+            "termSourceRef": "MTBLS"
+          },
+        ],
+        "defaultValue": null,
+        "description": "",
+        "fieldName": "Study Publication Status",
+        "ontologies": [
+          "EFO",
+          "EDAM"
+        ],
+        "ruleName": "Study Publication Status-02",
+        "selectionCriteria": {
+          "isaFileTemplateNameFilter": null,
+          "isaFileType": "investigation",
+          "linkedFieldAndValueFilter": null,
+          "studyCategoryFilter": null,
+          "studyCreatedAtOrAfter": null,
+          "studyCreatedBefore": null,
+          "templateVersionFilter": null
+        },
+        "terms": [
+          {
+            "term": "published",
+            "termAccessionNumber": "http://www.ebi.ac.uk/efo/EFO_0001796",
+            "termSourceRef": "EFO"
+          },
+          {
+            "term": "submitted",
+            "termAccessionNumber": "http://www.ebi.ac.uk/efo/EFO_0001794",
+            "termSourceRef": "EFO"
+          },
+          {
+            "term": "in preparation",
+            "termAccessionNumber": "http://www.ebi.ac.uk/efo/EFO_0001795",
+            "termSourceRef": "EFO"
+          },
+          {
+            "term": "preprint",
+            "termAccessionNumber": "http://www.ebi.ac.uk/efo/EFO_0010558",
+            "termSourceRef": "EFO"
+          },
+          {
+            "term": "Learning material",
+            "termAccessionNumber": "http://edamontology.org/data_3669",
+            "termSourceRef": "EDAM"
+          }
+        ],
+        "validationType": "any-ontology-term"
+      }
+	count(result) == 0
+}
+
+# METADATA
+# title: Study publication status term is in child-ontology-term.
+# description: Study publication status term is child-ontology-term.
+test_rule_i_100_320_009_01_no_violation_02 if {
+	result := rules.rule_i_100_320_009_01 with input as {
+		"investigation": {"studies": [{"identifier": "MTBLS1", "studyPublications": {"publications": [
+			{
+				"pubMedId": "1234563",
+				"doi": "10.1234/sam.-;/stest:data",
+				"authorList": "Ehsan Irajizad, Ana Kenney",
+				"title": "Contribution of the microbiome to a metabolomic signature predictive of risk for pancreatic cancer",
+				"status": {
+					"term": "published",
+					"termAccessionNumber": "http://www.ebi.ac.uk/efo/EFO_0001796",
+					"termSourceRef": "EFO"
+				},
+			},
+			{
+				"pubMedId": "37971328",
+				"doi": "10.1093/nar/gkad1045",
+				"authorList": "Ehsan Irajizad, Ana Kenney",
+				"title": "Sample test data has valid publication title.",
+				"status": {
+					"term": "preprint",
+					"termAccessionNumber": "http://www.ebi.ac.uk/efo/EFO_0010558",
+					"termSourceRef": "EFO"
+				},
+			},
+		]}}]},
+		"investigationFilePath": "i_Investigation.txt",
+	} with data.metabolights.validation.v2.rules.phase1.definitions.RULE_PUBLICATION_STATUS as {
+        "allowedMissingOntologyTerms": null,
+        "allowedOtherSources": null,
+        "allowedParentOntologyTerms": {
+			"excludeByLabelPattern": [
+			],
+			"excludeByAccession": [],
+			"parents": [
+				{
+					"term": "published",
+					"termAccessionNumber": "http://www.ebi.ac.uk/efo/EFO_0001796",
+					"termSourceRef": "EFO"
+				}
+			]
+		},
+        "allowedPlaceholders": [
+          {
+            "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/placeholder",
+            "termSourceRef": "MTBLS"
+          },
+        ],
+        "defaultValue": null,
+        "description": "",
+        "fieldName": "Study Publication Status",
+        "ontologies": [],
+        "ruleName": "Study Publication Status-02",
+        "selectionCriteria": {
+          "isaFileTemplateNameFilter": null,
+          "isaFileType": "investigation",
+          "linkedFieldAndValueFilter": null,
+          "studyCategoryFilter": null,
+          "studyCreatedAtOrAfter": null,
+          "studyCreatedBefore": null,
+          "templateVersionFilter": null
+        },
+        "terms": [
+          {
+            "term": "published",
+            "termAccessionNumber": "http://www.ebi.ac.uk/efo/EFO_0001796",
+            "termSourceRef": "EFO"
+          },
+          {
+            "term": "submitted",
+            "termAccessionNumber": "http://www.ebi.ac.uk/efo/EFO_0001794",
+            "termSourceRef": "EFO"
+          },
+          {
+            "term": "in preparation",
+            "termAccessionNumber": "http://www.ebi.ac.uk/efo/EFO_0001795",
+            "termSourceRef": "EFO"
+          },
+          {
+            "term": "preprint",
+            "termAccessionNumber": "http://www.ebi.ac.uk/efo/EFO_0010558",
+            "termSourceRef": "EFO"
+          },
+          {
+            "term": "Learning material",
+            "termAccessionNumber": "http://edamontology.org/data_3669",
+            "termSourceRef": "EDAM"
+          }
+        ],
+        "validationType": "child-ontology-term"
+      }
 	count(result) == 0
 }
 
@@ -662,8 +934,60 @@ test_rule_i_100_320_009_01_violation_01 if {
 			},
 		]}}]},
 		"investigationFilePath": "i_Investigation.txt",
-	}
-	count(result) == 1
+	} with data.metabolights.validation.v2.rules.phase1.definitions.RULE_DEFAULT_ONTOLOGIES as {
+        "allowedMissingOntologyTerms": null,
+        "allowedOtherSources": null,
+        "allowedParentOntologyTerms": null,
+        "allowedPlaceholders": [
+          {
+            "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/placeholder",
+            "termSourceRef": "MTBLS"
+          },
+        ],
+        "defaultValue": null,
+        "description": "",
+        "fieldName": "Study Publication Status",
+        "ontologies": ["EFO"],
+        "ruleName": "Study Publication Status-02",
+        "selectionCriteria": {
+          "isaFileTemplateNameFilter": null,
+          "isaFileType": "investigation",
+          "linkedFieldAndValueFilter": null,
+          "studyCategoryFilter": null,
+          "studyCreatedAtOrAfter": null,
+          "studyCreatedBefore": null,
+          "templateVersionFilter": null
+        },
+        "terms": [
+          {
+            "term": "published",
+            "termAccessionNumber": "http://www.ebi.ac.uk/efo/EFO_0001796",
+            "termSourceRef": "EFO"
+          },
+          {
+            "term": "submitted",
+            "termAccessionNumber": "http://www.ebi.ac.uk/efo/EFO_0001794",
+            "termSourceRef": "EFO"
+          },
+          {
+            "term": "in preparation",
+            "termAccessionNumber": "http://www.ebi.ac.uk/efo/EFO_0001795",
+            "termSourceRef": "EFO"
+          },
+          {
+            "term": "preprint",
+            "termAccessionNumber": "http://www.ebi.ac.uk/efo/EFO_0010558",
+            "termSourceRef": "EFO"
+          },
+          {
+            "term": "Learning material",
+            "termAccessionNumber": "http://edamontology.org/data_3669",
+            "termSourceRef": "EDAM"
+          }
+        ],
+        "validationType": "ontology-term-in-selected-ontologies"
+      }
+	count(result) == 2
 }
 
 #########################################################################################################

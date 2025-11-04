@@ -3,31 +3,31 @@ package metabolights.validation.v2_summary
 import rego.v1
 
 phase1_all_messages contains result if {
-	some rule, _ in data.metabolights.validation.v2.phase1.violations
+	some rule, _ in data.metabolights.validation.v2.rules.phase1.violations
 	startswith(rule, "rule_")
-	some result in data.metabolights.validation.v2.phase1.violations[rule]
+	some result in data.metabolights.validation.v2.rules.phase1.violations[rule]
 }
 
 phase2_all_messages contains result if {
 	some i, j
-	data.metabolights.validation.v2.phase2[i]
+	data.metabolights.validation.v2.rules.phase2[i]
 	startswith(i, "rule_")
-	result := data.metabolights.validation.v2.phase2.violations[i][j]
+	result := data.metabolights.validation.v2.rules.phase2.violations[i][j]
 }
 
 
 phase3_all_messages contains result if {
 	some i, j
-	data.metabolights.validation.v2.phase3.violations[i]
+	data.metabolights.validation.v2.rules.phase3.violations[i]
 	startswith(i, "rule_")
-	result := data.metabolights.validation.v2.phase3.violations[i][j]
+	result := data.metabolights.validation.v2.rules.phase3.violations[i][j]
 }
 
 phase4_all_messages contains result if {
 	some i, j
-	data.metabolights.validation.v2.phase4.violations[i]
+	data.metabolights.validation.v2.rules.phase4.violations[i]
 	startswith(i, "rule_")
-	result := data.metabolights.validation.v2.phase4.violations[i][j]
+	result := data.metabolights.validation.v2.rules.phase4.violations[i][j]
 }
 
 

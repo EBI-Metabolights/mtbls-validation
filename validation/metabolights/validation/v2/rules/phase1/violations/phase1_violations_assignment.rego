@@ -1,7 +1,7 @@
-package metabolights.validation.v2.phase1.violations
+package metabolights.validation.v2.rules.phase1.violations
 
 import rego.v1
-import data.metabolights.validation.v2.functions as f
+import data.metabolights.validation.v2.utils.functions as f
 
 
 # #########################################################################################################
@@ -26,7 +26,7 @@ rule_m_100_100_001_01 contains result if {
 	headers := {x | some j; x := input.metaboliteAssignments[file_name].table.headers[j].columnHeader}
 	defaults := {x |
 		some template in data.metabolights.validation.v2.templates.assignmentFileHeaderTemplates[template_type]
-		template.version == data.metabolights.validation.v2.phase1.definitions.STUDY_TEMPLATE_VERSION
+		template.version == data.metabolights.validation.v2.rules.phase1.definitions.STUDY_TEMPLATE_VERSION
 		some header in template.headers
 		x := header.columnHeader
 	}
@@ -51,7 +51,7 @@ rule_m_100_100_001_02 contains result if {
 
 	template_type = input.metaboliteAssignments[file_name].assayTechnique.mainTechnique
 	some template in data.metabolights.validation.v2.templates.assignmentFileHeaderTemplates[template_type]
-	template.version == data.metabolights.validation.v2.phase1.definitions.STUDY_TEMPLATE_VERSION
+	template.version == data.metabolights.validation.v2.rules.phase1.definitions.STUDY_TEMPLATE_VERSION
 	default_headers := { header.columnHeader: idx |
 		some idx, header in template.headers
 	}
@@ -107,11 +107,11 @@ rule_m_100_100_001_03 contains result if {
 #  section: metabolites.general
 rule_m_100_100_001_04 contains result if {
 	templates := data.metabolights.validation.v2.templates
-	def := data.metabolights.validation.v2.phase1.definitions
+	def := data.metabolights.validation.v2.rules.phase1.definitions
 	some file_name, _ in input.metaboliteAssignments
 	template_type = input.metaboliteAssignments[file_name].assayTechnique.mainTechnique
 	some template in data.metabolights.validation.v2.templates.assignmentFileHeaderTemplates[template_type]
-	template.version == data.metabolights.validation.v2.phase1.definitions.STUDY_TEMPLATE_VERSION
+	template.version == data.metabolights.validation.v2.rules.phase1.definitions.STUDY_TEMPLATE_VERSION
 	header_names := {header.columnHeader: same_headers |
 		some header in template.headers
 		not startswith(header.columnHeader, "Comment[")

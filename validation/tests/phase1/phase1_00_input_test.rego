@@ -1,7 +1,7 @@
-package metabolights.validation.v2.phase1.tests
+package metabolights.validation.v2.rules.phase1.tests
 
 import rego.v1
-import data.metabolights.validation.v2.phase1.violations as rules
+import data.metabolights.validation.v2.rules.phase1.violations as rules
 #########################################################################################################
 #########################################################################################################
 # INVESTIGATION FILE: PARSER MESSAGES
@@ -1364,7 +1364,7 @@ test_rule___100_300_001_06_no_violation_01 if {
 		"investigation": {"studies": [{"fileName": "s_MTBLS1.txt", "studyAssays": {"assays": [{"fileName": "a_MTBLS1.txt"}]}}]},
 		"parserMessages": {"a_MTBLS1.txt": []},
 	}
-		with data.metabolights.validation.v2.phase1.definitions.__ASSAY_TECHNIQUES as {"a_MTBLS1.txt": "LC-MS"}
+		with data.metabolights.validation.v2.rules.phase1.definitions.__ASSAY_TECHNIQUES as {"a_MTBLS1.txt": "LC-MS"}
 	count(result) == 0
 }
 
@@ -1383,7 +1383,7 @@ test_rule___100_300_001_06_violation_01 if {
 		"investigation": {"studies": [{"fileName": "s_MTBLS1.txt", "studyAssays": {"assays": [{"fileName": "a_MTBLS1.txt"}]}}]},
 		"parserMessages": {"a_MTBLS1.txt": []},
 	}
-		with data.metabolights.validation.v2.phase1.definitions.__ASSAY_TECHNIQUES as {"a_MTBLS2.txt": "LC-MS"}
+		with data.metabolights.validation.v2.rules.phase1.definitions.__ASSAY_TECHNIQUES as {"a_MTBLS2.txt": "LC-MS"}
 
 	count(result) == 1
 }
@@ -1407,7 +1407,7 @@ test_rule___100_300_001_07_no_violation_01 if {
 		"investigation": {"studies": [{"fileName": "s_MTBLS1.txt", "studyAssays": {"assays": [{"fileName": "a_MTBLS1.txt"}]}}]},
 		"parserMessages": {"a_MTBLS1.txt": []},
 	}
-		with data.metabolights.validation.v2.phase1.definitions.__ASSAY_TECHNIQUES as {"a_MTBLS1.txt": "LC-MS"}
+		with data.metabolights.validation.v2.rules.phase1.definitions.__ASSAY_TECHNIQUES as {"a_MTBLS1.txt": "LC-MS"}
 		with data.metabolights.validation.v2.templates.assayFileHeaderTemplates as {
 			"LC-MS": {},
 			"GC-MS": {},
@@ -1430,7 +1430,7 @@ test_rule___100_300_001_07_violation_01 if {
 		"investigation": {"studies": [{"fileName": "s_MTBLS1.txt", "studyAssays": {"assays": [{"fileName": "a_MTBLS1.txt"}]}}]},
 		"parserMessages": {"a_MTBLS1.txt": []},
 	}
-		with data.metabolights.validation.v2.phase1.definitions.__ASSAY_TECHNIQUES as {"a_MTBLS1.txt": "LC-MS"}
+		with data.metabolights.validation.v2.rules.phase1.definitions.__ASSAY_TECHNIQUES as {"a_MTBLS1.txt": "LC-MS"}
 		with data.metabolights.validation.v2.templates.assayFileHeaderTemplates as {"GC-MS": {}}
 
 	count(result) == 1
@@ -2000,7 +2000,7 @@ test_rule___100_400_001_05_violation_01 if {
 		"investigation": {"studies": [{"fileName": "s_MTBLS1.txt"}]},
 		"parserMessages": {"s_MTBLS1.txt": []},
 	}
-		# with data.metabolights.validation.v2.phase1.definitions.__ASSIGNMENT_FILE_TYPES as {"m_MTBLS2.txt": "LC-MS"}
+		# with data.metabolights.validation.v2.rules.phase1.definitions.__ASSIGNMENT_FILE_TYPES as {"m_MTBLS2.txt": "LC-MS"}
 	count(result) == 1
 }
 

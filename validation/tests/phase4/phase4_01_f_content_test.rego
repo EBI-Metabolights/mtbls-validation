@@ -1,7 +1,7 @@
-package metabolights.validation.v2.phase4.tests
+package metabolights.validation.v2.rules.phase4.tests
 
 import rego.v1
-import data.metabolights.validation.v2.phase4.violations as rules
+import data.metabolights.validation.v2.rules.phase4.violations as rules
 
 
 #########################################################################################################

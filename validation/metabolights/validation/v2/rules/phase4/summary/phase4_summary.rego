@@ -1,7 +1,7 @@
-package metabolights.validation.v2.phase4.summary
+package metabolights.validation.v2.rules.phase4.summary
 
-import data.metabolights.validation.v2.phase4.violations
-import data.metabolights.validation.v2.summary_functions as f
+import data.metabolights.validation.v2.rules.phase4.violations
+import data.metabolights.validation.v2.summary.functions as f
 import rego.v1
 
 # METADATA
@@ -13,7 +13,7 @@ import rego.v1
 rule_f_400_090 contains result if {
 	meta := rego.metadata.rule()
 	result := f.section_summary_message(
-		data.metabolights.validation.v2.phase4.violations,
+		data.metabolights.validation.v2.rules.phase4.violations,
 		meta.custom.rule_id,
 		meta.title,
 		meta.description,
@@ -32,7 +32,7 @@ rule_f_400_100 contains result if {
 	meta := rego.metadata.rule()
 
 	result := f.section_summary_message(
-		data.metabolights.validation.v2.phase4.violations,
+		data.metabolights.validation.v2.rules.phase4.violations,
 		meta.custom.rule_id,
 		meta.title,
 		meta.description,

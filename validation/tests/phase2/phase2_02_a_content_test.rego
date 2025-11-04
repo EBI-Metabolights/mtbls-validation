@@ -1,6 +1,6 @@
-package metabolights.validation.v2.phase2.tests
+package metabolights.validation.v2.rules.phase2.tests
 
-import data.metabolights.validation.v2.phase2.violations as rules
+import data.metabolights.validation.v2.rules.phase2.violations as rules
 import rego.v1
 
 #########################################################################################################
@@ -4257,7 +4257,7 @@ test_rule_a_200_600_001_01_no_violation_01 if {
 				"Parameter Value[Column model]"
 			],
 			"data": {
-				"Parameter Value[Column type]": ["high polarity", "high polarity", "high polarity", "high polarity"],
+				"Parameter Value[Column type]": ["hilic", "reverse phase", "hilic", "reverse phase"],
 				"Parameter Value[Column model]": ["1", "2 ", "", "1234"],
 			},
 		}}},

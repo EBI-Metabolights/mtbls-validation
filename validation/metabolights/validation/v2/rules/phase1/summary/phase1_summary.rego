@@ -1,7 +1,7 @@
-package metabolights.validation.v2.phase1.summary
+package metabolights.validation.v2.rules.phase1.summary
 
 import rego.v1
-import data.metabolights.validation.v2.summary_functions as f
+import data.metabolights.validation.v2.summary.functions as f
 
 
 # METADATA
@@ -14,7 +14,7 @@ import data.metabolights.validation.v2.summary_functions as f
 rule___100_000 contains result if {
 	meta := rego.metadata.rule()
 	result := f.section_summary_message(
-		data.metabolights.validation.v2.phase1.violations,
+		data.metabolights.validation.v2.rules.phase1.violations,
 		meta.custom.rule_id,
 		meta.title,
 		meta.description,
@@ -33,7 +33,7 @@ rule___100_000 contains result if {
 rule___100_100 contains result if {
 	meta := rego.metadata.rule()
 	result := f.section_summary_message(
-		data.metabolights.validation.v2.phase1.violations,
+		data.metabolights.validation.v2.rules.phase1.violations,
 		meta.custom.rule_id,
 		meta.title,
 		meta.description,
@@ -53,7 +53,7 @@ rule___100_200 contains result if {
 	meta := rego.metadata.rule()
 	some file_name, _ in input.samples
 	result := f.section_summary_message(
-		data.metabolights.validation.v2.phase1.violations,
+		data.metabolights.validation.v2.rules.phase1.violations,
 		meta.custom.rule_id,
 		meta.title,
 		meta.description,
@@ -74,7 +74,7 @@ rule___100_300 contains result if {
 	meta := rego.metadata.rule()
 	some file_name, _ in input.assays
 	result := f.section_summary_message(
-		data.metabolights.validation.v2.phase1.violations,
+		data.metabolights.validation.v2.rules.phase1.violations,
 		meta.custom.rule_id,
 		meta.title,
 		meta.description,
@@ -95,7 +95,7 @@ rule___100_400 contains result if {
 	meta := rego.metadata.rule()
 	some file_name, _ in input.metaboliteAssignments
 	result := f.section_summary_message(
-		data.metabolights.validation.v2.phase1.violations,
+		data.metabolights.validation.v2.rules.phase1.violations,
 		meta.custom.rule_id,
 		meta.title,
 		meta.description,
@@ -114,7 +114,7 @@ rule___100_400 contains result if {
 rule_i_100_100 contains result if {
 	meta := rego.metadata.rule()
 	result := f.section_summary_message(
-		data.metabolights.validation.v2.phase1.violations,
+		data.metabolights.validation.v2.rules.phase1.violations,
 		meta.custom.rule_id,
 		meta.title,
 		meta.description,
@@ -133,7 +133,7 @@ rule_i_100_100 contains result if {
 # rule_i_100_200 contains result if {
 # 	meta := rego.metadata.rule()
 # 	result := f.section_summary_message(
-# 		data.metabolights.validation.v2.phase1.violations,
+# 		data.metabolights.validation.v2.rules.phase1.violations,
 # 		meta.custom.rule_id,
 # 		meta.title,
 # 		meta.description,
@@ -153,7 +153,7 @@ rule_i_100_100 contains result if {
 rule_i_100_300 contains result if {
 	meta := rego.metadata.rule()
 	result := f.section_summary_message(
-		data.metabolights.validation.v2.phase1.violations,
+		data.metabolights.validation.v2.rules.phase1.violations,
 		meta.custom.rule_id,
 		meta.title,
 		meta.description,
@@ -172,7 +172,7 @@ rule_i_100_300 contains result if {
 rule_i_100_310 contains result if {
 	meta := rego.metadata.rule()
 	result := f.section_summary_message(
-		data.metabolights.validation.v2.phase1.violations,
+		data.metabolights.validation.v2.rules.phase1.violations,
 		meta.custom.rule_id,
 		meta.title,
 		meta.description,
@@ -191,7 +191,7 @@ rule_i_100_310 contains result if {
 rule_i_100_320 contains result if {
 	meta := rego.metadata.rule()
 	result := f.section_summary_message(
-		data.metabolights.validation.v2.phase1.violations,
+		data.metabolights.validation.v2.rules.phase1.violations,
 		meta.custom.rule_id,
 		meta.title,
 		meta.description,
@@ -210,7 +210,7 @@ rule_i_100_320 contains result if {
 rule_i_100_330 contains result if {
 	meta := rego.metadata.rule()
 	result := f.section_summary_message(
-		data.metabolights.validation.v2.phase1.violations,
+		data.metabolights.validation.v2.rules.phase1.violations,
 		meta.custom.rule_id,
 		meta.title,
 		meta.description,
@@ -230,7 +230,7 @@ rule_i_100_330 contains result if {
 rule_i_100_340 contains result if {
 	meta := rego.metadata.rule()
 	result := f.section_summary_message(
-		data.metabolights.validation.v2.phase1.violations,
+		data.metabolights.validation.v2.rules.phase1.violations,
 		meta.custom.rule_id,
 		meta.title,
 		meta.description,
@@ -249,7 +249,7 @@ rule_i_100_340 contains result if {
 rule_i_100_350 contains result if {
 	meta := rego.metadata.rule()
 	result := f.section_summary_message(
-		data.metabolights.validation.v2.phase1.violations,
+		data.metabolights.validation.v2.rules.phase1.violations,
 		meta.custom.rule_id,
 		meta.title,
 		meta.description,
@@ -269,7 +269,7 @@ rule_i_100_350 contains result if {
 rule_i_100_360 contains result if {
 	meta := rego.metadata.rule()
 	result := f.section_summary_message(
-		data.metabolights.validation.v2.phase1.violations,
+		data.metabolights.validation.v2.rules.phase1.violations,
 		meta.custom.rule_id,
 		meta.title,
 		meta.description,
@@ -289,7 +289,7 @@ rule_s_100_100 contains result if {
 	meta := rego.metadata.rule()
 	some file_name, _ in input.samples
 	result := f.section_summary_message(
-		data.metabolights.validation.v2.phase1.violations,
+		data.metabolights.validation.v2.rules.phase1.violations,
 		meta.custom.rule_id,
 		meta.title,
 		meta.description,
@@ -309,7 +309,7 @@ rule_a_100_100 contains result if {
 	meta := rego.metadata.rule()
 	some file_name, _ in input.assays
 	result := f.section_summary_message(
-		data.metabolights.validation.v2.phase1.violations,
+		data.metabolights.validation.v2.rules.phase1.violations,
 		meta.custom.rule_id,
 		meta.title,
 		meta.description,
@@ -328,7 +328,7 @@ rule_m_100_100 contains result if {
 	meta := rego.metadata.rule()
 	some file_name, _ in input.metaboliteAssignments
 	result := f.section_summary_message(
-		data.metabolights.validation.v2.phase1.violations,
+		data.metabolights.validation.v2.rules.phase1.violations,
 		meta.custom.rule_id,
 		meta.title,
 		meta.description,

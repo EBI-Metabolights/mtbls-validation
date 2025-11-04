@@ -1,4 +1,4 @@
-package metabolights.validation.v2.field_match
+package metabolights.validation.v2.utils.field_match
 
 import rego.v1
 

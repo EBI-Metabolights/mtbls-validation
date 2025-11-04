@@ -1,8 +1,8 @@
-package metabolights.validation.v2.phase1.violations
+package metabolights.validation.v2.rules.phase1.violations
 
 import rego.v1
-import data.metabolights.validation.v2.functions as f
-import data.metabolights.validation.v2.phase1.definitions as def
+import data.metabolights.validation.v2.utils.functions as f
+import data.metabolights.validation.v2.rules.phase1.definitions as def
 
 
 # #########################################################################################################
@@ -57,7 +57,7 @@ rule_a_100_100_001_02 contains result if {
 rule_a_100_100_001_03 contains result if {
 	some file_name, assay_file in input.assays
 	some header in assay_file.table.headers
-	def := data.metabolights.validation.v2.phase1.definitions 
+	def := data.metabolights.validation.v2.rules.phase1.definitions 
 	headers := {x | some j; x := assay_file.table.headers[j].columnHeader}
 	values := [sprintf("['%v']", [x]) |
 		some default_header in def._DEFAULT_ASSAY_HEADERS[file_name].headers
@@ -81,7 +81,7 @@ rule_a_100_100_001_03 contains result if {
 rule_a_100_100_001_04 contains result if {
 	some file_name, assay_file in input.assays
 
-	def := data.metabolights.validation.v2.phase1.definitions 
+	def := data.metabolights.validation.v2.rules.phase1.definitions 
 	values := {sprintf("[column: %v, header: '%v']", [x, y]) |
 		some header in assay_file.headers
 
@@ -110,7 +110,7 @@ rule_a_100_100_001_04 contains result if {
 #  section: assays.columns
 rule_a_100_100_001_05 contains result if {
 	some file_name, _ in input.assays
-	def := data.metabolights.validation.v2.phase1.definitions 
+	def := data.metabolights.validation.v2.rules.phase1.definitions 
 	assay_protocol_headers := def.__ASSAY_PROTOCOL_HEADER_COLUMNS[file_name]
 	default_protocol_headers := def.__ASSAY_DEFAULT_PROTOCOL_HEADERS[file_name]
 	count(default_protocol_headers) < count(assay_protocol_headers)
@@ -133,7 +133,7 @@ rule_a_100_100_001_05 contains result if {
 #  section: assays.columns
 rule_a_100_100_001_06 contains result if {
 	input.assays[fileName]
-	def := data.metabolights.validation.v2.phase1.definitions 
+	def := data.metabolights.validation.v2.rules.phase1.definitions 
 	assayProtocolHeaders := def.__ASSAY_PROTOCOL_HEADER_COLUMNS[fileName]
 	defaultHeaders := def.__ASSAY_DEFAULT_PROTOCOL_HEADERS[fileName]
 	count(defaultHeaders) > count(assayProtocolHeaders)
@@ -179,7 +179,7 @@ rule_a_100_100_001_07 contains result if {
 rule_a_100_100_001_08 contains result if {
 	
 	some file_name, _ in input.assays
-	def := data.metabolights.validation.v2.phase1.definitions 
+	def := data.metabolights.validation.v2.rules.phase1.definitions 
 	
 	headers := [header |
 		some header in input.assays[file_name].table.headers
@@ -244,12 +244,12 @@ rule_a_100_100_001_09 contains result if {
 #  section: assays.columns
 rule_a_100_100_001_10 contains result if {
 	templates := data.metabolights.validation.v2.templates
-	def := data.metabolights.validation.v2.phase1.definitions
+	def := data.metabolights.validation.v2.rules.phase1.definitions
 	some file_name, _ in input.assays
 	header_names := {header.columnHeader: same_headers |
 		some header_set in def._DEFAULT_ASSAY_HEADERS[file_name]
 
-		header_set.version == data.metabolights.validation.v2.phase1.definitions.STUDY_TEMPLATE_VERSION
+		header_set.version == data.metabolights.validation.v2.rules.phase1.definitions.STUDY_TEMPLATE_VERSION
 		
 		some header in header_set.headers
 		not startswith(header.columnHeader, "Comment[")
@@ -312,7 +312,7 @@ rule_a_100_100_001_11 contains result if {
 #  section: assays.columns
 rule_a_100_100_001_12 contains result if {
 	templates := data.metabolights.validation.v2.templates
-	def := data.metabolights.validation.v2.phase1.definitions
+	def := data.metabolights.validation.v2.rules.phase1.definitions
 	some file_name, assay_file in input.assays
 	header_names := [header.columnHeader |
 		some header in assay_file.table.headers
@@ -361,7 +361,7 @@ rule_a_100_100_001_13 contains result if {
 	technique_name == assay_file.assayTechnique.name
 
 	some template in templates
-	template.version == data.metabolights.validation.v2.phase1.definitions.STUDY_TEMPLATE_VERSION
+	template.version == data.metabolights.validation.v2.rules.phase1.definitions.STUDY_TEMPLATE_VERSION
 
 	unique_header_names := {header.columnHeader: columns | 
 		some header in template.headers

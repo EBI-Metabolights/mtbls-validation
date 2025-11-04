@@ -1,5 +1,5 @@
-package metabolights.validation.v2.functions
-import data.metabolights.validation.v2.field_match as field_match
+package metabolights.validation.v2.utils.functions
+import data.metabolights.validation.v2.utils.field_match as field_match
 
 import rego.v1
 __DEBUG__MESSAGE := data.metabolights.validation.v2.configuration.debug
@@ -381,7 +381,7 @@ single_ontology_term_not_in_selected_terms(
 ) := result if {
 	control.validationType in {"selected-ontology-term"}
 	terms = {sprintf("[%v, %v, %v]", [x.term, x.termSourceRef, x.termAccessionNumber]) | some x in control.terms }
-		
+	# debug(ontology_term.term)
 	source_ref := ontology_term.termSourceRef
 	accession := ontology_term.termAccessionNumber
 	term := ontology_term.term

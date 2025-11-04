@@ -1,7 +1,7 @@
-package metabolights.validation.v2.phase1.definitions
+package metabolights.validation.v2.rules.phase1.definitions
 
-import data.metabolights.validation.v2.functions as f
-import data.metabolights.validation.v2.field_match as field_match
+import data.metabolights.validation.v2.utils.functions as f
+import data.metabolights.validation.v2.utils.field_match as field_match
 import rego.v1
 
 

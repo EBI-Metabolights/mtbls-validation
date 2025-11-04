@@ -2,10 +2,10 @@
 # scope: subpackages
 # schemas:
 #   - input: schema["study-model-schema"]
-package metabolights.validation.v2.phase4.violations
+package metabolights.validation.v2.rules.phase4.violations
 
 import rego.v1
-import data.metabolights.validation.v2.functions as f
+import data.metabolights.validation.v2.utils.functions as f
 import data.metabolights.validation.v2.templates
 import input.samples
 import input.assays

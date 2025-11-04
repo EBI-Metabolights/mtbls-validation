@@ -2,4 +2,4 @@
 # scope: subpackages
 # schemas:
 #   - input: schema["study-model-schema"]
-package metabolights.validation.v2.phase2.violations
+package metabolights.validation.v2.rules.phase1.violations

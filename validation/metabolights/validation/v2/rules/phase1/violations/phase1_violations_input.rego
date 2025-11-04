@@ -1,6 +1,6 @@
-package metabolights.validation.v2.phase1.violations
+package metabolights.validation.v2.rules.phase1.violations
 
-import data.metabolights.validation.v2.functions as f
+import data.metabolights.validation.v2.utils.functions as f
 import rego.v1
 
 #########################################################################################################
@@ -406,7 +406,7 @@ rule___100_300_001_05 contains result if {
 #  section: assays.general
 rule___100_300_001_06 contains result if {
 	some file_name, _ in input.assays
-	not data.metabolights.validation.v2.phase1.definitions.__ASSAY_TECHNIQUES[file_name]
+	not data.metabolights.validation.v2.rules.phase1.definitions.__ASSAY_TECHNIQUES[file_name]
 
 	msg := sprintf("Assay file technology type is not determined for '%v'", [file_name])
 	source := file_name
@@ -424,7 +424,7 @@ rule___100_300_001_06 contains result if {
 rule___100_300_001_07 contains result if {
 	some file_name, _ in input.assays
 
-	assay_type := data.metabolights.validation.v2.phase1.definitions.__ASSAY_TECHNIQUES[file_name]
+	assay_type := data.metabolights.validation.v2.rules.phase1.definitions.__ASSAY_TECHNIQUES[file_name]
 	supported_assay_types := {x | some x, _ in data.metabolights.validation.v2.templates.assayFileHeaderTemplates}
 	not assay_type in supported_assay_types
 

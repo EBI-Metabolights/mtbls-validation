@@ -1,4 +1,4 @@
-package metabolights.validation.v2.summary_functions
+package metabolights.validation.v2.summary.functions
 
 import rego.v1
 

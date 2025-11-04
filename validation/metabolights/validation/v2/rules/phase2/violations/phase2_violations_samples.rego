@@ -1,10 +1,10 @@
-package metabolights.validation.v2.phase2.violations
+package metabolights.validation.v2.rules.phase2.violations
 
 import rego.v1
 
-import data.metabolights.validation.v2.functions as f
-import data.metabolights.validation.v2.phase2.definitions as def
-import data.metabolights.validation.v2.phase1.definitions as def1
+import data.metabolights.validation.v2.utils.functions as f
+import data.metabolights.validation.v2.rules.phase2.definitions as def
+import data.metabolights.validation.v2.rules.phase1.definitions as def1
 
 # #########################################################################################################
 # #########################################################################################################
@@ -376,7 +376,7 @@ rule_s_200_090_003_04 contains result if {
 rule_s_200_090_004_01 contains result if {
 	some file_name, _ in input.samples
 	row_offset := input.samples[file_name].table.rowOffset
-	template := data.metabolights.validation.v2.phase1.definitions.SELECTED_STUDY_SAMPLE_FILE_TEMPLATE
+	template := data.metabolights.validation.v2.rules.phase1.definitions.SELECTED_STUDY_SAMPLE_FILE_TEMPLATE
 	some header in template.headers
 	header.required == true
 	header.minLength > 0
@@ -401,7 +401,7 @@ rule_s_200_090_004_01 contains result if {
 #  section: samples.general
 rule_s_200_090_004_02 contains result if {
 	some file_name, _ in input.samples
-	template := data.metabolights.validation.v2.phase1.definitions.SELECTED_STUDY_SAMPLE_FILE_TEMPLATE
+	template := data.metabolights.validation.v2.rules.phase1.definitions.SELECTED_STUDY_SAMPLE_FILE_TEMPLATE
 	some header in template.headers
 	source := input.samples
 
@@ -425,7 +425,7 @@ rule_s_200_090_004_02 contains result if {
 #  section: samples.general
 rule_s_200_090_004_03 contains result if {
 	some file_name, _ in input.samples
-	template := data.metabolights.validation.v2.phase1.definitions.SELECTED_STUDY_SAMPLE_FILE_TEMPLATE
+	template := data.metabolights.validation.v2.rules.phase1.definitions.SELECTED_STUDY_SAMPLE_FILE_TEMPLATE
 	some header in template.headers
 	source := input.samples
 
@@ -451,7 +451,7 @@ rule_s_200_090_005_01 contains result if {
 	some file_name, sheet in input.samples
 	headers := [header | some header in sheet.table.headers; header.columnHeader == file_column_header]
 	some t, header in headers
-	template := data.metabolights.validation.v2.phase1.definitions.SELECTED_STUDY_SAMPLE_FILE_TEMPLATE
+	template := data.metabolights.validation.v2.rules.phase1.definitions.SELECTED_STUDY_SAMPLE_FILE_TEMPLATE
 	column_index := header.columnIndex
 	default_values = [header.defaultValue |
 		some header in template.headers
@@ -521,7 +521,7 @@ rule_s_200_100_002_01 contains result if {
 
 	row_offset := sheet.table.rowOffset
 	header.columnCategory == "Characteristics"
-	template := data.metabolights.validation.v2.phase1.definitions.SELECTED_STUDY_SAMPLE_FILE_TEMPLATE
+	template := data.metabolights.validation.v2.rules.phase1.definitions.SELECTED_STUDY_SAMPLE_FILE_TEMPLATE
 	default_headers := {t_header.columnHeader |
 		some t_header in template.headers
 		t_header.columnCategory == "Characteristics"

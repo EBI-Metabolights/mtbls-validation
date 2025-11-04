@@ -1,7 +1,7 @@
-package metabolights.validation.v2.phase1.tests
+package metabolights.validation.v2.rules.phase1.tests
 
 import rego.v1
-import data.metabolights.validation.v2.phase1.violations as rules
+import data.metabolights.validation.v2.rules.phase1.violations as rules
 
 #########################################################################################################
 #########################################################################################################
@@ -123,7 +123,7 @@ test_rule_s_100_100_001_03_no_violation_01 if {
 		"investigation": {"studies": [{"fileName": "s_MTBLS1.txt"}]},
 		"parserMessages": {"s_MTBLS1.txt": []},
 	}
-		with data.metabolights.validation.v2.phase1.definitions._DEFAULT_SAMPLE_FILE_HEADERS as {
+		with data.metabolights.validation.v2.rules.phase1.definitions._DEFAULT_SAMPLE_FILE_HEADERS as {
 			"Sample Name": {"columnHeader": "Sample Name", "required": true},
 			"Characteristics[Organism]": {"columnHeader": "Characteristics[Organism]", "required": true},
 		}
@@ -148,7 +148,7 @@ test_rule_s_100_100_001_03_violation_01 if {
 		"investigation": {"studies": [{"fileName": "s_MTBLS1.txt"}]},
 		"parserMessages": {"s_MTBLS1.txt": []},
 	}
-		with data.metabolights.validation.v2.phase1.definitions._DEFAULT_SAMPLE_FILE_HEADERS as {
+		with data.metabolights.validation.v2.rules.phase1.definitions._DEFAULT_SAMPLE_FILE_HEADERS as {
 		"Sample Name":	{"columnHeader": "Sample Name", "required": true},
 		"Characteristics[Organism]":	{"columnHeader": "Characteristics[Organism]", "required": true},
 		"Characteristics[Organism part]":	{"columnHeader": "Characteristics[Organism part]", "required": true},
@@ -185,7 +185,7 @@ test_rule_s_100_100_001_04_no_violation_01 if {
 		"investigation": {"studies": [{"fileName": "s_MTBLS1.txt"}]},
 		"parserMessages": {"s_MTBLS1.txt": []},
 	}
-		with data.metabolights.validation.v2.phase1.definitions._DEFAULT_SAMPLE_FILE_HEADERS as {
+		with data.metabolights.validation.v2.rules.phase1.definitions._DEFAULT_SAMPLE_FILE_HEADERS as {
 			{"columnHeader": "Sample Name", "required": true},
 			{"columnHeader": "Characteristics[Organism]", "required": true},
 			{"columnHeader": "Characteristics[Organism part]", "required": true},
@@ -211,7 +211,7 @@ test_rule_s_100_100_001_04_violation_01 if {
 		"investigation": {"studies": [{"fileName": "s_MTBLS1.txt"}]},
 		"parserMessages": {"s_MTBLS1.txt": []},
 	}
-		with data.metabolights.validation.v2.phase1.definitions._DEFAULT_SAMPLE_FILE_HEADERS as {
+		with data.metabolights.validation.v2.rules.phase1.definitions._DEFAULT_SAMPLE_FILE_HEADERS as {
 			{"columnHeader": "Sample Name", "required": true},
 			{"columnHeader": "Characteristics[Organism]", "required": true},
 			{"columnHeader": "Characteristics[Organism part]", "required": true},
@@ -245,7 +245,7 @@ test_rule_s_100_100_001_05_no_violation_01 if {
 		"investigation": {"studies": [{"fileName": "s_MTBLS1.txt"}]},
 		"parserMessages": {"s_MTBLS1.txt": []},
 	}
-		with data.metabolights.validation.v2.phase1.definitions._DEFAULT_SAMPLE_FILE_HEADERS as {
+		with data.metabolights.validation.v2.rules.phase1.definitions._DEFAULT_SAMPLE_FILE_HEADERS as {
 			{"columnHeader": "Sample Name", "required": true},
 			{"columnHeader": "Characteristics[Organism]", "required": true},
 		}
@@ -270,7 +270,7 @@ test_rule_s_100_100_001_05_violation_01 if {
 		"investigation": {"studies": [{"fileName": "s_MTBLS1.txt"}]},
 		"parserMessages": {"s_MTBLS1.txt": []},
 	}
-		with data.metabolights.validation.v2.phase1.definitions._DEFAULT_SAMPLE_FILE_HEADERS as {
+		with data.metabolights.validation.v2.rules.phase1.definitions._DEFAULT_SAMPLE_FILE_HEADERS as {
 			{"columnHeader": "Sample Name", "required": true},
 			{"columnHeader": "Characteristics[Organism]", "required": true},
 			{"columnHeader": "Characteristics[Organism part]", "required": true},
@@ -304,7 +304,7 @@ test_rule_s_100_100_001_06_no_violation_01 if {
 		"investigation": {"studies": [{"fileName": "s_MTBLS1.txt"}]},
 		"parserMessages": {"s_MTBLS1.txt": []},
 	}
-		with data.metabolights.validation.v2.phase1.definitions._DEFAULT_SAMPLE_FILE_HEADERS as {
+		with data.metabolights.validation.v2.rules.phase1.definitions._DEFAULT_SAMPLE_FILE_HEADERS as {
 			{"columnHeader": "Sample Name", "required": true},
 			{"columnHeader": "Characteristics[Organism]", "required": true},
 		}
@@ -329,7 +329,7 @@ test_rule_s_100_100_001_06_violation_01 if {
 		"investigation": {"studies": [{"fileName": "s_MTBLS1.txt"}]},
 		"parserMessages": {"s_MTBLS1.txt": []},
 	}
-		with data.metabolights.validation.v2.phase1.definitions._DEFAULT_SAMPLE_FILE_HEADERS as {
+		with data.metabolights.validation.v2.rules.phase1.definitions._DEFAULT_SAMPLE_FILE_HEADERS as {
 			{"columnHeader": "Sample Name", "required": true},
 			{"columnHeader": "Characteristics[Organism]", "required": true},
 			{"columnHeader": "Characteristics[Organism part]", "required": true},
@@ -363,7 +363,7 @@ test_rule_s_100_100_001_07_no_violation_01 if {
 		"investigation": {"studies": [{"fileName": "s_MTBLS1.txt"}]},
 		"parserMessages": {"s_MTBLS1.txt": []},
 	}
-		with data.metabolights.validation.v2.phase1.definitions._DEFAULT_SAMPLE_FILE_HEADERS as {
+		with data.metabolights.validation.v2.rules.phase1.definitions._DEFAULT_SAMPLE_FILE_HEADERS as {
 			{"columnHeader": "Sample Name", "required": true},
 			{"columnHeader": "Characteristics[Organism]", "required": true},
 		}
@@ -388,7 +388,7 @@ test_rule_s_100_100_001_07_violation_01 if {
 		"investigation": {"studies": [{"fileName": "s_MTBLS1.txt"}]},
 		"parserMessages": {"s_MTBLS1.txt": []},
 	}
-		with data.metabolights.validation.v2.phase1.definitions._DEFAULT_SAMPLE_FILE_HEADERS as {
+		with data.metabolights.validation.v2.rules.phase1.definitions._DEFAULT_SAMPLE_FILE_HEADERS as {
 			{"columnHeader": "Sample Name", "required": true},
 			{"columnHeader": "Characteristics[Organism]", "required": true},
 			{"columnHeader": "Characteristics[Organism part]", "required": true},
@@ -427,7 +427,7 @@ test_rule_s_100_100_001_08_no_violation_01 if {
 		"investigation": {"studies": [{"fileName": "s_MTBLS1.txt"}]},
 		"parserMessages": {"s_MTBLS1.txt": []},
 	}
-		with data.metabolights.validation.v2.phase1.definitions._DEFAULT_SAMPLE_FILE_HEADERS as [{
+		with data.metabolights.validation.v2.rules.phase1.definitions._DEFAULT_SAMPLE_FILE_HEADERS as [{
 			"version": "2.0",
 			"headers": [
 				{"columnHeader": "Source Name", "required": true},
@@ -465,7 +465,7 @@ test_rule_s_100_100_001_08_violation_01 if {
 		"investigation": {"studies": [{"fileName": "s_MTBLS1.txt"}]},
 		"parserMessages": {"s_MTBLS1.txt": []},
 	}
-		with data.metabolights.validation.v2.phase1.definitions._DEFAULT_SAMPLE_HEADER_NAMES as [
+		with data.metabolights.validation.v2.rules.phase1.definitions._DEFAULT_SAMPLE_HEADER_NAMES as [
 			"Characteristics[Organism part]",
 			"Characteristics[Organism]",
 			"Characteristics[Sample type]",
@@ -474,7 +474,7 @@ test_rule_s_100_100_001_08_violation_01 if {
 			"Sample Name",
 			"Source Name"
 		]
-		with  data.metabolights.validation.v2.phase1.definitions.SELECTED_STUDY_SAMPLE_FILE_TEMPLATE_HEADERS as [
+		with  data.metabolights.validation.v2.rules.phase1.definitions.SELECTED_STUDY_SAMPLE_FILE_TEMPLATE_HEADERS as [
 			{"columnHeader": "Source Name", "required": true},
 			{"columnHeader": "Characteristics[Organism]", "required": true},
 			{"columnHeader": "Characteristics[Organism part]", "required": true},
@@ -514,7 +514,7 @@ test_rule_s_100_100_001_09_no_violation_01 if {
 		"investigation": {"studies": [{"fileName": "s_MTBLS1.txt"}]},
 		"parserMessages": {"s_MTBLS1.txt": []},
 	}
-		with data.metabolights.validation.v2.phase1.definitions._DEFAULT_SAMPLE_FILE_HEADERS as [{
+		with data.metabolights.validation.v2.rules.phase1.definitions._DEFAULT_SAMPLE_FILE_HEADERS as [{
 			"version": "2.0",
 			"headers": [
 				{"columnHeader": "Source Name", "required": true},
@@ -555,7 +555,7 @@ test_rule_s_100_100_001_09_violation_01 if {
 		"investigation": {"studies": [{"fileName": "s_MTBLS1.txt"}]},
 		"parserMessages": {"s_MTBLS1.txt": []},
 	}
-		with data.metabolights.validation.v2.phase1.definitions._DEFAULT_SAMPLE_FILE_HEADERS as [{
+		with data.metabolights.validation.v2.rules.phase1.definitions._DEFAULT_SAMPLE_FILE_HEADERS as [{
 			"version": "2.0",
 			"headers": [
 				{"columnHeader": "Source Name", "required": true},
@@ -600,7 +600,7 @@ test_rule_s_100_100_001_10_no_violation_01 if {
 		"investigation": {"studies": [{"fileName": "s_MTBLS1.txt"}]},
 		"parserMessages": {"s_MTBLS1.txt": []},
 	}
-		with data.metabolights.validation.v2.phase1.definitions._DEFAULT_SAMPLE_FILE_HEADERS as [{
+		with data.metabolights.validation.v2.rules.phase1.definitions._DEFAULT_SAMPLE_FILE_HEADERS as [{
 			"version": "2.0",
 			"headers": [
 				{"columnHeader": "Source Name", "required": true},
@@ -641,7 +641,7 @@ test_rule_s_100_100_001_10_violation_01 if {
 		"investigation": {"studies": [{"fileName": "s_MTBLS1.txt"}]},
 		"parserMessages": {"s_MTBLS1.txt": []},
 	}
-		with data.metabolights.validation.v2.phase1.definitions._DEFAULT_SAMPLE_FILE_HEADERS as [{
+		with data.metabolights.validation.v2.rules.phase1.definitions._DEFAULT_SAMPLE_FILE_HEADERS as [{
 			"version": "2.0",
 			"headers": [
 				{"columnHeader": "Source Name", "required": true},
@@ -684,7 +684,7 @@ test_rule_s_100_100_001_11_no_violation_01 if {
 		"investigation": {"studies": [{"fileName": "s_MTBLS1.txt", "studyFactors": { "factors": [ {"name": "Age"}]}}]},
 		"parserMessages": {"s_MTBLS1.txt": []},
 	}
-	with data.metabolights.validation.v2.phase1.definitions._DEFAULT_SAMPLE_FILE_HEADERS as {
+	with data.metabolights.validation.v2.rules.phase1.definitions._DEFAULT_SAMPLE_FILE_HEADERS as {
 
 		"Source Name": {"columnHeader": "Source Name", "required": true, "columnStructure": "SINGLE_COLUMN", "columnIndex": 0},
 		"Characteristics[Organism]": {"columnHeader": "Characteristics[Organism]", "required": true, "columnStructure": "ONTOLOGY_COLUMN", "columnIndex": 0},
@@ -720,7 +720,7 @@ test_rule_s_100_100_001_11_violation_01 if {
 		"investigation": {"studies": [{"fileName": "s_MTBLS1.txt", "studyFactors": { "factors": [ {"name": "Age"}]}}]},
 		"parserMessages": {"s_MTBLS1.txt": []},
 	}
-	with data.metabolights.validation.v2.phase1.definitions._DEFAULT_SAMPLE_FILE_HEADERS as  {
+	with data.metabolights.validation.v2.rules.phase1.definitions._DEFAULT_SAMPLE_FILE_HEADERS as  {
 
 		"Source Name": {"columnHeader": "Source Name", "required": true, "columnStructure": "SINGLE_COLUMN", "columnIndex": 0},
 		"Characteristics[Organism]": {"columnHeader": "Characteristics[Organism]", "required": true, "columnStructure": "ONTOLOGY_COLUMN", "columnIndex": 0},
@@ -819,7 +819,7 @@ test_rule_s_100_100_001_13_no_violation_01 if {
 		"investigation": {"studies": [{"fileName": "s_MTBLS1.txt", "studyFactors": { "factors": [ {"name": "Age"}]}}]},
 		"parserMessages": {"s_MTBLS1.txt": []},
 	}
-		with data.metabolights.validation.v2.phase1.definitions._DEFAULT_SAMPLE_HEADER_NAMES as {"Characteristics[Organism]", "Characteristics[Organism part]"}
+		with data.metabolights.validation.v2.rules.phase1.definitions._DEFAULT_SAMPLE_HEADER_NAMES as {"Characteristics[Organism]", "Characteristics[Organism part]"}
 	count(result) == 0
 }
 
@@ -846,7 +846,7 @@ test_rule_s_100_100_001_13_violation_01 if {
 		"investigation": {"studies": [{"fileName": "s_MTBLS1.txt", "studyFactors": { "factors": [{"name": "Age"}, {"name": "Year"}]}}]},
 		"parserMessages": {"s_MTBLS1.txt": []},
 	}
-		with data.metabolights.validation.v2.phase1.definitions._DEFAULT_SAMPLE_HEADER_NAMES as {"Characteristics[Organism part]"}
+		with data.metabolights.validation.v2.rules.phase1.definitions._DEFAULT_SAMPLE_HEADER_NAMES as {"Characteristics[Organism part]"}
 
 	count(result) == 1
 }
