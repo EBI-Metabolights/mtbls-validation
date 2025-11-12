@@ -21,6 +21,7 @@
             "validationType": "selected-ontology-term",
             "defaultValue": null,
             "allowedMissingOntologyTerms": null,
+            "allowedPlaceholders": null,
             "allowedOtherSources": null,
             "terms": [
                 {
