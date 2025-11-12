@@ -12,6 +12,7 @@ dependencies = [
     "openpyxl>=3.1.5",
     "metabolights-utils>=1.4.0,<2",
     "pydantic2-to-typescript>=0.0.1",
+    "jsonschema>=4.25.1",
 ]
 
 [tool.hatch.build.targets.sdist]

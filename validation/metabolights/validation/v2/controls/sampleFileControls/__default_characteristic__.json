@@ -128,22 +128,7 @@
                 "MP"
             ],
             "allowedParentOntologyTerms": null,
-            "unexpectedTerms": [
-                "unknown",
-                "undefined",
-                "n/a",
-                "na",
-                "not applicable",
-                "not available",
-                "none",
-                "null",
-                "nill",
-                "not specified",
-                "not provided",
-                "-",
-                "--",
-                "---"
-            ]
+            "unexpectedTerms": null
         }
     ]
 }

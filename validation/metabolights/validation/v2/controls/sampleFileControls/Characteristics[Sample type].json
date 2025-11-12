@@ -18,25 +18,10 @@
                     }
                 ]
             },
-            "validationType": "any-ontology-term",
+            "validationType": "selected-ontology-term",
             "defaultValue": null,
             "allowedMissingOntologyTerms": null,
-            "allowedOtherSources": [
-                {
-                    "sourceLabel": "MTBLS",
-                    "accessionPrefix": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_"
-                },
-                {
-                    "sourceLabel": "WoRMs",
-                    "accessionPrefix": "http://www.marinespecies.org/aphia.php?p=taxdetails&id="
-                }
-            ],
-            "allowedPlaceholders": [
-                {
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/placeholder"
-                }
-            ],
+            "allowedOtherSources": null,
             "terms": [
                 {
                     "term": "experimental sample",
@@ -72,7 +57,6 @@
             "ontologies": [
                 "CHMO",
                 "MSIO",
-                "WoRMs",
                 "MTBLS"
             ],
             "allowedParentOntologyTerms": null

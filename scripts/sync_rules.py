@@ -19,9 +19,7 @@ metadata_lines = [
 def update_files(rules: dict[str, pd.Series]):
     files = [
         x
-        for x in glob.iglob("./validation/**/*.rego", recursive=True)
-        if not x.endswith("_test.rego")
-    ]
+        for x in glob.iglob("./validation/**/*.rego", recursive=True)    ]
     for file in files:
         rows = []
         updated: bool = False

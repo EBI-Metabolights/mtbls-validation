@@ -48,7 +48,7 @@ rule_a_200_090_001_01 contains result if {
 # description: Select a term from one of the prioritised sources where possible.
 # custom:
 #  rule_id: rule_a_200_090_002_01
-#  type: WARNING
+#  type: ERROR
 #  priority: HIGH
 #  section: assays.general
 rule_a_200_090_002_01 contains result if {
@@ -334,10 +334,8 @@ rule_a_200_090_002_15 contains result if {
 	control_lists := data.metabolights.validation.v2.controls.assayFileControls
 	some file_name, file_table in input.assays
 	some column_index, header in input.assays[file_name].table.headers
-	selected_validation_types = {"selected-ontology-term"}
 	control_lists[header.columnHeader]
 	template_name := file_table.assayTechnique.name
-	# print(header.columnHeader, template_name)
 	result := f.term_value_has_invalid_pattern(
 		rego.metadata.rule(), 
 		def1.STUDY_CATEGORY,
@@ -348,7 +346,6 @@ rule_a_200_090_002_15 contains result if {
 		file_table.table, 
 		file_name, 
 		column_index, 
-		selected_validation_types,
 		control_lists,
 		header.columnHeader,
 		"Expected pattern"
@@ -356,8 +353,8 @@ rule_a_200_090_002_15 contains result if {
 }
 
 # METADATA
-# title: Value has not a valid pattern.
-# description: The column value must have a valid pattern value.
+# title: Unexpected value in the ontology column.
+# description: There is an unexpected value list for the selected column. Use valid text, ontology term or controlled vocabulary for the selected ontology column.
 # custom:
 #  rule_id: rule_a_200_090_002_16
 #  type: ERROR
@@ -390,8 +387,8 @@ control_lists := data.metabolights.validation.v2.controls.assayFileControls
 
 
 # METADATA
-# title: Value has not a valid pattern.
-# description: The column value must have a valid pattern value.
+# title: Unexpected value in the ontology column.
+# description: There is a general unexpected value list. Use valid text, ontology term or controlled vocabulary for the selected ontology column.
 # custom:
 #  rule_id: rule_a_200_090_002_17
 #  type: ERROR
@@ -421,6 +418,72 @@ control_lists := data.metabolights.validation.v2.controls.assayFileControls
 		"Do not use these unexpected terms"
 		)
 }
+
+
+
+# METADATA
+# title: Unexpected value in the column.
+# description: There is an unexpected value list for the selected column. Use valid text, ontology term or controlled vocabulary for the selected column.
+# custom:
+#  rule_id: rule_a_200_090_002_18
+#  type: ERROR
+#  priority: HIGH
+#  section: assays.general
+rule_a_200_090_002_18 contains result if {
+control_lists := data.metabolights.validation.v2.controls.assayFileControls
+	some file_name, file_table in input.assays
+	some column_index, header in file_table.table.headers
+	control_lists[header.columnHeader]
+	header.columnStructure in {"SINGLE_COLUMN"}
+	template_name := file_table.assayTechnique.name
+	result := f.single_column_has_unexpected_value(
+		rego.metadata.rule(), 
+		def1.STUDY_CATEGORY,
+		def1.STUDY_TEMPLATE_VERSION,
+		def1.STUDY_CREATED_AT,
+		template_name,
+		"assay",
+		file_table.table, 
+		file_name, 
+		column_index, 
+		control_lists,
+		header.columnHeader,
+		"Do not use these unexpected terms"
+		)
+}
+
+
+# METADATA
+# title: Unexpected value in the column.
+# description: There is a general unexpected value list. Use valid text, ontology term or controlled vocabulary for the selected column.
+# custom:
+#  rule_id: rule_a_200_090_002_19
+#  type: ERROR
+#  priority: HIGH
+#  section: assays.general
+rule_a_200_090_002_19 contains result if {
+control_lists := data.metabolights.validation.v2.controls.assayFileControls
+	some file_name, file_table in input.assays
+	some column_index, header in file_table.table.headers
+	control_lists[header.columnHeader]
+	header.columnStructure in {"SINGLE_COLUMN"}
+	template_name := file_table.assayTechnique.name
+	result := f.single_column_has_unexpected_value(
+		rego.metadata.rule(), 
+		def1.STUDY_CATEGORY,
+		def1.STUDY_TEMPLATE_VERSION,
+		def1.STUDY_CREATED_AT,
+		template_name,
+		"assay",
+		file_table.table, 
+		file_name, 
+		column_index, 
+		control_lists,
+		"__default__",
+		"Do not use these unexpected terms"
+		)
+}
+
 # METADATA
 # title: Term Accession Number length of ontology terms less than 3 characters.
 # description: Term Accession Number of ontology terms should be defined with length equal or greater than 3 characters.
@@ -599,35 +662,6 @@ rule_a_200_090_005_01 contains result if {
 	result := f.format_with_desc(rego.metadata.rule(), file_name, header.columnIndex + 1, column_header, violated_values, "Expected value", default_value_str)
 }
 
-# METADATA
-# title: Invalid column value.
-# description: Some column values are not allowed. Please use valid ontology term or controlled vocabulary.
-# custom:
-#  rule_id: rule_a_200_090_006_01
-#  type: ERROR
-#  priority: CRITICAL
-#  section: samples.general
-rule_a_200_090_006_01 contains result if {
-	some file_name, sheet in input.assays
-	some header in sheet.table.headers
-
-	column_index := header.columnIndex
-
-	column_name := sheet.table.columns[column_index]
-	row_offset := sheet.table.rowOffset
-
-	unexpected_terms := {term |
-		some name, black_list_control in data.metabolights.validation.v2.blackLists.assayColumns
-		name == header.columnHeader
-
-		some term in black_list_control.unexpectedTerms
-	}
-	count(unexpected_terms) > 0
-	violated_values := f.in_control_list_check(input.assays, file_name, column_name, unexpected_terms, row_offset)
-
-	count(violated_values) > 0
-	result := f.format_with_values(rego.metadata.rule(), file_name, column_index + 1, header.columnHeader, violated_values)
-}
 
 # METADATA
 # title: Values for Sample Name column not in sample file.

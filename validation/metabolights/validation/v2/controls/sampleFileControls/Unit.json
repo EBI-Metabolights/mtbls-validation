@@ -9,7 +9,7 @@
                 "studyCreatedAtOrAfter": null,
                 "studyCreatedBefore": null,
                 "studyCategoryFilter": null,
-                "templateVersionFilter": ["2.0"],
+                "templateVersionFilter": null,
                 "isaFileTemplateNameFilter": null,
                 "linkedFieldAndValueFilter": null
             },
@@ -44,6 +44,11 @@
                         "term": "unit",
                         "termSourceRef": "EFO",
                         "termAccessionNumber": "http://purl.obolibrary.org/obo/UO_0000000"
+                    },
+                    {
+                        "term": "Qualifier",
+                        "termSourceRef": "NCIT",
+                        "termAccessionNumber": "http://purl.obolibrary.org/obo/NCIT_C41009"
                     }
                     
                 ]
@@ -83,7 +88,7 @@
             "ontologies": [
                 "UO",
                 "EFO",
-                "MTBLS"
+                "NCIT"
             ],
             "allowedParentOntologyTerms": {
                 "excludeByLabelPattern": [
@@ -100,6 +105,11 @@
                         "term": "unit",
                         "termSourceRef": "EFO",
                         "termAccessionNumber": "http://purl.obolibrary.org/obo/UO_0000000"
+                    },
+                    {
+                        "term": "Qualifier",
+                        "termSourceRef": "NCIT",
+                        "termAccessionNumber": "http://purl.obolibrary.org/obo/NCIT_C41009"
                     }
                     
                 ]

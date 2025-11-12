@@ -293,9 +293,7 @@ rule_s_200_090_002_13 contains result if {
 	control_lists := data.metabolights.validation.v2.controls.sampleFileControls
 	some file_name, file_table in input.samples
 	some column_index, header in input.samples[file_name].table.headers
-	selected_validation_types = {"pattern-match"}
 	control_lists[header.columnHeader]
-	# print(header.columnHeader, def1.STUDY_TEMPLATE_VERSION)
 	result := f.term_value_has_invalid_pattern(
 		rego.metadata.rule(), 
 		def1.STUDY_CATEGORY,
@@ -306,7 +304,6 @@ rule_s_200_090_002_13 contains result if {
 		file_table.table, 
 		file_name, 
 		column_index, 
-		selected_validation_types,
 		control_lists,
 		header.columnHeader,
 		"Expected value pattern"
@@ -469,8 +466,8 @@ rule_s_200_090_005_01 contains result if {
 
 
 # METADATA
-# title: Invalid column value.
-# description: Some column values are not allowed. Please use valid ontology term or controlled vocabulary.
+# title: Unexpected value in the ontology column.
+# description: There is an unexpected value list for the selected column. Use valid text, ontology term or controlled vocabulary for the selected ontology column.
 # custom:
 #  rule_id: rule_s_200_090_006_01
 #  type: ERROR
@@ -497,7 +494,101 @@ rule_s_200_090_006_01 contains result if {
 		control_lists,
 		header.columnHeader,
 		"Do not use these unexpected terms"
-		
+		)
+}
+
+
+# METADATA
+# title: Unexpected value in the ontology column.
+# description: There is a general unexpected value list. Use valid text, ontology term or controlled vocabulary for the selected ontology column.
+# custom:
+#  rule_id: rule_s_200_090_006_02
+#  type: ERROR
+#  priority: HIGH
+#  section: samples.general
+rule_s_200_090_006_02 contains result if {
+	control_lists := data.metabolights.validation.v2.controls.sampleFileControls
+	some file_name, file_table in input.samples
+	some column_index, header in input.samples[file_name].table.headers
+	selected_validation_types = {"selected-ontology-term", "any-ontology-term", "child-ontology-term", "ontology-term-in-selected-ontologies"}
+	control_lists[header.columnHeader]
+	header.columnStructure in {"ONTOLOGY_COLUMN", "SINGLE_COLUMN_AND_UNIT_ONTOLOGY"}
+	result := f.ontology_term_has_unexpected_value(
+		rego.metadata.rule(), 
+		def1.STUDY_CATEGORY,
+		def1.STUDY_TEMPLATE_VERSION,
+		def1.STUDY_CREATED_AT,
+		def1.STUDY_SAMPLE_TEMPLATE_NAME,
+		"sample",
+		file_table.table, 
+		file_name, 
+		column_index, 
+		selected_validation_types,
+		control_lists,
+		"__default__",
+		"Do not use these unexpected terms"
+		)
+}
+
+
+
+# METADATA
+# title: Unexpected value in the column.
+# description: There is an unexpected value list for the selected column. Use valid text, ontology term or controlled vocabulary for the selected column.
+# custom:
+#  rule_id: rule_s_200_090_006_03
+#  type: ERROR
+#  priority: HIGH
+#  section: samples.general
+rule_s_200_090_006_03 contains result if {
+	control_lists := data.metabolights.validation.v2.controls.sampleFileControls
+	some file_name, file_table in input.samples
+	some column_index, header in input.samples[file_name].table.headers
+	control_lists[header.columnHeader]
+	header.columnStructure in {"SINGLE_COLUMN"}
+	result := f.single_column_has_unexpected_value(
+		rego.metadata.rule(), 
+		def1.STUDY_CATEGORY,
+		def1.STUDY_TEMPLATE_VERSION,
+		def1.STUDY_CREATED_AT,
+		def1.STUDY_SAMPLE_TEMPLATE_NAME,
+		"sample",
+		file_table.table, 
+		file_name, 
+		column_index, 
+		control_lists,
+		header.columnHeader,
+		"Do not use these unexpected terms"
+		)
+}
+
+# METADATA
+# title: Unexpected value in the column.
+# description: There is a general unexpected value list. Use valid text, ontology term or controlled vocabulary for the selected column.
+# custom:
+#  rule_id: rule_s_200_090_006_04
+#  type: ERROR
+#  priority: HIGH
+#  section: samples.general
+rule_s_200_090_006_04 contains result if {
+	control_lists := data.metabolights.validation.v2.controls.sampleFileControls
+	some file_name, file_table in input.samples
+	some column_index, header in input.samples[file_name].table.headers
+	control_lists[header.columnHeader]
+	header.columnStructure in {"SINGLE_COLUMN"}
+	result := f.single_column_has_unexpected_value(
+		rego.metadata.rule(), 
+		def1.STUDY_CATEGORY,
+		def1.STUDY_TEMPLATE_VERSION,
+		def1.STUDY_CREATED_AT,
+		def1.STUDY_SAMPLE_TEMPLATE_NAME,
+		"sample",
+		file_table.table, 
+		file_name, 
+		column_index, 
+		control_lists,
+		"__default__",
+		"Do not use these unexpected terms"
 		)
 }
 

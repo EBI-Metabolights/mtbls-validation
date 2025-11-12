@@ -6,7 +6,7 @@
             "fieldName": "Study Publication Status",
             "selectionCriteria": {
                 "isaFileType": "investigation",
-                "studyCreatedAtOrAfter": "2025-12-01T00:00:00",
+                "studyCreatedAtOrAfter": null,
                 "studyCreatedBefore": null,
                 "studyCategoryFilter": null,
                 "templateVersionFilter": null,

@@ -1,6 +1,6 @@
 {
     "validation_version": "2.1.4",
-    "created_at": "2025-10-30T22:15:09.849529+00:00",
+    "created_at": "2025-11-11T13:17:49.112919+00:00",
     "violations": [
         {
             "rule_id": "rule___100_100_001_01",
@@ -499,6 +499,38 @@
             "priority": "HIGH"
         },
         {
+            "rule_id": "rule_a_200_090_002_16",
+            "title": "Unexpected value in the ontology column.",
+            "description": "There is an unexpected value list for the selected column. Use valid text, ontology term or controlled vocabulary for the selected ontology column.",
+            "type": "ERROR",
+            "section": "assays",
+            "priority": "HIGH"
+        },
+        {
+            "rule_id": "rule_a_200_090_002_17",
+            "title": "Unexpected value in the ontology column.",
+            "description": "There is a general unexpected value list. Use valid text, ontology term or controlled vocabulary for the selected ontology column.",
+            "type": "ERROR",
+            "section": "assays",
+            "priority": "HIGH"
+        },
+        {
+            "rule_id": "rule_a_200_090_002_18",
+            "title": "Unexpected value in the column.",
+            "description": "There is an unexpected value list for the selected column. Use valid text, ontology term or controlled vocabulary for the selected column.",
+            "type": "ERROR",
+            "section": "assays",
+            "priority": "HIGH"
+        },
+        {
+            "rule_id": "rule_a_200_090_002_19",
+            "title": "Unexpected value in the column.",
+            "description": "There is a general unexpected value list. Use valid text, ontology term or controlled vocabulary for the selected column.",
+            "type": "ERROR",
+            "section": "assays",
+            "priority": "HIGH"
+        },
+        {
             "rule_id": "rule_a_200_090_003_01",
             "title": "Term Accession Number length of ontology terms less than 3 characters.",
             "description": "Term Accession Number of ontology terms should be defined with length equal or greater than 3 characters.",
@@ -560,14 +592,6 @@
             "description": "All rows should be filled with the same value (case sensitive).",
             "type": "ERROR",
             "section": "assays",
-            "priority": "CRITICAL"
-        },
-        {
-            "rule_id": "rule_a_200_090_006_01",
-            "title": "Invalid column value.",
-            "description": "Some column values are not allowed. Please use valid ontology term or controlled vocabulary.",
-            "type": "ERROR",
-            "section": "samples",
             "priority": "CRITICAL"
         },
         {
@@ -924,7 +948,7 @@
         },
         {
             "rule_id": "rule_i_100_310_002_01",
-            "title": "Study Design Type is not valid.",
+            "title": "Study Design Type is not in the control list.",
             "description": "Study Design Type value MUST be selected from the control list.",
             "type": "ERROR",
             "section": "investigation",
@@ -932,16 +956,24 @@
         },
         {
             "rule_id": "rule_i_100_310_003_01",
-            "title": "Study Design Type Term Accession Number is empty.",
-            "description": "Study Design Type value MUST be selected from the prioritised ontologies.",
+            "title": "Study Design Type is not selected from the selected ontologies.",
+            "description": "Study Design Type value MUST be selected from the selected ontologies.",
             "type": "ERROR",
             "section": "investigation",
             "priority": "HIGH"
         },
         {
+            "rule_id": "rule_i_100_310_003_02",
+            "title": "Study Design Type is not selected from the prioritised ontologies.",
+            "description": "Study Design Type value SHOULD be selected from the prioritised ontologies.",
+            "type": "WARNING",
+            "section": "investigation",
+            "priority": "HIGH"
+        },
+        {
             "rule_id": "rule_i_100_310_004_01",
-            "title": "Study Design Type Term Source REF is empty.",
-            "description": "Study Design Type value MAY be selected from the prioritised ontologies.",
+            "title": "Study Design Type is not selected from the default ontology list.",
+            "description": "Study Design Type value MAY be selected from the default ontology list.",
             "type": "WARNING",
             "section": "investigation",
             "priority": "HIGH"
@@ -1004,7 +1036,7 @@
         },
         {
             "rule_id": "rule_i_100_320_007_01",
-            "title": "Study Publication Status is not valid.",
+            "title": "Study Publication Status is not in the control list.",
             "description": "Study Publication Status value MUST be selected from the control list.",
             "type": "ERROR",
             "section": "investigation",
@@ -1012,16 +1044,24 @@
         },
         {
             "rule_id": "rule_i_100_320_007_02",
-            "title": "Study Publication Status is not valid.",
-            "description": "Study Publication Status value MUST be selected from the prioritised ontologies.",
+            "title": "Study Publication Status is not selected from the selected ontologies.",
+            "description": "Study Publication Status value MUST be selected from the selected ontologies.",
             "type": "ERROR",
             "section": "investigation",
             "priority": "MEDIUM"
         },
         {
+            "rule_id": "rule_i_100_320_007_03",
+            "title": "Study Publication Status is not selected from the prioritised ontologies.",
+            "description": "Study Design Type value SHOULD be selected from the prioritised ontologies.",
+            "type": "WARNING",
+            "section": "investigation",
+            "priority": "MEDIUM"
+        },
+        {
             "rule_id": "rule_i_100_320_009_01",
-            "title": "Study Publication Status is not  is not selected from the prioritised ontologies.",
-            "description": "Study Publication Status value MAY be selected from the prioritised ontologies.",
+            "title": "Study Publication Status is not selected from the default ontology list.",
+            "description": "Study Publication Status value MAY be selected from the default ontology list.",
             "type": "WARNING",
             "section": "investigation",
             "priority": "HIGH"
@@ -1052,7 +1092,7 @@
         },
         {
             "rule_id": "rule_i_100_330_003_01",
-            "title": "Study Factor Type is not valid.",
+            "title": "Study Factor Type is not in the control list.",
             "description": "Study Factor Type value MUST be selected from the control list.",
             "type": "ERROR",
             "section": "investigation",
@@ -1060,23 +1100,31 @@
         },
         {
             "rule_id": "rule_i_100_330_004_01",
-            "title": "Study Factor Type is not valid.",
-            "description": "Study Factor Type value MUST be selected from the prioritised ontologies.",
+            "title": "Study Factor Type is not selected from the selected ontologies.",
+            "description": "Study Factor Type value MUST be selected from the selected ontologies.",
             "type": "ERROR",
             "section": "investigation",
             "priority": "HIGH"
         },
         {
+            "rule_id": "rule_i_100_330_004_02",
+            "title": "Study Factor Type is not selected from the prioritised ontologies.",
+            "description": "Study Factor Type value SHOULD be selected from the prioritised ontologies.",
+            "type": "WARNING",
+            "section": "investigation",
+            "priority": "HIGH"
+        },
+        {
             "rule_id": "rule_i_100_330_005_01",
-            "title": "Study Factor Type Term Source REF is not selected from the prioritised ontologies.",
-            "description": "Study Factor Type value MAY be selected from the prioritised ontologies.",
+            "title": "Study Factor Type is not selected from the default ontology list.",
+            "description": "Study Factor Type value MAY be selected from the default ontology list.",
             "type": "WARNING",
             "section": "investigation",
             "priority": "HIGH"
         },
         {
             "rule_id": "rule_i_100_330_005_02",
-            "title": "Study Factor Type Term Source REF not referenced in investigation file.",
+            "title": "Study Factor Type Term Source REF is not referenced in investigation file.",
             "description": "Study Factor Type Term Source REFs should be referenced in the ONTOLOGY SOURCE REFERENCE section in i_Investigation.txt.",
             "type": "WARNING",
             "section": "investigation",
@@ -1124,7 +1172,7 @@
         },
         {
             "rule_id": "rule_i_100_340_003_01",
-            "title": "Study Assay Measurement Type is not valid.",
+            "title": "Study Assay Measurement Type is not in the control list.",
             "description": "Study Assay Measurement Type value MUST be selected from the control list.",
             "type": "ERROR",
             "section": "investigation",
@@ -1132,17 +1180,25 @@
         },
         {
             "rule_id": "rule_i_100_340_004_01",
-            "title": "Study Assay Measurement Type is not valid.",
-            "description": "Study Assay Measurement Type value MUST be selected from the prioritised ontologies.",
+            "title": "Study Assay Measurement Type is not selected from the selected ontologies.",
+            "description": "Study Assay Measurement Type value MUST be selected from the selected ontologies.",
             "type": "ERROR",
             "section": "investigation",
             "priority": "HIGH"
         },
         {
-            "rule_id": "rule_i_100_340_005_01",
+            "rule_id": "rule_i_100_340_004_02",
             "title": "Study Assay Measurement Type is not selected from the prioritised ontologies.",
-            "description": "Study Assay Measurement Type value MAY be selected from the prioritised ontologies.",
-            "type": "ERROR",
+            "description": "Study Assay Measurement Type value SHOULD be selected from the prioritised ontologies.",
+            "type": "WARNING",
+            "section": "investigation",
+            "priority": "HIGH"
+        },
+        {
+            "rule_id": "rule_i_100_340_005_01",
+            "title": "Study Assay Measurement Type is not selected from the default ontology list.",
+            "description": "Study Assay Measurement Type value MAY be selected from the default ontology list.",
+            "type": "WARNING",
             "section": "investigation",
             "priority": "HIGH"
         },
@@ -1156,7 +1212,7 @@
         },
         {
             "rule_id": "rule_i_100_340_006_01",
-            "title": "Study Assay Technology Type is not valid.",
+            "title": "Study Assay Technology Type is not in the control list.",
             "description": "Study Assay Technology Type value MUST be selected from the control list.",
             "type": "ERROR",
             "section": "investigation",
@@ -1164,17 +1220,25 @@
         },
         {
             "rule_id": "rule_i_100_340_007_01",
-            "title": "Study Assay Technology Type is not valid.",
-            "description": "Study Assay Technology Type value MUST be selected from the prioritised ontologies.",
+            "title": "Study Assay Technology Type is not selected from the selected ontologies.",
+            "description": "Study Assay Technology Type value MUST be selected from the selected ontologies.",
             "type": "ERROR",
             "section": "investigation",
             "priority": "HIGH"
         },
         {
-            "rule_id": "rule_i_100_340_008_01",
+            "rule_id": "rule_i_100_340_007_02",
             "title": "Study Assay Technology Type is not selected from the prioritised ontologies.",
-            "description": "Study Assay Technology Type value MAY be selected from the prioritised ontologies.",
-            "type": "ERROR",
+            "description": "Study Assay Technology Type value SHOULD be selected from the prioritised ontologies.",
+            "type": "WARNING",
+            "section": "investigation",
+            "priority": "HIGH"
+        },
+        {
+            "rule_id": "rule_i_100_340_008_01",
+            "title": "Study Assay Technology Type is not selected from the default ontology list.",
+            "description": "Study Assay Technology Type value MAY be selected from the default ontology list.",
+            "type": "WARNING",
             "section": "investigation",
             "priority": "HIGH"
         },
@@ -1335,6 +1399,14 @@
             "title": "Study Person Role is not valid.",
             "description": "Study Person Role MUST be selected from the prioritised ontologies.",
             "type": "ERROR",
+            "section": "investigation",
+            "priority": "HIGH"
+        },
+        {
+            "rule_id": "rule_i_100_360_009_02",
+            "title": "Study Person Role is not valid.",
+            "description": "Study Person Role SHOULD be selected from the default prioritised ontologies.",
+            "type": "WARNING",
             "section": "investigation",
             "priority": "HIGH"
         },
@@ -1868,8 +1940,32 @@
         },
         {
             "rule_id": "rule_s_200_090_006_01",
-            "title": "Invalid column value.",
-            "description": "Some column values are not allowed. Please use valid ontology term or controlled vocabulary.",
+            "title": "Unexpected value in the ontology column.",
+            "description": "There is an unexpected value list for the selected column. Use valid text, ontology term or controlled vocabulary for the selected ontology column.",
+            "type": "ERROR",
+            "section": "samples",
+            "priority": "HIGH"
+        },
+        {
+            "rule_id": "rule_s_200_090_006_02",
+            "title": "Unexpected value in the ontology column.",
+            "description": "There is a general unexpected value list. Use valid text, ontology term or controlled vocabulary for the selected ontology column.",
+            "type": "ERROR",
+            "section": "samples",
+            "priority": "HIGH"
+        },
+        {
+            "rule_id": "rule_s_200_090_006_03",
+            "title": "Unexpected value in the column.",
+            "description": "There is an unexpected value list for the selected column. Use valid text, ontology term or controlled vocabulary for the selected column.",
+            "type": "ERROR",
+            "section": "samples",
+            "priority": "HIGH"
+        },
+        {
+            "rule_id": "rule_s_200_090_006_04",
+            "title": "Unexpected value in the column.",
+            "description": "There is a general unexpected value list. Use valid text, ontology term or controlled vocabulary for the selected column.",
             "type": "ERROR",
             "section": "samples",
             "priority": "HIGH"

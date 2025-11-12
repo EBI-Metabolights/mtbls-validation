@@ -1,0 +1,940 @@
+{
+    "version": "v1.1",
+    "investigationFilePath": "i_Investigation.txt",
+    "investigation": {
+        "comments": [],
+        "identifier": "",
+        "title": "",
+        "description": "",
+        "submissionDate": "",
+        "publicReleaseDate": "",
+        "ontologySourceReferences": {
+            "comments": [],
+            "references": [
+                {
+                    "sourceName": "CHMO",
+                    "sourceFile": "http://purl.obolibrary.org/obo/chmo/releases/2025-10-21/chmo.owl",
+                    "sourceVersion": "2025-10-21",
+                    "sourceDescription": "Chemical Methods Ontology"
+                },
+                {
+                    "sourceName": "EFO",
+                    "sourceFile": "http://www.ebi.ac.uk/efo/efo.owl",
+                    "sourceVersion": "2018-09-08",
+                    "sourceDescription": "Experimental Factor Ontology"
+                },
+                {
+                    "sourceName": "MI",
+                    "sourceFile": " http://purl.obolibrary.org/obo/mi.owl",
+                    "sourceVersion": "2.5.5",
+                    "sourceDescription": "Molecular Interactions Controlled Vocabulary"
+                },
+                {
+                    "sourceName": "MS",
+                    "sourceFile": "http://purl.obolibrary.org/obo/ms/4.1.213/ms.owl",
+                    "sourceVersion": "4.1.213",
+                    "sourceDescription": "PSI-MS controlled vocabulary"
+                },
+                {
+                    "sourceName": "MSIO",
+                    "sourceFile": "http://purl.obolibrary.org/obo/msio.owl",
+                    "sourceVersion": "1.0.1",
+                    "sourceDescription": "Metabolomics Standards Initiative Ontology (MSIO)"
+                },
+                {
+                    "sourceName": "NCIT",
+                    "sourceFile": "http://purl.obolibrary.org/obo/ncit/releases/2025-08-06/ncit.owl",
+                    "sourceVersion": "2025-08-06",
+                    "sourceDescription": "NCI Thesaurus OBO Edition"
+                },
+                {
+                    "sourceName": "OBI",
+                    "sourceFile": "http://purl.obolibrary.org/obo/obi.owl",
+                    "sourceVersion": "2024-06-10",
+                    "sourceDescription": "Ontology for Biomedical Investigations"
+                }
+            ]
+        },
+        "investigationPublications": {
+            "comments": [],
+            "publications": []
+        },
+        "investigationContacts": {
+            "comments": [],
+            "people": []
+        },
+        "studies": [
+            {
+                "comments": [],
+                "identifier": "REQ2025111188888",
+                "title": "MetaboLights Test Study Minimum 01",
+                "description": "MetaboLights Test Study Minimum 01 Description",
+                "submissionDate": "2025-10-10",
+                "publicReleaseDate": "2025-11-11",
+                "fileName": "s_REQ2025111188888.txt",
+                "studyCategory": "other",
+                "templateVersion": "",
+                "sampleTemplate": "minimum",
+                "mhdAccession": "",
+                "mhdModelVersion": "0.1",
+                "revisionNumber": "",
+                "revisionDate": "",
+                "revisionComment": "",
+                "datasetLicense": "CC0 1.0 Universal",
+                "funders": [
+                    {
+                        "funderName": "Wellcome Trust",
+                        "funderId": "https://ror.org/029chgv08",
+                        "grantIds": [
+                            "grant001"
+                        ]
+                    }
+                ],
+                "characteristicTypes": [],
+                "studyDesignDescriptors": {
+                    "comments": [],
+                    "designTypes": [
+                        {
+                            "term": "tandem mass spectrometry",
+                            "termAccessionNumber": "http://www.ebi.ac.uk/efo/EFO_0030056",
+                            "termSourceRef": "EFO",
+                            "category": "",
+                            "source": ""
+                        },
+                        {
+                            "term": "untargeted metabolite profiling",
+                            "termAccessionNumber": "",
+                            "termSourceRef": "",
+                            "category": "",
+                            "source": ""
+                        }
+                    ]
+                },
+                "studyPublications": {
+                    "comments": [],
+                    "publications": [
+                        {
+                            "pubMedId": "123456",
+                            "doi": "10.0001/abc101",
+                            "authorList": "MetaboLights User 1",
+                            "title": "Metabolights Test Study Minimum 1",
+                            "status": {
+                                "term": "published",
+                                "termAccessionNumber": "http://www.ebi.ac.uk/efo/EFO_0001796",
+                                "termSourceRef": "EFO"
+                            }
+                        },
+                        {
+                            "pubMedId": "",
+                            "doi": "",
+                            "authorList": "MetaboLights User 1",
+                            "title": "Metabolights Test Study Minimum 1 In preperation",
+                            "status": {
+                                "term": "in preparation",
+                                "termAccessionNumber": "http://www.ebi.ac.uk/efo/EFO_0001795",
+                                "termSourceRef": "EFO"
+                            }
+                        }
+                    ]
+                },
+                "studyFactors": {
+                    "comments": [],
+                    "factors": [
+                        {
+                            "name": "Disease",
+                            "type": {
+                                "term": "disease",
+                                "termAccessionNumber": "http://www.ebi.ac.uk/efo/EFO_0000408",
+                                "termSourceRef": "EFO"
+                            },
+                            "valueFormat": ""
+                        },
+                        {
+                            "name": "Dose",
+                            "type": {
+                                "term": "dose",
+                                "termAccessionNumber": "",
+                                "termSourceRef": ""
+                            },
+                            "valueFormat": ""
+                        }
+                    ]
+                },
+                "studyAssays": {
+                    "comments": [],
+                    "assays": [
+                        {
+                            "fileName": "a_REQ2025111188888-01_MS_metabolite_profiling.txt",
+                            "measurementType": {
+                                "term": "untargeted metabolite profiling",
+                                "termAccessionNumber": "http://purl.obolibrary.org/obo/MSIO_0000101",
+                                "termSourceRef": "MSIO"
+                            },
+                            "technologyType": {
+                                "term": "mass spectrometry assay",
+                                "termAccessionNumber": "http://purl.obolibrary.org/obo/OBI_0000470",
+                                "termSourceRef": "OBI"
+                            },
+                            "technologyPlatform": "Mass spectrometry",
+                            "assayIdentifier": "REQ2025111188888-01",
+                            "assayType": {
+                                "term": "mass spectrometry assay",
+                                "termAccessionNumber": "http://purl.obolibrary.org/obo/OBI_0000470",
+                                "termSourceRef": "OBI"
+                            },
+                            "omicsType": {
+                                "term": "Lipidomics",
+                                "termAccessionNumber": "http://edamontology.org/topic_0153",
+                                "termSourceRef": "EDAM"
+                            },
+                            "assayDescriptors": [],
+                            "resultFileFormat": ""
+                        }
+                    ]
+                },
+                "studyProtocols": {
+                    "comments": [],
+                    "protocols": [
+                        {
+                            "name": "Sample collection",
+                            "protocolType": {
+                                "term": "sample collection protocol",
+                                "termAccessionNumber": "http://www.ebi.ac.uk/efo/EFO_0005518",
+                                "termSourceRef": "EFO"
+                            },
+                            "description": "Sample collection - Species: Homo sapiens. Organism parts: blood",
+                            "uri": "",
+                            "version": "",
+                            "parameters": [],
+                            "components": []
+                        },
+                        {
+                            "name": "Extraction",
+                            "protocolType": {
+                                "term": "sample preparation",
+                                "termAccessionNumber": "http://purl.obolibrary.org/obo/MS_1000831",
+                                "termSourceRef": "MS"
+                            },
+                            "description": "Sample collection - Species: Homo sapiens. Organism parts: blood",
+                            "uri": "",
+                            "version": "",
+                            "parameters": [
+                                {
+                                    "term": "Post Extraction",
+                                    "termAccessionNumber": "",
+                                    "termSourceRef": "",
+                                    "valueFormat": ""
+                                },
+                                {
+                                    "term": "Derivatization",
+                                    "termAccessionNumber": "",
+                                    "termSourceRef": "",
+                                    "valueFormat": ""
+                                }
+                            ],
+                            "components": []
+                        },
+                        {
+                            "name": "Mass spectrometry",
+                            "protocolType": {
+                                "term": "mass spectrometry",
+                                "termAccessionNumber": "http://purl.obolibrary.org/obo/CHMO_0000470",
+                                "termSourceRef": "CHMO"
+                            },
+                            "description": "Mass spectrometry protocol description with details.",
+                            "uri": "",
+                            "version": "",
+                            "parameters": [
+                                {
+                                    "term": "Scan polarity",
+                                    "termAccessionNumber": "",
+                                    "termSourceRef": "",
+                                    "valueFormat": ""
+                                },
+                                {
+                                    "term": "Scan m/z range",
+                                    "termAccessionNumber": "",
+                                    "termSourceRef": "",
+                                    "valueFormat": ""
+                                },
+                                {
+                                    "term": "Instrument",
+                                    "termAccessionNumber": "",
+                                    "termSourceRef": "",
+                                    "valueFormat": ""
+                                },
+                                {
+                                    "term": "Ion source",
+                                    "termAccessionNumber": "",
+                                    "termSourceRef": "",
+                                    "valueFormat": ""
+                                },
+                                {
+                                    "term": "Mass analyzer",
+                                    "termAccessionNumber": "",
+                                    "termSourceRef": "",
+                                    "valueFormat": ""
+                                }
+                            ],
+                            "components": []
+                        },
+                        {
+                            "name": "Data transformation",
+                            "protocolType": {
+                                "term": "data transformation",
+                                "termAccessionNumber": "http://purl.obolibrary.org/obo/OBI_0200000",
+                                "termSourceRef": "OBI"
+                            },
+                            "description": "Data transformation protocol description with details.",
+                            "uri": "",
+                            "version": "",
+                            "parameters": [],
+                            "components": []
+                        },
+                        {
+                            "name": "Metabolite identification",
+                            "protocolType": {
+                                "term": "metabolite identification",
+                                "termAccessionNumber": "http://purl.obolibrary.org/obo/MI_2131",
+                                "termSourceRef": "MI"
+                            },
+                            "description": "Metabolite identification protocol description with details.",
+                            "uri": "",
+                            "version": "",
+                            "parameters": [],
+                            "components": []
+                        }
+                    ]
+                },
+                "studyContacts": {
+                    "comments": [],
+                    "people": [
+                        {
+                            "lastName": "Test User Last Name",
+                            "firstName": "Test User First Name",
+                            "midInitials": "",
+                            "email": "metabolights@ebi.ac.uk",
+                            "phone": "",
+                            "fax": "",
+                            "address": "",
+                            "affiliation": "European Bioinformatics Institute",
+                            "roles": [
+                                {
+                                    "term": "Principal Investigator",
+                                    "termAccessionNumber": "http://purl.obolibrary.org/obo/NCIT_C19924",
+                                    "termSourceRef": "NCIT"
+                                }
+                            ],
+                            "orcid": "1234-1234-1234-1234",
+                            "additionalEmails": [],
+                            "affiliationRorId": ""
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+    "samples": {
+        "s_REQ2025111188888.txt": {
+            "filePath": "s_REQ2025111188888.txt",
+            "sha256Hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "table": {
+                "columns": [
+                    "Source Name",
+                    "Characteristics[Organism]",
+                    "Term Source REF",
+                    "Term Accession Number",
+                    "Characteristics[Organism part]",
+                    "Term Source REF.1",
+                    "Term Accession Number.1",
+                    "Characteristics[Variant]",
+                    "Term Source REF.2",
+                    "Term Accession Number.2",
+                    "Characteristics[Sample type]",
+                    "Term Source REF.3",
+                    "Term Accession Number.3",
+                    "Protocol REF",
+                    "Sample Name",
+                    "Factor Value[Disease]",
+                    "Term Source REF.4",
+                    "Term Accession Number.4",
+                    "Factor Value[Dose]",
+                    "Unit",
+                    "Term Source REF.5",
+                    "Term Accession Number.5"
+                ],
+                "headers": [
+                    {
+                        "columnIndex": 0,
+                        "columnName": "Source Name",
+                        "columnHeader": "Source Name",
+                        "additionalColumns": [],
+                        "columnCategory": "",
+                        "columnStructure": "SINGLE_COLUMN",
+                        "columnPrefix": "",
+                        "columnSearchPattern": ""
+                    },
+                    {
+                        "columnIndex": 1,
+                        "columnName": "Characteristics[Organism]",
+                        "columnHeader": "Characteristics[Organism]",
+                        "additionalColumns": [
+                            "Term Source REF",
+                            "Term Accession Number"
+                        ],
+                        "columnCategory": "Characteristics",
+                        "columnStructure": "ONTOLOGY_COLUMN",
+                        "columnPrefix": "",
+                        "columnSearchPattern": ""
+                    },
+                    {
+                        "columnIndex": 2,
+                        "columnName": "Term Source REF",
+                        "columnHeader": "Term Source REF",
+                        "additionalColumns": [],
+                        "columnCategory": "Linked Column",
+                        "columnStructure": "LINKED_COLUMN",
+                        "columnPrefix": "",
+                        "columnSearchPattern": ""
+                    },
+                    {
+                        "columnIndex": 3,
+                        "columnName": "Term Accession Number",
+                        "columnHeader": "Term Accession Number",
+                        "additionalColumns": [],
+                        "columnCategory": "Linked Column",
+                        "columnStructure": "LINKED_COLUMN",
+                        "columnPrefix": "",
+                        "columnSearchPattern": ""
+                    },
+                    {
+                        "columnIndex": 4,
+                        "columnName": "Characteristics[Organism part]",
+                        "columnHeader": "Characteristics[Organism part]",
+                        "additionalColumns": [
+                            "Term Source REF",
+                            "Term Accession Number"
+                        ],
+                        "columnCategory": "Characteristics",
+                        "columnStructure": "ONTOLOGY_COLUMN",
+                        "columnPrefix": "",
+                        "columnSearchPattern": ""
+                    },
+                    {
+                        "columnIndex": 5,
+                        "columnName": "Term Source REF.1",
+                        "columnHeader": "Term Source REF",
+                        "additionalColumns": [],
+                        "columnCategory": "Linked Column",
+                        "columnStructure": "LINKED_COLUMN",
+                        "columnPrefix": "",
+                        "columnSearchPattern": ""
+                    },
+                    {
+                        "columnIndex": 6,
+                        "columnName": "Term Accession Number.1",
+                        "columnHeader": "Term Accession Number",
+                        "additionalColumns": [],
+                        "columnCategory": "Linked Column",
+                        "columnStructure": "LINKED_COLUMN",
+                        "columnPrefix": "",
+                        "columnSearchPattern": ""
+                    },
+                    {
+                        "columnIndex": 7,
+                        "columnName": "Characteristics[Variant]",
+                        "columnHeader": "Characteristics[Variant]",
+                        "additionalColumns": [
+                            "Term Source REF",
+                            "Term Accession Number"
+                        ],
+                        "columnCategory": "Characteristics",
+                        "columnStructure": "ONTOLOGY_COLUMN",
+                        "columnPrefix": "",
+                        "columnSearchPattern": ""
+                    },
+                    {
+                        "columnIndex": 8,
+                        "columnName": "Term Source REF.2",
+                        "columnHeader": "Term Source REF",
+                        "additionalColumns": [],
+                        "columnCategory": "Linked Column",
+                        "columnStructure": "LINKED_COLUMN",
+                        "columnPrefix": "",
+                        "columnSearchPattern": ""
+                    },
+                    {
+                        "columnIndex": 9,
+                        "columnName": "Term Accession Number.2",
+                        "columnHeader": "Term Accession Number",
+                        "additionalColumns": [],
+                        "columnCategory": "Linked Column",
+                        "columnStructure": "LINKED_COLUMN",
+                        "columnPrefix": "",
+                        "columnSearchPattern": ""
+                    },
+                    {
+                        "columnIndex": 10,
+                        "columnName": "Characteristics[Sample type]",
+                        "columnHeader": "Characteristics[Sample type]",
+                        "additionalColumns": [
+                            "Term Source REF",
+                            "Term Accession Number"
+                        ],
+                        "columnCategory": "Characteristics",
+                        "columnStructure": "ONTOLOGY_COLUMN",
+                        "columnPrefix": "",
+                        "columnSearchPattern": ""
+                    },
+                    {
+                        "columnIndex": 11,
+                        "columnName": "Term Source REF.3",
+                        "columnHeader": "Term Source REF",
+                        "additionalColumns": [],
+                        "columnCategory": "Linked Column",
+                        "columnStructure": "LINKED_COLUMN",
+                        "columnPrefix": "",
+                        "columnSearchPattern": ""
+                    },
+                    {
+                        "columnIndex": 12,
+                        "columnName": "Term Accession Number.3",
+                        "columnHeader": "Term Accession Number",
+                        "additionalColumns": [],
+                        "columnCategory": "Linked Column",
+                        "columnStructure": "LINKED_COLUMN",
+                        "columnPrefix": "",
+                        "columnSearchPattern": ""
+                    },
+                    {
+                        "columnIndex": 13,
+                        "columnName": "Protocol REF",
+                        "columnHeader": "Protocol REF",
+                        "additionalColumns": [],
+                        "columnCategory": "Protocol",
+                        "columnStructure": "SINGLE_COLUMN",
+                        "columnPrefix": "",
+                        "columnSearchPattern": ""
+                    },
+                    {
+                        "columnIndex": 14,
+                        "columnName": "Sample Name",
+                        "columnHeader": "Sample Name",
+                        "additionalColumns": [],
+                        "columnCategory": "",
+                        "columnStructure": "SINGLE_COLUMN",
+                        "columnPrefix": "",
+                        "columnSearchPattern": ""
+                    },
+                    {
+                        "columnIndex": 15,
+                        "columnName": "Factor Value[Disease]",
+                        "columnHeader": "Factor Value[Disease]",
+                        "additionalColumns": [
+                            "Term Source REF",
+                            "Term Accession Number"
+                        ],
+                        "columnCategory": "Factor Value",
+                        "columnStructure": "ONTOLOGY_COLUMN",
+                        "columnPrefix": "",
+                        "columnSearchPattern": ""
+                    },
+                    {
+                        "columnIndex": 16,
+                        "columnName": "Term Source REF.4",
+                        "columnHeader": "Term Source REF",
+                        "additionalColumns": [],
+                        "columnCategory": "Linked Column",
+                        "columnStructure": "LINKED_COLUMN",
+                        "columnPrefix": "",
+                        "columnSearchPattern": ""
+                    },
+                    {
+                        "columnIndex": 17,
+                        "columnName": "Term Accession Number.4",
+                        "columnHeader": "Term Accession Number",
+                        "additionalColumns": [],
+                        "columnCategory": "Linked Column",
+                        "columnStructure": "LINKED_COLUMN",
+                        "columnPrefix": "",
+                        "columnSearchPattern": ""
+                    },
+                    {
+                        "columnIndex": 18,
+                        "columnName": "Factor Value[Dose]",
+                        "columnHeader": "Factor Value[Dose]",
+                        "additionalColumns": [
+                            "Unit",
+                            "Term Source REF",
+                            "Term Accession Number"
+                        ],
+                        "columnCategory": "Factor Value",
+                        "columnStructure": "SINGLE_COLUMN_AND_UNIT_ONTOLOGY",
+                        "columnPrefix": "",
+                        "columnSearchPattern": ""
+                    },
+                    {
+                        "columnIndex": 19,
+                        "columnName": "Unit",
+                        "columnHeader": "Unit",
+                        "additionalColumns": [],
+                        "columnCategory": "Linked Column",
+                        "columnStructure": "LINKED_COLUMN",
+                        "columnPrefix": "",
+                        "columnSearchPattern": ""
+                    },
+                    {
+                        "columnIndex": 20,
+                        "columnName": "Term Source REF.5",
+                        "columnHeader": "Term Source REF",
+                        "additionalColumns": [],
+                        "columnCategory": "Linked Column",
+                        "columnStructure": "LINKED_COLUMN",
+                        "columnPrefix": "",
+                        "columnSearchPattern": ""
+                    },
+                    {
+                        "columnIndex": 21,
+                        "columnName": "Term Accession Number.5",
+                        "columnHeader": "Term Accession Number",
+                        "additionalColumns": [],
+                        "columnCategory": "Linked Column",
+                        "columnStructure": "LINKED_COLUMN",
+                        "columnPrefix": "",
+                        "columnSearchPattern": ""
+                    }
+                ],
+                "data": {
+                    "Source Name": [
+                        "Source 1",
+                        "Source 2",
+                        "Source 3"
+                    ],
+                    "Characteristics[Organism]": [
+                        "Homo sapiens",
+                        "Homo sapiens",
+                        "Homo sapiens"
+                    ],
+                    "Term Source REF": [
+                        "NCBITAXON",
+                        "NCBITAXON",
+                        "NCBITAXON",
+                        "NCBITAXON"
+                    ],
+                    "Term Accession Number": [
+                        "NCBITaxon:9606",
+                        "NCBITaxon:9606",
+                        "NCBITaxon:9606"
+                    ],
+                    "Characteristics[Organism part]": [
+                        "blood",
+                        "blood",
+                        "blood"
+                    ],
+                    "Term Source REF.1": [
+                        "BTO",
+                        "BTO",
+                        "BTO"
+                    ],
+                    "Term Accession Number.1": [
+                        "BTO:0000089",
+                        "BTO:0000089",
+                        "BTO:0000089"
+                    ],
+                    "Characteristics[Variant]": [
+                        "",
+                        "",
+                        ""
+                    ],
+                    "Term Source REF.2": [
+                        "",
+                        "",
+                        "",
+                        ""
+                    ],
+                    "Term Accession Number.2": [
+                        "",
+                        "",
+                        ""
+                    ],
+                    "Characteristics[Sample type]": [
+                        "-",
+                        "",
+                        ""
+                    ],
+                    "Term Source REF.3": [
+                        "",
+                        "",
+                        ""
+                    ],
+                    "Term Accession Number.3": [
+                        "",
+                        "",
+                        ""
+                    ],
+                    "Protocol REF": [
+                        "Sample collection",
+                        "Sample collection",
+                        "Sample collection"
+                    ],
+                    "Sample Name": [
+                        "Sample 1",
+                        "Sample 2",
+                        "Sample 3"
+                    ],
+                    "Factor Value[Disease]": [
+                        "control",
+                        "acute bronchiolitis",
+                        "acute chest syndrome"
+                    ],
+                    "Term Source REF.4": [
+                        "EFO",
+                        "MONDO",
+                        "MONDO"
+                    ],
+                    "Term Accession Number.4": [
+                        "http://www.ebi.ac.uk/efo/EFO_0001461",
+                        "http://purl.obolibrary.org/obo/MONDO_0020680",
+                        "http://purl.obolibrary.org/obo/MONDO_0005632"
+                    ],
+                    "Factor Value[Dose]": [
+                        "",
+                        "1",
+                        "2"
+                    ],
+                    "Unit": [
+                        "",
+                        "Per Day",
+                        "Per Day"
+                    ],
+                    "Term Source REF.5": [
+                        "",
+                        "NCIT",
+                        "NCIT",
+                        ""
+                    ],
+                    "Term Accession Number.5": [
+                        "",
+                        "http://purl.obolibrary.org/obo/NCIT_C66968",
+                        "http://purl.obolibrary.org/obo/NCIT_C66968"
+                    ]
+                },
+                "rowIndices": [],
+                "columnIndices": [],
+                "filteredTotalRowCount": 0,
+                "rowOffset": 0,
+                "rowCount": 0,
+                "totalRowCount": 0,
+                "selectedColumnCount": 0,
+                "totalColumnCount": 0,
+                "filterOptions": [],
+                "sortOptions": []
+            },
+            "sampleNames": [],
+            "organisms": [],
+            "organismParts": [],
+            "organismAndOrganismPartPairs": [],
+            "variants": [],
+            "sampleTypes": []
+        }
+    },
+    "assays": {
+        "a_REQ2025111188888-01_MS_metabolite_profiling.txt": {
+            "filePath": "",
+            "sha256Hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "table": {
+                "columns": [],
+                "headers": [],
+                "data": {},
+                "rowIndices": [],
+                "columnIndices": [],
+                "filteredTotalRowCount": 0,
+                "rowOffset": 0,
+                "rowCount": 0,
+                "totalRowCount": 0,
+                "selectedColumnCount": 0,
+                "totalColumnCount": 0,
+                "filterOptions": [],
+                "sortOptions": []
+            },
+            "sampleNames": [],
+            "assayNames": [],
+            "referencedAssignmentFiles": [],
+            "referencedRawFiles": [],
+            "referencedDerivedFiles": [],
+            "referencedRawFileExtensions": [],
+            "referencedDerivedFileExtensions": [],
+            "assayTechnique": {
+                "name": "MS",
+                "mainTechnique": "MS",
+                "technique": "",
+                "subTechnique": ""
+            },
+            "numberOfAssayRows": 0
+        }
+    },
+    "parserMessages": {},
+    "referencedAssignmentFiles": [],
+    "referencedRawFiles": [],
+    "referencedDerivedFiles": [],
+    "foldersInHierarchy": [],
+    "metaboliteAssignments": {
+        "m_REQ2025111188888-01_MS_metabolite-profiling_v2_maf.tsv": {
+            "filePath": "",
+            "sha256Hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "table": {
+                "columns": [],
+                "headers": [],
+                "data": {},
+                "rowIndices": [],
+                "columnIndices": [],
+                "filteredTotalRowCount": 0,
+                "rowOffset": 0,
+                "rowCount": 0,
+                "totalRowCount": 0,
+                "selectedColumnCount": 0,
+                "totalColumnCount": 0,
+                "filterOptions": [],
+                "sortOptions": []
+            },
+            "identifiedMetaboliteNames": [],
+            "metaboliteAssignments": {},
+            "assayTechnique": {
+                "name": "MS",
+                "mainTechnique": "MS",
+                "technique": "",
+                "subTechnique": ""
+            },
+            "numberOfRows": 0,
+            "numberOfAssignedRows": 0,
+            "numberOfUnassignedRows": 0
+        }
+    },
+    "tags": [],
+    "studyDbMetadata": {
+        "dbId": -1,
+        "studyId": "",
+        "numericStudyId": -1,
+        "obfuscationCode": "",
+        "studySize": -1,
+        "submissionDate": "",
+        "releaseDate": "",
+        "updateDate": "",
+        "statusDate": "",
+        "studyTypes": [],
+        "status": "DORMANT",
+        "curationRequest": "MANUAL_CURATION",
+        "overrides": {},
+        "submitters": [],
+        "reservedAccession": "",
+        "reservedSubmissionId": "",
+        "revisionDate": "",
+        "revisionNumber": 0,
+        "revisionComment": "",
+        "firstPrivateDate": "",
+        "firstPublicDate": "",
+        "datasetLicense": "",
+        "datasetLicenseVersion": "",
+        "datasetLicenseUrl": "",
+        "sampleTemplate": "",
+        "studyCategory": 0,
+        "templateVersion": "",
+        "reservedMhdAccession": "",
+        "mhdModelVersion": ""
+    },
+    "studyFolderMetadata": {
+        "dataFolderSizeCalculated": false,
+        "metadataFolderSizeCalculated": false,
+        "folderSizeInBytes": -1,
+        "folderSizeInStr": "",
+        "folders": {},
+        "files": {
+            "s_REQ2025111188888.txt": {
+                "filePath": "s_REQ2025111188888.txt",
+                "baseName": "s_REQ2025111188888.txt",
+                "parentDirectory": "",
+                "extension": ".txt",
+                "sizeInBytes": 1000,
+                "isDirectory": false,
+                "isLink": false,
+                "modifiedAt": 0,
+                "createdAt": 0,
+                "mode": "",
+                "tags": []
+            },
+            "a_REQ2025111188888-01_MS_metabolite_profiling.txt": {
+                "filePath": "a_REQ2025111188888-01_MS_metabolite_profiling.txt",
+                "baseName": "a_REQ2025111188888-01_MS_metabolite_profiling.txt",
+                "parentDirectory": "",
+                "extension": ".txt",
+                "sizeInBytes": 1000,
+                "isDirectory": false,
+                "isLink": false,
+                "modifiedAt": 0,
+                "createdAt": 0,
+                "mode": "",
+                "tags": []
+            },
+            "m_REQ2025111188888-01_MS_metabolite-profiling_v2_maf.tsv": {
+                "filePath": "m_REQ2025111188888-01_MS_metabolite-profiling_v2_maf.tsv",
+                "baseName": "m_REQ2025111188888-01_MS_metabolite-profiling_v2_maf.tsv",
+                "parentDirectory": "",
+                "extension": ".tsv",
+                "sizeInBytes": 1000,
+                "isDirectory": false,
+                "isLink": false,
+                "modifiedAt": 0,
+                "createdAt": 0,
+                "mode": "",
+                "tags": []
+            },
+            "FILES/raw1.raw": {
+                "filePath": "FILES/raw1.raw",
+                "baseName": "raw1.raw",
+                "parentDirectory": "FILES",
+                "extension": ".raw",
+                "sizeInBytes": 1000,
+                "isDirectory": false,
+                "isLink": false,
+                "modifiedAt": 0,
+                "createdAt": 0,
+                "mode": "",
+                "tags": []
+            },
+            "FILES/raw2.raw": {
+                "filePath": "FILES/raw2.raw",
+                "baseName": "raw2.raw",
+                "parentDirectory": "FILES",
+                "extension": ".raw",
+                "sizeInBytes": 1000,
+                "isDirectory": false,
+                "isLink": false,
+                "modifiedAt": 0,
+                "createdAt": 0,
+                "mode": "",
+                "tags": []
+            },
+            "FILES/raw3raw": {
+                "filePath": "FILES/raw3.raw",
+                "baseName": "raw3.raw",
+                "parentDirectory": "FILES",
+                "extension": ".raw",
+                "sizeInBytes": 1000,
+                "isDirectory": false,
+                "isLink": false,
+                "modifiedAt": 0,
+                "createdAt": 0,
+                "mode": "",
+                "tags": []
+            }
+        }
+    },
+    "folderReaderMessages": [],
+    "dbReaderMessages": [],
+    "hasDbMetadata": true,
+    "hasSampleTableData": true,
+    "hasAssayTableData": true,
+    "hasAssignmentTableData": true,
+    "hasFolderMetadata": true,
+    "hasInvestigationData": true
+}

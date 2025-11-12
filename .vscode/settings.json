@@ -1,25 +1,32 @@
 {
-  "opa.roots": ["${workspaceFolder}/validation"],
+  "opa.roots": [
+    "${workspaceFolder}/validation"
+  ],
   "opa.bundleMode": false,
   "opa.strictMode": true,
   "opa.schema": "${workspaceFolder}/validation/schemas",
+  "opa.formatter": "opa-fmt",
   "files.exclude": {
     "**/__pycache__": true,
     ".*cache*": true,
     ".*coverage*": true,
-    
-},
-"cSpell.words": [
-  "endswith",
-  "metabolights",
-  "MTBLS",
-  "prioritised",
-  "rego",
-  "sprintf",
-  "startswith",
-  "wiff"
-],
-"python-envs.defaultEnvManager": "ms-python.python:poetry",
-"python-envs.defaultPackageManager": "ms-python.python:poetry",
-"python-envs.pythonProjects": [],
+  },
+  "cSpell.words": [
+    "endswith",
+    "metabolights",
+    "MTBLS",
+    "prioritised",
+    "rego",
+    "sprintf",
+    "startswith",
+    "wiff"
+  ],
+  "python-envs.defaultEnvManager": "ms-python.python:poetry",
+  "python-envs.defaultPackageManager": "ms-python.python:poetry",
+  "python-envs.pythonProjects": [],
+  "regoTest.policyTestDir": "validation",
+  "regoTest.testFilePatterns": [
+
+    "**/*_test/*_test.rego"
+  ],
 }

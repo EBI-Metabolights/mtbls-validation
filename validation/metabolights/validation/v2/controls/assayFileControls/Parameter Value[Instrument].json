@@ -8,9 +8,7 @@
                 "isaFileType": "assay",
                 "studyCreatedAtOrAfter": null,
                 "studyCreatedBefore": null,
-                "studyCategoryFilter": [
-                    "ms-mhd-enabled"
-                ],
+                "studyCategoryFilter": null,
                 "templateVersionFilter": null,
                 "isaFileTemplateNameFilter": null,
                 "linkedFieldAndValueFilter": [

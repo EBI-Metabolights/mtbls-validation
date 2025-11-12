@@ -5,11 +5,11 @@
             "description": "",
             "fieldName": "Unit",
             "selectionCriteria": {
-                "isaFileType": "assay",
+                "isaFileType": "sample",
                 "studyCreatedAtOrAfter": null,
                 "studyCreatedBefore": null,
                 "studyCategoryFilter": null,
-                "templateVersionFilter": ["2.0"],
+                "templateVersionFilter": null,
                 "isaFileTemplateNameFilter": null,
                 "linkedFieldAndValueFilter": null
             },
@@ -28,7 +28,7 @@
             ],
             "allowedPlaceholders": null,
             "terms": null,
-            "ontologies": ["UO", "EFO"],
+            "ontologies": null,
             "allowedParentOntologyTerms": {
                 "excludeByLabelPattern": [
                     "^*.unit$"
@@ -44,6 +44,11 @@
                         "term": "unit",
                         "termSourceRef": "EFO",
                         "termAccessionNumber": "http://purl.obolibrary.org/obo/UO_0000000"
+                    },
+                    {
+                        "term": "Qualifier",
+                        "termSourceRef": "NCIT",
+                        "termAccessionNumber": "http://purl.obolibrary.org/obo/NCIT_C41009"
                     }
                     
                 ]
@@ -64,7 +69,7 @@
                 "isaFileTemplateNameFilter": null,
                 "linkedFieldAndValueFilter": null
             },
-            "validationType": "child-ontology-term",
+            "validationType": "any-ontology-term",
             "defaultValue": null,
             "allowedMissingOntologyTerms": [],
             "allowedOtherSources": [
@@ -77,17 +82,13 @@
                 {
                     "termSourceRef": "MTBLS",
                     "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/placeholder"
-                },
-                {
-                    "termSourceRef": "",
-                    "termAccessionNumber": ""
                 }
             ],
             "terms": [],
             "ontologies": [
                 "UO",
                 "EFO",
-                "MTBLS"
+                "NCIT"
             ],
             "allowedParentOntologyTerms": {
                 "excludeByLabelPattern": [
@@ -104,6 +105,11 @@
                         "term": "unit",
                         "termSourceRef": "EFO",
                         "termAccessionNumber": "http://purl.obolibrary.org/obo/UO_0000000"
+                    },
+                    {
+                        "term": "Qualifier",
+                        "termSourceRef": "NCIT",
+                        "termAccessionNumber": "http://purl.obolibrary.org/obo/NCIT_C41009"
                     }
                     
                 ]

@@ -478,6 +478,8 @@ ontology_term_has_unexpected_value(
 	count(selected_controls) > 0
 	control := selected_controls[0]
 	control.validationType in selected_validation_types
+	count(control.unexpectedTerms) > 0
+	print(meta.custom.rule_id, header.columnHeader )
 
 	term_name = table.columns[header.columnIndex]
 	source_ref_column_index := (header.columnIndex + t) + 1
@@ -509,12 +511,70 @@ ontology_term_has_unexpected_value(
 		count(excludes) == 0
 		
 	}
-	# print(meta.custom.rule_id, header.columnHeader, violated_values)
-
-	# print(meta.custom.rule_id, term_name,  control.validationType, violated_values)
 	count(violated_values) > 0
 	unexpected_terms_str := concat(", ", control.unexpectedTerms)
-	file_column_header := sprintf("%v (of %v) - %v", [search_header, column_header])
+	file_column_header := sprintf("%v", [column_header])
+	desc := sprintf("%v: %v.", [control.ruleName, description_suffix])
+	file_column_index := header.columnIndex + 1
+	result := format_with_desc(meta, file_name, file_column_index, file_column_header, violated_values, desc, unexpected_terms_str)
+}
+
+
+single_column_has_unexpected_value(
+	meta, 
+	study_category,
+	template_version,
+	study_created_at,
+	template_name, 
+	isa_table_type, 
+	table, 
+	file_name, 
+	header_index, 
+	control_lists, 
+	control_list_key,
+	description_suffix
+) := result if {
+	header := table.headers[header_index]
+	column_header := header.columnHeader
+	control_list := control_lists[control_list_key]
+	selected_controls = [x |
+		some x in control_list
+		criteria = x.selectionCriteria
+		field_match.match_field_control_criteria(
+			criteria, 
+			template_version,
+			study_category, 
+			study_created_at,
+			isa_table_type,
+			template_name, null, null)
+	]
+	count(selected_controls) > 0
+	control := selected_controls[0]
+	count(control.unexpectedTerms) > 0
+	print(meta.custom.rule_id, header.columnHeader )
+
+	term_name = table.columns[header.columnIndex]	
+
+	violated_values = {sprintf("Row: %v, column: %v, value: %v", [j + 1, column_header, term]) |
+		some j
+		term := table.data[term_name][j]
+		count(table.data[column_name][j]) > 0
+		lower(term) in control.unexpectedTerms
+		
+		missing_excludes = {x.termAccessionNumber |
+			some x in control.allowedMissingOntologyTerms
+			term == x.term 
+		}
+		placeholder_excludes = {x.termAccessionNumber |
+			some x in control.allowedPlaceholders
+		}
+		excludes = missing_excludes | placeholder_excludes
+		count(excludes) == 0
+		
+	}
+	count(violated_values) > 0
+	unexpected_terms_str := concat(", ", control.unexpectedTerms)
+	file_column_header := sprintf("%v", [column_header])
 	desc := sprintf("%v: %v.", [control.ruleName, description_suffix])
 	file_column_index := header.columnIndex + 1
 	result := format_with_desc(meta, file_name, file_column_index, file_column_header, violated_values, desc, unexpected_terms_str)
@@ -661,7 +721,6 @@ term_value_has_invalid_pattern(
 	table, 
 	file_name, 
 	header_index, 
-	selected_validation_types, 
 	control_lists, 
 	control_list_key,
 	description_suffix
@@ -682,18 +741,25 @@ term_value_has_invalid_pattern(
 	]
 	count(selected_controls) > 0
 	control := selected_controls[0]
-	control.validationType in selected_validation_types
 	term_name = table.columns[header.columnIndex]
 	violated_values = {sprintf("Row: %v, column: %v, value: %v", [j + 1, column_header, term]) |
 		some j
 		count(table.data[column_name][j]) > 0
 		term := table.data[term_name][j]
-		missing_excludes = {x.term |
+		missing_excludes := {x.term |
 			some x in control.allowedMissingOntologyTerms
 			term == x.term 
 		}
 		count(missing_excludes) == 0
-		not regex.match(control.pattern, term)
+
+		pattern_violations := {constraint_item |
+			some constraint_item in control.constraints
+			constraint_item.type == "pattern"
+			constraint_item.constraint
+			not regex.match(constraint_item.constraint, term)
+		}
+		count(pattern_violations) > 0
+		
 	}
 	count(violated_values) > 0
 	
