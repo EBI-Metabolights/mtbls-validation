@@ -18,42 +18,43 @@
                     }
                 ]
             },
+            "enforcementLevel": "recommended",
             "validationType": "selected-ontology-term",
+            "constraints": [],
             "defaultValue": null,
             "allowedMissingOntologyTerms": [],
-            "allowedPlaceholders": null,
-            "allowedOtherSources": null,
-            "enforcementLevel": "recommended",
+            "allowedOtherSources": [],
+            "allowedPlaceholders": [],
             "terms": [
                 {
                     "term": "experimental sample",
-                    "termSourceRef": "CHMO",
-                    "termAccessionNumber": "http://purl.obolibrary.org/obo/CHMO_0002746"
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/CHMO_0002746",
+                    "termSourceRef": "CHMO"
                 },
                 {
                     "term": "pooled quality control sample",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_001090"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_001090",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "experimental blank",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000218"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000218",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "solvent blank",
-                    "termSourceRef": "MSIO",
-                    "termAccessionNumber": "http://purl.obolibrary.org/obo/MSIO_0000026"
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/MSIO_0000026",
+                    "termSourceRef": "MSIO"
                 },
                 {
                     "term": "sample preparation blank",
-                    "termSourceRef": "MSIO",
-                    "termAccessionNumber": "http://purl.obolibrary.org/obo/MSIO_0000025"
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/MSIO_0000025",
+                    "termSourceRef": "MSIO"
                 },
                 {
                     "term": "reference compound mix",
-                    "termSourceRef": "MSIO",
-                    "termAccessionNumber": "http://purl.obolibrary.org/obo/MSIO_0000024"
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/MSIO_0000024",
+                    "termSourceRef": "MSIO"
                 }
             ],
             "ontologies": [
@@ -61,7 +62,8 @@
                 "MSIO",
                 "MTBLS"
             ],
-            "allowedParentOntologyTerms": null
+            "allowedParentOntologyTerms": null,
+            "unexpectedTerms": []
         }
     ]
 }

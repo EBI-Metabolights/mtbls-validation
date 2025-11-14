@@ -13,10 +13,11 @@
                 "isaFileTemplateNameFilter": null,
                 "linkedFieldAndValueFilter": null
             },
+            "enforcementLevel": "recommended",
             "validationType": "any-ontology-term",
+            "constraints": [],
             "defaultValue": null,
             "allowedMissingOntologyTerms": [],
-            "enforcementLevel": "recommended",
             "allowedOtherSources": [
                 {
                     "sourceLabel": "wikidata",
@@ -29,8 +30,8 @@
             ],
             "allowedPlaceholders": [
                 {
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/placeholder"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/placeholder",
+                    "termSourceRef": "MTBLS"
                 }
             ],
             "terms": [],
@@ -62,7 +63,7 @@
                 "MP"
             ],
             "allowedParentOntologyTerms": null,
-            "unexpectedTerms": null
+            "unexpectedTerms": []
         },
         {
             "ruleName": "default-sample-file-rule-02",
@@ -77,7 +78,9 @@
                 "isaFileTemplateNameFilter": null,
                 "linkedFieldAndValueFilter": null
             },
+            "enforcementLevel": "required",
             "validationType": "any-ontology-term",
+            "constraints": [],
             "defaultValue": null,
             "allowedMissingOntologyTerms": [],
             "allowedOtherSources": [
@@ -96,8 +99,8 @@
             ],
             "allowedPlaceholders": [
                 {
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/placeholder"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/placeholder",
+                    "termSourceRef": "MTBLS"
                 }
             ],
             "terms": [],
@@ -129,7 +132,7 @@
                 "MP"
             ],
             "allowedParentOntologyTerms": null,
-            "unexpectedTerms": null
+            "unexpectedTerms": []
         }
     ]
 }

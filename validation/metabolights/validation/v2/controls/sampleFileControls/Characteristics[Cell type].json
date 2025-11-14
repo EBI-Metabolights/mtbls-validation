@@ -24,16 +24,17 @@
             },
             "enforcementLevel": "required",
             "validationType": "ontology-term-in-selected-ontologies",
+            "constraints": [],
             "defaultValue": {
                 "term": "Not Applicable",
-                "termSourceRef": "NCIT",
-                "termAccessionNumber": "http://purl.obolibrary.org/obo/NCIT_C48660"
+                "termAccessionNumber": "http://purl.obolibrary.org/obo/NCIT_C48660",
+                "termSourceRef": "NCIT"
             },
             "allowedMissingOntologyTerms": [
                 {
                     "term": "Not Applicable",
-                    "termSourceRef": "NCIT",
-                    "termAccessionNumber": "http://purl.obolibrary.org/obo/NCIT_C48660"
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/NCIT_C48660",
+                    "termSourceRef": "NCIT"
                 }
             ],
             "allowedOtherSources": [
@@ -46,13 +47,14 @@
                     "accessionPrefix": "http://uri.interlex.org/base/ilx_"
                 }
             ],
-            "allowedPlaceholders": null,
+            "allowedPlaceholders": [],
             "terms": [],
             "ontologies": [
                 "CL",
                 "CLO"
             ],
-            "allowedParentOntologyTerms": null
+            "allowedParentOntologyTerms": null,
+            "unexpectedTerms": []
         }
     ]
 }

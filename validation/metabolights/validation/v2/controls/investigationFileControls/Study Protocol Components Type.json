@@ -13,10 +13,11 @@
                 "isaFileTemplateNameFilter": null,
                 "linkedFieldAndValueFilter": null
             },
+            "enforcementLevel": "recommended",
             "validationType": "any-ontology-term",
+            "constraints": [],
             "defaultValue": null,
             "allowedMissingOntologyTerms": [],
-            "enforcementLevel": "recommended",
             "allowedOtherSources": [
                 {
                     "sourceLabel": "MTBLS",
@@ -33,12 +34,12 @@
             ],
             "allowedPlaceholders": [
                 {
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/placeholder"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/placeholder",
+                    "termSourceRef": "MTBLS"
                 },
                 {
-                    "termSourceRef": "",
-                    "termAccessionNumber": ""
+                    "termAccessionNumber": "",
+                    "termSourceRef": ""
                 }
             ],
             "terms": [],
@@ -53,7 +54,8 @@
                 "GO",
                 "MESH"
             ],
-            "allowedParentOntologyTerms": null
+            "allowedParentOntologyTerms": null,
+            "unexpectedTerms": []
         }
     ]
 }

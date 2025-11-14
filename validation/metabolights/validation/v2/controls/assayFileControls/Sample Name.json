@@ -13,6 +13,7 @@
                 "isaFileTemplateNameFilter": null,
                 "linkedFieldAndValueFilter": null
             },
+            "enforcementLevel": "required",
             "validationType": "check-only-constraints",
             "constraints": [
                 {
@@ -23,11 +24,12 @@
             ],
             "defaultValue": null,
             "allowedMissingOntologyTerms": [],
-            "allowedOtherSources": null,
-            "allowedPlaceholders": null,
+            "allowedOtherSources": [],
+            "allowedPlaceholders": [],
             "terms": [],
-            "ontologies": null,
-            "allowedParentOntologyTerms": null
+            "ontologies": [],
+            "allowedParentOntologyTerms": null,
+            "unexpectedTerms": []
         }
     ]
 }

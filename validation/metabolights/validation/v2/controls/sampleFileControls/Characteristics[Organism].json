@@ -20,6 +20,7 @@
             },
             "enforcementLevel": "required",
             "validationType": "ontology-term-in-selected-ontologies",
+            "constraints": [],
             "defaultValue": null,
             "allowedMissingOntologyTerms": [],
             "allowedOtherSources": [
@@ -32,47 +33,47 @@
                     "accessionPrefix": "http://uri.interlex.org/base/ilx_"
                 }
             ],
-            "allowedPlaceholders": null,
+            "allowedPlaceholders": [],
             "terms": [
                 {
                     "term": "Homo sapiens",
-                    "termSourceRef": "NCBITAXON",
-                    "termAccessionNumber": "http://purl.obolibrary.org/obo/NCBITaxon_9606"
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/NCBITaxon_9606",
+                    "termSourceRef": "NCBITAXON"
                 },
                 {
                     "term": "Mus musculus",
-                    "termSourceRef": "NCBITAXON",
-                    "termAccessionNumber": "http://purl.obolibrary.org/obo/NCBITaxon_10090"
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/NCBITaxon_10090",
+                    "termSourceRef": "NCBITAXON"
                 },
                 {
                     "term": "Rattus norvegicus",
-                    "termSourceRef": "NCBITAXON",
-                    "termAccessionNumber": "http://purl.obolibrary.org/obo/NCBITaxon_10116"
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/NCBITaxon_10116",
+                    "termSourceRef": "NCBITAXON"
                 },
                 {
                     "term": "Arabidopsis thaliana",
-                    "termSourceRef": "NCBITAXON",
-                    "termAccessionNumber": "http://purl.obolibrary.org/obo/NCBITaxon_3702"
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/NCBITaxon_3702",
+                    "termSourceRef": "NCBITAXON"
                 },
                 {
                     "term": "Vitis vinifera",
-                    "termSourceRef": "NCBITAXON",
-                    "termAccessionNumber": "http://purl.obolibrary.org/obo/NCBITaxon_29760"
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/NCBITaxon_29760",
+                    "termSourceRef": "NCBITAXON"
                 },
                 {
                     "term": "Escherichia coli",
-                    "termSourceRef": "NCBITAXON",
-                    "termAccessionNumber": "http://purl.obolibrary.org/obo/NCBITaxon_562"
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/NCBITaxon_562",
+                    "termSourceRef": "NCBITAXON"
                 },
                 {
                     "term": "Trypanosoma brucei",
-                    "termSourceRef": "NCBITAXON",
-                    "termAccessionNumber": "http://purl.obolibrary.org/obo/NCBITaxon_5691"
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/NCBITaxon_5691",
+                    "termSourceRef": "NCBITAXON"
                 },
                 {
                     "term": "sea water",
-                    "termSourceRef": "ENVO",
-                    "termAccessionNumber": "http://purl.obolibrary.org/obo/ENVO_00002149"
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/ENVO_00002149",
+                    "termSourceRef": "ENVO"
                 }
             ],
             "ontologies": [
@@ -133,7 +134,9 @@
                     }
                 ]
             },
+            "enforcementLevel": "required",
             "validationType": "any-ontology-term",
+            "constraints": [],
             "defaultValue": null,
             "allowedMissingOntologyTerms": [],
             "allowedOtherSources": [
@@ -144,60 +147,60 @@
             ],
             "allowedPlaceholders": [
                 {
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/placeholder"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/placeholder",
+                    "termSourceRef": "MTBLS"
                 }
             ],
             "terms": [
                 {
                     "term": "Homo sapiens",
-                    "termSourceRef": "NCBITAXON",
-                    "termAccessionNumber": "http://purl.obolibrary.org/obo/NCBITaxon_9606"
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/NCBITaxon_9606",
+                    "termSourceRef": "NCBITAXON"
                 },
                 {
                     "term": "Mus musculus",
-                    "termSourceRef": "NCBITAXON",
-                    "termAccessionNumber": "http://purl.obolibrary.org/obo/NCBITaxon_10090"
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/NCBITaxon_10090",
+                    "termSourceRef": "NCBITAXON"
                 },
                 {
                     "term": "Rattus norvegicus",
-                    "termSourceRef": "NCBITAXON",
-                    "termAccessionNumber": "http://purl.obolibrary.org/obo/NCBITaxon_10116"
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/NCBITaxon_10116",
+                    "termSourceRef": "NCBITAXON"
                 },
                 {
                     "term": "Arabidopsis thaliana",
-                    "termSourceRef": "NCBITAXON",
-                    "termAccessionNumber": "http://purl.obolibrary.org/obo/NCBITaxon_3702"
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/NCBITaxon_3702",
+                    "termSourceRef": "NCBITAXON"
                 },
                 {
                     "term": "Vitis vinifera",
-                    "termSourceRef": "NCBITAXON",
-                    "termAccessionNumber": "http://purl.obolibrary.org/obo/NCBITaxon_29760"
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/NCBITaxon_29760",
+                    "termSourceRef": "NCBITAXON"
                 },
                 {
                     "term": "Escherichia coli",
-                    "termSourceRef": "NCBITAXON",
-                    "termAccessionNumber": "http://purl.obolibrary.org/obo/NCBITaxon_562"
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/NCBITaxon_562",
+                    "termSourceRef": "NCBITAXON"
                 },
                 {
                     "term": "Trypanosoma brucei",
-                    "termSourceRef": "NCBITAXON",
-                    "termAccessionNumber": "http://purl.obolibrary.org/obo/NCBITaxon_5691"
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/NCBITaxon_5691",
+                    "termSourceRef": "NCBITAXON"
                 },
                 {
                     "term": "sea water",
-                    "termSourceRef": "ENVO",
-                    "termAccessionNumber": "http://purl.obolibrary.org/obo/ENVO_00002149"
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/ENVO_00002149",
+                    "termSourceRef": "ENVO"
                 },
                 {
                     "term": "blank",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002304"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002304",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "reference compound",
-                    "termSourceRef": "MSIO",
-                    "termAccessionNumber": "http://purl.obolibrary.org/obo/MSIO_0000023"
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/MSIO_0000023",
+                    "termSourceRef": "MSIO"
                 }
             ],
             "ontologies": [

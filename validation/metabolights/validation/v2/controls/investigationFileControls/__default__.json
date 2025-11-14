@@ -13,10 +13,11 @@
                 "isaFileTemplateNameFilter": null,
                 "linkedFieldAndValueFilter": null
             },
+            "enforcementLevel": "optional",
             "validationType": "any-ontology-term",
+            "constraints": [],
             "defaultValue": null,
             "allowedMissingOntologyTerms": [],
-            "enforcementLevel": "optional",
             "allowedOtherSources": [
                 {
                     "sourceLabel": "MTBLS",
@@ -33,8 +34,8 @@
             ],
             "allowedPlaceholders": [
                 {
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/placeholder"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/placeholder",
+                    "termSourceRef": "MTBLS"
                 }
             ],
             "terms": [],

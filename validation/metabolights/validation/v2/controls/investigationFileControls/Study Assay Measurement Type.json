@@ -15,12 +15,13 @@
                 "isaFileTemplateNameFilter": null,
                 "linkedFieldAndValueFilter": null
             },
-            "validationType": "selected-ontology-term",
-            "defaultValue": null,
             "enforcementLevel": "required",
+            "validationType": "selected-ontology-term",
+            "constraints": [],
+            "defaultValue": null,
             "allowedMissingOntologyTerms": [],
-            "allowedOtherSources": null,
-            "allowedPlaceholders": null,
+            "allowedOtherSources": [],
+            "allowedPlaceholders": [],
             "terms": [
                 {
                     "term": "targeted metabolite profiling",
@@ -33,8 +34,9 @@
                     "termSourceRef": "MSIO"
                 }
             ],
-            "ontologies": null,
-            "allowedParentOntologyTerms": null
+            "ontologies": [],
+            "allowedParentOntologyTerms": null,
+            "unexpectedTerms": []
         },
         {
             "ruleName": "Study Assay Measurement Type-03",
@@ -49,12 +51,13 @@
                 "isaFileTemplateNameFilter": null,
                 "linkedFieldAndValueFilter": null
             },
+            "enforcementLevel": "required",
             "validationType": "selected-ontology-term",
+            "constraints": [],
             "defaultValue": null,
             "allowedMissingOntologyTerms": [],
-            "allowedOtherSources": null,
-            "allowedPlaceholders": null,
-            "enforcementLevel": "required",
+            "allowedOtherSources": [],
+            "allowedPlaceholders": [],
             "terms": [
                 {
                     "term": "metabolite profiling assay",
@@ -72,8 +75,12 @@
                     "termSourceRef": "MSIO"
                 }
             ],
-            "ontologies": ["MSIO", "OBI"],
-            "allowedParentOntologyTerms": null
+            "ontologies": [
+                "MSIO",
+                "OBI"
+            ],
+            "allowedParentOntologyTerms": null,
+            "unexpectedTerms": []
         }
     ]
 }

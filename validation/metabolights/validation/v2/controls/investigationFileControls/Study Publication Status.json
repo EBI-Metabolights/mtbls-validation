@@ -13,12 +13,13 @@
                 "isaFileTemplateNameFilter": null,
                 "linkedFieldAndValueFilter": null
             },
+            "enforcementLevel": "required",
             "validationType": "selected-ontology-term",
+            "constraints": [],
             "defaultValue": null,
             "allowedMissingOntologyTerms": [],
-            "allowedOtherSources": null,
-            "allowedPlaceholders": null,
-            "enforcementLevel": "required",
+            "allowedOtherSources": [],
+            "allowedPlaceholders": [],
             "terms": [
                 {
                     "term": "published",
@@ -46,8 +47,9 @@
                     "termSourceRef": "EDAM"
                 }
             ],
-            "ontologies": null,
-            "allowedParentOntologyTerms": null
+            "ontologies": [],
+            "allowedParentOntologyTerms": null,
+            "unexpectedTerms": []
         },
         {
             "ruleName": "Study Publication Status-02",
@@ -62,18 +64,20 @@
                 "isaFileTemplateNameFilter": null,
                 "linkedFieldAndValueFilter": null
             },
+            "enforcementLevel": "required",
             "validationType": "ontology-term-in-selected-ontologies",
+            "constraints": [],
             "defaultValue": null,
             "allowedMissingOntologyTerms": [],
-            "allowedOtherSources": null,
+            "allowedOtherSources": [],
             "allowedPlaceholders": [
                 {
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/placeholder"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/placeholder",
+                    "termSourceRef": "MTBLS"
                 },
                 {
-                    "termSourceRef": "",
-                    "termAccessionNumber": ""
+                    "termAccessionNumber": "",
+                    "termSourceRef": ""
                 }
             ],
             "terms": [
@@ -103,8 +107,12 @@
                     "termSourceRef": "EDAM"
                 }
             ],
-            "ontologies": ["EFO", "EDAM"],
-            "allowedParentOntologyTerms": null
+            "ontologies": [
+                "EFO",
+                "EDAM"
+            ],
+            "allowedParentOntologyTerms": null,
+            "unexpectedTerms": []
         }
     ]
 }

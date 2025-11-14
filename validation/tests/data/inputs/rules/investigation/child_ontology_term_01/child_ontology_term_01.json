@@ -37,7 +37,7 @@
         }
     ],
     "terms": [],
-    "ontologies": null,
+    "ontologies": [],
     "allowedParentOntologyTerms": {
                 "excludeByLabelPattern": [
                     "^.*unit$", "^.*Unit of.*$"

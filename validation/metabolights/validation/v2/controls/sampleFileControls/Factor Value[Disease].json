@@ -20,15 +20,15 @@
             },
             "enforcementLevel": "required",
             "validationType": "ontology-term-in-selected-ontologies",
+            "constraints": [],
             "defaultValue": null,
             "allowedMissingOntologyTerms": [
                 {
                     "term": "Not Applicable",
-                    "termSourceRef": "NCIT",
-                    "termAccessionNumber": "http://purl.obolibrary.org/obo/NCIT_C48660"
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/NCIT_C48660",
+                    "termSourceRef": "NCIT"
                 }
             ],
-            
             "allowedOtherSources": [
                 {
                     "sourceLabel": "wikidata",
@@ -39,14 +39,15 @@
                     "accessionPrefix": "http://uri.interlex.org/base/ilx_"
                 }
             ],
-            "allowedPlaceholders": null,
+            "allowedPlaceholders": [],
             "terms": [],
             "ontologies": [
                 "MONDO",
                 "MP",
                 "SNOMED"
             ],
-            "allowedParentOntologyTerms": null
+            "allowedParentOntologyTerms": null,
+            "unexpectedTerms": []
         }
     ]
 }

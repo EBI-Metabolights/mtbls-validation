@@ -15,12 +15,13 @@
                 "isaFileTemplateNameFilter": null,
                 "linkedFieldAndValueFilter": null
             },
+            "enforcementLevel": "required",
             "validationType": "selected-ontology-term",
+            "constraints": [],
             "defaultValue": null,
             "allowedMissingOntologyTerms": [],
-            "allowedOtherSources": null,
-            "allowedPlaceholders": null,
-            "enforcementLevel": "required",
+            "allowedOtherSources": [],
+            "allowedPlaceholders": [],
             "terms": [
                 {
                     "term": "mass spectrometry assay",
@@ -28,8 +29,9 @@
                     "termSourceRef": "OBI"
                 }
             ],
-            "ontologies": null,
-            "allowedParentOntologyTerms": null
+            "ontologies": [],
+            "allowedParentOntologyTerms": null,
+            "unexpectedTerms": []
         },
         {
             "ruleName": "Study Assay Technology Type-02",
@@ -53,12 +55,13 @@
                 ],
                 "linkedFieldAndValueFilter": null
             },
+            "enforcementLevel": "required",
             "validationType": "selected-ontology-term",
+            "constraints": [],
             "defaultValue": null,
             "allowedMissingOntologyTerms": [],
-            "allowedOtherSources": null,
-            "allowedPlaceholders": null,
-            "enforcementLevel": "required",
+            "allowedOtherSources": [],
+            "allowedPlaceholders": [],
             "terms": [
                 {
                     "term": "mass spectrometry assay",
@@ -66,8 +69,9 @@
                     "termSourceRef": "OBI"
                 }
             ],
-            "ontologies": null,
-            "allowedParentOntologyTerms": null
+            "ontologies": [],
+            "allowedParentOntologyTerms": null,
+            "unexpectedTerms": []
         },
         {
             "ruleName": "Study Assay Technology Type-03",
@@ -84,12 +88,13 @@
                 ],
                 "linkedFieldAndValueFilter": null
             },
+            "enforcementLevel": "required",
             "validationType": "selected-ontology-term",
+            "constraints": [],
             "defaultValue": null,
             "allowedMissingOntologyTerms": [],
-            "allowedOtherSources": null,
-            "allowedPlaceholders": null,
-            "enforcementLevel": "required",
+            "allowedOtherSources": [],
+            "allowedPlaceholders": [],
             "terms": [
                 {
                     "term": "NMR spectroscopy assay",
@@ -97,8 +102,9 @@
                     "termSourceRef": "OBI"
                 }
             ],
-            "ontologies": null,
-            "allowedParentOntologyTerms": null
+            "ontologies": [],
+            "allowedParentOntologyTerms": null,
+            "unexpectedTerms": []
         },
         {
             "ruleName": "Study Assay Technology Type-04",
@@ -116,11 +122,13 @@
                 ],
                 "linkedFieldAndValueFilter": null
             },
+            "enforcementLevel": "required",
             "validationType": "selected-ontology-term",
+            "constraints": [],
             "defaultValue": null,
             "allowedMissingOntologyTerms": [],
-            "allowedOtherSources": null,
-            "allowedPlaceholders": null,
+            "allowedOtherSources": [],
+            "allowedPlaceholders": [],
             "terms": [
                 {
                     "term": "imaging assay",
@@ -128,8 +136,9 @@
                     "termSourceRef": "OBI"
                 }
             ],
-            "ontologies": null,
-            "allowedParentOntologyTerms": null
+            "ontologies": [],
+            "allowedParentOntologyTerms": null,
+            "unexpectedTerms": []
         },
         {
             "ruleName": "Study Assay Technology Type-05",
@@ -147,11 +156,13 @@
                 ],
                 "linkedFieldAndValueFilter": null
             },
+            "enforcementLevel": "required",
             "validationType": "selected-ontology-term",
+            "constraints": [],
             "defaultValue": null,
             "allowedMissingOntologyTerms": [],
-            "allowedOtherSources": null,
-            "allowedPlaceholders": null,
+            "allowedOtherSources": [],
+            "allowedPlaceholders": [],
             "terms": [
                 {
                     "term": "imaging assay",
@@ -169,8 +180,9 @@
                     "termSourceRef": "OBI"
                 }
             ],
-            "ontologies": null,
-            "allowedParentOntologyTerms": null
+            "ontologies": [],
+            "allowedParentOntologyTerms": null,
+            "unexpectedTerms": []
         },
         {
             "ruleName": "Study Assay Technology Type-06",
@@ -188,11 +200,13 @@
                 ],
                 "linkedFieldAndValueFilter": null
             },
+            "enforcementLevel": "required",
             "validationType": "selected-ontology-term",
+            "constraints": [],
             "defaultValue": null,
             "allowedMissingOntologyTerms": [],
-            "allowedOtherSources": null,
-            "allowedPlaceholders": null,
+            "allowedOtherSources": [],
+            "allowedPlaceholders": [],
             "terms": [
                 {
                     "term": "other",
@@ -200,8 +214,9 @@
                     "termSourceRef": "NCIT"
                 }
             ],
-            "ontologies": null,
-            "allowedParentOntologyTerms": null
+            "ontologies": [],
+            "allowedParentOntologyTerms": null,
+            "unexpectedTerms": []
         },
         {
             "ruleName": "Study Assay Technology Type-07",
@@ -219,11 +234,13 @@
                 ],
                 "linkedFieldAndValueFilter": null
             },
+            "enforcementLevel": "required",
             "validationType": "selected-ontology-term",
+            "constraints": [],
             "defaultValue": null,
             "allowedMissingOntologyTerms": [],
-            "allowedOtherSources": null,
-            "allowedPlaceholders": null,
+            "allowedOtherSources": [],
+            "allowedPlaceholders": [],
             "terms": [
                 {
                     "term": "other",
@@ -236,8 +253,9 @@
                     "termSourceRef": "OBI"
                 }
             ],
-            "ontologies": null,
-            "allowedParentOntologyTerms": null
+            "ontologies": [],
+            "allowedParentOntologyTerms": null,
+            "unexpectedTerms": []
         }
     ]
 }

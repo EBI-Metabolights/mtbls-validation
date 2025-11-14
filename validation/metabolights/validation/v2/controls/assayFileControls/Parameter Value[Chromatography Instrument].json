@@ -20,7 +20,9 @@
                     }
                 ]
             },
+            "enforcementLevel": "required",
             "validationType": "any-ontology-term",
+            "constraints": [],
             "defaultValue": null,
             "allowedMissingOntologyTerms": [],
             "allowedOtherSources": [
@@ -39,411 +41,412 @@
             ],
             "allowedPlaceholders": [
                 {
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/placeholder"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/placeholder",
+                    "termSourceRef": "MTBLS"
                 },
                 {
-                    "termSourceRef": "",
-                    "termAccessionNumber": ""
+                    "termAccessionNumber": "",
+                    "termSourceRef": ""
                 }
             ],
             "terms": [
                 {
                     "term": "Agilent 1100 Series HPLC System",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000868"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000868",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Agilent 1100 Series LC",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000893"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000893",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Agilent 1200 Series HPLC System",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000891"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000891",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Agilent 1200 Series HPLC-Chip",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002085"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002085",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Agilent 1200 Series Rapid Resolution LC System",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000857"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000857",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Agilent 1220 Infinity LC",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000911"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000911",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Agilent 1260 Infinity HPLC",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000866"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000866",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Agilent 1260 Infinity II LC System",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000904"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000904",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Agilent 1260 Infinity LC",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000880"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000880",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Agilent 1290 Infinity 2D-LC",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002086"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002086",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Agilent 1290 Infinity HPLC",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000878"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000878",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Agilent 1290 Infinity II 2D-LC",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002089"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002089",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Agilent 1290 Infinity II UHPLC",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000864"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000864",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Agilent 1290 Infinity LC",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000889"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000889",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Agilent 1290 Infinity UHPLC",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000871"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000871",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Agilent 6546 LC/Q-TOF",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002300"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002300",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Aglient 1290 Infinity II LC",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000894"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000894",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Beckman Coulter System Gold HPLC 127 pump",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000886"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000886",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Bruker Elute LC system",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002111"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002111",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Bruker Elute UHPLC system",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002112"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002112",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Eksigent ekspert nanoLC 400",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000905"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000905",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Eksigent ekspert nanoLC 425",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002146"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002146",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Eksigent ekspert ultraLC 110",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000872"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000872",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Eksigent NanoLC-Ultra 2D system",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000881"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000881",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Eksigent UPLC system",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000896"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000896",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Flux Rheos Allegro UHPLC pump",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000869"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000869",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Hitachi L-7100 HPLC pump",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000916"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000916",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Hitachi LaChrome Ultra",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000902"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000902",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "JASCO X-LC 3085PU HPLC pump",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000909"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000909",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Michrom BioResources Paradigm MS4 HPLC system",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000882"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000882",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "SCIEX ExionLC AC",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000897"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000897",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "SCIEX ExionLC AD",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002206"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002206",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Shimadzu LC-10AD pump and SCL-10A controller",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000913"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000913",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Shimadzu LC-2040C 3D Nexera-i",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002212"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002212",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Shimadzu LC-30A Nexera UHPLC system",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000862"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000862",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Shimadzu LC-30AD pump and CBM-20A controller",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000867"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000867",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Shimadzu Nexera UHPLC system",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000887"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000887",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Shimadzu Nexera UHPLC system (CBM-30A controller)",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002218"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002218",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Shimadzu Nexera UHPLC system (LC-30AD pump and CBM-20A controller)",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000898"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000898",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Shimadzu Nexera UHPLC system (LC-30AD pump and SPD-M20A detector)",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002219"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002219",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Shimadzu Nexera X2 UHPLC system (binary pump, DGU-20A degasser, and CBM-20A controller)",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000895"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000895",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Shimadzu Prominence HPLC system",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000901"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000901",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Shimadzu Prominence LC-20AD system",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000910"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000910",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Shimadzu Prominence UFLC system",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000859"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000859",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Shimadzu Prominence UFLCXR system",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000874"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000874",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Shimadzu SIL20-A LC system",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000912"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000912",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Thermo Scientific Accela 1250 Pump",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000906"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000906",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Thermo Scientific Accela 600 Pump",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000900"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000900",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Thermo Scientific Accela II HPLC system",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000873"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000873",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Thermo Scientific Accela UHPLC System",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000861"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000861",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Thermo Scientific Dionex Integrion HPIC System",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002237"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002237",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Thermo Scientific Dionex Integrion RFIC System",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002238"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002238",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Thermo Scientific Dionex Ultimate 3000 HPLC system",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000883"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000883",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Thermo Scientific Dionex UltiMate 3000 RSLC System",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000907"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000907",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Thermo Scientific Dionex UltiMate 3000 RSLCnano System",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000860"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000860",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Thermo Scientific Dionex UltiMate 3000 System",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000885"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000885",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Thermo Scientific Dionex Ultimate 3000 UHPLC system",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000914"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000914",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Thermo Scientific Dionex UltiMate 3000 XRS System",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000884"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000884",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Thermo Scientific Dionex UltiMate HPLC system",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000899"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000899",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Thermo Scientific Dionex UltiMate LC system",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000888"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000888",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Thermo Scientific EASY-nLC 1000 System (UPLC)",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000879"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000879",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Thermo Scientific EASY-nLC 1200 System (UPLC)",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000908"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000908",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Thermo Scientific EASY-nLC System (UPLC)",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000875"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000875",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Thermo Scientific Surveyor HPLC system",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000863"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000863",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Thermo Scientific Surveyor MS Pump Plus",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000892"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000892",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Thermo Scientific UltiMate 3000 Standard HPLC system",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002249"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002249",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Thermo Scientific Vanquish Flex UHPLC System",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002252"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002252",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Thermo Scientific Vanquish UHPLC System",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000858"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000858",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Waters 1525 Micro Binary HPLC Pump",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000865"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000865",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Waters ACQUITY UPC2 System",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002260"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002260",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Waters ACQUITY UPLC H-Class System",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000876"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000876",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Waters ACQUITY UPLC I-Class PLUS System",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002261"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002261",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Waters ACQUITY UPLC I-Class System",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000917"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000917",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Waters ACQUITY UPLC M-Class System",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000903"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000903",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Waters ACQUITY UPLC system",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000877"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000877",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Waters ACQUITY UPLC system and PDA detector",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000870"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000870",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Waters Alliance 2695 Separations Module (modified)",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000915"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000915",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Waters nanoACQUITY UPLC system",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000890"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000890",
+                    "termSourceRef": "MTBLS"
                 }
             ],
             "ontologies": [
                 "MS",
                 "MTBLS"
             ],
-            "allowedParentOntologyTerms": null
+            "allowedParentOntologyTerms": null,
+            "unexpectedTerms": []
         },
         {
             "ruleName": "Parameter Value[Chromatography Instrument]-02",
@@ -465,7 +468,9 @@
                     }
                 ]
             },
+            "enforcementLevel": "required",
             "validationType": "any-ontology-term",
+            "constraints": [],
             "defaultValue": null,
             "allowedMissingOntologyTerms": [],
             "allowedOtherSources": [
@@ -484,356 +489,357 @@
             ],
             "allowedPlaceholders": [
                 {
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/placeholder"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/placeholder",
+                    "termSourceRef": "MTBLS"
                 },
                 {
-                    "termSourceRef": "",
-                    "termAccessionNumber": ""
+                    "termAccessionNumber": "",
+                    "termSourceRef": ""
                 }
             ],
             "terms": [
                 {
                     "term": "Agilent 5975T LTM GC",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002092"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002092",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Agilent 6890 GC",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000934"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000934",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Agilent 6890N GC",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000918"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000918",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Agilent 7683 Series Automatic Liquid Sampler",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_001052"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_001052",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Agilent 7683B Automatic Liquid Sampler",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_001041"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_001041",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Agilent 7693 Automatic Liquid Sampler",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_001048"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_001048",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Agilent 7693A Automatic Liquid Sampler",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_001035"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_001035",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Agilent 7890 GC",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000923"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000923",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Agilent 7890A GC",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000922"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000922",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Agilent 7890B GC",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000933"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000933",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Agilent 8860 GC",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000935"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000935",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Agilent 8890 GC",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002099"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002099",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Agilent CTC Analytics Combi PAL autosampler",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_001047"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_001047",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "CTC Analytics HTS PAL Autosampler",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_001045"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_001045",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "CTC Analytics L-PAL3 Autosampler",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_001049"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_001049",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "CTC Analytics PAL COMBI autosampler",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_001044"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_001044",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "CTC Analytics PAL COMBI-xt autosampler",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_001050"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_001050",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "CTC Analytics PAL LHX-xt autosampler",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_001042"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_001042",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "CTC Analytics PAL RSI 85 Autosampler",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_001034"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_001034",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "CTC Analytics PAL RTC Autosampler",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002130"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002130",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Gas Chromatography Autoinjector Model",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000343"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000343",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Gas Chromatography Autosampler Model",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000345"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000345",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Gas Chromatography Cryogenic Trap",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000346"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000346",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Gas Chromatography Instrument Model",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000344"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000344",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Gas Chromatography Thermal Desorption unit",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000342"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000342",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "GERSTEL CTS 2",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_001064"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_001064",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "GERSTEL MultiPurpose Sampler (MPS 2)",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_001054"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_001054",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "GERSTEL MultiPurpose Sampler (MPS 2XL)",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_001046"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_001046",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "GERSTEL MultiPurpose Sampler (MPS)",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_001039"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_001039",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "GERSTEL MultiPurpose Sampler (MPS) Dual Head",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_001038"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_001038",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "GERSTEL TDS",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_001065"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_001065",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "GERSTEL TDS A Autosampler (TDS-A)",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_001031"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_001031",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Hewlett Packard 5890 Series GC",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002153"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002153",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "JASCO PAL GC-xt autosampler",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_001053"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_001053",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "LECO Pegasus 4D GCxGC-TOFMS",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002301"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002301",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "LECO Pegasus BT 4D GCxGC-TOFMS",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002302"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002302",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Markes International TD-100",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_001067"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_001067",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Markes International UltrA 2",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_001037"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_001037",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Markes International UNITY 2",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_001066"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_001066",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "PerkinElmer AutoSystem XL GC",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000931"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000931",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Shimadzu AOC-20i autoinjector",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_001063"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_001063",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Shimadzu AOC-20i/s autoinjector/autosampler",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_001036"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_001036",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Shimadzu AOC-20s autosampler",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_001051"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_001051",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Shimadzu AOC-5000 CTC PAL GC autosampler",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002210"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002210",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Shimadzu GC-17A",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000932"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000932",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Shimadzu GC-2010",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000927"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000927",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Shimadzu GC-2010 Plus",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002211"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002211",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Shimadzu GCMS-QP2010 Ultra",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000926"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000926",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Shimadzu GCMS-QP2020",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000920"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000920",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Shimadzu GCMS-TQ8050 NX",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002303"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002303",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Thermo Electron AS 2000 autosampler",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002232"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002232",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Thermo Electron AS2000 autosampler",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_001030"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_001030",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Thermo Electron FOCUS GC",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000929"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000929",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Thermo Electron TRACE GC",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000919"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000919",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Thermo Electron TRACE GC Ultra",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000921"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000921",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Thermo Electron TriPlus Autosampler",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002233"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002233",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Thermo Scientific AS 1310 Autosampler",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_001040"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_001040",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Thermo Scientific AS 3000 autosampler",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002234"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002234",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Thermo Scientific AS 3000 II autosampler",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002235"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002235",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Thermo Scientific AS3000 autosampler",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_001033"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_001033",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Thermo Scientific TRACE 1300 GC",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002244"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002244",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Thermo Scientific TRACE 1310 GC",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000930"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000930",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Thermo Scientific TRACE GC Ultra",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000924"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000924",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Thermo Scientific TriPlus RSH Autosampler",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_001043"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_001043",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "ThermoQuest AS 2000 Liquid Autosampler",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_001032"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_001032",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "ThermoQuest GC 8000",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000928"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000928",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Varian 4000 GC",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000925"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000925",
+                    "termSourceRef": "MTBLS"
                 }
             ],
             "ontologies": [
                 "MS",
                 "MTBLS"
             ],
-            "allowedParentOntologyTerms": null
+            "allowedParentOntologyTerms": null,
+            "unexpectedTerms": []
         }
     ]
 }

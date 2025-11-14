@@ -2,6 +2,7 @@
 from scripts.check_unit_tests import find_diff_between_rules_and_tests
 from scripts.create_template_documentation import create_file_structure_documentation, create_recommended_assay_control_lists, create_recommended_control_lists
 from scripts.create_validations_summary import create_summary_files
+from scripts.format_controls import update_controls
 from sync_rules import get_implemented_rules, check_integrity, update_files
 from scripts.utils import get_rules
 
@@ -23,7 +24,7 @@ if __name__ == "__main__":
     update_files(rules)
     
     find_diff_between_rules_and_tests(force=True)
-    
+    update_controls()
     rules = get_rules()
     create_summary_files(rules)
 

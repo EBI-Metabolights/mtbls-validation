@@ -10,7 +10,9 @@
                 "studyCreatedBefore": null,
                 "studyCategoryFilter": null,
                 "templateVersionFilter": null,
-                "isaFileTemplateNameFilter": ["NMR"],
+                "isaFileTemplateNameFilter": [
+                    "NMR"
+                ],
                 "linkedFieldAndValueFilter": [
                     {
                         "name": "Protocol REF",
@@ -18,9 +20,10 @@
                     }
                 ]
             },
-            "validationType": "any-ontology-term",
-            "defaultValue": null,
             "enforcementLevel": "recommended",
+            "validationType": "any-ontology-term",
+            "constraints": [],
+            "defaultValue": null,
             "allowedMissingOntologyTerms": [],
             "allowedOtherSources": [
                 {
@@ -38,315 +41,316 @@
             ],
             "allowedPlaceholders": [
                 {
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/placeholder"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/placeholder",
+                    "termSourceRef": "MTBLS"
                 },
                 {
-                    "termSourceRef": "",
-                    "termAccessionNumber": ""
+                    "termAccessionNumber": "",
+                    "termSourceRef": ""
                 }
             ],
             "terms": [
                 {
                     "term": "1D 13C DEPTQ dept polarization transfer with decoupling during acquisition using shaped pulse for 180 deg pulse on f1 - channel (deptqgpsp)",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002004"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002004",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "1D 13C with power-gated decoupling (zgpg)",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000516"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000516",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "1D 13C with power-gated decoupling using 30 deg flip angle (zgpg30)",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002005"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002005",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "1D 1H 30 deg excitation with f2 presaturation without spoiling gradient (zg30_f2pr)",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000510"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000510",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "1D 1H perfect echo with water suppression using excitation sculpting with perfect echo (zgespe)",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002006"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002006",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "1D 1H spectrum (zg)",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000508"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000508",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "1D 1H spectrum (zg30)",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000509"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000509",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "1D 1H T2-filter sequence eliminating J-modulation with water presaturation",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000511"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000511",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "1D 1H with f1 presaturation (zgpr30)",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002007"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002007",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "1D 1H with presaturation (presat)",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000512"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000512",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "1D 1H with presaturation (wet)",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000513"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000513",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "1D 1H with presaturation (zgpr)",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000514"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000514",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "1D 1H with presaturation excitation sculpting with double pulsed field gradient spin echo (dpfgse)",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002008"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002008",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "1D 1H with water suppression using excitation sculpting with gradients (zgesgp)",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000515"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000515",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "1D CPMG with presaturation (cpmgpr1d)",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000517"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000517",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "1D CPMG with T2 filter and presaturation (ereticcpmgpr1d)",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000518"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000518",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "1D for diffusion measurement with stimulated echo and LED, presaturation and spoil gradients (ledbpgppr2s1d)",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002009"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002009",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "1D homonuclear MQS with selective pulses, without gradients, selects both ZQC and DQC (SSelMQC_refoc_ph)",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000519"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000519",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "1D NOESY 12C 13C custom filtered with presaturation, phase-sensitive gradients, and 13C decoupling (c12c13filternoesygpc13cpd)",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000527"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000527",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "1D NOESY 12C custom filtered with presaturation, phase-sensitive gradients, and 13C decoupling (c12filternoesygpc13cpd)",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000526"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000526",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "1D NOESY with presaturation (metnoesy)",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000520"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000520",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "1D NOESY with presaturation (modified) (pusenoesypr1d)",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000522"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000522",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "1D NOESY with presaturation (noesypr1d)",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000521"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000521",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "1D NOESY with presaturation (tnnoesy)",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000523"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000523",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "1D NOESY with presaturation and spoil gradients (noesygppr1d)",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000524"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000524",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "1D NOESY with presaturation during relaxation delay and mixing time and spoil gradient (noesygppr1d_kr)",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000525"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000525",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "1D PROJECT with presaturation (projectedpr)",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000528"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000528",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "2D 1H-13C HSQC (hsqcetgppr)",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000529"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000529",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "2D COSY homonuclear shift correlation with phase sensitivity using gradient pulses for selection with multiple quantum filter according to gradient ratio using purge pulses before d1 (cosygpmfphpp)",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002010"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002010",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "2D COSY using purge pulses before d1 (cosygpppqf) ",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002011"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002011",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "2D COSY with presaturation during relaxation delay and gradient pulses for selection (cosygpprqf)",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002012"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002012",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "2D HMBC H-1/X correlation via heteronuclear zero and double quantum coherence, phase sensitive using Echo/Antiecho gradient selection with three-fold low-pass J-filter to suppress one-bond correlations, no decoupling during acquisition (hmbcetgpl3nd)",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002013"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002013",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "2D HMBC using low-pass J-filter (hmbcgplpndqf)",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002014"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002014",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "2D homonuclear correlation via dipolar coupling (noesyesgpph)",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000530"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000530",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "2D homonuclear correlation via dipolar coupling with phase sensitivity and gradient pulses in mixing time (noesygpph)",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002015"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002015",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "2D homonuclear shift correlation wih delay period to optimize for long-range couplings (cosylrqf)",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002016"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002016",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "2D homonuclear shift correlation with presaturation during relaxation delay, phase sensitive with double quantum filter (cosydfphpr)",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002017"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002017",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "2D HSQC H-1/X correlation via double inept transfer using sensitivity improvement phase sensitive using Echo/Antiecho-TPPI gradient selection with decoupling during acquisition using trim pulses in inept transfer (hsqcetgp)",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002018"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002018",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "2D HSQC H-1/X correlation via double inept transfer using sensitivity improvement phase sensitive using Echo/Antiecho-TPPI gradient selection with decoupling during acquisition using trim pulses in inept transfer using shaped pulses for all 180degree pulses on f2 - channel with gradients in back-inept with presaturation during relaxation delay (hsqcetgpprsisp2.2)",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002019"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002019",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "2D HSQC H-1/X correlation via double inept transfer using sensitivity improvement phase sensitive using Echo/Antiecho-TPPI gradient selection with decoupling during acquisition using trim pulses in inept transfer with multiplicity editing during selection step using shaped pulses for all 180degree pulses on f2 - channel with gradients in back-inept (hsqcedetgpsisp2.2)",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002020"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002020",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "2D HSQC using echo-antiecho and adiabatic pulses for inversion and refocusing (hsqcetgpsp.2)",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000533"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000533",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "2D HSQC using echo-antiecho and adiabatic pulses for inversion and refocusing with additional water suppression (hsqcetgpsp.2.cl)",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000534"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000534",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "2D HSQC using echo-antiecho detection and gradient pulses (hsqcedetgp)",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000532"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000532",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "2D HSQC using echo-antiecho-TPPI gradient selection, constant time, trim pulses, shaped pulses for inversion, no refocussing, off-resonance pulse (hsqcctetgpsp.2)",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000535"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000535",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "2D HSQC using PEP and adiabatic pulses for inversion and refocusing with gradients in back-inept (hsqcetgpsisp2.2)",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000536"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000536",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "2D HSQC using PEP and adiabatic pulses for inversion and refocusing with gradients in back-inept and suppression of COSY type artefacts (hsqcetgpsisp2.3)",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000537"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000537",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "2D HSQC using PEP with gradients in back-inept (hsqcetgpsi2)",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002021"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002021",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "2D HSQC with presaturation (hsqcphpr)",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000531"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000531",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "2D Interleaved Ultrafast COSY (iufcosy)",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000538"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000538",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "2D JRES with excitation sculpting & additional water suppression (jresesgp2)",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000539"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000539",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "2D JRES with homonuclear J-resolved 2D correlation (jresesgp)",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000540"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000540",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "2D JRES with homonuclear J-resolved 2D correlation (jresqfpr)",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002022"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002022",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "2D JRES with homonuclear J-resolved 2D correlation, presaturation during relaxation delay with gradients (jresgpprqf)",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000541"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000541",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "2D TOCSY with homonuclear Hartman-Hahn transfer using DIPSI2 sequence for phase sensitive mixing (dipsi2phpr)",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002023"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002023",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "2D TOCSY with homonuclear Hartman-Hahn transfer using MLEV17 sequence for phase sensitive mixing using two power levels for excitation and spinlock using purge pulses before d1 (mlevphpp)",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002024"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002024",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "2D TOCSY with phase sensitive water suppression using MLEV (mlevesgpph)",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000542"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000542",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "2D TOCSY with presaturation using MLEV (mlevphpr)",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000543"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000543",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "2D Zero-quantum-filtered total correlation spectra (zTOCSY-em-3)",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000544"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000544",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "M3S COSY",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000545"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000545",
+                    "termSourceRef": "MTBLS"
                 }
             ],
             "ontologies": [
                 "MTBLS"
             ],
-            "allowedParentOntologyTerms": null
+            "allowedParentOntologyTerms": null,
+            "unexpectedTerms": []
         }
     ]
 }

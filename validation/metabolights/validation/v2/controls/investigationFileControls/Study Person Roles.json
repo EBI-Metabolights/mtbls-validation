@@ -13,31 +13,32 @@
                 "isaFileTemplateNameFilter": null,
                 "linkedFieldAndValueFilter": null
             },
+            "enforcementLevel": "required",
             "validationType": "child-ontology-term",
+            "constraints": [],
             "defaultValue": {
                 "term": "Investigator",
-                "termSourceRef": "NCIT",
-                "termAccessionNumber": "http://purl.obolibrary.org/obo/NCIT_C25936"
+                "termAccessionNumber": "http://purl.obolibrary.org/obo/NCIT_C25936",
+                "termSourceRef": "NCIT"
             },
             "allowedMissingOntologyTerms": [],
-            "allowedOtherSources": null,
-            "allowedPlaceholders": null,
-            "enforcementLevel": "required",
+            "allowedOtherSources": [],
+            "allowedPlaceholders": [],
             "terms": [
                 {
                     "term": "Principal Investigator",
-                    "termSourceRef": "NCIT",
-                    "termAccessionNumber": "http://purl.obolibrary.org/obo/NCIT_C19924"
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/NCIT_C19924",
+                    "termSourceRef": "NCIT"
                 },
                 {
                     "term": "Investigator",
-                    "termSourceRef": "NCIT",
-                    "termAccessionNumber": "http://purl.obolibrary.org/obo/NCIT_C25936"
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/NCIT_C25936",
+                    "termSourceRef": "NCIT"
                 },
                 {
                     "term": "Author",
-                    "termSourceRef": "NCIT",
-                    "termAccessionNumber": "http://purl.obolibrary.org/obo/NCIT_C42781"
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/NCIT_C42781",
+                    "termSourceRef": "NCIT"
                 }
             ],
             "ontologies": [
@@ -49,13 +50,12 @@
                 "parents": [
                     {
                         "term": "Personnel",
-                        "termSourceRef": "NCIT",
-                        "termAccessionNumber": "http://purl.obolibrary.org/obo/NCIT_C60758"
+                        "termAccessionNumber": "http://purl.obolibrary.org/obo/NCIT_C60758",
+                        "termSourceRef": "NCIT"
                     }
-                    
                 ]
-            }
-            
+            },
+            "unexpectedTerms": []
         }
     ]
 }
