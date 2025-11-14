@@ -29,11 +29,11 @@
             "allowedPlaceholders": null,
             "terms": null,
             "ontologies": null,
-            "allowedParentOntologyTerms": {
+              "allowedParentOntologyTerms": {
                 "excludeByLabelPattern": [
-                    "^*.unit$"
+                    "^.*unit$", "^.*Unit of.*$"
                 ],
-                "excludeByAccession": [],
+                "excludeByAccession": ["http://purl.obolibrary.org/obo/NCIT_C41139"],
                 "parents": [
                     {
                         "term": "unit",
@@ -49,6 +49,12 @@
                         "term": "Qualifier",
                         "termSourceRef": "NCIT",
                         "termAccessionNumber": "http://purl.obolibrary.org/obo/NCIT_C41009"
+                    },
+
+                    {
+                        "term": "Unit of Measure",
+                        "termSourceRef": "NCIT",
+                        "termAccessionNumber": "http://purl.obolibrary.org/obo/NCIT_C25709"
                     }
                     
                 ]
@@ -90,11 +96,11 @@
                 "EFO",
                 "NCIT"
             ],
-            "allowedParentOntologyTerms": {
+             "allowedParentOntologyTerms": {
                 "excludeByLabelPattern": [
-                    "^*.unit$"
+                    "^.*unit$", "^.*Unit of.*$"
                 ],
-                "excludeByAccession": [],
+                "excludeByAccession": ["http://purl.obolibrary.org/obo/NCIT_C41139"],
                 "parents": [
                     {
                         "term": "unit",
@@ -110,6 +116,12 @@
                         "term": "Qualifier",
                         "termSourceRef": "NCIT",
                         "termAccessionNumber": "http://purl.obolibrary.org/obo/NCIT_C41009"
+                    },
+
+                    {
+                        "term": "Unit of Measure",
+                        "termSourceRef": "NCIT",
+                        "termAccessionNumber": "http://purl.obolibrary.org/obo/NCIT_C25709"
                     }
                     
                 ]
