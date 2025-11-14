@@ -1,9 +1,12 @@
+#########################################################################################################
 # Unit tests for rule_a_200_500_001_01
+#########################################################################################################
 package tests.assay_test
+
 import data.metabolights.validation.v2.rules.phase2.violations as rules
 
 import rego.v1
-# import data.<target rules package> as rules
+
 # METADATA
 # title: Values for Derived Spectral Data File column not correct extension in assay file.
 # description: All Derived Spectral Data File column values should have extension found in control list.
@@ -12,7 +15,7 @@ import rego.v1
 #  type: ERROR
 #  priority: HIGH
 #  section: assays.data_transformation
-test_rule_a_200_500_001_01 := true
+rule_a_200_500_001_01_test_cases := 1
 
 # METADATA
 # title: File extension is correct in Derived Spectral Data File column.
@@ -28,7 +31,6 @@ test_rule_a_200_500_001_01_no_violation_01 if {
 					"columnCategory": "Parameter Value", "columnStructure": "ONTOLOGY_COLUMN", "columnHeader": "Parameter Value[Instrument]",
 					"columnName": "Parameter Value[Instrument]", "columnIndex": 0,
 					"additionalColumns": ["Term Source REF", "Term Accession Number"],
-					
 				},
 				{"columnCategory": "", "columnStructure": "LINKED_COLUMN", "columnHeader": "Term Source REF", "columnName": "Term Source REF", "columnIndex": 1},
 				{"columnCategory": "", "columnStructure": "LINKED_COLUMN", "columnHeader": "Term Accession Number", "columnName": "Term Accession Number", "columnIndex": 2},
@@ -94,7 +96,6 @@ test_rule_a_200_500_001_01_violation_02 if {
 					"columnCategory": "Parameter Value", "columnStructure": "ONTOLOGY_COLUMN", "columnHeader": "Parameter Value[Instrument]",
 					"columnName": "Parameter Value[Instrument]", "columnIndex": 0,
 					"additionalColumns": ["Term Source REF", "Term Accession Number"],
-					
 				},
 				{"columnCategory": "", "columnStructure": "LINKED_COLUMN", "columnHeader": "Term Source REF", "columnName": "Term Source REF", "columnIndex": 1},
 				{"columnCategory": "", "columnStructure": "LINKED_COLUMN", "columnHeader": "Term Accession Number", "columnName": "Term Accession Number", "columnIndex": 2},
@@ -163,7 +164,6 @@ test_rule_a_200_500_001_01_violation_01 if {
 					"columnCategory": "Parameter Value", "columnStructure": "ONTOLOGY_COLUMN", "columnHeader": "Parameter Value[Instrument]",
 					"columnName": "Parameter Value[Instrument]", "columnIndex": 0,
 					"additionalColumns": ["Term Source REF", "Term Accession Number"],
-					
 				},
 				{"columnCategory": "", "columnStructure": "LINKED_COLUMN", "columnHeader": "Term Source REF", "columnName": "Term Source REF", "columnIndex": 1},
 				{"columnCategory": "", "columnStructure": "LINKED_COLUMN", "columnHeader": "Term Accession Number", "columnName": "Term Accession Number", "columnIndex": 2},
@@ -218,8 +218,6 @@ test_rule_a_200_500_001_01_violation_01 if {
 	count(result) == 2
 }
 
-
-
 # METADATA
 # title: File extension is not correct in Derived Spectral Data File column.
 # description: File extension is not correct in Derived Spectral Data File column.
@@ -234,7 +232,6 @@ test_rule_a_200_500_001_01_violation_03 if {
 					"columnCategory": "Parameter Value", "columnStructure": "ONTOLOGY_COLUMN", "columnHeader": "Parameter Value[Instrument]",
 					"columnName": "Parameter Value[Instrument]", "columnIndex": 0,
 					"additionalColumns": ["Term Source REF", "Term Accession Number"],
-					
 				},
 				{"columnCategory": "", "columnStructure": "LINKED_COLUMN", "columnHeader": "Term Source REF", "columnName": "Term Source REF", "columnIndex": 1},
 				{"columnCategory": "", "columnStructure": "LINKED_COLUMN", "columnHeader": "Term Accession Number", "columnName": "Term Accession Number", "columnIndex": 2},
@@ -274,7 +271,6 @@ test_rule_a_200_500_001_01_violation_03 if {
 				"Protocol REF.1": ["Extraction", "  ", "Metabolite identification", "Mass spectrometry"],
 				"Raw Spectral Data File": ["", "", "", ""],
 				"Derived Spectral Data File": ["x.xml", "y.d", "z.zip", "v.raw"],
-
 			},
 		}}},
 		"investigation": {"studies": [{"fileName": "s_MTBLS1.txt"}], "ontologySourceReferences": {"references": [

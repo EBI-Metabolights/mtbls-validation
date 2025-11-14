@@ -1,8 +1,10 @@
+#########################################################################################################
 # Unit tests for rule_s_200_200_002_01
+#########################################################################################################
 package tests.sample_test
 
 import rego.v1
-# import data.<target rules package> as rules
+
 # METADATA
 # title: There are empty values in Factor Value column.
 # description: Factor values should be defined for each row.
@@ -11,7 +13,7 @@ import rego.v1
 #  type: WARNING
 #  priority: HIGH
 #  section: samples.sampleCollection
-test_rule_s_200_200_002_01 := true
+rule_s_200_200_002_01_test_cases := 1
 
 # # METADATA
 # # title: <title>.

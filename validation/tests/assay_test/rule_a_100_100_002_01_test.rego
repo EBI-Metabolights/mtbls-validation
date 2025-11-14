@@ -1,9 +1,12 @@
+#########################################################################################################
 # Unit tests for rule_a_100_100_002_01
+#########################################################################################################
 package tests.assay_test
+
 import data.metabolights.validation.v2.rules.phase1.violations as rules
 
 import rego.v1
-# import data.<target rules package> as rules
+
 # METADATA
 # title: Assay file not referenced in investigation file.
 # description: Assay file must be referenced in i_Investigation.txt.
@@ -12,7 +15,7 @@ import rego.v1
 #  type: ERROR
 #  priority: CRITICAL
 #  section: assays.filename
-test_rule_a_100_100_002_01 := true
+rule_a_100_100_002_01_test_cases := 1
 
 # METADATA
 # title: Assay file name is referenced in i_Investigation.txt file
@@ -39,7 +42,6 @@ test_rule_a_100_100_002_01_violation_01 if {
 	}
 	count(result) == 1
 }
-
 
 # METADATA
 # title: Assay file name is not referenced in i_Investigation.txt file

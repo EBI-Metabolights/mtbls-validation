@@ -1,8 +1,10 @@
+#########################################################################################################
 # Unit tests for rule_s_200_200_003_01
+#########################################################################################################
 package tests.sample_test
 
 import rego.v1
-# import data.<target rules package> as rules
+
 # METADATA
 # title: Term Source REF of the factor value ontology term is not in the priotirised control list.
 # description: We highly recommend to use the prioritised Ontology Source Refs for the factor ontology term.
@@ -11,7 +13,7 @@ import rego.v1
 #  type: WARNING
 #  priority: LOW
 #  section: samples.sampleCollection
-test_rule_s_200_200_003_01 := true
+rule_s_200_200_003_01_test_cases := 1
 
 # # METADATA
 # # title: <title>.

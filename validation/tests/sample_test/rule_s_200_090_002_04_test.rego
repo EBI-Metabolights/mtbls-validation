@@ -1,8 +1,10 @@
+#########################################################################################################
 # Unit tests for rule_s_200_090_002_04
+#########################################################################################################
 package tests.sample_test
 
 import rego.v1
-# import data.<target rules package> as rules
+
 # METADATA
 # title: Ontology Term Source REF defined for empty ontology terms.
 # description: Select ontology terms and/or change ontology Term Source REF.
@@ -11,7 +13,7 @@ import rego.v1
 #  type: ERROR
 #  priority: MEDIUM
 #  section: samples.general
-test_rule_s_200_090_002_04 := true
+rule_s_200_090_002_04_test_cases := 1
 
 # # METADATA
 # # title: <title>.

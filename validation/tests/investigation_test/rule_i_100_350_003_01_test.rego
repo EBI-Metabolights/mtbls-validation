@@ -1,8 +1,12 @@
+#########################################################################################################
 # Unit tests for rule_i_100_350_003_01
+#########################################################################################################
 package tests.investigation_test
 
+import data.metabolights.validation.v2.rules.phase1.violations as rules
+
 import rego.v1
-# import data.<target rules package> as rules
+
 # METADATA
 # title: Study Protocol Description length less than 40 characters.
 # description: Study Protocol Description should be defined with length equal or greater than 40 characters.
@@ -11,7 +15,7 @@ import rego.v1
 #  type: ERROR
 #  priority: HIGH
 #  section: investigation.studyProtocols
-test_rule_i_100_350_003_01 := true
+rule_i_100_350_003_01_test_cases := 1
 
 # # METADATA
 # # title: <title>.

@@ -1,9 +1,12 @@
+#########################################################################################################
 # Unit tests for rule_a_200_300_003_02
+#########################################################################################################
 package tests.assay_test
+
 import data.metabolights.validation.v2.rules.phase2.violations as rules
 
 import rego.v1
-# import data.<target rules package> as rules
+
 # METADATA
 # title: Scan Polarity column values are not unique.
 # description: Define only one scan polarity value in each assay file.
@@ -12,7 +15,7 @@ import rego.v1
 #  type: ERROR
 #  priority: CRITICAL
 #  section: assays.mass_spectrometry
-test_rule_a_200_300_003_02 := true
+rule_a_200_300_003_02_test_cases := 1
 
 # METADATA
 # title: Scan Polarity column values are same as assay file name
@@ -28,17 +31,16 @@ test_rule_a_200_300_003_02_no_violation_01 if {
 					"columnCategory": "Parameter Value", "columnStructure": "ONTOLOGY_COLUMN", "columnHeader": "Parameter Value[Scan polarity]",
 					"columnName": "Parameter Value[Scan polarity]", "columnIndex": 0,
 					"additionalColumns": ["Term Source REF", "Term Accession Number"],
-					
-				},				{
+				},
+				{
 					"columnCategory": "Parameter Value", "columnStructure": "ONTOLOGY_COLUMN", "columnHeader": "Parameter Value[Column model]",
 					"columnName": "Parameter Value[Column model]", "columnIndex": 3,
 					"additionalColumns": ["Term Source REF", "Term Accession Number"],
 				},
-
 			],
 			"columns": [
 				"Parameter Value[Scan polarity]",
-				"Parameter Value[Column model]"
+				"Parameter Value[Column model]",
 			],
 			"data": {
 				"Parameter Value[Scan polarity]": ["positive", "positive", "positive", "positive"],
@@ -64,16 +66,16 @@ test_rule_a_200_300_003_02_violation_01 if {
 					"columnCategory": "Parameter Value", "columnStructure": "ONTOLOGY_COLUMN", "columnHeader": "Parameter Value[Scan polarity]",
 					"columnName": "Parameter Value[Scan polarity]", "columnIndex": 0,
 					"additionalColumns": ["Term Source REF", "Term Accession Number"],
-				},				{
+				},
+				{
 					"columnCategory": "Parameter Value", "columnStructure": "ONTOLOGY_COLUMN", "columnHeader": "Parameter Value[Column model]",
 					"columnName": "Parameter Value[Column model]", "columnIndex": 3,
 					"additionalColumns": ["Term Source REF", "Term Accession Number"],
 				},
-
 			],
 			"columns": [
 				"Parameter Value[Scan polarity]",
-				"Parameter Value[Column model]"
+				"Parameter Value[Column model]",
 			],
 			"data": {
 				"Parameter Value[Scan polarity]": ["positive", "positive", "positive", "negative"],

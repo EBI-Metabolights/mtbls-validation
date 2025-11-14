@@ -1,8 +1,12 @@
+#########################################################################################################
 # Unit tests for rule_i_100_360_011_05
+#########################################################################################################
 package tests.investigation_test
 
+import data.metabolights.validation.v2.rules.phase1.violations as rules
+
 import rego.v1
-# import data.<target rules package> as rules
+
 # METADATA
 # title: Study Person Additional Email Address is not valid.
 # description: Study Person Additional Email Address must have valid format.
@@ -11,7 +15,7 @@ import rego.v1
 #  type: ERROR
 #  priority: HIGH
 #  section: investigation.studyContacts
-test_rule_i_100_360_011_05 := true
+rule_i_100_360_011_05_test_cases := 1
 
 # # METADATA
 # # title: <title>.

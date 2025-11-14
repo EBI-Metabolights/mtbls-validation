@@ -1,8 +1,10 @@
+#########################################################################################################
 # Unit tests for rule_s_200_090_002_13
+#########################################################################################################
 package tests.sample_test
 
 import rego.v1
-# import data.<target rules package> as rules
+
 # METADATA
 # title: Value has not a valid pattern.
 # description: The column value MUST have a valid pattern value.
@@ -11,7 +13,7 @@ import rego.v1
 #  type: ERROR
 #  priority: HIGH
 #  section: samples.general
-test_rule_s_200_090_002_13 := true
+rule_s_200_090_002_13_test_cases := 1
 
 # # METADATA
 # # title: <title>.

@@ -1,8 +1,12 @@
+#########################################################################################################
 # Unit tests for rule_i_100_360_009_02
+#########################################################################################################
 package tests.investigation_test
 
+import data.metabolights.validation.v2.rules.phase1.violations as rules
+
 import rego.v1
-# import data.<target rules package> as rules
+
 # METADATA
 # title: Study Person Role is not valid.
 # description: Study Person Role SHOULD be selected from the default prioritised ontologies.
@@ -11,7 +15,7 @@ import rego.v1
 #  type: WARNING
 #  priority: HIGH
 #  section: investigation.studyContacts
-test_rule_i_100_360_009_02 := true
+rule_i_100_360_009_02_test_cases := 1
 
 # # METADATA
 # # title: <title>.

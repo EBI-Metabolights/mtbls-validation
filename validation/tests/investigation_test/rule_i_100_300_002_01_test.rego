@@ -2,6 +2,7 @@ package tests.investigation_test
 
 import data.metabolights.validation.v2.rules.phase1.violations as rules
 import rego.v1
+
 # METADATA
 # title: Study Identifier not valid.
 # description: Study Identifier should be valid format (e.g., MTBLS(positive_number) or REQ(datetime)).
@@ -10,7 +11,7 @@ import rego.v1
 #  type: ERROR
 #  priority: CRITICAL
 #  section: investigation.studies
-test_rule_i_100_300_002_01 := true
+rule_i_100_300_002_01_test_cases := 1
 
 # METADATA
 # title: Investigation identifier is valid.

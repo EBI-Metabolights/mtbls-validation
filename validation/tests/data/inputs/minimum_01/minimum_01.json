@@ -740,12 +740,423 @@
     },
     "assays": {
         "a_REQ2025111188888-01_MS_metabolite_profiling.txt": {
-            "filePath": "",
+            "filePath": "a_REQ2025111188888-01_MS_metabolite_profiling.txt",
             "sha256Hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
             "table": {
-                "columns": [],
-                "headers": [],
-                "data": {},
+                "columns": [
+                    "Sample Name",
+                    "Protocol REF",
+                    "Parameter Value[Post Extraction]",
+                    "Parameter Value[Derivatization]",
+                    "Extract Name",
+                    "Label",
+                    "Term Source REF.1",
+                    "Term Accession Number.1",
+                    "Protocol REF.2",
+                    "Parameter Value[Scan polarity]",
+                    "Parameter Value[Scan m/z range]",
+                    "Parameter Value[Instrument]",
+                    "Term Source REF.2",
+                    "Term Accession Number.2",
+                    "Parameter Value[Ion source]",
+                    "Term Source REF.3",
+                    "Term Accession Number.3",
+                    "Parameter Value[Mass analyzer]",
+                    "Term Source REF.4",
+                    "Term Accession Number.4",
+                    "MS Assay Name",
+                    "Raw Spectral Data File",
+                    "Protocol REF.3",
+                    "Normalization Name",
+                    "Derived Spectral Data File",
+                    "Protocol REF.4",
+                    "Data Transformation Name",
+                    "Metabolite Assignment File"
+                ],
+                "headers": [
+                    {
+                        "columnIndex": 0,
+                        "columnName": "database_identifier",
+                        "columnHeader": "database_identifier",
+                        "additionalColumns": [],
+                        "columnCategory": "",
+                        "columnStructure": "SINGLE_COLUMN",
+                        "columnPrefix": "",
+                        "columnSearchPattern": ""
+                    },
+                    {
+                        "columnIndex": 1,
+                        "columnName": "chemical_formula",
+                        "columnHeader": "chemical_formula",
+                        "additionalColumns": [],
+                        "columnCategory": "",
+                        "columnStructure": "SINGLE_COLUMN",
+                        "columnPrefix": "",
+                        "columnSearchPattern": ""
+                    },
+                    {
+                        "columnIndex": 2,
+                        "columnName": "smiles",
+                        "columnHeader": "smiles",
+                        "additionalColumns": [],
+                        "columnCategory": "",
+                        "columnStructure": "SINGLE_COLUMN",
+                        "columnPrefix": "",
+                        "columnSearchPattern": ""
+                    },
+                    {
+                        "columnIndex": 3,
+                        "columnName": "inchi",
+                        "columnHeader": "inchi",
+                        "additionalColumns": [],
+                        "columnCategory": "",
+                        "columnStructure": "SINGLE_COLUMN",
+                        "columnPrefix": "",
+                        "columnSearchPattern": ""
+                    },
+                    {
+                        "columnIndex": 4,
+                        "columnName": "metabolite_identification",
+                        "columnHeader": "metabolite_identification",
+                        "additionalColumns": [],
+                        "columnCategory": "",
+                        "columnStructure": "SINGLE_COLUMN",
+                        "columnPrefix": "",
+                        "columnSearchPattern": ""
+                    },
+                    {
+                        "columnIndex": 5,
+                        "columnName": "mass_to_charge",
+                        "columnHeader": "mass_to_charge",
+                        "additionalColumns": [],
+                        "columnCategory": "",
+                        "columnStructure": "SINGLE_COLUMN",
+                        "columnPrefix": "",
+                        "columnSearchPattern": ""
+                    },
+                    {
+                        "columnIndex": 6,
+                        "columnName": "fragmentation",
+                        "columnHeader": "fragmentation",
+                        "additionalColumns": [],
+                        "columnCategory": "",
+                        "columnStructure": "SINGLE_COLUMN",
+                        "columnPrefix": "",
+                        "columnSearchPattern": ""
+                    },
+                    {
+                        "columnIndex": 7,
+                        "columnName": "modifications",
+                        "columnHeader": "modifications",
+                        "additionalColumns": [],
+                        "columnCategory": "",
+                        "columnStructure": "SINGLE_COLUMN",
+                        "columnPrefix": "",
+                        "columnSearchPattern": ""
+                    },
+                    {
+                        "columnIndex": 8,
+                        "columnName": "charge",
+                        "columnHeader": "charge",
+                        "additionalColumns": [],
+                        "columnCategory": "",
+                        "columnStructure": "SINGLE_COLUMN",
+                        "columnPrefix": "",
+                        "columnSearchPattern": ""
+                    },
+                    {
+                        "columnIndex": 9,
+                        "columnName": "retention_time",
+                        "columnHeader": "retention_time",
+                        "additionalColumns": [],
+                        "columnCategory": "",
+                        "columnStructure": "SINGLE_COLUMN",
+                        "columnPrefix": "",
+                        "columnSearchPattern": ""
+                    },
+                    {
+                        "columnIndex": 10,
+                        "columnName": "taxid",
+                        "columnHeader": "taxid",
+                        "additionalColumns": [],
+                        "columnCategory": "",
+                        "columnStructure": "SINGLE_COLUMN",
+                        "columnPrefix": "",
+                        "columnSearchPattern": ""
+                    },
+                    {
+                        "columnIndex": 11,
+                        "columnName": "species",
+                        "columnHeader": "species",
+                        "additionalColumns": [],
+                        "columnCategory": "",
+                        "columnStructure": "SINGLE_COLUMN",
+                        "columnPrefix": "",
+                        "columnSearchPattern": ""
+                    },
+                    {
+                        "columnIndex": 12,
+                        "columnName": "database",
+                        "columnHeader": "database",
+                        "additionalColumns": [],
+                        "columnCategory": "",
+                        "columnStructure": "SINGLE_COLUMN",
+                        "columnPrefix": "",
+                        "columnSearchPattern": ""
+                    },
+                    {
+                        "columnIndex": 13,
+                        "columnName": "database_version",
+                        "columnHeader": "database_version",
+                        "additionalColumns": [],
+                        "columnCategory": "",
+                        "columnStructure": "SINGLE_COLUMN",
+                        "columnPrefix": "",
+                        "columnSearchPattern": ""
+                    },
+                    {
+                        "columnIndex": 14,
+                        "columnName": "reliability",
+                        "columnHeader": "reliability",
+                        "additionalColumns": [],
+                        "columnCategory": "",
+                        "columnStructure": "SINGLE_COLUMN",
+                        "columnPrefix": "",
+                        "columnSearchPattern": ""
+                    },
+                    {
+                        "columnIndex": 15,
+                        "columnName": "uri",
+                        "columnHeader": "uri",
+                        "additionalColumns": [],
+                        "columnCategory": "",
+                        "columnStructure": "SINGLE_COLUMN",
+                        "columnPrefix": "",
+                        "columnSearchPattern": ""
+                    },
+                    {
+                        "columnIndex": 16,
+                        "columnName": "search_engine",
+                        "columnHeader": "search_engine",
+                        "additionalColumns": [],
+                        "columnCategory": "",
+                        "columnStructure": "SINGLE_COLUMN",
+                        "columnPrefix": "",
+                        "columnSearchPattern": ""
+                    },
+                    {
+                        "columnIndex": 17,
+                        "columnName": "search_engine_score",
+                        "columnHeader": "search_engine_score",
+                        "additionalColumns": [],
+                        "columnCategory": "",
+                        "columnStructure": "SINGLE_COLUMN",
+                        "columnPrefix": "",
+                        "columnSearchPattern": ""
+                    },
+                    {
+                        "columnIndex": 18,
+                        "columnName": "smallmolecule_abundance_sub",
+                        "columnHeader": "smallmolecule_abundance_sub",
+                        "additionalColumns": [],
+                        "columnCategory": "",
+                        "columnStructure": "SINGLE_COLUMN",
+                        "columnPrefix": "",
+                        "columnSearchPattern": ""
+                    },
+                    {
+                        "columnIndex": 19,
+                        "columnName": "smallmolecule_abundance_stdev_sub",
+                        "columnHeader": "smallmolecule_abundance_stdev_sub",
+                        "additionalColumns": [],
+                        "columnCategory": "",
+                        "columnStructure": "SINGLE_COLUMN",
+                        "columnPrefix": "",
+                        "columnSearchPattern": ""
+                    },
+                    {
+                        "columnIndex": 20,
+                        "columnName": "smallmolecule_abundance_std_error_sub",
+                        "columnHeader": "smallmolecule_abundance_std_error_sub",
+                        "additionalColumns": [],
+                        "columnCategory": "",
+                        "columnStructure": "SINGLE_COLUMN",
+                        "columnPrefix": "",
+                        "columnSearchPattern": ""
+                    },
+                    {
+                        "columnIndex": 21,
+                        "columnName": "Assay 1",
+                        "columnHeader": "Assay 1",
+                        "additionalColumns": [],
+                        "columnCategory": "",
+                        "columnStructure": "SINGLE_COLUMN",
+                        "columnPrefix": "",
+                        "columnSearchPattern": ""
+                    },
+                    {
+                        "columnIndex": 22,
+                        "columnName": "Assay 2",
+                        "columnHeader": "Assay 2",
+                        "additionalColumns": [],
+                        "columnCategory": "",
+                        "columnStructure": "SINGLE_COLUMN",
+                        "columnPrefix": "",
+                        "columnSearchPattern": ""
+                    },
+                    {
+                        "columnIndex": 23,
+                        "columnName": "Assay 3",
+                        "columnHeader": "Assay 3",
+                        "additionalColumns": [],
+                        "columnCategory": "",
+                        "columnStructure": "SINGLE_COLUMN",
+                        "columnPrefix": "",
+                        "columnSearchPattern": ""
+                    }
+                ],
+                "data": {
+                    "Sample Name": [
+                        "Sample 1",
+                        "Sample 2",
+                        "Sample 3"
+                    ],
+                    "Protocol REF": [
+                        "Extraction",
+                        "Extraction",
+                        "Extraction"
+                    ],
+                    "Parameter Value[Post Extraction]": [
+                        "MeOH/H2O (70:30, v:v)",
+                        "MeOH/H2O (70:30, v:v)",
+                        "MeOH/H2O (70:30, v:v)"
+                    ],
+                    "Parameter Value[Derivatization]": [
+                        "",
+                        "",
+                        ""
+                    ],
+                    "Extract Name": [
+                        "Sample 1",
+                        "Sample 2",
+                        "Sample 3"
+                    ],
+                    "Label": [
+                        "Label 1",
+                        "Label 2",
+                        "Label 3"
+                    ],
+                    "Term Source REF.1": [
+                        "",
+                        "",
+                        ""
+                    ],
+                    "Term Accession Number.1": [
+                        "",
+                        "",
+                        ""
+                    ],
+                    "Protocol REF.2": [
+                        "Mass spectrometry",
+                        "Mass spectrometry",
+                        "Mass spectrometry"
+                    ],
+                    "Parameter Value[Scan polarity]": [
+                        "alternating",
+                        "alternating",
+                        "alternating"
+                    ],
+                    "Parameter Value[Scan m/z range]": [
+                        "100-1000",
+                        "100-1000",
+                        "100-1000"
+                    ],
+                    "Parameter Value[Instrument]": [
+                        "Thermo Scientific Q Exactive HF",
+                        "Thermo Scientific Q Exactive HF",
+                        "Thermo Scientific Q Exactive HF"
+                    ],
+                    "Term Source REF.2": [
+                        "MTBLS",
+                        "MTBLS",
+                        "MTBLS"
+                    ],
+                    "Term Accession Number.2": [
+                        "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000660",
+                        "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000660",
+                        "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000660"
+                    ],
+                    "Parameter Value[Ion source]": [
+                        "electrospray ionization",
+                        "electrospray ionization",
+                        "electrospray ionization"
+                    ],
+                    "Term Source REF.3": [
+                        "MS",
+                        "MS",
+                        "MS"
+                    ],
+                    "Term Accession Number.3": [
+                        "http://purl.obolibrary.org/obo/MS_1000073",
+                        "http://purl.obolibrary.org/obo/MS_1000073",
+                        "http://purl.obolibrary.org/obo/MS_1000073"
+                    ],
+                    "Parameter Value[Mass analyzer]": [
+                        "orbitrap",
+                        "orbitrap",
+                        "orbitrap"
+                    ],
+                    "Term Source REF.4": [
+                        "MS",
+                        "MS",
+                        "MS"
+                    ],
+                    "Term Accession Number.4": [
+                        "http://purl.obolibrary.org/obo/MS_1000484",
+                        "http://purl.obolibrary.org/obo/MS_1000484",
+                        "http://purl.obolibrary.org/obo/MS_1000484"
+                    ],
+                    "MS Assay Name": [
+                        "Assay 1",
+                        "Assay 2",
+                        "Assay 3"
+                    ],
+                    "Raw Spectral Data File": [
+                        "FILES/raw1.raw",
+                        "FILES/raw2.raw",
+                        "FILES/raw3.raw"
+                    ],
+                    "Protocol REF.3": [
+                        "Data transformation",
+                        "Data transformation",
+                        "Data transformation"
+                    ],
+                    "Normalization Name": [
+                        "",
+                        "",
+                        ""
+                    ],
+                    "Derived Spectral Data File": [
+                        "",
+                        "",
+                        ""
+                    ],
+                    "Protocol REF.4": [
+                        "Metabolite identification",
+                        "Metabolite identification",
+                        "Metabolite identification"
+                    ],
+                    "Data Transformation Name": [
+                        "",
+                        "",
+                        ""
+                    ],
+                    "Metabolite Assignment File": [
+                        "m_REQ2025111188888-01_MS_metabolite-profiling_v2_maf.tsv",
+                        "m_REQ2025111188888-01_MS_metabolite-profiling_v2_maf.tsv",
+                        "m_REQ2025111188888-01_MS_metabolite-profiling_v2_maf.tsv"
+                    ]
+                },
                 "rowIndices": [],
                 "columnIndices": [],
                 "filteredTotalRowCount": 0,
@@ -780,12 +1191,375 @@
     "foldersInHierarchy": [],
     "metaboliteAssignments": {
         "m_REQ2025111188888-01_MS_metabolite-profiling_v2_maf.tsv": {
-            "filePath": "",
+            "filePath": "m_REQ2025111188888-01_MS_metabolite-profiling_v2_maf.tsv",
             "sha256Hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
             "table": {
-                "columns": [],
-                "headers": [],
-                "data": {},
+                "columns": [
+                    "database_identifier",
+                    "chemical_formula",
+                    "smiles",
+                    "inchi",
+                    "metabolite_identification",
+                    "mass_to_charge",
+                    "fragmentation",
+                    "modifications",
+                    "charge",
+                    "retention_time",
+                    "taxid",
+                    "species",
+                    "database",
+                    "database_version",
+                    "reliability",
+                    "uri",
+                    "search_engine",
+                    "search_engine_score",
+                    "smallmolecule_abundance_sub",
+                    "smallmolecule_abundance_stdev_sub",
+                    "smallmolecule_abundance_std_error_sub",
+                    "Assay 1",
+                    "Assay 2",
+                    "Assay 3"
+                ],
+                "headers": [
+                    {
+                        "columnIndex": 0,
+                        "columnName": "database_identifier",
+                        "columnHeader": "database_identifier",
+                        "additionalColumns": [],
+                        "columnCategory": "",
+                        "columnStructure": "SINGLE_COLUMN",
+                        "columnPrefix": "",
+                        "columnSearchPattern": ""
+                    },
+                    {
+                        "columnIndex": 1,
+                        "columnName": "chemical_formula",
+                        "columnHeader": "chemical_formula",
+                        "additionalColumns": [],
+                        "columnCategory": "",
+                        "columnStructure": "SINGLE_COLUMN",
+                        "columnPrefix": "",
+                        "columnSearchPattern": ""
+                    },
+                    {
+                        "columnIndex": 2,
+                        "columnName": "smiles",
+                        "columnHeader": "smiles",
+                        "additionalColumns": [],
+                        "columnCategory": "",
+                        "columnStructure": "SINGLE_COLUMN",
+                        "columnPrefix": "",
+                        "columnSearchPattern": ""
+                    },
+                    {
+                        "columnIndex": 3,
+                        "columnName": "inchi",
+                        "columnHeader": "inchi",
+                        "additionalColumns": [],
+                        "columnCategory": "",
+                        "columnStructure": "SINGLE_COLUMN",
+                        "columnPrefix": "",
+                        "columnSearchPattern": ""
+                    },
+                    {
+                        "columnIndex": 4,
+                        "columnName": "metabolite_identification",
+                        "columnHeader": "metabolite_identification",
+                        "additionalColumns": [],
+                        "columnCategory": "",
+                        "columnStructure": "SINGLE_COLUMN",
+                        "columnPrefix": "",
+                        "columnSearchPattern": ""
+                    },
+                    {
+                        "columnIndex": 5,
+                        "columnName": "mass_to_charge",
+                        "columnHeader": "mass_to_charge",
+                        "additionalColumns": [],
+                        "columnCategory": "",
+                        "columnStructure": "SINGLE_COLUMN",
+                        "columnPrefix": "",
+                        "columnSearchPattern": ""
+                    },
+                    {
+                        "columnIndex": 6,
+                        "columnName": "fragmentation",
+                        "columnHeader": "fragmentation",
+                        "additionalColumns": [],
+                        "columnCategory": "",
+                        "columnStructure": "SINGLE_COLUMN",
+                        "columnPrefix": "",
+                        "columnSearchPattern": ""
+                    },
+                    {
+                        "columnIndex": 7,
+                        "columnName": "modifications",
+                        "columnHeader": "modifications",
+                        "additionalColumns": [],
+                        "columnCategory": "",
+                        "columnStructure": "SINGLE_COLUMN",
+                        "columnPrefix": "",
+                        "columnSearchPattern": ""
+                    },
+                    {
+                        "columnIndex": 8,
+                        "columnName": "charge",
+                        "columnHeader": "charge",
+                        "additionalColumns": [],
+                        "columnCategory": "",
+                        "columnStructure": "SINGLE_COLUMN",
+                        "columnPrefix": "",
+                        "columnSearchPattern": ""
+                    },
+                    {
+                        "columnIndex": 9,
+                        "columnName": "retention_time",
+                        "columnHeader": "retention_time",
+                        "additionalColumns": [],
+                        "columnCategory": "",
+                        "columnStructure": "SINGLE_COLUMN",
+                        "columnPrefix": "",
+                        "columnSearchPattern": ""
+                    },
+                    {
+                        "columnIndex": 10,
+                        "columnName": "taxid",
+                        "columnHeader": "taxid",
+                        "additionalColumns": [],
+                        "columnCategory": "",
+                        "columnStructure": "SINGLE_COLUMN",
+                        "columnPrefix": "",
+                        "columnSearchPattern": ""
+                    },
+                    {
+                        "columnIndex": 11,
+                        "columnName": "species",
+                        "columnHeader": "species",
+                        "additionalColumns": [],
+                        "columnCategory": "",
+                        "columnStructure": "SINGLE_COLUMN",
+                        "columnPrefix": "",
+                        "columnSearchPattern": ""
+                    },
+                    {
+                        "columnIndex": 12,
+                        "columnName": "database",
+                        "columnHeader": "database",
+                        "additionalColumns": [],
+                        "columnCategory": "",
+                        "columnStructure": "SINGLE_COLUMN",
+                        "columnPrefix": "",
+                        "columnSearchPattern": ""
+                    },
+                    {
+                        "columnIndex": 13,
+                        "columnName": "database_version",
+                        "columnHeader": "database_version",
+                        "additionalColumns": [],
+                        "columnCategory": "",
+                        "columnStructure": "SINGLE_COLUMN",
+                        "columnPrefix": "",
+                        "columnSearchPattern": ""
+                    },
+                    {
+                        "columnIndex": 14,
+                        "columnName": "reliability",
+                        "columnHeader": "reliability",
+                        "additionalColumns": [],
+                        "columnCategory": "",
+                        "columnStructure": "SINGLE_COLUMN",
+                        "columnPrefix": "",
+                        "columnSearchPattern": ""
+                    },
+                    {
+                        "columnIndex": 15,
+                        "columnName": "uri",
+                        "columnHeader": "uri",
+                        "additionalColumns": [],
+                        "columnCategory": "",
+                        "columnStructure": "SINGLE_COLUMN",
+                        "columnPrefix": "",
+                        "columnSearchPattern": ""
+                    },
+                    {
+                        "columnIndex": 16,
+                        "columnName": "search_engine",
+                        "columnHeader": "search_engine",
+                        "additionalColumns": [],
+                        "columnCategory": "",
+                        "columnStructure": "SINGLE_COLUMN",
+                        "columnPrefix": "",
+                        "columnSearchPattern": ""
+                    },
+                    {
+                        "columnIndex": 17,
+                        "columnName": "search_engine_score",
+                        "columnHeader": "search_engine_score",
+                        "additionalColumns": [],
+                        "columnCategory": "",
+                        "columnStructure": "SINGLE_COLUMN",
+                        "columnPrefix": "",
+                        "columnSearchPattern": ""
+                    },
+                    {
+                        "columnIndex": 18,
+                        "columnName": "smallmolecule_abundance_sub",
+                        "columnHeader": "smallmolecule_abundance_sub",
+                        "additionalColumns": [],
+                        "columnCategory": "",
+                        "columnStructure": "SINGLE_COLUMN",
+                        "columnPrefix": "",
+                        "columnSearchPattern": ""
+                    },
+                    {
+                        "columnIndex": 19,
+                        "columnName": "smallmolecule_abundance_stdev_sub",
+                        "columnHeader": "smallmolecule_abundance_stdev_sub",
+                        "additionalColumns": [],
+                        "columnCategory": "",
+                        "columnStructure": "SINGLE_COLUMN",
+                        "columnPrefix": "",
+                        "columnSearchPattern": ""
+                    },
+                    {
+                        "columnIndex": 20,
+                        "columnName": "smallmolecule_abundance_std_error_sub",
+                        "columnHeader": "smallmolecule_abundance_std_error_sub",
+                        "additionalColumns": [],
+                        "columnCategory": "",
+                        "columnStructure": "SINGLE_COLUMN",
+                        "columnPrefix": "",
+                        "columnSearchPattern": ""
+                    },
+                    {
+                        "columnIndex": 21,
+                        "columnName": "Assay 1",
+                        "columnHeader": "Assay 1",
+                        "additionalColumns": [],
+                        "columnCategory": "",
+                        "columnStructure": "SINGLE_COLUMN",
+                        "columnPrefix": "",
+                        "columnSearchPattern": ""
+                    },
+                    {
+                        "columnIndex": 22,
+                        "columnName": "Assay 2",
+                        "columnHeader": "Assay 2",
+                        "additionalColumns": [],
+                        "columnCategory": "",
+                        "columnStructure": "SINGLE_COLUMN",
+                        "columnPrefix": "",
+                        "columnSearchPattern": ""
+                    },
+                    {
+                        "columnIndex": 23,
+                        "columnName": "Assay 3",
+                        "columnHeader": "Assay 3",
+                        "additionalColumns": [],
+                        "columnCategory": "",
+                        "columnStructure": "SINGLE_COLUMN",
+                        "columnPrefix": "",
+                        "columnSearchPattern": ""
+                    }
+                ],
+                "data": {
+                    "database_identifier": [
+                        "CHEBI:17015",
+                        ""
+                    ],
+                    "chemical_formula": [
+                        "C17H20N4O6",
+                        ""
+                    ],
+                    "smiles": [
+                        "Cc1cc2nc3c(=O)nc(=O)nc-3n(C[C@H](O)[C@H](O)[C@H](O)CO)c2cc1C",
+                        ""
+                    ],
+                    "inchi": [
+                        "InChI=1S/C17H20N4O6/c1-7-3-9-10(4-8(7)2)21(5-11(23)14(25)12(24)6-22)15-13(18-9)16(26)20-17(27)19-15/h3-4,11-12,14,22-25H,5-6H2,1-2H3,(H,20,26,27)/t11-,12+,14-/m0/s1",
+                        ""
+                    ],
+                    "metabolite_identification": [
+                        "riboflavin",
+                        "aspirin"
+                    ],
+                    "mass_to_charge": [
+                        "377.14512",
+                        "22"
+                    ],
+                    "fragmentation": [
+                        "",
+                        ""
+                    ],
+                    "modifications": [
+                        "[M+H]+",
+                        ""
+                    ],
+                    "charge": [
+                        "",
+                        ""
+                    ],
+                    "retention_time": [
+                        "200.962",
+                        "33"
+                    ],
+                    "taxid": [
+                        "",
+                        ""
+                    ],
+                    "species": [
+                        "",
+                        ""
+                    ],
+                    "database": [
+                        "",
+                        ""
+                    ],
+                    "database_version": [
+                        "",
+                        ""
+                    ],
+                    "reliability": [
+                        "",
+                        ""
+                    ],
+                    "uri": [
+                        "",
+                        ""
+                    ],
+                    "search_engine": [
+                        "",
+                        ""
+                    ],
+                    "search_engine_score": [
+                        "",
+                        ""
+                    ],
+                    "smallmolecule_abundance_sub": [
+                        "",
+                        ""
+                    ],
+                    "smallmolecule_abundance_stdev_sub": [
+                        "",
+                        ""
+                    ],
+                    "smallmolecule_abundance_std_error_sub": [
+                        "",
+                        ""
+                    ],
+                    "Assay 1": [
+                        "99999",
+                        ""
+                    ],
+                    "Assay 2": [
+                        "111",
+                        ""
+                    ],
+                    "Assay 3": [
+                        "111",
+                        ""
+                    ]
+                },
                 "rowIndices": [],
                 "columnIndices": [],
                 "filteredTotalRowCount": 0,
@@ -813,32 +1587,32 @@
     "tags": [],
     "studyDbMetadata": {
         "dbId": -1,
-        "studyId": "",
+        "studyId": "REQ2025111188888",
         "numericStudyId": -1,
         "obfuscationCode": "",
         "studySize": -1,
-        "submissionDate": "",
+        "submissionDate": "2025-10-10",
         "releaseDate": "",
         "updateDate": "",
         "statusDate": "",
         "studyTypes": [],
-        "status": "DORMANT",
-        "curationRequest": "MANUAL_CURATION",
+        "status": "SUBMITTED",
+        "curationRequest": "NO_CURATION",
         "overrides": {},
         "submitters": [],
         "reservedAccession": "",
-        "reservedSubmissionId": "",
+        "reservedSubmissionId": "REQ2025111188888",
         "revisionDate": "",
         "revisionNumber": 0,
         "revisionComment": "",
         "firstPrivateDate": "",
-        "firstPublicDate": "",
+        "firstPublicDate": "2025-11-11",
         "datasetLicense": "",
         "datasetLicenseVersion": "",
         "datasetLicenseUrl": "",
-        "sampleTemplate": "",
+        "sampleTemplate": "minimum",
         "studyCategory": 0,
-        "templateVersion": "",
+        "templateVersion": "1.0",
         "reservedMhdAccession": "",
         "mhdModelVersion": ""
     },

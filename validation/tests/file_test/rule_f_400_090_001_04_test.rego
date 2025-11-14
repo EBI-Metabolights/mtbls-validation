@@ -1,9 +1,12 @@
+#########################################################################################################
 # Unit tests for rule_f_400_090_001_04
+#########################################################################################################
 package tests.file_test
+
 import data.metabolights.validation.v2.rules.phase4.violations as rules
 
 import rego.v1
-# import data.<target rules package> as rules
+
 # METADATA
 # title: Data files contain zero byte data.
 # description: Check data files and re-upload.
@@ -12,48 +15,45 @@ import rego.v1
 #  type: ERROR
 #  priority: CRITICAL
 #  section: files.general
-test_rule_f_400_090_001_04 := true
+rule_f_400_090_001_04_test_cases := 1
 
 # METADATA
 # title: Data files contain zero byte data.
 # description: Check data files and re-upload.
 test_rule_f_400_090_001_04_no_violation_01 if {
 	result := rules.rule_f_400_090_001_04 with input as {
-        "studyFolderMetadata": {
-            "files": {
-                "FILES/data1.raw": {"sizeInBytes": 100},
-                "FILES/data2.raw": {"sizeInBytes": 100},
-                "FILES/data3.raw": {"sizeInBytes": 100},
-                "FILES/data4.raw": {"sizeInBytes": 100},
-                "FILES/derived_data1.raw": {"sizeInBytes": 100},
-                "FILES/derived_data2.raw": {"sizeInBytes": 100},
-                "FILES/derived_data3.raw": {"sizeInBytes": 100},
-                "FILES/derived_data4.raw": {"sizeInBytes": 100},
-                "FILES/fid_001.zip": {"sizeInBytes": 100},
-                "FILES/acqu_001.zip": {"sizeInBytes": 100},
-            }
-        },
+		"studyFolderMetadata": {"files": {
+			"FILES/data1.raw": {"sizeInBytes": 100},
+			"FILES/data2.raw": {"sizeInBytes": 100},
+			"FILES/data3.raw": {"sizeInBytes": 100},
+			"FILES/data4.raw": {"sizeInBytes": 100},
+			"FILES/derived_data1.raw": {"sizeInBytes": 100},
+			"FILES/derived_data2.raw": {"sizeInBytes": 100},
+			"FILES/derived_data3.raw": {"sizeInBytes": 100},
+			"FILES/derived_data4.raw": {"sizeInBytes": 100},
+			"FILES/fid_001.zip": {"sizeInBytes": 100},
+			"FILES/acqu_001.zip": {"sizeInBytes": 100},
+		}},
 		"investigationFilePath": "i_Investigation.txt",
 		"assays": {"a_MTBLS1.txt": {"assayTechnique": {"name": "LC-MS"}, "table": {
 			"rowOffset": 0, "totalRowCount": 4,
 			"headers": [
-				{"columnCategory": "", "columnStructure": "SINGLE_COLUMN", "columnName": "Sample Name",  "columnHeader": "Sample Name", "columnIndex": 0},
-				{"columnCategory": "", "columnStructure": "SINGLE_COLUMN", "columnName": "Raw Spectral Data File", "columnHeader": "Raw Spectral Data File","columnIndex": 1},
-				{"columnCategory": "", "columnStructure": "SINGLE_COLUMN", "columnName": "Derived Spectral Data File", "columnHeader": "Derived Spectral Data File","columnIndex": 2},
-				{"columnCategory": "", "columnStructure": "SINGLE_COLUMN", "columnName": "Free Induction Decay Data File",  "columnHeader": "Free Induction Decay Data File","columnIndex": 3},
-				{"columnCategory": "", "columnStructure": "SINGLE_COLUMN", "columnName": "Acquisition Parameter Data File", "columnHeader": "Acquisition Parameter Data File","columnIndex": 4},
-				{"columnCategory": "", "columnStructure": "SINGLE_COLUMN", "columnName": "Parameter Value[Instrument]", "columnHeader": "Parameter Value[Instrument]","columnIndex": 5},
-				{"columnCategory": "", "columnStructure": "SINGLE_COLUMN", "columnName": "Data Transformation Name", "columnHeader": "Data Transformation Name","columnIndex": 6},
+				{"columnCategory": "", "columnStructure": "SINGLE_COLUMN", "columnName": "Sample Name", "columnHeader": "Sample Name", "columnIndex": 0},
+				{"columnCategory": "", "columnStructure": "SINGLE_COLUMN", "columnName": "Raw Spectral Data File", "columnHeader": "Raw Spectral Data File", "columnIndex": 1},
+				{"columnCategory": "", "columnStructure": "SINGLE_COLUMN", "columnName": "Derived Spectral Data File", "columnHeader": "Derived Spectral Data File", "columnIndex": 2},
+				{"columnCategory": "", "columnStructure": "SINGLE_COLUMN", "columnName": "Free Induction Decay Data File", "columnHeader": "Free Induction Decay Data File", "columnIndex": 3},
+				{"columnCategory": "", "columnStructure": "SINGLE_COLUMN", "columnName": "Acquisition Parameter Data File", "columnHeader": "Acquisition Parameter Data File", "columnIndex": 4},
+				{"columnCategory": "", "columnStructure": "SINGLE_COLUMN", "columnName": "Parameter Value[Instrument]", "columnHeader": "Parameter Value[Instrument]", "columnIndex": 5},
+				{"columnCategory": "", "columnStructure": "SINGLE_COLUMN", "columnName": "Data Transformation Name", "columnHeader": "Data Transformation Name", "columnIndex": 6},
 			],
 			"columns": [
 				"Sample Name",
-                "Raw Spectral Data File",
-                "Derived Spectral Data File",
-                "Free Induction Decay Data File",
-                "Acquisition Parameter Data File",
-                "Parameter Value[Instrument]",
-                "Data Transformation Name"
-
+				"Raw Spectral Data File",
+				"Derived Spectral Data File",
+				"Free Induction Decay Data File",
+				"Acquisition Parameter Data File",
+				"Parameter Value[Instrument]",
+				"Data Transformation Name",
 			],
 			"data": {
 				"Sample Name": ["1", "2", "3", "4"],
@@ -76,42 +76,39 @@ test_rule_f_400_090_001_04_no_violation_01 if {
 # title: Data files contain zero byte data.
 # description: Check data files and re-upload.
 test_rule_f_400_090_001_04_violation_01 if {
-result := rules.rule_f_400_090_001_04 with input as {
-        "studyFolderMetadata": {
-            "files": {
-                "FILES/data1.raw": {"sizeInBytes": 100},
-                "FILES/data2.raw": {"sizeInBytes": 100},
-                "FILES/data3.raw": {"sizeInBytes": 100},
-                "FILES/data4.raw": {"sizeInBytes": 100},
-                "FILES/derived_data1.raw": {"sizeInBytes": 0},
-                "FILES/derived_data2.raw": {"sizeInBytes": 100},
-                "FILES/derived_data3.raw": {"sizeInBytes": -1},
-                "FILES/derived_data4.raw": {"sizeInBytes": 100},
-                "FILES/fid_001.zip": {"sizeInBytes": 100},
-                "FILES/acqu_001.zip": {"sizeInBytes": 100},
-            }
-        },
+	result := rules.rule_f_400_090_001_04 with input as {
+		"studyFolderMetadata": {"files": {
+			"FILES/data1.raw": {"sizeInBytes": 100},
+			"FILES/data2.raw": {"sizeInBytes": 100},
+			"FILES/data3.raw": {"sizeInBytes": 100},
+			"FILES/data4.raw": {"sizeInBytes": 100},
+			"FILES/derived_data1.raw": {"sizeInBytes": 0},
+			"FILES/derived_data2.raw": {"sizeInBytes": 100},
+			"FILES/derived_data3.raw": {"sizeInBytes": -1},
+			"FILES/derived_data4.raw": {"sizeInBytes": 100},
+			"FILES/fid_001.zip": {"sizeInBytes": 100},
+			"FILES/acqu_001.zip": {"sizeInBytes": 100},
+		}},
 		"investigationFilePath": "i_Investigation.txt",
 		"assays": {"a_MTBLS1.txt": {"assayTechnique": {"name": "LC-MS"}, "table": {
 			"rowOffset": 0, "totalRowCount": 4,
 			"headers": [
-				{"columnCategory": "", "columnStructure": "SINGLE_COLUMN", "columnName": "Sample Name",  "columnHeader": "Sample Name", "columnIndex": 0},
-				{"columnCategory": "", "columnStructure": "SINGLE_COLUMN", "columnName": "Raw Spectral Data File", "columnHeader": "Raw Spectral Data File","columnIndex": 1},
-				{"columnCategory": "", "columnStructure": "SINGLE_COLUMN", "columnName": "Derived Spectral Data File", "columnHeader": "Derived Spectral Data File","columnIndex": 2},
-				{"columnCategory": "", "columnStructure": "SINGLE_COLUMN", "columnName": "Free Induction Decay Data File",  "columnHeader": "Free Induction Decay Data File","columnIndex": 3},
-				{"columnCategory": "", "columnStructure": "SINGLE_COLUMN", "columnName": "Acquisition Parameter Data File", "columnHeader": "Acquisition Parameter Data File","columnIndex": 4},
-				{"columnCategory": "", "columnStructure": "SINGLE_COLUMN", "columnName": "Parameter Value[Instrument]", "columnHeader": "Parameter Value[Instrument]","columnIndex": 5},
-				{"columnCategory": "", "columnStructure": "SINGLE_COLUMN", "columnName": "Data Transformation Name", "columnHeader": "Data Transformation Name","columnIndex": 6},
+				{"columnCategory": "", "columnStructure": "SINGLE_COLUMN", "columnName": "Sample Name", "columnHeader": "Sample Name", "columnIndex": 0},
+				{"columnCategory": "", "columnStructure": "SINGLE_COLUMN", "columnName": "Raw Spectral Data File", "columnHeader": "Raw Spectral Data File", "columnIndex": 1},
+				{"columnCategory": "", "columnStructure": "SINGLE_COLUMN", "columnName": "Derived Spectral Data File", "columnHeader": "Derived Spectral Data File", "columnIndex": 2},
+				{"columnCategory": "", "columnStructure": "SINGLE_COLUMN", "columnName": "Free Induction Decay Data File", "columnHeader": "Free Induction Decay Data File", "columnIndex": 3},
+				{"columnCategory": "", "columnStructure": "SINGLE_COLUMN", "columnName": "Acquisition Parameter Data File", "columnHeader": "Acquisition Parameter Data File", "columnIndex": 4},
+				{"columnCategory": "", "columnStructure": "SINGLE_COLUMN", "columnName": "Parameter Value[Instrument]", "columnHeader": "Parameter Value[Instrument]", "columnIndex": 5},
+				{"columnCategory": "", "columnStructure": "SINGLE_COLUMN", "columnName": "Data Transformation Name", "columnHeader": "Data Transformation Name", "columnIndex": 6},
 			],
 			"columns": [
 				"Sample Name",
-                "Raw Spectral Data File",
-                "Derived Spectral Data File",
-                "Free Induction Decay Data File",
-                "Acquisition Parameter Data File",
-                "Parameter Value[Instrument]",
-                "Data Transformation Name"
-
+				"Raw Spectral Data File",
+				"Derived Spectral Data File",
+				"Free Induction Decay Data File",
+				"Acquisition Parameter Data File",
+				"Parameter Value[Instrument]",
+				"Data Transformation Name",
 			],
 			"data": {
 				"Sample Name": ["1", "2", "3", "4"],

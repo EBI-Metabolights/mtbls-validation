@@ -1,8 +1,10 @@
+#########################################################################################################
 # Unit tests for rule_s_200_090_002_10
+#########################################################################################################
 package tests.sample_test
 
 import rego.v1
-# import data.<target rules package> as rules
+
 # METADATA
 # title: Term is not a child of of the selected ontology terms.
 # description: The term MUST be a child of the selected ontology terms.
@@ -11,7 +13,7 @@ import rego.v1
 #  type: ERROR
 #  priority: HIGH
 #  section: samples.general
-test_rule_s_200_090_002_10 := true
+rule_s_200_090_002_10_test_cases := 1
 
 # # METADATA
 # # title: <title>.

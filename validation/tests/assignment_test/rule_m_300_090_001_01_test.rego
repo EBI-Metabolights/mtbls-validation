@@ -1,8 +1,10 @@
+#########################################################################################################
 # Unit tests for rule_m_300_090_001_01
+#########################################################################################################
 package tests.assignment_test
 
 import rego.v1
-# import data.<target rules package> as rules
+
 # METADATA
 # title: Values with trailing or leading spaces in metabolite assignment file.
 # description: Values in metabolite assignment file should not start or end with space characters.
@@ -11,7 +13,7 @@ import rego.v1
 #  type: ERROR
 #  priority: HIGH
 #  section: metabolites.general
-test_rule_m_300_090_001_01 := true
+rule_m_300_090_001_01_test_cases := 1
 
 # # METADATA
 # # title: <title>.

@@ -1,8 +1,10 @@
+#########################################################################################################
 # Unit tests for rule_m_300_200_001_01
+#########################################################################################################
 package tests.assignment_test
 
 import rego.v1
-# import data.<target rules package> as rules
+
 # METADATA
 # title: chemical_shift column has empty values in metabolite assignment file.
 # description: All 'chemical_shift' column values should be defined in metabolite assignment file.
@@ -11,7 +13,7 @@ import rego.v1
 #  type: WARNING
 #  priority: CRITICAL
 #  section: metabolites.nmr
-test_rule_m_300_200_001_01 := true
+rule_m_300_200_001_01_test_cases := 1
 
 # # METADATA
 # # title: <title>.

@@ -1,8 +1,10 @@
+#########################################################################################################
 # Unit tests for rule_s_100_100_001_14
+#########################################################################################################
 package tests.sample_test
 
 import rego.v1
-# import data.<target rules package> as rules
+
 # METADATA
 # title: Multiple Characteristics / Factor Value columns with same header are not allowed in sample file.
 # description: Characteristics and Factor Value column headers should be unique in sample file.
@@ -11,7 +13,7 @@ import rego.v1
 #  type: ERROR
 #  priority: CRITICAL
 #  section: samples.columns
-test_rule_s_100_100_001_14 := true
+rule_s_100_100_001_14_test_cases := 1
 
 # # METADATA
 # # title: <title>.

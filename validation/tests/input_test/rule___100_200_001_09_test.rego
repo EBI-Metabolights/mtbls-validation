@@ -1,8 +1,12 @@
+#########################################################################################################
 # Unit tests for rule___100_200_001_09
+#########################################################################################################
 package tests.input_test
 
+import data.metabolights.validation.v2.rules.phase1.violations as rules
+
 import rego.v1
-# import data.<target rules package> as rules
+
 # METADATA
 # title: Sample file is not referenced in i_Investigation.txt file.
 # description: Update i_Investigation.txt file to reference the sample file or delete it.
@@ -11,21 +15,30 @@ import rego.v1
 #  type: ERROR
 #  priority: CRITICAL
 #  section: samples.general
-test_rule___100_200_001_09 := true
+rule___100_200_001_09_test_cases := 1
 
-# # METADATA
-# # title: <title>.
-# # description: <description>.
-# test_tests.input_test_no_violation_01 if {
-# 	result := rules.tests.input_test with input as {
-# 	}
-# 	count(result) == 0
-# }
-# # METADATA
-# # title: <title>.
-# # description: <description>.
-# test_tests.input_test_violation_01 if {
-# 	result := rules.tests.input_test with input as {
-# 	}
-# 	count(result) == 1
-# }
+# METADATA
+# title: Sample file is referenced in i_Investigation.txt file..
+# description:  Sample file is not referenced in i_Investigation.txt file.
+test_rule___100_200_001_09_no_violation_01 if {
+	result := rules.rule___100_200_001_09 with input as {
+		"investigationFilePath": "i_Investigation.txt",
+		"samples": {"s_MTBLS1.txt": {}},
+		"investigation": {"studies": [{"fileName": "s_MTBLS1.txt"}]},
+		"parserMessages": {"s_MTBLS1.txt": []},
+	}
+	count(result) == 0
+}
+
+# METADATA
+# title: Sample file is not referenced in i_Investigation.txt file..
+# description:  Sample file is not referenced in i_Investigation.txt file.
+test_rule___100_200_001_09_violation_01 if {
+	result := rules.rule___100_200_001_09 with input as {
+		"investigationFilePath": "i_Investigation.txt",
+		"samples": {"s_MTBLS1.txt": {}},
+		"investigation": {"studies": [{"fileName": "s_MTBLS2.txt"}]},
+		"parserMessages": {"s_MTBLS2.txt": []},
+	}
+	count(result) == 1
+}

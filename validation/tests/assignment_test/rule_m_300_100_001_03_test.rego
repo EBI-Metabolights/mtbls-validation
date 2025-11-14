@@ -1,8 +1,10 @@
+#########################################################################################################
 # Unit tests for rule_m_300_100_001_03
+#########################################################################################################
 package tests.assignment_test
 
 import rego.v1
-# import data.<target rules package> as rules
+
 # METADATA
 # title: retention_time column values not numeric in metabolite assignment file.
 # description: All 'retention_time' column values should be numeric.
@@ -11,7 +13,7 @@ import rego.v1
 #  type: WARNING
 #  priority: HIGH
 #  section: metabolites.lcms
-test_rule_m_300_100_001_03 := true
+rule_m_300_100_001_03_test_cases := 1
 
 # # METADATA
 # # title: <title>.

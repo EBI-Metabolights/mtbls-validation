@@ -1,8 +1,10 @@
+#########################################################################################################
 # Unit tests for rule_s_100_100_001_02
+#########################################################################################################
 package tests.sample_test
 
 import rego.v1
-# import data.<target rules package> as rules
+
 # METADATA
 # title: Unordered or unlinked column structure in sample file.
 # description: There is an unordered or unlinked column in sample file. Check column order.
@@ -11,7 +13,7 @@ import rego.v1
 #  type: ERROR
 #  priority: CRITICAL
 #  section: samples.columns
-test_rule_s_100_100_001_02 := true
+rule_s_100_100_001_02_test_cases := 1
 
 # # METADATA
 # # title: <title>.

@@ -1,8 +1,12 @@
+#########################################################################################################
 # Unit tests for rule_i_100_360_004_02
+#########################################################################################################
 package tests.investigation_test
 
+import data.metabolights.validation.v2.rules.phase1.violations as rules
+
 import rego.v1
-# import data.<target rules package> as rules
+
 # METADATA
 # title: Study Person Email not valid.
 # description: Study Person Email must have valid format.
@@ -11,7 +15,7 @@ import rego.v1
 #  type: ERROR
 #  priority: HIGH
 #  section: investigation.studyContacts
-test_rule_i_100_360_004_02 := true
+rule_i_100_360_004_02_test_cases := 1
 
 # # METADATA
 # # title: <title>.

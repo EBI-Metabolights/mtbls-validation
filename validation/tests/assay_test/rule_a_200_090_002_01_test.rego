@@ -1,9 +1,12 @@
+#########################################################################################################
 # Unit tests for rule_a_200_090_002_01
+#########################################################################################################
 package tests.assay_test
+
 import data.metabolights.validation.v2.rules.phase2.violations as rules
 
 import rego.v1
-# import data.<target rules package> as rules
+
 # METADATA
 # title: Ontology Term Source REF is not selected from the prioritised ontologies.
 # description: Select a term from one of the prioritised sources where possible.
@@ -12,7 +15,7 @@ import rego.v1
 #  type: ERROR
 #  priority: HIGH
 #  section: assays.general
-test_rule_a_200_090_002_01 := true
+rule_a_200_090_002_01_test_cases := 1
 
 # # METADATA
 # # title: <title>.

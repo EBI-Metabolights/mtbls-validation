@@ -1,8 +1,12 @@
+#########################################################################################################
 # Unit tests for rule_a_100_100_001_02
+#########################################################################################################
 package tests.assay_test
+
 import data.metabolights.validation.v2.rules.phase1.violations as rules
 
 import rego.v1
+
 # METADATA
 # title: Unordered or unlinked column structure in assay file.
 # description: There is an unordered or unlinked column in assay file. Check column order.
@@ -11,7 +15,7 @@ import rego.v1
 #  type: ERROR
 #  priority: CRITICAL
 #  section: assays.columns
-test_rule_a_100_100_001_02 := true
+rule_a_100_100_001_02_test_cases := 1
 
 # METADATA
 # title: There is no Unordered or unlinked column in the assay file

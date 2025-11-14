@@ -1,8 +1,12 @@
+#########################################################################################################
 # Unit tests for rule_i_100_360_011_02
+#########################################################################################################
 package tests.investigation_test
 
+import data.metabolights.validation.v2.rules.phase1.violations as rules
+
 import rego.v1
-# import data.<target rules package> as rules
+
 # METADATA
 # title: Principal Investigator contact details not defined.
 # description: Principal Investigator first name, last name, ORCID, affiliation, affiliation ROR id and email must be defined. At least one of them is not defined.
@@ -11,7 +15,7 @@ import rego.v1
 #  type: ERROR
 #  priority: CRITICAL
 #  section: investigation.studyContacts
-test_rule_i_100_360_011_02 := true
+rule_i_100_360_011_02_test_cases := 1
 
 # # METADATA
 # # title: <title>.

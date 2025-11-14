@@ -1,8 +1,10 @@
+#########################################################################################################
 # Unit tests for rule_s_200_090_002_03
+#########################################################################################################
 package tests.sample_test
 
 import rego.v1
-# import data.<target rules package> as rules
+
 # METADATA
 # title: Ontology Term Source REF not referenced in investigation file.
 # description: All ontology Term Source REFs should be referenced in ONTOLOGY SOURCE REFERENCE section in i_Investigation.txt.
@@ -11,7 +13,7 @@ import rego.v1
 #  type: WARNING
 #  priority: HIGH
 #  section: samples.general
-test_rule_s_200_090_002_03 := true
+rule_s_200_090_002_03_test_cases := 1
 
 # # METADATA
 # # title: <title>.

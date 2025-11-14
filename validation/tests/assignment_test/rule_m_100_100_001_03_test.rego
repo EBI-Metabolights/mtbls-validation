@@ -1,8 +1,10 @@
+#########################################################################################################
 # Unit tests for rule_m_100_100_001_03
+#########################################################################################################
 package tests.assignment_test
 
 import rego.v1
-# import data.<target rules package> as rules
+
 # METADATA
 # title: Empty columns in metabolite assignment file.
 # description: Empty columns must not exist in metabolite assignment file. All column headers should be defined.
@@ -11,7 +13,7 @@ import rego.v1
 #  type: ERROR
 #  priority: CRITICAL
 #  section: metabolites.general
-test_rule_m_100_100_001_03 := true
+rule_m_100_100_001_03_test_cases := 1
 
 # # METADATA
 # # title: <title>.

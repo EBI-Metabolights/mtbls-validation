@@ -1,9 +1,12 @@
+#########################################################################################################
 # Unit tests for rule_a_200_090_001_01
+#########################################################################################################
 package tests.assay_test
+
 import data.metabolights.validation.v2.rules.phase2.violations as rules
 
 import rego.v1
-# import data.<target rules package> as rules
+
 # METADATA
 # title: Values with trailing or leading spaces in assay file.
 # description: Values in assay file should not start or end with space characters.
@@ -12,7 +15,7 @@ import rego.v1
 #  type: ERROR
 #  priority: HIGH
 #  section: assays.general
-test_rule_a_200_090_001_01 := true
+rule_a_200_090_001_01_test_cases := 1
 
 # METADATA
 # title: Values without trailing or leading spaces found in the assay file.

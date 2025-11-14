@@ -1,8 +1,10 @@
+#########################################################################################################
 # Unit tests for rule_s_200_090_003_04
+#########################################################################################################
 package tests.sample_test
 
 import rego.v1
-# import data.<target rules package> as rules
+
 # METADATA
 # title: Term Accession Number defined for empty unit ontology terms.
 # description: Select unit ontology terms and/or change ontology Term Accession Number.
@@ -11,7 +13,7 @@ import rego.v1
 #  type: WARNING
 #  priority: HIGH
 #  section: samples.general
-test_rule_s_200_090_003_04 := true
+rule_s_200_090_003_04_test_cases := 1
 
 # # METADATA
 # # title: <title>.

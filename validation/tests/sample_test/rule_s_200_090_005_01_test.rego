@@ -1,8 +1,10 @@
+#########################################################################################################
 # Unit tests for rule_s_200_090_005_01
+#########################################################################################################
 package tests.sample_test
 
 import rego.v1
-# import data.<target rules package> as rules
+
 # METADATA
 # title: Values for Protocol REF column not valid in sample file.
 # description: All rows should be filled with the same value (case sensitive).
@@ -11,7 +13,7 @@ import rego.v1
 #  type: ERROR
 #  priority: HIGH
 #  section: samples.general
-test_rule_s_200_090_005_01 := true
+rule_s_200_090_005_01_test_cases := 1
 
 # # METADATA
 # # title: <title>.

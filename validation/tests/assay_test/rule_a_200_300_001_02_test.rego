@@ -1,9 +1,12 @@
+#########################################################################################################
 # Unit tests for rule_a_200_300_001_02
+#########################################################################################################
 package tests.assay_test
+
 import data.metabolights.validation.v2.rules.phase2.violations as rules
 
 import rego.v1
-# import data.<target rules package> as rules
+
 # METADATA
 # title: Derived Spectral Data File' is defined but 'Raw Spectral Data File' is empty in assay file.
 # description: Derived Spectral Data File is defined without Raw Spectral Data File. We recommend to upload raw file and reference it.
@@ -12,7 +15,7 @@ import rego.v1
 #  type: WARNING
 #  priority: HIGH
 #  section: assays.mass_spectrometry
-test_rule_a_200_300_001_02 := true
+rule_a_200_300_001_02_test_cases := 1
 
 # METADATA
 # title: Derived Spectral Data File is defined and Raw Spectral Data File is not empty.
@@ -28,7 +31,6 @@ test_rule_a_200_300_001_02_no_violation_01 if {
 					"columnCategory": "Parameter Value", "columnStructure": "ONTOLOGY_COLUMN", "columnHeader": "Parameter Value[Instrument]",
 					"columnName": "Parameter Value[Instrument]", "columnIndex": 0,
 					"additionalColumns": ["Term Source REF", "Term Accession Number"],
-					
 				},
 				{"columnCategory": "", "columnStructure": "LINKED_COLUMN", "columnHeader": "Term Source REF", "columnName": "Term Source REF", "columnIndex": 1},
 				{"columnCategory": "", "columnStructure": "LINKED_COLUMN", "columnHeader": "Term Accession Number", "columnName": "Term Accession Number", "columnIndex": 2},
@@ -94,7 +96,6 @@ test_rule_a_200_300_001_02_violation_01 if {
 					"columnCategory": "Parameter Value", "columnStructure": "ONTOLOGY_COLUMN", "columnHeader": "Parameter Value[Instrument]",
 					"columnName": "Parameter Value[Instrument]", "columnIndex": 0,
 					"additionalColumns": ["Term Source REF", "Term Accession Number"],
-					
 				},
 				{"columnCategory": "", "columnStructure": "LINKED_COLUMN", "columnHeader": "Term Source REF", "columnName": "Term Source REF", "columnIndex": 1},
 				{"columnCategory": "", "columnStructure": "LINKED_COLUMN", "columnHeader": "Term Accession Number", "columnName": "Term Accession Number", "columnIndex": 2},

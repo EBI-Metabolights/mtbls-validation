@@ -1,8 +1,10 @@
+#########################################################################################################
 # Unit tests for rule_m_300_090_005_01
+#########################################################################################################
 package tests.assignment_test
 
 import rego.v1
-# import data.<target rules package> as rules
+
 # METADATA
 # title: Values for required columns not in metabolite assignment file.
 # description: All required column values should be defined in metabolite assignment file.
@@ -11,7 +13,7 @@ import rego.v1
 #  type: ERROR
 #  priority: HIGH
 #  section: metabolites.general
-test_rule_m_300_090_005_01 := true
+rule_m_300_090_005_01_test_cases := 1
 
 # # METADATA
 # # title: <title>.

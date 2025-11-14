@@ -1,8 +1,10 @@
+#########################################################################################################
 # Unit tests for rule_s_200_090_001_01
+#########################################################################################################
 package tests.sample_test
 
 import rego.v1
-# import data.<target rules package> as rules
+
 # METADATA
 # title: Values with trailing or leading spaces in sample file.
 # description: Values in sample file should not start or end with space characters.
@@ -11,7 +13,7 @@ import rego.v1
 #  type: ERROR
 #  priority: HIGH
 #  section: samples.general
-test_rule_s_200_090_001_01 := true
+rule_s_200_090_001_01_test_cases := 1
 
 # # METADATA
 # # title: <title>.

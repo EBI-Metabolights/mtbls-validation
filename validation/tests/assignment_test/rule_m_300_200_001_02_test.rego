@@ -1,8 +1,10 @@
+#########################################################################################################
 # Unit tests for rule_m_300_200_001_02
+#########################################################################################################
 package tests.assignment_test
 
 import rego.v1
-# import data.<target rules package> as rules
+
 # METADATA
 # title: chemical_shift column values not numeric in metabolite assignment file.
 # description: All 'chemical_shift' column values should be numeric in metabolite assignment file.
@@ -11,7 +13,7 @@ import rego.v1
 #  type: WARNING
 #  priority: HIGH
 #  section: metabolites.nmr
-test_rule_m_300_200_001_02 := true
+rule_m_300_200_001_02_test_cases := 1
 
 # # METADATA
 # # title: <title>.

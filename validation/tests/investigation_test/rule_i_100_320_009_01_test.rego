@@ -1,8 +1,13 @@
+#########################################################################################################
 # Unit tests for rule_i_100_320_009_01
+#########################################################################################################
 package tests.investigation_test
 
+import data.metabolights.validation.v2.rules.phase1.definitions as def
+import data.metabolights.validation.v2.rules.phase1.violations as rules
+import data.tests.data.inputs.rules as test_rules
 import rego.v1
-# import data.<target rules package> as rules
+
 # METADATA
 # title: Study Publication Status is not selected from the default ontology list.
 # description: Study Publication Status value MAY be selected from the default ontology list.
@@ -11,21 +16,4 @@ import rego.v1
 #  type: WARNING
 #  priority: HIGH
 #  section: investigation.studyPublications
-test_rule_i_100_320_009_01 := true
-
-# # METADATA
-# # title: <title>.
-# # description: <description>.
-# test_tests.investigation_test_no_violation_01 if {
-# 	result := rules.tests.investigation_test with input as {
-# 	}
-# 	count(result) == 0
-# }
-# # METADATA
-# # title: <title>.
-# # description: <description>.
-# test_tests.investigation_test_violation_01 if {
-# 	result := rules.tests.investigation_test with input as {
-# 	}
-# 	count(result) == 1
-# }
+rule_i_100_320_009_01_test_cases := 1

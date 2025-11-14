@@ -1,9 +1,12 @@
+#########################################################################################################
 # Unit tests for rule_a_200_090_005_01
+#########################################################################################################
 package tests.assay_test
+
 import data.metabolights.validation.v2.rules.phase2.violations as rules
 
 import rego.v1
-# import data.<target rules package> as rules
+
 # METADATA
 # title: Values for Protocol REF column not valid in assay file.
 # description: All rows should be filled with the same value (case sensitive).
@@ -12,7 +15,7 @@ import rego.v1
 #  type: ERROR
 #  priority: CRITICAL
 #  section: assays.general
-test_rule_a_200_090_005_01 := true
+rule_a_200_090_005_01_test_cases := 1
 
 # METADATA
 # title: All values are valid in Protocol REF column.
@@ -27,7 +30,6 @@ test_rule_a_200_090_005_01_no_violation_01 if {
 					"columnCategory": "Parameter Value", "columnStructure": "ONTOLOGY_COLUMN", "columnHeader": "Parameter Value[Instrument]",
 					"columnName": "Parameter Value[Instrument]", "columnIndex": 0,
 					"additionalColumns": ["Term Source REF", "Term Accession Number"],
-					
 				},
 				{"columnCategory": "", "columnStructure": "LINKED_COLUMN", "columnHeader": "Term Source REF", "columnName": "Term Source REF", "columnIndex": 1},
 				{"columnCategory": "", "columnStructure": "LINKED_COLUMN", "columnHeader": "Term Accession Number", "columnName": "Term Accession Number", "columnIndex": 2},
@@ -77,7 +79,7 @@ test_rule_a_200_090_005_01_no_violation_01 if {
 					"columnStructure": "ONTOLOGY_COLUMN",
 					"columnCategory": "Parameter Value",
 					"columnHeader": "Parameter Value[Instrument]",
-					"columnPrefix": "Parameter Value","defaultColumnIndex": 1,
+					"columnPrefix": "Parameter Value", "defaultColumnIndex": 1,
 					"defaultValue": null,
 					"maxLength": 0,
 					"minLength": 5,
@@ -87,7 +89,7 @@ test_rule_a_200_090_005_01_no_violation_01 if {
 					"columnStructure": "ONTOLOGY_COLUMN",
 					"columnCategory": "Parameter Value",
 					"columnHeader": "Parameter Value[Column model]",
-					"columnPrefix": "Parameter Value","defaultColumnIndex": 1,
+					"columnPrefix": "Parameter Value", "defaultColumnIndex": 1,
 					"defaultValue": null,
 					"maxLength": 0,
 					"minLength": 5,
@@ -97,7 +99,7 @@ test_rule_a_200_090_005_01_no_violation_01 if {
 					"columnStructure": "SINGLE_COLUMN",
 					"columnCategory": "Protocol",
 					"columnHeader": "Protocol REF",
-					"columnPrefix": "","defaultColumnIndex": 7,
+					"columnPrefix": "", "defaultColumnIndex": 7,
 					"defaultValue": "Extraction",
 					"maxLength": 0,
 					"minLength": 0,
@@ -107,7 +109,7 @@ test_rule_a_200_090_005_01_no_violation_01 if {
 					"columnStructure": "SINGLE_COLUMN",
 					"columnCategory": "Protocol",
 					"columnHeader": "Protocol REF",
-					"columnPrefix": "","defaultColumnIndex": 7,
+					"columnPrefix": "", "defaultColumnIndex": 7,
 					"defaultValue": "Metabolite identification",
 					"maxLength": 0,
 					"minLength": 0,
@@ -132,7 +134,6 @@ test_rule_a_200_090_005_01_violation_01 if {
 					"columnCategory": "Parameter Value", "columnStructure": "ONTOLOGY_COLUMN", "columnHeader": "Parameter Value[Instrument]",
 					"columnName": "Parameter Value[Instrument]", "columnIndex": 0,
 					"additionalColumns": ["Term Source REF", "Term Accession Number"],
-					
 				},
 				{"columnCategory": "", "columnStructure": "LINKED_COLUMN", "columnHeader": "Term Source REF", "columnName": "Term Source REF", "columnIndex": 1},
 				{"columnCategory": "", "columnStructure": "LINKED_COLUMN", "columnHeader": "Term Accession Number", "columnName": "Term Accession Number", "columnIndex": 2},
@@ -174,7 +175,7 @@ test_rule_a_200_090_005_01_violation_01 if {
 			{"sourceName": "NCBITaxon"},
 		]}},
 		"parserMessages": {"s_MTBLS1.txt": []},
-		"studyDbMetadata": {"studyCategory": "other", "sampleTemplate": "minimum",  "templateVersion": "2.0"}
+		"studyDbMetadata": {"studyCategory": "other", "sampleTemplate": "minimum", "templateVersion": "2.0"},
 	}
 		with data.metabolights.validation.v2.templates.assayFileHeaderTemplates as {"LC-MS": [{
 			"version": "2.0",
@@ -183,7 +184,7 @@ test_rule_a_200_090_005_01_violation_01 if {
 					"columnStructure": "ONTOLOGY_COLUMN",
 					"columnCategory": "Parameter Value",
 					"columnHeader": "Parameter Value[Instrument]",
-					"columnPrefix": "Parameter Value","defaultColumnIndex": 1,
+					"columnPrefix": "Parameter Value", "defaultColumnIndex": 1,
 					"defaultValue": null,
 					"maxLength": 0,
 					"minLength": 5,
@@ -193,7 +194,7 @@ test_rule_a_200_090_005_01_violation_01 if {
 					"columnStructure": "ONTOLOGY_COLUMN",
 					"columnCategory": "Parameter Value",
 					"columnHeader": "Parameter Value[Column model]",
-					"columnPrefix": "Parameter Value","defaultColumnIndex": 1,
+					"columnPrefix": "Parameter Value", "defaultColumnIndex": 1,
 					"defaultValue": null,
 					"maxLength": 0,
 					"minLength": 5,
@@ -203,7 +204,7 @@ test_rule_a_200_090_005_01_violation_01 if {
 					"columnStructure": "SINGLE_COLUMN",
 					"columnCategory": "Protocol",
 					"columnHeader": "Protocol REF",
-					"columnPrefix": "","defaultColumnIndex": 7,
+					"columnPrefix": "", "defaultColumnIndex": 7,
 					"defaultValue": "Extraction",
 					"maxLength": 0,
 					"minLength": 0,
@@ -213,7 +214,7 @@ test_rule_a_200_090_005_01_violation_01 if {
 					"columnStructure": "SINGLE_COLUMN",
 					"columnCategory": "Protocol",
 					"columnHeader": "Protocol REF",
-					"columnPrefix": "","defaultColumnIndex": 8,
+					"columnPrefix": "", "defaultColumnIndex": 8,
 					"defaultValue": "Metabolite identification",
 					"maxLength": 0,
 					"minLength": 0,

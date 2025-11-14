@@ -18,8 +18,16 @@ import rego.v1
 #  priority: CRITICAL
 #  section: input
 rule___100_100_001_01 contains result if {
-	not input
-	
+	empty_dict := { x |
+		count(input) == 0
+		x := 1
+	}
+	null_data := { x |
+		not input
+		x := 1
+	}
+	condition = empty_dict | null_data
+	count(condition)> 0
 	result := f.format(rego.metadata.rule(), "Input is not defined.", "input")
 }
 
@@ -32,9 +40,12 @@ rule___100_100_001_01 contains result if {
 #  priority: CRITICAL
 #  section: input
 rule___100_100_001_02 contains result if {
-	[_, errors] := json.match_schema(input, data.schemas)
+	[x, errors] := json.match_schema(input, data.schemas)
+	# print(x)
 	count(errors) > 0
+	# print(errors)
 	result := f.format_schema_error(rego.metadata.rule(), errors)
+	# print(result)
 }
 
 # METADATA
@@ -46,9 +57,8 @@ rule___100_100_001_02 contains result if {
 #  priority: CRITICAL
 #  section: investigation.parserMessages
 rule___100_100_100_01 contains result if {
-	some j
 	file_name := input.investigationFilePath
-	message := input.parserMessages[file_name][j]
+	some message in input.parserMessages[file_name]
 	message.type == "CRITICAL"
 	desc := sprintf("'%v':'%v' line: %v, column: %v", [message.short, message.detail, message.line, message.column])
 	msg := regex.replace(desc, `\s`, " ")
@@ -275,7 +285,7 @@ rule___100_200_001_08 contains result if {
 	pattern := `^s_(MTBLS|REQ)\d{1,20}\.txt$`
 	some file_name, _ in input.samples
 	not regex.match(pattern, file_name)
-	msg := sprintf("Invalid sample file name '%v'. Sample file should start s_ and follow study acession number / submission id (s_<<MTBLSxxx/REQxxx>>.txt).", [file_name])
+	msg := sprintf("Invalid sample file name '%v'. Sample file should start s_ and follow study accession number / submission id (s_<<MTBLSxxx/REQxxx>>.txt).", [file_name])
 	source := file_name
 	result := f.format(rego.metadata.rule(), msg, source)
 }
@@ -587,7 +597,7 @@ rule___100_400_001_04 contains result if {
 #  section: metabolites.general
 rule___100_400_001_05 contains result if {
 	some file_name, assignment in input.metaboliteAssignments
-	count(input.metaboliteAssignments[file_name].assayTechnique.name) == 0
+	count(assignment.assayTechnique.name) == 0
 	msg := sprintf("Assignment file technology type is not determined for '%v'", [file_name])
 
 	sourceFile := file_name
@@ -603,16 +613,13 @@ rule___100_400_001_05 contains result if {
 #  priority: CRITICAL
 #  section: metabolites.general
 rule___100_400_001_06 contains result if {
-	all_files := { x |
-		some x, _ in input.metaboliteAssignments
-	}
-	referenced_files := { file |
+	some file_name, _ in input.metaboliteAssignments
+	referenced_files := { val |
 		some _, assay in input.assays
-		some _, file in assay.referencedAssignmentFiles
+		some val in assay.table.data["Metabolite Assignment File"]
+		val == file_name
 	}
-	extra_files = all_files - referenced_files
-	count(extra_files) > 0
-	some file_name in extra_files
+	count(referenced_files) == 0
 
 	msg := sprintf("Unreferenced metabolite assignment file '%v'", [file_name])
 	result := f.format(rego.metadata.rule(), msg, file_name)

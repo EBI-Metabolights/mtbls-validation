@@ -1,8 +1,11 @@
+#########################################################################################################
 # Unit tests for rule_i_100_300_001_02
+#########################################################################################################
 package tests.investigation_test
 
 import data.metabolights.validation.v2.rules.phase1.violations as rules
 import rego.v1
+
 # METADATA
 # title: More than one study referenced in investigation file.
 # description: Only one study should be defined in i_Investigation.txt.
@@ -11,7 +14,7 @@ import rego.v1
 #  type: ERROR
 #  priority: CRITICAL
 #  section: investigation.studies
-test_rule_i_100_300_001_02 := true
+rule_i_100_300_001_02_test_cases := 1
 
 # METADATA
 # title: There is a study in i_Investigation.txt.

@@ -1,8 +1,10 @@
+#########################################################################################################
 # Unit tests for rule_s_200_090_004_01
+#########################################################################################################
 package tests.sample_test
 
 import rego.v1
-# import data.<target rules package> as rules
+
 # METADATA
 # title: Empty value is found in a required column.
 # description: Complete all values in required columns.
@@ -11,7 +13,7 @@ import rego.v1
 #  type: ERROR
 #  priority: HIGH
 #  section: samples.general
-test_rule_s_200_090_004_01 := true
+rule_s_200_090_004_01_test_cases := 1
 
 # # METADATA
 # # title: <title>.

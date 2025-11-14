@@ -1,8 +1,10 @@
+#########################################################################################################
 # Unit tests for rule_s_200_100_002_04
+#########################################################################################################
 package tests.sample_test
 
 import rego.v1
-# import data.<target rules package> as rules
+
 # METADATA
 # title: Term Accession Number of the user defined characteristics ontology terms is empty.
 # description: We highly recommend to define accession number of the selected term.
@@ -11,7 +13,7 @@ import rego.v1
 #  type: WARNING
 #  priority: MEDIUM
 #  section: samples.source
-test_rule_s_200_100_002_04 := true
+rule_s_200_100_002_04_test_cases := 1
 
 # # METADATA
 # # title: <title>.

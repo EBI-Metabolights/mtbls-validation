@@ -1,9 +1,12 @@
+#########################################################################################################
 # Unit tests for rule_a_200_600_001_01
+#########################################################################################################
 package tests.assay_test
+
 import data.metabolights.validation.v2.rules.phase2.violations as rules
 
 import rego.v1
-# import data.<target rules package> as rules
+
 # METADATA
 # title: Column Type column values are not same as assay file name.
 # description: if all values in Column Type are in a control list, technique name defined in control list should be in assay file name.
@@ -12,7 +15,7 @@ import rego.v1
 #  type: WARNING
 #  priority: CRITICAL
 #  section: assays.chromatography
-test_rule_a_200_600_001_01 := true
+rule_a_200_600_001_01_test_cases := 1
 
 # METADATA
 # title: Column Type column values are not same as assay file name
@@ -28,17 +31,16 @@ test_rule_a_200_600_001_01_no_violation_01 if {
 					"columnCategory": "Parameter Value", "columnStructure": "ONTOLOGY_COLUMN", "columnHeader": "Parameter Value[Column type]",
 					"columnName": "Parameter Value[Column type]", "columnIndex": 0,
 					"additionalColumns": ["Term Source REF", "Term Accession Number"],
-					
-				},				{
+				},
+				{
 					"columnCategory": "Parameter Value", "columnStructure": "ONTOLOGY_COLUMN", "columnHeader": "Parameter Value[Column model]",
 					"columnName": "Parameter Value[Column model]", "columnIndex": 3,
 					"additionalColumns": ["Term Source REF", "Term Accession Number"],
 				},
-
 			],
 			"columns": [
 				"Parameter Value[Column type]",
-				"Parameter Value[Column model]"
+				"Parameter Value[Column model]",
 			],
 			"data": {
 				"Parameter Value[Column type]": ["hilic", "reverse phase", "hilic", "reverse phase"],
@@ -64,17 +66,16 @@ test_rule_a_200_600_001_01_violation_01 if {
 					"columnCategory": "Parameter Value", "columnStructure": "ONTOLOGY_COLUMN", "columnHeader": "Parameter Value[Column type]",
 					"columnName": "Parameter Value[Column type]", "columnIndex": 0,
 					"additionalColumns": ["Term Source REF", "Term Accession Number"],
-					
-				},				{
+				},
+				{
 					"columnCategory": "Parameter Value", "columnStructure": "ONTOLOGY_COLUMN", "columnHeader": "Parameter Value[Column model]",
 					"columnName": "Parameter Value[Column model]", "columnIndex": 3,
 					"additionalColumns": ["Term Source REF", "Term Accession Number"],
 				},
-
 			],
 			"columns": [
 				"Parameter Value[Column type]",
-				"Parameter Value[Column model]"
+				"Parameter Value[Column model]",
 			],
 			"data": {
 				"Parameter Value[Column type]": ["high polarity", "high polarity", "high polarity", "high polarity"],
@@ -85,4 +86,3 @@ test_rule_a_200_600_001_01_violation_01 if {
 	}
 	count(result) == 1
 }
-

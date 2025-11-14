@@ -1,8 +1,10 @@
+#########################################################################################################
 # Unit tests for rule_s_100_100_002_02
+#########################################################################################################
 package tests.sample_test
 
 import rego.v1
-# import data.<target rules package> as rules
+
 # METADATA
 # title: There is only one row in sample file.
 # description: Only one row is defined in sample file. Add more than one row (sample). Please ensure all xxx, including controls, QCs, standards, etc, are referenced.
@@ -11,7 +13,7 @@ import rego.v1
 #  type: ERROR
 #  priority: HIGH
 #  section: samples.rows
-test_rule_s_100_100_002_02 := true
+rule_s_100_100_002_02_test_cases := 1
 
 # # METADATA
 # # title: <title>.

@@ -1,8 +1,12 @@
+#########################################################################################################
 # Unit tests for rule_a_100_100_001_05
+#########################################################################################################
 package tests.assay_test
+
 import data.metabolights.validation.v2.rules.phase1.violations as rules
 
 import rego.v1
+
 # METADATA
 # title: Unexpected 'Protocol REF' column in assay file.
 # description: Unexpected 'Protocol REF' column in assay file. Only one 'Protocol REF' header is allowed in assay file.
@@ -11,7 +15,7 @@ import rego.v1
 #  type: ERROR
 #  priority: CRITICAL
 #  section: assays.columns
-test_rule_a_100_100_001_05 := true
+rule_a_100_100_001_05_test_cases := 1
 
 # METADATA
 # title: Assay files contain expected number of 'Protocol REF' columns.

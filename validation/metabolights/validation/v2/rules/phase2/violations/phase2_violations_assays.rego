@@ -56,7 +56,7 @@ rule_a_200_090_002_01 contains result if {
 	some column_index, header in file_table.table.headers
 	control_lists := data.metabolights.validation.v2.controls.assayFileControls
 	control_lists[header.columnHeader]
-	selected_validation_types = {"any-ontology-term"}
+	selected_validation_types := {"any-ontology-term"}
 	template_name := file_table.assayTechnique.name
 	result := f.term_source_ref_not_valid(
 		rego.metadata.rule(), 

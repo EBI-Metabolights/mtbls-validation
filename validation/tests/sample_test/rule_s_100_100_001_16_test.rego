@@ -1,8 +1,10 @@
+#########################################################################################################
 # Unit tests for rule_s_100_100_001_16
+#########################################################################################################
 package tests.sample_test
 
 import rego.v1
-# import data.<target rules package> as rules
+
 # METADATA
 # title: Unexpected Factor Value columns in sample file.
 # description: There should be a study factor for each Factor Value column in sample file.
@@ -11,7 +13,7 @@ import rego.v1
 #  type: ERROR
 #  priority: CRITICAL
 #  section: samples.columns
-test_rule_s_100_100_001_16 := true
+rule_s_100_100_001_16_test_cases := 1
 
 # # METADATA
 # # title: <title>.

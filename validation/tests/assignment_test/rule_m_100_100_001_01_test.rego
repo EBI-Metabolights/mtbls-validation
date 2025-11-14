@@ -1,8 +1,10 @@
+#########################################################################################################
 # Unit tests for rule_m_100_100_001_01
+#########################################################################################################
 package tests.assignment_test
 
 import rego.v1
-# import data.<target rules package> as rules
+
 # METADATA
 # title: Default columns not in metabolite assignment file.
 # description: Default columns must exist in metabolite assignment file.
@@ -11,7 +13,7 @@ import rego.v1
 #  type: ERROR
 #  priority: CRITICAL
 #  section: metabolites.general
-test_rule_m_100_100_001_01 := true
+rule_m_100_100_001_01_test_cases := 1
 
 # # METADATA
 # # title: <title>.

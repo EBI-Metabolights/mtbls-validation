@@ -8,9 +8,9 @@ _SAMPLES_DEFAULT_CHARACTERISTICS_HEADERS = {x |
 	x := header.columnHeader
 }
 
-_ONTOLOGY_SOURCE_REFERENCE_NAMES := {x.sourceName | x := input.investigation.ontologySourceReferences.references[_]}
+ONTOLOGY_SOURCE_REFERENCE_NAMES := {x.sourceName | x := input.investigation.ontologySourceReferences.references[_]}
 
-_ONTOLOGY_SOURCE_REFERENCE_NAMES_STR := concat(", ", _ONTOLOGY_SOURCE_REFERENCE_NAMES)
+ONTOLOGY_SOURCE_REFERENCE_NAMES_STR := concat(", ", ONTOLOGY_SOURCE_REFERENCE_NAMES)
 
 _ALLOWED_CHARS_PATTERN := concat("", data.metabolights.validation.v2.configuration.allowedChars)
 

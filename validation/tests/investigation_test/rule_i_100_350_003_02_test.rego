@@ -1,8 +1,12 @@
+#########################################################################################################
 # Unit tests for rule_i_100_350_003_02
+#########################################################################################################
 package tests.investigation_test
 
+import data.metabolights.validation.v2.rules.phase1.violations as rules
+
 import rego.v1
-# import data.<target rules package> as rules
+
 # METADATA
 # title: Non-printable characters in Study Protocol Description.
 # description: Study Protocol Description should contain only printable characters.
@@ -11,7 +15,7 @@ import rego.v1
 #  type: ERROR
 #  priority: HIGH
 #  section: investigation.studyProtocols
-test_rule_i_100_350_003_02 := true
+rule_i_100_350_003_02_test_cases := 1
 
 # # METADATA
 # # title: <title>.

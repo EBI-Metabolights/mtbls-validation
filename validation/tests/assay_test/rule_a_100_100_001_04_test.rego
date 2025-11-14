@@ -1,8 +1,12 @@
+#########################################################################################################
 # Unit tests for rule_a_100_100_001_04
+#########################################################################################################
 package tests.assay_test
+
 import data.metabolights.validation.v2.rules.phase1.violations as rules
 
 import rego.v1
+
 # METADATA
 # title: Unexpected column in assay file.
 # description: Rename or remove unexpected columns in assay file.
@@ -11,7 +15,7 @@ import rego.v1
 #  type: ERROR
 #  priority: CRITICAL
 #  section: assays.columns
-test_rule_a_100_100_001_04 := true
+rule_a_100_100_001_04_test_cases := 1
 
 # METADATA
 # title: All columns are expected.

@@ -1,9 +1,12 @@
+#########################################################################################################
 # Unit tests for rule_a_100_100_005_02
+#########################################################################################################
 package tests.assay_test
+
 import data.metabolights.validation.v2.rules.phase1.violations as rules
 
 import rego.v1
-# import data.<target rules package> as rules
+
 # METADATA
 # title: There is only one row in assay file.
 # description: Only one row is defined in assay file. Add more than one row (run). Please ensure all sample, including controls, QCs, standards, etc, are referenced.
@@ -12,7 +15,7 @@ import rego.v1
 #  type: ERROR
 #  priority: HIGH
 #  section: assays.rows
-test_rule_a_100_100_005_02 := true
+rule_a_100_100_005_02_test_cases := 1
 
 # METADATA
 # title: There are more rows in the Assay file.
@@ -39,4 +42,3 @@ test_rule_a_100_100_005_02_violation_01 if {
 	}
 	count(result) == 1
 }
-

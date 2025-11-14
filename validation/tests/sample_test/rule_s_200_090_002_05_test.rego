@@ -1,8 +1,10 @@
+#########################################################################################################
 # Unit tests for rule_s_200_090_002_05
+#########################################################################################################
 package tests.sample_test
 
 import rego.v1
-# import data.<target rules package> as rules
+
 # METADATA
 # title: Ontology Term Source REF of Unit is not selected from the prioritised ontologies.
 # description: Select a unit term from one of the prioritised sources where possible.
@@ -11,7 +13,7 @@ import rego.v1
 #  type: WARNING
 #  priority: MEDIUM
 #  section: samples.general
-test_rule_s_200_090_002_05 := true
+rule_s_200_090_002_05_test_cases := 1
 
 # # METADATA
 # # title: <title>.

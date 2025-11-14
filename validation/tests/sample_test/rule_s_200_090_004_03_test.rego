@@ -1,8 +1,10 @@
+#########################################################################################################
 # Unit tests for rule_s_200_090_004_03
+#########################################################################################################
 package tests.sample_test
 
 import rego.v1
-# import data.<target rules package> as rules
+
 # METADATA
 # title: Values do not meet maximum length requirement.
 # description: Each row should have a value equal or less than the maximum length.
@@ -11,7 +13,7 @@ import rego.v1
 #  type: ERROR
 #  priority: HIGH
 #  section: samples.general
-test_rule_s_200_090_004_03 := true
+rule_s_200_090_004_03_test_cases := 1
 
 # # METADATA
 # # title: <title>.

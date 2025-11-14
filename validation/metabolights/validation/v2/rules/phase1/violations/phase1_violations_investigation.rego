@@ -287,8 +287,7 @@ rule_i_100_300_003_01 contains result if {
 #  priority: HIGH
 #  section: investigation.studies
 rule_i_100_300_003_02 contains result if {
-	def := data.metabolights.validation.v2.rules.phase1.definitions
-	pattern := sprintf("[^%v]", [def._ALLOWED_CHARS_PATTERN])
+	pattern := sprintf("[^%v]", [def1._ALLOWED_CHARS_PATTERN])
 	study := input.investigation.studies[i]
 	count(study.title) > 0
 	matches = regex.find_n(pattern, study.title, -1)
@@ -433,7 +432,8 @@ rule_i_100_310_001_01 contains result if {
 rule_i_100_310_002_01 contains result if {
 	some study in input.investigation.studies
 	some idx, design_descriptor in study.studyDesignDescriptors.designTypes
-
+	def1.RULE_STUDY_DESIGN_TYPE
+	def1.RULE_STUDY_DESIGN_TYPE.validationType == "any-ontology-term"
 	result := f.single_ontology_term_not_in_selected_terms(
 		rego.metadata.rule(),
 		input.investigationFilePath,
@@ -441,33 +441,28 @@ rule_i_100_310_002_01 contains result if {
 		design_descriptor,
 		sprintf("Study Design Type [%v]", [idx + 1]),
 		"Select valid ontology terms ",
-	) 
+	)
 }
 
 # METADATA
 # title: Study Design Type is not selected from the selected ontologies.
 # description: Study Design Type value MUST be selected from the selected ontologies.
 # custom:
-#  rule_id: rule_i_100_310_003_01
+#  rule_id: rule_i_100_310_002_01
 #  type: ERROR
 #  priority: HIGH
 #  section: investigation.studyDesignDescriptors
-rule_i_100_310_003_01 contains result if {
-	def := data.metabolights.validation.v2.rules.phase1.definitions
+rule_i_100_310_002_01 contains result if {
 	some study in input.investigation.studies
 	some idx, design_descriptor in study.studyDesignDescriptors.designTypes
-
-	# selected_validation_types := {}
-	selected_validation_types = {"child-ontology-term", "ontology-term-in-selected-ontologies"}
-
-	result := f.single_ontology_term_source_ref_not_valid(
+	count(def1.RULE_STUDY_DESIGN_TYPE) > 0
+	result := f.run_validation_rule_single_ontology_term(
 		rego.metadata.rule(),
 		input.investigationFilePath,
 		def1.RULE_STUDY_DESIGN_TYPE,
 		design_descriptor,
 		sprintf("Study Design Type [%v]", [idx + 1]),
 		"Select valid ontologies ",
-		selected_validation_types,
 	)
 }
 
@@ -476,18 +471,17 @@ rule_i_100_310_003_01 contains result if {
 # title: Study Design Type is not selected from the prioritised ontologies.
 # description: Study Design Type value SHOULD be selected from the prioritised ontologies.
 # custom:
-#  rule_id: rule_i_100_310_003_02
+#  rule_id: rule_i_100_310_003_01
 #  type: WARNING
 #  priority: HIGH
 #  section: investigation.studyDesignDescriptors
-rule_i_100_310_003_02 contains result if {
-	def := data.metabolights.validation.v2.rules.phase1.definitions
+rule_i_100_310_003_01 contains result if {
 	some study in input.investigation.studies
 	some idx, design_descriptor in study.studyDesignDescriptors.designTypes
 
-	# selected_validation_types := {}
 	selected_validation_types = {"any-ontology-term"}
 
+	def1.RULE_STUDY_DESIGN_TYPE.validationType == "any-ontology-term"
 	result := f.single_ontology_term_source_ref_not_valid(
 		rego.metadata.rule(),
 		input.investigationFilePath,
@@ -508,11 +502,26 @@ rule_i_100_310_003_02 contains result if {
 #  priority: HIGH
 #  section: investigation.studyDesignDescriptors
 rule_i_100_310_004_01 contains result if {
-	def := data.metabolights.validation.v2.rules.phase1.definitions
 	some study in input.investigation.studies
 	some idx, design_descriptor in study.studyDesignDescriptors.designTypes
 
-	not def1.RULE_STUDY_DESIGN_TYPE.validationType
+	case_1 := {x | 
+		not def1.RULE_STUDY_DESIGN_TYPE["validationType"]
+		x := 1
+	}
+	case_2 :=  {x | 
+		not def1.RULE_STUDY_DESIGN_TYPE.validationType in {
+			"any-ontology-term", 
+			"child-ontology-term", 
+			"ontology-term-in-selected-ontologies", 
+			"selected-ontology-term"}
+		x := 1
+	}
+
+	condition := case_1 | case_2
+
+	count(condition) > 0
+
 	design_descriptor
 	selected_validation_types = {"any-ontology-term", "child-ontology-term", "ontology-term-in-selected-ontologies"}
 	result := f.single_ontology_term_source_ref_not_valid(
@@ -535,35 +544,20 @@ rule_i_100_310_004_01 contains result if {
 #  priority: HIGH
 #  section: investigation.studyDesignDescriptors
 rule_i_100_310_004_02 contains result if {
-	def := data.metabolights.validation.v2.rules.phase1.definitions
-	some i, study in input.investigation.studies
+	some study in input.investigation.studies
 	some j, design_descriptor in study.studyDesignDescriptors.designTypes
-	count(design_descriptor.termSourceRef) > 0
-	not design_descriptor.termSourceRef in data.metabolights.validation.v2.rules.phase1.definitions._ONTOLOGY_SOURCE_REFERENCE_NAMES
-	termSourceRef := input.investigation.studies[i].studyDesignDescriptors.designTypes[j].termSourceRef
+	termSourceRef := design_descriptor.termSourceRef
+	count(termSourceRef) > 0
 
-	msg := sprintf("Study design type source reference at index %v, '%v', is not in the sources reference list for study: %v.", [j + 1, termSourceRef, input.investigation.studies[i].identifier])
+	not termSourceRef in def1.ONTOLOGY_SOURCE_REFERENCE_NAMES
+
+	msg := sprintf("Study design type source reference at index %v, '%v', is not in the sources reference list for study: %v.", [j + 1, termSourceRef, study.identifier])
 	source := input.investigationFilePath
+	# print(design_descriptor.termSourceRef, def1.ONTOLOGY_SOURCE_REFERENCE_NAMES)
+
 	result := f.format(rego.metadata.rule(), msg, source)
 }
 
-# # METADATA
-# # title: No error message in study design descriptors section
-# # description: No error message in study design descriptors section
-# # custom:
-# #  rule_id: rule_i_100_310_000_01
-# #  type: SUCCESS
-# #  priority: HIGH
-# #  section: investigation.studyDesignDescriptors
-# rule_i_100_310_000_01 contains result if {
-# 	count(rule_i_100_310_001_01) == 0
-# 	count(rule_i_100_310_002_01) == 0
-# 	count(rule_i_100_310_004_02) == 0
-
-# 	msg := ""
-# 	source := input.investigationFilePath
-# 	result := f.format(rego.metadata.rule(), msg, source)
-# }
 
 #########################################################################################################
 #########################################################################################################
@@ -674,13 +668,14 @@ rule_i_100_320_005_01 contains result if {
 #  priority: HIGH
 #  section: investigation.studyPublications
 rule_i_100_320_006_01 contains result if {
-	some i, j
-	publication := input.investigation.studies[i].studyPublications.publications[j]
+	some study in input.investigation.studies
+	some j, publication in study.studyPublications.publications
 	authors := split(publication.authorList, ",")
-	violated_authors := {x | some author in authors; count(trim_space(author)) < 4; x := trim_space(author)}
+	violated_authors := [x | some author in authors; count(trim_space(author)) < 4; x := trim_space(author)]
 	count(violated_authors) > 0
+	
 	invalid_authors := concat(", ", violated_authors)
-	msg := sprintf("Author name should be greater than 3 character for the study %v. Publication: '%v'. Author name(s): '%v'", [input.investigation.studies[i].identifier, publication.title, invalid_authors])
+	msg := sprintf("Author name should be greater than 3 character for the study %v. Publication: '%v'. Author name(s): '%v'", [study.identifier, publication.title, invalid_authors])
 	source := input.investigationFilePath
 	result := f.format(rego.metadata.rule(), msg, source)
 }
@@ -696,8 +691,8 @@ rule_i_100_320_006_01 contains result if {
 rule_i_100_320_007_01 contains result if {
 	some study in input.investigation.studies
 	some idx, publication in study.studyPublications.publications
-
-	result := f.single_ontology_term_not_in_selected_terms(
+	count(def1.RULE_PUBLICATION_STATUS) > 0
+	result := f.run_validation_rule_single_ontology_term(
 		rego.metadata.rule(),
 		input.investigationFilePath,
 		def1.RULE_PUBLICATION_STATUS,
@@ -716,12 +711,11 @@ rule_i_100_320_007_01 contains result if {
 #  priority: MEDIUM
 #  section: investigation.studyPublications
 rule_i_100_320_007_02 contains result if {
-	def := data.metabolights.validation.v2.rules.phase1.definitions
 	some study in input.investigation.studies
 	some idx, publication in study.studyPublications.publications
 
 	# selected_validation_types := {}
-	selected_validation_types = {"child-ontology-term", "ontology-term-in-selected-ontologies"}
+	selected_validation_types = {"any-ontology-term"}
 
 	result := f.single_ontology_term_source_ref_not_valid(
 		rego.metadata.rule(),
@@ -743,17 +737,31 @@ rule_i_100_320_007_02 contains result if {
 #  priority: MEDIUM
 #  section: investigation.studyPublications
 rule_i_100_320_007_03 contains result if {
-	def := data.metabolights.validation.v2.rules.phase1.definitions
 	some study in input.investigation.studies
 	some idx, publication in study.studyPublications.publications
 
-	# selected_validation_types := {}
 	selected_validation_types = {"any-ontology-term"}
+	case_1 := {x | 
+		not def1.RULE_PUBLICATION_STATUS["validationType"]
+		x := 1
+	}
+	case_2 :=  {x | 
+		not def1.RULE_PUBLICATION_STATUS.validationType in {
+			"any-ontology-term", 
+			"child-ontology-term", 
+			"ontology-term-in-selected-ontologies", 
+			"selected-ontology-term"}
+		x := 1
+	}
 
+	condition := case_1 | case_2
+	count(condition) > 0
+	publication.status
+	
 	result := f.single_ontology_term_source_ref_not_valid(
 		rego.metadata.rule(),
 		input.investigationFilePath,
-		def1.RULE_PUBLICATION_STATUS,
+		def1.RULE_DEFAULT_ONTOLOGIES,
 		publication.status,
 		sprintf("Publication [%v] Status", [idx + 1]),
 		"Select valid ontologies ",
@@ -770,11 +778,9 @@ rule_i_100_320_007_03 contains result if {
 #  priority: HIGH
 #  section: investigation.studyPublications
 rule_i_100_320_009_01 contains result if {
-	def := data.metabolights.validation.v2.rules.phase1.definitions
 	some study in input.investigation.studies
 	some idx, publication in study.studyPublications.publications
 	not def1.RULE_PUBLICATION_STATUS
-	publication.status.termSourceRef
 	selected_validation_types = {"any-ontology-term", "child-ontology-term", "ontology-term-in-selected-ontologies"}
 	result := f.single_ontology_term_source_ref_not_valid(
 		rego.metadata.rule(),
@@ -796,12 +802,11 @@ rule_i_100_320_009_01 contains result if {
 #  priority: HIGH
 #  section: investigation.studyPublications
 rule_i_100_320_009_02 contains result if {
-	def := data.metabolights.validation.v2.rules.phase1.definitions
 	min_count = 3
 	some i, j
 	publication := input.investigation.studies[i].studyPublications.publications[j]
 	count(publication.status.termSourceRef) > 0
-	not publication.status.termSourceRef in def._ONTOLOGY_SOURCE_REFERENCE_NAMES
+	not publication.status.termSourceRef in def1.ONTOLOGY_SOURCE_REFERENCE_NAMES
 	msg := sprintf("Publication status source reference '%v' is not in the sources reference list. Study: %v, publication: '%v'", [publication.status.termSourceRef, input.investigation.studies[i].identifier, publication.title])
 	source := input.investigationFilePath
 	result := f.format(rego.metadata.rule(), msg, source)
@@ -856,11 +861,10 @@ rule_i_100_330_002_01 contains result if {
 #  priority: HIGH
 #  section: investigation.studyFactors
 rule_i_100_330_003_01 contains result if {
-	def := data.metabolights.validation.v2.rules.phase1.definitions
 	some study in input.investigation.studies
 	some idx, factor in study.studyFactors.factors
-
-	result := f.single_ontology_term_not_in_selected_terms(
+	count(def1.RULE_STUDY_FACTOR_TYPE) > 0
+	result := f.run_validation_rule_single_ontology_term(
 		rego.metadata.rule(),
 		input.investigationFilePath,
 		def1.RULE_STUDY_FACTOR_TYPE,
@@ -879,10 +883,9 @@ rule_i_100_330_003_01 contains result if {
 #  priority: HIGH
 #  section: investigation.studyFactors
 rule_i_100_330_004_01 contains result if {
-	def := data.metabolights.validation.v2.rules.phase1.definitions
 	some study in input.investigation.studies
 	some idx, factor in study.studyFactors.factors
-	selected_validation_types = {"child-ontology-term", "ontology-term-in-selected-ontologies"}
+	selected_validation_types = {"any-ontology-term"}
 
 	result := f.single_ontology_term_source_ref_not_valid(
 		rego.metadata.rule(),
@@ -904,15 +907,31 @@ rule_i_100_330_004_01 contains result if {
 #  priority: HIGH
 #  section: investigation.studyFactors
 rule_i_100_330_004_02 contains result if {
-	def := data.metabolights.validation.v2.rules.phase1.definitions
 	some study in input.investigation.studies
 	some idx, factor in study.studyFactors.factors
-	selected_validation_types = {"any-ontology-term"}
 
+	case_1 := {x | 
+		not def1.RULE_STUDY_FACTOR_TYPE["validationType"]
+		x := 1
+	}
+	case_2 :=  {x | 
+		not def1.RULE_STUDY_FACTOR_TYPE.validationType in {
+			"any-ontology-term", 
+			"child-ontology-term", 
+			"ontology-term-in-selected-ontologies", 
+			"selected-ontology-term"}
+		x := 1
+	}
+
+	condition := case_1 | case_2
+
+	count(condition) > 0
+	factor
+	selected_validation_types = {"any-ontology-term", "child-ontology-term", "ontology-term-in-selected-ontologies"}
 	result := f.single_ontology_term_source_ref_not_valid(
 		rego.metadata.rule(),
 		input.investigationFilePath,
-		def1.RULE_STUDY_FACTOR_TYPE,
+		def1.RULE_DEFAULT_ONTOLOGIES,
 		factor.type,
 		sprintf("Study Factor [%v] Type", [idx + 1]),
 		"Select valid ontologies ",
@@ -928,7 +947,6 @@ rule_i_100_330_004_02 contains result if {
 #  priority: HIGH
 #  section: investigation.studyFactors
 rule_i_100_330_005_01 contains result if {
-	def := data.metabolights.validation.v2.rules.phase1.definitions
 	some study in input.investigation.studies
 	some idx, factor in study.studyFactors.factors
 	not def1.RULE_STUDY_FACTOR_TYPE
@@ -954,11 +972,13 @@ rule_i_100_330_005_01 contains result if {
 #  priority: HIGH
 #  section: investigation.studyFactors
 rule_i_100_330_005_02 contains result if {
-	some i, j
-	def := data.metabolights.validation.v2.rules.phase1.definitions
-	count(input.investigation.studies[i].studyFactors.factors[j].type.termSourceRef) > 0
-	not input.investigation.studies[i].studyFactors.factors[j].type.termSourceRef in def._ONTOLOGY_SOURCE_REFERENCE_NAMES
-	msg := sprintf("Study factor type source reference is not in the sources reference list. Study: %v, index: '%v', current value '%v'", [input.investigation.studies[i].identifier, j + 1, input.investigation.studies[i].studyFactors.factors[j].type.termSourceRef])
+	some study in input.investigation.studies
+	some j, factor in study.studyFactors.factors
+
+	count(factor.type.termSourceRef) > 0
+
+	not factor.type.termSourceRef in def1.ONTOLOGY_SOURCE_REFERENCE_NAMES
+	msg := sprintf("Study factor type source reference is not in the sources reference list. Study: %v, index: '%v', current value '%v'", [study.identifier, j + 1, factor.type.termSourceRef])
 	source := input.investigationFilePath
 	result := f.format(rego.metadata.rule(), msg, source)
 }
@@ -979,9 +999,9 @@ rule_i_100_330_005_02 contains result if {
 #  section: investigation.studyAssays
 rule_i_100_340_001_01 contains result if {
 	min_count = 1
-	some i
-	count(input.investigation.studies[i].studyAssays.assays) < min_count
-	msg := sprintf("At least %v assay should be defined for study: %v", [min_count, input.investigation.studies[i].identifier])
+	some study in input.investigation.studies
+	count(study.studyAssays.assays) < min_count
+	msg := sprintf("At least %v assay should be defined for study: %v", [min_count, study.identifier])
 	source := input.investigationFilePath
 	result := f.format(rego.metadata.rule(), msg, source)
 }
@@ -996,7 +1016,7 @@ rule_i_100_340_001_01 contains result if {
 #  section: investigation.studyAssays
 rule_i_100_340_002_01 contains result if {
 	some i, j
-	input.investigation.studies[i].studyAssays.assays[j].fileName == ""
+	count(input.investigation.studies[i].studyAssays.assays[j].fileName) == 0
 	msg := sprintf("Study assay file name should be set for the study %v. Index: %v", [input.investigation.studies[i].identifier, j + 1])
 	source := input.investigationFilePath
 	result := f.format(rego.metadata.rule(), msg, source)
@@ -1051,18 +1071,25 @@ rule_i_100_340_002_03 contains result if {
 #  priority: HIGH
 #  section: investigation.studyAssays
 rule_i_100_340_002_04 contains result if {
-	fileNames := [assay.fileName |
-		some i, j
-		assay := input.investigation.studies[i].studyAssays.assays[j]
+	file_names := [assay.fileName |
+		some assay in input.investigation.studies[0].studyAssays.assays
 	]
+	unique_values := {assay.fileName |
+		some assay in input.investigation.studies[0].studyAssays.assays
+	}
+	count(file_names) > count(unique_values)
 
 	duplicates := {f |
-		some i
-		f := fileNames[i]
-		count({x | fileNames[x] == f}) > 1
+		some i, f in file_names
+		uniques := {x | 
+			some j, x in file_names
+			i != j
+		 	x == f 
+		}
+		count(uniques) > 0
 	}
 	count(duplicates) > 0
-
+	
 	msg := sprintf(
 		"Study Assay File Name must be unique. Found duplicates: %v",
 		[duplicates],
@@ -1080,11 +1107,11 @@ rule_i_100_340_002_04 contains result if {
 #  priority: HIGH
 #  section: investigation.studyAssays
 rule_i_100_340_003_01 contains result if {
-	def := data.metabolights.validation.v2.rules.phase1.definitions
 	some study in input.investigation.studies
 	some idx, assay in study.studyAssays.assays
 
-	result := f.single_ontology_term_not_in_selected_terms(
+	count(def1.RULE_ASSAY_MEASUREMENT_TYPE) > 0
+	result := f.run_validation_rule_single_ontology_term(
 		rego.metadata.rule(),
 		input.investigationFilePath,
 		def1.RULE_ASSAY_MEASUREMENT_TYPE,
@@ -1103,7 +1130,6 @@ rule_i_100_340_003_01 contains result if {
 #  priority: HIGH
 #  section: investigation.studyAssays
 rule_i_100_340_004_01 contains result if {
-	def := data.metabolights.validation.v2.rules.phase1.definitions
 	some study in input.investigation.studies
 	some idx, assay in study.studyAssays.assays
 	selected_validation_types = {"child-ontology-term", "ontology-term-in-selected-ontologies"}
@@ -1128,7 +1154,6 @@ rule_i_100_340_004_01 contains result if {
 #  priority: HIGH
 #  section: investigation.studyAssays
 rule_i_100_340_004_02 contains result if {
-	def := data.metabolights.validation.v2.rules.phase1.definitions
 	some study in input.investigation.studies
 	some idx, assay in study.studyAssays.assays
 	selected_validation_types = {"any-ontology-term"}
@@ -1153,7 +1178,6 @@ rule_i_100_340_004_02 contains result if {
 #  priority: HIGH
 #  section: investigation.studyAssays
 rule_i_100_340_005_01 contains result if {
-	def := data.metabolights.validation.v2.rules.phase1.definitions
 	some study in input.investigation.studies
 	some idx, assay in study.studyAssays.assays
 
@@ -1181,11 +1205,10 @@ rule_i_100_340_005_01 contains result if {
 #  section: investigation.studyAssays
 rule_i_100_340_005_02 contains result if {
 	some i, j
-	def := data.metabolights.validation.v2.rules.phase1.definitions
 	assay := input.investigation.studies[i].studyAssays.assays[j]
 	term := assay.measurementType
 	count(term.termSourceRef) > 0
-	not term.termSourceRef in def._ONTOLOGY_SOURCE_REFERENCE_NAMES
+	not term.termSourceRef in def1.ONTOLOGY_SOURCE_REFERENCE_NAMES
 
 	msg_parameters := [input.investigation.studies[i].identifier, assay.fileName, j + 1, term.termSourceRef]
 	msg := sprintf("Assay measurement type source reference is not in the sources reference list. Study: %v, assay file: '%v', index: %v, current value '%v'", msg_parameters)
@@ -1204,7 +1227,6 @@ rule_i_100_340_005_02 contains result if {
 #  priority: HIGH
 #  section: investigation.studyAssays
 rule_i_100_340_006_01 contains result if {
-	def := data.metabolights.validation.v2.rules.phase1.definitions
 	some study in input.investigation.studies
 	some idx, assay in study.studyAssays.assays
 
@@ -1227,7 +1249,6 @@ rule_i_100_340_006_01 contains result if {
 #  priority: HIGH
 #  section: investigation.studyAssays
 rule_i_100_340_007_01 contains result if {
-	def := data.metabolights.validation.v2.rules.phase1.definitions
 	some study in input.investigation.studies
 	some idx, assay in study.studyAssays.assays
 	selected_validation_types = {"child-ontology-term", "ontology-term-in-selected-ontologies"}
@@ -1252,7 +1273,6 @@ rule_i_100_340_007_01 contains result if {
 #  priority: HIGH
 #  section: investigation.studyAssays
 rule_i_100_340_007_02 contains result if {
-	def := data.metabolights.validation.v2.rules.phase1.definitions
 	some study in input.investigation.studies
 	some idx, assay in study.studyAssays.assays
 	selected_validation_types = {"any-ontology-term"}
@@ -1277,7 +1297,6 @@ rule_i_100_340_007_02 contains result if {
 #  priority: HIGH
 #  section: investigation.studyAssays
 rule_i_100_340_008_01 contains result if {
-	def := data.metabolights.validation.v2.rules.phase1.definitions
 	some study in input.investigation.studies
 	some idx, assay in study.studyAssays.assays
 
@@ -1305,10 +1324,9 @@ rule_i_100_340_008_01 contains result if {
 #  section: investigation.studyAssays
 rule_i_100_340_008_02 contains result if {
 	some i, j
-	def := data.metabolights.validation.v2.rules.phase1.definitions
 	assay := input.investigation.studies[i].studyAssays.assays[j]
 	assay.technologyType.termSourceRef
-	not assay.technologyType.termSourceRef in data.metabolights.validation.v2.rules.phase1.definitions._ONTOLOGY_SOURCE_REFERENCE_NAMES
+	not assay.technologyType.termSourceRef in data.metabolights.validation.v2.rules.phase1.definitions.ONTOLOGY_SOURCE_REFERENCE_NAMES
 	msg := sprintf("Assay technology type source reference is not in the sources reference list. Study: %v, index: '%v', current value '%v'", [input.investigation.studies[i].identifier, j + 1, assay.technologyType.termSourceRef])
 	source := input.investigationFilePath
 	result := f.format(rego.metadata.rule(), msg, source)
@@ -1384,11 +1402,10 @@ rule_i_100_350_001_01 contains result if {
 rule_i_100_350_001_02 contains result if {
 	some i
 	protocol_names = {x.name | some j; x := input.investigation.studies[i].studyProtocols.protocols[j]}
-	def := data.metabolights.validation.v2.rules.phase1.definitions
-	some protocol_name in def._DEFAULT_MERGED_STUDY_PROTOCOLS
+	some protocol_name in def1._DEFAULT_MERGED_STUDY_PROTOCOLS
 
 	not protocol_name in protocol_names
-	technologies := f.to_string(def._PROTOCOL_TECHNOLOGY_MAP[protocol_name])
+	technologies := f.to_string(def1._PROTOCOL_TECHNOLOGY_MAP[protocol_name])
 	msg := sprintf("A study protocol is not defined. '%v' protocol is required for [%v] assays.", [protocol_name, technologies])
 	source := input.investigationFilePath
 	result := f.format(rego.metadata.rule(), msg, source)
@@ -1438,8 +1455,7 @@ rule_i_100_350_003_01 contains result if {
 #  priority: HIGH
 #  section: investigation.studyProtocols
 rule_i_100_350_003_02 contains result if {
-	def := data.metabolights.validation.v2.rules.phase1.definitions
-	pattern := sprintf(`([\w!-~]+ )?[\w!-~]*[^%v]+[\w!-~]*( [\w!-~]+)?`, [def._ALLOWED_CHARS_PATTERN])
+	pattern := sprintf(`([\w!-~]+ )?[\w!-~]*[^%v]+[\w!-~]*( [\w!-~]+)?`, [def1._ALLOWED_CHARS_PATTERN])
 
 	some study in input.investigation.studies
 	some j, protocol in study.studyProtocols.protocols
@@ -1514,12 +1530,11 @@ rule_i_100_350_004_01 contains result if {
 #  section: investigation.studyProtocols
 rule_i_100_350_007_01 contains result if {
 	protocolName := input.investigation.studies[i].studyProtocols.protocols[j].name
-	def := data.metabolights.validation.v2.rules.phase1.definitions
 	protocolParamaters := {x.term |
 		some k
 		x := input.investigation.studies[i].studyProtocols.protocols[j].parameters[k]
 	}
-	defaultParameters := def._DEFAULT_MERGED_STUDY_PROTOCOL_PARAMETERS[protocolName]
+	defaultParameters := def1._DEFAULT_MERGED_STUDY_PROTOCOL_PARAMETERS[protocolName]
 	missing := {x |
 		some m
 		not defaultParameters[m] in protocolParamaters
@@ -1889,10 +1904,9 @@ rule_i_100_360_009_02 contains result if {
 #  section: investigation.studyContacts
 rule_i_100_360_010_01 contains result if {
 	some i, j
-	def := data.metabolights.validation.v2.rules.phase1.definitions
 	person := input.investigation.studies[i].studyContacts.people[j]
 	count(person.roles[k].termSourceRef) > 0
-	not person.roles[k].termSourceRef in def._ONTOLOGY_SOURCE_REFERENCE_NAMES
+	not person.roles[k].termSourceRef in def1.ONTOLOGY_SOURCE_REFERENCE_NAMES
 	msg := sprintf("Study person role source reference is not in ontology source reference list. Study: %v, index: '%v', current value '%v'", [input.investigation.studies[i].identifier, j + 1, input.investigation.studies[i].studyContacts.people[j].roles[k].termSourceRef])
 	source := input.investigationFilePath
 	result := f.format(rego.metadata.rule(), msg, source)

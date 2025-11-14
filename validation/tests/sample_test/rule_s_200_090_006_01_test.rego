@@ -1,8 +1,10 @@
+#########################################################################################################
 # Unit tests for rule_s_200_090_006_01
+#########################################################################################################
 package tests.sample_test
 
 import rego.v1
-# import data.<target rules package> as rules
+
 # METADATA
 # title: Unexpected value in the ontology column.
 # description: There is an unexpected value list for the selected column. Use valid text, ontology term or controlled vocabulary for the selected ontology column.
@@ -11,7 +13,7 @@ import rego.v1
 #  type: ERROR
 #  priority: HIGH
 #  section: samples.general
-test_rule_s_200_090_006_01 := true
+rule_s_200_090_006_01_test_cases := 1
 
 # # METADATA
 # # title: <title>.

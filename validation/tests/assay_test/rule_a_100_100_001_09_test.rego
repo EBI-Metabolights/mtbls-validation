@@ -1,8 +1,12 @@
+#########################################################################################################
 # Unit tests for rule_a_100_100_001_09
+#########################################################################################################
 package tests.assay_test
+
 import data.metabolights.validation.v2.rules.phase1.violations as rules
 
 import rego.v1
+
 # METADATA
 # title: Multiple Parameter Value columns with same header are not allowed in assay file.
 # description: Parameter Value column headers should be unique in assay file.
@@ -11,7 +15,7 @@ import rego.v1
 #  type: WARNING
 #  priority: HIGH
 #  section: assays.columns
-test_rule_a_100_100_001_09 := true
+rule_a_100_100_001_09_test_cases := 1
 
 # METADATA
 # title: Parameter Value column names are unique.
@@ -66,4 +70,3 @@ test_rule_a_100_100_001_09_violation_01 if {
 	}
 	count(result) == 1
 }
-

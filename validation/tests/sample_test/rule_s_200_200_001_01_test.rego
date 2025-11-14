@@ -1,8 +1,10 @@
+#########################################################################################################
 # Unit tests for rule_s_200_200_001_01
+#########################################################################################################
 package tests.sample_test
 
 import rego.v1
-# import data.<target rules package> as rules
+
 # METADATA
 # title: Sample name values are not unique in sample file.
 # description: All sample names should be unique in sample file.
@@ -11,7 +13,7 @@ import rego.v1
 #  type: ERROR
 #  priority: CRITICAL
 #  section: samples.sampleCollection
-test_rule_s_200_200_001_01 := true
+rule_s_200_200_001_01_test_cases := 1
 
 # # METADATA
 # # title: <title>.

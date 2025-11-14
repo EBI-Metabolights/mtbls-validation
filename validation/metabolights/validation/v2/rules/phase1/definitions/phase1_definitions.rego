@@ -5,7 +5,9 @@ import data.metabolights.validation.v2.utils.field_match as field_match
 import rego.v1
 
 
-_ONTOLOGY_SOURCE_REFERENCE_NAMES := {x.sourceName | x := input.investigation.ontologySourceReferences.references[_]}
+ONTOLOGY_SOURCE_REFERENCE_NAMES := {x.sourceName | 
+	some x in input.investigation.ontologySourceReferences.references
+}
 _ALLOWED_CHARS_PATTERN := concat("", data.metabolights.validation.v2.configuration.allowedChars)
 
 

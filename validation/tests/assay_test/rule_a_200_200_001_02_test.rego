@@ -1,9 +1,12 @@
+#########################################################################################################
 # Unit tests for rule_a_200_200_001_02
+#########################################################################################################
 package tests.assay_test
+
 import data.metabolights.validation.v2.rules.phase2.violations as rules
 
 import rego.v1
-# import data.<target rules package> as rules
+
 # METADATA
 # title: Metabolite assignment file name contains invalid characters in assay file.
 # description: Use only .-_A-Za-z0-9 characters for an metabolite assignment file name in assay file.
@@ -12,7 +15,7 @@ import rego.v1
 #  type: ERROR
 #  priority: CRITICAL
 #  section: assays.metabolite_identification
-test_rule_a_200_200_001_02 := true
+rule_a_200_200_001_02_test_cases := 1
 
 # METADATA
 # title: There are not invalid characters in metabolite assignment file name.
@@ -28,7 +31,6 @@ test_rule_a_200_200_001_02_no_violation_01 if {
 					"columnCategory": "Parameter Value", "columnStructure": "ONTOLOGY_COLUMN", "columnHeader": "Parameter Value[Instrument]",
 					"columnName": "Parameter Value[Instrument]", "columnIndex": 0,
 					"additionalColumns": ["Term Source REF", "Term Accession Number"],
-					
 				},
 				{"columnCategory": "", "columnStructure": "LINKED_COLUMN", "columnHeader": "Term Source REF", "columnName": "Term Source REF", "columnIndex": 1},
 				{"columnCategory": "", "columnStructure": "LINKED_COLUMN", "columnHeader": "Term Accession Number", "columnName": "Term Accession Number", "columnIndex": 2},
@@ -91,7 +93,6 @@ test_rule_a_200_200_001_02_violation_01 if {
 					"columnCategory": "Parameter Value", "columnStructure": "ONTOLOGY_COLUMN", "columnHeader": "Parameter Value[Instrument]",
 					"columnName": "Parameter Value[Instrument]", "columnIndex": 0,
 					"additionalColumns": ["Term Source REF", "Term Accession Number"],
-					
 				},
 				{"columnCategory": "", "columnStructure": "LINKED_COLUMN", "columnHeader": "Term Source REF", "columnName": "Term Source REF", "columnIndex": 1},
 				{"columnCategory": "", "columnStructure": "LINKED_COLUMN", "columnHeader": "Term Accession Number", "columnName": "Term Accession Number", "columnIndex": 2},

@@ -1,8 +1,12 @@
+#########################################################################################################
 # Unit tests for rule_a_100_100_001_08
+#########################################################################################################
 package tests.assay_test
+
 import data.metabolights.validation.v2.rules.phase1.violations as rules
 
 import rego.v1
+
 # METADATA
 # title: Order of default column header is not correct in assay file.
 # description: Order of default column header is not correct in assay file.
@@ -11,7 +15,7 @@ import rego.v1
 #  type: ERROR
 #  priority: CRITICAL
 #  section: assays.columns
-test_rule_a_100_100_001_08 := true
+rule_a_100_100_001_08_test_cases := 1
 
 # METADATA
 # title: Assay files columnd are ordered.
@@ -145,4 +149,3 @@ test_rule_a_100_100_001_08_violation_01 if {
 
 	count(result) == 1
 }
-

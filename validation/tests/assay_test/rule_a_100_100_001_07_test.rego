@@ -1,8 +1,12 @@
+#########################################################################################################
 # Unit tests for rule_a_100_100_001_07
+#########################################################################################################
 package tests.assay_test
+
 import data.metabolights.validation.v2.rules.phase1.violations as rules
 
 import rego.v1
+
 # METADATA
 # title: Empty columns in assay file.
 # description: Empty columns must not exist in assay file. All column headers must be defined.
@@ -11,7 +15,7 @@ import rego.v1
 #  type: ERROR
 #  priority: CRITICAL
 #  section: assays.columns
-test_rule_a_100_100_001_07 := true
+rule_a_100_100_001_07_test_cases := 1
 
 # METADATA
 # title: Assay file's column headers are not empty.

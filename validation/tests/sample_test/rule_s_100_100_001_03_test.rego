@@ -1,8 +1,10 @@
+#########################################################################################################
 # Unit tests for rule_s_100_100_001_03
+#########################################################################################################
 package tests.sample_test
 
 import rego.v1
-# import data.<target rules package> as rules
+
 # METADATA
 # title: Some default columns are missing in sample file.
 # description: All default columns should exist in sample file.
@@ -11,7 +13,7 @@ import rego.v1
 #  type: ERROR
 #  priority: CRITICAL
 #  section: samples.columns
-test_rule_s_100_100_001_03 := true
+rule_s_100_100_001_03_test_cases := 1
 
 # # METADATA
 # # title: <title>.

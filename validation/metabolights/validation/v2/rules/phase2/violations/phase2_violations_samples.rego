@@ -85,7 +85,7 @@ rule_s_200_090_002_01 contains result if {
 rule_s_200_090_002_03 contains result if {
 	input.samples[fileName].table.headers[columnIndex]
 
-	result := f.term_source_ref_not_in_source_references_list(rego.metadata.rule(), input.samples, fileName, columnIndex, def._ONTOLOGY_SOURCE_REFERENCE_NAMES, def._ONTOLOGY_SOURCE_REFERENCE_NAMES_STR)
+	result := f.term_source_ref_not_in_source_references_list(rego.metadata.rule(), input.samples, fileName, columnIndex, def.ONTOLOGY_SOURCE_REFERENCE_NAMES, def.ONTOLOGY_SOURCE_REFERENCE_NAMES_STR)
 }
 
 # METADATA

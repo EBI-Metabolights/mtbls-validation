@@ -1,8 +1,10 @@
+#########################################################################################################
 # Unit tests for rule_s_200_090_006_04
+#########################################################################################################
 package tests.sample_test
 
 import rego.v1
-# import data.<target rules package> as rules
+
 # METADATA
 # title: Unexpected value in the column.
 # description: There is a general unexpected value list. Use valid text, ontology term or controlled vocabulary for the selected column.
@@ -11,7 +13,7 @@ import rego.v1
 #  type: ERROR
 #  priority: HIGH
 #  section: samples.general
-test_rule_s_200_090_006_04 := true
+rule_s_200_090_006_04_test_cases := 1
 
 # # METADATA
 # # title: <title>.

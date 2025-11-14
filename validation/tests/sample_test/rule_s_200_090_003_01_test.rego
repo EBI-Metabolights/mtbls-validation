@@ -1,8 +1,10 @@
+#########################################################################################################
 # Unit tests for rule_s_200_090_003_01
+#########################################################################################################
 package tests.sample_test
 
 import rego.v1
-# import data.<target rules package> as rules
+
 # METADATA
 # title: Term Accession Number length of ontology terms less than 3 characters.
 # description: Term Accession Number of ontology terms should be defined with length equal or greater than 3 characters.
@@ -11,7 +13,7 @@ import rego.v1
 #  type: WARNING
 #  priority: HIGH
 #  section: samples.general
-test_rule_s_200_090_003_01 := true
+rule_s_200_090_003_01_test_cases := 1
 
 # # METADATA
 # # title: <title>.

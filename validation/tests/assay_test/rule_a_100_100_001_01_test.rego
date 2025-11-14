@@ -1,8 +1,12 @@
+#########################################################################################################
 # Unit tests for rule_a_100_100_001_01
+#########################################################################################################
 package tests.assay_test
+
 import data.metabolights.validation.v2.rules.phase1.violations as rules
 
 import rego.v1
+
 # METADATA
 # title: Invalid multi-column structure in assay file.
 # description: There is an invalid multi-column structure in assay file. Check column order.
@@ -11,7 +15,7 @@ import rego.v1
 #  type: ERROR
 #  priority: CRITICAL
 #  section: assays.columns
-test_rule_a_100_100_001_01 := true
+rule_a_100_100_001_01_test_cases := 1
 
 # METADATA
 # title: There is no invalid multi-column structure in the assay file

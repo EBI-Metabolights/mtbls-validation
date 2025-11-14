@@ -1,9 +1,12 @@
+#########################################################################################################
 # Unit tests for rule_a_200_090_003_02
+#########################################################################################################
 package tests.assay_test
+
 import data.metabolights.validation.v2.rules.phase2.violations as rules
 
 import rego.v1
-# import data.<target rules package> as rules
+
 # METADATA
 # title: Term Accession number length of unit ontology terms less than 3 characters.
 # description: Term Accession Number of unit ontology terms should be defined with length equal or greater than 3 characters.
@@ -12,7 +15,7 @@ import rego.v1
 #  type: WARNING
 #  priority: HIGH
 #  section: assays.general
-test_rule_a_200_090_003_02 := true
+rule_a_200_090_003_02_test_cases := 1
 
 # # METADATA
 # # title: <title>.

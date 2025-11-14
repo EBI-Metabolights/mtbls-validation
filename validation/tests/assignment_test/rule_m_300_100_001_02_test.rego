@@ -1,8 +1,10 @@
+#########################################################################################################
 # Unit tests for rule_m_300_100_001_02
+#########################################################################################################
 package tests.assignment_test
 
 import rego.v1
-# import data.<target rules package> as rules
+
 # METADATA
 # title: retention_time column has empty values in metabolite assignment file.
 # description: All 'retention_time' column values must be defined in metabolite assignment file for LC-MS / GC-MS.
@@ -11,7 +13,7 @@ import rego.v1
 #  type: ERROR
 #  priority: HIGH
 #  section: metabolites.lcms
-test_rule_m_300_100_001_02 := true
+rule_m_300_100_001_02_test_cases := 1
 
 # # METADATA
 # # title: <title>.

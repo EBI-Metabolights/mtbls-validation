@@ -1,8 +1,10 @@
+#########################################################################################################
 # Unit tests for rule_m_100_100_002_02
+#########################################################################################################
 package tests.assignment_test
 
 import rego.v1
-# import data.<target rules package> as rules
+
 # METADATA
 # title: MS Assay Name or NMR Assay Name columns not in metabolite assignment file
 # description: If Sample Name columns do not exist, MS Assay Name or NMR Assay Name columns should be defined in metabolite assignment file.
@@ -11,7 +13,7 @@ import rego.v1
 #  type: WARNING
 #  priority: CRITICAL
 #  section: metabolites.general
-test_rule_m_100_100_002_02 := true
+rule_m_100_100_002_02_test_cases := 1
 
 # # METADATA
 # # title: <title>.

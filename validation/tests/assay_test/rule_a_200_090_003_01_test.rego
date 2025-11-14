@@ -1,9 +1,12 @@
+#########################################################################################################
 # Unit tests for rule_a_200_090_003_01
+#########################################################################################################
 package tests.assay_test
+
 import data.metabolights.validation.v2.rules.phase2.violations as rules
 
 import rego.v1
-# import data.<target rules package> as rules
+
 # METADATA
 # title: Term Accession Number length of ontology terms less than 3 characters.
 # description: Term Accession Number of ontology terms should be defined with length equal or greater than 3 characters.
@@ -12,7 +15,7 @@ import rego.v1
 #  type: WARNING
 #  priority: HIGH
 #  section: assays.general
-test_rule_a_200_090_003_01 := true
+rule_a_200_090_003_01_test_cases := 1
 
 # METADATA
 # title: Term Accession Number length of an ontology term is equal or greater than 3 in assay file.
@@ -27,7 +30,6 @@ test_rule_a_200_090_003_01_no_violation_01 if {
 					"columnCategory": "Parameter Value", "columnStructure": "ONTOLOGY_COLUMN", "columnHeader": "Parameter Value[Instrument]",
 					"columnName": "Parameter Value[Instrument]", "columnIndex": 0,
 					"additionalColumns": ["Term Source REF", "Term Accession Number"],
-					
 				},
 				{"columnCategory": "", "columnStructure": "LINKED_COLUMN", "columnHeader": "Term Source REF", "columnName": "Term Source REF", "columnIndex": 1},
 				{"columnCategory": "", "columnStructure": "LINKED_COLUMN", "columnHeader": "Term Accession Number", "columnName": "Term Accession Number", "columnIndex": 2},
@@ -63,7 +65,7 @@ test_rule_a_200_090_003_01_no_violation_01 if {
 			{"sourceName": "NCBITaxon"},
 		]}},
 		"parserMessages": {"s_MTBLS1.txt": []},
-		"studyDbMetadata": {"studyCategory": "other", "sampleTemplate": "minimum",  "templateVersion": "2.0"}
+		"studyDbMetadata": {"studyCategory": "other", "sampleTemplate": "minimum", "templateVersion": "2.0"},
 	}
 
 	count(result) == 0

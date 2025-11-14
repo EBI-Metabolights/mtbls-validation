@@ -1,8 +1,10 @@
+#########################################################################################################
 # Unit tests for rule_s_200_200_002_02
+#########################################################################################################
 package tests.sample_test
 
 import rego.v1
-# import data.<target rules package> as rules
+
 # METADATA
 # title: Factor Value column not complete.
 # description: At least two values must be defined in Factor Value column.
@@ -11,7 +13,7 @@ import rego.v1
 #  type: ERROR
 #  priority: HIGH
 #  section: samples.sampleCollection
-test_rule_s_200_200_002_02 := true
+rule_s_200_200_002_02_test_cases := 1
 
 # # METADATA
 # # title: <title>.

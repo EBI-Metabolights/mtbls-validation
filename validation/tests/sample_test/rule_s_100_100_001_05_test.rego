@@ -1,8 +1,10 @@
+#########################################################################################################
 # Unit tests for rule_s_100_100_001_05
+#########################################################################################################
 package tests.sample_test
 
 import rego.v1
-# import data.<target rules package> as rules
+
 # METADATA
 # title: Unexpected 'Protocol REF' column in sample file.
 # description: Unexpected 'Protocol REF' column in sample file. Only one 'Protocol REF' header is allowed in sample file.
@@ -11,7 +13,7 @@ import rego.v1
 #  type: ERROR
 #  priority: CRITICAL
 #  section: samples.columns
-test_rule_s_100_100_001_05 := true
+rule_s_100_100_001_05_test_cases := 1
 
 # # METADATA
 # # title: <title>.

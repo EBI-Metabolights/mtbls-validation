@@ -1,8 +1,12 @@
+#########################################################################################################
 # Unit tests for rule_i_100_340_005_02
+#########################################################################################################
 package tests.investigation_test
 
+import data.metabolights.validation.v2.rules.phase1.violations as rules
+
 import rego.v1
-# import data.<target rules package> as rules
+
 # METADATA
 # title: Study Assay Measurement Type Term Source REF not referenced in investigation file.
 # description: Study Assay Measurement Type Term Source REFs should be referenced in the ONTOLOGY SOURCE REFERENCE section in i_Investigation.txt.
@@ -11,7 +15,7 @@ import rego.v1
 #  type: ERROR
 #  priority: HIGH
 #  section: investigation.studyAssays
-test_rule_i_100_340_005_02 := true
+rule_i_100_340_005_02_test_cases := 1
 
 # # METADATA
 # # title: <title>.

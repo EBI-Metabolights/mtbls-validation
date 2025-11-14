@@ -1,8 +1,12 @@
+#########################################################################################################
 # Unit tests for rule_i_100_350_001_02
+#########################################################################################################
 package tests.investigation_test
 
+import data.metabolights.validation.v2.rules.phase1.violations as rules
+
 import rego.v1
-# import data.<target rules package> as rules
+
 # METADATA
 # title: A study protocol is missing in investigation file.
 # description: All study protocols should be defined considering assay technologies used in study.
@@ -11,7 +15,7 @@ import rego.v1
 #  type: ERROR
 #  priority: CRITICAL
 #  section: investigation.studyProtocols
-test_rule_i_100_350_001_02 := true
+rule_i_100_350_001_02_test_cases := 1
 
 # # METADATA
 # # title: <title>.

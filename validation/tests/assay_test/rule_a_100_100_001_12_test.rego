@@ -1,8 +1,12 @@
+#########################################################################################################
 # Unit tests for rule_a_100_100_001_12
+#########################################################################################################
 package tests.assay_test
+
 import data.metabolights.validation.v2.rules.phase1.violations as rules
 
 import rego.v1
+
 # METADATA
 # title: Column name defined in MetaboLights template does not exist in assay file.
 # description: Add all missing columns defined in MetaboLights assay template.
@@ -11,7 +15,7 @@ import rego.v1
 #  type: ERROR
 #  priority: CRITICAL
 #  section: assays.columns
-test_rule_a_100_100_001_12 := true
+rule_a_100_100_001_12_test_cases := 1
 
 # METADATA
 # title: Parameter Value column names are defined.
@@ -37,12 +41,11 @@ test_rule_a_100_100_001_12_no_violation_01 if {
 		"investigation": {"studies": [{"fileName": "s_MTBLS1.txt"}]},
 		"parserMessages": {"s_MTBLS1.txt": []},
 	}
-		with data.metabolights.validation.v2.rules.phase1.definitions._DEFAULT_ASSAY_HEADERS as {"a_MTBLS1.txt": [{"version": "2.0", "headers": [
-			{"columnCategory": "", 
-			"columnHeader": "Spectral Raw Data File", 
-			"columnIndex": 3
-			}
-		]}]}
+		with data.metabolights.validation.v2.rules.phase1.definitions._DEFAULT_ASSAY_HEADERS as {"a_MTBLS1.txt": [{"version": "2.0", "headers": [{
+			"columnCategory": "",
+			"columnHeader": "Spectral Raw Data File",
+			"columnIndex": 3,
+		}]}]}
 	count(result) == 0
 }
 
@@ -68,13 +71,12 @@ test_rule_a_100_100_001_12_violation_01 if {
 		}}},
 		"investigation": {"studies": [{"fileName": "s_MTBLS1.txt"}]},
 		"parserMessages": {"s_MTBLS1.txt": []},
-		"studyDbMetadata": {"studyCategory": "other", "sampleTemplate": "minimum",  "templateVersion": "2.0"}
+		"studyDbMetadata": {"studyCategory": "other", "sampleTemplate": "minimum", "templateVersion": "2.0"},
 	}
-		with data.metabolights.validation.v2.rules.phase1.definitions._DEFAULT_ASSAY_HEADERS as {"a_MTBLS1.txt": [{"version": "2.0", "headers": [
-			{"columnCategory": "Spectral Raw Data File", 
-			"columnHeader": "Spectral Raw Data File", 
-			"columnIndex": 3
-			}
-		]}]}
+		with data.metabolights.validation.v2.rules.phase1.definitions._DEFAULT_ASSAY_HEADERS as {"a_MTBLS1.txt": [{"version": "2.0", "headers": [{
+			"columnCategory": "Spectral Raw Data File",
+			"columnHeader": "Spectral Raw Data File",
+			"columnIndex": 3,
+		}]}]}
 	count(result) == 1
 }
