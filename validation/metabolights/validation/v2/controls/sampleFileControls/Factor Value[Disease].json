@@ -18,6 +18,7 @@
                     }
                 ]
             },
+            "enforcementLevel": "required",
             "validationType": "ontology-term-in-selected-ontologies",
             "defaultValue": null,
             "allowedMissingOntologyTerms": [
@@ -39,7 +40,7 @@
                 }
             ],
             "allowedPlaceholders": null,
-            "terms": null,
+            "terms": [],
             "ontologies": [
                 "MONDO",
                 "MP",

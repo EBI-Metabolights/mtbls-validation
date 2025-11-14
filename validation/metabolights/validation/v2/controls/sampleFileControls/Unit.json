@@ -15,7 +15,7 @@
             },
             "validationType": "child-ontology-term",
             "defaultValue": null,
-            "allowedMissingOntologyTerms": null,
+            "allowedMissingOntologyTerms": [],
             "allowedOtherSources": [
                 {
                     "sourceLabel": "wikidata",
@@ -27,75 +27,9 @@
                 }
             ],
             "allowedPlaceholders": null,
-            "terms": null,
-            "ontologies": null,
-             "allowedParentOntologyTerms": {
-                "excludeByLabelPattern": [
-                    "^.*unit$", "^.*Unit of.*$"
-                ],
-                "excludeByAccession": ["http://purl.obolibrary.org/obo/NCIT_C41139"],
-                "parents": [
-                    {
-                        "term": "unit",
-                        "termSourceRef": "UO",
-                        "termAccessionNumber": "http://purl.obolibrary.org/obo/UO_0000000"
-                    },
-                    {
-                        "term": "unit",
-                        "termSourceRef": "EFO",
-                        "termAccessionNumber": "http://purl.obolibrary.org/obo/UO_0000000"
-                    },
-                    {
-                        "term": "Qualifier",
-                        "termSourceRef": "NCIT",
-                        "termAccessionNumber": "http://purl.obolibrary.org/obo/NCIT_C41009"
-                    },
-
-                    {
-                        "term": "Unit of Measure",
-                        "termSourceRef": "NCIT",
-                        "termAccessionNumber": "http://purl.obolibrary.org/obo/NCIT_C25709"
-                    }
-                    
-                ]
-            }
-        },
-        {
-            "ruleName": "Unit-02",
-            "description": "",
-            "fieldName": "Unit",
-            "selectionCriteria": {
-                "isaFileType": "sample",
-                "studyCreatedAtOrAfter": null,
-                "studyCreatedBefore": null,
-                "studyCategoryFilter": null,
-                "templateVersionFilter": [
-                    "1.0"
-                ],
-                "isaFileTemplateNameFilter": null,
-                "linkedFieldAndValueFilter": null
-            },
-            "validationType": "any-ontology-term",
-            "defaultValue": null,
-            "allowedMissingOntologyTerms": [],
-            "allowedOtherSources": [
-                {
-                    "sourceLabel": "MTBLS",
-                    "accessionPrefix": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_"
-                }
-            ],
-            "allowedPlaceholders": [
-                {
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/placeholder"
-                }
-            ],
             "terms": [],
-            "ontologies": [
-                "UO",
-                "EFO",
-                "NCIT"
-            ],
+            "ontologies": null,
+            "enforcementLevel": "recommended",
              "allowedParentOntologyTerms": {
                 "excludeByLabelPattern": [
                     "^.*unit$", "^.*Unit of.*$"

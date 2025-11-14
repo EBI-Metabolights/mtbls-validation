@@ -22,10 +22,10 @@
                 }
             ],
             "defaultValue": null,
-            "allowedMissingOntologyTerms": null,
+            "allowedMissingOntologyTerms": [],
             "allowedOtherSources": null,
             "allowedPlaceholders": null,
-            "terms": null,
+            "terms": [],
             "ontologies": null,
             "allowedParentOntologyTerms": null
         }

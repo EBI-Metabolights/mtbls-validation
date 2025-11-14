@@ -19,74 +19,10 @@
                 "termSourceRef": "NCIT",
                 "termAccessionNumber": "http://purl.obolibrary.org/obo/NCIT_C25936"
             },
-            "allowedMissingOntologyTerms": null,
+            "allowedMissingOntologyTerms": [],
             "allowedOtherSources": null,
             "allowedPlaceholders": null,
-            "terms": [
-                {
-                    "term": "Principal Investigator",
-                    "termSourceRef": "NCIT",
-                    "termAccessionNumber": "http://purl.obolibrary.org/obo/NCIT_C19924"
-                },
-                {
-                    "term": "Investigator",
-                    "termSourceRef": "NCIT",
-                    "termAccessionNumber": "http://purl.obolibrary.org/obo/NCIT_C25936"
-                },
-                {
-                    "term": "Author",
-                    "termSourceRef": "NCIT",
-                    "termAccessionNumber": "http://purl.obolibrary.org/obo/NCIT_C42781"
-                }
-            ],
-            "ontologies": [
-                "NCIT"
-            ],
-            "allowedParentOntologyTerms": {
-                "excludeByLabelPattern": [],
-                "excludeByAccession": [],
-                "parents": [
-                    {
-                        "term": "Personnel",
-                        "termSourceRef": "NCIT",
-                        "termAccessionNumber": "http://purl.obolibrary.org/obo/NCIT_C60758"
-                    }
-                    
-                ]
-            }
-            
-        },
-        {
-            "ruleName": "Study Person Roles-02",
-            "description": "",
-            "fieldName": "Study Person Roles",
-            "selectionCriteria": {
-                "isaFileType": "investigation",
-                "studyCreatedAtOrAfter": null,
-                "studyCreatedBefore": "2025-12-01T00:00:00",
-                "studyCategoryFilter": null,
-                "templateVersionFilter": null,
-                "isaFileTemplateNameFilter": null,
-                "linkedFieldAndValueFilter": null
-            },
-            "validationType": "any-ontology-term",
-            "defaultValue": {
-                "term": "Investigator",
-                "termSourceRef": "NCIT",
-                "termAccessionNumber": "http://purl.obolibrary.org/obo/NCIT_C25936"
-            },
-            "allowedMissingOntologyTerms": null,
-            "allowedOtherSources": null,
-            "allowedPlaceholders": [
-                {
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/placeholder"
-                },
-                {
-                    "termSourceRef": "",
-                    "termAccessionNumber": ""
-                }
-            ],
+            "enforcementLevel": "required",
             "terms": [
                 {
                     "term": "Principal Investigator",

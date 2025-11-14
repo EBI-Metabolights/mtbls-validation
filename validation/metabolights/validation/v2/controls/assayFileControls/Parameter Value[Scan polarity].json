@@ -25,6 +25,7 @@
             "allowedMissingOntologyTerms": [],
             "allowedOtherSources": null,
             "allowedPlaceholders": null,
+            "enforcementLevel": "required",
             "terms": [
                 {
                     "term": "negative ionization polarity",
@@ -53,7 +54,7 @@
             "fieldName": "Parameter Value[Scan polarity]",
             "selectionCriteria": {
                 "isaFileType": "assay",
-                "studyCreatedAtOrAfter": "2025-12-01T00:00:00",
+                "studyCreatedAtOrAfter": "2025-11-01T00:00:00",
                 "studyCreatedBefore": null,
                 "studyCategoryFilter": null,
                 "templateVersionFilter": null,
@@ -101,9 +102,7 @@
                 "studyCreatedAtOrAfter": null,
                 "studyCreatedBefore": null,
                 "studyCategoryFilter": null,
-                "templateVersionFilter": [
-                    "1.0"
-                ],
+                "templateVersionFilter": null,
                 "isaFileTemplateNameFilter": null,
                 "linkedFieldAndValueFilter": [
                     {
@@ -114,7 +113,7 @@
             },
             "validationType": "selected-ontology-term",
             "defaultValue": null,
-            "allowedMissingOntologyTerms": null,
+            "allowedMissingOntologyTerms": [],
             "allowedOtherSources": null,
             "allowedPlaceholders": null,
             "terms": [

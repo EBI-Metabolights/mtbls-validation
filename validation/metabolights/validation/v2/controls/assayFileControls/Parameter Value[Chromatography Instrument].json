@@ -22,7 +22,7 @@
             },
             "validationType": "any-ontology-term",
             "defaultValue": null,
-            "allowedMissingOntologyTerms": null,
+            "allowedMissingOntologyTerms": [],
             "allowedOtherSources": [
                 {
                     "sourceLabel": "MTBLS",
@@ -467,7 +467,7 @@
             },
             "validationType": "any-ontology-term",
             "defaultValue": null,
-            "allowedMissingOntologyTerms": null,
+            "allowedMissingOntologyTerms": [],
             "allowedOtherSources": [
                 {
                     "sourceLabel": "MTBLS",

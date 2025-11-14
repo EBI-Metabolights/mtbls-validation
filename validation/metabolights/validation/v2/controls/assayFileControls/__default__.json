@@ -15,7 +15,7 @@
             },
             "validationType": "any-ontology-term",
             "defaultValue": null,
-            "allowedMissingOntologyTerms": null,
+            "allowedMissingOntologyTerms": [],
             "allowedOtherSources": [
                 {
                     "sourceLabel": "MTBLS",
@@ -40,7 +40,7 @@
                     "termAccessionNumber": ""
                 }
             ],
-            "terms": null,
+            "terms": [],
             "ontologies": [
                 "OBI",
                 "EFO",

@@ -40,7 +40,7 @@
             "termSourceRef": ""
         }
     ],
-    "terms": null, 
+    "terms": [], 
     "ontologies": ["UO", "NCIT"],
     "allowedParentOntologyTerms": null
 }

@@ -22,10 +22,13 @@
                     }
                 ]
             },
+            "enforcementLevel": "required",
             "validationType": "ontology-term-in-selected-ontologies",
-            "defaultValue": null,
-            
-            
+            "defaultValue": {
+                "term": "Not Applicable",
+                "termSourceRef": "NCIT",
+                "termAccessionNumber": "http://purl.obolibrary.org/obo/NCIT_C48660"
+            },
             "allowedMissingOntologyTerms": [
                 {
                     "term": "Not Applicable",
@@ -44,7 +47,7 @@
                 }
             ],
             "allowedPlaceholders": null,
-            "terms": null,
+            "terms": [],
             "ontologies": [
                 "MONDO",
                 "MP",

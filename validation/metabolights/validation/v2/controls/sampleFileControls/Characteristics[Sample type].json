@@ -20,9 +20,10 @@
             },
             "validationType": "selected-ontology-term",
             "defaultValue": null,
-            "allowedMissingOntologyTerms": null,
+            "allowedMissingOntologyTerms": [],
             "allowedPlaceholders": null,
             "allowedOtherSources": null,
+            "enforcementLevel": "recommended",
             "terms": [
                 {
                     "term": "experimental sample",

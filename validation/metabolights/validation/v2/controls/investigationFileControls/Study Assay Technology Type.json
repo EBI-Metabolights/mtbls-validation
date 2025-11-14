@@ -17,9 +17,10 @@
             },
             "validationType": "selected-ontology-term",
             "defaultValue": null,
-            "allowedMissingOntologyTerms": null,
+            "allowedMissingOntologyTerms": [],
             "allowedOtherSources": null,
             "allowedPlaceholders": null,
+            "enforcementLevel": "required",
             "terms": [
                 {
                     "term": "mass spectrometry assay",
@@ -54,9 +55,10 @@
             },
             "validationType": "selected-ontology-term",
             "defaultValue": null,
-            "allowedMissingOntologyTerms": null,
+            "allowedMissingOntologyTerms": [],
             "allowedOtherSources": null,
             "allowedPlaceholders": null,
+            "enforcementLevel": "required",
             "terms": [
                 {
                     "term": "mass spectrometry assay",
@@ -84,9 +86,10 @@
             },
             "validationType": "selected-ontology-term",
             "defaultValue": null,
-            "allowedMissingOntologyTerms": null,
+            "allowedMissingOntologyTerms": [],
             "allowedOtherSources": null,
             "allowedPlaceholders": null,
+            "enforcementLevel": "required",
             "terms": [
                 {
                     "term": "NMR spectroscopy assay",
@@ -115,7 +118,7 @@
             },
             "validationType": "selected-ontology-term",
             "defaultValue": null,
-            "allowedMissingOntologyTerms": null,
+            "allowedMissingOntologyTerms": [],
             "allowedOtherSources": null,
             "allowedPlaceholders": null,
             "terms": [
@@ -146,7 +149,7 @@
             },
             "validationType": "selected-ontology-term",
             "defaultValue": null,
-            "allowedMissingOntologyTerms": null,
+            "allowedMissingOntologyTerms": [],
             "allowedOtherSources": null,
             "allowedPlaceholders": null,
             "terms": [
@@ -187,7 +190,7 @@
             },
             "validationType": "selected-ontology-term",
             "defaultValue": null,
-            "allowedMissingOntologyTerms": null,
+            "allowedMissingOntologyTerms": [],
             "allowedOtherSources": null,
             "allowedPlaceholders": null,
             "terms": [
@@ -218,7 +221,7 @@
             },
             "validationType": "selected-ontology-term",
             "defaultValue": null,
-            "allowedMissingOntologyTerms": null,
+            "allowedMissingOntologyTerms": [],
             "allowedOtherSources": null,
             "allowedPlaceholders": null,
             "terms": [

@@ -20,11 +20,12 @@
                     "constraint": "^[a-zA-Z0-9][a-zA-Z0-9-_ ]+[a-zA-Z0-9]$",
                     "errorMessage": "Value must be at least 3 characters and contain only alphanumeric characters, space, - and _ characters"
                 }
-            ],            "defaultValue": null,
-            "allowedMissingOntologyTerms": null,
+            ],
+            "defaultValue": null,
+            "allowedMissingOntologyTerms": [],
             "allowedOtherSources": null,
             "allowedPlaceholders": null,
-            "terms": null,
+            "terms": [],
             "ontologies": null,
             "allowedParentOntologyTerms": null
         }

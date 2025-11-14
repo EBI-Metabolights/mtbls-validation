@@ -15,7 +15,7 @@
             },
             "validationType": "any-ontology-term",
             "defaultValue": null,
-            "allowedMissingOntologyTerms": null,
+            "allowedMissingOntologyTerms": [],
             "allowedOtherSources": [
                 {
                     "sourceLabel": "MTBLS",
@@ -36,7 +36,8 @@
                     "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/placeholder"
                 }
             ],
-            "terms": null,
+            "terms": [],
+             "enforcementLevel": "optional",
             "ontologies": [
                 "OBI",
                 "EFO",

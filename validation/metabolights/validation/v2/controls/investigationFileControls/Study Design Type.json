@@ -15,7 +15,8 @@
             },
             "validationType": "any-ontology-term",
             "defaultValue": null,
-            "allowedMissingOntologyTerms": null,
+            "allowedMissingOntologyTerms": [],
+            "enforcementLevel": "recommended",
             "allowedOtherSources": [
                 {
                     "sourceLabel": "MTBLS",

@@ -10,54 +10,6 @@
                 "studyCreatedBefore": null,
                 "studyCategoryFilter": null,
                 "templateVersionFilter": null,
-                "isaFileTemplateNameFilter": null,
-                "linkedFieldAndValueFilter": [
-                    {
-                        "name": "Protocol REF",
-                        "value": "Mass spectrometry"
-                    }
-                ]
-            },
-            "validationType": "child-ontology-term",
-            "defaultValue": null,
-            "allowedMissingOntologyTerms": [],
-            "allowedOtherSources": [
-                {
-                    "sourceLabel": "wikidata",
-                    "accessionPrefix": "https://www.wikidata.org/wiki/"
-                },
-                {
-                    "sourceLabel": "ILX",
-                    "accessionPrefix": "http://uri.interlex.org/base/ilx_"
-                }
-            ],
-            "allowedPlaceholders": null,
-            "terms": null,
-            "ontologies": null,
-            "allowedParentOntologyTerms": {
-                "excludeByLabelPattern": [
-                    "^*.instrument model$"
-                ],
-                "excludeByAccession": [],
-                "parents": [
-                    {
-                        "term": "instrument model",
-                        "termSourceRef": "MS",
-                        "termAccessionNumber": "http://purl.obolibrary.org/obo/MS_1000031"
-                    }
-                ]
-            }
-        },
-        {
-            "ruleName": "Parameter Value[Instrument]-02",
-            "description": "",
-            "fieldName": "Parameter Value[Instrument]",
-            "selectionCriteria": {
-                "isaFileType": "assay",
-                "studyCreatedAtOrAfter": "2025-12-01T00:00:00",
-                "studyCreatedBefore": null,
-                "studyCategoryFilter": null,
-                "templateVersionFilter": null,
                 "isaFileTemplateNameFilter": [
                     "LC-MS",
                     "GC-MS",
@@ -89,11 +41,12 @@
                 }
             ],
             "allowedPlaceholders": null,
-            "terms": null,
+            "terms": [],
             "ontologies": null,
+            "enforcementLevel": "required",
             "allowedParentOntologyTerms": {
                 "excludeByLabelPattern": [
-                    "^*.instrument model$"
+                    "^.*instrument model$"
                 ],
                 "excludeByAccession": [],
                 "parents": [
@@ -112,7 +65,7 @@
             "selectionCriteria": {
                 "isaFileType": "assay",
                 "studyCreatedAtOrAfter": null,
-                "studyCreatedBefore": "2025-12-01T00:00:00",
+                "studyCreatedBefore": null,
                 "studyCategoryFilter": null,
                 "templateVersionFilter": null,
                 "isaFileTemplateNameFilter": [
@@ -128,6 +81,7 @@
             "validationType": "any-ontology-term",
             "defaultValue": null,
             "allowedMissingOntologyTerms": [],
+            "enforcementLevel": "required",
             "allowedOtherSources": [
                 {
                     "sourceLabel": "MTBLS",
@@ -1027,6 +981,7 @@
                     }
                 ]
             },
+            "enforcementLevel": "required",
             "validationType": "any-ontology-term",
             "defaultValue": null,
             "allowedMissingOntologyTerms": [],
@@ -1302,6 +1257,7 @@
             "validationType": "any-ontology-term",
             "defaultValue": null,
             "allowedMissingOntologyTerms": [],
+            "enforcementLevel": "required",
             "allowedOtherSources": [
                 {
                     "sourceLabel": "MTBLS",

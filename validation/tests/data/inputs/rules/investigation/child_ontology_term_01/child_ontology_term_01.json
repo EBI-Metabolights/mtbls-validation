@@ -36,7 +36,7 @@
             "termSourceRef": "MTBLS"
         }
     ],
-    "terms": null,
+    "terms": [],
     "ontologies": null,
     "allowedParentOntologyTerms": {
                 "excludeByLabelPattern": [

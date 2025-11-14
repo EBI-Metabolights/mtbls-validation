@@ -6,7 +6,7 @@
             "fieldName": "Study Publication Status",
             "selectionCriteria": {
                 "isaFileType": "investigation",
-                "studyCreatedAtOrAfter": null,
+                "studyCreatedAtOrAfter": "2025-11-01T00:00:00",
                 "studyCreatedBefore": null,
                 "studyCategoryFilter": null,
                 "templateVersionFilter": null,
@@ -15,9 +15,10 @@
             },
             "validationType": "selected-ontology-term",
             "defaultValue": null,
-            "allowedMissingOntologyTerms": null,
+            "allowedMissingOntologyTerms": [],
             "allowedOtherSources": null,
             "allowedPlaceholders": null,
+            "enforcementLevel": "required",
             "terms": [
                 {
                     "term": "published",
@@ -55,7 +56,7 @@
             "selectionCriteria": {
                 "isaFileType": "investigation",
                 "studyCreatedAtOrAfter": null,
-                "studyCreatedBefore": "2025-12-01T00:00:00",
+                "studyCreatedBefore": "2025-11-01T00:00:00",
                 "studyCategoryFilter": null,
                 "templateVersionFilter": null,
                 "isaFileTemplateNameFilter": null,
@@ -63,7 +64,7 @@
             },
             "validationType": "ontology-term-in-selected-ontologies",
             "defaultValue": null,
-            "allowedMissingOntologyTerms": null,
+            "allowedMissingOntologyTerms": [],
             "allowedOtherSources": null,
             "allowedPlaceholders": [
                 {

@@ -18,9 +18,10 @@
                     }
                 ]
             },
+            "enforcementLevel": "required",
             "validationType": "ontology-term-in-selected-ontologies",
             "defaultValue": null,
-            "allowedMissingOntologyTerms": null,
+            "allowedMissingOntologyTerms": [],
             "allowedOtherSources": [
                 {
                     "sourceLabel": "wikidata",
@@ -134,7 +135,7 @@
             },
             "validationType": "any-ontology-term",
             "defaultValue": null,
-            "allowedMissingOntologyTerms": null,
+            "allowedMissingOntologyTerms": [],
             "allowedOtherSources": [
                 {
                     "sourceLabel": "MTBLS",

@@ -15,7 +15,8 @@
             },
             "validationType": "any-ontology-term",
             "defaultValue": null,
-            "allowedMissingOntologyTerms": null,
+            "allowedMissingOntologyTerms": [],
+            "enforcementLevel": "recommended",
             "allowedOtherSources": [
                 {
                     "sourceLabel": "wikidata",
@@ -32,7 +33,7 @@
                     "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/placeholder"
                 }
             ],
-            "terms": null,
+            "terms": [],
             "ontologies": [
                 "OBI",
                 "EFO",
@@ -78,7 +79,7 @@
             },
             "validationType": "any-ontology-term",
             "defaultValue": null,
-            "allowedMissingOntologyTerms": null,
+            "allowedMissingOntologyTerms": [],
             "allowedOtherSources": [
                 {
                     "sourceLabel": "MTBLS",
@@ -99,7 +100,7 @@
                     "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/placeholder"
                 }
             ],
-            "terms": null,
+            "terms": [],
             "ontologies": [
                 "OBI",
                 "EFO",
