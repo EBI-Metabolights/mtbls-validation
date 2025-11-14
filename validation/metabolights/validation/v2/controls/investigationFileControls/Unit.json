@@ -5,7 +5,7 @@
             "description": "",
             "fieldName": "Unit",
             "selectionCriteria": {
-                "isaFileType": "sample",
+                "isaFileType": "investigation",
                 "studyCreatedAtOrAfter": null,
                 "studyCreatedBefore": null,
                 "studyCategoryFilter": null,
@@ -65,7 +65,7 @@
             "description": "",
             "fieldName": "Unit",
             "selectionCriteria": {
-                "isaFileType": "sample",
+                "isaFileType": "investigation",
                 "studyCreatedAtOrAfter": null,
                 "studyCreatedBefore": null,
                 "studyCategoryFilter": null,
