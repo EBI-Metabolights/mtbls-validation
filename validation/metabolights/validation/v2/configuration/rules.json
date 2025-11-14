@@ -1,7 +1,7 @@
 {
     "rules": {
         "validation_version": "2.1.4",
-        "created_at": "2025-11-11T13:17:49.112919+00:00",
+        "created_at": "2025-11-14T10:13:33.151554+00:00",
         "violations": [
             {
                 "rule_id": "rule___100_100_001_01",
@@ -885,8 +885,8 @@
             },
             {
                 "rule_id": "rule_i_100_300_003_01",
-                "title": "Study Title length less than 20 characters.",
-                "description": "Study Title should be defined with length equal or greater than 20 characters. Please use same title as first publication.",
+                "title": "Study Title length less than 25 characters.",
+                "description": "Study Title should be defined with length equal or greater than 25 characters. Please use same title as first publication.",
                 "type": "ERROR",
                 "section": "investigation",
                 "priority": "CRITICAL"
@@ -949,7 +949,7 @@
             },
             {
                 "rule_id": "rule_i_100_310_002_01",
-                "title": "Study Design Type is not in the control list.",
+                "title": "Study Design Type is not in the control list or selected ontologies..",
                 "description": "Study Design Type value MUST be selected from the control list.",
                 "type": "ERROR",
                 "section": "investigation",
@@ -957,8 +957,8 @@
             },
             {
                 "rule_id": "rule_i_100_310_003_01",
-                "title": "Study Design Type is not selected from the selected ontologies.",
-                "description": "Study Design Type value MUST be selected from the selected ontologies.",
+                "title": "Study Design Type is not selected from the prioritised ontologies.",
+                "description": "Study Design Type value SHOULD be selected from the prioritised ontologies.",
                 "type": "ERROR",
                 "section": "investigation",
                 "priority": "HIGH"
@@ -1053,8 +1053,8 @@
             },
             {
                 "rule_id": "rule_i_100_320_007_03",
-                "title": "Study Publication Status is not selected from the prioritised ontologies.",
-                "description": "Study Design Type value SHOULD be selected from the prioritised ontologies.",
+                "title": "Study Publication Status is not selected from the default ontology list.",
+                "description": "Study Publication Status value MAY be selected from the default ontology list.",
                 "type": "WARNING",
                 "section": "investigation",
                 "priority": "MEDIUM"
@@ -1101,9 +1101,9 @@
             },
             {
                 "rule_id": "rule_i_100_330_004_01",
-                "title": "Study Factor Type is not selected from the selected ontologies.",
-                "description": "Study Factor Type value MUST be selected from the selected ontologies.",
-                "type": "ERROR",
+                "title": "Study Factor Type is not selected from the prioritised ontologies.",
+                "description": "Study Factor Type value SHOULD be selected from the prioritised ontologies.",
+                "type": "WARNING",
                 "section": "investigation",
                 "priority": "HIGH"
             },
@@ -1446,7 +1446,7 @@
             {
                 "rule_id": "rule_i_100_360_011_02",
                 "title": "Principal Investigator contact details not defined.",
-                "description": "Principal Investigator first name, last name, ORCID, affiliation, affiliation ROR id and email must be defined. At least one of them is not defined.",
+                "description": "Principal Investigator first name, last name, affiliation, and email must be defined.",
                 "type": "ERROR",
                 "section": "investigation",
                 "priority": "CRITICAL"
@@ -1474,6 +1474,22 @@
                 "type": "ERROR",
                 "section": "investigation",
                 "priority": "HIGH"
+            },
+            {
+                "rule_id": "rule_i_100_360_011_06",
+                "title": "Study Person ORCID is not defined for principal investigator.",
+                "description": "Study Person ORCID is not defined for principal investigator.",
+                "type": "WARNING",
+                "section": "investigation",
+                "priority": "WARNING"
+            },
+            {
+                "rule_id": "rule_i_100_360_011_07",
+                "title": "Study Person Affiliation ROR ID is not defined for principal investigator.",
+                "description": "Study Person Affiliation ROR ID is not defined for principal investigator.",
+                "type": "WARNING",
+                "section": "investigation",
+                "priority": "WARNING"
             },
             {
                 "rule_id": "rule_m_100_100_001_01",

@@ -4,8 +4,8 @@ import data.metabolights.validation.v2.rules.phase1.violations as rules
 import rego.v1
 
 # METADATA
-# title: Study Title length less than 20 characters.
-# description: Study Title should be defined with length equal or greater than 20 characters. Please use same title as first publication.
+# title: Study Title length less than 25 characters.
+# description: Study Title should be defined with length equal or greater than 25 characters. Please use same title as first publication.
 # custom:
 #  rule_id: rule_i_100_300_003_01
 #  type: ERROR

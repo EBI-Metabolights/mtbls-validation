@@ -9,7 +9,7 @@ import data.tests.data.inputs.rules as test_rules
 import rego.v1
 
 # METADATA
-# title: Study Design Type is not in the control list.
+# title: Study Design Type is not in the control list or selected ontologies..
 # description: Study Design Type value MUST be selected from the control list.
 # custom:
 #  rule_id: rule_i_100_310_002_01

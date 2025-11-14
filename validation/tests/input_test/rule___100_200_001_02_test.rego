@@ -23,7 +23,7 @@ rule___100_200_001_02_test_cases := 1
 # custom:
 #  rule_id: rule___100_200_001_02
 #  type: ERROR
-#  priority: CRITICAL
+#  priority: HIGH
 #  section: samples.parserMessages
 rule___100_200_001_02_test_cases := 1
 

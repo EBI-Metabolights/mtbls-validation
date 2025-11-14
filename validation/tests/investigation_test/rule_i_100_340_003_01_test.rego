@@ -180,17 +180,15 @@ test_rule_i_100_340_003_01_violation_03 if {
 	input_01 := data.tests.data.inputs.minimum_01
 	input_data := json.patch(
 		input_01,
-		[
-			{
-				"op": "replace",
-				"path": "/investigation/studies/0/studyAssays/assays/0/measurementType",
-				"value": {
-					"term": "kilogram",
-					"termAccessionNumber": "",
-					"termSourceRef": "UO",
-				},
+		[{
+			"op": "replace",
+			"path": "/investigation/studies/0/studyAssays/assays/0/measurementType",
+			"value": {
+				"term": "kilogram",
+				"termAccessionNumber": "",
+				"termSourceRef": "UO",
 			},
-		],
+		}],
 	)
 	result := rules.rule_i_100_340_003_01 with input as input_data
 		with def.RULE_ASSAY_MEASUREMENT_TYPE as test_rules.investigation.select_ontology_term_01

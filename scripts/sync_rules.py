@@ -45,7 +45,7 @@ def update_files(rules: dict[str, pd.Series]):
                             rows[line + 7] = get_value(rule, "section", "  ")
 
         if updated:
-            print(f"Updating file: {file}")
+            # print(f"Updating file: {file}")
             with open(file, "w") as f:
                 f.writelines(rows)
 

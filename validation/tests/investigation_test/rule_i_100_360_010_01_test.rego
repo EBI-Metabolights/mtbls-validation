@@ -17,19 +17,45 @@ import rego.v1
 #  section: investigation.studyContacts
 rule_i_100_360_010_01_test_cases := 1
 
-# # METADATA
-# # title: <title>.
-# # description: <description>.
-# test_tests.investigation_test_no_violation_01 if {
-# 	result := rules.tests.investigation_test with input as {
-# 	}
-# 	count(result) == 0
-# }
-# # METADATA
-# # title: <title>.
-# # description: <description>.
-# test_tests.investigation_test_violation_01 if {
-# 	result := rules.tests.investigation_test with input as {
-# 	}
-# 	count(result) == 1
-# }
+# METADATA
+# title: Study Person Roles Term term is in the control list
+# description: Study Person Roles Term term is in the control list
+test_rule_i_100_360_010_01_no_violation_01 if {
+	input_01 := data.tests.data.inputs.minimum_01
+	input_data := json.patch(
+		input_01,
+		[{
+			"op": "replace",
+			"path": "/investigation/studies/0/studyContacts/people/0/roles/0",
+			"value": {
+				"term": "disease",
+				"termAccessionNumber": "http://www.ebi.ac.uk/efo/EFO_0000408",
+				"termSourceRef": "EFO",
+			},
+		}],
+	)
+
+	result := rules.rule_i_100_360_010_01 with input as input_data
+	count(result) == 0
+}
+
+# METADATA
+# title: Study Person Roles Term term is in the control list
+# description: Study Person Roles Term term is in the control list
+test_rule_i_100_360_010_01_violation_01 if {
+	input_01 := data.tests.data.inputs.minimum_01
+	input_data := json.patch(
+		input_01,
+		[{
+			"op": "replace",
+			"path": "/investigation/studies/0/studyContacts/people/0/roles/0",
+			"value": {
+				"term": "kilogram",
+				"termAccessionNumber": "http://purl.obolibrary.org/obo/UO_0000009",
+				"termSourceRef": "UO",
+			},
+		}],
+	)
+	result := rules.rule_i_100_360_010_01 with input as input_data
+	count(result) == 1
+}

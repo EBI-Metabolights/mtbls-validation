@@ -17,19 +17,90 @@ import rego.v1
 #  section: investigation.studyContacts
 rule_i_100_360_011_03_test_cases := 1
 
-# # METADATA
-# # title: <title>.
-# # description: <description>.
-# test_tests.investigation_test_no_violation_01 if {
-# 	result := rules.tests.investigation_test with input as {
-# 	}
-# 	count(result) == 0
-# }
-# # METADATA
-# # title: <title>.
-# # description: <description>.
-# test_tests.investigation_test_violation_01 if {
-# 	result := rules.tests.investigation_test with input as {
-# 	}
-# 	count(result) == 1
-# }
+# METADATA
+# title: Study Assay term is  empty
+# description: Study Assay term is empty
+test_rule_i_100_360_011_03_no_violation_01 if {
+	input_01 := data.tests.data.inputs.minimum_01
+	input_data := json.patch(
+		input_01,
+		[{
+			"op": "replace",
+			"path": "/investigation/studies/0/studyContacts/comments",
+			"value": [{
+				"name": "Study Person Affiliation ROR ID",
+				"value": ["https://ror.org/xyzxyzxyz"],
+			}],
+		}],
+	)
+	print(input_data.investigation.studies[0].studyContacts.comments)
+	result := rules.rule_i_100_360_011_03 with input as input_data
+
+	count(result) == 0
+}
+
+# METADATA
+# title: Study Assay term is  empty
+# description: Study Assay term is empty
+test_rule_i_100_360_011_03_no_violation_02 if {
+	input_01 := data.tests.data.inputs.minimum_01
+	input_data := json.patch(
+		input_01,
+		[{
+			"op": "replace",
+			"path": "/investigation/studies/0/studyContacts/comments",
+			"value": [{
+				"name": "Study Person Affiliation ROR ID",
+				"value": ["https://www.wikidata.org/wiki/Q212"],
+			}],
+		}],
+	)
+	print(input_data.investigation.studies[0].studyContacts.comments)
+	result := rules.rule_i_100_360_011_03 with input as input_data
+
+	count(result) == 0
+}
+
+# METADATA
+# title: Study Assay term is  empty
+# description: Study Assay term is empty
+test_rule_i_100_360_011_03_violation_01 if {
+	input_01 := data.tests.data.inputs.minimum_01
+	input_data := json.patch(
+		input_01,
+		[{
+			"op": "replace",
+			"path": "/investigation/studies/0/studyContacts/comments",
+			"value": [{
+				"name": "Study Person Affiliation ROR ID",
+				"value": ["https://ebi.ac.uk"],
+			}],
+		}],
+	)
+	print(input_data.investigation.studies[0].studyContacts.comments)
+	result := rules.rule_i_100_360_011_03 with input as input_data
+
+	count(result) == 1
+}
+
+# METADATA
+# title: Study Assay term is  empty
+# description: Study Assay term is empty
+test_rule_i_100_360_011_03_violation_02 if {
+	input_01 := data.tests.data.inputs.minimum_01
+	input_data := json.patch(
+		input_01,
+		[{
+			"op": "replace",
+			"path": "/investigation/studies/0/studyContacts/comments",
+			"value": [{
+				"name": "Study Person Affiliation ROR ID",
+				"value": ["https://www.wikidata.org/wiki/212"],
+			}],
+		}],
+	)
+	print(input_data.investigation.studies[0].studyContacts.comments)
+	result := rules.rule_i_100_360_011_03 with input as input_data
+
+	count(result) == 1
+}

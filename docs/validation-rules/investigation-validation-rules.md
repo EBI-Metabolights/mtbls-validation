@@ -13,7 +13,7 @@
 | 9 | rule_i_100_300_001_01 | ERROR | No study referenced in investigation file. | Only one study should be defined in i_Investigation.txt. |
 | 10 | rule_i_100_300_001_02 | ERROR | More than one study referenced in investigation file. | Only one study should be defined in i_Investigation.txt. |
 | 11 | rule_i_100_300_002_01 | ERROR | Study Identifier not valid. | Study Identifier should be valid format (e.g., MTBLS(positive_number) or REQ(datetime)). |
-| 12 | rule_i_100_300_003_01 | ERROR | Study Title length less than 20 characters. | Study Title should be defined with length equal or greater than 20 characters. Please use same title as first publication. |
+| 12 | rule_i_100_300_003_01 | ERROR | Study Title length less than 25 characters. | Study Title should be defined with length equal or greater than 25 characters. Please use same title as first publication. |
 | 13 | rule_i_100_300_003_02 | ERROR | Non-printable characters in Study Title. | Study title should contain only printable characters. |
 | 14 | rule_i_100_300_003_03 | ERROR | Study Title contains only template message. | Study title should be updated. Do not use template message 'Please update the study title'. |
 | 15 | rule_i_100_300_004_01 | ERROR | Study Description length less than 60 characters. | Study Description should be defined with length equal or greater than 60 characters. Please use abstract of first publication. |
@@ -21,8 +21,8 @@
 | 17 | rule_i_100_300_005_01 | WARNING | Study Submission Date not valid. | Study Submission Date should be valid date and ISO8601 format (e.g., 2023-01-01). |
 | 18 | rule_i_100_300_006_01 | WARNING | Study Public Release Date not valid. | Study Public Release Date should be valid date and ISO8601 format (e.g., 2023-01-01). |
 | 19 | rule_i_100_310_001_01 | ERROR | There are less than 3 Study Design Descriptors in the Study Design Descriptors section of investigation file. | At least 3 study design descriptors should be defined. |
-| 20 | rule_i_100_310_002_01 | ERROR | Study Design Type is not in the control list. | Study Design Type value MUST be selected from the control list. |
-| 21 | rule_i_100_310_003_01 | ERROR | Study Design Type is not selected from the selected ontologies. | Study Design Type value MUST be selected from the selected ontologies. |
+| 20 | rule_i_100_310_002_01 | ERROR | Study Design Type is not in the control list or selected ontologies.. | Study Design Type value MUST be selected from the control list. |
+| 21 | rule_i_100_310_003_01 | ERROR | Study Design Type is not selected from the prioritised ontologies. | Study Design Type value SHOULD be selected from the prioritised ontologies. |
 | 22 | rule_i_100_310_003_02 | WARNING | Study Design Type is not selected from the prioritised ontologies. | Study Design Type value SHOULD be selected from the prioritised ontologies. |
 | 23 | rule_i_100_310_004_01 | WARNING | Study Design Type is not selected from the default ontology list. | Study Design Type value MAY be selected from the default ontology list. |
 | 24 | rule_i_100_310_004_02 | WARNING | Study Design Type Term Source REF not referenced in investigation file. | Study Design Type Term Source REFs should be referenced in the ONTOLOGY SOURCE REFERENCE section in i_Investigation.txt. |
@@ -34,13 +34,13 @@
 | 30 | rule_i_100_320_006_01 | ERROR | Study Publication Author List is empty. | Study Publication Author List must be defined. |
 | 31 | rule_i_100_320_007_01 | ERROR | Study Publication Status is not in the control list. | Study Publication Status value MUST be selected from the control list. |
 | 32 | rule_i_100_320_007_02 | ERROR | Study Publication Status is not selected from the selected ontologies. | Study Publication Status value MUST be selected from the selected ontologies. |
-| 33 | rule_i_100_320_007_03 | WARNING | Study Publication Status is not selected from the prioritised ontologies. | Study Design Type value SHOULD be selected from the prioritised ontologies. |
+| 33 | rule_i_100_320_007_03 | WARNING | Study Publication Status is not selected from the default ontology list. | Study Publication Status value MAY be selected from the default ontology list. |
 | 34 | rule_i_100_320_009_01 | WARNING | Study Publication Status is not selected from the default ontology list. | Study Publication Status value MAY be selected from the default ontology list. |
 | 35 | rule_i_100_320_009_02 | WARNING | Study Publication Status Term Source REF not referenced in investigation file. | Study Publication Status Term Source REFs should be referenced in the ONTOLOGY SOURCE REFERENCE section in i_Investigation.txt. |
 | 36 | rule_i_100_330_001_01 | ERROR | No study factors referenced in investigation file. | At least one study factors must be defined in i_Investigation.txt. |
 | 37 | rule_i_100_330_002_01 | ERROR | Study Factor Name is empty. | Study Factor Name must be defined. |
 | 38 | rule_i_100_330_003_01 | ERROR | Study Factor Type is not in the control list. | Study Factor Type value MUST be selected from the control list. |
-| 39 | rule_i_100_330_004_01 | ERROR | Study Factor Type is not selected from the selected ontologies. | Study Factor Type value MUST be selected from the selected ontologies. |
+| 39 | rule_i_100_330_004_01 | WARNING | Study Factor Type is not selected from the prioritised ontologies. | Study Factor Type value SHOULD be selected from the prioritised ontologies. |
 | 40 | rule_i_100_330_004_02 | WARNING | Study Factor Type is not selected from the prioritised ontologies. | Study Factor Type value SHOULD be selected from the prioritised ontologies. |
 | 41 | rule_i_100_330_005_01 | WARNING | Study Factor Type is not selected from the default ontology list. | Study Factor Type value MAY be selected from the default ontology list. |
 | 42 | rule_i_100_330_005_02 | WARNING | Study Factor Type Term Source REF is not referenced in investigation file. | Study Factor Type Term Source REFs should be referenced in the ONTOLOGY SOURCE REFERENCE section in i_Investigation.txt. |
@@ -83,7 +83,9 @@
 | 79 | rule_i_100_360_010_02 | WARNING | Study Person Role is not selected from the prioritised ontologies. | Study Person Role MAY be selected from the prioritised ontologies. |
 | 80 | rule_i_100_360_010_03 | WARNING | Study Person Roles Term Source REF is empty. | Study Person Roles Term Source REF should be defined. |
 | 81 | rule_i_100_360_011_01 | ERROR | There is no study contact with Principal Investigator role. | At least one study contact must have Principal Investigator role. |
-| 82 | rule_i_100_360_011_02 | ERROR | Principal Investigator contact details not defined. | Principal Investigator first name, last name, ORCID, affiliation, affiliation ROR id and email must be defined. At least one of them is not defined. |
+| 82 | rule_i_100_360_011_02 | ERROR | Principal Investigator contact details not defined. | Principal Investigator first name, last name, affiliation, and email must be defined. |
 | 83 | rule_i_100_360_011_03 | ERROR | Study Person Affiliation ROR ID is not valid. | Study Person ROR ID must have valid format. e.g., https://ror.org/02catss52 . If your affiliation ROR ID is not defined, you may provide wikidata URL of your primary affiliation. e.g., https://www.wikidata.org/wiki/Q1341845 |
 | 84 | rule_i_100_360_011_04 | ERROR | Study Person ORCID is not valid. | Study Person ORCID must have valid format. |
 | 85 | rule_i_100_360_011_05 | ERROR | Study Person Additional Email Address is not valid. | Study Person Additional Email Address must have valid format. |
+| 86 | rule_i_100_360_011_06 | WARNING | Study Person ORCID is not defined for principal investigator. | Study Person ORCID is not defined for principal investigator. |
+| 87 | rule_i_100_360_011_07 | WARNING | Study Person Affiliation ROR ID is not defined for principal investigator. | Study Person Affiliation ROR ID is not defined for principal investigator. |

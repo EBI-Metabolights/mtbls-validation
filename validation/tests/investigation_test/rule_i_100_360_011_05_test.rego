@@ -17,19 +17,90 @@ import rego.v1
 #  section: investigation.studyContacts
 rule_i_100_360_011_05_test_cases := 1
 
-# # METADATA
-# # title: <title>.
-# # description: <description>.
-# test_tests.investigation_test_no_violation_01 if {
-# 	result := rules.tests.investigation_test with input as {
-# 	}
-# 	count(result) == 0
-# }
-# # METADATA
-# # title: <title>.
-# # description: <description>.
-# test_tests.investigation_test_violation_01 if {
-# 	result := rules.tests.investigation_test with input as {
-# 	}
-# 	count(result) == 1
-# }
+# METADATA
+# title: Study Assay term is  empty
+# description: Study Assay term is empty
+test_rule_i_100_360_011_05_no_violation_01 if {
+	input_01 := data.tests.data.inputs.minimum_01
+	input_data := json.patch(
+		input_01,
+		[{
+			"op": "replace",
+			"path": "/investigation/studies/0/studyContacts/comments",
+			"value": [{
+				"name": "Study Person Alternative Email",
+				"value": ["a@gov.uk"],
+			}],
+		}],
+	)
+	print(input_data.investigation.studies[0].studyContacts.comments)
+	result := rules.rule_i_100_360_011_05 with input as input_data
+
+	count(result) == 0
+}
+
+# METADATA
+# title: Study Assay term is  empty
+# description: Study Assay term is empty
+test_rule_i_100_360_011_05_no_violation_02 if {
+	input_01 := data.tests.data.inputs.minimum_01
+	input_data := json.patch(
+		input_01,
+		[{
+			"op": "replace",
+			"path": "/investigation/studies/0/studyContacts/comments",
+			"value": [{
+				"name": "Study Person Alternative Email",
+				"value": ["help@ebi.ac.uk"],
+			}],
+		}],
+	)
+	print(input_data.investigation.studies[0].studyContacts.comments)
+	result := rules.rule_i_100_360_011_05 with input as input_data
+
+	count(result) == 0
+}
+
+# METADATA
+# title: Study Assay term is  empty
+# description: Study Assay term is empty
+test_rule_i_100_360_011_05_violation_01 if {
+	input_01 := data.tests.data.inputs.minimum_01
+	input_data := json.patch(
+		input_01,
+		[{
+			"op": "replace",
+			"path": "/investigation/studies/0/studyContacts/comments",
+			"value": [{
+				"name": "Study Person Alternative Email",
+				"value": ["aww!@ebi.ac.uk"],
+			}],
+		}],
+	)
+	print(input_data.investigation.studies[0].studyContacts.comments)
+	result := rules.rule_i_100_360_011_05 with input as input_data
+
+	count(result) == 1
+}
+
+# METADATA
+# title: Study Assay term is  empty
+# description: Study Assay term is empty
+test_rule_i_100_360_011_05_violation_02 if {
+	input_01 := data.tests.data.inputs.minimum_01
+	input_data := json.patch(
+		input_01,
+		[{
+			"op": "replace",
+			"path": "/investigation/studies/0/studyContacts/comments",
+			"value": [{
+				"name": "Study Person Alternative Email",
+				"value": ["www.ebi.ac.uk"],
+			}],
+		}],
+	)
+	print(input_data.investigation.studies[0].studyContacts.comments)
+	result := rules.rule_i_100_360_011_05 with input as input_data
+
+	count(result) == 1
+}

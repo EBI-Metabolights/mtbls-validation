@@ -17,19 +17,45 @@ import rego.v1
 #  section: investigation.studyAssays
 rule_i_100_340_005_02_test_cases := 1
 
-# # METADATA
-# # title: <title>.
-# # description: <description>.
-# test_tests.investigation_test_no_violation_01 if {
-# 	result := rules.tests.investigation_test with input as {
-# 	}
-# 	count(result) == 0
-# }
-# # METADATA
-# # title: <title>.
-# # description: <description>.
-# test_tests.investigation_test_violation_01 if {
-# 	result := rules.tests.investigation_test with input as {
-# 	}
-# 	count(result) == 1
-# }
+# METADATA
+# title: Study Assay Measurement Type term is in the control list
+# description: Study Assay Measurement Type term is in the control list
+test_rule_i_100_340_005_02_no_violation_01 if {
+	input_01 := data.tests.data.inputs.minimum_01
+	input_data := json.patch(
+		input_01,
+		[{
+			"op": "replace",
+			"path": "/investigation/studies/0/studyAssays/assays/0/measurementType",
+			"value": {
+				"term": "disease",
+				"termAccessionNumber": "http://www.ebi.ac.uk/efo/EFO_0000408",
+				"termSourceRef": "EFO",
+			},
+		}],
+	)
+
+	result := rules.rule_i_100_340_005_02 with input as input_data
+	count(result) == 0
+}
+
+# METADATA
+# title: Study Assay Measurement Type term is in the control list
+# description: Study Assay Measurement Type term is in the control list
+test_rule_i_100_340_005_02_violation_01 if {
+	input_01 := data.tests.data.inputs.minimum_01
+	input_data := json.patch(
+		input_01,
+		[{
+			"op": "replace",
+			"path": "/investigation/studies/0/studyAssays/assays/0/measurementType",
+			"value": {
+				"term": "kilogram",
+				"termAccessionNumber": "http://purl.obolibrary.org/obo/UO_0000009",
+				"termSourceRef": "UO",
+			},
+		}],
+	)
+	result := rules.rule_i_100_340_005_02 with input as input_data
+	count(result) == 1
+}

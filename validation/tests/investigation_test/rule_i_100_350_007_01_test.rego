@@ -17,19 +17,111 @@ import rego.v1
 #  section: investigation.studyProtocols
 rule_i_100_350_007_01_test_cases := 1
 
-# # METADATA
-# # title: <title>.
-# # description: <description>.
-# test_tests.investigation_test_no_violation_01 if {
-# 	result := rules.tests.investigation_test with input as {
-# 	}
-# 	count(result) == 0
-# }
-# # METADATA
-# # title: <title>.
-# # description: <description>.
-# test_tests.investigation_test_violation_01 if {
-# 	result := rules.tests.investigation_test with input as {
-# 	}
-# 	count(result) == 1
-# }
+# METADATA
+# title: study protocol parameter is missing.
+# description:  study protocol parameter is missing.
+test_rule_i_100_350_007_01_no_violation_01 if {
+	result := rules.rule_i_100_350_007_01 with input as {
+		"investigation": {"studies": [{"identifier": "MTBLS1", "studyProtocols": {"protocols": [{
+			"name": "Extraction",
+			"protocolType": {
+				"term": "Extraction",
+				"termAccessionNumber": "",
+				"termSourceRef": "",
+			},
+			"description": "",
+			"uri": "",
+			"version": "",
+			"parameters": [
+				{
+					"term": "Derivatization",
+					"termAccessionNumber": "",
+					"termSourceRef": "",
+				},
+				{
+					"term": "Post Extraction",
+					"termAccessionNumber": "",
+					"termSourceRef": "",
+				},
+			],
+			"components": [],
+		}]}}]},
+		"investigationFilePath": "i_Investigation.txt",
+	}
+		with data.metabolights.validation.v2.rules.phase1.definitions._DEFAULT_MERGED_STUDY_PROTOCOL_PARAMETERS as {"Extraction": [
+			"Derivatization",
+			"Post Extraction",
+		]}
+	count(result) == 0
+}
+
+# METADATA
+# title: study protocol parameter is missing.
+# description:  study protocol parameter is missing.
+test_rule_i_100_350_007_01_violation_01 if {
+	result := rules.rule_i_100_350_007_01 with input as {
+		"investigation": {"studies": [{"identifier": "MTBLS1", "studyProtocols": {"protocols": [
+			{
+				"name": "Sample collection",
+				"protocolType": {
+					"term": "Sample collection",
+					"termAccessionNumber": "",
+					"termSourceRef": "",
+				},
+				"description": "",
+				"uri": "",
+				"version": "",
+				"parameters": [],
+				"components": [],
+			},
+			{
+				"name": "Chromatography",
+				"protocolType": {
+					"term": "Chromatography",
+					"termAccessionNumber": "",
+					"termSourceRef": "",
+				},
+				"description": "",
+				"uri": "",
+				"version": "",
+				"parameters": [],
+				"components": [],
+			},
+			{
+				"name": "Extraction",
+				"protocolType": {
+					"term": "Extraction",
+					"termAccessionNumber": "",
+					"termSourceRef": "",
+				},
+				"description": "",
+				"uri": "",
+				"version": "",
+				"parameters": [],
+				"components": [],
+			},
+		]}}]},
+		"investigationFilePath": "i_Investigation.txt",
+	}
+		with data.metabolights.validation.v2.rules.phase1.definitions._DEFAULT_MERGED_STUDY_PROTOCOL_PARAMETERS as {
+			"Sample collection": [
+				"Instrument",
+				"Ion source",
+				"Mass analyzer",
+				"Scan m/z range",
+				"Scan polarity",
+			],
+			"Extraction": [
+				"Derivatization",
+				"Post Extraction",
+			],
+			"Chromatography": [
+				"Autosampler model",
+				"Chromatography Instrument",
+				"Column model",
+				"Column type",
+				"Guard column",
+			],
+		}
+	count(result) == 3
+}

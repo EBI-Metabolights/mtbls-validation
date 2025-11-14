@@ -10,8 +10,8 @@ import data.tests.data.inputs.rules as test_rules
 import rego.v1
 
 # METADATA
-# title: Study Publication Status is not selected from the prioritised ontologies.
-# description: Study Design Type value SHOULD be selected from the prioritised ontologies.
+# title: Study Publication Status is not selected from the default ontology list.
+# description: Study Publication Status value MAY be selected from the default ontology list.
 # custom:
 #  rule_id: rule_i_100_320_007_03
 #  type: WARNING

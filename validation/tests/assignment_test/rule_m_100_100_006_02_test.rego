@@ -3,6 +3,8 @@
 #########################################################################################################
 package tests.assignment_test
 
+import data.metabolights.validation.v2.rules.phase1.violations as rules
+
 import rego.v1
 
 # METADATA
@@ -15,19 +17,28 @@ import rego.v1
 #  section: metabolites.general
 rule_m_100_100_006_02_test_cases := 1
 
-# # METADATA
-# # title: <title>.
-# # description: <description>.
-# test_tests.assignment_test_no_violation_01 if {
-# 	result := rules.tests.assignment_test with input as {
-# 	}
-# 	count(result) == 0
-# }
-# # METADATA
-# # title: <title>.
-# # description: <description>.
-# test_tests.assignment_test_violation_01 if {
-# 	result := rules.tests.assignment_test with input as {
-# 	}
-# 	count(result) == 1
-# }
+# METADATA
+# title: There are more rows in the metabolite assignment file.
+# description:  There are more rows in the metabolite assignment file.
+test_rule_m_100_100_006_02_no_violation_01 if {
+	result := rules.rule_m_100_100_006_02 with input as {
+		"investigationFilePath": "i_Investigation.txt",
+		"metaboliteAssignments": {"a_MTBLS1.tsv": {"table": {"rowOffset": 0, "totalRowCount": 10}}},
+		"investigation": {"studies": [{"fileName": "s_MTBLS1.txt", "studyAssays": {"assays": [{"fileName": "a_MTBLS1.txt"}]}}]},
+		"parserMessages": {"a_MTBLS1.txt": []},
+	}
+	count(result) == 0
+}
+
+# METADATA
+# title: There is one row in the metabolite assignment file.
+# description:  There is one row in the metabolite assignment file.
+test_rule_m_100_100_006_02_violation_01 if {
+	result := rules.rule_m_100_100_006_02 with input as {
+		"investigationFilePath": "i_Investigation.txt",
+		"metaboliteAssignments": {"a_MTBLS1.tsv": {"table": {"rowOffset": 0, "totalRowCount": 1}}},
+		"investigation": {"studies": [{"fileName": "s_MTBLS1.txt", "studyAssays": {"assays": [{"fileName": "a_MTBLS1.txt"}]}}]},
+		"parserMessages": {"a_MTBLS1.txt": []},
+	}
+	count(result) == 1
+}

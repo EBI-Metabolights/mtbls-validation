@@ -17,19 +17,104 @@ import rego.v1
 #  section: investigation.studyProtocols
 rule_i_100_350_002_01_test_cases := 1
 
-# # METADATA
-# # title: <title>.
-# # description: <description>.
-# test_tests.investigation_test_no_violation_01 if {
-# 	result := rules.tests.investigation_test with input as {
-# 	}
-# 	count(result) == 0
-# }
-# # METADATA
-# # title: <title>.
-# # description: <description>.
-# test_tests.investigation_test_violation_01 if {
-# 	result := rules.tests.investigation_test with input as {
-# 	}
-# 	count(result) == 1
-# }
+# METADATA
+# title: study protocol name is valid.
+# description: study protocol name is valid.
+test_rule_i_100_350_002_01_no_violation_01 if {
+	result := rules.rule_i_100_350_002_01 with input as {
+		"investigation": {"studies": [{"identifier": "MTBLS1", "studyProtocols": {"protocols": [
+			{
+				"name": "Sam",
+				"protocolType": {
+					"term": "Sample collection",
+					"termAccessionNumber": "",
+					"termSourceRef": "",
+				},
+				"description": "",
+				"uri": "",
+				"version": "",
+				"parameters": [],
+				"components": [],
+			},
+			{
+				"name": "Mass spectrometry",
+				"protocolType": {
+					"term": "Extraction",
+					"termAccessionNumber": "",
+					"termSourceRef": "",
+				},
+				"description": "",
+				"uri": "",
+				"version": "",
+				"parameters": [],
+				"components": [],
+			},
+			{
+				"name": "Mass",
+				"protocolType": {
+					"term": "Mass spectrometry",
+					"termAccessionNumber": "",
+					"termSourceRef": "",
+				},
+				"description": "",
+				"uri": "",
+				"version": "",
+				"parameters": [],
+				"components": [],
+			},
+		]}}]},
+		"investigationFilePath": "i_Investigation.txt",
+	}
+	count(result) == 0
+}
+
+# METADATA
+# title: study protocol name is not valid.
+# description: study protocol name is not valid.
+test_rule_i_100_350_002_01_violation_01 if {
+	result := rules.rule_i_100_350_002_01 with input as {
+		"investigation": {"studies": [{"identifier": "MTBLS1", "studyProtocols": {"protocols": [
+			{
+				"name": "Sa",
+				"protocolType": {
+					"term": "Sample collection",
+					"termAccessionNumber": "",
+					"termSourceRef": "",
+				},
+				"description": "",
+				"uri": "",
+				"version": "",
+				"parameters": [],
+				"components": [],
+			},
+			{
+				"name": "M",
+				"protocolType": {
+					"term": "Extraction",
+					"termAccessionNumber": "",
+					"termSourceRef": "",
+				},
+				"description": "",
+				"uri": "",
+				"version": "",
+				"parameters": [],
+				"components": [],
+			},
+			{
+				"name": "",
+				"protocolType": {
+					"term": "Mass spectrometry",
+					"termAccessionNumber": "",
+					"termSourceRef": "",
+				},
+				"description": "",
+				"uri": "",
+				"version": "",
+				"parameters": [],
+				"components": [],
+			},
+		]}}]},
+		"investigationFilePath": "i_Investigation.txt",
+	}
+	count(result) == 3
+}

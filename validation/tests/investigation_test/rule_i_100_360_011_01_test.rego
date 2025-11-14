@@ -17,19 +17,125 @@ import rego.v1
 #  section: investigation.studyContacts
 rule_i_100_360_011_01_test_cases := 1
 
-# # METADATA
-# # title: <title>.
-# # description: <description>.
-# test_tests.investigation_test_no_violation_01 if {
-# 	result := rules.tests.investigation_test with input as {
-# 	}
-# 	count(result) == 0
-# }
-# # METADATA
-# # title: <title>.
-# # description: <description>.
-# test_tests.investigation_test_violation_01 if {
-# 	result := rules.tests.investigation_test with input as {
-# 	}
-# 	count(result) == 1
-# }
+# METADATA
+# title: Principal Investigator role is not in study.
+# description: There is no Principal Investigator role in study.
+test_rule_i_100_360_011_01_violation_01 if {
+	result := rules.rule_i_100_360_011_01 with input as {
+		"investigation": {"studies": [{"identifier": "MTBLS1", "studyContacts": {"people": [{
+			"lastName": "",
+			"firstName": "",
+			"midInitials": "",
+			"email": "",
+			"phone": "",
+			"fax": "",
+			"address": "",
+			"affiliation": "E",
+			"roles": [
+				{
+					"term": "Author",
+					"termAccessionNumber": "http://",
+					"termSourceRef": "",
+				},
+				{
+					"term": "Investigator",
+					"termAccessionNumber": "http://",
+					"termSourceRef": "",
+				},
+			],
+		}]}}]},
+		"investigationFilePath": "i_Investigation.txt",
+	}
+
+	count(result) == 1
+}
+
+# METADATA
+# title: Principal Investigator role is not in study.
+# description: There is one Principal Investigator role in study.
+test_rule_i_100_360_011_01_success_01 if {
+	result := rules.rule_i_100_360_011_01 with input as {
+		"investigation": {"studies": [{"identifier": "MTBLS1", "studyContacts": {"people": [{
+			"lastName": "",
+			"firstName": "",
+			"midInitials": "",
+			"email": "",
+			"phone": "",
+			"fax": "",
+			"address": "",
+			"affiliation": "E",
+			"roles": [
+				{
+					"term": "Author",
+					"termAccessionNumber": "http://",
+					"termSourceRef": "",
+				},
+				{
+					"term": "Principal Investigator",
+					"termAccessionNumber": "http://",
+					"termSourceRef": "",
+				},
+			],
+		}]}}]},
+		"investigationFilePath": "i_Investigation.txt",
+	}
+
+	count(result) == 0
+}
+
+# METADATA
+# title: Principal Investigator role is not in study.
+# description: There is two Principal Investigator roles in study.
+test_rule_i_100_360_011_01_success_02 if {
+	result := rules.rule_i_100_360_011_01 with input as {
+		"investigation": {"studies": [{"identifier": "MTBLS1", "studyContacts": {"people": [
+			{
+				"lastName": "",
+				"firstName": "",
+				"midInitials": "",
+				"email": "",
+				"phone": "",
+				"fax": "",
+				"address": "",
+				"affiliation": "E",
+				"roles": [
+					{
+						"term": "Author",
+						"termAccessionNumber": "http://",
+						"termSourceRef": "",
+					},
+					{
+						"term": "Principal Investigator",
+						"termAccessionNumber": "http://",
+						"termSourceRef": "",
+					},
+				],
+			},
+			{
+				"lastName": "",
+				"firstName": "",
+				"midInitials": "",
+				"email": "",
+				"phone": "",
+				"fax": "",
+				"address": "",
+				"affiliation": "E",
+				"roles": [
+					{
+						"term": "Author",
+						"termAccessionNumber": "http://",
+						"termSourceRef": "",
+					},
+					{
+						"term": "Principal Investigator",
+						"termAccessionNumber": "http://",
+						"termSourceRef": "",
+					},
+				],
+			},
+		]}}]},
+		"investigationFilePath": "i_Investigation.txt",
+	}
+
+	count(result) == 0
+}

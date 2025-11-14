@@ -3,6 +3,7 @@
 #########################################################################################################
 package tests.sample_test
 
+import data.metabolights.validation.v2.rules.phase2.violations as rules
 import rego.v1
 
 # METADATA

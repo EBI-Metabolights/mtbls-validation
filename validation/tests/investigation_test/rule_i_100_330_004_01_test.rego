@@ -9,11 +9,11 @@ import data.tests.data.inputs.rules as test_rules
 import rego.v1
 
 # METADATA
-# title: Study Factor Type is not selected from the selected ontologies.
-# description: Study Factor Type value MUST be selected from the selected ontologies.
+# title: Study Factor Type is not selected from the prioritised ontologies.
+# description: Study Factor Type value SHOULD be selected from the prioritised ontologies.
 # custom:
 #  rule_id: rule_i_100_330_004_01
-#  type: ERROR
+#  type: WARNING
 #  priority: HIGH
 #  section: investigation.studyFactors
 rule_i_100_330_004_01_test_cases := 1

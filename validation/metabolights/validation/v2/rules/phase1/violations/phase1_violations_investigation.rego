@@ -262,8 +262,8 @@ rule_i_100_300_002_01 contains result if {
 }
 
 # METADATA
-# title: Study Title length less than 20 characters.
-# description: Study Title should be defined with length equal or greater than 20 characters. Please use same title as first publication.
+# title: Study Title length less than 25 characters.
+# description: Study Title should be defined with length equal or greater than 25 characters. Please use same title as first publication.
 # custom:
 #  rule_id: rule_i_100_300_003_01
 #  type: ERROR
@@ -422,7 +422,7 @@ rule_i_100_310_001_01 contains result if {
 }
 
 # METADATA
-# title: Study Design Type is not in the control list.
+# title: Study Design Type is not in the control list or selected ontologies..
 # description: Study Design Type value MUST be selected from the control list.
 # custom:
 #  rule_id: rule_i_100_310_002_01
@@ -445,8 +445,8 @@ rule_i_100_310_002_01 contains result if {
 }
 
 # METADATA
-# title: Study Design Type is not selected from the selected ontologies.
-# description: Study Design Type value MUST be selected from the selected ontologies.
+# title: Study Design Type is not in the control list or selected ontologies..
+# description: Study Design Type value MUST be selected from the control list.
 # custom:
 #  rule_id: rule_i_100_310_002_01
 #  type: ERROR
@@ -472,7 +472,7 @@ rule_i_100_310_002_01 contains result if {
 # description: Study Design Type value SHOULD be selected from the prioritised ontologies.
 # custom:
 #  rule_id: rule_i_100_310_003_01
-#  type: WARNING
+#  type: ERROR
 #  priority: HIGH
 #  section: investigation.studyDesignDescriptors
 rule_i_100_310_003_01 contains result if {
@@ -729,8 +729,8 @@ rule_i_100_320_007_02 contains result if {
 }
 
 # METADATA
-# title: Study Publication Status is not selected from the prioritised ontologies.
-# description: Study Design Type value SHOULD be selected from the prioritised ontologies.
+# title: Study Publication Status is not selected from the default ontology list.
+# description: Study Publication Status value MAY be selected from the default ontology list.
 # custom:
 #  rule_id: rule_i_100_320_007_03
 #  type: WARNING
@@ -875,11 +875,11 @@ rule_i_100_330_003_01 contains result if {
 }
 
 # METADATA
-# title: Study Factor Type is not selected from the selected ontologies.
-# description: Study Factor Type value MUST be selected from the selected ontologies.
+# title: Study Factor Type is not selected from the prioritised ontologies.
+# description: Study Factor Type value SHOULD be selected from the prioritised ontologies.
 # custom:
 #  rule_id: rule_i_100_330_004_01
-#  type: ERROR
+#  type: WARNING
 #  priority: HIGH
 #  section: investigation.studyFactors
 rule_i_100_330_004_01 contains result if {
@@ -1979,7 +1979,7 @@ rule_i_100_360_011_01 contains result if {
 
 # METADATA
 # title: Principal Investigator contact details not defined.
-# description: Principal Investigator first name, last name, ORCID, affiliation, affiliation ROR id and email must be defined. At least one of them is not defined.
+# description: Principal Investigator first name, last name, affiliation, and email must be defined.
 # custom:
 #  rule_id: rule_i_100_360_011_02
 #  type: ERROR
@@ -2115,7 +2115,7 @@ rule_i_100_360_011_04 contains result if {
 #  section: investigation.studyContacts
 rule_i_100_360_011_05 contains result if {
 	some study in input.investigation.studies
-	comments = study.studyContacts.comments
+	comments := study.studyContacts.comments
 
 	alternative_email_idx_set := {alternative_email_idx |
 		some alternative_email_idx, comment in comments
@@ -2134,6 +2134,85 @@ rule_i_100_360_011_05 contains result if {
 	count(invalid_email_set) > 0
 	invalid_emails := concat(", ", invalid_email_set)
 	msg := sprintf("%v. contact [%v %v %v] has an invalid Alternative Email: %v.", [idx + 1, person.email, person.firstName, person.lastName, invalid_emails])
+
+	source := input.investigationFilePath
+	result := f.format(rego.metadata.rule(), msg, source)
+}
+
+
+# METADATA
+# title: Study Person ORCID is not defined for principal investigator.
+# description: Study Person ORCID is not defined for principal investigator.
+# custom:
+#  rule_id: rule_i_100_360_011_06
+#  type: WARNING
+#  priority: WARNING
+#  section: investigation.studyContacts
+rule_i_100_360_011_06 contains result if {
+	some study in input.investigation.studies
+	comments := study.studyContacts.comments
+
+	orcid_idx_set := {orcid_idx |
+		some orcid_idx, comment in comments
+		comment.name == "Study Person ORCID"
+	}
+	some idx, person in study.studyContacts.people
+
+	pi_role := {idx: person |
+		some role in person.roles
+		count(role.term) > 0
+		contains(lower(role.term), "principal investigator")
+	}
+	count(pi_role) > 0
+	non_empty_orcid_set := {orcid |
+		some orcid_idx in orcid_idx_set
+		count(comments[orcid_idx].value) >= idx
+		orcid := comments[orcid_idx].value[idx]
+		count(orcid) > 0
+	}
+	
+	count(non_empty_orcid_set) == 0
+
+	msg := sprintf("ORCID is not defined for %v. contact [%v %v %v].", [idx + 1, person.email, person.firstName, person.lastName])
+
+	source := input.investigationFilePath
+	result := f.format(rego.metadata.rule(), msg, source)
+}
+
+
+# METADATA
+# title: Study Person Affiliation ROR ID is not defined for principal investigator.
+# description: Study Person Affiliation ROR ID is not defined for principal investigator.
+# custom:
+#  rule_id: rule_i_100_360_011_07
+#  type: WARNING
+#  priority: WARNING
+#  section: investigation.studyContacts
+rule_i_100_360_011_07 contains result if {
+	some study in input.investigation.studies
+	comments := study.studyContacts.comments
+	ror_id_idx_set := {ror_id_idx |
+		some ror_id_idx, comment in comments
+		comment.name == "Study Person Affiliation ROR ID"
+	}
+	some idx, person in study.studyContacts.people
+	
+	pi_role := {idx: person |
+		some role in person.roles
+		count(role.term) > 0
+		contains(lower(role.term), "principal investigator")
+	}
+	count(pi_role) > 0
+	non_empty_ror_id_set := {ror_id |
+		some ror_id_idx in ror_id_idx_set
+		count(comments[ror_id_idx].value) >= idx
+		ror_id := comments[ror_id_idx].value[idx]
+		count(ror_id) > 0
+	}
+	
+	count(non_empty_ror_id_set) == 0
+
+	msg := sprintf("Study Person Affiliation ROR ID is not defined for %v. contact [%v %v %v].", [idx + 1, person.email, person.firstName, person.lastName])
 
 	source := input.investigationFilePath
 	result := f.format(rego.metadata.rule(), msg, source)
