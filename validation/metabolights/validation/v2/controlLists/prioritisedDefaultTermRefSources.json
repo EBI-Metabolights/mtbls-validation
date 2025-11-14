@@ -18,6 +18,15 @@
         "MSIO",
         "PO",
         "MONDO",
-        "WoRMs"
+        "WoRMs",
+        "UBERON",
+        "SNOMED",
+        "CL",
+        "CLO",
+        "MI",
+        "EDAM",
+        "HP",
+        "MP"
+
     ]
 }

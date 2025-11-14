@@ -54,9 +54,6 @@ rule_s_200_090_001_01 contains result if {
 rule_s_200_090_002_01 contains result if {
 	some file_name, _ in input.samples
 	some column_index, header in input.samples[file_name].table.headers
-
-	some template in data.metabolights.validation.v2.templates.sampleFileHeaderTemplates
-	template.version == "v1.0"
 	control_lists := data.metabolights.validation.v2.controlLists
 
 	result := f.term_source_ref_not_in_control_list(rego.metadata.rule(), input.samples, file_name, column_index, control_lists)
@@ -74,12 +71,10 @@ rule_s_200_090_002_02 contains result if {
 	some file_name, sheet in input.samples
 	some column_index, header in sheet.table.headers
 	control_list := data.metabolights.validation.v2.controlLists.prioritisedDefaultTermRefSources
-
-	default_control_list_headers = {header.columnHeader |
-		some _, template in data.metabolights.validation.v2.templates.sampleFileHeaderTemplates
-		template.version == "v1.0"
-		some _, header in template.headers
-		some "termSourceRef", _ in header.controlLists
+	headers := data.metabolights.validation.v2.phase1.definitions.SELECTED_STUDY_SAMPLE_FILE_TEMPLATE_HEADERS
+	default_control_list_headers := {header.columnHeader |
+		some header in headers
+		header.controlLists["termSourceRef"]
 	}
 	result := f.term_source_ref_not_in_default_control_list(rego.metadata.rule(), input.samples, file_name, column_index, default_control_list_headers, control_list)
 }
@@ -109,9 +104,6 @@ rule_s_200_090_002_03 contains result if {
 rule_s_200_090_002_04 contains result if {
 	some file_name, sheet in input.samples
 	some header_index, header in sheet.table.headers
-
-	# sheet.table.headers[columnIndex]
-	# print(header.columnIndex)
 	result := f.term_source_ref_is_defined_for_empty_term(rego.metadata.rule(), input.samples, file_name, header_index)
 }
 
@@ -125,10 +117,7 @@ rule_s_200_090_002_04 contains result if {
 #  section: samples.general
 rule_s_200_090_002_05 contains result if {
 	input.samples[fileName].table.headers[columnIndex]
-	templates := data.metabolights.validation.v2.templates
-	templates.sampleFileHeaderTemplates[m].version == "v1.0"
-
-	# template := templates.sampleFileHeaderTemplates[m]
+	# template := data.metabolights.validation.v2.phase1.definitions.SELECTED_STUDY_SAMPLE_FILE_TEMPLATE
 	controlList := data.metabolights.validation.v2.controlLists.prioritisedUnitRefSources
 	result := f.term_source_ref_for_unit_not_in_control_list(rego.metadata.rule(), input.samples, fileName, columnIndex, controlList)
 }
@@ -155,13 +144,12 @@ rule_s_200_090_002_06 contains result if {
 #  priority: HIGH
 #  section: samples.general
 rule_s_200_090_002_07 contains result if {
-	input.samples[fileName].table.headers[columnIndex]
-	templates := data.metabolights.validation.v2.templates
-	templates.sampleFileHeaderTemplates[m].version == "v1.0"
-	template := templates.sampleFileHeaderTemplates[m]
-	controlLists := data.metabolights.validation.v2.controlLists
-
-	result := f.term_source_ref_is_empty_for_term(rego.metadata.rule(), input.samples, fileName, columnIndex, template, controlLists)
+	some sample_file_name, sample_file in input.samples
+	some column_index, header in sample_file.table.headers
+	template := data.metabolights.validation.v2.phase1.definitions.SELECTED_STUDY_SAMPLE_FILE_TEMPLATE
+	# template := data.metabolights.validation.v2.phase1.definitions.SELECTED_STUDY_SAMPLE_FILE_TEMPLATE
+	control_lists := data.metabolights.validation.v2.controlLists
+	result := f.term_source_ref_is_empty_for_term(rego.metadata.rule(), input.samples, sample_file_name, column_index, template, control_lists)
 }
 
 # METADATA
@@ -174,10 +162,7 @@ rule_s_200_090_002_07 contains result if {
 #  section: samples.general
 rule_s_200_090_002_08 contains result if {
 	input.samples[fileName].table.headers[columnIndex]
-	templates := data.metabolights.validation.v2.templates
-	templates.sampleFileHeaderTemplates[m].version == "v1.0"
-
-	# template := templates.sampleFileHeaderTemplates[m]
+	#template := data.metabolights.validation.v2.phase1.definitions.SELECTED_STUDY_SAMPLE_FILE_TEMPLATE
 	controlList := data.metabolights.validation.v2.controlLists.prioritisedUnitRefSources
 	result := f.term_source_ref_is_empty_for_unit(rego.metadata.rule(), input.samples, fileName, columnIndex, controlList)
 }
@@ -245,8 +230,7 @@ rule_s_200_090_003_04 contains result if {
 rule_s_200_090_004_01 contains result if {
 	some file_name, _ in input.samples
 	row_offset := input.samples[file_name].table.rowOffset
-	some _, template in data.metabolights.validation.v2.templates.sampleFileHeaderTemplates
-	template.version == "v1.0"
+	template := data.metabolights.validation.v2.phase1.definitions.SELECTED_STUDY_SAMPLE_FILE_TEMPLATE
 	some header in template.headers
 	header.required == true
 	header.minLength > 0
@@ -271,8 +255,7 @@ rule_s_200_090_004_01 contains result if {
 #  section: samples.general
 rule_s_200_090_004_02 contains result if {
 	some file_name, _ in input.samples
-	some _, template in data.metabolights.validation.v2.templates.sampleFileHeaderTemplates
-	template.version == "v1.0"
+	template := data.metabolights.validation.v2.phase1.definitions.SELECTED_STUDY_SAMPLE_FILE_TEMPLATE
 	some header in template.headers
 	source := input.samples
 
@@ -296,8 +279,7 @@ rule_s_200_090_004_02 contains result if {
 #  section: samples.general
 rule_s_200_090_004_03 contains result if {
 	some file_name, _ in input.samples
-	some _, template in data.metabolights.validation.v2.templates.sampleFileHeaderTemplates
-	template.version == "v1.0"
+	template := data.metabolights.validation.v2.phase1.definitions.SELECTED_STUDY_SAMPLE_FILE_TEMPLATE
 	some header in template.headers
 	source := input.samples
 
@@ -323,11 +305,9 @@ rule_s_200_090_005_01 contains result if {
 	some file_name, sheet in input.samples
 	headers := [header | some header in sheet.table.headers; header.columnHeader == file_column_header]
 	some t, header in headers
-
+	template := data.metabolights.validation.v2.phase1.definitions.SELECTED_STUDY_SAMPLE_FILE_TEMPLATE
 	column_index := header.columnIndex
 	default_values = [header.defaultValue |
-		some template in data.metabolights.validation.v2.templates.sampleFileHeaderTemplates
-		template.version == "v1.0"
 		some header in template.headers
 		header.columnCategory == "Protocol"
 	]
@@ -417,10 +397,8 @@ rule_s_200_100_002_01 contains result if {
 
 	row_offset := sheet.table.rowOffset
 	header.columnCategory == "Characteristics"
-
+	template := data.metabolights.validation.v2.phase1.definitions.SELECTED_STUDY_SAMPLE_FILE_TEMPLATE
 	default_headers := {t_header.columnHeader |
-		some template in data.metabolights.validation.v2.templates.sampleFileHeaderTemplates
-		template.version == "v1.0"
 		some t_header in template.headers
 		t_header.columnCategory == "Characteristics"
 	}
@@ -495,7 +473,9 @@ rule_s_200_100_002_03 contains result if {
 	columnName := input.samples[fileName].table.headers[columnIndex].columnName
 	columnHeader := input.samples[fileName].table.headers[columnIndex].columnHeader
 	templates := data.metabolights.validation.v2.templates
-	not columnHeader in def._SAMPLES_DEFAULT_CHARACTERISTICS_HEADERS
+
+	some default_column in def._SAMPLES_DEFAULT_CHARACTERISTICS_HEADERS
+	default_column == columnHeader
 
 	row_offset := input.samples[fileName].table.rowOffset
 

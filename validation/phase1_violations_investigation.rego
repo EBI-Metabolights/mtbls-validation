@@ -266,8 +266,8 @@ rule_i_100_300_002_01 contains result if {
 }
 
 # METADATA
-# title: Study Title length less than 25 characters.
-# description: Study Title should be defined with length equal or greater than 25 characters. Please use same title as first publication.
+# title: Study Title length less than 20 characters.
+# description: Study Title should be defined with length equal or greater than 20 characters. Please use same title as first publication.
 # custom:
 #  rule_id: rule_i_100_300_003_01
 #  type: ERROR
@@ -299,7 +299,7 @@ rule_i_100_300_003_02 contains result if {
 	matches_set := {x| x := matches[_]}
 	count(matches_set) > 0
 	matches_set_str = ""
-	msg := sprintf("Non printible chars in study title '%v' of study %v: Non accepted char list: '%v'", [study.title, study.identifier, matches_set_str])
+	msg := sprintf("Non printible characters in study title '%v' of study %v: Non accepted char list: '%v'", [study.title, study.identifier, matches_set_str])
 	source := input.investigationFilePath
 	result := f.format(rego.metadata.rule(), msg, source)
 }
@@ -573,47 +573,23 @@ rule_i_100_320_001_01 contains result if {
 	result := f.format(rego.metadata.rule(), msg, source)
 }
 
-# METADATA
-# title: DOI or PubMed ID is not defined for a published study publication.
-# description: A published publication should have a valid DOI or PubMed ID.
-# custom:
-#  rule_id: rule_i_100_320_002_01
-#  type: WARNING
-#  priority: HIGH
-#  section: investigation.studyPublications
-rule_i_100_320_002_01 contains result if {
-	some i, j
-	studies := input.investigation.studies
-	publication := studies[i].studyPublications.publications[j]
-	publication.status.term == "Published"
-	count(publication.pubMedId) == 0
-	count(publication.doi) == 0
-	msg := sprintf("DOI or PubMed ID is not defined for %v publication '%v'. ", [studies[i].identifier, publication.title])
-	source := input.investigationFilePath
-	result := f.format(rego.metadata.rule(), msg, source)
-}
 
 # METADATA
-# title: DOI invalid for published study publication.
+# title: DOI is required for published study publication.
 # description: A study publication with status published should have valid DOI.
 # custom:
 #  rule_id: rule_i_100_320_003_01
-#  type: WARNING
+#  type: ERROR
 #  priority: HIGH
 #  section: investigation.studyPublications
 rule_i_100_320_003_01 contains result if {
-	some i, j
-	studies = input.investigation.studies
-	pattern = "^10.\\d{4,9}/[-._;()/:a-zA-Z0-9]+$"
-	publication := studies[i].studyPublications.publications[j]
-	publication.status.term == "Published"
+	study = input.investigation.studies[0]
+	some idx, publication in study.studyPublications.publications
 
-	# count(publication.pubMedId) == 0
-	count(publication.doi) > 0
+	lower(publication.status.term) == "published"
+	count(publication.doi) == 0
 
-	not regex.match(pattern, publication.doi)
-
-	msg := sprintf("DOI '%v' is not valid for %v publication '%v'.", [publication.doi, studies[i].identifier, publication.title])
+	msg := sprintf("DOI '%v' is required for the published publication at index %v %v: '%v'.", [idx + 1, publication.doi, study.identifier, publication.title])
 	source := input.investigationFilePath
 	result := f.format(rego.metadata.rule(), msg, source)
 }
@@ -623,67 +599,43 @@ rule_i_100_320_003_01 contains result if {
 # description: If DOI is defined, its format should be a valid.
 # custom:
 #  rule_id: rule_i_100_320_003_02
-#  type: WARNING
+#  type: ERROR
 #  priority: MEDIUM
 #  section: investigation.studyPublications
 rule_i_100_320_003_02 contains result if {
-	some i, j
-	studies = input.investigation.studies
-	pattern = "^10.\\d{4,9}/[-._;()/:a-zA-Z0-9]+$"
-	publication := studies[i].studyPublications.publications[j]
-	publication.status.term != "Published"
+	study = input.investigation.studies[0]
+	pattern = "^10[.].+/.+$"
+	some idx, publication in study.studyPublications.publications
 	count(publication.doi) > 0
 	not regex.match(pattern, publication.doi)
-	msg := sprintf("DOI '%v' is not valid for %v publication '%v'.", [publication.doi, studies[i].identifier, publication.title])
+	msg := sprintf("DOI '%v' is not valid for %v publication at index %v: '%v'.", [publication.doi, study.identifier, idx + 1, publication.title])
 	source := input.investigationFilePath
 	result := f.format(rego.metadata.rule(), msg, source)
 }
 
-# METADATA
-# title: PubMed ID invalid for published study publication.
-# description: A study publication with status published should have valid PubMed ID. Valid PubMed ID contains only digits.
-# custom:
-#  rule_id: rule_i_100_320_004_01
-#  type: WARNING
-#  priority: HIGH
-#  section: investigation.studyPublications
-rule_i_100_320_004_01 contains result if {
-	some i, j
-	studies = input.investigation.studies
-	pattern = "^\\d{1,20}$"
-	publication := studies[i].studyPublications.publications[j]
-	publication.status.term == "Published"
-	count(publication.pubMedId) > 0
-	# count(publication.doi) == 0
-	not regex.match(pattern, publication.pubMedId)
-	msg := sprintf("PubMed ID '%v' is not valid for %v publication '%v'.", [publication.pubMedId, studies[i].identifier, publication.title])
-	source := input.investigationFilePath
-	result := f.format(rego.metadata.rule(), msg, source)
-}
 
 # METADATA
 # title: PubMed ID format invalid for study publication.
 # description: If PubMed ID is defined, its format should be valid PubMed ID. Valid PubMed ID contains only digits.
 # custom:
 #  rule_id: rule_i_100_320_004_02
-#  type: WARNING
+#  type: ERROR
 #  priority: MEDIUM
 #  section: investigation.studyPublications
 rule_i_100_320_004_02 contains result if {
-	some i, j
-	studies = input.investigation.studies
-	pattern = "^\\d{1,20}$"
-	publication := studies[i].studyPublications.publications[j]
-	publication.status.term != "Published"
+	study = input.investigation.studies[0]
+	pattern = "^[1-9]([0-9]{1,8})?$"
+	some idx, publication in study.studyPublications.publications
 	count(publication.pubMedId) > 0
+	# count(publication.doi) == 0
 	not regex.match(pattern, publication.pubMedId)
-	msg := sprintf("PubMed ID '%v' is not valid for %v publication '%v'.", [publication.pubMedId, studies[i].identifier, publication.title])
+	msg := sprintf("PubMed Id '%v' is not valid for %v publication at index %v: '%v'.", [publication.doi, study.identifier, idx + 1, publication.title])
 	source := input.investigationFilePath
 	result := f.format(rego.metadata.rule(), msg, source)
 }
 
 # METADATA
-# title: Study Publication Title length less than 25 characters.
+# title: Study Publication Title length less than 20 characters.
 # description: Study Publication Title must be defined with length equal or greater than 25 characters.
 # custom:
 #  rule_id: rule_i_100_320_005_01
@@ -691,7 +643,7 @@ rule_i_100_320_004_02 contains result if {
 #  priority: HIGH
 #  section: investigation.studyPublications
 rule_i_100_320_005_01 contains result if {
-	min_count = 25
+	min_count = 20
 	count(input.investigation.studies[i].studyPublications.publications[j].title) < min_count
 	msg := sprintf("Study %v publication title should be at least %v characters long. Please use the abstract of the publication. Current value '%v'", [input.investigation.studies[i].identifier, min_count, input.investigation.studies[i].studyPublications.publications[j].title])
 	source := input.investigationFilePath
@@ -1448,8 +1400,7 @@ rule_i_100_350_002_01 contains result if {
 #  section: investigation.studyProtocols
 rule_i_100_350_003_01 contains result if {
 	min_count := 40
-	some i, j
-	protocol := input.investigation.studies[i].studyProtocols.protocols[j]
+	some j, protocol in input.investigation.studies[0].studyProtocols.protocols
 	length := count(protocol.description)
 	length < min_count
 	msg := sprintf("Description of study protocol '%v' is too short for the study %v. Min length: %v current length: %v, protocol index: %v", [protocol.name, input.investigation.studies[i].identifier, min_count, length, j + 1])
@@ -1477,7 +1428,7 @@ rule_i_100_350_003_02 contains result if {
 	matches_set := {sprintf("[%v]", [x]) | some match in matches; x := regex.replace(match, `[\f\t\n\r]`, "<whitespace char>")}
 	count(matches_set) > 0
 	matches_set_str := concat(", ", matches_set)
-	msg := sprintf("Non printible chars in protocol '%v'. Description of study %v: Phrases that contain non accepted characters: '%v'", [protocol.name, input.investigation.studies[i].identifier, matches_set_str])
+	msg := sprintf("Non printable characters in protocol '%v'. Description of study %v: Phrases that contain non accepted characters: '%v'", [protocol.name, input.investigation.studies[i].identifier, matches_set_str])
 	source := input.investigationFilePath
 	result := f.format(rego.metadata.rule(), msg, source)
 }
@@ -1696,7 +1647,7 @@ rule_i_100_360_002_01 contains result if {
 	min_count = 2
 	some i, j
 	count(input.investigation.studies[i].studyContacts.people[j].firstName) < min_count
-	msg := sprintf("Study contact's first name should be least %v chars for study: %v, contact index: %v", [min_count, input.investigation.studies[i].identifier, j + 1])
+	msg := sprintf("Study contact's first name should be least %v characters for study: %v, contact index: %v", [min_count, input.investigation.studies[i].identifier, j + 1])
 	source := input.investigationFilePath
 	result := f.format(rego.metadata.rule(), msg, source)
 }
@@ -1713,7 +1664,7 @@ rule_i_100_360_003_01 contains result if {
 	min_count = 2
 	some i, j
 	count(input.investigation.studies[i].studyContacts.people[j].lastName) < min_count
-	msg := sprintf("Study contact's last name should be least %v chars for study: %v, contact index: %v", [min_count, input.investigation.studies[i].identifier, j + 1])
+	msg := sprintf("Study contact's last name should be least %v characters for study: %v, contact index: %v", [min_count, input.investigation.studies[i].identifier, j + 1])
 	source := input.investigationFilePath
 	result := f.format(rego.metadata.rule(), msg, source)
 }
@@ -1743,7 +1694,7 @@ rule_i_100_360_004_01 contains result if {
 
 # METADATA
 # title: Study Person Email not valid.
-# description: Study Person Email must be valid format.
+# description: Study Person Email must have valid format.
 # custom:
 #  rule_id: rule_i_100_360_004_02
 #  type: ERROR
@@ -1774,25 +1725,25 @@ rule_i_100_360_004_02 contains result if {
 # 	some i, j
 #     person := input.investigation.studies[i].studyContacts.people[j]
 # 	count(person.address) < min_count
-# 	msg := sprintf("Study contact's address should be least %v chars for study: %v, contact index: %v, email: %v", [min_count, input.investigation.studies[i].identifier, j + 1, person.email])
+# 	msg := sprintf("Study contact's address should be least %v characters for study: %v, contact index: %v, email: %v", [min_count, input.investigation.studies[i].identifier, j + 1, person.email])
 # 	source := input.investigationFilePath
 #	result := f.format(rego.metadata.rule(), msg, source)
 # }
 
 # METADATA
-# title: First Study Person Affiliation not valid.
-# description: First Study Person Affiliation should be valid.
+# title: Study Person affiliation length is less than 10 characters.
+# description: Define full name of contact's primary affiliation. e.g. European Bioinformatics Institute
 # custom:
 #  rule_id: rule_i_100_360_006_01
-#  type: WARNING
-#  priority: MEDIUM
+#  type: ERROR
+#  priority: HIGH
 #  section: investigation.studyContacts
 rule_i_100_360_006_01 contains result if {
-	min_count = 2
-	some i
-	person := input.investigation.studies[i].studyContacts.people[0]
+	min_count = 10
+	some idx, person in input.investigation.studies[0].studyContacts.people
+	count(person.affiliation) > 0
 	count(person.affiliation) < min_count
-	msg := sprintf("First contact's affiliation should be least %v chars for study: %v, contact index: %v, affiliation: '%v'", [min_count, input.investigation.studies[i].identifier, 1, person.affiliation])
+	msg := sprintf("Contact's affiliation should be least %v characters for study: %v, contact index: %v, affiliation: '%v'", [min_count, input.investigation.studies[0].identifier, idx + 1, person.affiliation])
 	source := input.investigationFilePath
 	result := f.format(rego.metadata.rule(), msg, source)
 }
@@ -1802,7 +1753,7 @@ rule_i_100_360_006_01 contains result if {
 # description: At least one role should be defined for a study contact.
 # custom:
 #  rule_id: rule_i_100_360_007_01
-#  type: WARNING
+#  type: ERROR
 #  priority: HIGH
 #  section: investigation.studyContacts
 rule_i_100_360_007_01 contains result if {
@@ -1828,7 +1779,7 @@ rule_i_100_360_008_01 contains result if {
 	some i, j, k
 	person := input.investigation.studies[i].studyContacts.people[j]
 	count(person.roles[k].term) < min_count
-	msg := sprintf("Study contact's role term should be least %v chars for study: %v, contact index: %v, role index: %v, contact name: '%v %v'", [min_count, input.investigation.studies[i].identifier, j + 1, k + 1, person.firstName, person.lastName])
+	msg := sprintf("Study contact's role term should be least %v characters for study: %v, contact index: %v, role index: %v, contact name: '%v %v'", [min_count, input.investigation.studies[i].identifier, j + 1, k + 1, person.firstName, person.lastName])
 	source := input.investigationFilePath
 	result := f.format(rego.metadata.rule(), msg, source)
 }
@@ -1847,7 +1798,7 @@ rule_i_100_360_009_01 contains result if {
 	person := input.investigation.studies[i].studyContacts.people[j]
 	count(person.roles[k].termAccessionNumber) < min_count
 	value := person.roles[k].termAccessionNumber
-	msg := sprintf("Study person's (%v) role term accession number '%v' should be least %v chars for study: %v, contact index: %v, role index %v", [person.email, value, min_count, input.investigation.studies[i].identifier, j + 1, k + 1])
+	msg := sprintf("Study person's (%v) role term accession number '%v' should be least %v characters for study: %v, contact index: %v, role index %v", [person.email, value, min_count, input.investigation.studies[i].identifier, j + 1, k + 1])
 	source := input.investigationFilePath
 	result := f.format(rego.metadata.rule(), msg, source)
 }
@@ -1866,7 +1817,7 @@ rule_i_100_360_009_01 contains result if {
 #     person := input.investigation.studies[i].studyContacts.people[j]
 #     value := person.roles[k].termSourceRef
 # 	count(value) < min_count
-# 	msg := sprintf("Study contact's (%v) role term accession number '%v' should be least %v chars for study: %v, contact index: %v, role index %v", [person.email, value, min_count, input.investigation.studies[i].identifier, j + 1, k + 1])
+# 	msg := sprintf("Study contact's (%v) role term accession number '%v' should be least %v characters for study: %v, contact index: %v, role index %v", [person.email, value, min_count, input.investigation.studies[i].identifier, j + 1, k + 1])
 # 	source := input.investigationFilePath
 #	result := f.format(rego.metadata.rule(), msg, source)
 # }
@@ -1951,32 +1902,162 @@ rule_i_100_360_011_01 contains result if {
 
 # METADATA
 # title: Principal Investigator contact details not defined.
-# description: Principal Investigator first name, last name and email must be defined.
+# description: Principal Investigator first name, last name, affiliation, and email must be defined.
 # custom:
 #  rule_id: rule_i_100_360_011_02
 #  type: ERROR
 #  priority: CRITICAL
 #  section: investigation.studyContacts
 rule_i_100_360_011_02 contains result if {
-	some i
-	pi_set := { person | 
-		some person in input.investigation.studies[i].studyContacts.people
+	some study in input.investigation.studies
+	comments = study.studyContacts.comments
+	pi_set := { idx: person | 
+		some idx, person in study.studyContacts.people
 		some role in person.roles
 		count(role.term) > 0
-		lower(role.term) == "principal investigator"
+		contains(lower(role.term), "principal investigator")
 	}
 	count(pi_set) > 0
+	# orcid_idx_set := { comment_idx | 
+	# 		some comment_idx, comment in comments
+	# 		comment.name == "Study Person ORCID"
+	# }
+	# affiliation_ror_id_idx_set := { ror_idx | 
+	# 		some ror_idx, comment in comments
+	# 		comment.name == "Study Person Affiliation ROR ID"
+	# }
 
-	valid_pi_set := { person | 
-		some person in pi_set
-		some role in person.roles
+	valid_pi_set := { idx: person | 
+		some idx, person in pi_set
+		# orcid_set := [ orcid | 
+		# 	some orcid_idx in orcid_idx_set
+		# 	count(comments[orcid_idx].value) >= idx
+		# 	orcid := comments[orcid_idx].value[idx]
+		# 	count(orcid) > 0
+		# ]
+		# affiliation_ror_id_set := { ror_id | 
+		# 	some ror_id_idx in affiliation_ror_id_idx_set
+		# 	count(comments[ror_id_idx].value) >= idx
+		# 	ror_id := comments[ror_id_idx].value[idx]
+		# 	count(ror_id) > 0
+		# }
+		# count(orcid_set) == count(orcid_idx_set)
 		count(person.email) > 0
 		count(person.firstName) > 0
 		count(person.lastName) > 0
+		count(person.affiliation) > 0
+		# count(affiliation_ror_id_set) == count(affiliation_ror_id_idx_set)
 	}
-	invalid_pi_set := pi_set - valid_pi_set
+	invalid_pi_set := { idx: person | 
+		some idx, person in pi_set
+		object.get(valid_pi_set, idx, null) == null
+	}
 	count(invalid_pi_set) > 0
-	msg := sprintf("Principal Investigator's contact details (first name, last name and email) are not defined for study: %v", [input.investigation.studies[i].identifier])
+	some idx, person in invalid_pi_set
+	msg := sprintf("%v. contact [%v %v %v] has Principal Investigator role. This contact's first name, last name, affiliation, and email fields must be defined.", [idx + 1, person.email, person.firstName, person.lastName])
+
+	source := input.investigationFilePath
+	result := f.format(rego.metadata.rule(), msg, source)
+}
+
+
+# METADATA
+# title: Study Person Affiliation ROR ID is not valid.
+# description: Study Person ROR ID must have valid format. e.g., https //ror.org/02catss52 . If your affiliation ROR ID is not defined, you may provide wikidata URL of your primary affiliation. e.g., https //www.wikidata.org/wiki/Q1341845
+# custom:
+#  rule_id: rule_i_100_360_011_03
+#  type: ERROR
+#  priority: HIGH
+#  section: investigation.studyContacts
+rule_i_100_360_011_03 contains result if {
+	some study in input.investigation.studies
+	comments = study.studyContacts.comments
+
+	affiliation_ror_id_idx_set := { ror_idx | 
+		some ror_idx, comment in comments
+		comment.name == "Study Person Affiliation ROR ID"
+	}
+	some idx, person in study.studyContacts.people
+	pattern := `^(https://ror\.org/[0-9a-z]{9}|https://www\.wikidata\.org/wiki/Q[1-9][0-9]{0,19})$`
+
+	invalid_affiliation_ror_id_set := { ror_id | 
+		some ror_id_idx in affiliation_ror_id_idx_set
+		count(comments[ror_id_idx].value) >= idx
+		ror_id := comments[ror_id_idx].value[idx]
+		count(ror_id) > 0
+		not regex.match(pattern, ror_id)
+	}
+	count(invalid_affiliation_ror_id_set) > 0
+	invalid_ror_ids := concat(", ", invalid_affiliation_ror_id_set)
+	msg := sprintf("%v. contact [%v %v %v] has an invalid Affiliation ROR ID (or Wikidata ID): %v.", [idx + 1, person.email, person.firstName, person.lastName, invalid_ror_ids])
+
+	source := input.investigationFilePath
+	result := f.format(rego.metadata.rule(), msg, source)
+}
+
+# METADATA
+# title: Study Person ORCID is not valid.
+# description: Study Person ORCID must have valid format.
+# custom:
+#  rule_id: rule_i_100_360_011_04
+#  type: ERROR
+#  priority: HIGH
+#  section: investigation.studyContacts
+rule_i_100_360_011_04 contains result if {
+	some study in input.investigation.studies
+	comments = study.studyContacts.comments
+
+	orcid_idx_set := { orcid_idx | 
+		some orcid_idx, comment in comments
+		comment.name == "Study Person ORCID"
+	}
+	some idx, person in study.studyContacts.people
+	pattern := `^[0-9]{4}-[0-9]{4}-[0-9]{4}-[0-9]{3}[X0-9]$`
+
+	invalid_orcid_set := { orcid | 
+		some orcid_idx in orcid_idx_set
+		count(comments[orcid_idx].value) >= idx
+		orcid := comments[orcid_idx].value[idx]
+		count(orcid) > 0
+		not regex.match(pattern, orcid)
+	}
+	count(invalid_orcid_set) > 0
+	invalid_orcids := concat(", ", invalid_orcid_set)
+	msg := sprintf("%v. contact [%v %v %v] has an invalid ORCID: %v.", [idx + 1, person.email, person.firstName, person.lastName, invalid_orcids])
+
+	source := input.investigationFilePath
+	result := f.format(rego.metadata.rule(), msg, source)
+}
+
+# METADATA
+# title: Study Person Additional Email Address is not valid.
+# description: Study Person Additional Email Address must have valid format.
+# custom:
+#  rule_id: rule_i_100_360_011_05
+#  type: ERROR
+#  priority: HIGH
+#  section: investigation.studyContacts
+rule_i_100_360_011_05 contains result if {
+	some study in input.investigation.studies
+	comments = study.studyContacts.comments
+
+	alternative_email_idx_set := { alternative_email_idx | 
+		some alternative_email_idx, comment in comments
+		comment.name == "Study Person Alternative Email"
+	}
+	some idx, person in study.studyContacts.people
+	pattern := `^[\w-\.]+@([\w-]+\.)+[\w-]+$`
+
+	invalid_email_set := { email | 
+		some alternative_email_idx in alternative_email_idx_set
+		count(comments[alternative_email_idx].value) >= idx
+		email := comments[alternative_email_idx].value[idx]
+		count(email) > 0
+		not regex.match(pattern, email)
+	}
+	count(invalid_email_set) > 0
+	invalid_emails := concat(", ", invalid_email_set)
+	msg := sprintf("%v. contact [%v %v %v] has an invalid Alternative Email: %v.", [idx + 1, person.email, person.firstName, person.lastName, invalid_emails])
 
 	source := input.investigationFilePath
 	result := f.format(rego.metadata.rule(), msg, source)

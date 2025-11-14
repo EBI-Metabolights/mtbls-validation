@@ -55,7 +55,7 @@ rule_m_300_090_005_01 contains result if {
 	row_offset := sheet.table.rowOffset
 	template_list := data.metabolights.validation.v2.templates.assignmentFileHeaderTemplates[template_type]
 	some template in template_list
-	template.version == "v1.0"
+	template.version == data.metabolights.validation.v2.phase1.definitions.STUDY_TEMPLATE_VERSION
 	some template_header in template.headers
 	template_header.required == true
 		
@@ -82,7 +82,7 @@ rule_m_300_090_005_02 contains result if {
 	template_list := data.metabolights.validation.v2.templates.assignmentFileHeaderTemplates[template_type]
 
 	some template in template_list
-	template.version == "v1.0"
+	template.version == data.metabolights.validation.v2.phase1.definitions.STUDY_TEMPLATE_VERSION
 	some template_header in template.headers
 	template_header.minLength > 0
 
@@ -108,7 +108,7 @@ rule_m_300_090_005_03 contains result if {
 	template_list := data.metabolights.validation.v2.templates.assignmentFileHeaderTemplates[template_type]
 
 	some template in template_list
-	template.version == "v1.0"
+	template.version == data.metabolights.validation.v2.phase1.definitions.STUDY_TEMPLATE_VERSION
 	some template_header in template.headers
 	template_header.maxLength > 0
 

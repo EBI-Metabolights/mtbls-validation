@@ -15,7 +15,7 @@ def create_recommended_assay_control_lists() -> OrderedDict[
     str, OrderedDict[str, list[OntologyTerm]]
 ]:
     templates_path = "validation/metabolights/validation/v2/controlLists/assayColumns"
-    assay_file_templates = [str(x) for x in Path(f"{templates_path}").glob("*.json")]
+    assay_file_templates = [str(x) for x in Path(f"{templates_path}").rglob("*.json")]
     recommended_terms_path = "docs/prioritised-control-lists"
     recommended_terms: OrderedDict[str, OrderedDict[str, list[OntologyTerm]]] = (
         OrderedDict()
@@ -29,7 +29,6 @@ def create_recommended_assay_control_lists() -> OrderedDict[
         for name, template in file_content.items():
             control_lists = template["controlList"]
             for control_list in control_lists:
-
                 techniques = control_list["techniques"]
                 values = control_list["values"]
                 terms = [
@@ -76,7 +75,9 @@ def create_recommended_assay_control_lists() -> OrderedDict[
 
 
 def create_recommended_control_lists(
-    templates_path: str, title: Union[None, str] = None, file_name: Union[None, str] = None
+    templates_path: str,
+    title: Union[None, str] = None,
+    file_name: Union[None, str] = None,
 ) -> OrderedDict[str, list[OntologyTerm]]:
     field_control_list_path = [str(x) for x in Path(f"{templates_path}").glob("*.json")]
 
@@ -146,14 +147,17 @@ def create_file_structure_documentation(
     sample_controlled_terms: OrderedDict[str, list[OntologyTerm]],
 ):
     templates_path = "validation/metabolights/validation/v2/templates"
-    sample_file_templates = [f"{templates_path}/sampleFileHeaderTemplates.json"]
+    sample_file_templates = [
+        str(x)
+        for x in Path(f"{templates_path}/sampleFileHeaderTemplates").rglob("*.json")
+    ]
     assay_file_templates = [
         str(x)
-        for x in Path(f"{templates_path}/assayFileHeaderTemplates").glob("*.json")
+        for x in Path(f"{templates_path}/assayFileHeaderTemplates").rglob("*.json")
     ]
     assignment_file_templates = [
         str(x)
-        for x in Path(f"{templates_path}/assignmentFileHeaderTemplates").glob("*.json")
+        for x in Path(f"{templates_path}/assignmentFileHeaderTemplates").rglob("*.json")
     ]
 
     pairs = [
@@ -168,94 +172,115 @@ def create_file_structure_documentation(
                 file_content = json.load(f)
 
             for name, templates in file_content.items():
-                doc_file_name = (
-                    f"{folder.removesuffix('-structure')}.md"
-                    if len(file_paths) == 1
-                    else f"{name.lower()}.md"
-                )
-                headers = templates[0]["headers"]
-
-                target_path = Path(f"docs/file-structures/{folder}/{doc_file_name}")
-                template_headers: list[tuple[str,str]] = []
-                target_path.parent.mkdir(parents=True, exist_ok=True)
-                template_file_name = ""
-                with target_path.open("w") as f:
-                    if folder == "maf-file-structure":
-                        header = f"MAF File Default Structure for {name} Assay"
-                        template_file_name = f"maf-file/m_template_{name}_metabolite_profiling_v2_maf.tsv"
-                    elif folder == "sample-file-structure":
-                        header = "Sample File Default Structure"
-                        template_file_name = "sample-file/s_template.txt"
-                    else:
-                        header = f"{name} Assay File Default Structure"
-                        template_file_name = f"assay-file/a_template_{name}-phase_metabolite_profiling.txt"
-                    f.write(f"# {header}\n\n")
-                    f.write(
-                        "| # |Header  | Column Structure  | Required | Min Length | Max Length | Description | Examples | Controlled Terms| Default Value  |\n"
-                        "|---|--------|-------------------|----------|------------|------------|-------------|----------|-----------------|----------------|\n"
+                parent_folder = folder.removesuffix("-structure")
+                for template in templates:
+                    version = template.get("version", "default")
+                    headers = template.get("headers", [])
+                    doc_file_name = (
+                        f"{parent_folder}-{name}-{version.replace('.', '_')}.md"
                     )
-                    for idx, item in enumerate(headers):
-                        header = item["columnHeader"]
-                        
-                        template_headers.append((header, item["defaultValue"] if "defaultValue" in item and item["defaultValue"] else ""))
-                        if "columnStructure" in item:
-                            if item["columnStructure"] == "ONTOLOGY_COLUMN":
-                                template_headers.append(("Term Source REF", ""))
-                                template_headers.append(("Term Accession Number", ""))
-                            elif item["columnStructure"] == "SINGLE_COLUMN_AND_UNIT_ONTOLOGY":
-                                template_headers.append(("Unit", ""))
-                                template_headers.append(("Term Source REF", ""))
-                                template_headers.append(("Term Accession Number", ""))
-                                
-                        controlled_terms = ""
-                        link = ""
-                        if (
-                            header in sample_controlled_terms
-                            and folder == "sample-file-structure"
-                        ):
-                            link = (
-                                header.replace(" ", "-")
-                                .lower()
-                                .replace("]", "")
-                                .replace("[", "")
+                    target_path = Path(
+                        f"docs/file-structures/{folder}/{version.replace('.', '_')}/{doc_file_name}"
+                    )
+                    template_headers: list[tuple[str, str]] = []
+                    target_path.parent.mkdir(parents=True, exist_ok=True)
+                    template_file_name = ""
+                    with target_path.open("w") as f:
+                        if folder == "maf-file-structure":
+                            header = f"MAF File Default Structure for {name} Assay v{version}"
+                            template_file_name = f"maf-file/{version.replace('.', '_')}/m_template-{name}-{version.replace('.', '_')}_metabolite_profiling_v2_maf.tsv"
+
+                        elif folder == "sample-file-structure":
+                            header = f"{name} Sample File Default Structure v{version}"
+                            template_file_name = f"sample-file/{version.replace('.', '_')}/s_template-{name}-{version.replace('.', '_')}.txt"
+                        else:
+                            header = f"{name} Assay File Default Structure v{version}"
+                            template_file_name = f"assay-file/{version.replace('.', '_')}/a_template-{name}-{version.replace('.', '_')}-metabolite_profiling.txt"
+                        f.write(f"# {header}\n\n")
+                        f.write(
+                            "| # |Header  | Column Structure  | Required | Min Length | Max Length | Description | Examples | Controlled Terms| Default Value  |\n"
+                            "|---|--------|-------------------|----------|------------|------------|-------------|----------|-----------------|----------------|\n"
+                        )
+                        for idx, item in enumerate(headers):
+                            header = item["columnHeader"]
+
+                            template_headers.append(
+                                (
+                                    header,
+                                    item["defaultValue"]
+                                    if "defaultValue" in item and item["defaultValue"]
+                                    else "",
+                                )
                             )
-                            controlled_terms = f"[Controlled Terms](../../../docs/prioritised-control-lists/sample-file-control-lists/sample-file.md#{link})"
-                        elif (
-                            name in assay_controlled_terms
-                            and header in assay_controlled_terms[name]
-                            and folder == "assay-file-structure"
-                        ):
+                            if "columnStructure" in item:
+                                if item["columnStructure"] == "ONTOLOGY_COLUMN":
+                                    template_headers.append(("Term Source REF", ""))
+                                    template_headers.append(
+                                        ("Term Accession Number", "")
+                                    )
+                                elif (
+                                    item["columnStructure"]
+                                    == "SINGLE_COLUMN_AND_UNIT_ONTOLOGY"
+                                ):
+                                    template_headers.append(("Unit", ""))
+                                    template_headers.append(("Term Source REF", ""))
+                                    template_headers.append(
+                                        ("Term Accession Number", "")
+                                    )
+
+                            # controlled_terms = ""
+                            # link = ""
+                            # # if (
+                            # #     header in sample_controlled_terms
+                            # #     and folder == "sample-file-structure"
+                            # # ):
+                            # #     link = (
+                            # #         header.replace(" ", "-")
+                            # #         .lower()
+                            # #         .replace("]", "")
+                            # #         .replace("[", "")
+                            # #     )
+                            # #     controlled_terms = f"[Controlled Terms](../../../docs/prioritised-control-lists/sample-file-control-lists/{version.replace(".", "_")}sample-file.md#{link})"
+                            # # elif (
+                            # #     name in assay_controlled_terms
+                            # #     and header in assay_controlled_terms[name]
+                            # #     and folder == "assay-file-structure"
+                            # # ):
                             link = (
                                 f"{header} Column".replace(" ", "-")
                                 .lower()
                                 .replace("]", "")
                                 .replace("[", "")
                             )
-                            controlled_terms = f"[Controlled Terms](../../../docs/prioritised-control-lists/assay-file-control-lists/{doc_file_name}#{link})"
 
-                        f.write(
-                            f"| {idx + 1} "
-                            f"| {item['columnHeader']} "
-                            f"| {item['columnStructure'].lower().replace('_', ' ')} "
-                            f"| {item['required']} "
-                            f"| {item['minLength'] if item['minLength'] > 0 else '-'} "
-                            f"| {item['maxLength'] if item['maxLength'] > 0 else '-'} "
-                            f"| {item['description'] if 'description' in item else ''} "
-                            f"| {', '.join(item['examples']) if 'examples' in item else ''} "
-                            f"| {controlled_terms} "
-                            f"| {item['defaultValue'] if item['defaultValue'] else ''}"
-                            "|\n"
-                        )
-                    templates_folder = Path("docs/templates")
-                    template_path = templates_folder / Path(template_file_name)
-                    template_path.parent.mkdir(parents=True, exist_ok=True)
-                    with template_path.open("w") as fw:
-                        fw.write("\t".join([x[0] for x in template_headers]))
-                        fw.write("\n")
-                        fw.write("\t".join([x[1] for x in template_headers]))
-                        fw.write("\n")
-                        
-                        
+                            control_list_folder = folder.replace(
+                                "-file-structure", "-control-lists"
+                            )
+                            controlled_terms = f"[Controlled Terms](../../../docs/prioritised-control-lists/{control_list_folder}/{version.replace('.', '_')}/{doc_file_name}#{link})"
+
+                            f.write(
+                                f"| {idx + 1} "
+                                f"| {item['columnHeader']} "
+                                f"| {item['columnStructure'].lower().replace('_', ' ')} "
+                                f"| {item['required']} "
+                                f"| {item['minLength'] if item['minLength'] > 0 else '-'} "
+                                f"| {item['maxLength'] if item['maxLength'] > 0 else '-'} "
+                                f"| {item['description'] if 'description' in item else ''} "
+                                f"| {', '.join(item['examples']) if 'examples' in item else ''} "
+                                f"| {controlled_terms} "
+                                f"| {item['defaultValue'] if item['defaultValue'] else ''}"
+                                "|\n"
+                            )
+                        templates_folder = Path("docs/templates")
+                        template_path = templates_folder / Path(template_file_name)
+                        template_path.parent.mkdir(parents=True, exist_ok=True)
+                        with template_path.open("w") as fw:
+                            fw.write("\t".join([x[0] for x in template_headers]))
+                            fw.write("\n")
+                            fw.write("\t".join([x[1] for x in template_headers]))
+                            fw.write("\n")
+
+
 if __name__ == "__main__":
     assay_controlled_terms = create_recommended_assay_control_lists()
 

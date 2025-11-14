@@ -246,11 +246,11 @@ rule_a_100_100_001_10 contains result if {
 	templates := data.metabolights.validation.v2.templates
 	def := data.metabolights.validation.v2.phase1.definitions
 	some file_name, _ in input.assays
-	# print(input.assays[file_name].table.headers)
 	header_names := {header.columnHeader: same_headers |
 		some header_set in def._DEFAULT_ASSAY_HEADERS[file_name]
 
-		header_set.version == "v1.0"
+		header_set.version == data.metabolights.validation.v2.phase1.definitions.STUDY_TEMPLATE_VERSION
+		
 		some header in header_set.headers
 		not startswith(header.columnHeader, "Comment[")
 		not startswith(header.columnHeader, "Protocol REF")
@@ -323,7 +323,7 @@ rule_a_100_100_001_12 contains result if {
 		
 	]
 	some header_set in def._DEFAULT_ASSAY_HEADERS[file_name]
-	header_set.version == "v1.0"
+	header_set.version == def.STUDY_TEMPLATE_VERSION
 
 	matches := [header.columnHeader |
 		some header in header_set.headers
@@ -361,7 +361,7 @@ rule_a_100_100_001_13 contains result if {
 	technique_name == assay_file.assayTechnique.name
 
 	some template in templates
-	template.version == "v1.0"
+	template.version == data.metabolights.validation.v2.phase1.definitions.STUDY_TEMPLATE_VERSION
 
 	unique_header_names := {header.columnHeader: columns | 
 		some header in template.headers
@@ -407,7 +407,7 @@ rule_a_100_100_002_01 contains result if {
 
 # METADATA
 # title: There is no row in assay file.
-# description: No row is defined in assay file. Add more than one row (run). Please ensure all xxx, including controls, QCs, standards, etc, are referenced.
+# description: No row is defined in assay file. Add more than one row (run). Please ensure all samples, including controls, QCs, standards, etc, are referenced.
 # custom:
 #  rule_id: rule_a_100_100_005_01
 #  type: ERROR
@@ -425,7 +425,7 @@ rule_a_100_100_005_01 contains result if {
 
 # METADATA
 # title: There is only one row in assay file.
-# description: Only one row is defined in assay file. Add more than one row (run). Please ensure all xxx, including controls, QCs, standards, etc, are referenced.
+# description: Only one row is defined in assay file. Add more than one row (run). Please ensure all sample, including controls, QCs, standards, etc, are referenced.
 # custom:
 #  rule_id: rule_a_100_100_005_02
 #  type: ERROR

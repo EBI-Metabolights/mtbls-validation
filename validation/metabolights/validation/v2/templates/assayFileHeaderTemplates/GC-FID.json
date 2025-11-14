@@ -2,6 +2,7 @@
     "GC-FID": [
         {
             "fixedColumnCount": 1,
+            "description": "Flame ionisation detector MS",
             "headers": [
                 {
                     "columnCategory": "Basic",
@@ -276,7 +277,286 @@
                     }
                 }
             ],
-            "version": "v1.0"
+            "version": "1.0"
+        },
+        {
+            "fixedColumnCount": 1,
+            "description": "Flame ionisation detector MS",
+            "headers": [
+                {
+                    "columnCategory": "Basic",
+                    "columnHeader": "Sample Name",
+                    "columnPrefix": "",
+                    "columnStructure": "SINGLE_COLUMN",
+                    "controlLists": null,
+                    "defaultColumnIndex": 0,
+                    "defaultValue": null,
+                    "maxLength": 0,
+                    "minLength": 1,
+                    "required": true
+                },
+                {
+                    "columnCategory": "Protocol",
+                    "columnHeader": "Protocol REF",
+                    "columnPrefix": "",
+                    "columnStructure": "SINGLE_COLUMN",
+                    "defaultColumnIndex": 1,
+                    "defaultValue": "Extraction",
+                    "maxLength": 0,
+                    "minLength": 0,
+                    "required": true
+                },
+                {
+                    "columnCategory": "Parameter",
+                    "columnHeader": "Parameter Value[Post Extraction]",
+                    "columnPrefix": "Parameter Value",
+                    "columnStructure": "ONTOLOGY_COLUMN",
+                    "controlLists": null,
+                    "defaultColumnIndex": 2,
+                    "defaultValue": null,
+                    "maxLength": 0,
+                    "minLength": 0,
+                    "required": false
+                },
+                {
+                    "columnCategory": "Parameter",
+                    "columnHeader": "Parameter Value[Derivatization]",
+                    "columnPrefix": "Parameter Value",
+                    "columnStructure": "ONTOLOGY_COLUMN",
+                    "controlLists": null,
+                    "defaultColumnIndex": 5,
+                    "defaultValue": null,
+                    "maxLength": 0,
+                    "minLength": 0,
+                    "required": false
+                },
+                {
+                    "columnCategory": "Basic",
+                    "columnHeader": "Extract Name",
+                    "columnPrefix": "",
+                    "columnStructure": "SINGLE_COLUMN",
+                    "controlLists": null,
+                    "defaultColumnIndex": 8,
+                    "defaultValue": null,
+                    "maxLength": 0,
+                    "minLength": 0,
+                    "required": false
+                },
+                {
+                    "columnCategory": "Protocol",
+                    "columnHeader": "Protocol REF",
+                    "columnPrefix": "",
+                    "columnStructure": "SINGLE_COLUMN",
+                    "defaultColumnIndex": 9,
+                    "defaultValue": "Chromatography",
+                    "maxLength": 0,
+                    "minLength": 0,
+                    "required": true
+                },
+                {
+                    "columnCategory": "Parameter",
+                    "columnHeader": "Parameter Value[Chromatography Instrument]",
+                    "columnPrefix": "Parameter Value",
+                    "columnStructure": "ONTOLOGY_COLUMN",
+                    "controlLists": {
+                        "termSourceRef": "prioritisedStudyFactorRefSources"
+                    },
+                    "defaultColumnIndex": 10,
+                    "defaultValue": null,
+                    "maxLength": 0,
+                    "minLength": 5,
+                    "required": true
+                },
+                {
+                    "columnCategory": "Parameter",
+                    "columnHeader": "Parameter Value[Autosampler model]",
+                    "columnPrefix": "Parameter Value",
+                    "columnStructure": "ONTOLOGY_COLUMN",
+                    "controlLists": null,
+                    "defaultColumnIndex": 13,
+                    "defaultValue": null,
+                    "maxLength": 0,
+                    "minLength": 0,
+                    "required": false
+                },
+                {
+                    "columnCategory": "Parameter",
+                    "columnHeader": "Parameter Value[Column model]",
+                    "columnPrefix": "Parameter Value",
+                    "columnStructure": "ONTOLOGY_COLUMN",
+                    "controlLists": null,
+                    "defaultColumnIndex": 16,
+                    "defaultValue": null,
+                    "maxLength": 0,
+                    "minLength": 5,
+                    "required": true
+                },
+                {
+                    "columnCategory": "Parameter",
+                    "columnHeader": "Parameter Value[Column type]",
+                    "columnPrefix": "Parameter Value",
+                    "columnStructure": "ONTOLOGY_COLUMN",
+                    "controlLists": null,
+                    "defaultColumnIndex": 19,
+                    "defaultValue": null,
+                    "maxLength": 0,
+                    "minLength": 5,
+                    "required": true
+                },
+                {
+                    "columnCategory": "Parameter",
+                    "columnHeader": "Parameter Value[Guard column]",
+                    "columnPrefix": "Parameter Value",
+                    "columnStructure": "ONTOLOGY_COLUMN",
+                    "controlLists": null,
+                    "defaultColumnIndex": 22,
+                    "defaultValue": null,
+                    "maxLength": 0,
+                    "minLength": 0,
+                    "required": false
+                },
+                {
+                    "columnCategory": "Parameter",
+                    "columnHeader": "Parameter Value[Detector]",
+                    "columnPrefix": "Parameter Value",
+                    "columnStructure": "ONTOLOGY_COLUMN",
+                    "controlLists": null,
+                    "defaultColumnIndex": 25,
+                    "defaultValue": null,
+                    "maxLength": 0,
+                    "minLength": 1,
+                    "required": true
+                },
+                {
+                    "columnCategory": "Parameter",
+                    "columnHeader": "Parameter Value[Temperature]",
+                    "columnPrefix": "Parameter Value",
+                    "columnStructure": "SINGLE_COLUMN AND UNIT ONTOLOGY",
+                    "controlLists": null,
+                    "defaultColumnIndex": 28,
+                    "defaultValue": null,
+                    "maxLength": 0,
+                    "minLength": 0,
+                    "required": false
+                },
+                {
+                    "columnCategory": "Basic",
+                    "columnHeader": "Labeled Extract Name",
+                    "columnPrefix": "",
+                    "columnStructure": "SINGLE_COLUMN",
+                    "controlLists": null,
+                    "defaultColumnIndex": 29,
+                    "defaultValue": null,
+                    "maxLength": 0,
+                    "minLength": 0,
+                    "required": false
+                },
+                {
+                    "columnCategory": "ontologyColumn",
+                    "columnHeader": "Label",
+                    "columnStructure": "ONTOLOGY_COLUMN",
+                    "controlLists": {
+                        "termSourceRef": "prioritisedStudyFactorRefSources"
+                    },
+                    "defaultColumnIndex": 30,
+                    "defaultValue": null,
+                    "maxLength": 0,
+                    "minLength": 0,
+                    "required": false
+                },
+                {
+                    "columnCategory": "File",
+                    "columnHeader": "Raw Spectral Data File",
+                    "columnPrefix": "",
+                    "columnStructure": "SINGLE_COLUMN",
+                    "controlLists": null,
+                    "defaultColumnIndex": 33,
+                    "defaultValue": null,
+                    "maxLength": 0,
+                    "minLength": 0,
+                    "required": false,
+                    "tags": {
+                        "fileType": "raw"
+                    }
+                },
+                {
+                    "columnCategory": "Protocol",
+                    "columnHeader": "Protocol REF",
+                    "columnPrefix": "",
+                    "columnStructure": "SINGLE_COLUMN",
+                    "defaultColumnIndex": 34,
+                    "defaultValue": "Data transformation",
+                    "maxLength": 0,
+                    "minLength": 0,
+                    "required": false
+                },
+                {
+                    "columnCategory": "Basic",
+                    "columnHeader": "Normalization Name",
+                    "columnPrefix": "",
+                    "columnStructure": "SINGLE_COLUMN",
+                    "controlLists": null,
+                    "defaultColumnIndex": 35,
+                    "defaultValue": null,
+                    "maxLength": 0,
+                    "minLength": 0,
+                    "required": false
+                },
+                {
+                    "columnCategory": "File",
+                    "columnHeader": "Derived Spectral Data File",
+                    "columnPrefix": "",
+                    "columnStructure": "SINGLE_COLUMN",
+                    "controlLists": null,
+                    "defaultColumnIndex": 36,
+                    "defaultValue": null,
+                    "maxLength": 0,
+                    "minLength": 0,
+                    "required": false,
+                    "tags": {
+                        "fileType": "derived"
+                    }
+                },
+                {
+                    "columnCategory": "Protocol",
+                    "columnHeader": "Protocol REF",
+                    "columnPrefix": "",
+                    "columnStructure": "SINGLE_COLUMN",
+                    "defaultColumnIndex": 37,
+                    "defaultValue": "Metabolite identification",
+                    "maxLength": 0,
+                    "minLength": 0,
+                    "required": true
+                },
+                {
+                    "columnCategory": "Basic",
+                    "columnHeader": "Data Transformation Name",
+                    "columnPrefix": "",
+                    "columnStructure": "SINGLE_COLUMN",
+                    "controlLists": null,
+                    "defaultColumnIndex": 38,
+                    "defaultValue": null,
+                    "maxLength": 0,
+                    "minLength": 0,
+                    "required": false
+                },
+                {
+                    "columnCategory": "File",
+                    "columnHeader": "Metabolite Assignment File",
+                    "columnPrefix": "",
+                    "columnStructure": "SINGLE_COLUMN",
+                    "controlLists": null,
+                    "defaultColumnIndex": 39,
+                    "defaultValue": null,
+                    "maxLength": 0,
+                    "minLength": 1,
+                    "required": true,
+                    "tags": {
+                        "fileType": "metadata_maf"
+                    }
+                }
+            ],
+            "version": "2.0"
         }
     ]
 }

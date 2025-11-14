@@ -124,8 +124,8 @@ test_rule_s_100_100_001_03_no_violation_01 if {
 		"parserMessages": {"s_MTBLS1.txt": []},
 	}
 		with data.metabolights.validation.v2.phase1.definitions._DEFAULT_SAMPLE_FILE_HEADERS as {
-			{"columnHeader": "Sample Name", "required": true},
-			{"columnHeader": "Characteristics[Organism]", "required": true},
+			"Sample Name": {"columnHeader": "Sample Name", "required": true},
+			"Characteristics[Organism]": {"columnHeader": "Characteristics[Organism]", "required": true},
 		}
 	count(result) == 0
 }
@@ -149,11 +149,11 @@ test_rule_s_100_100_001_03_violation_01 if {
 		"parserMessages": {"s_MTBLS1.txt": []},
 	}
 		with data.metabolights.validation.v2.phase1.definitions._DEFAULT_SAMPLE_FILE_HEADERS as {
-			{"columnHeader": "Sample Name", "required": true},
-			{"columnHeader": "Characteristics[Organism]", "required": true},
-			{"columnHeader": "Characteristics[Organism part]", "required": true},
-			{"columnHeader": "Source Name", "required": true},
-			{"columnHeader": "Factor[Age]", "required": false},
+		"Sample Name":	{"columnHeader": "Sample Name", "required": true},
+		"Characteristics[Organism]":	{"columnHeader": "Characteristics[Organism]", "required": true},
+		"Characteristics[Organism part]":	{"columnHeader": "Characteristics[Organism part]", "required": true},
+		"Source Name":	{"columnHeader": "Source Name", "required": true},
+		"Factor[Age]": {"columnHeader": "Factor[Age]", "required": false},
 		}
 	count(result) == 1
 }
@@ -428,7 +428,7 @@ test_rule_s_100_100_001_08_no_violation_01 if {
 		"parserMessages": {"s_MTBLS1.txt": []},
 	}
 		with data.metabolights.validation.v2.phase1.definitions._DEFAULT_SAMPLE_FILE_HEADERS as [{
-			"version": "v1.0",
+			"version": "2.0",
 			"headers": [
 				{"columnHeader": "Source Name", "required": true},
 				{"columnHeader": "Characteristics[Organism]", "required": true},
@@ -465,18 +465,24 @@ test_rule_s_100_100_001_08_violation_01 if {
 		"investigation": {"studies": [{"fileName": "s_MTBLS1.txt"}]},
 		"parserMessages": {"s_MTBLS1.txt": []},
 	}
-		with data.metabolights.validation.v2.templates.sampleFileHeaderTemplates as [{
-			"version": "v1.0",
-			"headers": [
-				{"columnHeader": "Source Name", "required": true},
-				{"columnHeader": "Characteristics[Organism]", "required": true},
-				{"columnHeader": "Characteristics[Organism part]", "required": true},
-				{"columnHeader": "Characteristics[Variant]", "required": true},
-				{"columnHeader": "Characteristics[Sample type]", "required": true},
-				{"columnHeader": "Protocol REF", "required": true},
-				{"columnHeader": "Sample Name", "required": true},
-			],
-		}]
+		with data.metabolights.validation.v2.phase1.definitions._DEFAULT_SAMPLE_HEADER_NAMES as [
+			"Characteristics[Organism part]",
+			"Characteristics[Organism]",
+			"Characteristics[Sample type]",
+			"Characteristics[Variant]",
+			"Protocol REF",
+			"Sample Name",
+			"Source Name"
+		]
+		with  data.metabolights.validation.v2.phase1.definitions.SELECTED_STUDY_SAMPLE_FILE_TEMPLATE_HEADERS as [
+			{"columnHeader": "Source Name", "required": true},
+			{"columnHeader": "Characteristics[Organism]", "required": true},
+			{"columnHeader": "Characteristics[Organism part]", "required": true},
+			{"columnHeader": "Characteristics[Variant]", "required": true},
+			{"columnHeader": "Characteristics[Sample type]", "required": true},
+			{"columnHeader": "Protocol REF", "required": true},
+			{"columnHeader": "Sample Name", "required": true},
+		]
 	count(result) == 1
 }
 
@@ -509,7 +515,7 @@ test_rule_s_100_100_001_09_no_violation_01 if {
 		"parserMessages": {"s_MTBLS1.txt": []},
 	}
 		with data.metabolights.validation.v2.phase1.definitions._DEFAULT_SAMPLE_FILE_HEADERS as [{
-			"version": "v1.0",
+			"version": "2.0",
 			"headers": [
 				{"columnHeader": "Source Name", "required": true},
 				{"columnHeader": "Characteristics[Organism]", "required": true},
@@ -550,7 +556,7 @@ test_rule_s_100_100_001_09_violation_01 if {
 		"parserMessages": {"s_MTBLS1.txt": []},
 	}
 		with data.metabolights.validation.v2.phase1.definitions._DEFAULT_SAMPLE_FILE_HEADERS as [{
-			"version": "v1.0",
+			"version": "2.0",
 			"headers": [
 				{"columnHeader": "Source Name", "required": true},
 				{"columnHeader": "Characteristics[Organism]", "required": true},
@@ -595,7 +601,7 @@ test_rule_s_100_100_001_10_no_violation_01 if {
 		"parserMessages": {"s_MTBLS1.txt": []},
 	}
 		with data.metabolights.validation.v2.phase1.definitions._DEFAULT_SAMPLE_FILE_HEADERS as [{
-			"version": "v1.0",
+			"version": "2.0",
 			"headers": [
 				{"columnHeader": "Source Name", "required": true},
 				{"columnHeader": "Characteristics[Organism]", "required": true},
@@ -636,7 +642,7 @@ test_rule_s_100_100_001_10_violation_01 if {
 		"parserMessages": {"s_MTBLS1.txt": []},
 	}
 		with data.metabolights.validation.v2.phase1.definitions._DEFAULT_SAMPLE_FILE_HEADERS as [{
-			"version": "v1.0",
+			"version": "2.0",
 			"headers": [
 				{"columnHeader": "Source Name", "required": true},
 				{"columnHeader": "Characteristics[Organism]", "required": true},
@@ -672,27 +678,22 @@ test_rule_s_100_100_001_11_no_violation_01 if {
 				{"columnCategory": "Characteristics", "columnStructure": "ONTOLOGY_COLUMN", "columnHeader": "Characteristics[Variant]", "columnIndex": 8},
 				{"columnCategory": "Factor Value", "columnStructure": "ONTOLOGY_COLUMN", "columnHeader": "Factor Value[Age]", "columnIndex": 12},
 				{"columnCategory": "Protocol", "columnStructure": "SINGLE_COLUMN", "columnHeader": "Protocol REF", "columnIndex": 15},
-				{"columnCategory": "", "columnStructure": "SINGLE_COLUMN", "columnHeader": "Sample Name", "columnIndex": 16},
+				{"columnCategory": "", "columnStructure": "SINGLE_COLUMN", "columnHeader": "Sample Name", "columnIndex": 16}
 			],
 		}}},
 		"investigation": {"studies": [{"fileName": "s_MTBLS1.txt", "studyFactors": { "factors": [ {"name": "Age"}]}}]},
 		"parserMessages": {"s_MTBLS1.txt": []},
 	}
-	with data.metabolights.validation.v2.phase1.definitions._DEFAULT_SAMPLE_HEADER_NAMES as {
-		"Characteristics[Organism]", "Characteristics[Organism part]", "Factor Value[Age]",  "Sample Name", "Source Name"
-	}
-	with data.metabolights.validation.v2.templates.sampleFileHeaderTemplates as [{
-			"version": "v1.0",
-			"headers": [
-				{"columnHeader": "Source Name", "required": true, "columnStructure": "SINGLE_COLUMN", "columnIndex": 0},
-				{"columnHeader": "Characteristics[Organism]", "required": true, "columnStructure": "ONTOLOGY_COLUMN", "columnIndex": 0},
-				{"columnHeader": "Characteristics[Organism part]", "required": true, "columnStructure": "ONTOLOGY_COLUMN", "columnIndex": 0},
-				{"columnHeader": "Characteristics[Variant]", "required": true, "columnStructure": "ONTOLOGY_COLUMN", "columnIndex": 0},
-				{"columnHeader": "Characteristics[Sample type]", "required": true, "columnStructure": "ONTOLOGY_COLUMN", "columnIndex": 0},
-				{"columnHeader": "Protocol REF", "required": true, "columnStructure": "SINGLE_COLUMN", "columnIndex": 0},
-				{"columnHeader": "Sample Name", "required": true, "columnStructure": "SINGLE_COLUMN", "columnIndex": 0},
-			],
-		}]
+	with data.metabolights.validation.v2.phase1.definitions._DEFAULT_SAMPLE_FILE_HEADERS as {
+
+		"Source Name": {"columnHeader": "Source Name", "required": true, "columnStructure": "SINGLE_COLUMN", "columnIndex": 0},
+		"Characteristics[Organism]": {"columnHeader": "Characteristics[Organism]", "required": true, "columnStructure": "ONTOLOGY_COLUMN", "columnIndex": 0},
+		"Characteristics[Organism part]": {"columnHeader": "Characteristics[Organism part]", "required": true, "columnStructure": "ONTOLOGY_COLUMN", "columnIndex": 0},
+		"Characteristics[Variant]": {"columnHeader": "Characteristics[Variant]", "required": true, "columnStructure": "ONTOLOGY_COLUMN", "columnIndex": 0},
+		"Characteristics[Sample type]": {"columnHeader": "Characteristics[Sample type]", "required": true, "columnStructure": "ONTOLOGY_COLUMN", "columnIndex": 0},
+		"Protocol REF": {"columnHeader": "Protocol REF", "required": true, "columnStructure": "SINGLE_COLUMN", "columnIndex": 0},
+		"Sample Name": {"columnHeader": "Sample Name", "required": true, "columnStructure": "SINGLE_COLUMN", "columnIndex": 0}
+		}
 
 	count(result) == 0
 }
@@ -719,21 +720,16 @@ test_rule_s_100_100_001_11_violation_01 if {
 		"investigation": {"studies": [{"fileName": "s_MTBLS1.txt", "studyFactors": { "factors": [ {"name": "Age"}]}}]},
 		"parserMessages": {"s_MTBLS1.txt": []},
 	}
-	with data.metabolights.validation.v2.phase1.definitions._DEFAULT_SAMPLE_HEADER_NAMES as {
-		"Characteristics[Organism]", "Characteristics[Organism part]", "Factor Value[Age]",  "Sample Name", "Source Name"
-	}
-	with data.metabolights.validation.v2.templates.sampleFileHeaderTemplates as [{
-			"version": "v1.0",
-			"headers": [
-				{"columnHeader": "Source Name", "required": true, "columnStructure": "SINGLE_COLUMN", "columnIndex": 0},
-				{"columnHeader": "Characteristics[Organism]", "required": true, "columnStructure": "ONTOLOGY_COLUMN", "columnIndex": 0},
-				{"columnHeader": "Characteristics[Organism part]", "required": true, "columnStructure": "ONTOLOGY_COLUMN", "columnIndex": 0},
-				{"columnHeader": "Characteristics[Variant]", "required": true, "columnStructure": "ONTOLOGY_COLUMN", "columnIndex": 0},
-				{"columnHeader": "Characteristics[Sample type]", "required": true, "columnStructure": "ONTOLOGY_COLUMN", "columnIndex": 0},
-				{"columnHeader": "Protocol REF", "required": true, "columnStructure": "SINGLE_COLUMN", "columnIndex": 0},
-				{"columnHeader": "Sample Name", "required": true, "columnStructure": "SINGLE_COLUMN", "columnIndex": 0},
-			],
-		}]
+	with data.metabolights.validation.v2.phase1.definitions._DEFAULT_SAMPLE_FILE_HEADERS as  {
+
+		"Source Name": {"columnHeader": "Source Name", "required": true, "columnStructure": "SINGLE_COLUMN", "columnIndex": 0},
+		"Characteristics[Organism]": {"columnHeader": "Characteristics[Organism]", "required": true, "columnStructure": "ONTOLOGY_COLUMN", "columnIndex": 0},
+		"Characteristics[Organism part]": {"columnHeader": "Characteristics[Organism part]", "required": true, "columnStructure": "ONTOLOGY_COLUMN", "columnIndex": 0},
+		"Characteristics[Variant]": {"columnHeader": "Characteristics[Variant]", "required": true, "columnStructure": "ONTOLOGY_COLUMN", "columnIndex": 0},
+		"Characteristics[Sample type]": {"columnHeader": "Characteristics[Sample type]", "required": true, "columnStructure": "ONTOLOGY_COLUMN", "columnIndex": 0},
+		"Protocol REF": {"columnHeader": "Protocol REF", "required": true, "columnStructure": "SINGLE_COLUMN", "columnIndex": 0},
+		"Sample Name": {"columnHeader": "Sample Name", "required": true, "columnStructure": "SINGLE_COLUMN", "columnIndex": 0}
+		}
 	count(result) == 1
 }
 

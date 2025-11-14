@@ -41,12 +41,77 @@ CL_STUDY_DESIGN_DESCRIPTOR_REF_SOURCES_STR := to_string(CL_STUDY_DESIGN_DESCRIPT
 CL_STUDY_FACTOR_REF_SOURCES := CL_PREDEFINED_SOURCE_REFERENCES["Study Factor Type"]
 CL_STUDY_FACTOR_REF_SOURCES_STR := to_string(CL_STUDY_FACTOR_REF_SOURCES)
 
-_DEFAULT_SAMPLE_FILE_HEADERS := {x | 
-	some sampleFile in data.metabolights.validation.v2.templates.sampleFileHeaderTemplates
-	sampleFile.version == "v1.0"
-	some x in sampleFile.headers
+DB_STUDY_TEMPLATE_VERSION := input.studyDbMetadata.templateVersion
+
+METADATA_STUDY_TEMPLATE_VERSION := input.investigation.studies[0].templateVersion
+
+STUDY_TEMPLATE_VERSION := DB_STUDY_TEMPLATE_VERSION if {
+	count(DB_STUDY_TEMPLATE_VERSION) > 0
+}
+STUDY_TEMPLATE_VERSION := METADATA_STUDY_TEMPLATE_VERSION if {
+	count(DB_STUDY_TEMPLATE_VERSION) == 0
+	count(METADATA_STUDY_TEMPLATE_VERSION) > 0
+}
+STUDY_TEMPLATE_VERSION := data.metabolights.validation.v2.configuration.defaultStudyTemplateVersion if {
+	count(DB_STUDY_TEMPLATE_VERSION) == 0
+	count(METADATA_STUDY_TEMPLATE_VERSION) == 0
+}
+
+DEFAULT_STUDY_CATEGORIES := data.metabolights.validation.v2.configuration.studyCategories
+
+DB_STUDY_CATEGORY := DEFAULT_STUDY_CATEGORIES[sprintf("%v", [input.studyDbMetadata.studyCategory])]
+
+METADATA_STUDY_CATEGORY := input.investigation.studies[0].studyCategory
+
+
+STUDY_CATEGORY := DB_STUDY_CATEGORY if {
+	count(DB_STUDY_CATEGORY) > 0
+}
+STUDY_CATEGORY := METADATA_STUDY_CATEGORY if {
+	count(DB_STUDY_CATEGORY) == 0
+	count(METADATA_STUDY_CATEGORY) > 0
+}
+STUDY_CATEGORY := data.metabolights.validation.v2.configuration.defaultStudyCategory if {
+	count(DB_STUDY_CATEGORY) == 0
+	count(METADATA_STUDY_CATEGORY) == 0
+}
+
+DB_SAMPLE_TEMPLATE := input.studyDbMetadata.sampleTemplate
+
+METADATA_SAMPLE_TEMPLATE := input.investigation.studies[0].sampleTemplate
+
+STUDY_SAMPLE_TEMPLATE_NAME := DB_SAMPLE_TEMPLATE if {
+	count(DB_SAMPLE_TEMPLATE) > 0
+}
+STUDY_SAMPLE_TEMPLATE_NAME := METADATA_SAMPLE_TEMPLATE if {
+	count(DB_SAMPLE_TEMPLATE) == 0
+	count(METADATA_SAMPLE_TEMPLATE) > 0
+}
+STUDY_SAMPLE_TEMPLATE_NAME := data.metabolights.validation.v2.configuration.defaultSampleTemplate if {
+	count(DB_SAMPLE_TEMPLATE) == 0
+	count(METADATA_SAMPLE_TEMPLATE) == 0
+}
+
+
+SELECTED_STUDY_SAMPLE_FILE_TEMPLATE := template if  {
+	some template_name, templates in data.metabolights.validation.v2.templates.sampleFileHeaderTemplates
+	template_name == STUDY_SAMPLE_TEMPLATE_NAME
+
+	some template in templates
+	template.version == STUDY_TEMPLATE_VERSION
 
 }
+
+_DEFAULT_SAMPLE_FILE_HEADERS := {header.columnHeader: header | 
+	template := SELECTED_STUDY_SAMPLE_FILE_TEMPLATE
+	some header in template.headers
+}
+
+SELECTED_STUDY_SAMPLE_FILE_TEMPLATE_HEADERS := [header | 
+	template := SELECTED_STUDY_SAMPLE_FILE_TEMPLATE
+	some header in template.headers
+]
+
 _DEFAULT_ASSAY_HEADERS := {assay_file_name: assay_headers |
 	some i, j
 	assay_file_name  := input.investigation.studies[i].studyAssays.assays[j].fileName
@@ -57,19 +122,28 @@ _DEFAULT_ASSAY_HEADERS := {assay_file_name: assay_headers |
 _DEFAULT_ASSAY_HEADER_NAMES := {file_name: y | 
 		some file_name, headers_set in _DEFAULT_ASSAY_HEADERS
 		some template in headers_set
-		template.version == "v1.0"
+		template.version == STUDY_TEMPLATE_VERSION
 		header_names := [ t.columnHeader | some t in template.headers]
 		y := header_names
 	}
 
-_DEFAULT_SAMPLE_HEADER_NAMES = {x.columnHeader | x := _DEFAULT_SAMPLE_FILE_HEADERS[_]}
+_DEFAULT_SAMPLE_HEADER_NAMES = {x.columnHeader | some x in _DEFAULT_SAMPLE_FILE_HEADERS}
 
 
 _DEFAULT_STUDY_PROTOCOLS := {technology: protocol_names |
     technology := input.assays[j].assayTechnique.name
 	protocol_names := [x.name | x := data.metabolights.validation.v2.templates.studyProtocolTemplates[technology].protocols[t]]
 }
+_ALL_STUDY_PROTOCOL_PARAMS := {technology: protocol_names |
+	some technology, items in data.metabolights.validation.v2.templates.studyProtocolTemplates
+	protocol_names := [x.name | x := items.protocols[t]]
+}
 
+_ALL_STUDY_PROTOCOLS := {protocol_name |
+	some technology, items in data.metabolights.validation.v2.templates.studyProtocolTemplates
+	some protocol in items.protocols
+	protocol_name = protocol.name
+}
 _DEFAULT_MERGED_STUDY_PROTOCOLS := {x |
 	x := _DEFAULT_STUDY_PROTOCOLS[_][_]
 }
@@ -101,11 +175,35 @@ __ASSAY_DEFAULT_PROTOCOL_HEADERS := {file_name: default_values |
         assay_type := sheet.table.assayTechnique.name
         default_values := [ header | 
             some template in data.metabolights.validation.v2.templates.assayFileHeaderTemplates[assay_type]
-			template.version == "v1.0"
+			template.version == STUDY_TEMPLATE_VERSION
 			some header in template.headers
             header.columnCategory == "Protocol"
 		]
 }
+
+# ALL_ASSAY_PARAMETER_VALUES := { template_name :params |
+# 	some template_name, template in data.metabolights.validation.v2.templates.assayFileHeaderTemplates
+# 	some template_version in template
+# 	template_version.version == "2.0"
+# 	params := [ header.columnHeader | 
+# 		some header in template_version.headers
+# 		header.columnStructure == "SINGLE_COLUMN"
+# 		startswith(header.columnHeader, "Parameter Value")
+# 	]
+# }
+
+# ALL_ASSAY_PARAMETER_VALUES2 := { header.columnHeader |
+# 	some template_name, template in data.metabolights.validation.v2.templates.assayFileHeaderTemplates
+# 	template_name != "MSImaging"
+	
+# 	template_name != "MRImaging"
+# 	some template_version in template
+# 	template_version.version == "2.0"
+# 	some header in template_version.headers
+# 	header.columnStructure == "SINGLE_COLUMN"
+# 	startswith(header.columnHeader, "Parameter Value")
+	
+# }
 
 __ASSAY_PROTOCOL_HEADER_COLUMNS := {file_name: columns | 
 		some file_name, _ in input.assays
@@ -121,13 +219,4 @@ __ASSAY_TECHNIQUES := {file_name: technology |
 	file_name := assay_name
     technology := input.assays[assay_name].assayTechnique.name
 }
-
-
-# __ASSIGNMENT_FILE_TYPES := {fileName: technology |
-#     fileName := input.referencedAssignmentFiles[a]
-# 	print(fileName)
-#     fileName in input.assays[j].referencedAssignmentFiles
-
-#     technology := __ASSAY_TECHNIQUES[j]
-# }
 

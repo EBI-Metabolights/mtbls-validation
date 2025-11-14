@@ -25,9 +25,10 @@ test_rule_m_100_100_001_01_no_violation_01 if {
 		}}},
 		"investigation": {"studies": [{"fileName": "s_MTBLS1.txt"}]},
 		"parserMessages": {"s_MTBLS1.txt": []},
+		"studyDbMetadata": {"studyCategory": "other", "sampleTemplate": "minimum",  "templateVersion": "2.0"}
 	}
 		with data.metabolights.validation.v2.templates.assignmentFileHeaderTemplates as {"MS": [{
-			"version": "v1.0",
+			"version": "2.0",
 			"headers": [
 				{"columnPrefix": "", "columnStructure": "SINGLE_COLUMN", "columnHeader": "database_identifier", "defaultColumnIndex": 0},
 				{"columnPrefix": "", "columnStructure": "ONTOLOGY_COLUMN", "columnHeader": "chemical_formula", "defaultColumnIndex": 1},
@@ -56,9 +57,10 @@ test_rule_m_100_100_001_01_violation_01 if {
 		}}},
 		"investigation": {"studies": [{"fileName": "s_MTBLS1.txt"}]},
 		"parserMessages": {"s_MTBLS1.txt": []},
+		"studyDbMetadata": {"studyCategory": "other", "sampleTemplate": "minimum",  "templateVersion": "2.0"}
 	}
 		with data.metabolights.validation.v2.templates.assignmentFileHeaderTemplates as {"MS": [{
-			"version": "v1.0",
+			"version": "2.0",
 			"headers": [
 				{"columnPrefix": "", "columnStructure": "SINGLE_COLUMN", "columnHeader": "database_identifier", "defaultColumnIndex": 0},
 				{"columnPrefix": "", "columnStructure": "SINGLE_COLUMN", "columnHeader": "chemical_formula", "defaultColumnIndex": 1},
@@ -94,9 +96,10 @@ test_rule_m_100_100_001_02_no_violation_01 if {
 		}}},
 		"investigation": {"studies": [{"fileName": "s_MTBLS1.txt"}]},
 		"parserMessages": {"s_MTBLS1.txt": []},
+		"studyDbMetadata": {"studyCategory": "other", "sampleTemplate": "minimum",  "templateVersion": "2.0"}
 	}
 		with data.metabolights.validation.v2.templates.assignmentFileHeaderTemplates as {"MS": [{
-			"version": "v1.0",
+			"version": "2.0",
 			"headers": [
 				{"columnPrefix": "", "columnStructure": "SINGLE_COLUMN", "columnHeader": "database_identifier", "defaultColumnIndex": 1},
 				{"columnPrefix": "", "columnStructure": "SINGLE_COLUMN", "columnHeader": "chemical_formula", "defaultColumnIndex": 2},
@@ -137,9 +140,10 @@ test_rule_m_100_100_001_02_violation_01 if {
 		},
 		"investigation": {"studies": [{"fileName": "s_MTBLS1.txt"}]},
 		"parserMessages": {"s_MTBLS1.txt": []},
+		"studyDbMetadata": {"studyCategory": "other", "sampleTemplate": "minimum",  "templateVersion": "2.0"}
 	}
 		with data.metabolights.validation.v2.templates.assignmentFileHeaderTemplates as {"MS": [{
-			"version": "v1.0",
+			"version": "2.0",
 			"headers": [
 				{"columnPrefix": "", "columnStructure": "SINGLE_COLUMN", "columnHeader": "database_identifier", "defaultColumnIndex": 1},
 				{"columnPrefix": "", "columnStructure": "ONTOLOGY_COLUMN", "columnHeader": "chemical_formula", "defaultColumnIndex": 2},
@@ -173,9 +177,10 @@ test_rule_m_100_100_001_03_no_violation_01 if {
 		}}},
 		"investigation": {"studies": [{"fileName": "s_MTBLS1.txt"}]},
 		"parserMessages": {"s_MTBLS1.txt": []},
+		"studyDbMetadata": {"studyCategory": "other", "sampleTemplate": "minimum",  "templateVersion": "2.0"}
 	}
 		with data.metabolights.validation.v2.templates.assignmentFileHeaderTemplates as {"MS": [{
-			"version": "v1.0",
+			"version": "2.0",
 			"headers": [
 				{"columnPrefix": "", "columnStructure": "SINGLE_COLUMN", "columnHeader": "database_identifier", "defaultColumnIndex": 1},
 				{"columnPrefix": "", "columnStructure": "SINGLE_COLUMN", "columnHeader": "chemical_formula", "defaultColumnIndex": 2},
@@ -216,9 +221,10 @@ test_rule_m_100_100_001_03_violation_01 if {
 		},
 		"investigation": {"studies": [{"fileName": "s_MTBLS1.txt"}]},
 		"parserMessages": {"s_MTBLS1.txt": []},
+		"studyDbMetadata": {"studyCategory": "other", "sampleTemplate": "minimum",  "templateVersion": "2.0"}
 	}
 		with data.metabolights.validation.v2.templates.assignmentFileHeaderTemplates as {"MS": [{
-			"version": "v1.0",
+			"version": "2.0",
 			"headers": [
 				{"columnPrefix": "", "columnStructure": "SINGLE_COLUMN", "columnHeader": "database_identifier", "defaultColumnIndex": 1},
 				{"columnPrefix": "", "columnStructure": "ONTOLOGY_COLUMN", "columnHeader": "chemical_formula", "defaultColumnIndex": 2},
@@ -254,9 +260,10 @@ test_rule_m_100_100_001_04_no_violation_01 if {
 		}}},
 		"investigation": {"studies": [{"fileName": "s_MTBLS1.txt"}]},
 		"parserMessages": {"s_MTBLS1.txt": []},
+		"studyDbMetadata": {"studyCategory": "other", "sampleTemplate": "minimum",  "templateVersion": "2.0"}
 	}
 		with data.metabolights.validation.v2.templates.assignmentFileHeaderTemplates as {"MS": [{
-			"version": "v1.0",
+			"version": "2.0",
 			"headers": [
 				{"columnPrefix": "", "columnStructure": "SINGLE_COLUMN", "columnHeader": "database_identifier", "defaultColumnIndex": 1},
 				{"columnPrefix": "", "columnStructure": "SINGLE_COLUMN", "columnHeader": "chemical_formula", "defaultColumnIndex": 2},
@@ -288,9 +295,10 @@ test_rule_m_100_100_001_04_violation_01 if {
 		},
 		"investigation": {"studies": [{"fileName": "s_MTBLS1.txt"}]},
 		"parserMessages": {"s_MTBLS1.txt": []},
+		"studyDbMetadata": {"studyCategory": "other", "sampleTemplate": "minimum",  "templateVersion": "2.0"}
 	}
 		with data.metabolights.validation.v2.templates.assignmentFileHeaderTemplates as {"MS": [{
-			"version": "v1.0",
+			"version": "2.0",
 			"headers": [
 				{"columnPrefix": "", "columnStructure": "SINGLE_COLUMN", "columnHeader": "database_identifier", "defaultColumnIndex": 1},
 				{"columnPrefix": "", "columnStructure": "SINGLE_COLUMN", "columnHeader": "chemical_formula", "defaultColumnIndex": 2},
@@ -373,9 +381,10 @@ test_rule_m_100_100_002_01_no_violation_01 if {
 		},
 		"investigation": {"studies": [{"fileName": "s_MTBLS1.txt"}]},
 		"parserMessages": {"s_MTBLS1.txt": []},
+		"studyDbMetadata": {"studyCategory": "other", "sampleTemplate": "minimum",  "templateVersion": "2.0"}
 	}
 		with data.metabolights.validation.v2.templates.assignmentFileHeaderTemplates as {"MS": [{
-			"version": "v1.0",
+			"version": "2.0",
 			"headers": [
 				{"columnPrefix": "", "columnStructure": "SINGLE_COLUMN", "columnHeader": "database_identifier", "defaultColumnIndex": 1},
 				{"columnPrefix": "", "columnStructure": "ONTOLOGY_COLUMN", "columnHeader": "chemical_formula", "defaultColumnIndex": 2},
@@ -452,9 +461,10 @@ test_rule_m_100_100_002_01_violation_01 if {
 		},
 		"investigation": {"studies": [{"fileName": "s_MTBLS1.txt"}]},
 		"parserMessages": {"s_MTBLS1.txt": []},
+		"studyDbMetadata": {"studyCategory": "other", "sampleTemplate": "minimum",  "templateVersion": "2.0"}
 	}
 		with data.metabolights.validation.v2.templates.assignmentFileHeaderTemplates as {"MS": [{
-			"version": "v1.0",
+			"version": "2.0",
 			"headers": [
 				{"columnPrefix": "", "columnStructure": "SINGLE_COLUMN", "columnHeader": "database_identifier", "defaultColumnIndex": 1},
 				{"columnPrefix": "", "columnStructure": "ONTOLOGY_COLUMN", "columnHeader": "chemical_formula", "defaultColumnIndex": 2},
@@ -526,9 +536,10 @@ test_rule_m_100_100_002_01_violation_02 if {
 		},
 		"investigation": {"studies": [{"fileName": "s_MTBLS1.txt"}]},
 		"parserMessages": {"s_MTBLS1.txt": []},
+		"studyDbMetadata": {"studyCategory": "other", "sampleTemplate": "minimum",  "templateVersion": "2.0"}
 	}
 		with data.metabolights.validation.v2.templates.assignmentFileHeaderTemplates as {"MS": [{
-			"version": "v1.0",
+			"version": "2.0",
 			"headers": [
 				{"columnPrefix": "", "columnStructure": "SINGLE_COLUMN", "columnHeader": "database_identifier", "defaultColumnIndex": 1},
 				{"columnPrefix": "", "columnStructure": "ONTOLOGY_COLUMN", "columnHeader": "chemical_formula", "defaultColumnIndex": 2},
@@ -605,9 +616,10 @@ test_rule_m_100_100_002_01_violation_03 if {
 		},
 		"investigation": {"studies": [{"fileName": "s_MTBLS1.txt"}]},
 		"parserMessages": {"s_MTBLS1.txt": []},
+		"studyDbMetadata": {"studyCategory": "other", "sampleTemplate": "minimum",  "templateVersion": "2.0"}
 	}
 		with data.metabolights.validation.v2.templates.assignmentFileHeaderTemplates as {"MS": [{
-			"version": "v1.0",
+			"version": "2.0",
 			"headers": [
 				{"columnPrefix": "", "columnStructure": "SINGLE_COLUMN", "columnHeader": "database_identifier", "defaultColumnIndex": 1},
 				{"columnPrefix": "", "columnStructure": "ONTOLOGY_COLUMN", "columnHeader": "chemical_formula", "defaultColumnIndex": 2},
@@ -691,9 +703,10 @@ test_rule_m_100_100_002_02_no_violation_01 if {
 		},
 		"investigation": {"studies": [{"fileName": "s_MTBLS1.txt"}]},
 		"parserMessages": {"s_MTBLS1.txt": []},
+		"studyDbMetadata": {"studyCategory": "other", "sampleTemplate": "minimum",  "templateVersion": "2.0"}
 	}
 		with data.metabolights.validation.v2.templates.assignmentFileHeaderTemplates as {"MS": [{
-			"version": "v1.0",
+			"version": "2.0",
 			"headers": [
 				{"columnPrefix": "", "columnStructure": "SINGLE_COLUMN", "columnHeader": "database_identifier", "defaultColumnIndex": 1},
 				{"columnPrefix": "", "columnStructure": "ONTOLOGY_COLUMN", "columnHeader": "chemical_formula", "defaultColumnIndex": 2},
@@ -771,9 +784,10 @@ test_rule_m_100_100_002_02_no_violation_02 if {
 		},
 		"investigation": {"studies": [{"fileName": "s_MTBLS1.txt"}]},
 		"parserMessages": {"s_MTBLS1.txt": []},
+		"studyDbMetadata": {"studyCategory": "other", "sampleTemplate": "minimum",  "templateVersion": "2.0"}
 	}
 		with data.metabolights.validation.v2.templates.assignmentFileHeaderTemplates as {"MS": [{
-			"version": "v1.0",
+			"version": "2.0",
 			"headers": [
 				{"columnPrefix": "", "columnStructure": "SINGLE_COLUMN", "columnHeader": "database_identifier", "defaultColumnIndex": 1},
 				{"columnPrefix": "", "columnStructure": "ONTOLOGY_COLUMN", "columnHeader": "chemical_formula", "defaultColumnIndex": 2},
@@ -862,9 +876,10 @@ test_rule_m_100_100_002_02_violation_01 if {
 		},
 		"investigation": {"studies": [{"fileName": "s_MTBLS1.txt"}]},
 		"parserMessages": {"s_MTBLS1.txt": []},
+		"studyDbMetadata": {"studyCategory": "other", "sampleTemplate": "minimum",  "templateVersion": "2.0"}
 	}
 		with data.metabolights.validation.v2.templates.assignmentFileHeaderTemplates as {"MS": [{
-			"version": "v1.0",
+			"version": "2.0",
 			"headers": [
 				{"columnPrefix": "", "columnStructure": "SINGLE_COLUMN", "columnHeader": "database_identifier", "defaultColumnIndex": 1},
 				{"columnPrefix": "", "columnStructure": "ONTOLOGY_COLUMN", "columnHeader": "chemical_formula", "defaultColumnIndex": 2},
@@ -954,9 +969,10 @@ test_rule_m_100_100_002_02_violation_02 if {
 		},
 		"investigation": {"studies": [{"fileName": "s_MTBLS1.txt"}]},
 		"parserMessages": {"s_MTBLS1.txt": []},
+		"studyDbMetadata": {"studyCategory": "other", "sampleTemplate": "minimum",  "templateVersion": "2.0"}
 	}
 		with data.metabolights.validation.v2.templates.assignmentFileHeaderTemplates as {"MS": [{
-			"version": "v1.0",
+			"version": "2.0",
 			"headers": [
 				{"columnPrefix": "", "columnStructure": "SINGLE_COLUMN", "columnHeader": "database_identifier", "defaultColumnIndex": 1},
 				{"columnPrefix": "", "columnStructure": "ONTOLOGY_COLUMN", "columnHeader": "chemical_formula", "defaultColumnIndex": 2},
@@ -1043,9 +1059,10 @@ test_rule_m_100_100_002_02_violation_04 if {
 		},
 		"investigation": {"studies": [{"fileName": "s_MTBLS1.txt"}]},
 		"parserMessages": {"s_MTBLS1.txt": []},
+		"studyDbMetadata": {"studyCategory": "other", "sampleTemplate": "minimum",  "templateVersion": "2.0"}
 	}
 		with data.metabolights.validation.v2.templates.assignmentFileHeaderTemplates as {"MS": [{
-			"version": "v1.0",
+			"version": "2.0",
 			"headers": [
 				{"columnPrefix": "", "columnStructure": "SINGLE_COLUMN", "columnHeader": "database_identifier", "defaultColumnIndex": 1},
 				{"columnPrefix": "", "columnStructure": "ONTOLOGY_COLUMN", "columnHeader": "chemical_formula", "defaultColumnIndex": 2},
@@ -1101,6 +1118,7 @@ test_rule_m_100_100_004_01_no_violation_01 if {
 		}}},
 		"investigation": {"studies": [{"fileName": "s_MTBLS1.txt"}]},
 		"parserMessages": {"s_MTBLS1.txt": []},
+		"studyDbMetadata": {"studyCategory": "other", "sampleTemplate": "minimum",  "templateVersion": "2.0"}
 	}
 
 	count(result) == 0
@@ -1145,6 +1163,7 @@ test_rule_m_100_100_004_01_violation_01 if {
 		}}},
 		"investigation": {"studies": [{"fileName": "s_MTBLS1.txt"}]},
 		"parserMessages": {"s_MTBLS1.txt": []},
+		"studyDbMetadata": {"studyCategory": "other", "sampleTemplate": "minimum",  "templateVersion": "2.0"}
 	}
 	count(result) == 1
 }

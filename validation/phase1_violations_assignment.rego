@@ -26,7 +26,7 @@ rule_m_100_100_001_01 contains result if {
 	headers := {x | some j; x := input.metaboliteAssignments[file_name].table.headers[j].columnHeader}
 	defaults := {x |
 		some template in data.metabolights.validation.v2.templates.assignmentFileHeaderTemplates[template_type]
-		template.version == "v1.0"
+		template.version == data.metabolights.validation.v2.phase1.definitions.STUDY_TEMPLATE_VERSION
 		some header in template.headers
 		x := header.columnHeader
 	}
@@ -51,7 +51,7 @@ rule_m_100_100_001_02 contains result if {
 
 	template_type = input.metaboliteAssignments[file_name].assayTechnique.mainTechnique
 	some template in data.metabolights.validation.v2.templates.assignmentFileHeaderTemplates[template_type]
-	template.version == "v1.0"
+	template.version == data.metabolights.validation.v2.phase1.definitions.STUDY_TEMPLATE_VERSION
 	default_headers := { header.columnHeader: idx |
 		some idx, header in template.headers
 	}
@@ -64,7 +64,6 @@ rule_m_100_100_001_02 contains result if {
 		
 	some columnHeader, idx in default_headers
 		count(maf_headers[idx].columnHeader) > 0
-		# print([columnHeader, maf_headers[idx].columnHeader])
 		columnHeader != maf_headers[idx].columnHeader
 
 		x := maf_headers[idx].columnIndex + 1
@@ -112,7 +111,7 @@ rule_m_100_100_001_04 contains result if {
 	some file_name, _ in input.metaboliteAssignments
 	template_type = input.metaboliteAssignments[file_name].assayTechnique.mainTechnique
 	some template in data.metabolights.validation.v2.templates.assignmentFileHeaderTemplates[template_type]
-	template.version == "v1.0"
+	template.version == data.metabolights.validation.v2.phase1.definitions.STUDY_TEMPLATE_VERSION
 	header_names := {header.columnHeader: same_headers |
 		some header in template.headers
 		not startswith(header.columnHeader, "Comment[")
@@ -214,7 +213,6 @@ rule_m_100_100_002_02 contains result if {
 		some sample_name in assay_names
 		not sample_name in assignment_headers
 	}
-	# print(values)
 	source_file := file_name
 	result := f.format_with_file_description_and_values(rego.metadata.rule(), source_file, "Missing column(s) in assignment file" ,values)
 }

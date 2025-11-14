@@ -60,8 +60,8 @@ rule_s_100_100_001_03 contains result if {
 	headers := {header.columnHeader | some header in input.samples[file_name].table.headers}
 	def := data.metabolights.validation.v2.phase1.definitions
 	values := {default_header.columnHeader |
-		some default_header in def._DEFAULT_SAMPLE_FILE_HEADERS
-		default_header.required == true
+		some name, default_header in def._DEFAULT_SAMPLE_FILE_HEADERS
+		# default_header.required == true
 		not default_header.columnHeader in headers
 	}
 	count(values) > 0
@@ -184,12 +184,13 @@ rule_s_100_100_001_08 contains result if {
 		header.columnHeader in def._DEFAULT_SAMPLE_HEADER_NAMES
 		header.columnCategory != "Comment"
 	]
-	default_headers := [header.columnHeader | some template in templates.sampleFileHeaderTemplates; template.version == "v1.0"; some header in template.headers]
+	
+	default_headers := def.SELECTED_STUDY_SAMPLE_FILE_TEMPLATE_HEADERS
 	matches := [sprintf("[Column Index: %v: '%v' is expected but found '%v' ]", [x1, x2, x3]) |
 		some j, header in headers
-		header.columnHeader != default_headers[j]
+		header.columnHeader != default_headers[j].columnHeader
 		x1 := header.columnIndex + 1
-		x2 := default_headers[j]
+		x2 := default_headers[j].columnHeader
 		x3 := header.columnHeader
 	]
 	count(matches) > 0
@@ -277,16 +278,19 @@ rule_s_100_100_001_10 contains result if {
 rule_s_100_100_001_11 contains result if {
 	templates := data.metabolights.validation.v2.templates
 	some file_name, _ in input.samples
+	
 	headers := {header |
 		some header in input.samples[file_name].table.headers
-		header.columnHeader in data.metabolights.validation.v2.phase1.definitions._DEFAULT_SAMPLE_HEADER_NAMES
+		data.metabolights.validation.v2.phase1.definitions._DEFAULT_SAMPLE_FILE_HEADERS[header.columnHeader]
 		not startswith(header.columnHeader, "Comment[")
 	}
-	default_headers := {header.columnHeader: header | some template in templates.sampleFileHeaderTemplates; template.version == "v1.0"; some header in template.headers}
+	default_headers := data.metabolights.validation.v2.phase1.definitions._DEFAULT_SAMPLE_FILE_HEADERS
 	matches := [sprintf("[Column Index: %v: structure of '%v' column is '%v', but expected structure is '%v']", [x1, x2, x3, x4]) |
-		some j, header in headers
+		
+		some header in headers
 		default_headers[header.columnHeader]
 		header.columnStructure != default_headers[header.columnHeader].columnStructure
+		default_headers[header.columnHeader]
 		x1 := header.columnIndex + 1
 		x2 := default_headers[header.columnHeader].columnHeader
 		x3 := header.columnStructure

@@ -1,5 +1,17 @@
 {
     "debug": 0,
     "violatedValueListMaxLength": 10,
-    "investigationFileName": "i_Investigation.txt"
+    "investigationFileName": "i_Investigation.txt",
+    "defaultStudyTemplateVersion": "1.0",
+    "defaultSampleTemplate": "minimum",
+    "defaultStudyCategory": "other",
+    "studyCategories": {
+        "": "other",
+        "0": "other",
+        "1": "ms-mhd-enabled",
+        "2": "ms-ms-imaging",
+        "3": "ms-other",
+        "5": "nmr",
+        "6": "ms-mhd-legacy"
+    }
 }

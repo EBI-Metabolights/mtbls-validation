@@ -335,6 +335,7 @@ test_rule_i_100_310_004_03_no_violation_01 if {
 			}]},
 		},
 		"investigationFilePath": "i_Investigation.txt",
+		"studyDbMetadata": {"studyCategory": "other", "sampleTemplate": "minimum",  "templateVersion": "2.0"}
 	}
 		with data.metabolights.validation.v2.controlLists.investigationFile["Study Design Type"].ontologies as ["EFO"]
 
@@ -386,6 +387,7 @@ test_rule_i_100_310_004_03_no_violation_02 if {
 			]},
 		},
 		"investigationFilePath": "i_Investigation.txt",
+		"studyDbMetadata": {"studyCategory": "other", "sampleTemplate": "minimum",  "templateVersion": "2.0"}
 	}
 		with data.metabolights.validation.v2.phase1.definitions.CL_STUDY_DESIGN_DESCRIPTOR_REF_SOURCES as ["EFO", "MTBLS", "NCBI"]
 
@@ -419,6 +421,7 @@ test_rule_i_100_310_004_03_violation_01 if {
 			]},
 		},
 		"investigationFilePath": "i_Investigation.txt",
+		"studyDbMetadata": {"studyCategory": "other", "sampleTemplate": "minimum",  "templateVersion": "2.0"}
 	}
 		with data.metabolights.validation.v2.phase1.definitions.CL_STUDY_DESIGN_DESCRIPTOR_REF_SOURCES as ["EFO", "NCBI"]
 
@@ -464,6 +467,7 @@ test_rule_i_100_310_004_03_violation_02 if {
 			]},
 		},
 		"investigationFilePath": "i_Investigation.txt",
+		"studyDbMetadata": {"studyCategory": "other", "sampleTemplate": "minimum",  "templateVersion": "2.0"}
 	}
 		with data.metabolights.validation.v2.phase1.definitions.CL_STUDY_DESIGN_DESCRIPTOR_REF_SOURCES as ["EFO", "CHEBI"]
 	count(result) == 2
