@@ -1,0 +1,1132 @@
+{
+    "MSImaging": [
+        {
+            "version": "1.0",
+            "description": "Mass spectrometry",
+            "protocols": [
+                "Sample collection",
+                "Preparation",
+                "Mass spectrometry",
+                "Histology",
+                "Data transformation",
+                "Metabolite identification"
+            ],
+            "protocolDefinitions": {
+                "Sample collection": {
+                    "name": "Sample collection",
+                    "description": "A procedure whereby biological samples for an experiment are sourced.",
+                    "type": {
+                        "term": "sample collection protocol",
+                        "termSourceRef": "EFO",
+                        "termAccessionNumber": "http://www.ebi.ac.uk/efo/EFO_0005518"
+                    },
+                    "typeCurie": "EFO:0005518",
+                    "parameters": [],
+                    "parameterDefinitions": {}
+                },
+                "Extraction": {
+                    "name": "Preparation",
+                    "description": "",
+                    "type": {
+                        "term": "Preparation",
+                        "termSourceRef": "",
+                        "termAccessionNumber": ""
+                    },
+                    "typeCurie": "",
+                    "parameters": [
+                        "Sample mounting",
+                        "Sample preservation",
+                        "Tissue modification",
+                        "Sectioning instrument",
+                        "Section thickness",
+                        "Matrix",
+                        "Matrix application"
+                    ],
+                    "parameterDefinitions": {
+                        "Sample mounting": {
+                            "definition": "Sample mounting",
+                            "type": {
+                                "term": "Sample mounting",
+                                "termSourceRef": "",
+                                "termAccessionNumber": ""
+                            },
+                            "typeCurie": "",
+                            "format": "Text"
+                        },
+                        "Sample preservation": {
+                            "definition": "Sample preservation",
+                            "type": {
+                                "term": "Sample preservation",
+                                "termSourceRef": "",
+                                "termAccessionNumber": ""
+                            },
+                            "typeCurie": "",
+                            "format": "Text"
+                        },
+                        "Tissue modification": {
+                            "definition": "Tissue modification",
+                            "type": {
+                                "term": "Tissue modification",
+                                "termSourceRef": "",
+                                "termAccessionNumber": ""
+                            },
+                            "typeCurie": "",
+                            "format": "Text"
+                        },
+                        "Sectioning instrument": {
+                            "definition": "Sectioning instrument",
+                            "type": {
+                                "term": "Sectioning instrument",
+                                "termSourceRef": "",
+                                "termAccessionNumber": ""
+                            },
+                            "typeCurie": "",
+                            "format": "Text"
+                        },
+                        "Section thickness": {
+                            "definition": "Section thickness",
+                            "type": {
+                                "term": "Section thickness",
+                                "termSourceRef": "",
+                                "termAccessionNumber": ""
+                            },
+                            "typeCurie": "",
+                            "format": "Numeric"
+                        },
+                        "Matrix": {
+                            "definition": "Matrix",
+                            "type": {
+                                "term": "Matrix",
+                                "termSourceRef": "",
+                                "termAccessionNumber": ""
+                            },
+                            "typeCurie": "",
+                            "format": "Text"
+                        },
+                        "Matrix application": {
+                            "definition": "Matrix application",
+                            "type": {
+                                "term": "Matrix application",
+                                "termSourceRef": "",
+                                "termAccessionNumber": ""
+                            },
+                            "typeCurie": "",
+                            "format": "Text"
+                        }
+                    }
+                },
+                "Mass spectrometry": {
+                    "name": "Mass spectrometry",
+                    "description": "Spectrometry where the sample is converted into gaseous ions which are characterised by their mass-to-charge ratio and relative abundance.",
+                    "type": {
+                        "term": "mass spectrometry",
+                        "termSourceRef": "CHMO",
+                        "termAccessionNumber": "http://purl.obolibrary.org/obo/CHMO_0000470"
+                    },
+                    "typeCurie": "CHMO:0000470",
+                    "parameters": [
+                        "Scan polarity",
+                        "Scan m/z range",
+                        "Instrument",
+                        "Instrument manufacturer",
+                        "Ion source",
+                        "Mass analyzer",
+                        "Solvent",
+                        "Target material",
+                        "Spatial resolution",
+                        "Pixel size x",
+                        "Pixel size y",
+                        "Max count of pixel x",
+                        "Max count of pixel y",
+                        "Max dimension x",
+                        "Max dimension y",
+                        "Inlet type",
+                        "Detector",
+                        "Detector mode",
+                        "Resolving power",
+                        "Resolving power m/z",
+                        "Native spectrum identifier format",
+                        "Data file content",
+                        "Spectrum representation",
+                        "Raw data file format",
+                        "Instrument software",
+                        "Instrument software version",
+                        "Line scan direction",
+                        "Line scan sequence",
+                        "Scan pattern",
+                        "Scan type",
+                        "Number of scans"
+                    ],
+                    "parameterDefinitions": {
+                        "Scan polarity": {
+                            "definition": "Ionization polarity is a device configuration of a ionization source whether the ions charge is negative or positive or alternating.",
+                            "type": {
+                                "term": "ionization polarity",
+                                "termSourceRef": "AFQ",
+                                "termAccessionNumber": "http://purl.allotrope.org/ontologies/quality#AFQ_0000149"
+                            },
+                            "typeCurie": "CHMO:0000470",
+                            "format": "Text"
+                        },
+                        "Scan m/z range": {
+                            "definition": "",
+                            "type": {
+                                "term": "Scan m/z range",
+                                "termSourceRef": "",
+                                "termAccessionNumber": ""
+                            },
+                            "typeCurie": "",
+                            "format": "Text"
+                        },
+                        "Instrument": {
+                            "definition": "",
+                            "type": {
+                                "term": "Instrument",
+                                "termSourceRef": "",
+                                "termAccessionNumber": ""
+                            },
+                            "typeCurie": "",
+                            "format": "Text"
+                        },
+                        "Instrument manufacturer": {
+                            "definition": "",
+                            "type": {
+                                "term": "Instrument manufacturer",
+                                "termSourceRef": "",
+                                "termAccessionNumber": ""
+                            },
+                            "typeCurie": "",
+                            "format": "Text"
+                        },
+                        "Ion source": {
+                            "definition": "The method by which gas phase ions are generated from the sample",
+                            "type": {
+                                "term": "ionization type",
+                                "termSourceRef": "MS",
+                                "termAccessionNumber": "http://purl.obolibrary.org/obo/MS_1000008"
+                            },
+                            "typeCurie": "MS:1000008",
+                            "format": "Text"
+                        },
+                        "Mass analyzer": {
+                            "definition": "Mass analyzer separates the ions according to their mass-to-charge ratio.",
+                            "type": {
+                                "term": "mass analyzer type",
+                                "termSourceRef": "MS",
+                                "termAccessionNumber": "http://purl.obolibrary.org/obo/MS_1000443"
+                            },
+                            "typeCurie": "MS:1000443",
+                            "format": "Text"
+                        },
+                        "Solvent": {
+                            "definition": "",
+                            "type": {
+                                "term": "Solvent",
+                                "termSourceRef": "",
+                                "termAccessionNumber": ""
+                            },
+                            "typeCurie": "",
+                            "format": "Text"
+                        },
+                        "Target material": {
+                            "definition": "",
+                            "type": {
+                                "term": "Target material",
+                                "termSourceRef": "",
+                                "termAccessionNumber": ""
+                            },
+                            "typeCurie": "",
+                            "format": "Text"
+                        },
+                        "Spatial resolution": {
+                            "definition": "",
+                            "type": {
+                                "term": "Spatial resolution",
+                                "termSourceRef": "",
+                                "termAccessionNumber": ""
+                            },
+                            "typeCurie": "",
+                            "format": "Numeric"
+                        },
+                        "Pixel size x": {
+                            "definition": "",
+                            "type": {
+                                "term": "Pixel size x",
+                                "termSourceRef": "",
+                                "termAccessionNumber": ""
+                            },
+                            "typeCurie": "",
+                            "format": "Numeric"
+                        },
+                        "Pixel size y": {
+                            "definition": "",
+                            "type": {
+                                "term": "Pixel size y",
+                                "termSourceRef": "",
+                                "termAccessionNumber": ""
+                            },
+                            "typeCurie": "",
+                            "format": "Numeric"
+                        },
+                        "Max count of pixel x": {
+                            "definition": "",
+                            "type": {
+                                "term": "Max count of pixel x",
+                                "termSourceRef": "",
+                                "termAccessionNumber": ""
+                            },
+                            "typeCurie": "",
+                            "format": "Text"
+                        },
+                        "Max count of pixel y": {
+                            "definition": "",
+                            "type": {
+                                "term": "Max count of pixel y",
+                                "termSourceRef": "",
+                                "termAccessionNumber": ""
+                            },
+                            "typeCurie": "",
+                            "format": "Text"
+                        },
+                        "Max dimension x": {
+                            "definition": "",
+                            "type": {
+                                "term": "Max dimension x",
+                                "termSourceRef": "",
+                                "termAccessionNumber": ""
+                            },
+                            "typeCurie": "",
+                            "format": "Numeric"
+                        },
+                        "Max dimension y": {
+                            "definition": "",
+                            "type": {
+                                "term": "Max dimension y",
+                                "termSourceRef": "",
+                                "termAccessionNumber": ""
+                            },
+                            "typeCurie": "",
+                            "format": "Numeric"
+                        },
+                        "Inlet type": {
+                            "definition": "",
+                            "type": {
+                                "term": "Inlet type",
+                                "termSourceRef": "",
+                                "termAccessionNumber": ""
+                            },
+                            "typeCurie": "",
+                            "format": "Text"
+                        },
+                        "Detector": {
+                            "definition": "",
+                            "type": {
+                                "term": "Detector",
+                                "termSourceRef": "",
+                                "termAccessionNumber": ""
+                            },
+                            "typeCurie": "",
+                            "format": "Text"
+                        },
+                        "Detector mode": {
+                            "definition": "",
+                            "type": {
+                                "term": "Detector mode",
+                                "termSourceRef": "",
+                                "termAccessionNumber": ""
+                            },
+                            "typeCurie": "",
+                            "format": "Text"
+                        },
+                        "Resolving power": {
+                            "definition": "",
+                            "type": {
+                                "term": "Resolving power",
+                                "termSourceRef": "",
+                                "termAccessionNumber": ""
+                            },
+                            "typeCurie": "",
+                            "format": "Text"
+                        },
+                        "Resolving power m/z": {
+                            "definition": "",
+                            "type": {
+                                "term": "Resolving power m/z",
+                                "termSourceRef": "",
+                                "termAccessionNumber": ""
+                            },
+                            "typeCurie": "",
+                            "format": "Text"
+                        },
+                        "Native spectrum identifier format": {
+                            "definition": "",
+                            "type": {
+                                "term": "Native spectrum identifier format",
+                                "termSourceRef": "",
+                                "termAccessionNumber": ""
+                            },
+                            "typeCurie": "",
+                            "format": "Text"
+                        },
+                        "Data file content": {
+                            "definition": "",
+                            "type": {
+                                "term": "Data file content",
+                                "termSourceRef": "",
+                                "termAccessionNumber": ""
+                            },
+                            "typeCurie": "",
+                            "format": "Text"
+                        },
+                        "Spectrum representation": {
+                            "definition": "",
+                            "type": {
+                                "term": "Spectrum representation",
+                                "termSourceRef": "",
+                                "termAccessionNumber": ""
+                            },
+                            "typeCurie": "",
+                            "format": "Text"
+                        },
+                        "Raw data file format": {
+                            "definition": "",
+                            "type": {
+                                "term": "Raw data file format",
+                                "termSourceRef": "",
+                                "termAccessionNumber": ""
+                            },
+                            "typeCurie": "",
+                            "format": "Text"
+                        },
+                        "Instrument software": {
+                            "definition": "",
+                            "type": {
+                                "term": "Instrument software",
+                                "termSourceRef": "",
+                                "termAccessionNumber": ""
+                            },
+                            "typeCurie": "",
+                            "format": "Text"
+                        },
+                        "Instrument software version": {
+                            "definition": "",
+                            "type": {
+                                "term": "Instrument software version",
+                                "termSourceRef": "",
+                                "termAccessionNumber": ""
+                            },
+                            "typeCurie": "",
+                            "format": "Text"
+                        },
+                        "Line scan direction": {
+                            "definition": "",
+                            "type": {
+                                "term": "Line scan direction",
+                                "termSourceRef": "",
+                                "termAccessionNumber": ""
+                            },
+                            "typeCurie": "",
+                            "format": "Text"
+                        },
+                        "Line scan sequence": {
+                            "definition": "",
+                            "type": {
+                                "term": "Line scan sequence",
+                                "termSourceRef": "",
+                                "termAccessionNumber": ""
+                            },
+                            "typeCurie": "",
+                            "format": "Text"
+                        },
+                        "Scan pattern": {
+                            "definition": "",
+                            "type": {
+                                "term": "Scan pattern",
+                                "termSourceRef": "",
+                                "termAccessionNumber": ""
+                            },
+                            "typeCurie": "",
+                            "format": "Text"
+                        },
+                        "Scan type": {
+                            "definition": "",
+                            "type": {
+                                "term": "Scan type",
+                                "termSourceRef": "",
+                                "termAccessionNumber": ""
+                            },
+                            "typeCurie": "",
+                            "format": "Text"
+                        },
+                        "Number of scans": {
+                            "definition": "",
+                            "type": {
+                                "term": "Number of scans",
+                                "termSourceRef": "",
+                                "termAccessionNumber": ""
+                            },
+                            "typeCurie": "",
+                            "format": "Text"
+                        }
+                    }
+                },
+                "Histology": {
+                    "name": "",
+                    "description": "",
+                    "type": {
+                        "term": "Histology",
+                        "termSourceRef": "",
+                        "termAccessionNumber": ""
+                    },
+                    "typeCurie": "",
+                    "parameters": [
+                        "Stain",
+                        "High-res image",
+                        "Low-res image"
+                    ],
+                    "parameterDefinitions": {
+                        "Stain": {
+                            "definition": "",
+                            "type": {
+                                "term": "Stain",
+                                "termSourceRef": "",
+                                "termAccessionNumber": ""
+                            },
+                            "typeCurie": "",
+                            "format": "Text"
+                        },
+                        "High-res image": {
+                            "definition": "",
+                            "type": {
+                                "term": "High-res image",
+                                "termSourceRef": "",
+                                "termAccessionNumber": ""
+                            },
+                            "typeCurie": "",
+                            "format": "Text"
+                        },
+                        "Low-res image": {
+                            "definition": "",
+                            "type": {
+                                "term": "Low-res image",
+                                "termSourceRef": "",
+                                "termAccessionNumber": ""
+                            },
+                            "typeCurie": "",
+                            "format": "Text"
+                        }
+                    }
+                },
+                "Data transformation": {
+                    "name": "Data transformation",
+                    "description": "A planned process that produces output data from raw data.",
+                    "type": {
+                        "term": "data transformation",
+                        "termSourceRef": "OBI",
+                        "termAccessionNumber": "http://purl.obolibrary.org/obo/OBI_0200000"
+                    },
+                    "typeCurie": "OBI:0200000",
+                    "parameters": [],
+                    "parameterDefinitions": {
+                        "Data Transformation software": {
+                            "definition": "",
+                            "type": {
+                                "term": "Data Transformation software",
+                                "termSourceRef": "",
+                                "termAccessionNumber": ""
+                            },
+                            "typeCurie": "",
+                            "format": "Ontology"
+                        },
+                        "Data Transformation software version": {
+                            "definition": "",
+                            "type": {
+                                "term": "Data Transformation software",
+                                "termSourceRef": "",
+                                "termAccessionNumber": ""
+                            },
+                            "typeCurie": "",
+                            "format": "Text"
+                        }
+                    }
+                },
+                "Metabolite identification": {
+                    "name": "Metabolite identification",
+                    "description": "Identification of the breakdown products of a substance, either through chemical instability or the actions of enzymes within the body.",
+                    "type": {
+                        "term": "metabolite identification",
+                        "termSourceRef": "MI",
+                        "termAccessionNumber": "http://purl.obolibrary.org/obo/MI_2131"
+                    },
+                    "typeCurie": "MI:2131",
+                    "parameters": [],
+                    "parameterDefinitions": {}
+                }
+            }
+        },
+        {
+            "version": "2.0",
+            "description": "Mass spectrometry",
+            "protocols": [
+                "Sample collection",
+                "Preparation",
+                "Mass spectrometry",
+                "Histology",
+                "Data transformation",
+                "Metabolite identification"
+            ],
+            "protocolDefinitions": {
+                "Sample collection": {
+                    "name": "Sample collection",
+                    "description": "A procedure whereby biological samples for an experiment are sourced.",
+                    "type": {
+                        "term": "sample collection protocol",
+                        "termSourceRef": "EFO",
+                        "termAccessionNumber": "http://www.ebi.ac.uk/efo/EFO_0005518"
+                    },
+                    "typeCurie": "EFO:0005518",
+                    "parameters": [],
+                    "parameterDefinitions": {}
+                },
+                "Extraction": {
+                    "name": "Preparation",
+                    "description": "",
+                    "type": {
+                        "term": "Preparation",
+                        "termSourceRef": "",
+                        "termAccessionNumber": ""
+                    },
+                    "typeCurie": "",
+                    "parameters": [
+                        "Sample mounting",
+                        "Sample preservation",
+                        "Tissue modification",
+                        "Sectioning instrument",
+                        "Section thickness",
+                        "Matrix",
+                        "Matrix application"
+                    ],
+                    "parameterDefinitions": {
+                        "Sample mounting": {
+                            "definition": "Sample mounting",
+                            "type": {
+                                "term": "Sample mounting",
+                                "termSourceRef": "",
+                                "termAccessionNumber": ""
+                            },
+                            "typeCurie": "",
+                            "format": "Text"
+                        },
+                        "Sample preservation": {
+                            "definition": "Sample preservation",
+                            "type": {
+                                "term": "Sample preservation",
+                                "termSourceRef": "",
+                                "termAccessionNumber": ""
+                            },
+                            "typeCurie": "",
+                            "format": "Text"
+                        },
+                        "Tissue modification": {
+                            "definition": "Tissue modification",
+                            "type": {
+                                "term": "Tissue modification",
+                                "termSourceRef": "",
+                                "termAccessionNumber": ""
+                            },
+                            "typeCurie": "",
+                            "format": "Text"
+                        },
+                        "Sectioning instrument": {
+                            "definition": "Sectioning instrument",
+                            "type": {
+                                "term": "Sectioning instrument",
+                                "termSourceRef": "",
+                                "termAccessionNumber": ""
+                            },
+                            "typeCurie": "",
+                            "format": "Text"
+                        },
+                        "Section thickness": {
+                            "definition": "Section thickness",
+                            "type": {
+                                "term": "Section thickness",
+                                "termSourceRef": "",
+                                "termAccessionNumber": ""
+                            },
+                            "typeCurie": "",
+                            "format": "Numeric"
+                        },
+                        "Matrix": {
+                            "definition": "Matrix",
+                            "type": {
+                                "term": "Matrix",
+                                "termSourceRef": "",
+                                "termAccessionNumber": ""
+                            },
+                            "typeCurie": "",
+                            "format": "Text"
+                        },
+                        "Matrix application": {
+                            "definition": "Matrix application",
+                            "type": {
+                                "term": "Matrix application",
+                                "termSourceRef": "",
+                                "termAccessionNumber": ""
+                            },
+                            "typeCurie": "",
+                            "format": "Text"
+                        }
+                    }
+                },
+                "Mass spectrometry": {
+                    "name": "Mass spectrometry",
+                    "description": "Spectrometry where the sample is converted into gaseous ions which are characterised by their mass-to-charge ratio and relative abundance.",
+                    "type": {
+                        "term": "mass spectrometry",
+                        "termSourceRef": "CHMO",
+                        "termAccessionNumber": "http://purl.obolibrary.org/obo/CHMO_0000470"
+                    },
+                    "typeCurie": "CHMO:0000470",
+                    "parameters": [
+                        "Scan polarity",
+                        "Scan m/z range",
+                        "Instrument",
+                        "Instrument manufacturer",
+                        "Ion source",
+                        "Mass analyzer",
+                        "Solvent",
+                        "Target material",
+                        "Spatial resolution",
+                        "Pixel size x",
+                        "Pixel size y",
+                        "Max count of pixel x",
+                        "Max count of pixel y",
+                        "Max dimension x",
+                        "Max dimension y",
+                        "Inlet type",
+                        "Detector",
+                        "Detector mode",
+                        "Resolving power",
+                        "Resolving power m/z",
+                        "Native spectrum identifier format",
+                        "Data file content",
+                        "Spectrum representation",
+                        "Raw data file format",
+                        "Instrument software",
+                        "Instrument software version",
+                        "Line scan direction",
+                        "Line scan sequence",
+                        "Scan pattern",
+                        "Scan type",
+                        "Number of scans"
+                    ],
+                    "parameterDefinitions": {
+                        "Scan polarity": {
+                            "definition": "Ionization polarity is a device configuration of a ionization source whether the ions charge is negative or positive or alternating.",
+                            "type": {
+                                "term": "ionization polarity",
+                                "termSourceRef": "AFQ",
+                                "termAccessionNumber": "http://purl.allotrope.org/ontologies/quality#AFQ_0000149"
+                            },
+                            "typeCurie": "CHMO:0000470",
+                            "format": "Text"
+                        },
+                        "Scan m/z range": {
+                            "definition": "",
+                            "type": {
+                                "term": "Scan m/z range",
+                                "termSourceRef": "",
+                                "termAccessionNumber": ""
+                            },
+                            "typeCurie": "",
+                            "format": "Text"
+                        },
+                        "Instrument": {
+                            "definition": "",
+                            "type": {
+                                "term": "Instrument",
+                                "termSourceRef": "",
+                                "termAccessionNumber": ""
+                            },
+                            "typeCurie": "",
+                            "format": "Text"
+                        },
+                        "Instrument manufacturer": {
+                            "definition": "",
+                            "type": {
+                                "term": "Instrument manufacturer",
+                                "termSourceRef": "",
+                                "termAccessionNumber": ""
+                            },
+                            "typeCurie": "",
+                            "format": "Text"
+                        },
+                        "Ion source": {
+                            "definition": "The method by which gas phase ions are generated from the sample",
+                            "type": {
+                                "term": "ionization type",
+                                "termSourceRef": "MS",
+                                "termAccessionNumber": "http://purl.obolibrary.org/obo/MS_1000008"
+                            },
+                            "typeCurie": "MS:1000008",
+                            "format": "Text"
+                        },
+                        "Mass analyzer": {
+                            "definition": "Mass analyzer separates the ions according to their mass-to-charge ratio.",
+                            "type": {
+                                "term": "mass analyzer type",
+                                "termSourceRef": "MS",
+                                "termAccessionNumber": "http://purl.obolibrary.org/obo/MS_1000443"
+                            },
+                            "typeCurie": "MS:1000443",
+                            "format": "Text"
+                        },
+                        "Solvent": {
+                            "definition": "",
+                            "type": {
+                                "term": "Solvent",
+                                "termSourceRef": "",
+                                "termAccessionNumber": ""
+                            },
+                            "typeCurie": "",
+                            "format": "Text"
+                        },
+                        "Target material": {
+                            "definition": "",
+                            "type": {
+                                "term": "Target material",
+                                "termSourceRef": "",
+                                "termAccessionNumber": ""
+                            },
+                            "typeCurie": "",
+                            "format": "Text"
+                        },
+                        "Spatial resolution": {
+                            "definition": "",
+                            "type": {
+                                "term": "Spatial resolution",
+                                "termSourceRef": "",
+                                "termAccessionNumber": ""
+                            },
+                            "typeCurie": "",
+                            "format": "Numeric"
+                        },
+                        "Pixel size x": {
+                            "definition": "",
+                            "type": {
+                                "term": "Pixel size x",
+                                "termSourceRef": "",
+                                "termAccessionNumber": ""
+                            },
+                            "typeCurie": "",
+                            "format": "Numeric"
+                        },
+                        "Pixel size y": {
+                            "definition": "",
+                            "type": {
+                                "term": "Pixel size y",
+                                "termSourceRef": "",
+                                "termAccessionNumber": ""
+                            },
+                            "typeCurie": "",
+                            "format": "Numeric"
+                        },
+                        "Max count of pixel x": {
+                            "definition": "",
+                            "type": {
+                                "term": "Max count of pixel x",
+                                "termSourceRef": "",
+                                "termAccessionNumber": ""
+                            },
+                            "typeCurie": "",
+                            "format": "Text"
+                        },
+                        "Max count of pixel y": {
+                            "definition": "",
+                            "type": {
+                                "term": "Max count of pixel y",
+                                "termSourceRef": "",
+                                "termAccessionNumber": ""
+                            },
+                            "typeCurie": "",
+                            "format": "Text"
+                        },
+                        "Max dimension x": {
+                            "definition": "",
+                            "type": {
+                                "term": "Max dimension x",
+                                "termSourceRef": "",
+                                "termAccessionNumber": ""
+                            },
+                            "typeCurie": "",
+                            "format": "Numeric"
+                        },
+                        "Max dimension y": {
+                            "definition": "",
+                            "type": {
+                                "term": "Max dimension y",
+                                "termSourceRef": "",
+                                "termAccessionNumber": ""
+                            },
+                            "typeCurie": "",
+                            "format": "Numeric"
+                        },
+                        "Inlet type": {
+                            "definition": "",
+                            "type": {
+                                "term": "Inlet type",
+                                "termSourceRef": "",
+                                "termAccessionNumber": ""
+                            },
+                            "typeCurie": "",
+                            "format": "Text"
+                        },
+                        "Detector": {
+                            "definition": "",
+                            "type": {
+                                "term": "Detector",
+                                "termSourceRef": "",
+                                "termAccessionNumber": ""
+                            },
+                            "typeCurie": "",
+                            "format": "Text"
+                        },
+                        "Detector mode": {
+                            "definition": "",
+                            "type": {
+                                "term": "Detector mode",
+                                "termSourceRef": "",
+                                "termAccessionNumber": ""
+                            },
+                            "typeCurie": "",
+                            "format": "Text"
+                        },
+                        "Resolving power": {
+                            "definition": "",
+                            "type": {
+                                "term": "Resolving power",
+                                "termSourceRef": "",
+                                "termAccessionNumber": ""
+                            },
+                            "typeCurie": "",
+                            "format": "Text"
+                        },
+                        "Resolving power m/z": {
+                            "definition": "",
+                            "type": {
+                                "term": "Resolving power m/z",
+                                "termSourceRef": "",
+                                "termAccessionNumber": ""
+                            },
+                            "typeCurie": "",
+                            "format": "Text"
+                        },
+                        "Native spectrum identifier format": {
+                            "definition": "",
+                            "type": {
+                                "term": "Native spectrum identifier format",
+                                "termSourceRef": "",
+                                "termAccessionNumber": ""
+                            },
+                            "typeCurie": "",
+                            "format": "Text"
+                        },
+                        "Data file content": {
+                            "definition": "",
+                            "type": {
+                                "term": "Data file content",
+                                "termSourceRef": "",
+                                "termAccessionNumber": ""
+                            },
+                            "typeCurie": "",
+                            "format": "Text"
+                        },
+                        "Spectrum representation": {
+                            "definition": "",
+                            "type": {
+                                "term": "Spectrum representation",
+                                "termSourceRef": "",
+                                "termAccessionNumber": ""
+                            },
+                            "typeCurie": "",
+                            "format": "Text"
+                        },
+                        "Raw data file format": {
+                            "definition": "",
+                            "type": {
+                                "term": "Raw data file format",
+                                "termSourceRef": "",
+                                "termAccessionNumber": ""
+                            },
+                            "typeCurie": "",
+                            "format": "Text"
+                        },
+                        "Instrument software": {
+                            "definition": "",
+                            "type": {
+                                "term": "Instrument software",
+                                "termSourceRef": "",
+                                "termAccessionNumber": ""
+                            },
+                            "typeCurie": "",
+                            "format": "Text"
+                        },
+                        "Instrument software version": {
+                            "definition": "",
+                            "type": {
+                                "term": "Instrument software version",
+                                "termSourceRef": "",
+                                "termAccessionNumber": ""
+                            },
+                            "typeCurie": "",
+                            "format": "Text"
+                        },
+                        "Line scan direction": {
+                            "definition": "",
+                            "type": {
+                                "term": "Line scan direction",
+                                "termSourceRef": "",
+                                "termAccessionNumber": ""
+                            },
+                            "typeCurie": "",
+                            "format": "Text"
+                        },
+                        "Line scan sequence": {
+                            "definition": "",
+                            "type": {
+                                "term": "Line scan sequence",
+                                "termSourceRef": "",
+                                "termAccessionNumber": ""
+                            },
+                            "typeCurie": "",
+                            "format": "Text"
+                        },
+                        "Scan pattern": {
+                            "definition": "",
+                            "type": {
+                                "term": "Scan pattern",
+                                "termSourceRef": "",
+                                "termAccessionNumber": ""
+                            },
+                            "typeCurie": "",
+                            "format": "Text"
+                        },
+                        "Scan type": {
+                            "definition": "",
+                            "type": {
+                                "term": "Scan type",
+                                "termSourceRef": "",
+                                "termAccessionNumber": ""
+                            },
+                            "typeCurie": "",
+                            "format": "Text"
+                        },
+                        "Number of scans": {
+                            "definition": "",
+                            "type": {
+                                "term": "Number of scans",
+                                "termSourceRef": "",
+                                "termAccessionNumber": ""
+                            },
+                            "typeCurie": "",
+                            "format": "Text"
+                        }
+                    }
+                },
+                "Histology": {
+                    "name": "",
+                    "description": "",
+                    "type": {
+                        "term": "Histology",
+                        "termSourceRef": "",
+                        "termAccessionNumber": ""
+                    },
+                    "typeCurie": "",
+                    "parameters": [
+                        "Stain",
+                        "High-res image",
+                        "Low-res image"
+                    ],
+                    "parameterDefinitions": {
+                        "Stain": {
+                            "definition": "",
+                            "type": {
+                                "term": "Stain",
+                                "termSourceRef": "",
+                                "termAccessionNumber": ""
+                            },
+                            "typeCurie": "",
+                            "format": "Text"
+                        },
+                        "High-res image": {
+                            "definition": "",
+                            "type": {
+                                "term": "High-res image",
+                                "termSourceRef": "",
+                                "termAccessionNumber": ""
+                            },
+                            "typeCurie": "",
+                            "format": "Text"
+                        },
+                        "Low-res image": {
+                            "definition": "",
+                            "type": {
+                                "term": "Low-res image",
+                                "termSourceRef": "",
+                                "termAccessionNumber": ""
+                            },
+                            "typeCurie": "",
+                            "format": "Text"
+                        }
+                    }
+                },
+                "Data transformation": {
+                    "name": "Data transformation",
+                    "description": "A planned process that produces output data from raw data.",
+                    "type": {
+                        "term": "data transformation",
+                        "termSourceRef": "OBI",
+                        "termAccessionNumber": "http://purl.obolibrary.org/obo/OBI_0200000"
+                    },
+                    "typeCurie": "OBI:0200000",
+                    "parameters": [],
+                    "parameterDefinitions": {
+                        "Data Transformation software": {
+                            "definition": "",
+                            "type": {
+                                "term": "Data Transformation software",
+                                "termSourceRef": "",
+                                "termAccessionNumber": ""
+                            },
+                            "typeCurie": "",
+                            "format": "Ontology"
+                        },
+                        "Data Transformation software version": {
+                            "definition": "",
+                            "type": {
+                                "term": "Data Transformation software",
+                                "termSourceRef": "",
+                                "termAccessionNumber": ""
+                            },
+                            "typeCurie": "",
+                            "format": "Text"
+                        }
+                    }
+                },
+                "Metabolite identification": {
+                    "name": "Metabolite identification",
+                    "description": "Identification of the breakdown products of a substance, either through chemical instability or the actions of enzymes within the body.",
+                    "type": {
+                        "term": "metabolite identification",
+                        "termSourceRef": "MI",
+                        "termAccessionNumber": "http://purl.obolibrary.org/obo/MI_2131"
+                    },
+                    "typeCurie": "MI:2131",
+                    "parameters": [],
+                    "parameterDefinitions": {}
+                }
+            }
+        }
+    ]
+}

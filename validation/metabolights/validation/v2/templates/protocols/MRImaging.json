@@ -1,0 +1,540 @@
+{
+    "MRImaging": [
+        {
+            "version": "1.0",
+            "description": "Mass spectrometry",
+            "protocols": [
+                "Sample collection",
+                "Magnetic resonance imaging",
+                "In vivo magnetic resonance spectroscopy",
+                "In vivo magnetic resonance assay",
+                "Data transformation",
+                "Metabolite identification"
+            ],
+            "protocolDefinitions": {
+                "Sample collection": {
+                    "name": "Sample collection",
+                    "description": "A procedure whereby biological samples for an experiment are sourced.",
+                    "type": {
+                        "term": "sample collection protocol",
+                        "termSourceRef": "EFO",
+                        "termAccessionNumber": "http://www.ebi.ac.uk/efo/EFO_0005518"
+                    },
+                    "typeCurie": "EFO:0005518",
+                    "parameters": [],
+                    "parameterDefinitions": {}
+                },
+                "Magnetic resonance imaging": {
+                    "name": "Magnetic resonance imaging",
+                    "description": "",
+                    "type": {
+                        "term": "Magnetic resonance imaging",
+                        "termSourceRef": "",
+                        "termAccessionNumber": ""
+                    },
+                    "typeCurie": "",
+                    "parameters": [
+                        "Instrument",
+                        "Tomography",
+                        "Temperature"
+                    ],
+                    "parameterDefinitions": {
+                        "Instrument": {
+                            "definition": "Instrument",
+                            "type": {
+                                "term": "Instrument",
+                                "termSourceRef": "",
+                                "termAccessionNumber": ""
+                            },
+                            "typeCurie": "",
+                            "format": "Text"
+                        },
+                        "Tomography": {
+                            "definition": "Tomography",
+                            "type": {
+                                "term": "Tomography",
+                                "termSourceRef": "",
+                                "termAccessionNumber": ""
+                            },
+                            "typeCurie": "",
+                            "format": "Text"
+                        },
+                        "Temperature": {
+                            "definition": "Temperature",
+                            "type": {
+                                "term": "Temperature",
+                                "termSourceRef": "",
+                                "termAccessionNumber": ""
+                            },
+                            "typeCurie": "",
+                            "format": "Text"
+                        }
+                    }
+                },
+                "In vivo magnetic resonance spectroscopy": {
+                    "name": "In vivo magnetic resonance spectroscopy",
+                    "description": "",
+                    "type": {
+                        "term": "In vivo magnetic resonance spectroscopy",
+                        "termSourceRef": "",
+                        "termAccessionNumber": ""
+                    },
+                    "typeCurie": "",
+                    "parameters": [
+                        "Spatial resolution",
+                        "Field of view",
+                        "Matrix",
+                        "Magnetic pulse sequence name",
+                        "Voxel size",
+                        "Localisation pulse sequence name",
+                        "Number of transients",
+                        "Water inhibition pulse sequence name",
+                        "Magnetic field strength"
+                    ],
+                    "parameterDefinitions": {
+                        "Spatial resolution": {
+                            "definition": "",
+                            "type": {
+                                "term": "Spatial resolution",
+                                "termSourceRef": "",
+                                "termAccessionNumber": ""
+                            },
+                            "typeCurie": "",
+                            "format": "Text"
+                        },
+                        "Field of view": {
+                            "definition": "",
+                            "type": {
+                                "term": "Field of view",
+                                "termSourceRef": "",
+                                "termAccessionNumber": ""
+                            },
+                            "typeCurie": "",
+                            "format": "Text"
+                        },
+                        "Matrix": {
+                            "definition": "",
+                            "type": {
+                                "term": "Matrix",
+                                "termSourceRef": "",
+                                "termAccessionNumber": ""
+                            },
+                            "typeCurie": "",
+                            "format": "Text"
+                        },
+                        "Magnetic pulse sequence name": {
+                            "definition": "",
+                            "type": {
+                                "term": "Magnetic pulse sequence name",
+                                "termSourceRef": "",
+                                "termAccessionNumber": ""
+                            },
+                            "typeCurie": "",
+                            "format": "Text"
+                        },
+                        "Voxel size": {
+                            "definition": "",
+                            "type": {
+                                "term": "Voxel size",
+                                "termSourceRef": "",
+                                "termAccessionNumber": ""
+                            },
+                            "typeCurie": "",
+                            "format": "Text"
+                        },
+                        "Localisation pulse sequence name": {
+                            "definition": "",
+                            "type": {
+                                "term": "Localisation pulse sequence name",
+                                "termSourceRef": "",
+                                "termAccessionNumber": ""
+                            },
+                            "typeCurie": "",
+                            "format": "Text"
+                        },
+                        "Number of transients": {
+                            "definition": "",
+                            "type": {
+                                "term": "Number of transients",
+                                "termSourceRef": "",
+                                "termAccessionNumber": ""
+                            },
+                            "typeCurie": "",
+                            "format": "Text"
+                        },
+                        "Water inhibition pulse sequence name": {
+                            "definition": "",
+                            "type": {
+                                "term": "Water inhibition pulse sequence name",
+                                "termSourceRef": "",
+                                "termAccessionNumber": ""
+                            },
+                            "typeCurie": "",
+                            "format": "Text"
+                        },
+                        "Magnetic field strength": {
+                            "definition": "",
+                            "type": {
+                                "term": "Magnetic field strength",
+                                "termSourceRef": "",
+                                "termAccessionNumber": ""
+                            },
+                            "typeCurie": "",
+                            "format": "Text"
+                        }
+                    }
+                },
+                "In vivo magnetic resonance assay": {
+                    "name": "In vivo magnetic resonance assay",
+                    "description": "",
+                    "type": {
+                        "term": "In vivo magnetic resonance assay",
+                        "termSourceRef": "",
+                        "termAccessionNumber": ""
+                    },
+                    "typeCurie": "",
+                    "parameters": [
+                        "NMR tube type",
+                        "Solvent",
+                        "Sample pH",
+                        "Temperature"
+                    ],
+                    "parameterDefinitions": {
+                        "NMR tube type": {
+                            "definition": "",
+                            "type": {
+                                "term": "NMR tube type",
+                                "termSourceRef": "",
+                                "termAccessionNumber": ""
+                            },
+                            "typeCurie": "",
+                            "format": "Text"
+                        },
+                        "Solvent": {
+                            "definition": "",
+                            "type": {
+                                "term": "Solvent",
+                                "termSourceRef": "",
+                                "termAccessionNumber": ""
+                            },
+                            "typeCurie": "",
+                            "format": "Text"
+                        },
+                        "Sample pH": {
+                            "definition": "",
+                            "type": {
+                                "term": "Sample pH",
+                                "termSourceRef": "",
+                                "termAccessionNumber": ""
+                            },
+                            "typeCurie": "",
+                            "format": "Text"
+                        },
+                        "Temperature": {
+                            "definition": "",
+                            "type": {
+                                "term": "Temperature",
+                                "termSourceRef": "",
+                                "termAccessionNumber": ""
+                            },
+                            "typeCurie": "",
+                            "format": "Text"
+                        }
+                    }
+                },
+                "Data transformation": {
+                    "name": "Data transformation",
+                    "description": "A planned process that produces output data from raw data.",
+                    "type": {
+                        "term": "data transformation",
+                        "termSourceRef": "OBI",
+                        "termAccessionNumber": "http://purl.obolibrary.org/obo/OBI_0200000"
+                    },
+                    "typeCurie": "OBI:0200000",
+                    "parameters": [],
+                    "parameterDefinitions": {}
+                },
+                "Metabolite identification": {
+                    "name": "Metabolite identification",
+                    "description": "Identification of the breakdown products of a substance, either through chemical instability or the actions of enzymes within the body.",
+                    "type": {
+                        "term": "metabolite identification",
+                        "termSourceRef": "MI",
+                        "termAccessionNumber": "http://purl.obolibrary.org/obo/MI_2131"
+                    },
+                    "typeCurie": "MI:2131",
+                    "parameters": [],
+                    "parameterDefinitions": {}
+                }
+            }
+        },
+        {
+            "version": "2.0",
+            "description": "Mass spectrometry",
+            "protocols": [
+                "Sample collection",
+                "Magnetic resonance imaging",
+                "In vivo magnetic resonance spectroscopy",
+                "In vivo magnetic resonance assay",
+                "Data transformation",
+                "Metabolite identification"
+            ],
+            "protocolDefinitions": {
+                "Sample collection": {
+                    "name": "Sample collection",
+                    "description": "A procedure whereby biological samples for an experiment are sourced.",
+                    "type": {
+                        "term": "sample collection protocol",
+                        "termSourceRef": "EFO",
+                        "termAccessionNumber": "http://www.ebi.ac.uk/efo/EFO_0005518"
+                    },
+                    "typeCurie": "EFO:0005518",
+                    "parameters": [],
+                    "parameterDefinitions": {}
+                },
+                "Magnetic resonance imaging": {
+                    "name": "Magnetic resonance imaging",
+                    "description": "",
+                    "type": {
+                        "term": "Magnetic resonance imaging",
+                        "termSourceRef": "",
+                        "termAccessionNumber": ""
+                    },
+                    "typeCurie": "",
+                    "parameters": [
+                        "Instrument",
+                        "Tomography",
+                        "Temperature"
+                    ],
+                    "parameterDefinitions": {
+                        "Instrument": {
+                            "definition": "Instrument",
+                            "type": {
+                                "term": "Instrument",
+                                "termSourceRef": "",
+                                "termAccessionNumber": ""
+                            },
+                            "typeCurie": "",
+                            "format": "Text"
+                        },
+                        "Tomography": {
+                            "definition": "Tomography",
+                            "type": {
+                                "term": "Tomography",
+                                "termSourceRef": "",
+                                "termAccessionNumber": ""
+                            },
+                            "typeCurie": "",
+                            "format": "Text"
+                        },
+                        "Temperature": {
+                            "definition": "Temperature",
+                            "type": {
+                                "term": "Temperature",
+                                "termSourceRef": "",
+                                "termAccessionNumber": ""
+                            },
+                            "typeCurie": "",
+                            "format": "Text"
+                        }
+                    }
+                },
+                "In vivo magnetic resonance spectroscopy": {
+                    "name": "In vivo magnetic resonance spectroscopy",
+                    "description": "",
+                    "type": {
+                        "term": "In vivo magnetic resonance spectroscopy",
+                        "termSourceRef": "",
+                        "termAccessionNumber": ""
+                    },
+                    "typeCurie": "",
+                    "parameters": [
+                        "Spatial resolution",
+                        "Field of view",
+                        "Matrix",
+                        "Magnetic pulse sequence name",
+                        "Voxel size",
+                        "Localisation pulse sequence name",
+                        "Number of transients",
+                        "Water inhibition pulse sequence name",
+                        "Magnetic field strength"
+                    ],
+                    "parameterDefinitions": {
+                        "Spatial resolution": {
+                            "definition": "",
+                            "type": {
+                                "term": "Spatial resolution",
+                                "termSourceRef": "",
+                                "termAccessionNumber": ""
+                            },
+                            "typeCurie": "",
+                            "format": "Text"
+                        },
+                        "Field of view": {
+                            "definition": "",
+                            "type": {
+                                "term": "Field of view",
+                                "termSourceRef": "",
+                                "termAccessionNumber": ""
+                            },
+                            "typeCurie": "",
+                            "format": "Text"
+                        },
+                        "Matrix": {
+                            "definition": "",
+                            "type": {
+                                "term": "Matrix",
+                                "termSourceRef": "",
+                                "termAccessionNumber": ""
+                            },
+                            "typeCurie": "",
+                            "format": "Text"
+                        },
+                        "Magnetic pulse sequence name": {
+                            "definition": "",
+                            "type": {
+                                "term": "Magnetic pulse sequence name",
+                                "termSourceRef": "",
+                                "termAccessionNumber": ""
+                            },
+                            "typeCurie": "",
+                            "format": "Text"
+                        },
+                        "Voxel size": {
+                            "definition": "",
+                            "type": {
+                                "term": "Voxel size",
+                                "termSourceRef": "",
+                                "termAccessionNumber": ""
+                            },
+                            "typeCurie": "",
+                            "format": "Text"
+                        },
+                        "Localisation pulse sequence name": {
+                            "definition": "",
+                            "type": {
+                                "term": "Localisation pulse sequence name",
+                                "termSourceRef": "",
+                                "termAccessionNumber": ""
+                            },
+                            "typeCurie": "",
+                            "format": "Text"
+                        },
+                        "Number of transients": {
+                            "definition": "",
+                            "type": {
+                                "term": "Number of transients",
+                                "termSourceRef": "",
+                                "termAccessionNumber": ""
+                            },
+                            "typeCurie": "",
+                            "format": "Text"
+                        },
+                        "Water inhibition pulse sequence name": {
+                            "definition": "",
+                            "type": {
+                                "term": "Water inhibition pulse sequence name",
+                                "termSourceRef": "",
+                                "termAccessionNumber": ""
+                            },
+                            "typeCurie": "",
+                            "format": "Text"
+                        },
+                        "Magnetic field strength": {
+                            "definition": "",
+                            "type": {
+                                "term": "Magnetic field strength",
+                                "termSourceRef": "",
+                                "termAccessionNumber": ""
+                            },
+                            "typeCurie": "",
+                            "format": "Text"
+                        }
+                    }
+                },
+                "In vivo magnetic resonance assay": {
+                    "name": "In vivo magnetic resonance assay",
+                    "description": "",
+                    "type": {
+                        "term": "In vivo magnetic resonance assay",
+                        "termSourceRef": "",
+                        "termAccessionNumber": ""
+                    },
+                    "typeCurie": "",
+                    "parameters": [
+                        "NMR tube type",
+                        "Solvent",
+                        "Sample pH",
+                        "Temperature"
+                    ],
+                    "parameterDefinitions": {
+                        "NMR tube type": {
+                            "definition": "",
+                            "type": {
+                                "term": "NMR tube type",
+                                "termSourceRef": "",
+                                "termAccessionNumber": ""
+                            },
+                            "typeCurie": "",
+                            "format": "Text"
+                        },
+                        "Solvent": {
+                            "definition": "",
+                            "type": {
+                                "term": "Solvent",
+                                "termSourceRef": "",
+                                "termAccessionNumber": ""
+                            },
+                            "typeCurie": "",
+                            "format": "Text"
+                        },
+                        "Sample pH": {
+                            "definition": "",
+                            "type": {
+                                "term": "Sample pH",
+                                "termSourceRef": "",
+                                "termAccessionNumber": ""
+                            },
+                            "typeCurie": "",
+                            "format": "Text"
+                        },
+                        "Temperature": {
+                            "definition": "",
+                            "type": {
+                                "term": "Temperature",
+                                "termSourceRef": "",
+                                "termAccessionNumber": ""
+                            },
+                            "typeCurie": "",
+                            "format": "Text"
+                        }
+                    }
+                },
+                "Data transformation": {
+                    "name": "Data transformation",
+                    "description": "A planned process that produces output data from raw data.",
+                    "type": {
+                        "term": "data transformation",
+                        "termSourceRef": "OBI",
+                        "termAccessionNumber": "http://purl.obolibrary.org/obo/OBI_0200000"
+                    },
+                    "typeCurie": "OBI:0200000",
+                    "parameters": [],
+                    "parameterDefinitions": {}
+                },
+                "Metabolite identification": {
+                    "name": "Metabolite identification",
+                    "description": "Identification of the breakdown products of a substance, either through chemical instability or the actions of enzymes within the body.",
+                    "type": {
+                        "term": "metabolite identification",
+                        "termSourceRef": "MI",
+                        "termAccessionNumber": "http://purl.obolibrary.org/obo/MI_2131"
+                    },
+                    "typeCurie": "MI:2131",
+                    "parameters": [],
+                    "parameterDefinitions": {}
+                }
+            }
+        }
+    ]
+}

@@ -1,6 +1,7 @@
 import datetime
 import enum
 from typing import Annotated, Literal
+
 from pydantic import BaseModel, ConfigDict, Field, field_validator
 from pydantic.alias_generators import to_camel, to_pascal
 
@@ -25,11 +26,13 @@ class ConstraintType(enum.StrEnum):
     MAXIMUM = "maximum"
     REQUIRED = "required"
 
+
 class EnforcementLevel(enum.StrEnum):
     REQUIRED = "required"
     RECOMMENDED = "recommended"
     OPTIONAL = "optional"
-    
+
+
 class StudyCategoryStr(enum.StrEnum):
     OTHER = "other"
     MS_MHD_ENABLED = "ms-mhd-enabled"
@@ -200,7 +203,7 @@ class FieldValueValidation(StudyBaseModel):
     enforcement_level: Annotated[
         EnforcementLevel, Field(description="Rule enforcement level")
     ] = EnforcementLevel.REQUIRED
-    
+
     validation_type: Annotated[
         ValidationType, Field(description="Validation rule type")
     ] = ValidationType.ANY_ONTOLOGY_TERM
@@ -246,7 +249,7 @@ class FieldValueValidation(StudyBaseModel):
             "Applicable only for validation type child-ontology-term"
         ),
     ] = None
-    
+
     unexpected_terms: Annotated[
         None | list[str],
         Field(description="unexpected terms."),
@@ -260,7 +263,9 @@ class ColumnDescription(StudyBaseModel):
     ]
     column_category: Annotated[
         None
-        | Literal["", "Basic", "Protocol", "Parameter", "Characteristics", "File", "Label"],
+        | Literal[
+            "", "Basic", "Protocol", "Parameter", "Characteristics", "File", "Label"
+        ],
         Field(description="column category"),
     ] = None
     column_header: Annotated[str, Field(description="column header")]
@@ -338,7 +343,65 @@ class ValidationControls(StudyBaseModel):
             "Select the first one."
         ),
     ] = {}
-    
+
+
+class ProtocolParameterDefinition(StudyBaseModel):
+    definition: Annotated[str, Field(description="Definition of protocol parameter.")]
+    type: Annotated[
+        OntologyTerm, Field(description="Ontology term of protocol parameter type")
+    ]
+    type_curie: Annotated[
+        str,
+        Field(
+            description="Compact URI presentation (obo_id) of protocol parameter type. "
+            "e.g. MS:1000831, OBI:0001139"
+        ),
+    ] = ""
+    format: Annotated[
+        Literal["Text", "Ontology", "Numeric"],
+        Field(description="value representation format"),
+    ]
+    examples: Annotated[
+        list[str], Field(description="Example protocol parameter values.")
+    ] = []
+
+
+class ProtocolDefinition(StudyBaseModel):
+    name: Annotated[str, Field(description="Name of protocol")]
+    description: Annotated[str, Field(description="Description of protocol")]
+    type: Annotated[OntologyTerm, Field(description="Ontology term of protocol type")]
+    type_curie: Annotated[
+        str, Field(description="Compact URI presentation (obo_id) of protocol type")
+    ] = ""
+    parameters: Annotated[list[str], Field(description="Parameters of protocol")] = []
+    parameter_definitions: Annotated[
+        dict[str, ProtocolParameterDefinition],
+        Field(
+            description="Definition of protocol parameter "
+            "listed in the `parameters` field",
+        ),
+    ] = {}
+
+
+class StudyProtocolTemplate(StudyBaseModel):
+    version: Annotated[str, Field(description="Template version")]
+    description: Annotated[str, Field(description="Template description")] = ""
+    protocols: Annotated[list[str], Field(description="Ordered protocol names")] = []
+    protocol_definitions: Annotated[
+        dict[str, ProtocolDefinition],
+        Field(description="Definition of protocol listed in the `protocols` field"),
+    ] = []
+
+
 class ValidationConfiguration(StudyBaseModel):
-    controls: Annotated[ValidationControls, Field(description="File templates")] = {}
-    templates: Annotated[FileTemplates, Field(description="File templates")] = {}
+    controls: Annotated[
+        ValidationControls,
+        Field(description="Investigation, sample, assay validation controls"),
+    ] = ValidationControls()
+    templates: Annotated[
+        FileTemplates, Field(description="Investigation, sample, assay file templates")
+    ] = FileTemplates()
+    protocols: Annotated[
+        dict[str, list[StudyProtocolTemplate]],
+        Field(description="Study protocol templates"),
+    ] = FileTemplates()

@@ -1,8 +1,8 @@
 {
-    "MS": [
+    "MALDI-MS": [
         {
             "version": "1.0",
-            "description": "Mass spectrometry",
+            "description": "Matrix-assisted laser desorption-ionisation imaging MS",
             "protocols": [
                 "Sample collection",
                 "Extraction",
@@ -156,7 +156,7 @@
         },
         {
             "version": "2.0",
-            "description": "Mass spectrometry",
+            "description": "Matrix-assisted laser desorption-ionisation imaging MS",
             "protocols": [
                 "Sample collection",
                 "Extraction",

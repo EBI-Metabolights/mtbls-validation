@@ -1,11 +1,12 @@
 {
-    "MS": [
+    "CE-MS": [
         {
             "version": "1.0",
-            "description": "Mass spectrometry",
+            "description": "Capillary electrophoresis MS",
             "protocols": [
                 "Sample collection",
                 "Extraction",
+                "Capillary Electrophoresis",
                 "Mass spectrometry",
                 "Data transformation",
                 "Metabolite identification"
@@ -56,6 +57,53 @@
                             },
                             "typeCurie": "",
                             "format": "Text"
+                        }
+                    }
+                },
+                "Capillary Electrophoresis": {
+                    "name": "Capillary Electrophoresis",
+                    "description": "",
+                    "type": {
+                        "term": "Capillary Electrophoresis",
+                        "termSourceRef": "",
+                        "termAccessionNumber": ""
+                    },
+                    "typeCurie": "",
+                    "parameters": [
+                        "CE Instrument",
+                        "Column model",
+                        "Column type"
+                    ],
+                    "parameterDefinitions": {
+                        "CE instrument": {
+                            "definition": "CE instrument",
+                            "type": {
+                                "term": "CE instrument",
+                                "termSourceRef": "",
+                                "termAccessionNumber": ""
+                            },
+                            "typeCurie": "",
+                            "format": "Ontology"
+                        },
+                        "Column model": {
+                            "definition": "Column model",
+                            "type": {
+                                "term": "Column model",
+                                "termSourceRef": "",
+                                "termAccessionNumber": ""
+                            },
+                            "typeCurie": "",
+                            "format": "Ontology"
+                        },
+                        "Column type": {
+                            "definition": "Column type",
+                            "type": {
+                                "term": "Column type",
+                                "termSourceRef": "",
+                                "termAccessionNumber": ""
+                            },
+                            "typeCurie": "",
+                            "format": "Ontology"
                         }
                     }
                 },
@@ -156,10 +204,11 @@
         },
         {
             "version": "2.0",
-            "description": "Mass spectrometry",
+            "description": "Capillary electrophoresis MS",
             "protocols": [
                 "Sample collection",
                 "Extraction",
+                "Capillary Electrophoresis",
                 "Mass spectrometry",
                 "Data transformation",
                 "Metabolite identification"
@@ -205,6 +254,53 @@
                             "definition": "Post Derivatization",
                             "type": {
                                 "term": "Post Derivatization",
+                                "termSourceRef": "",
+                                "termAccessionNumber": ""
+                            },
+                            "typeCurie": "",
+                            "format": "Text"
+                        }
+                    }
+                },
+                "Capillary Electrophoresis": {
+                    "name": "Capillary Electrophoresis",
+                    "description": "",
+                    "type": {
+                        "term": "Capillary Electrophoresis",
+                        "termSourceRef": "",
+                        "termAccessionNumber": ""
+                    },
+                    "typeCurie": "",
+                    "parameters": [
+                        "CE Instrument",
+                        "Column model",
+                        "Column type"
+                    ],
+                    "parameterDefinitions": {
+                        "CE instrument": {
+                            "definition": "CE instrument",
+                            "type": {
+                                "term": "CE instrument",
+                                "termSourceRef": "",
+                                "termAccessionNumber": ""
+                            },
+                            "typeCurie": "",
+                            "format": "Ontology"
+                        },
+                        "Column model": {
+                            "definition": "Column model",
+                            "type": {
+                                "term": "Column model",
+                                "termSourceRef": "",
+                                "termAccessionNumber": ""
+                            },
+                            "typeCurie": "",
+                            "format": "Text"
+                        },
+                        "Column type": {
+                            "definition": "Column type",
+                            "type": {
+                                "term": "Column type",
                                 "termSourceRef": "",
                                 "termAccessionNumber": ""
                             },

@@ -1,11 +1,12 @@
 {
-    "MS": [
+    "NMR": [
         {
             "version": "1.0",
-            "description": "Mass spectrometry",
+            "description": "Nuclear Magnetic Resonance (NMR)",
             "protocols": [
                 "Sample collection",
                 "Extraction",
+                "Chromatography",
                 "Mass spectrometry",
                 "Data transformation",
                 "Metabolite identification"
@@ -56,6 +57,75 @@
                             },
                             "typeCurie": "",
                             "format": "Text"
+                        }
+                    }
+                },
+                "Chromatography": {
+                    "name": "Chromatography",
+                    "description": "A separation method where the components are distributed between two phases, one of which is stationary, while the other moves in a definite direction.",
+                    "type": {
+                        "term": "chromatography",
+                        "termSourceRef": "CHMO",
+                        "termAccessionNumber": "http://purl.obolibrary.org/obo/CHMO_0001000"
+                    },
+                    "typeCurie": "CHMO:0001000",
+                    "parameters": [
+                        "Chromatography Instrument",
+                        "Autosampler model",
+                        "Column model",
+                        "Column type",
+                        "Guard column"
+                    ],
+                    "parameterDefinitions": {
+                        "Chromatography Instrument": {
+                            "definition": "A chromatography device that dissolves a mixture in liquid mobile phase to separate the analyte to be measured from other molecules in the mixture and allows it to be isolated.",
+                            "type": {
+                                "term": "liquid chromatography instrument",
+                                "termSourceRef": "OBI",
+                                "termAccessionNumber": "http://purl.obolibrary.org/obo/OBI_0001139"
+                            },
+                            "typeCurie": "OBI:0001139",
+                            "format": "Ontology"
+                        },
+                        "Autosampler model": {
+                            "definition": "A piece of apparatus, consisting of a rotating circular tray containing a number of sealed vials, that is used for the automatic injection of samples during a mass spectrometry experiment.",
+                            "type": {
+                                "term": "autosampler",
+                                "termSourceRef": "CHMO",
+                                "termAccessionNumber": "http://purl.obolibrary.org/obo/CHMO_0002579"
+                            },
+                            "typeCurie": "CHMO:0002579",
+                            "format": "Ontology"
+                        },
+                        "Column model": {
+                            "definition": "Column model",
+                            "type": {
+                                "term": "Column model",
+                                "termSourceRef": "",
+                                "termAccessionNumber": ""
+                            },
+                            "typeCurie": "",
+                            "format": "Ontology"
+                        },
+                        "Column type": {
+                            "definition": "Column type",
+                            "type": {
+                                "term": "Column type",
+                                "termSourceRef": "",
+                                "termAccessionNumber": ""
+                            },
+                            "typeCurie": "",
+                            "format": "Ontology"
+                        },
+                        "Guard column": {
+                            "definition": "Guard column",
+                            "type": {
+                                "term": "Guard column",
+                                "termSourceRef": "",
+                                "termAccessionNumber": ""
+                            },
+                            "typeCurie": "",
+                            "format": "Ontology"
                         }
                     }
                 },
@@ -156,11 +226,12 @@
         },
         {
             "version": "2.0",
-            "description": "Mass spectrometry",
+            "description": "Nuclear Magnetic Resonance (NMR)",
             "protocols": [
                 "Sample collection",
                 "Extraction",
-                "Mass spectrometry",
+                "NMR sample",
+                "NMR spectroscopy",
                 "Data transformation",
                 "Metabolite identification"
             ],
@@ -187,29 +258,86 @@
                     },
                     "typeCurie": "MS:1000831",
                     "parameters": [
-                        "Post Extraction",
-                        "Derivatization"
+                        "Extraction Method"
                     ],
                     "parameterDefinitions": {
                         "Post Extraction": {
-                            "definition": "Post Extraction",
+                            "definition": "Extraction Method",
                             "type": {
-                                "term": "Post Extraction",
+                                "term": "Extraction Method",
                                 "termSourceRef": "",
                                 "termAccessionNumber": ""
                             },
                             "typeCurie": "",
                             "format": "Text"
+                        }
+                    }
+                },
+                "NMR sample": {
+                    "name": "NMR sample",
+                    "description": "",
+                    "type": {
+                        "term": "NMR sample",
+                        "termSourceRef": "",
+                        "termAccessionNumber": ""
+                    },
+                    "typeCurie": "",
+                    "parameters": [
+                    "NMR tube type",
+                    "Solvent",
+                    "Sample pH",
+                    "Temperature"
+                ],
+                    "parameterDefinitions": {
+                        "NMR tube type": {
+                            "definition": "NMR tube type",
+                            "type": {
+                                "term": "NMR tube type",
+                                "termSourceRef": "",
+                                "termAccessionNumber": ""
+                            },
+                            "typeCurie": "",
+                            "format": "Ontology"
                         },
-                        "Post Derivatization": {
-                            "definition": "Post Derivatization",
+                        "Autosampler model": {
+                            "definition": "A piece of apparatus, consisting of a rotating circular tray containing a number of sealed vials, that is used for the automatic injection of samples during a mass spectrometry experiment.",
                             "type": {
-                                "term": "Post Derivatization",
+                                "term": "autosampler",
+                                "termSourceRef": "CHMO",
+                                "termAccessionNumber": "http://purl.obolibrary.org/obo/CHMO_0002579"
+                            },
+                            "typeCurie": "CHMO:0002579",
+                            "format": "Ontology"
+                        },
+                        "Column model": {
+                            "definition": "Column model",
+                            "type": {
+                                "term": "Column model",
                                 "termSourceRef": "",
                                 "termAccessionNumber": ""
                             },
                             "typeCurie": "",
-                            "format": "Text"
+                            "format": "Ontology"
+                        },
+                        "Column type": {
+                            "definition": "Column type",
+                            "type": {
+                                "term": "Column type",
+                                "termSourceRef": "",
+                                "termAccessionNumber": ""
+                            },
+                            "typeCurie": "",
+                            "format": "Ontology"
+                        },
+                        "Guard column": {
+                            "definition": "Guard column",
+                            "type": {
+                                "term": "Guard column",
+                                "termSourceRef": "",
+                                "termAccessionNumber": ""
+                            },
+                            "typeCurie": "",
+                            "format": "Ontology"
                         }
                     }
                 },

@@ -1,11 +1,12 @@
 {
-    "MS": [
+    "GCxGC-MS": [
         {
             "version": "1.0",
-            "description": "Mass spectrometry",
+            "description": "Tandem Gas Chromatography MS",
             "protocols": [
                 "Sample collection",
                 "Extraction",
+                "Chromatography",
                 "Mass spectrometry",
                 "Data transformation",
                 "Metabolite identification"
@@ -56,6 +57,95 @@
                             },
                             "typeCurie": "",
                             "format": "Text"
+                        }
+                    }
+                },
+                "Chromatography": {
+                    "name": "Chromatography",
+                    "description": "A separation method where the components are distributed between two phases, one of which is stationary, while the other moves in a definite direction.",
+                    "type": {
+                        "term": "chromatography",
+                        "termSourceRef": "CHMO",
+                        "termAccessionNumber": "http://purl.obolibrary.org/obo/CHMO_0001000"
+                    },
+                    "typeCurie": "CHMO:0001000",
+                    "parameters": [
+                        "Chromatography Instrument",
+                        "Autosampler model",
+                        "Column model",
+                        "Column type",
+                        "Guard column"
+                    ],
+                    "parameterDefinitions": {
+                        "Chromatography Instrument": {
+                            "definition": "A chromatography device that dissolves a mixture in liquid mobile phase to separate the analyte to be measured from other molecules in the mixture and allows it to be isolated.",
+                            "type": {
+                                "term": "liquid chromatography instrument",
+                                "termSourceRef": "OBI",
+                                "termAccessionNumber": "http://purl.obolibrary.org/obo/OBI_0001139"
+                            },
+                            "typeCurie": "OBI:0001139",
+                            "format": "Ontology"
+                        },
+                        "Autosampler model": {
+                            "definition": "A piece of apparatus, consisting of a rotating circular tray containing a number of sealed vials, that is used for the automatic injection of samples during a mass spectrometry experiment.",
+                            "type": {
+                                "term": "autosampler",
+                                "termSourceRef": "CHMO",
+                                "termAccessionNumber": "http://purl.obolibrary.org/obo/CHMO_0002579"
+                            },
+                            "typeCurie": "CHMO:0002579",
+                            "format": "Ontology"
+                        },
+                        "Column model 1": {
+                            "definition": "Column model 1",
+                            "type": {
+                                "term": "Column model",
+                                "termSourceRef": "",
+                                "termAccessionNumber": ""
+                            },
+                            "typeCurie": "",
+                            "format": "Ontology"
+                        },
+                        "Column type 1": {
+                            "definition": "Column type 1",
+                            "type": {
+                                "term": "Column type 1",
+                                "termSourceRef": "",
+                                "termAccessionNumber": ""
+                            },
+                            "typeCurie": "",
+                            "format": "Ontology"
+                        },
+                        "Guard column": {
+                            "definition": "Guard column",
+                            "type": {
+                                "term": "Guard column",
+                                "termSourceRef": "",
+                                "termAccessionNumber": ""
+                            },
+                            "typeCurie": "",
+                            "format": "Ontology"
+                        },
+                        "Column model 2": {
+                            "definition": "Column model 2",
+                            "type": {
+                                "term": "Column model",
+                                "termSourceRef": "",
+                                "termAccessionNumber": ""
+                            },
+                            "typeCurie": "",
+                            "format": "Ontology"
+                        },
+                        "Column type 2": {
+                            "definition": "Column type 2",
+                            "type": {
+                                "term": "Column type 2",
+                                "termSourceRef": "",
+                                "termAccessionNumber": ""
+                            },
+                            "typeCurie": "",
+                            "format": "Ontology"
                         }
                     }
                 },
@@ -156,10 +246,11 @@
         },
         {
             "version": "2.0",
-            "description": "Mass spectrometry",
+            "description": "Tandem Gas Chromatography MS",
             "protocols": [
                 "Sample collection",
                 "Extraction",
+                "Chromatography",
                 "Mass spectrometry",
                 "Data transformation",
                 "Metabolite identification"
@@ -210,6 +301,95 @@
                             },
                             "typeCurie": "",
                             "format": "Text"
+                        }
+                    }
+                },
+                "Chromatography": {
+                    "name": "Chromatography",
+                    "description": "A separation method where the components are distributed between two phases, one of which is stationary, while the other moves in a definite direction.",
+                    "type": {
+                        "term": "chromatography",
+                        "termSourceRef": "CHMO",
+                        "termAccessionNumber": "http://purl.obolibrary.org/obo/CHMO_0001000"
+                    },
+                    "typeCurie": "CHMO:0001000",
+                    "parameters": [
+                        "Chromatography Instrument",
+                        "Autosampler model",
+                        "Column model",
+                        "Column type",
+                        "Guard column"
+                    ],
+                    "parameterDefinitions": {
+                        "Chromatography Instrument": {
+                            "definition": "A chromatography device that dissolves a mixture in liquid mobile phase to separate the analyte to be measured from other molecules in the mixture and allows it to be isolated.",
+                            "type": {
+                                "term": "liquid chromatography instrument",
+                                "termSourceRef": "OBI",
+                                "termAccessionNumber": "http://purl.obolibrary.org/obo/OBI_0001139"
+                            },
+                            "typeCurie": "OBI:0001139",
+                            "format": "Ontology"
+                        },
+                        "Autosampler model": {
+                            "definition": "A piece of apparatus, consisting of a rotating circular tray containing a number of sealed vials, that is used for the automatic injection of samples during a mass spectrometry experiment.",
+                            "type": {
+                                "term": "autosampler",
+                                "termSourceRef": "CHMO",
+                                "termAccessionNumber": "http://purl.obolibrary.org/obo/CHMO_0002579"
+                            },
+                            "typeCurie": "CHMO:0002579",
+                            "format": "Ontology"
+                        },
+                        "Column model 1": {
+                            "definition": "Column model 1",
+                            "type": {
+                                "term": "Column model",
+                                "termSourceRef": "",
+                                "termAccessionNumber": ""
+                            },
+                            "typeCurie": "",
+                            "format": "Ontology"
+                        },
+                        "Column type 1": {
+                            "definition": "Column type 1",
+                            "type": {
+                                "term": "Column type 1",
+                                "termSourceRef": "",
+                                "termAccessionNumber": ""
+                            },
+                            "typeCurie": "",
+                            "format": "Ontology"
+                        },
+                        "Guard column": {
+                            "definition": "Guard column",
+                            "type": {
+                                "term": "Guard column",
+                                "termSourceRef": "",
+                                "termAccessionNumber": ""
+                            },
+                            "typeCurie": "",
+                            "format": "Ontology"
+                        },
+                        "Column model 2": {
+                            "definition": "Column model 2",
+                            "type": {
+                                "term": "Column model",
+                                "termSourceRef": "",
+                                "termAccessionNumber": ""
+                            },
+                            "typeCurie": "",
+                            "format": "Ontology"
+                        },
+                        "Column type 2": {
+                            "definition": "Column type 2",
+                            "type": {
+                                "term": "Column type 2",
+                                "termSourceRef": "",
+                                "termAccessionNumber": ""
+                            },
+                            "typeCurie": "",
+                            "format": "Ontology"
                         }
                     }
                 },

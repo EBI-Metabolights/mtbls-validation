@@ -1,11 +1,12 @@
 {
-    "MS": [
+    "DI-MS": [
         {
             "version": "1.0",
-            "description": "Mass spectrometry",
+            "description": "Direct infusion MS",
             "protocols": [
                 "Sample collection",
                 "Extraction",
+                "Direct infusion",
                 "Mass spectrometry",
                 "Data transformation",
                 "Metabolite identification"
@@ -56,6 +57,31 @@
                             },
                             "typeCurie": "",
                             "format": "Text"
+                        }
+                    }
+                },
+                "Direct infusion": {
+                    "name": "Direct infusion",
+                    "description": "",
+                    "type": {
+                        "term": "Direct infusion",
+                        "termSourceRef": "",
+                        "termAccessionNumber": ""
+                    },
+                    "typeCurie": "",
+                    "parameters": [
+                        "DI Instrument"
+                    ],
+                    "parameterDefinitions": {
+                        "DI Instrument": {
+                            "definition": "DI instrument",
+                            "type": {
+                                "term": "DI instrument",
+                                "termSourceRef": "",
+                                "termAccessionNumber": ""
+                            },
+                            "typeCurie": "",
+                            "format": "Ontology"
                         }
                     }
                 },
@@ -156,10 +182,11 @@
         },
         {
             "version": "2.0",
-            "description": "Mass spectrometry",
+            "description": "Direct infusion MS",
             "protocols": [
                 "Sample collection",
                 "Extraction",
+                "Direct infusion",
                 "Mass spectrometry",
                 "Data transformation",
                 "Metabolite identification"
@@ -210,6 +237,31 @@
                             },
                             "typeCurie": "",
                             "format": "Text"
+                        }
+                    }
+                },
+                "Direct infusion": {
+                    "name": "Direct infusion",
+                    "description": "",
+                    "type": {
+                        "term": "Direct infusion",
+                        "termSourceRef": "",
+                        "termAccessionNumber": ""
+                    },
+                    "typeCurie": "",
+                    "parameters": [
+                        "DI Instrument"
+                    ],
+                    "parameterDefinitions": {
+                        "DI Instrument": {
+                            "definition": "DI instrument",
+                            "type": {
+                                "term": "DI instrument",
+                                "termSourceRef": "",
+                                "termAccessionNumber": ""
+                            },
+                            "typeCurie": "",
+                            "format": "Ontology"
                         }
                     }
                 },
