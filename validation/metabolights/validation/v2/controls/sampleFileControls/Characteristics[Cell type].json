@@ -6,10 +6,10 @@
             "fieldName": "Characteristics[Cell type]",
             "selectionCriteria": {
                 "isaFileType": "sample",
-                "studyCreatedAtOrAfter": "2028-01-01T00:00:00",
+                "studyCreatedAtOrAfter": null,
                 "studyCreatedBefore": null,
                 "studyCategoryFilter": null,
-                "templateVersionFilter": null,
+                "templateVersionFilter": ["2.0"],
                 "isaFileTemplateNameFilter": null,
                 "linkedFieldAndValueFilter": [
                     {

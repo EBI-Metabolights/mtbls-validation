@@ -1,130 +1,130 @@
 {
-    "ontologySourceControlTemplates": [
-        {
+    "ontologySourceReferenceTemplates": {
+        "MI": {
             "sourceName": "MI",
             "sourceFile": "http://purl.obolibrary.org/obo/mi.owl",
             "sourceVersion": "",
             "sourceDescription": "Molecular Interactions Controlled Vocabulary"
         },
-        {
+        "AFO": {
             "sourceName": "AFO",
             "sourceFile": "http://purl.allotrope.org/voc/afo/merged/REC/2025/06/merged-without-qudt-and-inferred",
             "sourceVersion": "",
             "sourceDescription": "Allotrope Foundation Ontology Merged Without QUDT And Inferred (REC/2025/06)"
         },
-        {
+        "OBI": {
             "sourceName": "OBI",
             "sourceFile": "http://purl.obolibrary.org/obo/obi.owl",
             "sourceVersion": "",
             "sourceDescription": "Ontology for Biomedical Investigations"
         },
-        {
+        "EFO": {
             "sourceName": "EFO",
             "sourceFile": "http://www.ebi.ac.uk/efo/efo.owl",
             "sourceVersion": "",
             "sourceDescription": "Experimental Factor Ontology"
         },
-        {
+        "CHMO": {
             "sourceName": "CHMO",
             "sourceFile": "http://purl.obolibrary.org/obo/chmo.owl",
             "sourceVersion": "",
             "sourceDescription": "Chemical Methods Ontology"
         },
-        {
+        "NCIT": {
             "sourceName": "NCIT",
             "sourceFile": "http://purl.obolibrary.org/obo/ncit.owl",
             "sourceVersion": "",
             "sourceDescription": "National Cancer Institute Thesaurus"
         },
-        {
-            "sourceName": "NCBITaxon",
+        "NCBITAXON": {
+            "sourceName": "NCBITAXON",
             "sourceFile": "http://purl.obolibrary.org/obo/ncbitaxon.owl",
             "sourceVersion": "",
             "sourceDescription": "National Center for Biotechnology Information (NCBI) Organismal Classification"
         },
-        {
+        "MTBLS": {
             "sourceName": "MTBLS",
             "sourceFile": "https://www.ebi.ac.uk/metabolights/resources/Metabolights.owl",
             "sourceVersion": "",
             "sourceDescription": "MetaboLights Controlled Vocabulary"
         },
-        {
+        "MS": {
             "sourceName": "MS",
             "sourceFile": "http://purl.obolibrary.org/obo/ms.owl",
             "sourceVersion": "",
             "sourceDescription": "Mass Spectrometry Ontology"
         },
-        {
+        "BTO": {
             "sourceName": "BTO",
             "sourceFile": "http://purl.obolibrary.org/obo/bto.owl",
             "sourceVersion": "",
             "sourceDescription": "BRENDA Tissue and Enzyme Source Ontology"
         },
-        {
+        "CHEBI": {
             "sourceName": "CHEBI",
             "sourceFile": "http://purl.obolibrary.org/obo/chebi.owl",
             "sourceVersion": "",
             "sourceDescription": "Chemical Entities of Biological Interest Ontology"
         },
-        {
+        "UO": {
             "sourceName": "UO",
             "sourceFile": "http://purl.obolibrary.org/obo/uo.owl",
             "sourceVersion": "",
             "sourceDescription": "Units of Measurement Ontology"
         },
-        {
+        "MESH": {
             "sourceName": "MESH",
             "sourceFile": "https://data.bioontology.org/ontologies/MESH",
             "sourceVersion": "",
             "sourceDescription": "Medical Subject Headings"
         },
-        {
+        "BAO": {
             "sourceName": "BAO",
             "sourceFile": "http://www.bioassayontology.org/bao/bao_complete.owl",
             "sourceVersion": "",
             "sourceDescription": "BioAssay Ontology"
         },
-        {
+        "OMIT": {
             "sourceName": "OMIT",
             "sourceFile": "http://purl.obolibrary.org/obo/omit.owl",
             "sourceVersion": "",
             "sourceDescription": "Ontology for MicroRNA Target"
         },
-        {
+        "GO": {
             "sourceName": "GO",
             "sourceFile": "http://purl.obolibrary.org/obo/go/extensions/go-plus.owl",
             "sourceVersion": "",
             "sourceDescription": "Gene Ontology"
         },
-        {
+        "ENVO": {
             "sourceName": "ENVO",
             "sourceFile": "http://purl.obolibrary.org/obo/envo.owl",
             "sourceVersion": "",
             "sourceDescription": "Environment Ontology"
         },
-        {
+        "MSIO": {
             "sourceName": "MSIO",
             "sourceFile": "http://purl.obolibrary.org/obo/msio.owl",
             "sourceVersion": "",
             "sourceDescription": "Metabolomics Standards Initiative Ontology"
         },
-        {
+        "PO": {
             "sourceName": "PO",
             "sourceFile": "http://purl.obolibrary.org/obo/po.owl",
             "sourceVersion": "",
             "sourceDescription": "Plant Ontology"
         },
-        {
+        "MONDO": {
             "sourceName": "MONDO",
             "sourceFile": "http://purl.obolibrary.org/obo/mondo.owl",
             "sourceVersion": "",
             "sourceDescription": "Mondo Disease Ontology"
         },
-        {
+        "WoRMs": {
             "sourceName": "WoRMs",
             "sourceFile": "https://www.marinespecies.org",
             "sourceVersion": "",
             "sourceDescription": "World Register of Marine Species"
         }
-    ]
+    }
 }

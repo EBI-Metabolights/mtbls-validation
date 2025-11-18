@@ -36,6 +36,10 @@
                 {
                     "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/placeholder",
                     "termSourceRef": "MTBLS"
+                },
+                 {
+                    "termAccessionNumber": "",
+                    "termSourceRef": ""
                 }
             ],
             "terms": [],

@@ -300,51 +300,6 @@ class IsaTableFileTemplate(StudyBaseModel):
     ]
 
 
-class FileTemplates(StudyBaseModel):
-    assay_file_header_templates: Annotated[
-        dict[str, list[IsaTableFileTemplate]],
-        Field(description="ISA-TAB assay file templates"),
-    ] = {}
-    sample_file_header_templates: Annotated[
-        dict[str, list[IsaTableFileTemplate]],
-        Field(description="ISA-TAB assay file templates"),
-    ] = {}
-    assignment_file_header_templates: Annotated[
-        dict[str, list[IsaTableFileTemplate]],
-        Field(description="maf file templates"),
-    ] = {}
-
-
-class ValidationControls(StudyBaseModel):
-    assay_file_controls: Annotated[
-        dict[str, list[FieldValueValidation]],
-        Field(
-            description="Controls for assay file columns. "
-            "Field value validations are ordered by precedence. "
-            "If there are more than one matches for the field. "
-            "Select the first one."
-        ),
-    ] = {}
-    sample_file_controls: Annotated[
-        dict[str, list[FieldValueValidation]],
-        Field(
-            description="Controls for sample file columns. "
-            "Field value validations are ordered by precedence. "
-            "If there are more than one matches for the field."
-            "Select the first one."
-        ),
-    ] = {}
-    investigation_file_controls: Annotated[
-        dict[str, list[FieldValueValidation]],
-        Field(
-            description="Controls for investigation file fields. "
-            "Field value validations are ordered by precedence. "
-            "If there are more than one matches for the field."
-            "Select the first one."
-        ),
-    ] = {}
-
-
 class ProtocolParameterDefinition(StudyBaseModel):
     definition: Annotated[str, Field(description="Definition of protocol parameter.")]
     type: Annotated[
@@ -390,7 +345,69 @@ class StudyProtocolTemplate(StudyBaseModel):
     protocol_definitions: Annotated[
         dict[str, ProtocolDefinition],
         Field(description="Definition of protocol listed in the `protocols` field"),
-    ] = []
+    ] = {}
+
+
+class OntologySourceReferenceTemplate(StudyBaseModel):
+    source_name: Annotated[str, Field(description="Source name")]
+    source_file: Annotated[str, Field(description="Source file")]
+    source_version: Annotated[str, Field(description="Source version")]
+    source_description: Annotated[
+        str, Field(description="Source description and full name")
+    ]
+
+
+class FileTemplates(StudyBaseModel):
+    assay_file_header_templates: Annotated[
+        dict[str, list[IsaTableFileTemplate]],
+        Field(description="ISA-TAB assay file templates"),
+    ] = {}
+    sample_file_header_templates: Annotated[
+        dict[str, list[IsaTableFileTemplate]],
+        Field(description="ISA-TAB assay file templates"),
+    ] = {}
+    assignment_file_header_templates: Annotated[
+        dict[str, list[IsaTableFileTemplate]],
+        Field(description="maf file templates"),
+    ] = {}
+    protocol_templates: Annotated[
+        dict[str, list[StudyProtocolTemplate]],
+        Field(description="Study protocol templates"),
+    ] = {}
+    ontology_source_reference_templates: Annotated[
+        dict[str, OntologySourceReferenceTemplate],
+        Field(description="Ontology source reference templates"),
+    ] = {}
+
+
+class ValidationControls(StudyBaseModel):
+    assay_file_controls: Annotated[
+        dict[str, list[FieldValueValidation]],
+        Field(
+            description="Controls for assay file columns. "
+            "Field value validations are ordered by precedence. "
+            "If there are more than one matches for the field. "
+            "Select the first one."
+        ),
+    ] = {}
+    sample_file_controls: Annotated[
+        dict[str, list[FieldValueValidation]],
+        Field(
+            description="Controls for sample file columns. "
+            "Field value validations are ordered by precedence. "
+            "If there are more than one matches for the field."
+            "Select the first one."
+        ),
+    ] = {}
+    investigation_file_controls: Annotated[
+        dict[str, list[FieldValueValidation]],
+        Field(
+            description="Controls for investigation file fields. "
+            "Field value validations are ordered by precedence. "
+            "If there are more than one matches for the field."
+            "Select the first one."
+        ),
+    ] = {}
 
 
 class ValidationConfiguration(StudyBaseModel):
@@ -400,8 +417,4 @@ class ValidationConfiguration(StudyBaseModel):
     ] = ValidationControls()
     templates: Annotated[
         FileTemplates, Field(description="Investigation, sample, assay file templates")
-    ] = FileTemplates()
-    protocols: Annotated[
-        dict[str, list[StudyProtocolTemplate]],
-        Field(description="Study protocol templates"),
     ] = FileTemplates()

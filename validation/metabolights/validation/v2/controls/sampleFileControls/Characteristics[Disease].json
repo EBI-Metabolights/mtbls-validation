@@ -9,7 +9,7 @@
                 "studyCreatedAtOrAfter": null,
                 "studyCreatedBefore": null,
                 "studyCategoryFilter": null,
-                "templateVersionFilter": null,
+                "templateVersionFilter": ["2.0"],
                 "isaFileTemplateNameFilter": null,
                 "linkedFieldAndValueFilter": [
                     {

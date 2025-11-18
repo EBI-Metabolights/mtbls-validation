@@ -20,7 +20,7 @@
                     }
                 ]
             },
-            "enforcementLevel": "required",
+            "enforcementLevel": "recommended",
             "validationType": "any-ontology-term",
             "constraints": [],
             "defaultValue": null,
@@ -238,7 +238,7 @@
                     }
                 ]
             },
-            "enforcementLevel": "required",
+            "enforcementLevel": "recommended",
             "validationType": "any-ontology-term",
             "constraints": [],
             "defaultValue": null,

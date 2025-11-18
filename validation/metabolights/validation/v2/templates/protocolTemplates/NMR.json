@@ -6,8 +6,8 @@
             "protocols": [
                 "Sample collection",
                 "Extraction",
-                "Chromatography",
-                "Mass spectrometry",
+                "NMR sample",
+                "NMR spectroscopy",
                 "Data transformation",
                 "Metabolite identification"
             ],
@@ -17,8 +17,8 @@
                     "description": "A procedure whereby biological samples for an experiment are sourced.",
                     "type": {
                         "term": "sample collection protocol",
-                        "termSourceRef": "EFO",
-                        "termAccessionNumber": "http://www.ebi.ac.uk/efo/EFO_0005518"
+                        "termAccessionNumber": "http://www.ebi.ac.uk/efo/EFO_0005518",
+                        "termSourceRef": "EFO"
                     },
                     "typeCurie": "EFO:0005518",
                     "parameters": [],
@@ -29,172 +29,160 @@
                     "description": "Properties of the preparation steps which took place before the measurement was performed.",
                     "type": {
                         "term": "sample preparation",
-                        "termSourceRef": "MS",
-                        "termAccessionNumber": "http://purl.obolibrary.org/obo/MS_1000831"
+                        "termAccessionNumber": "http://purl.obolibrary.org/obo/MS_1000831",
+                        "termSourceRef": "MS"
                     },
                     "typeCurie": "MS:1000831",
                     "parameters": [
-                        "Post Extraction",
-                        "Derivatization"
+                        "Extraction Method"
                     ],
                     "parameterDefinitions": {
                         "Post Extraction": {
-                            "definition": "Post Extraction",
+                            "definition": "Extraction Method",
                             "type": {
-                                "term": "Post Extraction",
-                                "termSourceRef": "",
-                                "termAccessionNumber": ""
+                                "term": "Extraction Method",
+                                "termAccessionNumber": "",
+                                "termSourceRef": ""
                             },
                             "typeCurie": "",
-                            "format": "Text"
-                        },
-                        "Post Derivatization": {
-                            "definition": "Post Derivatization",
-                            "type": {
-                                "term": "Post Derivatization",
-                                "termSourceRef": "",
-                                "termAccessionNumber": ""
-                            },
-                            "typeCurie": "",
-                            "format": "Text"
+                            "format": "Text",
+                            "examples": []
                         }
                     }
                 },
-                "Chromatography": {
-                    "name": "Chromatography",
-                    "description": "A separation method where the components are distributed between two phases, one of which is stationary, while the other moves in a definite direction.",
+                "NMR sample": {
+                    "name": "NMR sample",
+                    "description": "",
                     "type": {
-                        "term": "chromatography",
-                        "termSourceRef": "CHMO",
-                        "termAccessionNumber": "http://purl.obolibrary.org/obo/CHMO_0001000"
+                        "term": "NMR sample",
+                        "termAccessionNumber": "",
+                        "termSourceRef": ""
                     },
-                    "typeCurie": "CHMO:0001000",
+                    "typeCurie": "",
                     "parameters": [
-                        "Chromatography Instrument",
-                        "Autosampler model",
-                        "Column model",
-                        "Column type",
-                        "Guard column"
+                        "NMR tube type",
+                        "Solvent",
+                        "Sample pH",
+                        "Temperature"
                     ],
                     "parameterDefinitions": {
-                        "Chromatography Instrument": {
-                            "definition": "A chromatography device that dissolves a mixture in liquid mobile phase to separate the analyte to be measured from other molecules in the mixture and allows it to be isolated.",
+                        "NMR tube type": {
+                            "definition": "NMR tube type",
                             "type": {
-                                "term": "liquid chromatography instrument",
-                                "termSourceRef": "OBI",
-                                "termAccessionNumber": "http://purl.obolibrary.org/obo/OBI_0001139"
-                            },
-                            "typeCurie": "OBI:0001139",
-                            "format": "Ontology"
-                        },
-                        "Autosampler model": {
-                            "definition": "A piece of apparatus, consisting of a rotating circular tray containing a number of sealed vials, that is used for the automatic injection of samples during a mass spectrometry experiment.",
-                            "type": {
-                                "term": "autosampler",
-                                "termSourceRef": "CHMO",
-                                "termAccessionNumber": "http://purl.obolibrary.org/obo/CHMO_0002579"
-                            },
-                            "typeCurie": "CHMO:0002579",
-                            "format": "Ontology"
-                        },
-                        "Column model": {
-                            "definition": "Column model",
-                            "type": {
-                                "term": "Column model",
-                                "termSourceRef": "",
-                                "termAccessionNumber": ""
+                                "term": "NMR tube type",
+                                "termAccessionNumber": "",
+                                "termSourceRef": ""
                             },
                             "typeCurie": "",
-                            "format": "Ontology"
+                            "format": "Ontology",
+                            "examples": []
                         },
-                        "Column type": {
-                            "definition": "Column type",
-                            "type": {
-                                "term": "Column type",
-                                "termSourceRef": "",
-                                "termAccessionNumber": ""
-                            },
-                            "typeCurie": "",
-                            "format": "Ontology"
-                        },
-                        "Guard column": {
-                            "definition": "Guard column",
-                            "type": {
-                                "term": "Guard column",
-                                "termSourceRef": "",
-                                "termAccessionNumber": ""
-                            },
-                            "typeCurie": "",
-                            "format": "Ontology"
-                        }
-                    }
-                },
-                "Mass spectrometry": {
-                    "name": "Mass spectrometry",
-                    "description": "Spectrometry where the sample is converted into gaseous ions which are characterised by their mass-to-charge ratio and relative abundance.",
-                    "type": {
-                        "term": "mass spectrometry",
-                        "termSourceRef": "CHMO",
-                        "termAccessionNumber": "http://purl.obolibrary.org/obo/CHMO_0000470"
-                    },
-                    "typeCurie": "CHMO:0000470",
-                    "parameters": [
-                        "Scan polarity",
-                        "Scan m/z range",
-                        "Instrument",
-                        "Ion source",
-                        "Mass analyzer"
-                    ],
-                    "parameterDefinitions": {
-                        "Scan polarity": {
-                            "definition": "Ionization polarity is a device configuration of a ionization source whether the ions charge is negative or positive or alternating.",
-                            "type": {
-                                "term": "ionization polarity",
-                                "termSourceRef": "AFQ",
-                                "termAccessionNumber": "http://purl.allotrope.org/ontologies/quality#AFQ_0000149"
-                            },
-                            "typeCurie": "CHMO:0000470",
-                            "format": "Text"
-                        },
-                        "Scan m/z range": {
+                        "Solvent": {
                             "definition": "",
                             "type": {
-                                "term": "Scan m/z range",
-                                "termSourceRef": "",
-                                "termAccessionNumber": ""
+                                "term": "Solvent",
+                                "termAccessionNumber": "",
+                                "termSourceRef": ""
                             },
                             "typeCurie": "",
-                            "format": "Text"
+                            "format": "Ontology",
+                            "examples": []
                         },
+                        "Sample pH": {
+                            "definition": "Sample pH",
+                            "type": {
+                                "term": "Sample pH",
+                                "termAccessionNumber": "",
+                                "termSourceRef": ""
+                            },
+                            "typeCurie": "",
+                            "format": "Text",
+                            "examples": []
+                        },
+                        "Temperature": {
+                            "definition": "Temperature",
+                            "type": {
+                                "term": "Temperature",
+                                "termAccessionNumber": "",
+                                "termSourceRef": ""
+                            },
+                            "typeCurie": "",
+                            "format": "Numeric",
+                            "examples": []
+                        }
+                    }
+                },
+                "NMR spectroscopy": {
+                    "name": "NMR spectroscopy",
+                    "description": "",
+                    "type": {
+                        "term": "NMR spectroscopy",
+                        "termAccessionNumber": "",
+                        "termSourceRef": ""
+                    },
+                    "typeCurie": "",
+                    "parameters": [
+                        "Instrument",
+                        "NMR Probe",
+                        "Number of transients",
+                        "Pulse sequence name",
+                        "Magnetic field strength"
+                    ],
+                    "parameterDefinitions": {
                         "Instrument": {
                             "definition": "",
                             "type": {
-                                "term": "mass spectrometry instrument",
-                                "termSourceRef": "MSIO",
-                                "termAccessionNumber": "http://purl.obolibrary.org/obo/MSIO_0000171"
+                                "term": "Instrument",
+                                "termAccessionNumber": "",
+                                "termSourceRef": ""
                             },
-                            "typeCurie": "MSIO:0000171",
-                            "format": "Ontology"
+                            "typeCurie": "",
+                            "format": "Ontology",
+                            "examples": []
                         },
-                        "Ion source": {
-                            "definition": "The method by which gas phase ions are generated from the sample",
+                        "NMR Probe": {
+                            "definition": "",
                             "type": {
-                                "term": "ionization type",
-                                "termSourceRef": "MS",
-                                "termAccessionNumber": "http://purl.obolibrary.org/obo/MS_1000008"
+                                "term": "NMR Probe",
+                                "termAccessionNumber": "",
+                                "termSourceRef": ""
                             },
-                            "typeCurie": "MS:1000008",
-                            "format": "Ontology"
+                            "typeCurie": "",
+                            "format": "Ontology",
+                            "examples": []
                         },
-                        "Mass analyzer": {
-                            "definition": "Mass analyzer separates the ions according to their mass-to-charge ratio.",
+                        "Number of transients": {
+                            "definition": "",
                             "type": {
-                                "term": "mass analyzer type",
-                                "termSourceRef": "MS",
-                                "termAccessionNumber": "http://purl.obolibrary.org/obo/MS_1000443"
+                                "term": "Number of transients",
+                                "termAccessionNumber": "",
+                                "termSourceRef": ""
                             },
-                            "typeCurie": "MS:1000443",
-                            "format": "Ontology"
+                            "typeCurie": "",
+                            "format": "Text",
+                            "examples": []
+                        },
+                        "Pulse sequence name": {
+                            "definition": "",
+                            "type": {
+                                "term": "Pulse sequence name",
+                                "termAccessionNumber": "",
+                                "termSourceRef": ""
+                            },
+                            "typeCurie": "",
+                            "format": "Text",
+                            "examples": []
+                        },
+                        "Magnetic field strength": {
+                            "definition": "",
+                            "type": {
+                                "term": "Pulse sequence name",
+                                "termAccessionNumber": "",
+                                "termSourceRef": ""
+                            },
+                            "typeCurie": "",
+                            "format": "Text",
+                            "examples": []
                         }
                     }
                 },
@@ -203,8 +191,8 @@
                     "description": "A planned process that produces output data from raw data.",
                     "type": {
                         "term": "data transformation",
-                        "termSourceRef": "OBI",
-                        "termAccessionNumber": "http://purl.obolibrary.org/obo/OBI_0200000"
+                        "termAccessionNumber": "http://purl.obolibrary.org/obo/OBI_0200000",
+                        "termSourceRef": "OBI"
                     },
                     "typeCurie": "OBI:0200000",
                     "parameters": [],
@@ -215,8 +203,8 @@
                     "description": "Identification of the breakdown products of a substance, either through chemical instability or the actions of enzymes within the body.",
                     "type": {
                         "term": "metabolite identification",
-                        "termSourceRef": "MI",
-                        "termAccessionNumber": "http://purl.obolibrary.org/obo/MI_2131"
+                        "termAccessionNumber": "http://purl.obolibrary.org/obo/MI_2131",
+                        "termSourceRef": "MI"
                     },
                     "typeCurie": "MI:2131",
                     "parameters": [],
@@ -241,8 +229,8 @@
                     "description": "A procedure whereby biological samples for an experiment are sourced.",
                     "type": {
                         "term": "sample collection protocol",
-                        "termSourceRef": "EFO",
-                        "termAccessionNumber": "http://www.ebi.ac.uk/efo/EFO_0005518"
+                        "termAccessionNumber": "http://www.ebi.ac.uk/efo/EFO_0005518",
+                        "termSourceRef": "EFO"
                     },
                     "typeCurie": "EFO:0005518",
                     "parameters": [],
@@ -253,8 +241,8 @@
                     "description": "Properties of the preparation steps which took place before the measurement was performed.",
                     "type": {
                         "term": "sample preparation",
-                        "termSourceRef": "MS",
-                        "termAccessionNumber": "http://purl.obolibrary.org/obo/MS_1000831"
+                        "termAccessionNumber": "http://purl.obolibrary.org/obo/MS_1000831",
+                        "termSourceRef": "MS"
                     },
                     "typeCurie": "MS:1000831",
                     "parameters": [
@@ -265,11 +253,12 @@
                             "definition": "Extraction Method",
                             "type": {
                                 "term": "Extraction Method",
-                                "termSourceRef": "",
-                                "termAccessionNumber": ""
+                                "termAccessionNumber": "",
+                                "termSourceRef": ""
                             },
                             "typeCurie": "",
-                            "format": "Text"
+                            "format": "Text",
+                            "examples": []
                         }
                     }
                 },
@@ -278,135 +267,134 @@
                     "description": "",
                     "type": {
                         "term": "NMR sample",
-                        "termSourceRef": "",
-                        "termAccessionNumber": ""
+                        "termAccessionNumber": "",
+                        "termSourceRef": ""
                     },
                     "typeCurie": "",
                     "parameters": [
-                    "NMR tube type",
-                    "Solvent",
-                    "Sample pH",
-                    "Temperature"
-                ],
+                        "NMR tube type",
+                        "Solvent",
+                        "Sample pH",
+                        "Temperature"
+                    ],
                     "parameterDefinitions": {
                         "NMR tube type": {
                             "definition": "NMR tube type",
                             "type": {
                                 "term": "NMR tube type",
-                                "termSourceRef": "",
-                                "termAccessionNumber": ""
+                                "termAccessionNumber": "",
+                                "termSourceRef": ""
                             },
                             "typeCurie": "",
-                            "format": "Ontology"
+                            "format": "Ontology",
+                            "examples": []
                         },
-                        "Autosampler model": {
-                            "definition": "A piece of apparatus, consisting of a rotating circular tray containing a number of sealed vials, that is used for the automatic injection of samples during a mass spectrometry experiment.",
+                        "Solvent": {
+                            "definition": "",
                             "type": {
-                                "term": "autosampler",
-                                "termSourceRef": "CHMO",
-                                "termAccessionNumber": "http://purl.obolibrary.org/obo/CHMO_0002579"
-                            },
-                            "typeCurie": "CHMO:0002579",
-                            "format": "Ontology"
-                        },
-                        "Column model": {
-                            "definition": "Column model",
-                            "type": {
-                                "term": "Column model",
-                                "termSourceRef": "",
-                                "termAccessionNumber": ""
+                                "term": "Solvent",
+                                "termAccessionNumber": "",
+                                "termSourceRef": ""
                             },
                             "typeCurie": "",
-                            "format": "Ontology"
+                            "format": "Ontology",
+                            "examples": []
                         },
-                        "Column type": {
-                            "definition": "Column type",
+                        "Sample pH": {
+                            "definition": "Sample pH",
                             "type": {
-                                "term": "Column type",
-                                "termSourceRef": "",
-                                "termAccessionNumber": ""
+                                "term": "Sample pH",
+                                "termAccessionNumber": "",
+                                "termSourceRef": ""
                             },
                             "typeCurie": "",
-                            "format": "Ontology"
+                            "format": "Text",
+                            "examples": []
                         },
-                        "Guard column": {
-                            "definition": "Guard column",
+                        "Temperature": {
+                            "definition": "Temperature",
                             "type": {
-                                "term": "Guard column",
-                                "termSourceRef": "",
-                                "termAccessionNumber": ""
+                                "term": "Temperature",
+                                "termAccessionNumber": "",
+                                "termSourceRef": ""
                             },
                             "typeCurie": "",
-                            "format": "Ontology"
+                            "format": "Numeric",
+                            "examples": []
                         }
                     }
                 },
-                "Mass spectrometry": {
-                    "name": "Mass spectrometry",
-                    "description": "Spectrometry where the sample is converted into gaseous ions which are characterised by their mass-to-charge ratio and relative abundance.",
+                "NMR spectroscopy": {
+                    "name": "NMR spectroscopy",
+                    "description": "",
                     "type": {
-                        "term": "mass spectrometry",
-                        "termSourceRef": "CHMO",
-                        "termAccessionNumber": "http://purl.obolibrary.org/obo/CHMO_0000470"
+                        "term": "NMR spectroscopy",
+                        "termAccessionNumber": "",
+                        "termSourceRef": ""
                     },
-                    "typeCurie": "CHMO:0000470",
+                    "typeCurie": "",
                     "parameters": [
-                        "Scan polarity",
-                        "Scan m/z range",
                         "Instrument",
-                        "Ion source",
-                        "Mass analyzer"
+                        "NMR Probe",
+                        "Number of transients",
+                        "Pulse sequence name",
+                        "Magnetic field strength"
                     ],
                     "parameterDefinitions": {
-                        "Scan polarity": {
-                            "definition": "Ionization polarity is a device configuration of a ionization source whether the ions charge is negative or positive or alternating.",
-                            "type": {
-                                "term": "ionization polarity",
-                                "termSourceRef": "AFQ",
-                                "termAccessionNumber": "http://purl.allotrope.org/ontologies/quality#AFQ_0000149"
-                            },
-                            "typeCurie": "CHMO:0000470",
-                            "format": "Ontology"
-                        },
-                        "Scan m/z range": {
-                            "definition": "",
-                            "type": {
-                                "term": "Scan m/z range",
-                                "termSourceRef": "",
-                                "termAccessionNumber": ""
-                            },
-                            "typeCurie": "",
-                            "format": "Text"
-                        },
                         "Instrument": {
                             "definition": "",
                             "type": {
-                                "term": "mass spectrometry instrument",
-                                "termSourceRef": "MSIO",
-                                "termAccessionNumber": "http://purl.obolibrary.org/obo/MSIO_0000171"
+                                "term": "Instrument",
+                                "termAccessionNumber": "",
+                                "termSourceRef": ""
                             },
-                            "typeCurie": "MSIO:0000171",
-                            "format": "Ontology"
+                            "typeCurie": "",
+                            "format": "Ontology",
+                            "examples": []
                         },
-                        "Ion source": {
-                            "definition": "The method by which gas phase ions are generated from the sample",
+                        "NMR Probe": {
+                            "definition": "",
                             "type": {
-                                "term": "ionization type",
-                                "termSourceRef": "MS",
-                                "termAccessionNumber": "http://purl.obolibrary.org/obo/MS_1000008"
+                                "term": "NMR Probe",
+                                "termAccessionNumber": "",
+                                "termSourceRef": ""
                             },
-                            "typeCurie": "MS:1000008",
-                            "format": "Ontology"
+                            "typeCurie": "",
+                            "format": "Ontology",
+                            "examples": []
                         },
-                        "Mass analyzer": {
-                            "definition": "Mass analyzer separates the ions according to their mass-to-charge ratio.",
+                        "Number of transients": {
+                            "definition": "",
                             "type": {
-                                "term": "mass analyzer type",
-                                "termSourceRef": "MS",
-                                "termAccessionNumber": "http://purl.obolibrary.org/obo/MS_1000443"
+                                "term": "Number of transients",
+                                "termAccessionNumber": "",
+                                "termSourceRef": ""
                             },
-                            "typeCurie": "MS:1000443",
-                            "format": "Ontology"
+                            "typeCurie": "",
+                            "format": "Text",
+                            "examples": []
+                        },
+                        "Pulse sequence name": {
+                            "definition": "",
+                            "type": {
+                                "term": "Pulse sequence name",
+                                "termAccessionNumber": "",
+                                "termSourceRef": ""
+                            },
+                            "typeCurie": "",
+                            "format": "Text",
+                            "examples": []
+                        },
+                        "Magnetic field strength": {
+                            "definition": "",
+                            "type": {
+                                "term": "Pulse sequence name",
+                                "termAccessionNumber": "",
+                                "termSourceRef": ""
+                            },
+                            "typeCurie": "",
+                            "format": "Text",
+                            "examples": []
                         }
                     }
                 },
@@ -415,8 +403,8 @@
                     "description": "A planned process that produces output data from raw data.",
                     "type": {
                         "term": "data transformation",
-                        "termSourceRef": "OBI",
-                        "termAccessionNumber": "http://purl.obolibrary.org/obo/OBI_0200000"
+                        "termAccessionNumber": "http://purl.obolibrary.org/obo/OBI_0200000",
+                        "termSourceRef": "OBI"
                     },
                     "typeCurie": "OBI:0200000",
                     "parameters": [],
@@ -427,8 +415,8 @@
                     "description": "Identification of the breakdown products of a substance, either through chemical instability or the actions of enzymes within the body.",
                     "type": {
                         "term": "metabolite identification",
-                        "termSourceRef": "MI",
-                        "termAccessionNumber": "http://purl.obolibrary.org/obo/MI_2131"
+                        "termAccessionNumber": "http://purl.obolibrary.org/obo/MI_2131",
+                        "termSourceRef": "MI"
                     },
                     "typeCurie": "MI:2131",
                     "parameters": [],
