@@ -1,7 +1,7 @@
 {
     "__default_characteristic__": [
         {
-            "ruleName": "default-sample-file-rule-01",
+            "ruleName": "default-sample-characteristic-rule-01",
             "description": "default",
             "fieldName": "",
             "selectionCriteria": {
@@ -13,9 +13,10 @@
                 "isaFileTemplateNameFilter": null,
                 "linkedFieldAndValueFilter": null
             },
-            "enforcementLevel": "recommended",
+            "termEnforcementLevel": "recommended",
+            "unexpectedTermEnforcementLevel": "required",
             "validationType": "any-ontology-term",
-            "constraints": [],
+            "constraints": {},
             "defaultValue": null,
             "allowedMissingOntologyTerms": [],
             "allowedOtherSources": [
@@ -66,7 +67,7 @@
             "unexpectedTerms": []
         },
         {
-            "ruleName": "default-sample-file-rule-02",
+            "ruleName": "default-sample-characteristic-rule-02",
             "description": "default",
             "fieldName": "",
             "selectionCriteria": {
@@ -78,9 +79,10 @@
                 "isaFileTemplateNameFilter": null,
                 "linkedFieldAndValueFilter": null
             },
-            "enforcementLevel": "required",
+            "termEnforcementLevel": "required",
+            "unexpectedTermEnforcementLevel": "required",
             "validationType": "any-ontology-term",
-            "constraints": [],
+            "constraints": {},
             "defaultValue": null,
             "allowedMissingOntologyTerms": [],
             "allowedOtherSources": [

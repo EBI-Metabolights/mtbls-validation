@@ -1,8 +1,7 @@
 package metabolights.validation.v2.rules.phase1.violations
 
-import rego.v1
 import data.metabolights.validation.v2.utils.functions as f
-
+import rego.v1
 
 #########################################################################################################
 #########################################################################################################
@@ -61,6 +60,7 @@ rule_s_100_100_001_03 contains result if {
 	def := data.metabolights.validation.v2.rules.phase1.definitions
 	values := {default_header.columnHeader |
 		some name, default_header in def._DEFAULT_SAMPLE_FILE_HEADERS
+
 		# default_header.required == true
 		not default_header.columnHeader in headers
 	}
@@ -81,7 +81,7 @@ rule_s_100_100_001_04 contains result if {
 	some file_name, _ in input.samples
 	def := data.metabolights.validation.v2.rules.phase1.definitions
 	headers := {sprintf("['%v', column index: %v]", [x, y]) |
-	 	some j, header in input.samples[file_name].table.headers
+		some j, header in input.samples[file_name].table.headers
 		header.columnCategory != "Characteristics"
 		header.columnCategory != "Protocol"
 		header.columnCategory != "Comment"
@@ -163,7 +163,7 @@ rule_s_100_100_001_07 contains result if {
 		y := header.columnIndex + 1
 	}
 	count(headers) > 0
-	source := file_name	
+	source := file_name
 	result := f.format_with_file_and_values(rego.metadata.rule(), source, headers)
 }
 
@@ -184,7 +184,7 @@ rule_s_100_100_001_08 contains result if {
 		header.columnHeader in def._DEFAULT_SAMPLE_HEADER_NAMES
 		header.columnCategory != "Comment"
 	]
-	
+
 	default_headers := def.SELECTED_STUDY_SAMPLE_FILE_TEMPLATE_HEADERS
 	matches := [sprintf("[Column Index: %v: '%v' is expected but found '%v' ]", [x1, x2, x3]) |
 		some j, header in headers
@@ -266,7 +266,6 @@ rule_s_100_100_001_10 contains result if {
 	result := f.format(rego.metadata.rule(), msg, source)
 }
 
-
 # METADATA
 # title: Column header structure is not correct in sample file.
 # description: Column header structure is not correct in sample file. Any ontology and unit column should have the leading columns, Term Source REF and Term Accession Number. Single columns must not have leading columns.
@@ -278,7 +277,7 @@ rule_s_100_100_001_10 contains result if {
 rule_s_100_100_001_11 contains result if {
 	templates := data.metabolights.validation.v2.templates
 	some file_name, _ in input.samples
-	
+
 	headers := {header |
 		some header in input.samples[file_name].table.headers
 		data.metabolights.validation.v2.rules.phase1.definitions._DEFAULT_SAMPLE_FILE_HEADERS[header.columnHeader]
@@ -286,7 +285,6 @@ rule_s_100_100_001_11 contains result if {
 	}
 	default_headers := data.metabolights.validation.v2.rules.phase1.definitions._DEFAULT_SAMPLE_FILE_HEADERS
 	matches := [sprintf("[Column Index: %v: structure of '%v' column is '%v', but expected structure is '%v']", [x1, x2, x3, x4]) |
-		
 		some header in headers
 		default_headers[header.columnHeader]
 		header.columnStructure != default_headers[header.columnHeader].columnStructure
@@ -328,14 +326,13 @@ rule_s_100_100_001_12 contains result if {
 		x3 := header.columnStructure
 	]
 
-	
 	count(matches) > 0
 	headers_str = concat(", ", matches)
+
 	# msg := sprintf("Column structure is not valid in the file '%v'. Invalid columns: %v", [file_name, headers_str])
 	# source := file_name
 	result := f.format_with_file_and_values(rego.metadata.rule(), file_name, matches)
 }
-
 
 # METADATA
 # title: Additional characteristics column structure is not correct in sample file.
@@ -368,7 +365,6 @@ rule_s_100_100_001_13 contains result if {
 	result := f.format_with_file_and_values(rego.metadata.rule(), file_name, matches)
 }
 
-
 # METADATA
 # title: Multiple Characteristics / Factor Value columns with same header are not allowed in sample file.
 # description: Characteristics and Factor Value column headers should be unique in sample file.
@@ -382,10 +378,10 @@ rule_s_100_100_001_14 contains result if {
 	header_names := {header.columnHeader: same_headers |
 		some header in input.samples[file_name].table.headers
 		header.columnCategory in {"Characteristics", "Factor Value"}
-		same_headers := [ idx|
+		same_headers := [idx |
 			some x in input.samples[file_name].table.headers
 			x.columnHeader == header.columnHeader
-			idx := x.columnIndex + 1 
+			idx := x.columnIndex + 1
 		]
 	}
 	matches := {sprintf("[Multiple '%v' columns. Column indices: '%v']", [x1, x2]) |
@@ -397,7 +393,6 @@ rule_s_100_100_001_14 contains result if {
 	count(matches) > 0
 	result := f.format_with_file_and_values(rego.metadata.rule(), file_name, matches)
 }
-
 
 # METADATA
 # title: Missing Factor Value columns in sample file.
@@ -412,26 +407,25 @@ rule_s_100_100_001_15 contains result if {
 
 	some study in input.investigation.studies
 	file_name == study.fileName
-	investigation_factors := { factor.name |
+	investigation_factors := {factor.name |
 		some factor in study.studyFactors.factors
 	}
-	factor_values := { param | 
+	factor_values := {param |
 		some header in sheet.table.headers
 		count(header.columnHeader) > 0
 		startswith(header.columnHeader, "Factor Value[")
 		param1 := replace(header.columnHeader, "Factor Value[", "")
 		param := replace(param1, "]", "")
 	}
-	
+
 	missing := investigation_factors - factor_values
 	count(missing) > 0
-	missing_factor_values := { sprintf("Factor Value[%v]", [x]) | some x in missing }
+	missing_factor_values := {sprintf("Factor Value[%v]", [x]) | some x in missing}
 	missing_factor_values_str = concat(", ", missing_factor_values)
 	missing_factors_str = concat(", ", missing)
 	msg := sprintf("Add factor value column(s): %v for factor(s): %v", [missing_factor_values_str, missing_factors_str])
 	result := f.format(rego.metadata.rule(), msg, file_name)
 }
-
 
 # METADATA
 # title: Unexpected Factor Value columns in sample file.
@@ -446,20 +440,20 @@ rule_s_100_100_001_16 contains result if {
 
 	some study in input.investigation.studies
 	file_name == study.fileName
-	investigation_factors := { factor.name |
+	investigation_factors := {factor.name |
 		some factor in study.studyFactors.factors
 	}
-	factor_values := { param | 
+	factor_values := {param |
 		some header in sheet.table.headers
 		count(header.columnHeader) > 0
 		startswith(header.columnHeader, "Factor Value[")
 		param1 := replace(header.columnHeader, "Factor Value[", "")
 		param := replace(param1, "]", "")
 	}
-	
+
 	extra := factor_values - investigation_factors
 	count(extra) > 0
-	extra_factor_values := { sprintf("Factor Value[%v]", [x]) | some x in extra }
+	extra_factor_values := {sprintf("Factor Value[%v]", [x]) | some x in extra}
 	extra_factor_values_str = concat(", ", extra_factor_values)
 	extra_factors_str = concat(", ", extra)
 	msg := sprintf("Add factor(s) %v in i_Investigation.txt for Factor Value columns defined in the sample file: %v", [extra_factors_str, extra_factor_values_str])
@@ -480,6 +474,7 @@ rule_s_100_100_002_01 contains result if {
 
 	msg := sprintf("There is no row in file '%v'.", [fileName])
 	sourceFile := fileName
+
 	# sourceColumnIndex := ""
 	result := f.format(rego.metadata.rule(), msg, sourceFile)
 }
@@ -501,7 +496,6 @@ rule_s_100_100_002_02 contains result if {
 	result := f.format(rego.metadata.rule(), msg, source)
 }
 
-
 # METADATA
 # title: Sample file not referenced in investigation file.
 # description: Only one sample file is allowed and its name should be 's_(accession number).txt'.
@@ -511,8 +505,7 @@ rule_s_100_100_002_02 contains result if {
 #  priority: CRITICAL
 #  section: samples.filename
 rule_s_100_100_003_01 contains result if {
-	
-	referenced_samples := { study.fileName |
+	referenced_samples := {study.fileName |
 		some study in input.investigation.studies
 	}
 	some sample_file_name, sample in input.samples

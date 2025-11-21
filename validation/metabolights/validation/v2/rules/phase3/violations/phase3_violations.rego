@@ -58,7 +58,6 @@ rule_m_300_090_005_01 contains result if {
 	template.version == data.metabolights.validation.v2.rules.phase1.definitions.STUDY_TEMPLATE_VERSION
 	some template_header in template.headers
 	template_header.required == true
-		
 
 	header.columnHeader == template_header.columnHeader
 	column_name := sheet.table.columns[header.columnIndex]
@@ -135,8 +134,7 @@ rule_m_300_100_001_01 contains result if {
 	values := {sprintf("Row %v", [j]) |
 		some row, value in sheet.table.data[header.columnName]
 		count(trim_space(value)) == 0
-		j := sheet.table.rowOffset + row + 1
-
+		j := (sheet.table.rowOffset + row) + 1
 	}
 	count(values) > 0
 
@@ -157,7 +155,7 @@ rule_m_300_100_001_02 contains result if {
 
 	sheet.assayTechnique.mainTechnique == "MS"
 	header.columnHeader == "retention_time"
-	assays := {assay | 
+	assays := {assay |
 		some assay_name, assay in input.assays
 		assay.assayTechnique.name in {"LC-MS", "GC-MS"}
 		file_name in assay.referencedAssignmentFiles
@@ -167,7 +165,7 @@ rule_m_300_100_001_02 contains result if {
 	values := {sprintf("Row %v", [j]) |
 		some row, value in sheet.table.data[header.columnName]
 		count(trim_space(value)) == 0
-		j := sheet.table.rowOffset + row + 1
+		j := (sheet.table.rowOffset + row) + 1
 	}
 	count(values) > 0
 
@@ -193,7 +191,7 @@ rule_m_300_100_001_03 contains result if {
 	values := {sprintf("Row: %v value: '%v'", [j, value]) |
 		some row, value in sheet.table.data[header.columnName]
 		not regex.match(pattern, value)
-		j := sheet.table.rowOffset + row + 1
+		j := (sheet.table.rowOffset + row) + 1
 	}
 	count(values) > 0
 
@@ -217,7 +215,7 @@ rule_m_300_200_001_01 contains result if {
 	values := {sprintf("Row: %v", [j]) |
 		some row, value in sheet.table.data[header.columnName]
 		count(trim_space(value)) == 0
-		j := sheet.table.rowOffset + row + 1
+		j := (sheet.table.rowOffset + row) + 1
 	}
 	count(values) > 0
 
@@ -243,7 +241,7 @@ rule_m_300_200_001_02 contains result if {
 	values := {sprintf("Row: %v value: '%v'", [j, value]) |
 		some row, value in sheet.table.data[header.columnName]
 		not regex.match(pattern, value)
-		j := sheet.table.rowOffset + row + 1
+		j := (sheet.table.rowOffset + row) + 1
 	}
 	count(values) > 0
 
@@ -268,7 +266,7 @@ rule_m_300_200_001_03 contains result if {
 	values := {sprintf("Row: %v", [j]) |
 		some row, value in sheet.table.data[header.columnName]
 		count(trim_space(value)) == 0
-		j := sheet.table.rowOffset + row + 1
+		j := (sheet.table.rowOffset + row) + 1
 	}
 	count(values) > 0
 

@@ -6,7 +6,7 @@
             "fieldName": "Factor Value[Disease]",
             "selectionCriteria": {
                 "isaFileType": "sample",
-                "studyCreatedAtOrAfter": "2025-12-01",
+                "studyCreatedAtOrAfter": "2025-12-01T00:00:00",
                 "studyCreatedBefore": null,
                 "studyCategoryFilter": null,
                 "templateVersionFilter": null,
@@ -18,9 +18,10 @@
                     }
                 ]
             },
-            "enforcementLevel": "required",
+            "termEnforcementLevel": "required",
+            "unexpectedTermEnforcementLevel": "required",
             "validationType": "ontology-term-in-selected-ontologies",
-            "constraints": [],
+            "constraints": {},
             "defaultValue": null,
             "allowedMissingOntologyTerms": [
                 {
@@ -67,9 +68,10 @@
                     }
                 ]
             },
-            "enforcementLevel": "recommended",
+            "termEnforcementLevel": "recommended",
+            "unexpectedTermEnforcementLevel": "required",
             "validationType": "any-ontology-term",
-            "constraints": [],
+            "constraints": {},
             "defaultValue": null,
             "allowedMissingOntologyTerms": [
                 {

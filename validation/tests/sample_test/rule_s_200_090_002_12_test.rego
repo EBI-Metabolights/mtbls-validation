@@ -7,11 +7,11 @@ import data.metabolights.validation.v2.rules.phase2.violations as rules
 import rego.v1
 
 # METADATA
-# title: Value is not in the control list.
-# description: The value MUST be in the selected values.
+# title: Characteristic value is not in the predefined ontologies or controlled lists associated with this column
+# description: A term SHOULD be selected from the predefined ontologies or controlled lists associated with this column.
 # custom:
 #  rule_id: rule_s_200_090_002_12
-#  type: ERROR
+#  type: WARNING
 #  priority: HIGH
 #  section: samples.general
 rule_s_200_090_002_12_test_cases := 1

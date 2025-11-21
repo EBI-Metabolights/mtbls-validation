@@ -1,7 +1,7 @@
 {
     "__default_factor_value__": [
         {
-            "ruleName": "default-sample-file-rule-01",
+            "ruleName": "default-sample-factor_value-rule-01",
             "description": "default",
             "fieldName": "",
             "selectionCriteria": {
@@ -13,9 +13,10 @@
                 "isaFileTemplateNameFilter": null,
                 "linkedFieldAndValueFilter": null
             },
-            "enforcementLevel": "recommended",
+            "termEnforcementLevel": "recommended",
+            "unexpectedTermEnforcementLevel": "required",
             "validationType": "any-ontology-term",
-            "constraints": [],
+            "constraints": {},
             "defaultValue": null,
             "allowedMissingOntologyTerms": [],
             "allowedOtherSources": [

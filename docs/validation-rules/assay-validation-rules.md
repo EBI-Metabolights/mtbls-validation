@@ -35,15 +35,15 @@
 | 31 | rule_a_200_090_002_04 | WARNING | Ontology Term Source REF defined for empty ontology terms. | Select ontology terms and/or change ontology Term Source REF. |
 | 32 | rule_a_200_090_002_05 | WARNING | Ontology Term Source REF of Unit is not selected from the prioritised ontologies. | Select a unit term from one of the prioritised sources where possible. |
 | 33 | rule_a_200_090_002_06 | WARNING | Ontology Term Source REF defined for empty unit ontology terms. | Select unit ontology terms and/or change ontology Term Source REF. |
-| 34 | rule_a_200_090_002_09 | ERROR | Term is not in the control list. | The term MUST be in the selected ontology terms. |
-| 35 | rule_a_200_090_002_10 | ERROR | Value is not in the control list. | The value MUST be in the selected values. |
-| 36 | rule_a_200_090_002_13 | ERROR | Term is not in the selected ontologies. | The term MUST be defined in the the selected ontologies. |
-| 37 | rule_a_200_090_002_14 | ERROR | Term is not a child of of the selected ontology terms. | The term MUST be a child of the selected ontology terms. |
-| 38 | rule_a_200_090_002_15 | ERROR | Value has not a valid pattern. | The column value must have a valid pattern value. |
-| 39 | rule_a_200_090_002_16 | ERROR | Unexpected value in the ontology column. | There is an unexpected value list for the selected column. Use valid text, ontology term or controlled vocabulary for the selected ontology column. |
-| 40 | rule_a_200_090_002_17 | ERROR | Unexpected value in the ontology column. | There is a general unexpected value list. Use valid text, ontology term or controlled vocabulary for the selected ontology column. |
-| 41 | rule_a_200_090_002_18 | ERROR | Unexpected value in the column. | There is an unexpected value list for the selected column. Use valid text, ontology term or controlled vocabulary for the selected column. |
-| 42 | rule_a_200_090_002_19 | ERROR | Unexpected value in the column. | There is a general unexpected value list. Use valid text, ontology term or controlled vocabulary for the selected column. |
+| 34 | rule_a_200_090_002_21 | ERROR | Value is not in the required ontologies or controlled lists associated with this column | A term MUST be selected from the required ontologies or controlled lists associated with this column. |
+| 35 | rule_a_200_090_002_22 | WARNING | Value is not in the predefined ontologies or controlled lists associated with this column | A term SHOULD be selected from the predefined ontologies or controlled lists associated with this column. |
+| 36 | rule_a_200_090_002_23 | WARNING | Value is not in the default ontologies or controlled lists | A term SHOULD be selected from the default ontologies or controlled lists. |
+| 37 | rule_a_200_090_002_24 | ERROR | The value does not match the required pattern. | The column value MUST have a valid pattern value. |
+| 38 | rule_a_200_090_002_25 | WARNING | The value does not match the recommended pattern. | The column value SHOULD have a valid pattern value. |
+| 39 | rule_a_200_090_002_26 | ERROR | The value appears in the list of unexpected values for this column. | Select an alternative term or value that meets the requirement. |
+| 40 | rule_a_200_090_002_27 | WARNING | The value appears in the list of not-recommended values for this column. | Select an alternative value that meets the requirement or leave it empty (if it is not required). |
+| 41 | rule_a_200_090_002_28 | ERROR | The value appears in the list of default unexpected values. | Select an alternative term or value that meets the requirement. |
+| 42 | rule_a_200_090_002_29 | WARNING | The value appears in the list of default not-recommended values. | Select an alternative value that meets the requirement or leave it empty (if it is not required). |
 | 43 | rule_a_200_090_003_01 | WARNING | Term Accession Number length of ontology terms less than 3 characters. | Term Accession Number of ontology terms should be defined with length equal or greater than 3 characters. |
 | 44 | rule_a_200_090_003_02 | WARNING | Term Accession number length of unit ontology terms less than 3 characters. | Term Accession Number of unit ontology terms should be defined with length equal or greater than 3 characters. |
 | 45 | rule_a_200_090_003_03 | WARNING | Term Accession Number defined for empty ontology terms. | Select ontology terms and/or change ontology Term Accession Number. |

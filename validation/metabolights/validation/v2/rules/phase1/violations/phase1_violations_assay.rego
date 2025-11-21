@@ -1,16 +1,14 @@
 package metabolights.validation.v2.rules.phase1.violations
 
-import rego.v1
-import data.metabolights.validation.v2.utils.functions as f
 import data.metabolights.validation.v2.rules.phase1.definitions as def
-
+import data.metabolights.validation.v2.utils.functions as f
+import rego.v1
 
 # #########################################################################################################
 # #########################################################################################################
 # # ASSAY FILES
 # #########################################################################################################
 # #########################################################################################################
-
 
 # METADATA
 # title: Invalid multi-column structure in assay file.
@@ -57,10 +55,11 @@ rule_a_100_100_001_02 contains result if {
 rule_a_100_100_001_03 contains result if {
 	some file_name, assay_file in input.assays
 	some header in assay_file.table.headers
-	def := data.metabolights.validation.v2.rules.phase1.definitions 
+	def := data.metabolights.validation.v2.rules.phase1.definitions
 	headers := {x | some j; x := assay_file.table.headers[j].columnHeader}
 	values := [sprintf("['%v']", [x]) |
 		some default_header in def._DEFAULT_ASSAY_HEADERS[file_name].headers
+
 		# defaults[j].required == true
 		not default_header.columnHeader in headers
 		x := default_header.columnHeader
@@ -68,7 +67,6 @@ rule_a_100_100_001_03 contains result if {
 	sourceFile := file_name
 	result := f.format_with_file_and_values(rego.metadata.rule(), sourceFile, values)
 }
-
 
 # METADATA
 # title: Unexpected column in assay file.
@@ -81,7 +79,7 @@ rule_a_100_100_001_03 contains result if {
 rule_a_100_100_001_04 contains result if {
 	some file_name, assay_file in input.assays
 
-	def := data.metabolights.validation.v2.rules.phase1.definitions 
+	def := data.metabolights.validation.v2.rules.phase1.definitions
 	values := {sprintf("[column: %v, header: '%v']", [x, y]) |
 		some header in assay_file.headers
 
@@ -110,7 +108,7 @@ rule_a_100_100_001_04 contains result if {
 #  section: assays.columns
 rule_a_100_100_001_05 contains result if {
 	some file_name, _ in input.assays
-	def := data.metabolights.validation.v2.rules.phase1.definitions 
+	def := data.metabolights.validation.v2.rules.phase1.definitions
 	assay_protocol_headers := def.__ASSAY_PROTOCOL_HEADER_COLUMNS[file_name]
 	default_protocol_headers := def.__ASSAY_DEFAULT_PROTOCOL_HEADERS[file_name]
 	count(default_protocol_headers) < count(assay_protocol_headers)
@@ -133,7 +131,7 @@ rule_a_100_100_001_05 contains result if {
 #  section: assays.columns
 rule_a_100_100_001_06 contains result if {
 	input.assays[fileName]
-	def := data.metabolights.validation.v2.rules.phase1.definitions 
+	def := data.metabolights.validation.v2.rules.phase1.definitions
 	assayProtocolHeaders := def.__ASSAY_PROTOCOL_HEADER_COLUMNS[fileName]
 	defaultHeaders := def.__ASSAY_DEFAULT_PROTOCOL_HEADERS[fileName]
 	count(defaultHeaders) > count(assayProtocolHeaders)
@@ -177,10 +175,9 @@ rule_a_100_100_001_07 contains result if {
 #  priority: CRITICAL
 #  section: assays.columns
 rule_a_100_100_001_08 contains result if {
-	
 	some file_name, _ in input.assays
-	def := data.metabolights.validation.v2.rules.phase1.definitions 
-	
+	def := data.metabolights.validation.v2.rules.phase1.definitions
+
 	headers := [header |
 		some header in input.assays[file_name].table.headers
 		header.columnHeader in def._DEFAULT_ASSAY_HEADER_NAMES[file_name]
@@ -188,7 +185,7 @@ rule_a_100_100_001_08 contains result if {
 	]
 
 	count(headers) > 0
-	
+
 	default_headers := [header | some header in def._DEFAULT_ASSAY_HEADERS[file_name].headers; not endswith(header.columnHeader, " Data File")]
 
 	matches := [sprintf("[Expected column at '%v': '%v', found '%v']", [x1, x2, x3]) |
@@ -203,7 +200,6 @@ rule_a_100_100_001_08 contains result if {
 	result := f.format_with_file_and_values(rego.metadata.rule(), sourceFile, matches)
 }
 
-
 # METADATA
 # title: Multiple Parameter Value columns with same header are not allowed in assay file.
 # description: Parameter Value column headers should be unique in assay file.
@@ -217,10 +213,10 @@ rule_a_100_100_001_09 contains result if {
 	header_names := {header.columnHeader: same_headers |
 		some header in input.assays[file_name].table.headers
 		header.columnCategory == "Parameter Value"
-		same_headers := [ idx|
+		same_headers := [idx |
 			some x in input.assays[file_name].table.headers
 			x.columnHeader == header.columnHeader
-			idx := x.columnIndex + 1 
+			idx := x.columnIndex + 1
 		]
 	}
 	matches := {sprintf("[Multiple '%v' columns. Column indices: '%v']", [x1, x2]) |
@@ -232,7 +228,6 @@ rule_a_100_100_001_09 contains result if {
 	count(matches) > 0
 	result := f.format_with_file_and_values(rego.metadata.rule(), file_name, matches)
 }
-
 
 # METADATA
 # title: Column header name defined in template is not unique in assay file.
@@ -250,15 +245,15 @@ rule_a_100_100_001_10 contains result if {
 		some header_set in def._DEFAULT_ASSAY_HEADERS[file_name]
 
 		header_set.version == data.metabolights.validation.v2.rules.phase1.definitions.STUDY_TEMPLATE_VERSION
-		
+
 		some header in header_set.headers
 		not startswith(header.columnHeader, "Comment[")
 		not startswith(header.columnHeader, "Protocol REF")
 		not endswith(header.columnHeader, " Data File")
-		same_headers := [ idx |
+		same_headers := [idx |
 			some x in input.assays[file_name].table.headers
 			x.columnHeader == header.columnHeader
-			idx := x.columnIndex + 1 
+			idx := x.columnIndex + 1
 		]
 	}
 
@@ -273,7 +268,6 @@ rule_a_100_100_001_10 contains result if {
 	result := f.format_with_file_and_values(rego.metadata.rule(), file_name, matches)
 }
 
-
 # METADATA
 # title: Assay Parameter Value names not in investigation file.
 # description: Assay Parameter Value names must be referenced in i_Investigation.txt.
@@ -286,11 +280,11 @@ rule_a_100_100_001_11 contains result if {
 	some file_name, assay in input.assays
 	some study in input.investigation.studies
 	input.investigation.studies
-	parameter_names := { x.term | 
+	parameter_names := {x.term |
 		some protocol in study.studyProtocols.protocols
 		some x in protocol.parameters
 	}
-	assay_parameters := { param | 
+	assay_parameters := {param |
 		some header in assay.table.headers
 		count(header.columnHeader) > 0
 		startswith(header.columnHeader, "Parameter Value[")
@@ -320,7 +314,6 @@ rule_a_100_100_001_12 contains result if {
 		not startswith(header.columnHeader, "Protocol REF")
 		not startswith(header.columnHeader, "Term Source REF")
 		not startswith(header.columnHeader, "Term Accession Number")
-		
 	]
 	some header_set in def._DEFAULT_ASSAY_HEADERS[file_name]
 	header_set.version == def.STUDY_TEMPLATE_VERSION
@@ -332,14 +325,10 @@ rule_a_100_100_001_12 contains result if {
 		not startswith(header.columnHeader, "Term Source REF")
 		not startswith(header.columnHeader, "Term Accession Number")
 		not header.columnHeader in header_names
-		
 	]
 	count(matches) > 0
 	result := f.format_with_file_and_values(rego.metadata.rule(), file_name, matches)
 }
-
-
-
 
 # METADATA
 # title: Column header structure is not correct in assay file.
@@ -363,16 +352,16 @@ rule_a_100_100_001_13 contains result if {
 	some template in templates
 	template.version == data.metabolights.validation.v2.rules.phase1.definitions.STUDY_TEMPLATE_VERSION
 
-	unique_header_names := {header.columnHeader: columns | 
+	unique_header_names := {header.columnHeader: columns |
 		some header in template.headers
-		columns := [ x |
+		columns := [x |
 			some x in template.headers
 			x.columnHeader == header.columnHeader
 		]
 	}
-	default_headers := {header_name: first_header | 
+	default_headers := {header_name: first_header |
 		some header_name, header_list in unique_header_names
-		first_header = header_list[0]	
+		first_header = header_list[0]
 	}
 	some j, header in headers
 	default_headers[header.columnHeader]
@@ -394,12 +383,12 @@ rule_a_100_100_001_13 contains result if {
 #  priority: CRITICAL
 #  section: assays.filename
 rule_a_100_100_002_01 contains result if {
-	some file_name, _ in  input.assays
+	some file_name, _ in input.assays
 	some study in input.investigation.studies
-	
+
 	referenced_assay_files := {x.fileName | some x in study.studyAssays.assays}
 	not file_name in referenced_assay_files
-	
+
 	msg := sprintf("Assay file '%v' is not referenced in i_Investigation.txt file. Expected '%v'", [file_name, study.fileName])
 	source := file_name
 	result := f.format(rego.metadata.rule(), msg, source)
@@ -419,6 +408,7 @@ rule_a_100_100_005_01 contains result if {
 
 	msg := sprintf("There is no row in the file '%v'.", [fileName])
 	sourceFile := fileName
+
 	# sourceColumnIndex := ""
 	result := f.format(rego.metadata.rule(), msg, sourceFile)
 }

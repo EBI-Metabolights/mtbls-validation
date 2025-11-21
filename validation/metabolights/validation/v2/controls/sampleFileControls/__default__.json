@@ -13,9 +13,10 @@
                 "isaFileTemplateNameFilter": null,
                 "linkedFieldAndValueFilter": null
             },
-            "enforcementLevel": "optional",
+            "termEnforcementLevel": "optional",
+            "unexpectedTermEnforcementLevel": "required",
             "validationType": "any-ontology-term",
-            "constraints": [],
+            "constraints": {},
             "defaultValue": null,
             "allowedMissingOntologyTerms": [],
             "allowedOtherSources": [
@@ -37,7 +38,7 @@
                     "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/placeholder",
                     "termSourceRef": "MTBLS"
                 },
-                 {
+                {
                     "termAccessionNumber": "",
                     "termSourceRef": ""
                 }

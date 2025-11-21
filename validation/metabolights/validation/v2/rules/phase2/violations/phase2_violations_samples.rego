@@ -2,9 +2,9 @@ package metabolights.validation.v2.rules.phase2.violations
 
 import rego.v1
 
-import data.metabolights.validation.v2.utils.functions as f
-import data.metabolights.validation.v2.rules.phase2.definitions as def
 import data.metabolights.validation.v2.rules.phase1.definitions as def1
+import data.metabolights.validation.v2.rules.phase2.definitions as def
+import data.metabolights.validation.v2.utils.functions as f
 
 # #########################################################################################################
 # #########################################################################################################
@@ -46,7 +46,7 @@ rule_s_200_090_001_01 contains result if {
 
 # METADATA
 # title: Ontology Term Source REF is not selected from the prioritised ontologies.
-# description: Select a term from one of the prioritised sources where possible.
+# description: The term is not in the control list or selected ontologies.
 # custom:
 #  rule_id: rule_s_200_090_002_01
 #  type: WARNING
@@ -57,21 +57,22 @@ rule_s_200_090_002_01 contains result if {
 	some column_index, header in input.samples[file_name].table.headers
 	control_lists := data.metabolights.validation.v2.controls.sampleFileControls
 	selected_validation_types = {"any-ontology-term"}
-	result := f.term_source_ref_not_valid(
-		rego.metadata.rule(), 
+	enforcement_levels = {"required"}
+	result := f.check_rule_by_enforcement_level(
+		rego.metadata.rule(),
 		def1.STUDY_CATEGORY,
 		def1.STUDY_TEMPLATE_VERSION,
 		def1.STUDY_CREATED_AT,
 		def1.STUDY_SAMPLE_TEMPLATE_NAME,
-		"sample",
-		file_table.table, 
-		file_name, 
-		column_index, 
+		"samplex",
+		file_table.table,
+		file_name,
+		column_index,
 		selected_validation_types,
+		enforcement_levels,
 		control_lists,
 		header.columnHeader,
-		"Prioritised ontologies"
-		)
+	)
 }
 
 # METADATA
@@ -117,20 +118,20 @@ rule_s_200_090_002_05 contains result if {
 	header.columnStructure == "SINGLE_COLUMN_AND_UNIT_ONTOLOGY"
 	selected_validation_types = {"any-ontology-term"}
 	result := f.term_source_ref_for_unit_not_valid(
-		rego.metadata.rule(), 
+		rego.metadata.rule(),
 		def1.STUDY_CATEGORY,
 		def1.STUDY_TEMPLATE_VERSION,
 		def1.STUDY_CREATED_AT,
 		def1.STUDY_SAMPLE_TEMPLATE_NAME,
 		"sample",
-		file_table.table, 
-		file_name, 
-		column_index, 
+		file_table.table,
+		file_name,
+		column_index,
 		selected_validation_types,
 		control_lists,
 		"Unit",
-		"Prioritised default Unit ontologies"
-		)
+		"Prioritised default Unit ontologies",
+	)
 }
 
 # METADATA
@@ -146,10 +147,9 @@ rule_s_200_090_002_06 contains result if {
 	result := f.term_source_ref_is_defined_for_empty_unit(rego.metadata.rule(), input.samples, fileName, columnIndex)
 }
 
-
 # METADATA
-# title: Term is not in the selected ontologies.
-# description: The term MUST be defined in the the selected ontologies.
+# title: Value is not in the required ontologies or controlled lists associated with this column
+# description: A term MUST be selected from the required ontologies or controlled lists associated with this column.
 # custom:
 #  rule_id: rule_s_200_090_002_09
 #  type: ERROR
@@ -159,130 +159,153 @@ rule_s_200_090_002_09 contains result if {
 	control_lists := data.metabolights.validation.v2.controls.sampleFileControls
 	some file_name, file_table in input.samples
 	some column_index, header in input.samples[file_name].table.headers
-	selected_validation_types = {"ontology-term-in-selected-ontologies"}
+	selected_validation_types = {
+		"ontology-term-in-selected-ontologies",
+		"child-ontology-term",
+		"any-ontology-term",
+		"selected-ontology-term",
+	}
+	enforcement_levels = {"required"}
 	control_lists[header.columnHeader]
-	header.columnStructure == "ONTOLOGY_COLUMN"
-	result := f.term_source_ref_not_valid(
-		rego.metadata.rule(), 
+
+	# print(header.columnHeader)
+	result := f.check_rule_by_enforcement_level(
+		rego.metadata.rule(),
 		def1.STUDY_CATEGORY,
 		def1.STUDY_TEMPLATE_VERSION,
 		def1.STUDY_CREATED_AT,
 		def1.STUDY_SAMPLE_TEMPLATE_NAME,
 		"sample",
-		file_table.table, 
-		file_name, 
-		column_index, 
+		file_table.table,
+		file_name,
+		column_index,
 		selected_validation_types,
+		enforcement_levels,
 		control_lists,
 		header.columnHeader,
-		"Valid ontologies"
-		)
+	)
 }
 
 # METADATA
-# title: Term is not a child of of the selected ontology terms.
-# description: The term MUST be a child of the selected ontology terms.
+# title: Value is not in the predefined ontologies or controlled lists associated with this column
+# description: A term SHOULD be selected from the predefined ontologies or controlled lists associated with this column.
 # custom:
 #  rule_id: rule_s_200_090_002_10
-#  type: ERROR
+#  type: WARNING
 #  priority: HIGH
 #  section: samples.general
 rule_s_200_090_002_10 contains result if {
 	control_lists := data.metabolights.validation.v2.controls.sampleFileControls
 	some file_name, file_table in input.samples
 	some column_index, header in input.samples[file_name].table.headers
-	selected_validation_types = {"child-ontology-term"}
+	selected_validation_types = {
+		"ontology-term-in-selected-ontologies",
+		"child-ontology-term",
+		"any-ontology-term",
+		"selected-ontology-term",
+	}
+	enforcement_levels = {"recommended", "optional"}
 	control_lists[header.columnHeader]
-	header.columnStructure == "ONTOLOGY_COLUMN"
-	# print(header.columnHeader)
-	result := f.term_source_ref_not_valid(
-		rego.metadata.rule(), 
+
+	# header.columnStructure in {"ONTOLOGY_COLUMN", "SINGLE_COLUMN_AND_UNIT_ONTOLOGY"}
+	result := f.check_rule_by_enforcement_level(
+		rego.metadata.rule(),
 		def1.STUDY_CATEGORY,
 		def1.STUDY_TEMPLATE_VERSION,
 		def1.STUDY_CREATED_AT,
 		def1.STUDY_SAMPLE_TEMPLATE_NAME,
 		"sample",
-		file_table.table, 
-		file_name, 
-		column_index, 
+		file_table.table,
+		file_name,
+		column_index,
 		selected_validation_types,
+		enforcement_levels,
 		control_lists,
 		header.columnHeader,
-		"Valid ontologies"
-		)
+	)
 }
 
 # METADATA
-# title: Term is not in the control list.
-# description: The term MUST be in the selected ontology terms.
+# title: Factor value is not in the predefined ontologies or controlled lists associated with this column
+# description: A term SHOULD be selected from the predefined ontologies or controlled lists associated with this column.
 # custom:
 #  rule_id: rule_s_200_090_002_11
-#  type: ERROR
+#  type: WARNING
 #  priority: HIGH
 #  section: samples.general
 rule_s_200_090_002_11 contains result if {
 	control_lists := data.metabolights.validation.v2.controls.sampleFileControls
 	some file_name, file_table in input.samples
 	some column_index, header in input.samples[file_name].table.headers
-	selected_validation_types = {"selected-ontology-term"}
-	control_lists[header.columnHeader]
-	header.columnStructure == "ONTOLOGY_COLUMN"
-	# print(header.columnHeader)
-	result := f.ontology_term_not_in_selected_terms(
-		rego.metadata.rule(), 
+	not control_lists[header.columnHeader]
+	enforcement_levels = {"required", "recommended", "optional"}
+	selected_validation_types = {
+		"ontology-term-in-selected-ontologies",
+		"child-ontology-term",
+		"any-ontology-term",
+		"selected-ontology-term",
+	}
+	startswith(header.columnHeader, "Factor Value[")
+	result := f.check_rule_by_enforcement_level(
+		rego.metadata.rule(),
 		def1.STUDY_CATEGORY,
 		def1.STUDY_TEMPLATE_VERSION,
 		def1.STUDY_CREATED_AT,
 		def1.STUDY_SAMPLE_TEMPLATE_NAME,
 		"sample",
-		file_table.table, 
-		file_name, 
-		column_index, 
+		file_table.table,
+		file_name,
+		column_index,
 		selected_validation_types,
+		enforcement_levels,
 		control_lists,
-		header.columnHeader,
-		"Controlled terms"
-		)
+		"__default_factor_value__",
+	)
 }
 
-
 # METADATA
-# title: Value is not in the control list.
-# description: The value MUST be in the selected values.
+# title: Characteristic value is not in the predefined ontologies or controlled lists associated with this column
+# description: A term SHOULD be selected from the predefined ontologies or controlled lists associated with this column.
 # custom:
 #  rule_id: rule_s_200_090_002_12
-#  type: ERROR
+#  type: WARNING
 #  priority: HIGH
 #  section: samples.general
 rule_s_200_090_002_12 contains result if {
 	control_lists := data.metabolights.validation.v2.controls.sampleFileControls
 	some file_name, file_table in input.samples
-	some column_index, header in file_table.table.headers
-	selected_validation_types = {"selected-ontology-term"}
-	control_lists[header.columnHeader]
-	header.columnStructure == "SINGLE_COLUMN"
-	template_name := def1.STUDY_SAMPLE_TEMPLATE_NAME
-	# print(header.columnHeader, template_name)
-	result := f.term_value_not_in_selected_terms(
-		rego.metadata.rule(), 
+	some column_index, header in input.samples[file_name].table.headers
+	not control_lists[header.columnHeader]
+	startswith(header.columnHeader, "Characteristics[")
+
+	# header.columnStructure == "ONTOLOGY_COLUMN"
+	selected_validation_types = {
+		"ontology-term-in-selected-ontologies",
+		"child-ontology-term",
+		"any-ontology-term",
+		"selected-ontology-term",
+	}
+	enforcement_levels = {"required", "recommended", "optional"}
+
+	result := f.check_rule_by_enforcement_level(
+		rego.metadata.rule(),
 		def1.STUDY_CATEGORY,
 		def1.STUDY_TEMPLATE_VERSION,
 		def1.STUDY_CREATED_AT,
-		template_name,
+		def1.STUDY_SAMPLE_TEMPLATE_NAME,
 		"sample",
-		file_table.table, 
-		file_name, 
-		column_index, 
+		file_table.table,
+		file_name,
+		column_index,
 		selected_validation_types,
+		enforcement_levels,
 		control_lists,
-		header.columnHeader,
-		"Controlled terms"
-		)
+		"__default_characteristic__",
+	)
 }
 
-
 # METADATA
-# title: Value has not a valid pattern.
+# title: The value does not match the required pattern.
 # description: The column value MUST have a valid pattern value.
 # custom:
 #  rule_id: rule_s_200_090_002_13
@@ -294,20 +317,51 @@ rule_s_200_090_002_13 contains result if {
 	some file_name, file_table in input.samples
 	some column_index, header in input.samples[file_name].table.headers
 	control_lists[header.columnHeader]
+	enforcement_levels = {"required"}
 	result := f.term_value_has_invalid_pattern(
-		rego.metadata.rule(), 
+		rego.metadata.rule(),
 		def1.STUDY_CATEGORY,
 		def1.STUDY_TEMPLATE_VERSION,
 		def1.STUDY_CREATED_AT,
 		def1.STUDY_SAMPLE_TEMPLATE_NAME,
 		"sample",
-		file_table.table, 
-		file_name, 
-		column_index, 
+		file_table.table,
+		file_name,
+		column_index,
+		enforcement_levels,
 		control_lists,
 		header.columnHeader,
-		"Expected value pattern"
-		)
+	)
+}
+
+# METADATA
+# title: The value does not match the recommended pattern.
+# description: The column value SHOULD have a valid pattern value.
+# custom:
+#  rule_id: rule_s_200_090_002_14
+#  type: WARNING
+#  priority: HIGH
+#  section: samples.general
+rule_s_200_090_002_14 contains result if {
+	control_lists := data.metabolights.validation.v2.controls.sampleFileControls
+	some file_name, file_table in input.samples
+	some column_index, header in input.samples[file_name].table.headers
+	control_lists[header.columnHeader]
+	enforcement_levels = {"recommended", "optional"}
+	result := f.term_value_has_invalid_pattern(
+		rego.metadata.rule(),
+		def1.STUDY_CATEGORY,
+		def1.STUDY_TEMPLATE_VERSION,
+		def1.STUDY_CREATED_AT,
+		def1.STUDY_SAMPLE_TEMPLATE_NAME,
+		"sample",
+		file_table.table,
+		file_name,
+		column_index,
+		enforcement_levels,
+		control_lists,
+		header.columnHeader,
+	)
 }
 
 # METADATA
@@ -374,13 +428,23 @@ rule_s_200_090_004_01 contains result if {
 	some file_name, _ in input.samples
 	row_offset := input.samples[file_name].table.rowOffset
 	template := data.metabolights.validation.v2.rules.phase1.definitions.SELECTED_STUDY_SAMPLE_FILE_TEMPLATE
-	some header in template.headers
-	header.required == true
-	header.minLength > 0
-	column_header = header.columnHeader
-
+	required_template_headers := {x |
+		some header in template.headers
+		header.required == true
+		header.minLength > 0
+		x := header.columnHeader
+	}
+	required_enforcement_headers = {header |
+		some sample_header in input.samples[file_name].table.headers
+		rule := def1.get_sample_field_validation(def1.__SAMPLE_RULES__, sample_header.columnHeader)
+		rule.termEnforcementLevel == "required"
+		header := sample_header.columnHeader
+	}
+	required_headers := required_template_headers | required_enforcement_headers
 	some sample_header in input.samples[file_name].table.headers
-	sample_header.columnHeader == column_header
+	column_header := sample_header.columnHeader
+	sample_header.columnHeader in required_headers
+
 	column_index := sample_header.columnIndex
 	column_name := input.samples[file_name].table.columns[column_index]
 	violated_values := f.empty_value_check(input.samples, file_name, column_name, row_offset)
@@ -464,139 +528,170 @@ rule_s_200_090_005_01 contains result if {
 	result := f.format_with_desc(rego.metadata.rule(), file_name, column_index + 1, header.columnHeader, violated_values, "Expected value", default_value_str)
 }
 
-
 # METADATA
-# title: Unexpected value in the ontology column.
-# description: There is an unexpected value list for the selected column. Use valid text, ontology term or controlled vocabulary for the selected ontology column.
+# title: The value appears in the list of unexpected values for this column.
+# description: Select an alternative term or value that meets the requirement.
 # custom:
-#  rule_id: rule_s_200_090_006_01
+#  rule_id: rule_s_200_090_007_01
 #  type: ERROR
 #  priority: HIGH
 #  section: samples.general
-rule_s_200_090_006_01 contains result if {
+rule_s_200_090_007_01 contains result if {
 	control_lists := data.metabolights.validation.v2.controls.sampleFileControls
 	some file_name, file_table in input.samples
 	some column_index, header in input.samples[file_name].table.headers
-	selected_validation_types = {"selected-ontology-term", "any-ontology-term", "child-ontology-term", "ontology-term-in-selected-ontologies"}
+
 	control_lists[header.columnHeader]
-	header.columnStructure in {"ONTOLOGY_COLUMN", "SINGLE_COLUMN_AND_UNIT_ONTOLOGY"}
-	result := f.ontology_term_has_unexpected_value(
-		rego.metadata.rule(), 
+	selected_validation_types = {
+		"selected-ontology-term",
+		"any-ontology-term",
+		"child-ontology-term",
+		"ontology-term-in-selected-ontologies",
+		"check-only-constraints",
+	}
+	enforcement_levels = {"required"}
+	result := f.check_unexpected_value(
+		rego.metadata.rule(),
 		def1.STUDY_CATEGORY,
 		def1.STUDY_TEMPLATE_VERSION,
 		def1.STUDY_CREATED_AT,
 		def1.STUDY_SAMPLE_TEMPLATE_NAME,
 		"sample",
-		file_table.table, 
-		file_name, 
-		column_index, 
+		file_table.table,
+		file_name,
+		column_index,
 		selected_validation_types,
+		enforcement_levels,
 		control_lists,
-		header.columnHeader,
-		"Do not use these unexpected terms"
-		)
+		header.columnHeader
+	)
 }
 
-
 # METADATA
-# title: Unexpected value in the ontology column.
-# description: There is a general unexpected value list. Use valid text, ontology term or controlled vocabulary for the selected ontology column.
+# title: The value appears in the list of not-recommended values for this column.
+# description: Select an alternative value that meets the requirement or leave it empty (if it is not required).
 # custom:
-#  rule_id: rule_s_200_090_006_02
-#  type: ERROR
+#  rule_id: rule_s_200_090_007_02
+#  type: WARNING
 #  priority: HIGH
 #  section: samples.general
-rule_s_200_090_006_02 contains result if {
+rule_s_200_090_007_02 contains result if {
 	control_lists := data.metabolights.validation.v2.controls.sampleFileControls
 	some file_name, file_table in input.samples
 	some column_index, header in input.samples[file_name].table.headers
-	selected_validation_types = {"selected-ontology-term", "any-ontology-term", "child-ontology-term", "ontology-term-in-selected-ontologies"}
+
 	control_lists[header.columnHeader]
-	header.columnStructure in {"ONTOLOGY_COLUMN", "SINGLE_COLUMN_AND_UNIT_ONTOLOGY"}
-	result := f.ontology_term_has_unexpected_value(
-		rego.metadata.rule(), 
+	selected_validation_types = {
+		"selected-ontology-term",
+		"any-ontology-term",
+		"child-ontology-term",
+		"ontology-term-in-selected-ontologies",
+		"check-only-constraints",
+	}
+	enforcement_levels = {"recommended", "optional"}
+	result := f.check_unexpected_value(
+		rego.metadata.rule(),
 		def1.STUDY_CATEGORY,
 		def1.STUDY_TEMPLATE_VERSION,
 		def1.STUDY_CREATED_AT,
 		def1.STUDY_SAMPLE_TEMPLATE_NAME,
 		"sample",
-		file_table.table, 
-		file_name, 
-		column_index, 
+		file_table.table,
+		file_name,
+		column_index,
 		selected_validation_types,
+		enforcement_levels,
 		control_lists,
-		"__default__",
-		"Do not use these unexpected terms"
-		)
+		header.columnHeader
+	)
 }
 
-
-
 # METADATA
-# title: Unexpected value in the column.
-# description: There is an unexpected value list for the selected column. Use valid text, ontology term or controlled vocabulary for the selected column.
+# title: The value appears in the list of default unexpected values.
+# description: Select an alternative term or value that meets the requirement.
 # custom:
-#  rule_id: rule_s_200_090_006_03
+#  rule_id: rule_s_200_090_007_03
 #  type: ERROR
 #  priority: HIGH
 #  section: samples.general
-rule_s_200_090_006_03 contains result if {
+rule_s_200_090_007_03 contains result if {
 	control_lists := data.metabolights.validation.v2.controls.sampleFileControls
+	
 	some file_name, file_table in input.samples
 	some column_index, header in input.samples[file_name].table.headers
-	control_lists[header.columnHeader]
-	header.columnStructure in {"SINGLE_COLUMN"}
-	result := f.single_column_has_unexpected_value(
-		rego.metadata.rule(), 
+
+	# control_lists[header.columnHeader]
+	selected_validation_types = {
+		"selected-ontology-term",
+		"any-ontology-term",
+		"child-ontology-term",
+		"ontology-term-in-selected-ontologies",
+		"check-only-constraints",
+	}
+
+	enforcement_levels = {"required"}
+	# print("rule", rego.metadata.rule().custom.rule_id, header.columnHeader, header.columnStructure)
+
+	result := f.check_unexpected_value(
+		rego.metadata.rule(),
 		def1.STUDY_CATEGORY,
 		def1.STUDY_TEMPLATE_VERSION,
 		def1.STUDY_CREATED_AT,
 		def1.STUDY_SAMPLE_TEMPLATE_NAME,
 		"sample",
-		file_table.table, 
-		file_name, 
-		column_index, 
+		file_table.table,
+		file_name,
+		column_index,
+		selected_validation_types,
+		enforcement_levels,
 		control_lists,
-		header.columnHeader,
-		"Do not use these unexpected terms"
-		)
+		"__default__"
+	)
 }
 
 # METADATA
-# title: Unexpected value in the column.
-# description: There is a general unexpected value list. Use valid text, ontology term or controlled vocabulary for the selected column.
+# title: The value appears in the list of default not-recommended values.
+# description: Select an alternative value that meets the requirement or leave it empty (if it is not required).
 # custom:
-#  rule_id: rule_s_200_090_006_04
-#  type: ERROR
+#  rule_id: rule_s_200_090_007_04
+#  type: WARNING
 #  priority: HIGH
 #  section: samples.general
-rule_s_200_090_006_04 contains result if {
+rule_s_200_090_007_04 contains result if {
 	control_lists := data.metabolights.validation.v2.controls.sampleFileControls
+	
 	some file_name, file_table in input.samples
 	some column_index, header in input.samples[file_name].table.headers
+
 	control_lists[header.columnHeader]
-	header.columnStructure in {"SINGLE_COLUMN"}
-	result := f.single_column_has_unexpected_value(
-		rego.metadata.rule(), 
+	selected_validation_types = {
+		"selected-ontology-term",
+		"any-ontology-term",
+		"child-ontology-term",
+		"ontology-term-in-selected-ontologies",
+		"check-only-constraints",
+	}
+	enforcement_levels = {"recommended", "optional"}
+	result := f.check_unexpected_value(
+		rego.metadata.rule(),
 		def1.STUDY_CATEGORY,
 		def1.STUDY_TEMPLATE_VERSION,
 		def1.STUDY_CREATED_AT,
 		def1.STUDY_SAMPLE_TEMPLATE_NAME,
 		"sample",
-		file_table.table, 
-		file_name, 
-		column_index, 
+		file_table.table,
+		file_name,
+		column_index,
+		selected_validation_types,
+		enforcement_levels,
 		control_lists,
-		"__default__",
-		"Do not use these unexpected terms"
-		)
+		"__default__"
+	)
 }
 
 # #########################################################################################################
 # # SAMPLES SHEET SOURCE SECTION VALIDATION RULES
 # #########################################################################################################
-
-
 
 # METADATA
 # title: User defined Characteristics column is empty.
@@ -620,16 +715,15 @@ rule_s_200_100_002_01 contains result if {
 	not header.columnHeader in default_headers
 	column_name := input.samples[fileName].table.columns[header.columnIndex]
 	violated_values := {sprintf("['%v', column index: %v]", [header.columnHeader, header.columnIndex]) |
-		vals := { x | 
+		vals := {x |
 			some x in input.samples[fileName].table.data[column_name]
 			count(trim_space(x)) > 0
 		}
 		count(vals) == 0
 	}
-	
+
 	result := f.format_with_values(rego.metadata.rule(), file_name, header.columnIndex + 1, header.columnHeader, violated_values)
 }
-
 
 # METADATA
 # title: Term Source REF of the user defined characteristics ontology term is not in the priotirised control list.
@@ -644,24 +738,25 @@ rule_s_200_100_002_02 contains result if {
 	some file_name, file_table in input.samples
 	some column_index, header in input.samples[file_name].table.headers
 	selected_validation_types = {"any-ontology-term"}
+	enforcement_levels = {"required"}
 	not control_lists[header.columnHeader]
 	startswith(header.columnHeader, "Characteristics[")
 	header.columnStructure == "ONTOLOGY_COLUMN"
-	result := f.term_source_ref_not_valid(
-		rego.metadata.rule(), 
+	result := f.check_rule_by_enforcement_level(
+		rego.metadata.rule(),
 		def1.STUDY_CATEGORY,
 		def1.STUDY_TEMPLATE_VERSION,
 		def1.STUDY_CREATED_AT,
 		def1.STUDY_SAMPLE_TEMPLATE_NAME,
 		"sample",
-		file_table.table, 
-		file_name, 
-		column_index, 
+		file_table.table,
+		file_name,
+		column_index,
 		selected_validation_types,
+		enforcement_levels,
 		control_lists,
 		"__default_characteristic__",
-		"Prioritised characteristic value ontologies"
-		)
+	)
 }
 
 # METADATA
@@ -758,8 +853,6 @@ rule_s_200_200_001_02 contains result if {
 	# values := assayFileSamples
 	values := {sprintf("[row: %03v, file name: '%v']", [row, value]) |
 		some idx, value in sample.table.data[column_name]
-		# some j
-		# value := input.samples[fileName].table.data[columnName][j]
 		not value in assay_file_sample_names
 		row := (idx + 1) + row_offset
 	}
@@ -781,15 +874,15 @@ rule_s_200_200_001_02 contains result if {
 rule_s_200_200_002_01 contains result if {
 	input.samples[fileName].table.headers[i]
 	header := input.samples[fileName].table.headers[i]
-	header.columnCategory == "Factor Value"
+
+	startswith(header.columnHeader, "Factor Value")
 	columnIndex := header.columnIndex
-	columnHeader := header.columnHeader
 	columnName := input.samples[fileName].table.columns[columnIndex]
 	rowOffset = input.samples[fileName].table.rowOffset
 
 	non_empty_columns := {sprintf("['%v', column index: %v]", [header.columnHeader, header.columnIndex]) |
 		header.columnCategory == "Factor Value"
-		vals := { x | 
+		vals := {x |
 			some x in input.samples[fileName].table.data[columnName]
 			count(trim_space(x)) > 0
 		}
@@ -799,7 +892,7 @@ rule_s_200_200_002_01 contains result if {
 	violatedValues := f.empty_value_check(input.samples, fileName, columnName, rowOffset)
 	sourceFile := fileName
 	fileColumnIndex := columnIndex + 1
-	fileColumnHeader := columnHeader
+	fileColumnHeader := header.columnHeader
 	result := f.format_with_values(rego.metadata.rule(), sourceFile, fileColumnIndex, fileColumnHeader, violatedValues)
 }
 
@@ -817,13 +910,13 @@ rule_s_200_200_002_02 contains result if {
 	column_name := input.samples[file_name].table.columns[header.columnIndex]
 	violated_values := {sprintf("['%v', column index: %v]", [header.columnHeader, header.columnIndex]) |
 		header.columnCategory == "Factor Value"
-		vals := { x | 
+		vals := {x |
 			some x in sheet.table.data[column_name]
 			count(trim_space(x)) > 0
 		}
 		count(vals) < 2
 	}
-	
+
 	result := f.format_with_values(rego.metadata.rule(), file_name, header.columnIndex + 1, header.columnHeader, violated_values)
 }
 
@@ -840,23 +933,25 @@ rule_s_200_200_003_01 contains result if {
 	some file_name, file_table in input.samples
 	some column_index, header in input.samples[file_name].table.headers
 	selected_validation_types = {"any-ontology-term"}
+	enforcement_levels = {"required"}
 	not control_lists[header.columnHeader]
 	startswith(header.columnHeader, "Factor Value[")
 	header.columnStructure == "ONTOLOGY_COLUMN"
+
 	# print(header.columnHeader)
-	result := f.term_source_ref_not_valid(
-		rego.metadata.rule(), 
+	result := f.check_rule_by_enforcement_level(
+		rego.metadata.rule(),
 		def1.STUDY_CATEGORY,
 		def1.STUDY_TEMPLATE_VERSION,
 		def1.STUDY_CREATED_AT,
 		def1.STUDY_SAMPLE_TEMPLATE_NAME,
 		"sample",
-		file_table.table, 
-		file_name, 
-		column_index, 
+		file_table.table,
+		file_name,
+		column_index,
 		selected_validation_types,
+		enforcement_levels,
 		control_lists,
 		"__default_factor_value__",
-		"Prioritised factor value ontologies"
-		)
+	)
 }

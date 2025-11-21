@@ -61,7 +61,6 @@ rule_a_200_200 contains result if {
 	)
 }
 
-
 # METADATA
 # title: Validation summary for mass spectrometry column value errors in assay file.
 # description: There is no mass spectrometry column value errors in assay files.
@@ -118,7 +117,6 @@ rule_a_200_500 contains result if {
 		file_name,
 	)
 }
-
 
 # METADATA
 # title: Validation summary for chromatography protocol section in assay file.
@@ -195,4 +193,3 @@ rule_s_200_200 contains result if {
 		file_name,
 	)
 }
-

@@ -1,8 +1,8 @@
 import datetime
 import enum
-from typing import Annotated, Literal
+from typing import Annotated, Any, Literal, Self
 
-from pydantic import BaseModel, ConfigDict, Field, field_validator
+from pydantic import BaseModel, ConfigDict, Field, field_validator, model_validator
 from pydantic.alias_generators import to_camel, to_pascal
 
 
@@ -31,6 +31,7 @@ class EnforcementLevel(enum.StrEnum):
     REQUIRED = "required"
     RECOMMENDED = "recommended"
     OPTIONAL = "optional"
+    NOT_APPLICABLE = "not-applicable"
 
 
 class StudyCategoryStr(enum.StrEnum):
@@ -151,15 +152,17 @@ class AdditionalSource(StudyBaseModel):
 
 
 class FieldConstraint(StudyBaseModel):
-    type_: Annotated[
-        ConstraintType, Field(alias="type", description="Constraint type.")
-    ]
     constraint: Annotated[
-        None | str | int | bool, Field(description="Constraint value")
+        None | str | int | float | bool, Field(description="Constraint value")
     ] = None
     error_message: Annotated[
-        str, Field(description="Error message if value does not satisfy the constraint")
+        str,
+        Field(description="Error message if value does not satisfy the constraint."),
     ] = ""
+    enforcement_level: Annotated[
+        EnforcementLevel,
+        Field(description="Rule enforcement level for the constraint."),
+    ] = EnforcementLevel.REQUIRED
 
 
 class ParentOntologyTerms(StudyBaseModel):
@@ -200,16 +203,21 @@ class FieldValueValidation(StudyBaseModel):
     selection_criteria: Annotated[
         SelectionCriteria, Field(description="Field selection criteria")
     ]
-    enforcement_level: Annotated[
-        EnforcementLevel, Field(description="Rule enforcement level")
+    term_enforcement_level: Annotated[
+        EnforcementLevel, Field(description="Rule enforcement level for ontology terms")
+    ] = EnforcementLevel.REQUIRED
+    unexpected_term_enforcement_level: Annotated[
+        EnforcementLevel,
+        Field(description="Rule enforcement level for unexpected terms"),
     ] = EnforcementLevel.REQUIRED
 
     validation_type: Annotated[
         ValidationType, Field(description="Validation rule type")
     ] = ValidationType.ANY_ONTOLOGY_TERM
     constraints: Annotated[
-        None | list[FieldConstraint], Field(description="Field constraints")
-    ] = []
+        None | dict[ConstraintType, FieldConstraint],
+        Field(description="Field constraints"),
+    ] = {}
     default_value: Annotated[
         None | OntologyTerm, Field(description="Default ontology term")
     ] = None
@@ -254,6 +262,25 @@ class FieldValueValidation(StudyBaseModel):
         None | list[str],
         Field(description="unexpected terms."),
     ] = []
+
+    @model_validator(mode="wrap")
+    @classmethod
+    def validate_model(cls, v: Any, handler) -> Self:
+        if isinstance(v, dict):
+            enforcement = v.get("enforcementLevel", None)
+            if enforcement:
+                v["termEnforcementLevel"] = enforcement
+            constraints = v.get("constraints", None)
+            if isinstance(constraints, list):
+                new_constraints = {}
+                for item in constraints:
+                    new_constraints[item.get("type")] = item
+                v["constraints"] = new_constraints
+        validation_type = v.get("validationType", None)
+        if validation_type == "check-only-constraints":
+            v["termEnforcementLevel"] = EnforcementLevel.NOT_APPLICABLE
+
+        return handler(v)
 
 
 class ColumnDescription(StudyBaseModel):

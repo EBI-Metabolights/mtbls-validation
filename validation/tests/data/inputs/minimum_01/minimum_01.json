@@ -77,6 +77,7 @@
                 "sampleTemplate": "minimum",
                 "mhdAccession": "",
                 "mhdModelVersion": "0.1",
+                "createdAt": "",
                 "revisionNumber": "",
                 "revisionDate": "",
                 "revisionComment": "",
@@ -619,7 +620,7 @@
                         "NCBITAXON",
                         "NCBITAXON",
                         "NCBITAXON",
-                        "NCBITAXON"
+                        "NCBITAXONX"
                     ],
                     "Term Accession Number": [
                         "NCBITaxon:9606",
@@ -1614,7 +1615,8 @@
         "studyCategory": 0,
         "templateVersion": "1.0",
         "reservedMhdAccession": "",
-        "mhdModelVersion": ""
+        "mhdModelVersion": "",
+        "createdAt": "2025-10-09"
     },
     "studyFolderMetadata": {
         "dataFolderSizeCalculated": false,

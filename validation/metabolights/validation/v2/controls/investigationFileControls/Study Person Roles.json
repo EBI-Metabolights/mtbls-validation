@@ -13,9 +13,10 @@
                 "isaFileTemplateNameFilter": null,
                 "linkedFieldAndValueFilter": null
             },
-            "enforcementLevel": "required",
+            "termEnforcementLevel": "required",
+            "unexpectedTermEnforcementLevel": "required",
             "validationType": "child-ontology-term",
-            "constraints": [],
+            "constraints": {},
             "defaultValue": {
                 "term": "Investigator",
                 "termAccessionNumber": "http://purl.obolibrary.org/obo/NCIT_C25936",

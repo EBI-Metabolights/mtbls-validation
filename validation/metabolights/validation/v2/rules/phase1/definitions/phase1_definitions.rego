@@ -1,63 +1,109 @@
 package metabolights.validation.v2.rules.phase1.definitions
 
-import data.metabolights.validation.v2.utils.functions as f
 import data.metabolights.validation.v2.utils.field_match as field_match
+import data.metabolights.validation.v2.utils.functions as f
 import rego.v1
 
-
-ONTOLOGY_SOURCE_REFERENCE_NAMES := {x.sourceName | 
+ONTOLOGY_SOURCE_REFERENCE_NAMES := {x.sourceName |
 	some x in input.investigation.ontologySourceReferences.references
 }
+
 _ALLOWED_CHARS_PATTERN := concat("", data.metabolights.validation.v2.configuration.allowedChars)
 
-
-match_criteria(criteria, 
-	isa_file_type, 
-	template_name, 
-	linked_field, 
-	linked_field_value
-) := true if {
-	field_match.match_field_control_criteria(criteria, 
-				STUDY_TEMPLATE_VERSION, 
-				STUDY_CATEGORY, 
-				STUDY_CREATED_AT, 
-				isa_file_type, 
-				template_name,
-				linked_field,
-				linked_field_value
-	) 
+match_criteria(
+	criteria,
+	isa_file_type,
+	template_name,
+	linked_field,
+	linked_field_value,
+) if {
+	field_match.match_field_control_criteria(
+		criteria,
+		STUDY_TEMPLATE_VERSION,
+		STUDY_CATEGORY,
+		STUDY_CREATED_AT,
+		isa_file_type,
+		template_name,
+		linked_field,
+		linked_field_value,
+	)
 }
 
-investigation_file_field_validation(field_name) := rule if {
-	control_list := data.metabolights.validation.v2.controls.investigationFileControls[field_name]
-	selected_controls = [x |
+get_investigation_field_validation(controls, field_name) := rule if {
+	control_list := controls[field_name]
+	selected_controls := [x |
 		some x in control_list
 		criteria = x.selectionCriteria
 		field_match.match_field_control_criteria(
-			criteria, 
+			criteria,
 			STUDY_TEMPLATE_VERSION,
-			STUDY_CATEGORY, 
+			STUDY_CATEGORY,
 			STUDY_CREATED_AT,
 			"investigation",
-			null, null, null)
+			null, null, null,
+		)
 	]
 	count(selected_controls) > 0
 	rule := selected_controls[0]
 }
 
+get_sample_field_validation(controls, field_name) := rule if {
+	control_list := controls[field_name]
+	selected_controls := [x |
+		some x in control_list
+		criteria = x.selectionCriteria
+		field_match.match_field_control_criteria(
+			criteria,
+			STUDY_TEMPLATE_VERSION,
+			STUDY_CATEGORY,
+			STUDY_CREATED_AT,
+			"sample",
+			STUDY_SAMPLE_TEMPLATE_NAME, null, null,
+		)
+	]
+	count(selected_controls) > 0
+	rule := selected_controls[0]
+}
 
+get_assay_field_validation(controls, field_name) := rule if {
+	control_list := controls[field_name]
+	selected_controls := [x |
+		some x in control_list
+		criteria = x.selectionCriteria
+		field_match.match_field_control_criteria(
+			criteria,
+			STUDY_TEMPLATE_VERSION,
+			STUDY_CATEGORY,
+			STUDY_CREATED_AT,
+			"sample",
+			null, null, null,
+		)
+	]
+	count(selected_controls) > 0
+	rule := selected_controls[0]
+}
 
-RULE_PUBLICATION_STATUS = investigation_file_field_validation("Study Publication Status")
-RULE_ASSAY_MEASUREMENT_TYPE = investigation_file_field_validation("Study Assay Measurement Type")
-RULE_ASSAY_TECHNOLOGY_TYPE = investigation_file_field_validation("Study Assay Technology Type")
-RULE_STUDY_PERSON_ROLES = investigation_file_field_validation("Study Person Roles")
-RULE_STUDY_DESIGN_TYPE = investigation_file_field_validation("Study Design Type")
-RULE_STUDY_FACTOR_TYPE = investigation_file_field_validation("Study Factor Type")
+__INVESTIGATION_RULES__ := data.metabolights.validation.v2.controls.investigationFileControls
+__SAMPLE_RULES__ := data.metabolights.validation.v2.controls.sampleFileControls
+__ASSAY_RULES__ := data.metabolights.validation.v2.controls.assayFileControls
 
-RULE_DEFAULT_ONTOLOGIES = investigation_file_field_validation("__default__")
+RULE_PUBLICATION_STATUS := get_investigation_field_validation(__INVESTIGATION_RULES__, "Study Publication Status")
+RULE_ASSAY_MEASUREMENT_TYPE := get_investigation_field_validation(__INVESTIGATION_RULES__, "Study Assay Measurement Type")
+RULE_ASSAY_TECHNOLOGY_TYPE := get_investigation_field_validation(__INVESTIGATION_RULES__, "Study Assay Technology Type")
+RULE_STUDY_PERSON_ROLES := get_investigation_field_validation(__INVESTIGATION_RULES__, "Study Person Roles")
+RULE_STUDY_DESIGN_TYPE := get_investigation_field_validation(__INVESTIGATION_RULES__, "Study Design Type")
+RULE_STUDY_FACTOR_TYPE := get_investigation_field_validation(__INVESTIGATION_RULES__, "Study Factor Type")
 
-DB_STUDY_CREATED_AT := input.studyDbMetadata.submissionDate
-METADATA_STUDY_CREATED_AT:= input.investigation.studies[0].submissionDate
+RULE_DEFAULT_ONTOLOGIES := get_investigation_field_validation(__INVESTIGATION_RULES__, "__default__")
+
+RULE_SAMPLE_DEFAULT := get_sample_field_validation(__SAMPLE_RULES__, "__default__")
+RULE_SAMPLE_DEFAULT_FACTOR_VALUE := get_sample_field_validation(__SAMPLE_RULES__, "__default_factor_value__")
+RULE_SAMPLE_DEFAULT_CHARACTERISTIC := get_sample_field_validation(__SAMPLE_RULES__, "__default_characteristic__")
+
+RULE_ASSAY_DEFAULT := get_sample_field_validation(__ASSAY_RULES__, "__default__")
+
+DB_STUDY_CREATED_AT := input.studyDbMetadata.createdAt
+METADATA_STUDY_CREATED_AT := input.investigation.studies[0].createdAt
 STUDY_CREATED_AT := DB_STUDY_CREATED_AT if {
 	count(DB_STUDY_CREATED_AT) > 0
 }
@@ -65,6 +111,13 @@ STUDY_CREATED_AT := DB_STUDY_CREATED_AT if {
 STUDY_CREATED_AT := METADATA_STUDY_CREATED_AT if {
 	count(DB_STUDY_CREATED_AT) == 0
 	count(METADATA_STUDY_CREATED_AT) > 0
+}
+
+STUDY_CREATED_AT := result if {
+	count(DB_STUDY_CREATED_AT) == 0
+	count(METADATA_STUDY_CREATED_AT) == 0
+	current_iso8601 := time.now_ns()
+	result := time.format(current_iso8601)
 }
 
 DB_STUDY_TEMPLATE_VERSION := input.studyDbMetadata.templateVersion
@@ -225,4 +278,3 @@ __ASSAY_TECHNIQUES := {file_name: technology |
 	file_name := assay_name
 	technology := input.assays[assay_name].assayTechnique.name
 }
-

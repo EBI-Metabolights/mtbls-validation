@@ -7,8 +7,8 @@ import data.metabolights.validation.v2.rules.phase2.violations as rules
 import rego.v1
 
 # METADATA
-# title: Term is not in the selected ontologies.
-# description: The term MUST be defined in the the selected ontologies.
+# title: Value is not in the required ontologies or controlled lists associated with this column
+# description: A term MUST be selected from the required ontologies or controlled lists associated with this column.
 # custom:
 #  rule_id: rule_s_200_090_002_09
 #  type: ERROR

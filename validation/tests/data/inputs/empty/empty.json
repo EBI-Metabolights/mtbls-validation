@@ -60,7 +60,8 @@
         "studyCategory": 0,
         "templateVersion": "",
         "reservedMhdAccession": "",
-        "mhdModelVersion": ""
+        "mhdModelVersion": "",
+        "createdAt": ""
     },
     "studyFolderMetadata": {
         "dataFolderSizeCalculated": false,

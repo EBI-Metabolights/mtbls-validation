@@ -1,0 +1,35 @@
+#########################################################################################################
+# Unit tests for rule_i_100_360_008_13
+#########################################################################################################
+package tests.investigation_test
+
+import data.metabolights.validation.v2.rules.phase1.violations as rules
+
+import rego.v1
+
+# METADATA
+# title: Value is not in the default ontologies or controlled lists
+# description: A term SHOULD be selected from the default ontologies or controlled lists.
+# custom:
+#  rule_id: rule_i_100_360_008_13
+#  type: WARNING
+#  priority: HIGH
+#  section: investigation.studyContacts
+rule_i_100_360_008_13_test_cases := 1
+
+# # METADATA
+# # title: <title>.
+# # description: <description>.
+# test_tests.investigation_test_no_violation_01 if {
+# 	result := rules.tests.investigation_test with input as {
+# 	}
+# 	count(result) == 0
+# }
+# # METADATA
+# # title: <title>.
+# # description: <description>.
+# test_tests.investigation_test_violation_01 if {
+# 	result := rules.tests.investigation_test with input as {
+# 	}
+# 	count(result) == 1
+# }

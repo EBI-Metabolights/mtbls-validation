@@ -18,9 +18,10 @@
                     }
                 ]
             },
-            "enforcementLevel": "recommended",
+            "termEnforcementLevel": "recommended",
+            "unexpectedTermEnforcementLevel": "required",
             "validationType": "any-ontology-term",
-            "constraints": [],
+            "constraints": {},
             "defaultValue": null,
             "allowedMissingOntologyTerms": [],
             "allowedOtherSources": [

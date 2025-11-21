@@ -36,7 +36,7 @@ def get_rules(
             df = selected_rows
         else:
             df = pd.concat([df, selected_rows], ignore_index=True)
-    
+
     rules: dict[str, pd.Series] = {}
     if df is None:
         return rules

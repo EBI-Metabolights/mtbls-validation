@@ -30,33 +30,34 @@
 | 26 | rule_s_100_100_002_02 | ERROR | There is only one row in sample file. | Only one row is defined in sample file. Add more than one row (sample). Please ensure all xxx, including controls, QCs, standards, etc, are referenced. |
 | 27 | rule_s_100_100_003_01 | ERROR | Sample file not referenced in investigation file. | Only one sample file is allowed and its name should be 's_(accession number).txt'. |
 | 28 | rule_s_200_090_001_01 | ERROR | Values with trailing or leading spaces in sample file. | Values in sample file should not start or end with space characters. |
-| 29 | rule_s_200_090_002_01 | WARNING | Ontology Term Source REF is not selected from the prioritised ontologies. | Select a term from one of the prioritised sources where possible. |
+| 29 | rule_s_200_090_002_01 | WARNING | Ontology Term Source REF is not selected from the prioritised ontologies. | The term is not in the control list or selected ontologies. |
 | 30 | rule_s_200_090_002_03 | WARNING | Ontology Term Source REF not referenced in investigation file. | All ontology Term Source REFs should be referenced in ONTOLOGY SOURCE REFERENCE section in i_Investigation.txt. |
 | 31 | rule_s_200_090_002_04 | ERROR | Ontology Term Source REF defined for empty ontology terms. | Select ontology terms and/or change ontology Term Source REF. |
 | 32 | rule_s_200_090_002_05 | WARNING | Ontology Term Source REF of Unit is not selected from the prioritised ontologies. | Select a unit term from one of the prioritised sources where possible. |
 | 33 | rule_s_200_090_002_06 | WARNING | Ontology Term Source REF defined for empty unit ontology terms. | Select unit ontology terms and/or change ontology Term Source REF. |
-| 34 | rule_s_200_090_002_09 | ERROR | Term is not in the selected ontologies. | The term MUST be defined in the the selected ontologies. |
-| 35 | rule_s_200_090_002_10 | ERROR | Term is not a child of of the selected ontology terms. | The term MUST be a child of the selected ontology terms. |
-| 36 | rule_s_200_090_002_11 | ERROR | Term is not in the control list. | The term MUST be in the selected ontology terms. |
-| 37 | rule_s_200_090_002_12 | ERROR | Value is not in the control list. | The value MUST be in the selected values. |
-| 38 | rule_s_200_090_002_13 | ERROR | Value has not a valid pattern. | The column value MUST have a valid pattern value. |
-| 39 | rule_s_200_090_003_01 | WARNING | Term Accession Number length of ontology terms less than 3 characters. | Term Accession Number of ontology terms should be defined with length equal or greater than 3 characters. |
-| 40 | rule_s_200_090_003_02 | WARNING | Term Accession Number length of unit ontology terms less than 3 characters. | Term Accession Number of unit ontology terms should be defined with length equal or greater than 3 characters. |
-| 41 | rule_s_200_090_003_03 | WARNING | Term Accession Number defined for empty ontology terms. | Select ontology terms and/or change ontology Term Accession Number. |
-| 42 | rule_s_200_090_003_04 | WARNING | Term Accession Number defined for empty unit ontology terms. | Select unit ontology terms and/or change ontology Term Accession Number. |
-| 43 | rule_s_200_090_004_01 | ERROR | Empty value is found in a required column. | Complete all values in required columns. |
-| 44 | rule_s_200_090_004_02 | ERROR | Values do not meet minimum length requirement. | Each row should have a value equal or greater than the minimum length. |
-| 45 | rule_s_200_090_004_03 | ERROR | Values do not meet maximum length requirement. | Each row should have a value equal or less than the maximum length. |
-| 46 | rule_s_200_090_005_01 | ERROR | Values for Protocol REF column not valid in sample file. | All rows should be filled with the same value (case sensitive). |
-| 47 | rule_s_200_090_006_01 | ERROR | Unexpected value in the ontology column. | There is an unexpected value list for the selected column. Use valid text, ontology term or controlled vocabulary for the selected ontology column. |
-| 48 | rule_s_200_090_006_02 | ERROR | Unexpected value in the ontology column. | There is a general unexpected value list. Use valid text, ontology term or controlled vocabulary for the selected ontology column. |
-| 49 | rule_s_200_090_006_03 | ERROR | Unexpected value in the column. | There is an unexpected value list for the selected column. Use valid text, ontology term or controlled vocabulary for the selected column. |
-| 50 | rule_s_200_090_006_04 | ERROR | Unexpected value in the column. | There is a general unexpected value list. Use valid text, ontology term or controlled vocabulary for the selected column. |
-| 51 | rule_s_200_100_002_01 | ERROR | User defined Characteristics column is empty. | At least one value should be defined in Characteristics column. |
-| 52 | rule_s_200_100_002_02 | WARNING | Term Source REF of the user defined characteristics ontology term is not in the priotirised control list. | We highly recommend to use the prioritised ontologies for the characteristics ontology term. |
-| 53 | rule_s_200_100_002_04 | WARNING | Term Accession Number of the user defined characteristics ontology terms is empty. | We highly recommend to define accession number of the selected term. |
-| 54 | rule_s_200_200_001_01 | ERROR | Sample name values are not unique in sample file. | All sample names should be unique in sample file. |
-| 55 | rule_s_200_200_001_02 | ERROR | Values for Sample Name column not in any assay file. | Each sample name should be referenced at least one time in assay files. |
-| 56 | rule_s_200_200_002_01 | WARNING | There are empty values in Factor Value column. | Factor values should be defined for each row. |
-| 57 | rule_s_200_200_002_02 | ERROR | Factor Value column not complete. | At least two values must be defined in Factor Value column. |
-| 58 | rule_s_200_200_003_01 | WARNING | Term Source REF of the factor value ontology term is not in the priotirised control list. | We highly recommend to use the prioritised Ontology Source Refs for the factor ontology term. |
+| 34 | rule_s_200_090_002_09 | ERROR | Value is not in the required ontologies or controlled lists associated with this column | A term MUST be selected from the required ontologies or controlled lists associated with this column. |
+| 35 | rule_s_200_090_002_10 | WARNING | Value is not in the predefined ontologies or controlled lists associated with this column | A term SHOULD be selected from the predefined ontologies or controlled lists associated with this column. |
+| 36 | rule_s_200_090_002_11 | WARNING | Factor value is not in the predefined ontologies or controlled lists associated with this column | A term SHOULD be selected from the predefined ontologies or controlled lists associated with this column. |
+| 37 | rule_s_200_090_002_12 | WARNING | Characteristic value is not in the predefined ontologies or controlled lists associated with this column | A term SHOULD be selected from the predefined ontologies or controlled lists associated with this column. |
+| 38 | rule_s_200_090_002_13 | ERROR | The value does not match the required pattern. | The column value MUST have a valid pattern value. |
+| 39 | rule_s_200_090_002_14 | WARNING | The value does not match the recommended pattern. | The column value SHOULD have a valid pattern value. |
+| 40 | rule_s_200_090_003_01 | WARNING | Term Accession Number length of ontology terms less than 3 characters. | Term Accession Number of ontology terms should be defined with length equal or greater than 3 characters. |
+| 41 | rule_s_200_090_003_02 | WARNING | Term Accession Number length of unit ontology terms less than 3 characters. | Term Accession Number of unit ontology terms should be defined with length equal or greater than 3 characters. |
+| 42 | rule_s_200_090_003_03 | WARNING | Term Accession Number defined for empty ontology terms. | Select ontology terms and/or change ontology Term Accession Number. |
+| 43 | rule_s_200_090_003_04 | WARNING | Term Accession Number defined for empty unit ontology terms. | Select unit ontology terms and/or change ontology Term Accession Number. |
+| 44 | rule_s_200_090_004_01 | ERROR | Empty value is found in a required column. | Complete all values in required columns. |
+| 45 | rule_s_200_090_004_02 | ERROR | Values do not meet minimum length requirement. | Each row should have a value equal or greater than the minimum length. |
+| 46 | rule_s_200_090_004_03 | ERROR | Values do not meet maximum length requirement. | Each row should have a value equal or less than the maximum length. |
+| 47 | rule_s_200_090_005_01 | ERROR | Values for Protocol REF column not valid in sample file. | All rows should be filled with the same value (case sensitive). |
+| 48 | rule_s_200_090_007_01 | ERROR | The value appears in the list of unexpected values for this column. | Select an alternative term or value that meets the requirement. |
+| 49 | rule_s_200_090_007_02 | WARNING | The value appears in the list of not-recommended values for this column. | Select an alternative value that meets the requirement or leave it empty (if it is not required). |
+| 50 | rule_s_200_090_007_03 | ERROR | The value appears in the list of default unexpected values. | Select an alternative term or value that meets the requirement. |
+| 51 | rule_s_200_090_007_04 | WARNING | The value appears in the list of default not-recommended values. | Select an alternative value that meets the requirement or leave it empty (if it is not required). |
+| 52 | rule_s_200_100_002_01 | ERROR | User defined Characteristics column is empty. | At least one value should be defined in Characteristics column. |
+| 53 | rule_s_200_100_002_02 | WARNING | Term Source REF of the user defined characteristics ontology term is not in the priotirised control list. | We highly recommend to use the prioritised ontologies for the characteristics ontology term. |
+| 54 | rule_s_200_100_002_04 | WARNING | Term Accession Number of the user defined characteristics ontology terms is empty. | We highly recommend to define accession number of the selected term. |
+| 55 | rule_s_200_200_001_01 | ERROR | Sample name values are not unique in sample file. | All sample names should be unique in sample file. |
+| 56 | rule_s_200_200_001_02 | ERROR | Values for Sample Name column not in any assay file. | Each sample name should be referenced at least one time in assay files. |
+| 57 | rule_s_200_200_002_01 | WARNING | There are empty values in Factor Value column. | Factor values should be defined for each row. |
+| 58 | rule_s_200_200_002_02 | ERROR | Factor Value column not complete. | At least two values must be defined in Factor Value column. |
+| 59 | rule_s_200_200_003_01 | WARNING | Term Source REF of the factor value ontology term is not in the priotirised control list. | We highly recommend to use the prioritised Ontology Source Refs for the factor ontology term. |

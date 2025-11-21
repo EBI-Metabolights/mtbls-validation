@@ -3,8 +3,8 @@ package metabolights.validation.v2.rules.phase2.violations
 import data.metabolights.validation.v2.utils.functions as f
 import rego.v1
 
-import data.metabolights.validation.v2.rules.phase2.definitions as def
 import data.metabolights.validation.v2.rules.phase1.definitions as def1
+import data.metabolights.validation.v2.rules.phase2.definitions as def
 
 import data.metabolights.validation.v2.templates
 
@@ -57,22 +57,23 @@ rule_a_200_090_002_01 contains result if {
 	control_lists := data.metabolights.validation.v2.controls.assayFileControls
 	control_lists[header.columnHeader]
 	selected_validation_types := {"any-ontology-term"}
+	enforcement_levels = {"required"}
 	template_name := file_table.assayTechnique.name
-	result := f.term_source_ref_not_valid(
-		rego.metadata.rule(), 
+	result := f.check_rule_by_enforcement_level(
+		rego.metadata.rule(),
 		def1.STUDY_CATEGORY,
 		def1.STUDY_TEMPLATE_VERSION,
 		def1.STUDY_CREATED_AT,
 		template_name,
 		"assay",
-		file_table.table, 
-		file_name, 
-		column_index, 
+		file_table.table,
+		file_name,
+		column_index,
 		selected_validation_types,
+		enforcement_levels,
 		control_lists,
 		header.columnHeader,
-		"Prioritised ontologies"
-		)
+	)
 }
 
 # METADATA
@@ -90,21 +91,22 @@ rule_a_200_090_002_02 contains result if {
 	not control_lists[header.columnHeader]
 	selected_validation_types = {"any-ontology-term", "child-ontology-term", "ontology-term-in-selected-ontologies"}
 	template_name := file_table.assayTechnique.name
-	result := f.term_source_ref_not_valid(
-		rego.metadata.rule(), 
+	enforcement_levels = {"required"}
+	result := f.check_rule_by_enforcement_level(
+		rego.metadata.rule(),
 		def1.STUDY_CATEGORY,
 		def1.STUDY_TEMPLATE_VERSION,
 		def1.STUDY_CREATED_AT,
 		template_name,
 		"assay",
-		file_table.table, 
-		file_name, 
-		column_index, 
+		file_table.table,
+		file_name,
+		column_index,
 		selected_validation_types,
+		enforcement_levels,
 		control_lists,
 		"__default__",
-		"Prioritised default ontologies"
-		)
+	)
 }
 
 # METADATA
@@ -153,22 +155,20 @@ rule_a_200_090_002_05 contains result if {
 	selected_validation_types = {"any-ontology-term"}
 	template_name := file_table.assayTechnique.name
 	result := f.term_source_ref_for_unit_not_valid(
-		rego.metadata.rule(), 
+		rego.metadata.rule(),
 		def1.STUDY_CATEGORY,
 		def1.STUDY_TEMPLATE_VERSION,
 		def1.STUDY_CREATED_AT,
 		template_name,
 		"assay",
-		file_table.table, 
-		file_name, 
-		column_index, 
+		file_table.table,
+		file_name,
+		column_index,
 		selected_validation_types,
 		control_lists,
 		"Unit",
-		"Prioritised default Unit ontologies"
-		)
-
-
+		"Prioritised default Unit ontologies",
+	)
 }
 
 # METADATA
@@ -186,302 +186,340 @@ rule_a_200_090_002_06 contains result if {
 }
 
 # METADATA
-# title: Term is not in the control list.
-# description: The term MUST be in the selected ontology terms.
+# title: Value is not in the required ontologies or controlled lists associated with this column
+# description: A term MUST be selected from the required ontologies or controlled lists associated with this column.
 # custom:
-#  rule_id: rule_a_200_090_002_09
+#  rule_id: rule_a_200_090_002_21
 #  type: ERROR
 #  priority: HIGH
 #  section: assays.general
-rule_a_200_090_002_09 contains result if {
+rule_a_200_090_002_21 contains result if {
 	control_lists := data.metabolights.validation.v2.controls.assayFileControls
 	some file_name, file_table in input.assays
 	some column_index, header in input.assays[file_name].table.headers
-	selected_validation_types = {"selected-ontology-term"}
+	enforcement_levels = {"required"}
 	control_lists[header.columnHeader]
-	header.columnStructure == "ONTOLOGY_COLUMN"
+	template_name := file_table.assayTechnique.name
+	selected_validation_types = {
+		"ontology-term-in-selected-ontologies",
+		"child-ontology-term",
+		"any-ontology-term",
+		"selected-ontology-term",
+	}
+
+	# print(header.columnHeader, template_name)
+	result := f.check_rule_by_enforcement_level(
+		rego.metadata.rule(),
+		def1.STUDY_CATEGORY,
+		def1.STUDY_TEMPLATE_VERSION,
+		def1.STUDY_CREATED_AT,
+		template_name,
+		"assay",
+		file_table.table,
+		file_name,
+		column_index,
+		selected_validation_types,
+		enforcement_levels,
+		control_lists,
+		header.columnHeader,
+	)
+}
+
+# METADATA
+# title: Value is not in the predefined ontologies or controlled lists associated with this column
+# description: A term SHOULD be selected from the predefined ontologies or controlled lists associated with this column.
+# custom:
+#  rule_id: rule_a_200_090_002_22
+#  type: WARNING
+#  priority: HIGH
+#  section: assays.general
+rule_a_200_090_002_22 contains result if {
+	control_lists := data.metabolights.validation.v2.controls.assayFileControls
+	some file_name, file_table in input.assays
+	some column_index, header in input.assays[file_name].table.headers
+	selected_validation_types = {
+		"ontology-term-in-selected-ontologies",
+		"child-ontology-term",
+		"any-ontology-term",
+		"selected-ontology-term",
+	}
+	enforcement_levels = {"recommended", "optional"}
+	control_lists[header.columnHeader]
 	template_name := file_table.assayTechnique.name
 	# print(header.columnHeader, template_name)
-	result := f.ontology_term_not_in_selected_terms(
-		rego.metadata.rule(), 
+	result := f.check_rule_by_enforcement_level(
+		rego.metadata.rule(),
 		def1.STUDY_CATEGORY,
 		def1.STUDY_TEMPLATE_VERSION,
 		def1.STUDY_CREATED_AT,
 		template_name,
 		"assay",
-		file_table.table, 
-		file_name, 
-		column_index, 
+		file_table.table,
+		file_name,
+		column_index,
 		selected_validation_types,
+		enforcement_levels,
 		control_lists,
 		header.columnHeader,
-		"Controlled terms"
-		)
+	)
 }
 
-
 # METADATA
-# title: Value is not in the control list.
-# description: The value MUST be in the selected values.
+# title: Value is not in the default ontologies or controlled lists
+# description: A term SHOULD be selected from the default ontologies or controlled lists.
 # custom:
-#  rule_id: rule_a_200_090_002_10
-#  type: ERROR
+#  rule_id: rule_a_200_090_002_23
+#  type: WARNING
 #  priority: HIGH
 #  section: assays.general
-rule_a_200_090_002_10 contains result if {
+rule_a_200_090_002_23 contains result if {
 	control_lists := data.metabolights.validation.v2.controls.assayFileControls
 	some file_name, file_table in input.assays
 	some column_index, header in input.assays[file_name].table.headers
-	selected_validation_types = {"selected-ontology-term"}
 	control_lists[header.columnHeader]
-	header.columnStructure == "SINGLE_COLUMN"
 	template_name := file_table.assayTechnique.name
-	# print(header.columnHeader, template_name)
-	result := f.term_value_not_in_selected_terms(
-		rego.metadata.rule(), 
+	selected_validation_types = {
+		"ontology-term-in-selected-ontologies",
+		"child-ontology-term",
+		"any-ontology-term",
+		"selected-ontology-term",
+	}
+	enforcement_levels = {"required", "recommended", "optional"}	
+	result := f.check_rule_by_enforcement_level(
+		rego.metadata.rule(),
 		def1.STUDY_CATEGORY,
 		def1.STUDY_TEMPLATE_VERSION,
 		def1.STUDY_CREATED_AT,
 		template_name,
 		"assay",
-		file_table.table, 
-		file_name, 
-		column_index, 
+		file_table.table,
+		file_name,
+		column_index,
 		selected_validation_types,
+		enforcement_levels,
 		control_lists,
-		header.columnHeader,
-		"Controlled terms"
-		)
-}
-
-
-# METADATA
-# title: Term is not in the selected ontologies.
-# description: The term MUST be defined in the the selected ontologies.
-# custom:
-#  rule_id: rule_a_200_090_002_13
-#  type: ERROR
-#  priority: HIGH
-#  section: assays.general
-rule_a_200_090_002_13 contains result if {
-	control_lists := data.metabolights.validation.v2.controls.assayFileControls
-	some file_name, file_table in input.assays
-	some column_index, header in input.assays[file_name].table.headers
-	selected_validation_types = {"ontology-term-in-selected-ontologies"}
-	control_lists[header.columnHeader]
-	header.columnStructure == "ONTOLOGY_COLUMN"
-	template_name := file_table.assayTechnique.name
-	result := f.term_source_ref_not_valid(
-		rego.metadata.rule(), 
-		def1.STUDY_CATEGORY,
-		def1.STUDY_TEMPLATE_VERSION,
-		def1.STUDY_CREATED_AT,
-		template_name,
-		"assay",
-		file_table.table, 
-		file_name, 
-		column_index, 
-		selected_validation_types,
-		control_lists,
-		header.columnHeader,
-		"Valid ontologies "
-		)
+		"__default__",
+	)
 }
 
 # METADATA
-# title: Term is not a child of of the selected ontology terms.
-# description: The term MUST be a child of the selected ontology terms.
+# title: The value does not match the required pattern.
+# description: The column value MUST have a valid pattern value.
 # custom:
-#  rule_id: rule_a_200_090_002_14
+#  rule_id: rule_a_200_090_002_24
 #  type: ERROR
 #  priority: HIGH
 #  section: assays.general
-rule_a_200_090_002_14 contains result if {
-	control_lists := data.metabolights.validation.v2.controls.assayFileControls
-	some file_name, file_table in input.assays
-	some column_index, header in input.assays[file_name].table.headers
-	selected_validation_types = {"child-ontology-term"}
-	control_lists[header.columnHeader]
-	header.columnStructure == "ONTOLOGY_COLUMN"
-	template_name := file_table.assayTechnique.name
-
-	result := f.term_source_ref_not_valid(
-		rego.metadata.rule(), 
-		def1.STUDY_CATEGORY,
-		def1.STUDY_TEMPLATE_VERSION,
-		def1.STUDY_CREATED_AT,
-		template_name,
-		"assay",
-		file_table.table, 
-		file_name, 
-		column_index, 
-		selected_validation_types,
-		control_lists,
-		header.columnHeader,
-		"Valid ontologies"
-		)
-}
-
-# METADATA
-# title: Value has not a valid pattern.
-# description: The column value must have a valid pattern value.
-# custom:
-#  rule_id: rule_a_200_090_002_15
-#  type: ERROR
-#  priority: HIGH
-#  section: assays.general
-rule_a_200_090_002_15 contains result if {
+rule_a_200_090_002_24 contains result if {
 	control_lists := data.metabolights.validation.v2.controls.assayFileControls
 	some file_name, file_table in input.assays
 	some column_index, header in input.assays[file_name].table.headers
 	control_lists[header.columnHeader]
 	template_name := file_table.assayTechnique.name
+	enforcement_levels = {"required"}
 	result := f.term_value_has_invalid_pattern(
-		rego.metadata.rule(), 
+		rego.metadata.rule(),
 		def1.STUDY_CATEGORY,
 		def1.STUDY_TEMPLATE_VERSION,
 		def1.STUDY_CREATED_AT,
 		template_name,
 		"assay",
-		file_table.table, 
-		file_name, 
-		column_index, 
+		file_table.table,
+		file_name,
+		column_index,
+		enforcement_levels,
 		control_lists,
 		header.columnHeader,
-		"Expected pattern"
-		)
+	)
 }
 
 # METADATA
-# title: Unexpected value in the ontology column.
-# description: There is an unexpected value list for the selected column. Use valid text, ontology term or controlled vocabulary for the selected ontology column.
+# title: The value does not match the recommended pattern.
+# description: The column value SHOULD have a valid pattern value.
 # custom:
-#  rule_id: rule_a_200_090_002_16
-#  type: ERROR
+#  rule_id: rule_a_200_090_002_25
+#  type: WARNING
 #  priority: HIGH
 #  section: assays.general
-rule_a_200_090_002_16 contains result if {
-control_lists := data.metabolights.validation.v2.controls.assayFileControls
+rule_a_200_090_002_25 contains result if {
+	control_lists := data.metabolights.validation.v2.controls.assayFileControls
 	some file_name, file_table in input.assays
-	some column_index, header in file_table.table.headers
-	selected_validation_types = {"selected-ontology-term", "any-ontology-term", "child-ontology-term", "ontology-term-in-selected-ontologies"}
+	some column_index, header in input.assays[file_name].table.headers
 	control_lists[header.columnHeader]
-	header.columnStructure in {"ONTOLOGY_COLUMN", "SINGLE_COLUMN_AND_UNIT_ONTOLOGY"}
 	template_name := file_table.assayTechnique.name
-	result := f.ontology_term_has_unexpected_value(
-		rego.metadata.rule(), 
+	enforcement_levels = {"recommended", "optional"}
+	result := f.term_value_has_invalid_pattern(
+		rego.metadata.rule(),
 		def1.STUDY_CATEGORY,
 		def1.STUDY_TEMPLATE_VERSION,
 		def1.STUDY_CREATED_AT,
 		template_name,
 		"assay",
-		file_table.table, 
-		file_name, 
-		column_index, 
+		file_table.table,
+		file_name,
+		column_index,
+		enforcement_levels,
+		control_lists,
+		header.columnHeader,
+	)
+}
+
+# METADATA
+# title: The value appears in the list of unexpected values for this column.
+# description: Select an alternative term or value that meets the requirement.
+# custom:
+#  rule_id: rule_a_200_090_002_26
+#  type: ERROR
+#  priority: HIGH
+#  section: assays.general
+rule_a_200_090_002_26 contains result if {
+	control_lists := data.metabolights.validation.v2.controls.assayFileControls
+	some file_name, file_table in input.assays
+	some column_index, header in file_table.table.headers
+	control_lists[header.columnHeader]
+	selected_validation_types = {
+		"selected-ontology-term",
+		"any-ontology-term",
+		"child-ontology-term",
+		"ontology-term-in-selected-ontologies",
+		"check-only-constraints",
+	}
+	enforcement_levels = {"required"}
+	template_name := file_table.assayTechnique.name
+	result := f.check_unexpected_value(
+		rego.metadata.rule(),
+		def1.STUDY_CATEGORY,
+		def1.STUDY_TEMPLATE_VERSION,
+		def1.STUDY_CREATED_AT,
+		template_name,
+		"assay",
+		file_table.table,
+		file_name,
+		column_index,
 		selected_validation_types,
+		enforcement_levels,
 		control_lists,
-		header.columnHeader,
-		"Do not use these unexpected terms"
-		)
+		header.columnHeader
+	)
 }
 
-
 # METADATA
-# title: Unexpected value in the ontology column.
-# description: There is a general unexpected value list. Use valid text, ontology term or controlled vocabulary for the selected ontology column.
+# title: The value appears in the list of not-recommended values for this column.
+# description: Select an alternative value that meets the requirement or leave it empty (if it is not required).
 # custom:
-#  rule_id: rule_a_200_090_002_17
-#  type: ERROR
+#  rule_id: rule_a_200_090_002_27
+#  type: WARNING
 #  priority: HIGH
 #  section: assays.general
-rule_a_200_090_002_17 contains result if {
-control_lists := data.metabolights.validation.v2.controls.assayFileControls
+rule_a_200_090_002_27 contains result if {
+	control_lists := data.metabolights.validation.v2.controls.assayFileControls
 	some file_name, file_table in input.assays
 	some column_index, header in file_table.table.headers
-	selected_validation_types = {"selected-ontology-term", "any-ontology-term", "child-ontology-term", "ontology-term-in-selected-ontologies"}
+	selected_validation_types = {
+		"selected-ontology-term",
+		"any-ontology-term",
+		"child-ontology-term",
+		"ontology-term-in-selected-ontologies",
+		"check-only-constraints",
+	}
+
+	enforcement_levels = {"recommended", "optional"}
 	control_lists[header.columnHeader]
-	header.columnStructure in {"ONTOLOGY_COLUMN", "SINGLE_COLUMN_AND_UNIT_ONTOLOGY"}
 	template_name := file_table.assayTechnique.name
-	result := f.ontology_term_has_unexpected_value(
-		rego.metadata.rule(), 
+	result := f.check_unexpected_value(
+		rego.metadata.rule(),
 		def1.STUDY_CATEGORY,
 		def1.STUDY_TEMPLATE_VERSION,
 		def1.STUDY_CREATED_AT,
 		template_name,
 		"assay",
-		file_table.table, 
-		file_name, 
-		column_index, 
+		file_table.table,
+		file_name,
+		column_index,
 		selected_validation_types,
+		enforcement_levels,
 		control_lists,
-		"__default__",
-		"Do not use these unexpected terms"
-		)
+		header.columnHeader
+	)
 }
 
-
-
 # METADATA
-# title: Unexpected value in the column.
-# description: There is an unexpected value list for the selected column. Use valid text, ontology term or controlled vocabulary for the selected column.
+# title: The value appears in the list of default unexpected values.
+# description: Select an alternative term or value that meets the requirement.
 # custom:
-#  rule_id: rule_a_200_090_002_18
+#  rule_id: rule_a_200_090_002_28
 #  type: ERROR
 #  priority: HIGH
 #  section: assays.general
-rule_a_200_090_002_18 contains result if {
-control_lists := data.metabolights.validation.v2.controls.assayFileControls
+rule_a_200_090_002_28 contains result if {
+	control_lists := data.metabolights.validation.v2.controls.assayFileControls
 	some file_name, file_table in input.assays
 	some column_index, header in file_table.table.headers
 	control_lists[header.columnHeader]
-	header.columnStructure in {"SINGLE_COLUMN"}
 	template_name := file_table.assayTechnique.name
-	result := f.single_column_has_unexpected_value(
-		rego.metadata.rule(), 
+	selected_validation_types = {
+		"selected-ontology-term",
+		"any-ontology-term",
+		"child-ontology-term",
+		"ontology-term-in-selected-ontologies",
+		"check-only-constraints",
+	}
+	enforcement_levels = {"required"}
+	result := f.check_unexpected_value(
+		rego.metadata.rule(),
 		def1.STUDY_CATEGORY,
 		def1.STUDY_TEMPLATE_VERSION,
 		def1.STUDY_CREATED_AT,
 		template_name,
 		"assay",
-		file_table.table, 
-		file_name, 
-		column_index, 
+		file_table.table,
+		file_name,
+		column_index,
 		control_lists,
-		header.columnHeader,
-		"Do not use these unexpected terms"
-		)
+		selected_validation_types,
+		enforcement_levels,
+		"__default__"
+	)
 }
 
-
 # METADATA
-# title: Unexpected value in the column.
-# description: There is a general unexpected value list. Use valid text, ontology term or controlled vocabulary for the selected column.
+# title: The value appears in the list of default not-recommended values.
+# description: Select an alternative value that meets the requirement or leave it empty (if it is not required).
 # custom:
-#  rule_id: rule_a_200_090_002_19
-#  type: ERROR
+#  rule_id: rule_a_200_090_002_29
+#  type: WARNING
 #  priority: HIGH
 #  section: assays.general
-rule_a_200_090_002_19 contains result if {
-control_lists := data.metabolights.validation.v2.controls.assayFileControls
+rule_a_200_090_002_29 contains result if {
+	control_lists := data.metabolights.validation.v2.controls.assayFileControls
 	some file_name, file_table in input.assays
 	some column_index, header in file_table.table.headers
 	control_lists[header.columnHeader]
-	header.columnStructure in {"SINGLE_COLUMN"}
 	template_name := file_table.assayTechnique.name
-	result := f.single_column_has_unexpected_value(
-		rego.metadata.rule(), 
+
+	selected_validation_types = {
+		"selected-ontology-term",
+		"any-ontology-term",
+		"child-ontology-term",
+		"ontology-term-in-selected-ontologies",
+		"check-only-constraints",
+	}
+	enforcement_levels = {"recommended", "optional"}
+	result := f.check_unexpected_value(
+		rego.metadata.rule(),
 		def1.STUDY_CATEGORY,
 		def1.STUDY_TEMPLATE_VERSION,
 		def1.STUDY_CREATED_AT,
 		template_name,
 		"assay",
-		file_table.table, 
-		file_name, 
-		column_index, 
+		file_table.table,
+		file_name,
+		column_index,
+		selected_validation_types,
+		enforcement_levels,
 		control_lists,
-		"__default__",
-		"Do not use these unexpected terms"
-		)
+		"__default__"
+	)
 }
 
 # METADATA
@@ -661,7 +699,6 @@ rule_a_200_090_005_01 contains result if {
 
 	result := f.format_with_desc(rego.metadata.rule(), file_name, header.columnIndex + 1, column_header, violated_values, "Expected value", default_value_str)
 }
-
 
 # METADATA
 # title: Values for Sample Name column not in sample file.
@@ -919,10 +956,10 @@ rule_a_200_300_003_01 contains result if {
 	scan_polarities = {x |
 		some x in sheet.table.data[column_name]
 	}
-	
+
 	count(scan_polarities) == 1
 	some scan_polarity in scan_polarities
-	matches := { x | 
+	matches := {x |
 		some x in {"positive", "negative", "alternating"}
 		startswith(scan_polarity, x)
 		contains(file_name, scan_polarity)
@@ -1075,5 +1112,5 @@ rule_a_200_600_001_01 contains result if {
 	}
 	count(matches) == 0
 	desc := sprintf("column type in filename does not match with the value '%v' in column Parameter Value[Column type]", [column_type_label])
-	result := f.format_with_file_description_and_values(rego.metadata.rule(), file_name, desc ,column_types)
+	result := f.format_with_file_description_and_values(rego.metadata.rule(), file_name, desc, column_types)
 }

@@ -15,7 +15,6 @@ phase2_all_messages contains result if {
 	result := data.metabolights.validation.v2.rules.phase2.violations[i][j]
 }
 
-
 phase3_all_messages contains result if {
 	some i, j
 	data.metabolights.validation.v2.rules.phase3.violations[i]
@@ -30,9 +29,7 @@ phase4_all_messages contains result if {
 	result := data.metabolights.validation.v2.rules.phase4.violations[i][j]
 }
 
-
 all_messages contains message if {
-
 	some phase in {"phase1", "phase2", "phase3", "phase4"}
 	some rule_pack, phase_rules in data.metabolights.validation.v2
 	some rule_name, rule_list in phase_rules.violations
@@ -41,7 +38,6 @@ all_messages contains message if {
 }
 
 all_error_messages contains message if {
-
 	some phase in {"phase1", "phase2", "phase3", "phase4"}
 	some rule_pack, phase_rules in data.metabolights.validation.v2
 	some rule_name, rule_list in phase_rules.violations

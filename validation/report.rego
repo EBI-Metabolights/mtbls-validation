@@ -8,7 +8,7 @@ all_error_messages(input_sets) := message_list if {
 		some rule, _ in input_set
 		startswith(rule, "rule_")
 		count(input_set[rule]) > 0
-		
+
 		some message in input_set[rule]
 		message.type == "ERROR"
 	]
@@ -20,7 +20,7 @@ all_messages(input_sets) := message_list if {
 		some rule, _ in input_set
 		startswith(rule, "rule_")
 		count(input_set[rule]) > 0
-		
+
 		some message in input_set[rule]
 	]
 }
@@ -71,5 +71,5 @@ summary_set := {
 complete_report := {
 	"violations": all_messages(violations_set),
 	"summary": all_messages(summary_set),
-	"errors": all_error_messages(violations_set)
+	"errors": all_error_messages(violations_set),
 }

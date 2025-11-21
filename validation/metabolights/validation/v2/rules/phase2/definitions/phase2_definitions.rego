@@ -2,7 +2,7 @@ package metabolights.validation.v2.rules.phase2.definitions
 
 import rego.v1
 
-_SAMPLES_DEFAULT_CHARACTERISTICS_HEADERS = {x |
+_SAMPLES_DEFAULT_CHARACTERISTICS_HEADERS := {x |
 	some header in data.metabolights.validation.v2.rules.phase1.definitions.SELECTED_STUDY_SAMPLE_FILE_TEMPLATE_HEADERS
 	header.columnCategory == "Characteristics"
 	x := header.columnHeader

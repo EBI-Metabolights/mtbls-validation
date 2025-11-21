@@ -18,16 +18,16 @@ import rego.v1
 #  priority: CRITICAL
 #  section: input
 rule___100_100_001_01 contains result if {
-	empty_dict := { x |
+	empty_dict := {x |
 		count(input) == 0
 		x := 1
 	}
-	null_data := { x |
+	null_data := {x |
 		not input
 		x := 1
 	}
 	condition = empty_dict | null_data
-	count(condition)> 0
+	count(condition) > 0
 	result := f.format(rego.metadata.rule(), "Input is not defined.", "input")
 }
 
@@ -41,12 +41,15 @@ rule___100_100_001_01 contains result if {
 #  section: input
 rule___100_100_001_02 contains result if {
 	[x, errors] := json.match_schema(input, data.schemas)
+
 	# print(x)
 	count(errors) > 0
+
 	# print(errors)
 	result := f.format_schema_error(rego.metadata.rule(), errors)
-	# print(result)
 }
+
+# print(result)
 
 # METADATA
 # title: There is a critical file parse error for i_Investigation.txt.
@@ -147,9 +150,9 @@ rule___100_100_100_05 contains result if {
 #  priority: CRITICAL
 #  section: investigation.general
 rule___100_100_100_06 contains result if {
-	referenced_files := { input.investigationFilePath }
+	referenced_files := {input.investigationFilePath}
 
-	all_files := { file |
+	all_files := {file |
 		some file, _ in input.studyFolderMetadata.files
 		startswith(file, "i_")
 	}
@@ -272,7 +275,6 @@ rule___100_200_001_06 contains result if {
 	result := f.format(rego.metadata.rule(), msg, "input")
 }
 
-
 # METADATA
 # title: Sample file name pattern is not correct.
 # description: Sample file name must start with 's_', contain study identifier and have extension '.txt'.
@@ -299,12 +301,12 @@ rule___100_200_001_08 contains result if {
 #  priority: CRITICAL
 #  section: samples.general
 rule___100_200_001_09 contains result if {
-	referenced_files := { x |
+	referenced_files := {x |
 		some _, study in input.investigation.studies
 		x := study.fileName
 	}
 
-	all_files := { file |
+	all_files := {file |
 		some file, _ in input.samples
 		startswith(file, "s_")
 	}
@@ -443,7 +445,6 @@ rule___100_300_001_07 contains result if {
 	result := f.format(rego.metadata.rule(), msg, source)
 }
 
-
 # METADATA
 # title: Assay file name not correct pattern.
 # description: Assay file name must start with 'a_' and have extension '.txt'.
@@ -462,7 +463,6 @@ rule___100_300_001_08 contains result if {
 	result := f.format(rego.metadata.rule(), msg, source)
 }
 
-
 # METADATA
 # title: Assay file is not referenced in i_Investigation.txt file.
 # description: Update i_Investigation.txt file to reference the assay file or delete it.
@@ -472,12 +472,12 @@ rule___100_300_001_08 contains result if {
 #  priority: CRITICAL
 #  section: assays.general
 rule___100_300_001_09 contains result if {
-	referenced_files := { x |
+	referenced_files := {x |
 		some _, study in input.investigation.studies
 		some _, assay in study.studyAssays.assays
 		x := assay.fileName
 	}
-	all_files := { file |
+	all_files := {file |
 		some file, _ in input.assays
 		startswith(file, "a_")
 	}
@@ -586,7 +586,6 @@ rule___100_400_001_04 contains result if {
 	result := f.format(rego.metadata.rule(), msg, file_name)
 }
 
-
 # METADATA
 # title: Technology type not defined for metabolite assignment file.
 # description: Assignment file technology type must be defined to execute file type validation rules.
@@ -614,7 +613,7 @@ rule___100_400_001_05 contains result if {
 #  section: metabolites.general
 rule___100_400_001_06 contains result if {
 	some file_name, _ in input.metaboliteAssignments
-	referenced_files := { val |
+	referenced_files := {val |
 		some _, assay in input.assays
 		some val in assay.table.data["Metabolite Assignment File"]
 		val == file_name
@@ -624,7 +623,6 @@ rule___100_400_001_06 contains result if {
 	msg := sprintf("Unreferenced metabolite assignment file '%v'", [file_name])
 	result := f.format(rego.metadata.rule(), msg, file_name)
 }
-
 
 # METADATA
 # title: Metabolite assignment file name not correct pattern.
@@ -663,4 +661,3 @@ rule___100_400_001_08 contains result if {
 	source := file
 	result := f.format(rego.metadata.rule(), msg, source)
 }
-

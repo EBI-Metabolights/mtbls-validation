@@ -1,8 +1,7 @@
 package metabolights.validation.v2.rules.phase1.summary
 
-import rego.v1
 import data.metabolights.validation.v2.summary.functions as f
-
+import rego.v1
 
 # METADATA
 # title: Input schema validation summary.
@@ -42,7 +41,6 @@ rule___100_100 contains result if {
 	)
 }
 
-
 # METADATA
 # title: Validation summary for parser messages of sample file.
 # description:  There is no parser error for sample file.
@@ -62,8 +60,6 @@ rule___100_200 contains result if {
 	)
 }
 
-
-
 # METADATA
 # title: Validation summary for parser messages of assay file.
 # description:  There is no parser error for assay file.
@@ -82,8 +78,6 @@ rule___100_300 contains result if {
 		file_name,
 	)
 }
-
-
 
 # METADATA
 # title: Validation summary for parser messages of metabolite assignment file.
@@ -141,7 +135,6 @@ rule_i_100_100 contains result if {
 # 		meta.custom.source_file,
 # 	)
 # }
-
 
 # METADATA
 # title: Validation summary for study section of i_Investigation.txt.
@@ -219,7 +212,6 @@ rule_i_100_330 contains result if {
 	)
 }
 
-
 # METADATA
 # title: Validation summary for study assays section of i_Investigation.txt.
 # description: There is no error in study assays section of i_Investigation.txt.
@@ -258,7 +250,6 @@ rule_i_100_350 contains result if {
 	)
 }
 
-
 # METADATA
 # title: Validation summary for study contacts section of i_Investigation.txt.
 # description: There is no error in study protocols section of i_Investigation.txt.
@@ -278,7 +269,6 @@ rule_i_100_360 contains result if {
 	)
 }
 
-
 # METADATA
 # title: Validation summary for sample file columns and rows for sample file.
 # description: There is no sample file column or row error.
@@ -297,7 +287,6 @@ rule_s_100_100 contains result if {
 		file_name,
 	)
 }
-
 
 # METADATA
 # title: Validation summary for file columns and rows of assay file.

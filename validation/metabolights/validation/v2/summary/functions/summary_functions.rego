@@ -3,12 +3,11 @@ package metabolights.validation.v2.summary.functions
 import rego.v1
 
 filter_messages(rules, rule_id, message_type, source_file) := messages if {
-
-	filtered_rules := { rule |
+	filtered_rules := {rule |
 		some rule, _ in rules
 		startswith(rule, rule_id)
 	}
-	
+
 	messages := {violation.identifier |
 		some rule in filtered_rules
 		some violation in rules[rule]
@@ -18,12 +17,11 @@ filter_messages(rules, rule_id, message_type, source_file) := messages if {
 }
 
 critical_messages(rules, rule_id, source_file) := messages if {
-
-	filtered_rules := { rule |
+	filtered_rules := {rule |
 		some rule, _ in rules
 		startswith(rule, rule_id)
 	}
-	
+
 	messages := {violation.identifier |
 		some rule in filtered_rules
 		some violation in rules[rule]
@@ -33,7 +31,7 @@ critical_messages(rules, rule_id, source_file) := messages if {
 	}
 }
 
-rule_result(rule_id, title, description, type, priority, section, source_file, violation_count) := result if { 
+rule_result(rule_id, title, description, type, priority, section, source_file, violation_count) := result if {
 	result := {
 		"identifier": rule_id,
 		"title": title,

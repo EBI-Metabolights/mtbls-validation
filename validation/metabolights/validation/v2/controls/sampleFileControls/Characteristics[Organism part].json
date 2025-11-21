@@ -8,7 +8,9 @@
                 "isaFileType": "sample",
                 "studyCreatedAtOrAfter": null,
                 "studyCreatedBefore": null,
-                "studyCategoryFilter": ["ms-mhd-enabled"],
+                "studyCategoryFilter": [
+                    "ms-mhd-enabled"
+                ],
                 "templateVersionFilter": null,
                 "isaFileTemplateNameFilter": null,
                 "linkedFieldAndValueFilter": [
@@ -18,9 +20,10 @@
                     }
                 ]
             },
-            "enforcementLevel": "required",
+            "termEnforcementLevel": "required",
+            "unexpectedTermEnforcementLevel": "required",
             "validationType": "ontology-term-in-selected-ontologies",
-            "constraints": [],
+            "constraints": {},
             "defaultValue": null,
             "allowedMissingOntologyTerms": [],
             "allowedOtherSources": [
@@ -113,9 +116,10 @@
                     }
                 ]
             },
-            "enforcementLevel": "required",
+            "termEnforcementLevel": "required",
+            "unexpectedTermEnforcementLevel": "required",
             "validationType": "any-ontology-term",
-            "constraints": [],
+            "constraints": {},
             "defaultValue": null,
             "allowedMissingOntologyTerms": [],
             "allowedOtherSources": [],

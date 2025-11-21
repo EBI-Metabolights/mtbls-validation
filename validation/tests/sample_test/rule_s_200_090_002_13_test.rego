@@ -7,7 +7,7 @@ import data.metabolights.validation.v2.rules.phase2.violations as rules
 import rego.v1
 
 # METADATA
-# title: Value has not a valid pattern.
+# title: The value does not match the required pattern.
 # description: The column value MUST have a valid pattern value.
 # custom:
 #  rule_id: rule_s_200_090_002_13
