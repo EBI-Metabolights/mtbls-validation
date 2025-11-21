@@ -1,9 +1,9 @@
 {
-    "ruleName": "selected-ontologies-01",
+    "ruleName": "select-ontology-term-01",
     "description": "",
     "fieldName": "",
     "selectionCriteria": {
-        "isaFileType": "investigation",
+        "isaFileType": "sample",
         "studyCreatedAtOrAfter": null,
         "studyCreatedBefore": null,
         "studyCategoryFilter": null,
@@ -11,7 +11,7 @@
         "isaFileTemplateNameFilter": null,
         "linkedFieldAndValueFilter": null
     },
-    "validationType": "child-ontology-term",
+    "validationType": "selected-ontology-term",
     "termEnforcementLevel": "required",
     "unexpectedTermEnforcementLevel": "required",
     "constraints": {},
@@ -39,38 +39,24 @@
             "termSourceRef": "MTBLS"
         }
     ],
-    "terms": [],
+    "terms": [
+        {
+            "term": "kilogram",
+            "termAccessionNumber": "http://purl.obolibrary.org/obo/UO_0000009",
+            "termSourceRef": "UO"
+        },
+        {
+            "term": "gram",
+            "termAccessionNumber": "http://purl.obolibrary.org/obo/UO_0000021",
+            "termSourceRef": "UO"
+        },
+        {
+            "term": "milligram",
+            "termAccessionNumber": "http://purl.obolibrary.org/obo/UO_0000022",
+            "termSourceRef": "UO"
+        }
+    ],
     "ontologies": [],
-    "allowedParentOntologyTerms": {
-        "excludeByLabelPattern": [
-            "^.*unit$",
-            "^.*Unit of.*$"
-        ],
-        "excludeByAccession": [
-            "http://purl.obolibrary.org/obo/NCIT_C41139"
-        ],
-        "parents": [
-            {
-                "term": "unit",
-                "termSourceRef": "UO",
-                "termAccessionNumber": "http://purl.obolibrary.org/obo/UO_0000000"
-            },
-            {
-                "term": "unit",
-                "termSourceRef": "EFO",
-                "termAccessionNumber": "http://purl.obolibrary.org/obo/UO_0000000"
-            },
-            {
-                "term": "Qualifier",
-                "termSourceRef": "NCIT",
-                "termAccessionNumber": "http://purl.obolibrary.org/obo/NCIT_C41009"
-            },
-            {
-                "term": "Unit of Measure",
-                "termSourceRef": "NCIT",
-                "termAccessionNumber": "http://purl.obolibrary.org/obo/NCIT_C25709"
-            }
-        ]
-    },
+    "allowedParentOntologyTerms": null,
     "unexpectedTerms": []
 }

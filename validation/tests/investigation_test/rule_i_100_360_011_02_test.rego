@@ -396,7 +396,7 @@ test_rule_i_100_360_011_02_success_01 if {
 # METADATA
 # title: Principal Investigator role is not in study.
 # description: There is two Principal Investigator roles in study.
-test_rule_i_100_360_011_02_success_01 if {
+test_rule_i_100_360_011_02_success_02 if {
 	result := rules.rule_i_100_360_011_02 with input as {
 		"investigation": {"studies": [{"identifier": "MTBLS1", "studyContacts": {
 			"comments": [

@@ -47,6 +47,31 @@ investigation_file = inv.Investigation(
                 source_file="http://purl.obolibrary.org/obo/obi.owl",
                 source_version="2024-06-10",
             ),
+            inv.OntologySourceReference(
+                source_name="MTBLS",
+                source_description="MetaboLihgts controlled vocabularies",
+                source_file="http://www.ebi.ac.uk/metabolights/ontology/file.owl",
+                source_version="2024-06-10",
+            ),
+            inv.OntologySourceReference(
+                source_name="NCBITAXON",
+                source_description="NCBITAXON",
+                source_file="http://purl.obolibrary.org/obo/ncbitaxon.owl",
+                source_version="2024-06-10",
+            ),
+            inv.OntologySourceReference(
+                source_name="BTO",
+                source_description="BTO",
+                source_file="http://purl.obolibrary.org/obo/bto.owl",
+                source_version="2024-06-10",
+            ),
+            inv.OntologySourceReference(
+                source_name="MONDO",
+                source_description="MONDO",
+                source_file="http://purl.obolibrary.org/obo/mondo.owl",
+                source_version="2024-06-10",
+            ),
+            
         ]
     ),
     studies=[
@@ -173,6 +198,7 @@ investigation_file = inv.Investigation(
                             inv.ParameterDefinition(term="Instrument"),
                             inv.ParameterDefinition(term="Ion source"),
                             inv.ParameterDefinition(term="Mass analyzer"),
+                            inv.ParameterDefinition(term="Test Data"),
                         ],
                     ),
                     inv.Protocol(

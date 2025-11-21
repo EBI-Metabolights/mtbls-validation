@@ -44,72 +44,6 @@ rule_a_200_090_001_01 contains result if {
 }
 
 # METADATA
-# title: Ontology Term Source REF is not selected from the prioritised ontologies.
-# description: Select a term from one of the prioritised sources where possible.
-# custom:
-#  rule_id: rule_a_200_090_002_01
-#  type: ERROR
-#  priority: HIGH
-#  section: assays.general
-rule_a_200_090_002_01 contains result if {
-	some file_name, file_table in input.assays
-	some column_index, header in file_table.table.headers
-	control_lists := data.metabolights.validation.v2.controls.assayFileControls
-	control_lists[header.columnHeader]
-	selected_validation_types := {"any-ontology-term"}
-	enforcement_levels = {"required"}
-	template_name := file_table.assayTechnique.name
-	result := f.check_rule_by_enforcement_level(
-		rego.metadata.rule(),
-		def1.STUDY_CATEGORY,
-		def1.STUDY_TEMPLATE_VERSION,
-		def1.STUDY_CREATED_AT,
-		template_name,
-		"assay",
-		file_table.table,
-		file_name,
-		column_index,
-		selected_validation_types,
-		enforcement_levels,
-		control_lists,
-		header.columnHeader,
-	)
-}
-
-# METADATA
-# title: Ontology Term Source REF is not selected from the default prioritised ontologies.
-# description: Select a term from one of the prioritised sources where possible.
-# custom:
-#  rule_id: rule_a_200_090_002_02
-#  type: WARNING
-#  priority: HIGH
-#  section: assays.general
-rule_a_200_090_002_02 contains result if {
-	some file_name, file_table in input.assays
-	some column_index, header in file_table.table.headers
-	control_lists := data.metabolights.validation.v2.controls.assayFileControls
-	not control_lists[header.columnHeader]
-	selected_validation_types = {"any-ontology-term", "child-ontology-term", "ontology-term-in-selected-ontologies"}
-	template_name := file_table.assayTechnique.name
-	enforcement_levels = {"required"}
-	result := f.check_rule_by_enforcement_level(
-		rego.metadata.rule(),
-		def1.STUDY_CATEGORY,
-		def1.STUDY_TEMPLATE_VERSION,
-		def1.STUDY_CREATED_AT,
-		template_name,
-		"assay",
-		file_table.table,
-		file_name,
-		column_index,
-		selected_validation_types,
-		enforcement_levels,
-		control_lists,
-		"__default__",
-	)
-}
-
-# METADATA
 # title: Ontology Term Source REF not referenced in investigation file.
 # description: All ontology Term Source REFs should be referenced in ONTOLOGY SOURCE REFERENCE section in i_Investigation.txt.
 # custom:
@@ -119,9 +53,13 @@ rule_a_200_090_002_02 contains result if {
 #  section: assays.general
 rule_a_200_090_002_03 contains result if {
 	some file_name, sheet in input.assays
-	some header_index, _ in sheet.table.headers
+
+	# print(file_name, sheet.table.headers)
+	some header_index, header in sheet.table.headers
 	ontology_source_references := {ref.sourceName | some ref in input.investigation.ontologySourceReferences.references}
 	ontology_source_references_str := concat(", ", ontology_source_references)
+
+	# print(rego.metadata.rule().custom.rule_id, header.columnHeader)
 	result := f.term_source_ref_not_in_source_references_list(rego.metadata.rule(), assays, file_name, header_index, ontology_source_references, ontology_source_references_str)
 }
 
@@ -137,38 +75,6 @@ rule_a_200_090_002_04 contains result if {
 	some file_name, sheet in input.assays
 	some header_index, _ in sheet.table.headers
 	result := f.term_source_ref_is_defined_for_empty_term(rego.metadata.rule(), assays, file_name, header_index)
-}
-
-# METADATA
-# title: Ontology Term Source REF of Unit is not selected from the prioritised ontologies.
-# description: Select a unit term from one of the prioritised sources where possible.
-# custom:
-#  rule_id: rule_a_200_090_002_05
-#  type: WARNING
-#  priority: HIGH
-#  section: assays.general
-rule_a_200_090_002_05 contains result if {
-	control_lists := data.metabolights.validation.v2.controls.sampleFileControls
-	some file_name, file_table in input.assays
-	some column_index, header in file_table.table.headers
-	header.columnStructure == "SINGLE_COLUMN_AND_UNIT_ONTOLOGY"
-	selected_validation_types = {"any-ontology-term"}
-	template_name := file_table.assayTechnique.name
-	result := f.term_source_ref_for_unit_not_valid(
-		rego.metadata.rule(),
-		def1.STUDY_CATEGORY,
-		def1.STUDY_TEMPLATE_VERSION,
-		def1.STUDY_CREATED_AT,
-		template_name,
-		"assay",
-		file_table.table,
-		file_name,
-		column_index,
-		selected_validation_types,
-		control_lists,
-		"Unit",
-		"Prioritised default Unit ontologies",
-	)
 }
 
 # METADATA
@@ -246,6 +152,7 @@ rule_a_200_090_002_22 contains result if {
 	enforcement_levels = {"recommended", "optional"}
 	control_lists[header.columnHeader]
 	template_name := file_table.assayTechnique.name
+
 	# print(header.columnHeader, template_name)
 	result := f.check_rule_by_enforcement_level(
 		rego.metadata.rule(),
@@ -284,7 +191,7 @@ rule_a_200_090_002_23 contains result if {
 		"any-ontology-term",
 		"selected-ontology-term",
 	}
-	enforcement_levels = {"required", "recommended", "optional"}	
+	enforcement_levels = {"required", "recommended", "optional"}
 	result := f.check_rule_by_enforcement_level(
 		rego.metadata.rule(),
 		def1.STUDY_CATEGORY,
@@ -399,7 +306,7 @@ rule_a_200_090_002_26 contains result if {
 		selected_validation_types,
 		enforcement_levels,
 		control_lists,
-		header.columnHeader
+		header.columnHeader,
 	)
 }
 
@@ -439,7 +346,7 @@ rule_a_200_090_002_27 contains result if {
 		selected_validation_types,
 		enforcement_levels,
 		control_lists,
-		header.columnHeader
+		header.columnHeader,
 	)
 }
 
@@ -478,7 +385,7 @@ rule_a_200_090_002_28 contains result if {
 		control_lists,
 		selected_validation_types,
 		enforcement_levels,
-		"__default__"
+		"__default__",
 	)
 }
 
@@ -518,7 +425,7 @@ rule_a_200_090_002_29 contains result if {
 		selected_validation_types,
 		enforcement_levels,
 		control_lists,
-		"__default__"
+		"__default__",
 	)
 }
 

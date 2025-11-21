@@ -1,9 +1,9 @@
 {
-    "ruleName": "selected-ontologies-01",
+    "ruleName": "child-ontology-term-01",
     "description": "",
     "fieldName": "",
     "selectionCriteria": {
-        "isaFileType": "investigation",
+        "isaFileType": "sample",
         "studyCreatedAtOrAfter": null,
         "studyCreatedBefore": null,
         "studyCategoryFilter": null,

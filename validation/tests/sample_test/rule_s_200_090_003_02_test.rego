@@ -16,19 +16,87 @@ import rego.v1
 #  section: samples.general
 rule_s_200_090_003_02_test_cases := 1
 
-# # METADATA
-# # title: <title>.
-# # description: <description>.
-# test_tests.sample_test_no_violation_01 if {
-# 	result := rules.tests.sample_test with input as {
-# 	}
-# 	count(result) == 0
-# }
-# # METADATA
-# # title: <title>.
-# # description: <description>.
-# test_tests.sample_test_violation_01 if {
-# 	result := rules.tests.sample_test with input as {
-# 	}
-# 	count(result) == 1
-# }
+
+
+# METADATA
+# title: <title>.
+# description: <description>.
+test_rule_s_200_090_003_02_no_violation_01 if {
+	input_01 := data.tests.data.inputs.minimum_01
+	input_data := input_01
+	result := rules.rule_s_200_090_003_02 with input as input_data
+	count(result) == 0
+}
+
+
+# METADATA
+# title: <title>.
+# description: <description>.
+test_rule_s_200_090_003_02_no_violation_02 if {
+	input_01 := data.tests.data.inputs.minimum_01
+	input_data := json.patch(
+		input_01,
+		[
+			{
+				"op": "replace",
+				"path": "/samples/s_REQ2025111188888.txt/table/data/Factor Value[Dose]/0",
+				"value": "Test data",
+			},
+			{
+				"op": "replace",
+				"path": "/samples/s_REQ2025111188888.txt/table/data/Unit/0",
+				"value": "Data",
+			},
+			{
+				"op": "replace",
+				"path": "/samples/s_REQ2025111188888.txt/table/data/Term Source REF.5/0",
+				"value": "Data",
+			},
+			{
+				"op": "replace",
+				"path": "/samples/s_REQ2025111188888.txt/table/data/Term Accession Number.5/0",
+				"value": "htt",
+			},
+		],
+	)
+	result := rules.rule_s_200_090_003_02 with input as input_data
+
+	count(result) == 0
+}
+
+
+# METADATA
+# title: <title>.
+# description: <description>.
+test_rule_s_200_090_003_02_violation_01 if {
+	input_01 := data.tests.data.inputs.minimum_01
+	input_data := json.patch(
+		input_01,
+		[
+			{
+				"op": "replace",
+				"path": "/samples/s_REQ2025111188888.txt/table/data/Factor Value[Dose]/0",
+				"value": "Test data",
+			},
+			{
+				"op": "replace",
+				"path": "/samples/s_REQ2025111188888.txt/table/data/Unit/0",
+				"value": "Data",
+			},
+			{
+				"op": "replace",
+				"path": "/samples/s_REQ2025111188888.txt/table/data/Term Source REF.5/0",
+				"value": "Data",
+			},
+			{
+				"op": "replace",
+				"path": "/samples/s_REQ2025111188888.txt/table/data/Term Accession Number.5/0",
+				"value": "OB",
+			},
+		],
+	)
+	result := rules.rule_s_200_090_003_02 with input as input_data
+
+	count(result) == 1
+}
+

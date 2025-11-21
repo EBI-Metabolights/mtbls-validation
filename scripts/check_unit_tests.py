@@ -74,7 +74,7 @@ def find_diff_between_rules_and_tests(force: bool = False):
     header_printed = False
     for rule, file_rules in unit_tests.items():
         cases = sum([len(x) for x in file_rules.values()])
-        if cases < 1:
+        if cases < 2:
             if not header_printed:
                 print("Some rules have less than 2 test cases:")
                 header_printed = True

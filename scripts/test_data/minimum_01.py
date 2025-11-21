@@ -1,9 +1,6 @@
 import json
 import pathlib
 from metabolights_utils.models.metabolights import model
-from metabolights_utils.models.isa import investigation_file as inv
-from metabolights_utils.models.isa.assay_file import AssayFile, AssayTechnique
-from metabolights_utils.models.isa.assignment_file import AssignmentFile
 
 from metabolights_utils.models.metabolights import get_study_model_schema
 import jsonschema

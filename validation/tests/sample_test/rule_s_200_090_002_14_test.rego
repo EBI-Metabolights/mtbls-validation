@@ -1,27 +1,26 @@
 #########################################################################################################
-# Unit tests for rule_s_200_090_002_13
+# Unit tests for rule_s_200_090_002_14
 #########################################################################################################
 package tests.sample_test
-
-import data.metabolights.validation.v2.rules.phase2.violations as rules
 import data.tests.data.inputs.rules as test_rules
+import data.metabolights.validation.v2.rules.phase2.violations as rules
 
 import rego.v1
 
 # METADATA
-# title: The value does not match the required pattern.
-# description: The column value MUST have a valid pattern value.
+# title: The value does not match the recommended pattern.
+# description: The column value SHOULD have a valid pattern value.
 # custom:
-#  rule_id: rule_s_200_090_002_13
-#  type: ERROR
+#  rule_id: rule_s_200_090_002_14
+#  type: WARNING
 #  priority: HIGH
 #  section: samples.general
-rule_s_200_090_002_13_test_cases := 1
+rule_s_200_090_002_14_test_cases := 1
 
 # METADATA
 # title: <title>.
 # description: <description>.
-test_rule_s_200_090_002_13_no_violation_01 if {
+test_rule_s_200_090_002_14_no_violation_01 if {
 	input_01 := data.tests.data.inputs.minimum_01
 	input_data := json.patch(
 		input_01,
@@ -44,14 +43,14 @@ test_rule_s_200_090_002_13_no_violation_01 if {
                     "pattern": {
                         "constraint": ".+",
                         "errorMessage": "Sample error",
-                        "enforcementLevel": "required"
+                        "enforcementLevel": "recommended"
                     }
                 },
 			},
             
 		],
     )
-	result := rules.rule_s_200_090_002_13 with input as input_data
+	result := rules.rule_s_200_090_002_14 with input as input_data
     with data.metabolights.validation.v2.controls.sampleFileControls as {
         "Sample Name": [selected_rule]
     }
@@ -61,7 +60,7 @@ test_rule_s_200_090_002_13_no_violation_01 if {
 # METADATA
 # title: <title>.
 # description: <description>.
-test_rule_s_200_090_002_13_violation_01 if {
+test_rule_s_200_090_002_14_violation_01 if {
 	input_01 := data.tests.data.inputs.minimum_01
 	input_data := json.patch(
 		input_01,
@@ -84,14 +83,14 @@ test_rule_s_200_090_002_13_violation_01 if {
                     "pattern": {
                         "constraint": ".+ value",
                         "errorMessage": "Sample error",
-                        "enforcementLevel": "required"
+                        "enforcementLevel": "recommended"
                     }
                 },
 			},
             
 		],
     )
-	result := rules.rule_s_200_090_002_13 with input as input_data
+	result := rules.rule_s_200_090_002_14 with input as input_data
     with data.metabolights.validation.v2.controls.sampleFileControls as {
         "Sample Name": [selected_rule]
     }

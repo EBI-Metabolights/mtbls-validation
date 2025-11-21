@@ -29,40 +29,37 @@
 | 25 | rule_a_100_100_005_01 | ERROR | There is no row in assay file. | No row is defined in assay file. Add more than one row (run). Please ensure all samples, including controls, QCs, standards, etc, are referenced. |
 | 26 | rule_a_100_100_005_02 | ERROR | There is only one row in assay file. | Only one row is defined in assay file. Add more than one row (run). Please ensure all sample, including controls, QCs, standards, etc, are referenced. |
 | 27 | rule_a_200_090_001_01 | ERROR | Values with trailing or leading spaces in assay file. | Values in assay file should not start or end with space characters. |
-| 28 | rule_a_200_090_002_01 | ERROR | Ontology Term Source REF is not selected from the prioritised ontologies. | Select a term from one of the prioritised sources where possible. |
-| 29 | rule_a_200_090_002_02 | WARNING | Ontology Term Source REF is not selected from the default prioritised ontologies. | Select a term from one of the prioritised sources where possible. |
-| 30 | rule_a_200_090_002_03 | WARNING | Ontology Term Source REF not referenced in investigation file. | All ontology Term Source REFs should be referenced in ONTOLOGY SOURCE REFERENCE section in i_Investigation.txt. |
-| 31 | rule_a_200_090_002_04 | WARNING | Ontology Term Source REF defined for empty ontology terms. | Select ontology terms and/or change ontology Term Source REF. |
-| 32 | rule_a_200_090_002_05 | WARNING | Ontology Term Source REF of Unit is not selected from the prioritised ontologies. | Select a unit term from one of the prioritised sources where possible. |
-| 33 | rule_a_200_090_002_06 | WARNING | Ontology Term Source REF defined for empty unit ontology terms. | Select unit ontology terms and/or change ontology Term Source REF. |
-| 34 | rule_a_200_090_002_21 | ERROR | Value is not in the required ontologies or controlled lists associated with this column | A term MUST be selected from the required ontologies or controlled lists associated with this column. |
-| 35 | rule_a_200_090_002_22 | WARNING | Value is not in the predefined ontologies or controlled lists associated with this column | A term SHOULD be selected from the predefined ontologies or controlled lists associated with this column. |
-| 36 | rule_a_200_090_002_23 | WARNING | Value is not in the default ontologies or controlled lists | A term SHOULD be selected from the default ontologies or controlled lists. |
-| 37 | rule_a_200_090_002_24 | ERROR | The value does not match the required pattern. | The column value MUST have a valid pattern value. |
-| 38 | rule_a_200_090_002_25 | WARNING | The value does not match the recommended pattern. | The column value SHOULD have a valid pattern value. |
-| 39 | rule_a_200_090_002_26 | ERROR | The value appears in the list of unexpected values for this column. | Select an alternative term or value that meets the requirement. |
-| 40 | rule_a_200_090_002_27 | WARNING | The value appears in the list of not-recommended values for this column. | Select an alternative value that meets the requirement or leave it empty (if it is not required). |
-| 41 | rule_a_200_090_002_28 | ERROR | The value appears in the list of default unexpected values. | Select an alternative term or value that meets the requirement. |
-| 42 | rule_a_200_090_002_29 | WARNING | The value appears in the list of default not-recommended values. | Select an alternative value that meets the requirement or leave it empty (if it is not required). |
-| 43 | rule_a_200_090_003_01 | WARNING | Term Accession Number length of ontology terms less than 3 characters. | Term Accession Number of ontology terms should be defined with length equal or greater than 3 characters. |
-| 44 | rule_a_200_090_003_02 | WARNING | Term Accession number length of unit ontology terms less than 3 characters. | Term Accession Number of unit ontology terms should be defined with length equal or greater than 3 characters. |
-| 45 | rule_a_200_090_003_03 | WARNING | Term Accession Number defined for empty ontology terms. | Select ontology terms and/or change ontology Term Accession Number. |
-| 46 | rule_a_200_090_003_04 | WARNING | Term Accession Number defined for empty unit ontology terms. | Select unit ontology terms and/or change ontology Term Accession Number. |
-| 47 | rule_a_200_090_004_01 | ERROR | Required columns have empty values in assay file. | All required column values should be defined in assay file. |
-| 48 | rule_a_200_090_004_02 | ERROR | Values do not meet minimum length requirement. | Each row should have a value equal or greater than the minimum length. |
-| 49 | rule_a_200_090_004_03 | ERROR | Values do not meet maximum length requirement. | Each row should have a value equal or less than the maximum length. |
-| 50 | rule_a_200_090_005_01 | ERROR | Values for Protocol REF column not valid in assay file. | All rows should be filled with the same value (case sensitive). |
-| 51 | rule_a_200_100_001_01 | ERROR | Values for Sample Name column not in sample file. | All Sample Name column values should be defined in sample file. |
-| 52 | rule_a_200_100_001_02 | WARNING | Values for Sample Name column not unique in assay file. | Often Sample Name column values will be unique. |
-| 53 | rule_a_200_200_001_01 | ERROR | Metabolite assignment file name not correct pattern in assay file. | Metabolite assignment file name must start with 'm_' and have extension '.tsv'. |
-| 54 | rule_a_200_200_001_02 | ERROR | Metabolite assignment file name contains invalid characters in assay file. | Use only .-_A-Za-z0-9 characters for an metabolite assignment file name in assay file. |
-| 55 | rule_a_200_300_001_01 | ERROR | Both 'Raw Spectral Data File' and 'Derived Spectral Data File' not in assay file. | Raw data files or Derived data files must be defined in assay file. |
-| 56 | rule_a_200_300_001_02 | WARNING | Derived Spectral Data File' is defined but 'Raw Spectral Data File' is empty in assay file. | Derived Spectral Data File is defined without Raw Spectral Data File. We recommend to upload raw file and reference it. |
-| 57 | rule_a_200_300_001_03 | ERROR | Values for Raw Spectral Data File column not correct extension in assay file. | All Raw Spectral Data File column values should have extension found in control list. |
-| 58 | rule_a_200_300_002_01 | WARNING | Values for MS Assay Name column not unique in assay file. | All MS Assay Name column values should be unique. |
-| 59 | rule_a_200_300_003_01 | WARNING | Scan Polarity column values are not same as assay file name. | Values for Scan Polarity column is not same as assay file name. |
-| 60 | rule_a_200_300_003_02 | ERROR | Scan Polarity column values are not unique. | Define only one scan polarity value in each assay file. |
-| 61 | rule_a_200_400_001_01 | ERROR | Derived Spectral Data Files, Acquisition Parameter Data File and Free Induction Decay Data File values are empty in NMR assays. | At least one file should be defined in Derived Spectral Data Files, Free Induction Decay Data File or Acquisition Parameter Data File columns. |
-| 62 | rule_a_200_400_002_01 | WARNING | Values for NMR Assay Name column not unique in assay file. | All NMR Assay Name column values should be unique. |
-| 63 | rule_a_200_500_001_01 | ERROR | Values for Derived Spectral Data File column not correct extension in assay file. | All Derived Spectral Data File column values should have extension found in control list. |
-| 64 | rule_a_200_600_001_01 | WARNING | Column Type column values are not same as assay file name. | if all values in Column Type are in a control list, technique name defined in control list should be in assay file name. |
+| 28 | rule_a_200_090_002_03 | WARNING | Ontology Term Source REF not referenced in investigation file. | All ontology Term Source REFs should be referenced in ONTOLOGY SOURCE REFERENCE section in i_Investigation.txt. |
+| 29 | rule_a_200_090_002_04 | WARNING | Ontology Term Source REF defined for empty ontology terms. | Select ontology terms and/or change ontology Term Source REF. |
+| 30 | rule_a_200_090_002_06 | WARNING | Ontology Term Source REF defined for empty unit ontology terms. | Select unit ontology terms and/or change ontology Term Source REF. |
+| 31 | rule_a_200_090_002_21 | ERROR | Value is not in the required ontologies or controlled lists associated with this column | A term MUST be selected from the required ontologies or controlled lists associated with this column. |
+| 32 | rule_a_200_090_002_22 | WARNING | Value is not in the predefined ontologies or controlled lists associated with this column | A term SHOULD be selected from the predefined ontologies or controlled lists associated with this column. |
+| 33 | rule_a_200_090_002_23 | WARNING | Value is not in the default ontologies or controlled lists | A term SHOULD be selected from the default ontologies or controlled lists. |
+| 34 | rule_a_200_090_002_24 | ERROR | The value does not match the required pattern. | The column value MUST have a valid pattern value. |
+| 35 | rule_a_200_090_002_25 | WARNING | The value does not match the recommended pattern. | The column value SHOULD have a valid pattern value. |
+| 36 | rule_a_200_090_002_26 | ERROR | The value appears in the list of unexpected values for this column. | Select an alternative term or value that meets the requirement. |
+| 37 | rule_a_200_090_002_27 | WARNING | The value appears in the list of not-recommended values for this column. | Select an alternative value that meets the requirement or leave it empty (if it is not required). |
+| 38 | rule_a_200_090_002_28 | ERROR | The value appears in the list of default unexpected values. | Select an alternative term or value that meets the requirement. |
+| 39 | rule_a_200_090_002_29 | WARNING | The value appears in the list of default not-recommended values. | Select an alternative value that meets the requirement or leave it empty (if it is not required). |
+| 40 | rule_a_200_090_003_01 | WARNING | Term Accession Number length of ontology terms less than 3 characters. | Term Accession Number of ontology terms should be defined with length equal or greater than 3 characters. |
+| 41 | rule_a_200_090_003_02 | WARNING | Term Accession number length of unit ontology terms less than 3 characters. | Term Accession Number of unit ontology terms should be defined with length equal or greater than 3 characters. |
+| 42 | rule_a_200_090_003_03 | WARNING | Term Accession Number defined for empty ontology terms. | Select ontology terms and/or change ontology Term Accession Number. |
+| 43 | rule_a_200_090_003_04 | WARNING | Term Accession Number defined for empty unit ontology terms. | Select unit ontology terms and/or change ontology Term Accession Number. |
+| 44 | rule_a_200_090_004_01 | ERROR | Required columns have empty values in assay file. | All required column values should be defined in assay file. |
+| 45 | rule_a_200_090_004_02 | ERROR | Values do not meet minimum length requirement. | Each row should have a value equal or greater than the minimum length. |
+| 46 | rule_a_200_090_004_03 | ERROR | Values do not meet maximum length requirement. | Each row should have a value equal or less than the maximum length. |
+| 47 | rule_a_200_090_005_01 | ERROR | Values for Protocol REF column not valid in assay file. | All rows should be filled with the same value (case sensitive). |
+| 48 | rule_a_200_100_001_01 | ERROR | Values for Sample Name column not in sample file. | All Sample Name column values should be defined in sample file. |
+| 49 | rule_a_200_100_001_02 | WARNING | Values for Sample Name column not unique in assay file. | Often Sample Name column values will be unique. |
+| 50 | rule_a_200_200_001_01 | ERROR | Metabolite assignment file name not correct pattern in assay file. | Metabolite assignment file name must start with 'm_' and have extension '.tsv'. |
+| 51 | rule_a_200_200_001_02 | ERROR | Metabolite assignment file name contains invalid characters in assay file. | Use only .-_A-Za-z0-9 characters for an metabolite assignment file name in assay file. |
+| 52 | rule_a_200_300_001_01 | ERROR | Both 'Raw Spectral Data File' and 'Derived Spectral Data File' not in assay file. | Raw data files or Derived data files must be defined in assay file. |
+| 53 | rule_a_200_300_001_02 | WARNING | Derived Spectral Data File' is defined but 'Raw Spectral Data File' is empty in assay file. | Derived Spectral Data File is defined without Raw Spectral Data File. We recommend to upload raw file and reference it. |
+| 54 | rule_a_200_300_001_03 | ERROR | Values for Raw Spectral Data File column not correct extension in assay file. | All Raw Spectral Data File column values should have extension found in control list. |
+| 55 | rule_a_200_300_002_01 | WARNING | Values for MS Assay Name column not unique in assay file. | All MS Assay Name column values should be unique. |
+| 56 | rule_a_200_300_003_01 | WARNING | Scan Polarity column values are not same as assay file name. | Values for Scan Polarity column is not same as assay file name. |
+| 57 | rule_a_200_300_003_02 | ERROR | Scan Polarity column values are not unique. | Define only one scan polarity value in each assay file. |
+| 58 | rule_a_200_400_001_01 | ERROR | Derived Spectral Data Files, Acquisition Parameter Data File and Free Induction Decay Data File values are empty in NMR assays. | At least one file should be defined in Derived Spectral Data Files, Free Induction Decay Data File or Acquisition Parameter Data File columns. |
+| 59 | rule_a_200_400_002_01 | WARNING | Values for NMR Assay Name column not unique in assay file. | All NMR Assay Name column values should be unique. |
+| 60 | rule_a_200_500_001_01 | ERROR | Values for Derived Spectral Data File column not correct extension in assay file. | All Derived Spectral Data File column values should have extension found in control list. |
+| 61 | rule_a_200_600_001_01 | WARNING | Column Type column values are not same as assay file name. | if all values in Column Type are in a control list, technique name defined in control list should be in assay file name. |

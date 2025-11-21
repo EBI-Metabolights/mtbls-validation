@@ -1,6 +1,6 @@
 {
     "validation_version": "2.1.4",
-    "created_at": "2025-11-21T13:44:28.505049+00:00",
+    "created_at": "2025-11-21T23:45:44.352027+00:00",
     "violations": [
         {
             "rule_id": "rule___100_100_001_01",
@@ -411,22 +411,6 @@
             "priority": "HIGH"
         },
         {
-            "rule_id": "rule_a_200_090_002_01",
-            "title": "Ontology Term Source REF is not selected from the prioritised ontologies.",
-            "description": "Select a term from one of the prioritised sources where possible.",
-            "type": "ERROR",
-            "section": "assays",
-            "priority": "HIGH"
-        },
-        {
-            "rule_id": "rule_a_200_090_002_02",
-            "title": "Ontology Term Source REF is not selected from the default prioritised ontologies.",
-            "description": "Select a term from one of the prioritised sources where possible.",
-            "type": "WARNING",
-            "section": "assays",
-            "priority": "HIGH"
-        },
-        {
             "rule_id": "rule_a_200_090_002_03",
             "title": "Ontology Term Source REF not referenced in investigation file.",
             "description": "All ontology Term Source REFs should be referenced in ONTOLOGY SOURCE REFERENCE section in i_Investigation.txt.",
@@ -438,14 +422,6 @@
             "rule_id": "rule_a_200_090_002_04",
             "title": "Ontology Term Source REF defined for empty ontology terms.",
             "description": "Select ontology terms and/or change ontology Term Source REF.",
-            "type": "WARNING",
-            "section": "assays",
-            "priority": "HIGH"
-        },
-        {
-            "rule_id": "rule_a_200_090_002_05",
-            "title": "Ontology Term Source REF of Unit is not selected from the prioritised ontologies.",
-            "description": "Select a unit term from one of the prioritised sources where possible.",
             "type": "WARNING",
             "section": "assays",
             "priority": "HIGH"
@@ -1427,14 +1403,6 @@
             "priority": "HIGH"
         },
         {
-            "rule_id": "rule_i_100_360_010_02",
-            "title": "Study Person Role is not selected from the prioritised ontologies.",
-            "description": "Study Person Role MAY be selected from the prioritised ontologies.",
-            "type": "WARNING",
-            "section": "investigation",
-            "priority": "MEDIUM"
-        },
-        {
             "rule_id": "rule_i_100_360_010_03",
             "title": "Study Person Roles Term Source REF is empty.",
             "description": "Study Person Roles Term Source REF should be defined.",
@@ -1819,14 +1787,6 @@
             "priority": "HIGH"
         },
         {
-            "rule_id": "rule_s_200_090_002_01",
-            "title": "Ontology Term Source REF is not selected from the prioritised ontologies.",
-            "description": "The term is not in the control list or selected ontologies.",
-            "type": "WARNING",
-            "section": "samples",
-            "priority": "HIGH"
-        },
-        {
             "rule_id": "rule_s_200_090_002_03",
             "title": "Ontology Term Source REF not referenced in investigation file.",
             "description": "All ontology Term Source REFs should be referenced in ONTOLOGY SOURCE REFERENCE section in i_Investigation.txt.",
@@ -1839,14 +1799,6 @@
             "title": "Ontology Term Source REF defined for empty ontology terms.",
             "description": "Select ontology terms and/or change ontology Term Source REF.",
             "type": "ERROR",
-            "section": "samples",
-            "priority": "MEDIUM"
-        },
-        {
-            "rule_id": "rule_s_200_090_002_05",
-            "title": "Ontology Term Source REF of Unit is not selected from the prioritised ontologies.",
-            "description": "Select a unit term from one of the prioritised sources where possible.",
-            "type": "WARNING",
             "section": "samples",
             "priority": "MEDIUM"
         },
@@ -2011,14 +1963,6 @@
             "priority": "HIGH"
         },
         {
-            "rule_id": "rule_s_200_100_002_02",
-            "title": "Term Source REF of the user defined characteristics ontology term is not in the priotirised control list.",
-            "description": "We highly recommend to use the prioritised ontologies for the characteristics ontology term.",
-            "type": "WARNING",
-            "section": "samples",
-            "priority": "MEDIUM"
-        },
-        {
             "rule_id": "rule_s_200_100_002_04",
             "title": "Term Accession Number of the user defined characteristics ontology terms is empty.",
             "description": "We highly recommend to define accession number of the selected term.",
@@ -2057,14 +2001,6 @@
             "type": "ERROR",
             "section": "samples",
             "priority": "HIGH"
-        },
-        {
-            "rule_id": "rule_s_200_200_003_01",
-            "title": "Term Source REF of the factor value ontology term is not in the priotirised control list.",
-            "description": "We highly recommend to use the prioritised Ontology Source Refs for the factor ontology term.",
-            "type": "WARNING",
-            "section": "samples",
-            "priority": "LOW"
         }
     ],
     "summary": [

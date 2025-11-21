@@ -45,37 +45,6 @@ rule_s_200_090_001_01 contains result if {
 }
 
 # METADATA
-# title: Ontology Term Source REF is not selected from the prioritised ontologies.
-# description: The term is not in the control list or selected ontologies.
-# custom:
-#  rule_id: rule_s_200_090_002_01
-#  type: WARNING
-#  priority: HIGH
-#  section: samples.general
-rule_s_200_090_002_01 contains result if {
-	some file_name, file_table in input.samples
-	some column_index, header in input.samples[file_name].table.headers
-	control_lists := data.metabolights.validation.v2.controls.sampleFileControls
-	selected_validation_types = {"any-ontology-term"}
-	enforcement_levels = {"required"}
-	result := f.check_rule_by_enforcement_level(
-		rego.metadata.rule(),
-		def1.STUDY_CATEGORY,
-		def1.STUDY_TEMPLATE_VERSION,
-		def1.STUDY_CREATED_AT,
-		def1.STUDY_SAMPLE_TEMPLATE_NAME,
-		"samplex",
-		file_table.table,
-		file_name,
-		column_index,
-		selected_validation_types,
-		enforcement_levels,
-		control_lists,
-		header.columnHeader,
-	)
-}
-
-# METADATA
 # title: Ontology Term Source REF not referenced in investigation file.
 # description: All ontology Term Source REFs should be referenced in ONTOLOGY SOURCE REFERENCE section in i_Investigation.txt.
 # custom:
@@ -101,37 +70,6 @@ rule_s_200_090_002_04 contains result if {
 	some file_name, sheet in input.samples
 	some header_index, header in sheet.table.headers
 	result := f.term_source_ref_is_defined_for_empty_term(rego.metadata.rule(), input.samples, file_name, header_index)
-}
-
-# METADATA
-# title: Ontology Term Source REF of Unit is not selected from the prioritised ontologies.
-# description: Select a unit term from one of the prioritised sources where possible.
-# custom:
-#  rule_id: rule_s_200_090_002_05
-#  type: WARNING
-#  priority: MEDIUM
-#  section: samples.general
-rule_s_200_090_002_05 contains result if {
-	control_lists := data.metabolights.validation.v2.controls.sampleFileControls
-	some file_name, file_table in input.samples
-	some column_index, header in input.samples[file_name].table.headers
-	header.columnStructure == "SINGLE_COLUMN_AND_UNIT_ONTOLOGY"
-	selected_validation_types = {"any-ontology-term"}
-	result := f.term_source_ref_for_unit_not_valid(
-		rego.metadata.rule(),
-		def1.STUDY_CATEGORY,
-		def1.STUDY_TEMPLATE_VERSION,
-		def1.STUDY_CREATED_AT,
-		def1.STUDY_SAMPLE_TEMPLATE_NAME,
-		"sample",
-		file_table.table,
-		file_name,
-		column_index,
-		selected_validation_types,
-		control_lists,
-		"Unit",
-		"Prioritised default Unit ontologies",
-	)
 }
 
 # METADATA
@@ -277,7 +215,6 @@ rule_s_200_090_002_12 contains result if {
 	some column_index, header in input.samples[file_name].table.headers
 	not control_lists[header.columnHeader]
 	startswith(header.columnHeader, "Characteristics[")
-
 	# header.columnStructure == "ONTOLOGY_COLUMN"
 	selected_validation_types = {
 		"ontology-term-in-selected-ontologies",
@@ -399,8 +336,11 @@ rule_s_200_090_003_02 contains result if {
 #  priority: HIGH
 #  section: samples.general
 rule_s_200_090_003_03 contains result if {
-	input.samples[fileName].table.headers[columnIndex]
-	result := f.accession_number_is_defined_for_empty_term(rego.metadata.rule(), input.samples, fileName, columnIndex)
+	some filename, sample_file in input.samples
+	some idx, header in sample_file.table.headers
+
+	# input.samples[fileName].table.headers[columnIndex]
+	result := f.accession_number_is_defined_for_empty_term(rego.metadata.rule(), input.samples, filename, idx)
 }
 
 # METADATA
@@ -563,7 +503,7 @@ rule_s_200_090_007_01 contains result if {
 		selected_validation_types,
 		enforcement_levels,
 		control_lists,
-		header.columnHeader
+		header.columnHeader,
 	)
 }
 
@@ -602,7 +542,7 @@ rule_s_200_090_007_02 contains result if {
 		selected_validation_types,
 		enforcement_levels,
 		control_lists,
-		header.columnHeader
+		header.columnHeader,
 	)
 }
 
@@ -616,11 +556,10 @@ rule_s_200_090_007_02 contains result if {
 #  section: samples.general
 rule_s_200_090_007_03 contains result if {
 	control_lists := data.metabolights.validation.v2.controls.sampleFileControls
-	
+
 	some file_name, file_table in input.samples
 	some column_index, header in input.samples[file_name].table.headers
 
-	# control_lists[header.columnHeader]
 	selected_validation_types = {
 		"selected-ontology-term",
 		"any-ontology-term",
@@ -630,6 +569,7 @@ rule_s_200_090_007_03 contains result if {
 	}
 
 	enforcement_levels = {"required"}
+
 	# print("rule", rego.metadata.rule().custom.rule_id, header.columnHeader, header.columnStructure)
 
 	result := f.check_unexpected_value(
@@ -645,7 +585,7 @@ rule_s_200_090_007_03 contains result if {
 		selected_validation_types,
 		enforcement_levels,
 		control_lists,
-		"__default__"
+		"__default__",
 	)
 }
 
@@ -659,11 +599,10 @@ rule_s_200_090_007_03 contains result if {
 #  section: samples.general
 rule_s_200_090_007_04 contains result if {
 	control_lists := data.metabolights.validation.v2.controls.sampleFileControls
-	
+
 	some file_name, file_table in input.samples
 	some column_index, header in input.samples[file_name].table.headers
 
-	control_lists[header.columnHeader]
 	selected_validation_types = {
 		"selected-ontology-term",
 		"any-ontology-term",
@@ -685,7 +624,7 @@ rule_s_200_090_007_04 contains result if {
 		selected_validation_types,
 		enforcement_levels,
 		control_lists,
-		"__default__"
+		"__default__",
 	)
 }
 
@@ -723,40 +662,6 @@ rule_s_200_100_002_01 contains result if {
 	}
 
 	result := f.format_with_values(rego.metadata.rule(), file_name, header.columnIndex + 1, header.columnHeader, violated_values)
-}
-
-# METADATA
-# title: Term Source REF of the user defined characteristics ontology term is not in the priotirised control list.
-# description: We highly recommend to use the prioritised ontologies for the characteristics ontology term.
-# custom:
-#  rule_id: rule_s_200_100_002_02
-#  type: WARNING
-#  priority: MEDIUM
-#  section: samples.source
-rule_s_200_100_002_02 contains result if {
-	control_lists := data.metabolights.validation.v2.controls.sampleFileControls
-	some file_name, file_table in input.samples
-	some column_index, header in input.samples[file_name].table.headers
-	selected_validation_types = {"any-ontology-term"}
-	enforcement_levels = {"required"}
-	not control_lists[header.columnHeader]
-	startswith(header.columnHeader, "Characteristics[")
-	header.columnStructure == "ONTOLOGY_COLUMN"
-	result := f.check_rule_by_enforcement_level(
-		rego.metadata.rule(),
-		def1.STUDY_CATEGORY,
-		def1.STUDY_TEMPLATE_VERSION,
-		def1.STUDY_CREATED_AT,
-		def1.STUDY_SAMPLE_TEMPLATE_NAME,
-		"sample",
-		file_table.table,
-		file_name,
-		column_index,
-		selected_validation_types,
-		enforcement_levels,
-		control_lists,
-		"__default_characteristic__",
-	)
 }
 
 # METADATA
@@ -918,40 +823,4 @@ rule_s_200_200_002_02 contains result if {
 	}
 
 	result := f.format_with_values(rego.metadata.rule(), file_name, header.columnIndex + 1, header.columnHeader, violated_values)
-}
-
-# METADATA
-# title: Term Source REF of the factor value ontology term is not in the priotirised control list.
-# description: We highly recommend to use the prioritised Ontology Source Refs for the factor ontology term.
-# custom:
-#  rule_id: rule_s_200_200_003_01
-#  type: WARNING
-#  priority: LOW
-#  section: samples.sampleCollection
-rule_s_200_200_003_01 contains result if {
-	control_lists := data.metabolights.validation.v2.controls.sampleFileControls
-	some file_name, file_table in input.samples
-	some column_index, header in input.samples[file_name].table.headers
-	selected_validation_types = {"any-ontology-term"}
-	enforcement_levels = {"required"}
-	not control_lists[header.columnHeader]
-	startswith(header.columnHeader, "Factor Value[")
-	header.columnStructure == "ONTOLOGY_COLUMN"
-
-	# print(header.columnHeader)
-	result := f.check_rule_by_enforcement_level(
-		rego.metadata.rule(),
-		def1.STUDY_CATEGORY,
-		def1.STUDY_TEMPLATE_VERSION,
-		def1.STUDY_CREATED_AT,
-		def1.STUDY_SAMPLE_TEMPLATE_NAME,
-		"sample",
-		file_table.table,
-		file_name,
-		column_index,
-		selected_validation_types,
-		enforcement_levels,
-		control_lists,
-		"__default_factor_value__",
-	)
 }

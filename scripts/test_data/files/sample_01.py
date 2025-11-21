@@ -223,7 +223,7 @@ sample_file = SamplesFile(
             "Characteristics[Variant]": ["", "", ""],
             "Term Source REF.2": ["", "", "", ""],
             "Term Accession Number.2": ["", "", ""],
-            "Characteristics[Sample type]": ["-", "", ""],
+            "Characteristics[Sample type]": ["", "", ""],
             "Term Source REF.3": ["", "", ""],
             "Term Accession Number.3": ["", "", ""],
             "Protocol REF": [

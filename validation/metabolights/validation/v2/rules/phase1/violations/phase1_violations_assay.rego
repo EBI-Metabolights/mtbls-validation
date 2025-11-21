@@ -79,18 +79,18 @@ rule_a_100_100_001_03 contains result if {
 rule_a_100_100_001_04 contains result if {
 	some file_name, assay_file in input.assays
 
-	def := data.metabolights.validation.v2.rules.phase1.definitions
-	values := {sprintf("[column: %v, header: '%v']", [x, y]) |
-		some header in assay_file.headers
+	default_headers := data.metabolights.validation.v2.rules.phase1.definitions._DEFAULT_ASSAY_HEADER_NAMES[file_name]
 
-		not header.columnHeader in def._DEFAULT_ASSAY_HEADER_NAMES[file_name]
-		header.columnCategory != "Parameter Value"
-		header.columnCategory != "Protocol"
-		header.columnCategory != "Comment"
+	values := {sprintf("[column: %v, header: '%v']", [x, y]) |
+		some header in assay_file.table.headers
+		not header.columnHeader in default_headers
+		not startswith(header.columnHeader, "Parameter Value[")
+		not startswith(header.columnHeader, "Protocol REF")
+		not startswith(header.columnHeader, "Comment[")
 		header.columnStructure != "LINKED_COLUMN"
 		header.columnStructure != "ADDITIONAL_COLUMN"
 		header.columnStructure != "INVALID_MULTI_COLUMN"
-
+		
 		y := header.columnHeader
 		x := header.columnIndex + 1
 	}

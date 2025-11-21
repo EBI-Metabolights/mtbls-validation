@@ -23,7 +23,7 @@ rule___100_100_001_02_test_cases := 1
 # description: Input has all fields and no extra fields.
 test_rule___100_100_001_02_no_violation_01 if {
 	result := rules.rule___100_100_001_02 with input as data.tests.data.inputs.empty
-	print(result)
+	# print(result)
 	count(result) == 0
 }
 

@@ -51,6 +51,6 @@ test_rule_i_100_340_002_03_violation_01 if {
 		}],
 	)
 	result := rules.rule_i_100_340_002_03 with input as input_data
-	print(result)
+	# print(result)
 	count(result) == 1
 }

@@ -1,9 +1,9 @@
 {
-    "ruleName": "select-ontology-term-01",
+    "ruleName": "ontology-term-in-selected-ontologies-01",
     "description": "",
     "fieldName": "",
     "selectionCriteria": {
-        "isaFileType": "investigation",
+        "isaFileType": "sample",
         "studyCreatedAtOrAfter": null,
         "studyCreatedBefore": null,
         "studyCategoryFilter": null,
@@ -11,7 +11,7 @@
         "isaFileTemplateNameFilter": null,
         "linkedFieldAndValueFilter": null
     },
-    "validationType": "selected-ontology-term",
+    "validationType": "ontology-term-in-selected-ontologies",
     "termEnforcementLevel": "required",
     "unexpectedTermEnforcementLevel": "required",
     "constraints": {},
@@ -56,7 +56,10 @@
             "termSourceRef": "UO"
         }
     ],
-    "ontologies": [],
+    "ontologies": [
+        "UO",
+        "NCBITAXON"
+    ],
     "allowedParentOntologyTerms": null,
     "unexpectedTerms": []
 }

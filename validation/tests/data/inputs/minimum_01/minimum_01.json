@@ -52,6 +52,30 @@
                     "sourceFile": "http://purl.obolibrary.org/obo/obi.owl",
                     "sourceVersion": "2024-06-10",
                     "sourceDescription": "Ontology for Biomedical Investigations"
+                },
+                {
+                    "sourceName": "MTBLS",
+                    "sourceFile": "http://www.ebi.ac.uk/metabolights/ontology/file.owl",
+                    "sourceVersion": "2024-06-10",
+                    "sourceDescription": "MetaboLihgts controlled vocabularies"
+                },
+                {
+                    "sourceName": "NCBITAXON",
+                    "sourceFile": "http://purl.obolibrary.org/obo/ncbitaxon.owl",
+                    "sourceVersion": "2024-06-10",
+                    "sourceDescription": "NCBITAXON"
+                },
+                {
+                    "sourceName": "BTO",
+                    "sourceFile": "http://purl.obolibrary.org/obo/bto.owl",
+                    "sourceVersion": "2024-06-10",
+                    "sourceDescription": "BTO"
+                },
+                {
+                    "sourceName": "MONDO",
+                    "sourceFile": "http://purl.obolibrary.org/obo/mondo.owl",
+                    "sourceVersion": "2024-06-10",
+                    "sourceDescription": "MONDO"
                 }
             ]
         },
@@ -272,6 +296,12 @@
                                 },
                                 {
                                     "term": "Mass analyzer",
+                                    "termAccessionNumber": "",
+                                    "termSourceRef": "",
+                                    "valueFormat": ""
+                                },
+                                {
+                                    "term": "Test Data",
                                     "termAccessionNumber": "",
                                     "termSourceRef": "",
                                     "valueFormat": ""
@@ -620,7 +650,7 @@
                         "NCBITAXON",
                         "NCBITAXON",
                         "NCBITAXON",
-                        "NCBITAXONX"
+                        "NCBITAXON"
                     ],
                     "Term Accession Number": [
                         "NCBITaxon:9606",
@@ -659,7 +689,7 @@
                         ""
                     ],
                     "Characteristics[Sample type]": [
-                        "-",
+                        "",
                         "",
                         ""
                     ],
@@ -765,6 +795,10 @@
                     "Parameter Value[Mass analyzer]",
                     "Term Source REF.4",
                     "Term Accession Number.4",
+                    "Parameter Value[Test Data]",
+                    "Unit",
+                    "Term Source REF.5",
+                    "Term Accession Number.5",
                     "MS Assay Name",
                     "Raw Spectral Data File",
                     "Protocol REF.3",
@@ -777,8 +811,8 @@
                 "headers": [
                     {
                         "columnIndex": 0,
-                        "columnName": "database_identifier",
-                        "columnHeader": "database_identifier",
+                        "columnName": "Sample Name",
+                        "columnHeader": "Sample Name",
                         "additionalColumns": [],
                         "columnCategory": "",
                         "columnStructure": "SINGLE_COLUMN",
@@ -787,8 +821,8 @@
                     },
                     {
                         "columnIndex": 1,
-                        "columnName": "chemical_formula",
-                        "columnHeader": "chemical_formula",
+                        "columnName": "Protocol REF",
+                        "columnHeader": "Protocol REF",
                         "additionalColumns": [],
                         "columnCategory": "",
                         "columnStructure": "SINGLE_COLUMN",
@@ -797,8 +831,8 @@
                     },
                     {
                         "columnIndex": 2,
-                        "columnName": "smiles",
-                        "columnHeader": "smiles",
+                        "columnName": "Parameter Value[Post Extraction]",
+                        "columnHeader": "Parameter Value[Post Extraction]",
                         "additionalColumns": [],
                         "columnCategory": "",
                         "columnStructure": "SINGLE_COLUMN",
@@ -807,8 +841,8 @@
                     },
                     {
                         "columnIndex": 3,
-                        "columnName": "inchi",
-                        "columnHeader": "inchi",
+                        "columnName": "Parameter Value[Derivatization]",
+                        "columnHeader": "Parameter Value[Derivatization]",
                         "additionalColumns": [],
                         "columnCategory": "",
                         "columnStructure": "SINGLE_COLUMN",
@@ -817,8 +851,8 @@
                     },
                     {
                         "columnIndex": 4,
-                        "columnName": "metabolite_identification",
-                        "columnHeader": "metabolite_identification",
+                        "columnName": "Extract Name",
+                        "columnHeader": "Extract Name",
                         "additionalColumns": [],
                         "columnCategory": "",
                         "columnStructure": "SINGLE_COLUMN",
@@ -827,38 +861,18 @@
                     },
                     {
                         "columnIndex": 5,
-                        "columnName": "mass_to_charge",
-                        "columnHeader": "mass_to_charge",
+                        "columnName": "Label",
+                        "columnHeader": "Label",
                         "additionalColumns": [],
                         "columnCategory": "",
-                        "columnStructure": "SINGLE_COLUMN",
-                        "columnPrefix": "",
-                        "columnSearchPattern": ""
-                    },
-                    {
-                        "columnIndex": 6,
-                        "columnName": "fragmentation",
-                        "columnHeader": "fragmentation",
-                        "additionalColumns": [],
-                        "columnCategory": "",
-                        "columnStructure": "SINGLE_COLUMN",
-                        "columnPrefix": "",
-                        "columnSearchPattern": ""
-                    },
-                    {
-                        "columnIndex": 7,
-                        "columnName": "modifications",
-                        "columnHeader": "modifications",
-                        "additionalColumns": [],
-                        "columnCategory": "",
-                        "columnStructure": "SINGLE_COLUMN",
+                        "columnStructure": "ONTOLOGY_COLUMN",
                         "columnPrefix": "",
                         "columnSearchPattern": ""
                     },
                     {
                         "columnIndex": 8,
-                        "columnName": "charge",
-                        "columnHeader": "charge",
+                        "columnName": "Protocol REF.2",
+                        "columnHeader": "Protocol REF.2",
                         "additionalColumns": [],
                         "columnCategory": "",
                         "columnStructure": "SINGLE_COLUMN",
@@ -867,8 +881,8 @@
                     },
                     {
                         "columnIndex": 9,
-                        "columnName": "retention_time",
-                        "columnHeader": "retention_time",
+                        "columnName": "Parameter Value[Scan polarity]",
+                        "columnHeader": "Parameter Value[Scan polarity]",
                         "additionalColumns": [],
                         "columnCategory": "",
                         "columnStructure": "SINGLE_COLUMN",
@@ -877,8 +891,8 @@
                     },
                     {
                         "columnIndex": 10,
-                        "columnName": "taxid",
-                        "columnHeader": "taxid",
+                        "columnName": "Parameter Value[Scan m/z range]",
+                        "columnHeader": "Parameter Value[Scan m/z range]",
                         "additionalColumns": [],
                         "columnCategory": "",
                         "columnStructure": "SINGLE_COLUMN",
@@ -887,98 +901,48 @@
                     },
                     {
                         "columnIndex": 11,
-                        "columnName": "species",
-                        "columnHeader": "species",
+                        "columnName": "Parameter Value[Instrument]",
+                        "columnHeader": "Parameter Value[Instrument]",
                         "additionalColumns": [],
                         "columnCategory": "",
-                        "columnStructure": "SINGLE_COLUMN",
-                        "columnPrefix": "",
-                        "columnSearchPattern": ""
-                    },
-                    {
-                        "columnIndex": 12,
-                        "columnName": "database",
-                        "columnHeader": "database",
-                        "additionalColumns": [],
-                        "columnCategory": "",
-                        "columnStructure": "SINGLE_COLUMN",
-                        "columnPrefix": "",
-                        "columnSearchPattern": ""
-                    },
-                    {
-                        "columnIndex": 13,
-                        "columnName": "database_version",
-                        "columnHeader": "database_version",
-                        "additionalColumns": [],
-                        "columnCategory": "",
-                        "columnStructure": "SINGLE_COLUMN",
+                        "columnStructure": "ONTOLOGY_COLUMN",
                         "columnPrefix": "",
                         "columnSearchPattern": ""
                     },
                     {
                         "columnIndex": 14,
-                        "columnName": "reliability",
-                        "columnHeader": "reliability",
+                        "columnName": "Parameter Value[Ion source]",
+                        "columnHeader": "Parameter Value[Ion source]",
                         "additionalColumns": [],
                         "columnCategory": "",
-                        "columnStructure": "SINGLE_COLUMN",
-                        "columnPrefix": "",
-                        "columnSearchPattern": ""
-                    },
-                    {
-                        "columnIndex": 15,
-                        "columnName": "uri",
-                        "columnHeader": "uri",
-                        "additionalColumns": [],
-                        "columnCategory": "",
-                        "columnStructure": "SINGLE_COLUMN",
-                        "columnPrefix": "",
-                        "columnSearchPattern": ""
-                    },
-                    {
-                        "columnIndex": 16,
-                        "columnName": "search_engine",
-                        "columnHeader": "search_engine",
-                        "additionalColumns": [],
-                        "columnCategory": "",
-                        "columnStructure": "SINGLE_COLUMN",
+                        "columnStructure": "ONTOLOGY_COLUMN",
                         "columnPrefix": "",
                         "columnSearchPattern": ""
                     },
                     {
                         "columnIndex": 17,
-                        "columnName": "search_engine_score",
-                        "columnHeader": "search_engine_score",
+                        "columnName": "Parameter Value[Mass analyzer]",
+                        "columnHeader": "Parameter Value[Mass analyzer]",
                         "additionalColumns": [],
                         "columnCategory": "",
-                        "columnStructure": "SINGLE_COLUMN",
-                        "columnPrefix": "",
-                        "columnSearchPattern": ""
-                    },
-                    {
-                        "columnIndex": 18,
-                        "columnName": "smallmolecule_abundance_sub",
-                        "columnHeader": "smallmolecule_abundance_sub",
-                        "additionalColumns": [],
-                        "columnCategory": "",
-                        "columnStructure": "SINGLE_COLUMN",
-                        "columnPrefix": "",
-                        "columnSearchPattern": ""
-                    },
-                    {
-                        "columnIndex": 19,
-                        "columnName": "smallmolecule_abundance_stdev_sub",
-                        "columnHeader": "smallmolecule_abundance_stdev_sub",
-                        "additionalColumns": [],
-                        "columnCategory": "",
-                        "columnStructure": "SINGLE_COLUMN",
+                        "columnStructure": "ONTOLOGY_COLUMN",
                         "columnPrefix": "",
                         "columnSearchPattern": ""
                     },
                     {
                         "columnIndex": 20,
-                        "columnName": "smallmolecule_abundance_std_error_sub",
-                        "columnHeader": "smallmolecule_abundance_std_error_sub",
+                        "columnName": "Parameter Value[Test Data]",
+                        "columnHeader": "Parameter Value[Test Data]",
+                        "additionalColumns": [],
+                        "columnCategory": "",
+                        "columnStructure": "SINGLE_COLUMN_AND_UNIT_ONTOLOGY",
+                        "columnPrefix": "",
+                        "columnSearchPattern": ""
+                    },
+                    {
+                        "columnIndex": 24,
+                        "columnName": "MS Assay Name",
+                        "columnHeader": "MS Assay Name",
                         "additionalColumns": [],
                         "columnCategory": "",
                         "columnStructure": "SINGLE_COLUMN",
@@ -986,9 +950,9 @@
                         "columnSearchPattern": ""
                     },
                     {
-                        "columnIndex": 21,
-                        "columnName": "Assay 1",
-                        "columnHeader": "Assay 1",
+                        "columnIndex": 25,
+                        "columnName": "Raw Spectral Data File",
+                        "columnHeader": "Raw Spectral Data File",
                         "additionalColumns": [],
                         "columnCategory": "",
                         "columnStructure": "SINGLE_COLUMN",
@@ -996,9 +960,9 @@
                         "columnSearchPattern": ""
                     },
                     {
-                        "columnIndex": 22,
-                        "columnName": "Assay 2",
-                        "columnHeader": "Assay 2",
+                        "columnIndex": 26,
+                        "columnName": "Protocol REF.3",
+                        "columnHeader": "Protocol REF.3",
                         "additionalColumns": [],
                         "columnCategory": "",
                         "columnStructure": "SINGLE_COLUMN",
@@ -1006,9 +970,49 @@
                         "columnSearchPattern": ""
                     },
                     {
-                        "columnIndex": 23,
-                        "columnName": "Assay 3",
-                        "columnHeader": "Assay 3",
+                        "columnIndex": 27,
+                        "columnName": "Normalization Name",
+                        "columnHeader": "Normalization Name",
+                        "additionalColumns": [],
+                        "columnCategory": "",
+                        "columnStructure": "SINGLE_COLUMN",
+                        "columnPrefix": "",
+                        "columnSearchPattern": ""
+                    },
+                    {
+                        "columnIndex": 28,
+                        "columnName": "Derived Spectral Data File",
+                        "columnHeader": "Derived Spectral Data File",
+                        "additionalColumns": [],
+                        "columnCategory": "",
+                        "columnStructure": "SINGLE_COLUMN",
+                        "columnPrefix": "",
+                        "columnSearchPattern": ""
+                    },
+                    {
+                        "columnIndex": 29,
+                        "columnName": "Protocol REF.4",
+                        "columnHeader": "Protocol REF.4",
+                        "additionalColumns": [],
+                        "columnCategory": "",
+                        "columnStructure": "SINGLE_COLUMN",
+                        "columnPrefix": "",
+                        "columnSearchPattern": ""
+                    },
+                    {
+                        "columnIndex": 30,
+                        "columnName": "Data Transformation Name",
+                        "columnHeader": "Data Transformation Name",
+                        "additionalColumns": [],
+                        "columnCategory": "",
+                        "columnStructure": "SINGLE_COLUMN",
+                        "columnPrefix": "",
+                        "columnSearchPattern": ""
+                    },
+                    {
+                        "columnIndex": 31,
+                        "columnName": "Metabolite Assignment File",
+                        "columnHeader": "Metabolite Assignment File",
                         "additionalColumns": [],
                         "columnCategory": "",
                         "columnStructure": "SINGLE_COLUMN",
@@ -1048,14 +1052,14 @@
                         "Label 3"
                     ],
                     "Term Source REF.1": [
-                        "",
-                        "",
-                        ""
+                        "EFO",
+                        "EFO",
+                        "EFO"
                     ],
                     "Term Accession Number.1": [
-                        "",
-                        "",
-                        ""
+                        "http://www.ebi.ac.uk",
+                        "http://www.ebi.ac.uk",
+                        "http://www.ebi.ac.uk"
                     ],
                     "Protocol REF.2": [
                         "Mass spectrometry",
@@ -1076,6 +1080,26 @@
                         "Thermo Scientific Q Exactive HF",
                         "Thermo Scientific Q Exactive HF",
                         "Thermo Scientific Q Exactive HF"
+                    ],
+                    "Parameter Value[Test Data]": [
+                        "Test Data",
+                        "Test Data",
+                        "Test Data"
+                    ],
+                    "Unit": [
+                        "",
+                        "",
+                        ""
+                    ],
+                    "Term Source REF.5": [
+                        "",
+                        "",
+                        ""
+                    ],
+                    "Term Accession Number.5": [
+                        "",
+                        "",
+                        ""
                     ],
                     "Term Source REF.2": [
                         "MTBLS",

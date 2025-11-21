@@ -28,7 +28,6 @@ find_rule(
 	rule := selected_rules[0]
 }
 
-
 check_term_rule_by_enforcement_level(
 	meta,
 	file_name,
@@ -37,7 +36,7 @@ check_term_rule_by_enforcement_level(
 	field_name,
 	description_suffix,
 	selected_validation_types,
-	enforcement_levels
+	enforcement_levels,
 ) := result if {
 	control.validationType in selected_validation_types
 	control.termEnforcementLevel in enforcement_levels
@@ -60,7 +59,7 @@ check_term_rule_by_enforcement_level(
 	field_name,
 	description_suffix,
 	selected_validation_types,
-	enforcement_levels,	
+	enforcement_levels,
 ) := result if {
 	expected_validation_types := {"child-ontology-term", "ontology-term-in-selected-ontologies"}
 
@@ -74,9 +73,8 @@ check_term_rule_by_enforcement_level(
 		ontology_term,
 		field_name,
 		description_suffix,
-		selected_validation_types
+		selected_validation_types,
 	)
-
 }
 
 check_term_rule_by_enforcement_level(
@@ -87,7 +85,7 @@ check_term_rule_by_enforcement_level(
 	field_name,
 	description_suffix,
 	selected_validation_types,
-	enforcement_levels,	
+	enforcement_levels,
 ) := result if {
 	control.validationType == "selected-ontology-term"
 	control.validationType in selected_validation_types
@@ -99,9 +97,8 @@ check_term_rule_by_enforcement_level(
 		ontology_term,
 		field_name,
 		description_suffix,
-		selected_validation_types
+		selected_validation_types,
 	)
-
 }
 
 single_ontology_term_not_in_selected_terms(
@@ -144,7 +141,6 @@ single_ontology_term_not_in_selected_terms(
 	desc := sprintf("%v: %v: %v", [control.ruleName, description_suffix, terms_str])
 	result := format_with_file_description_and_values(meta, file_name, desc, [term_str])
 }
-
 
 single_ontology_term_source_ref_not_valid(
 	meta,
@@ -253,9 +249,6 @@ single_ontology_term_source_ref_empty(
 	result := format_with_file_description_and_values(meta, file_name, desc, values)
 }
 
-
-
-
 # Check child-ontology-term and ontology-term-in-selected-ontologies rules
 # for ontology columns
 check_rule_by_enforcement_level(
@@ -329,6 +322,7 @@ check_rule_by_enforcement_level(
 	rule.validationType in {"any-ontology-term"}
 	rule.termEnforcementLevel in enforcement_levels
 	message_suffix = sprintf("use an ontology term [%v]. Select a term from the following ontologies", [rule.termEnforcementLevel])
+
 	result := check_any_ontology_term_rule(
 		meta,
 		table,
@@ -410,7 +404,6 @@ check_rule_by_enforcement_level(
 	rule.validationType in {"any-ontology-term"}
 	rule.termEnforcementLevel in enforcement_levels
 
-	print(header.columnHeader, rule.validationType)
 	message_suffix = sprintf("Define a unit ontology term. You can select from these ontologies [%v]", [rule.termEnforcementLevel])
 	result := check_unit_any_ontology_source_rule(
 		meta,
@@ -933,7 +926,7 @@ check_unexpected_value(
 	selected_validation_types,
 	enforcement_levels,
 	control_lists,
-	control_list_key
+	control_list_key,
 ) := result if {
 	header := table.headers[header_index]
 	header.columnStructure == "ONTOLOGY_COLUMN"
@@ -972,7 +965,7 @@ check_unexpected_value(
 ) := result if {
 	header := table.headers[header_index]
 	header.columnStructure == "SINGLE_COLUMN"
-		
+
 	# print(meta.custom.rule_id, header.columnHeader)
 
 	result := single_column_has_unexpected_value(
@@ -1010,7 +1003,7 @@ check_unexpected_value(
 ) := result if {
 	header := table.headers[header_index]
 	header.columnStructure == "SINGLE_COLUMN_AND_UNIT_ONTOLOGY"
-	
+
 	result := unit_value_has_unexpected_value(
 		meta,
 		study_category,
@@ -1162,11 +1155,11 @@ unit_value_has_unexpected_value(
 		some j, term in table.data[term_name]
 		unit := table.data[unit_name][j]
 
-		term_violation := { term |
+		term_violation := {term |
 			count(term) > 0
 			lower(term) in control.unexpectedTerms
 		}
-		unit_violation := { term |
+		unit_violation := {term |
 			count(term) > 0
 			count(unit) > 0
 			lower(unit) in control.unexpectedTerms
@@ -1238,7 +1231,7 @@ single_column_has_unexpected_value(
 	count(selected_controls) > 0
 	control := selected_controls[0]
 	count(control.unexpectedTerms) > 0
-	
+
 	control.validationType in selected_validation_types
 	control.unexpectedTermEnforcementLevel in enforcement_levels
 
@@ -1253,6 +1246,7 @@ single_column_has_unexpected_value(
 			some x in control.allowedMissingOntologyTerms
 			term == x.term
 		}
+
 		# print(meta.custom.rule_id, header.columnHeader, term, missing_excludes)
 		count(missing_excludes) == 0
 	}

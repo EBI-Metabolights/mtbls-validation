@@ -422,6 +422,24 @@ rule_i_100_310_001_01 contains result if {
 }
 
 # METADATA
+# title: Study Design Type is empty
+# description: Study Design Type should be defined.
+# custom:
+#  rule_id: rule_i_100_310_002_01
+#  type: ERROR
+#  priority: HIGH
+#  section: investigation.studyDesignDescriptors
+rule_i_100_310_002_01 contains result if {
+	some study in input.investigation.studies
+	some idx, design_descriptor in study.studyDesignDescriptors.designTypes
+	count(design_descriptor) > 0
+	count(design_descriptor.term) == 0
+	source := input.investigationFilePath
+	msg := sprintf("Study design descriptor at index %v is empty. ", [idx + 1])
+	result := f.format(rego.metadata.rule(), msg, source)
+}
+
+# METADATA
 # title: Value is not in the required ontologies or controlled lists associated with this field.
 # description: A term MUST be selected from the required ontologies or controlled lists associated with this field.
 # custom:
@@ -449,7 +467,7 @@ rule_i_100_310_002_11 contains result if {
 		sprintf("Study Design Type [%v]", [idx + 1]),
 		"Select valid ontologies ",
 		selected_validation_types,
-		enforcement_levels
+		enforcement_levels,
 	)
 }
 
@@ -480,7 +498,7 @@ rule_i_100_310_002_12 contains result if {
 		sprintf("Study Design Type [%v]", [idx + 1]),
 		"Select valid ontologies ",
 		selected_validation_types,
-		enforcement_levels
+		enforcement_levels,
 	)
 }
 
@@ -515,10 +533,10 @@ rule_i_100_310_002_13 contains result if {
 
 	design_descriptor
 	selected_validation_types := {
-		"any-ontology-term", 
-		"child-ontology-term", 
-		"ontology-term-in-selected-ontologies", 
-		"selected-ontology-term"
+		"any-ontology-term",
+		"child-ontology-term",
+		"ontology-term-in-selected-ontologies",
+		"selected-ontology-term",
 	}
 	enforcement_levels := {"required", "recommended", "optional"}
 
@@ -530,7 +548,7 @@ rule_i_100_310_002_13 contains result if {
 		sprintf("Study Design Type [%v]", [idx + 1]),
 		"Prioritised ontologies",
 		selected_validation_types,
-		enforcement_levels
+		enforcement_levels,
 	)
 }
 
@@ -680,6 +698,24 @@ rule_i_100_320_006_01 contains result if {
 }
 
 # METADATA
+# title: Study Publication Status Term is empty
+# description: Study Publication Status Term should be defined
+# custom:
+#  rule_id: rule_i_100_320_007_01
+#  type: WARNING
+#  priority: HIGH
+#  section: investigation.studyPublications
+rule_i_100_320_007_01 contains result if {
+	some study in input.investigation.studies
+	some idx, publication in study.studyPublications.publications
+	count(publication.status) > 0
+	count(publication.status.term) == 0
+	source := input.investigationFilePath
+	msg := sprintf("Status of study publication at index %v is empty. ", [idx + 1])
+	result := f.format(rego.metadata.rule(), msg, source)
+}
+
+# METADATA
 # title: Value is not in the required ontologies or controlled lists associated with this field.
 # description: A term MUST be selected from the required ontologies or controlled lists associated with this field.
 # custom:
@@ -706,7 +742,7 @@ rule_i_100_320_007_11 contains result if {
 		sprintf("Publication [%v] Status", [idx + 1]),
 		"Select valid ontology terms ",
 		selected_validation_types,
-		enforcement_levels
+		enforcement_levels,
 	)
 }
 
@@ -737,7 +773,7 @@ rule_i_100_320_007_12 contains result if {
 		sprintf("Publication [%v] Status", [idx + 1]),
 		"Select valid ontologies ",
 		selected_validation_types,
-		enforcement_levels
+		enforcement_levels,
 	)
 }
 
@@ -770,10 +806,10 @@ rule_i_100_320_007_13 contains result if {
 	count(condition) > 0
 	publication.status
 	selected_validation_types := {
-		"any-ontology-term", 
-		"child-ontology-term", 
-		"ontology-term-in-selected-ontologies", 
-		"selected-ontology-term"
+		"any-ontology-term",
+		"child-ontology-term",
+		"ontology-term-in-selected-ontologies",
+		"selected-ontology-term",
 	}
 	enforcement_levels := {"required", "recommended", "optional"}
 	result := f.check_term_rule_by_enforcement_level(
@@ -784,11 +820,9 @@ rule_i_100_320_007_13 contains result if {
 		sprintf("Publication [%v] Status", [idx + 1]),
 		"Select valid ontologies ",
 		selected_validation_types,
-		enforcement_levels
+		enforcement_levels,
 	)
 }
-
-
 
 # METADATA
 # title: Study Publication Status Term Source REF not referenced in investigation file.
@@ -850,6 +884,24 @@ rule_i_100_330_002_01 contains result if {
 }
 
 # METADATA
+# title: Study Factor Type Term Source REF is empty
+# description: Study Factor Type Term Source REF should be defined.
+# custom:
+#  rule_id: rule_i_100_330_003_01
+#  type: WARNING
+#  priority: HIGH
+#  section: investigation.studyFactors
+rule_i_100_330_003_01 contains result if {
+	some study in input.investigation.studies
+	some idx, factor in study.studyFactors.factors
+	count(factor.type) > 0
+	count(factor.type.term) == 0
+	source := input.investigationFilePath
+	msg := sprintf("Factor type at index %v is empty.", [idx + 1])
+	result := f.format(rego.metadata.rule(), msg, source)
+}
+
+# METADATA
 # title: Value is not in the required ontologies or controlled lists associated with this field.
 # description: A term MUST be selected from the required ontologies or controlled lists associated with this field.
 # custom:
@@ -876,7 +928,7 @@ rule_i_100_330_003_11 contains result if {
 		sprintf("Study Factor [%v] Type", [idx + 1]),
 		"Select valid ontology terms ",
 		selected_validation_types,
-		enforcement_levels
+		enforcement_levels,
 	)
 }
 
@@ -906,7 +958,7 @@ rule_i_100_330_003_12 contains result if {
 		sprintf("Study Factor [%v] Type", [idx + 1]),
 		"Select valid ontologies ",
 		selected_validation_types,
-		enforcement_levels
+		enforcement_levels,
 	)
 }
 
@@ -941,10 +993,10 @@ rule_i_100_330_003_13 contains result if {
 	count(condition) > 0
 	factor
 	selected_validation_types := {
-		"any-ontology-term", 
-		"child-ontology-term", 
-		"ontology-term-in-selected-ontologies", 
-		"selected-ontology-term"
+		"any-ontology-term",
+		"child-ontology-term",
+		"ontology-term-in-selected-ontologies",
+		"selected-ontology-term",
 	}
 	enforcement_levels := {"required", "recommended", "optional"}
 	result := f.check_term_rule_by_enforcement_level(
@@ -955,7 +1007,7 @@ rule_i_100_330_003_13 contains result if {
 		sprintf("Study Factor [%v] Type", [idx + 1]),
 		"Select valid ontologies ",
 		selected_validation_types,
-		enforcement_levels
+		enforcement_levels,
 	)
 }
 
@@ -1095,6 +1147,24 @@ rule_i_100_340_002_04 contains result if {
 }
 
 # METADATA
+# title: Study Assay Measurement Type is empty
+# description: Study Assay Measurement Type should be defined.
+# custom:
+#  rule_id: rule_i_100_340_003_01
+#  type: WARNING
+#  priority: HIGH
+#  section: investigation.studyAssays
+rule_i_100_340_003_01 contains result if {
+	some study in input.investigation.studies
+	some idx, assay in study.studyAssays.assays
+	count(assay.measurementType) > 0
+	count(assay.measurementType.term) == 0
+	source := input.investigationFilePath
+	msg := sprintf("Measurement type of the assay at index %v is empty.", [idx + 1])
+	result := f.format(rego.metadata.rule(), msg, source)
+}
+
+# METADATA
 # title: Value is not in the required ontologies or controlled lists associated with this field.
 # description: A term MUST be selected from the required ontologies or controlled lists associated with this field.
 # custom:
@@ -1122,7 +1192,7 @@ rule_i_100_340_003_11 contains result if {
 		sprintf("Assay [%v] Measurement Type", [idx + 1]),
 		"Select valid ontology terms ",
 		selected_validation_types,
-		enforcement_levels
+		enforcement_levels,
 	)
 }
 
@@ -1153,7 +1223,7 @@ rule_i_100_340_003_12 contains result if {
 		sprintf("Assay [%v] Measurement Type", [idx + 1]),
 		"Select valid ontologies ",
 		selected_validation_types,
-		enforcement_levels
+		enforcement_levels,
 	)
 }
 
@@ -1186,10 +1256,10 @@ rule_i_100_340_003_13 contains result if {
 	condition := case_1 | case_2
 	count(condition) > 0
 	selected_validation_types := {
-		"any-ontology-term", 
-		"child-ontology-term", 
-		"ontology-term-in-selected-ontologies", 
-		"selected-ontology-term"
+		"any-ontology-term",
+		"child-ontology-term",
+		"ontology-term-in-selected-ontologies",
+		"selected-ontology-term",
 	}
 	enforcement_levels := {"required", "recommended", "optional"}
 
@@ -1201,7 +1271,7 @@ rule_i_100_340_003_13 contains result if {
 		sprintf("Assay [%v] Measurement Type", [idx + 1]),
 		"Select valid ontologies ",
 		selected_validation_types,
-		enforcement_levels
+		enforcement_levels,
 	)
 }
 
@@ -1229,6 +1299,24 @@ rule_i_100_340_003_14 contains result if {
 #----------------------------- Assay technologyType ----------------------------------#
 
 # METADATA
+# title: Study Assay Technology Type is empty.
+# description: Study Assay Technology Type should be defined.
+# custom:
+#  rule_id: rule_i_100_340_006_01
+#  type: WARNING
+#  priority: HIGH
+#  section: investigation.studyAssays
+rule_i_100_340_006_01 contains result if {
+	some study in input.investigation.studies
+	some idx, assay in study.studyAssays.assays
+	count(assay.technologyType) > 0
+	count(assay.technologyType.term) == 0
+	source := input.investigationFilePath
+	msg := sprintf("Technology type of the assay at index %v is empty.", [idx + 1])
+	result := f.format(rego.metadata.rule(), msg, source)
+}
+
+# METADATA
 # title: Value is not in the required ontologies or controlled lists associated with this field.
 # description: A term MUST be selected from the required ontologies or controlled lists associated with this field.
 # custom:
@@ -1254,7 +1342,7 @@ rule_i_100_340_006_11 contains result if {
 		sprintf("Assay [%v] Technology Type", [idx + 1]),
 		"Select valid ontology terms ",
 		selected_validation_types,
-		enforcement_levels
+		enforcement_levels,
 	)
 }
 
@@ -1284,7 +1372,7 @@ rule_i_100_340_006_12 contains result if {
 		sprintf("Assay [%v] Technology Type", [idx + 1]),
 		"Select valid ontologies ",
 		selected_validation_types,
-		enforcement_levels
+		enforcement_levels,
 	)
 }
 
@@ -1316,10 +1404,10 @@ rule_i_100_340_006_13 contains result if {
 	condition := case_1 | case_2
 	count(condition) > 0
 	selected_validation_types := {
-		"any-ontology-term", 
-		"child-ontology-term", 
-		"ontology-term-in-selected-ontologies", 
-		"selected-ontology-term"
+		"any-ontology-term",
+		"child-ontology-term",
+		"ontology-term-in-selected-ontologies",
+		"selected-ontology-term",
 	}
 	enforcement_levels := {"required", "recommended", "optional"}
 	result := f.check_term_rule_by_enforcement_level(
@@ -1330,10 +1418,9 @@ rule_i_100_340_006_13 contains result if {
 		sprintf("Assay [%v] Technology Type", [idx + 1]),
 		"Select valid ontologies ",
 		selected_validation_types,
-		enforcement_levels
+		enforcement_levels,
 	)
 }
-
 
 # METADATA
 # title: Study Assay Technology Type Term Source REF not referenced in investigation file.
@@ -1823,6 +1910,26 @@ rule_i_100_360_007_01 contains result if {
 }
 
 # METADATA
+# title: Study Person Roles length less than 2 characters.
+# description: Study Person Roles should be defined with length equal or greater than 2 characters.
+# custom:
+#  rule_id: rule_i_100_360_008_01
+#  type: 
+#  priority: 
+#  section: 
+rule_i_100_360_008_01 contains result if {
+	some study in input.investigation.studies
+	some idx, contact in study.studyContacts.people
+	some s_idx, role in contact.roles
+
+	count(role) > 0
+	count(role.term) == 0
+	source := input.investigationFilePath
+	msg := sprintf("Study contact at % has an empty role (^v. role).", [idx + 1, s_idx + 1])
+	result := f.format(rego.metadata.rule(), msg, source)
+}
+
+# METADATA
 # title: Value is not in the required ontologies or controlled lists associated with this field.
 # description: A term MUST be selected from the required ontologies or controlled lists associated with this field.
 # custom:
@@ -1849,7 +1956,7 @@ rule_i_100_360_008_11 contains result if {
 		sprintf("Study Contact [%v] Role [%v]", [idx + 1, s_idx + 1]),
 		"Select valid ontology terms ",
 		selected_validation_types,
-		enforcement_levels
+		enforcement_levels,
 	)
 }
 
@@ -1880,7 +1987,7 @@ rule_i_100_360_008_12 contains result if {
 		sprintf("Study Contact [%v] Role [%v]", [idx + 1, s_idx + 1]),
 		"Select valid ontologies ",
 		selected_validation_types,
-		enforcement_levels
+		enforcement_levels,
 	)
 }
 
@@ -1896,7 +2003,7 @@ rule_i_100_360_008_13 contains result if {
 	some study in input.investigation.studies
 	some idx, contact in study.studyContacts.people
 	some s_idx, role in contact.roles
-case_1 := {x |
+	case_1 := {x |
 		not def1.RULE_STUDY_PERSON_ROLES.validationType
 		x := 1
 	}
@@ -1912,12 +2019,12 @@ case_1 := {x |
 
 	condition := case_1 | case_2
 	count(condition) > 0
-	
+
 	selected_validation_types := {
-		"any-ontology-term", 
-		"child-ontology-term", 
-		"ontology-term-in-selected-ontologies", 
-		"selected-ontology-term"
+		"any-ontology-term",
+		"child-ontology-term",
+		"ontology-term-in-selected-ontologies",
+		"selected-ontology-term",
 	}
 	enforcement_levels := {"required", "recommended", "optional"}
 
@@ -1929,7 +2036,7 @@ case_1 := {x |
 		sprintf("Study Contact [%v] Role [%v]", [idx + 1, s_idx + 1]),
 		"Select valid ontologies ",
 		selected_validation_types,
-		enforcement_levels
+		enforcement_levels,
 	)
 }
 
@@ -1968,32 +2075,6 @@ rule_i_100_360_008_14 contains result if {
 	msg := sprintf("Study person role source reference is not in ontology source reference list. Study: %v, index: '%v', current value '%v'", [input.investigation.studies[i].identifier, j + 1, input.investigation.studies[i].studyContacts.people[j].roles[k].termSourceRef])
 	source := input.investigationFilePath
 	result := f.format(rego.metadata.rule(), msg, source)
-}
-
-# METADATA
-# title: Study Person Role is not selected from the prioritised ontologies.
-# description: Study Person Role MAY be selected from the prioritised ontologies.
-# custom:
-#  rule_id: rule_i_100_360_010_02
-#  type: WARNING
-#  priority: MEDIUM
-#  section: investigation.studyContacts
-rule_i_100_360_010_02 contains result if {
-	some study in input.investigation.studies
-	some idx, contact in study.studyContacts.people
-	some s_idx, role in contact.roles
-	selected_validation_types := {"any-ontology-term", "child-ontology-term", "ontology-term-in-selected-ontologies"}
-	not def1.RULE_STUDY_PERSON_ROLES
-	role.term
-	result := f.single_ontology_term_source_ref_not_valid(
-		rego.metadata.rule(),
-		input.investigationFilePath,
-		def1.RULE_DEFAULT_ONTOLOGIES,
-		role,
-		sprintf("Study Contact [%v] Role [%v]", [idx + 1, s_idx + 1]),
-		"Select priotirised ontologies ",
-		selected_validation_types,
-	)
 }
 
 # METADATA

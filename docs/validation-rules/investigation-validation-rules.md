@@ -80,12 +80,11 @@
 | 76 | rule_i_100_360_008_12 | WARNING | Value is not in the predefined ontologies or controlled lists associated with this field. | A term SHOULD be selected from the predefined ontologies or controlled lists associated with this field. |
 | 77 | rule_i_100_360_008_13 | WARNING | Value is not in the default ontologies or controlled lists | A term SHOULD be selected from the default ontologies or controlled lists. |
 | 78 | rule_i_100_360_008_14 | WARNING | Study Person Roles Term Source REF not referenced in investigation file. | Study Person Roles Term Source REFs should be referenced in the ONTOLOGY SOURCE REFERENCE section in i_Investigation.txt. |
-| 79 | rule_i_100_360_010_02 | WARNING | Study Person Role is not selected from the prioritised ontologies. | Study Person Role MAY be selected from the prioritised ontologies. |
-| 80 | rule_i_100_360_010_03 | WARNING | Study Person Roles Term Source REF is empty. | Study Person Roles Term Source REF should be defined. |
-| 81 | rule_i_100_360_011_01 | ERROR | There is no study contact with Principal Investigator role. | At least one study contact must have Principal Investigator role. |
-| 82 | rule_i_100_360_011_02 | ERROR | Principal Investigator contact details not defined. | Principal Investigator first name, last name, affiliation, and email must be defined. |
-| 83 | rule_i_100_360_011_03 | ERROR | Study Person Affiliation ROR ID is not valid. | Study Person ROR ID must have valid format. e.g., https://ror.org/02catss52 . If your affiliation ROR ID is not defined, you may provide wikidata URL of your primary affiliation. e.g., https://www.wikidata.org/wiki/Q1341845 |
-| 84 | rule_i_100_360_011_04 | ERROR | Study Person ORCID is not valid. | Study Person ORCID must have valid format. |
-| 85 | rule_i_100_360_011_05 | ERROR | Study Person Additional Email Address is not valid. | Study Person Additional Email Address must have valid format. |
-| 86 | rule_i_100_360_011_06 | WARNING | Study Person ORCID is not defined for principal investigator. | Study Person ORCID is not defined for principal investigator. |
-| 87 | rule_i_100_360_011_07 | WARNING | Study Person Affiliation ROR ID is not defined for principal investigator. | Study Person Affiliation ROR ID is not defined for principal investigator. |
+| 79 | rule_i_100_360_010_03 | WARNING | Study Person Roles Term Source REF is empty. | Study Person Roles Term Source REF should be defined. |
+| 80 | rule_i_100_360_011_01 | ERROR | There is no study contact with Principal Investigator role. | At least one study contact must have Principal Investigator role. |
+| 81 | rule_i_100_360_011_02 | ERROR | Principal Investigator contact details not defined. | Principal Investigator first name, last name, affiliation, and email must be defined. |
+| 82 | rule_i_100_360_011_03 | ERROR | Study Person Affiliation ROR ID is not valid. | Study Person ROR ID must have valid format. e.g., https://ror.org/02catss52 . If your affiliation ROR ID is not defined, you may provide wikidata URL of your primary affiliation. e.g., https://www.wikidata.org/wiki/Q1341845 |
+| 83 | rule_i_100_360_011_04 | ERROR | Study Person ORCID is not valid. | Study Person ORCID must have valid format. |
+| 84 | rule_i_100_360_011_05 | ERROR | Study Person Additional Email Address is not valid. | Study Person Additional Email Address must have valid format. |
+| 85 | rule_i_100_360_011_06 | WARNING | Study Person ORCID is not defined for principal investigator. | Study Person ORCID is not defined for principal investigator. |
+| 86 | rule_i_100_360_011_07 | WARNING | Study Person Affiliation ROR ID is not defined for principal investigator. | Study Person Affiliation ROR ID is not defined for principal investigator. |

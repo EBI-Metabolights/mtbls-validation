@@ -440,21 +440,53 @@ term_source_ref_for_unit_not_valid(
 }
 
 term_source_ref_not_in_source_references_list(meta, source, file_name, column_index, source_reference_names, source_reference_names_str) := result if {
-	search_header := "Term Source REF"
-	some t
-	source[file_name].table.headers[column_index].additionalColumns[t] == search_header
 	column_name := source[file_name].table.headers[column_index].columnName
 	column_header := source[file_name].table.headers[column_index].columnHeader
+	headers := {target_column_index |
+		target_column_index := source[file_name].table.headers[column_index].columnIndex + 1
+		target_column_name := source[file_name].table.columns[target_column_index]
+		startswith(target_column_name, "Term Source REF")
+	}
+	unit_headers := {target_column_index |
+		unit_column_index := source[file_name].table.headers[column_index].columnIndex + 1
+		unit_column_name := source[file_name].table.columns[unit_column_index]
+		startswith(unit_column_name, "Unit")
+		target_column_index := source[file_name].table.headers[column_index].columnIndex + 2
+	}
 
-	target_column_index := (source[file_name].table.headers[column_index].columnIndex + t) + 1
+	source_header_indices = headers | unit_headers
+	count(source_header_indices) > 0
+
+	search_header_1 := {search_header |
+		some x in headers
+		search_header := "Term Source REF"
+	}
+	search_header_2 := {search_header |
+		some x in unit_headers
+		search_header := "Unit Term Source REF"
+	}
+	search_headers = search_header_1 | search_header_2
+	count(search_headers) > 0
+
+	search_headers_list := [x | some x in search_headers]
+	search_header = search_headers_list[0]
+
+	# print(search_header)
+	some target_column_index in source_header_indices
+
+	# target_column_index := (source[file_name].table.headers[column_index].columnIndex + t) + 1
 	target_column_name := source[file_name].table.columns[target_column_index]
 
+	# startswith(target_column_name, "Term Source REF")
+	# print(column_name)
 	count(source[file_name].table.data[column_name]) > 0
+
 	violated_values = {sprintf("%v", [value]) |
-		some j
-		count(source[file_name].table.data[column_name][j]) > 0
+		some j, term in source[file_name].table.data[column_name]
+		count(term) > 0
 		value := source[file_name].table.data[target_column_name][j]
 		count(value) > 0
+
 		not value in source_reference_names
 	}
 	file_column_header := sprintf("%v (of %v)", [search_header, column_header])
@@ -466,22 +498,17 @@ term_source_ref_is_defined_for_empty_term(meta, source, file_name, header_index)
 	header := source[file_name].table.headers[header_index]
 	header.columnStructure == "ONTOLOGY_COLUMN"
 	term_source_column_header := "Term Source REF"
-	some a, "Term Source REF" in header.additionalColumns
-	some b, "Term Accession Number" in header.additionalColumns
-	not "Unit" in header.additionalColumns
 
 	column_name := header.columnName
 	column_header := header.columnHeader
 
-	source_ref_column_index := (header.columnIndex + a) + 1
+	source_ref_column_index := header.columnIndex + 1
 	source_ref_column_name := source[file_name].table.columns[source_ref_column_index]
 	violated_values = {sprintf("[row: %v, term:'%v', 'source ref':'%v']", [x1, x2, x3]) |
 		some j, value in source[file_name].table.data[column_name]
 
 		count(trim_space(value)) == 0
 		source_ref := source[file_name].table.data[source_ref_column_name][j]
-
-		# accession := source[file_name].table.data[accession_number_column_name][j]
 		count(source_ref) > 0
 		x1 := (source[file_name].table.rowOffset + j) + 1
 		x2 := value
@@ -495,23 +522,17 @@ term_source_ref_is_defined_for_empty_term(meta, source, file_name, header_index)
 
 term_source_ref_is_defined_for_empty_unit(meta, source, file_name, header_index) := result if {
 	header := source[file_name].table.headers[header_index]
-
-	# column_index := header.columnIndex
-	# term_source_column_header := "Term Source REF"
-	some a, "Term Source REF" in header.additionalColumns
-	some b, "Term Accession Number" in header.additionalColumns
-	some c, "Unit" in header.additionalColumns
-
+	header.columnStructure == "SINGLE_COLUMN_AND_UNIT_ONTOLOGY"
 	column_name := header.columnName
 	column_header := header.columnHeader
-	source_ref_column_index := (header.columnIndex + a) + 1
+
+	source_ref_column_index := header.columnIndex + 2
 	source_ref_column_name := source[file_name].table.columns[source_ref_column_index]
 
-	accession_number_column_index := (header.columnIndex + b) + 1
+	accession_number_column_index := header.columnIndex + 3
 	accession_number_column_name := source[file_name].table.columns[accession_number_column_index]
-	unit_column_index := (header.columnIndex + c) + 1
+	unit_column_index := header.columnIndex  + 1
 	unit_column_name := source[file_name].table.columns[unit_column_index]
-
 	violated_values = {sprintf("[row: %v. value:'%v', unit:'%v', 'source ref':'%v', 'accession number':'%v']", [x1, x2, x3, x4, x5]) |
 		some j, unit in source[file_name].table.data[unit_column_name]
 		count(trim_space(unit)) == 0
@@ -520,7 +541,7 @@ term_source_ref_is_defined_for_empty_unit(meta, source, file_name, header_index)
 		source_ref := source[file_name].table.data[source_ref_column_name][j]
 		count(trim_space(source_ref)) > 0
 		accession := source[file_name].table.data[accession_number_column_name][j]
-
+		# print(value, unit, source_ref, accession)
 		x1 := (source[file_name].table.rowOffset + j) + 1
 		x2 := value
 		x3 := unit
@@ -537,23 +558,24 @@ term_source_ref_is_defined_for_empty_unit(meta, source, file_name, header_index)
 accession_number_min_length_check_for_term(meta, source, file_name, column_index, min_length) := result if {
 	term_source_column_header := "Term Source REF"
 	accession_column_header := "Term Accession Number"
+	header := source[file_name].table.headers[column_index]
+	header.columnStructure == "ONTOLOGY_COLUMN"
 
 	# unit_column_header := "Unit"
-	some a
-	source[file_name].table.headers[column_index].additionalColumns[a] == term_source_column_header
-	some b
-	source[file_name].table.headers[column_index].additionalColumns[b] == accession_column_header
+	# some a
+	# source[file_name].table.headers[column_index].additionalColumns[a] == term_source_column_header
+	# some b
+	# source[file_name].table.headers[column_index].additionalColumns[b] == accession_column_header
 
-	column_name := source[file_name].table.headers[column_index].columnName
-	column_header := source[file_name].table.headers[column_index].columnHeader
+	column_name := header.columnName
+	column_header := header.columnHeader
 
-	accession_number_column_index := (source[file_name].table.headers[column_index].columnIndex + b) + 1
+	accession_number_column_index := header.columnIndex + 2
 	accession_number_column_name := source[file_name].table.columns[accession_number_column_index]
 
 	count(source[file_name].table.data[column_name]) > 0
 	violated_values = {sprintf("[row: %v, value: '%v', 'accession number': '%v']", [x1, x2, x3]) |
-		some j
-		value := source[file_name].table.data[column_name][j]
+		some j, value in source[file_name].table.data[column_name]
 		count(value) > 0
 		accession_number := source[file_name].table.data[accession_number_column_name][j]
 		count(accession_number) < min_length
@@ -561,7 +583,6 @@ accession_number_min_length_check_for_term(meta, source, file_name, column_index
 		x2 := value
 		x3 := accession_number
 	}
-
 	file_column_header := sprintf("%v (of %v)", [accession_column_header, column_header])
 	file := file_name
 	file_column_index := accession_number_column_index + 1
@@ -569,25 +590,21 @@ accession_number_min_length_check_for_term(meta, source, file_name, column_index
 }
 
 accession_number_min_length_check_for_unit(meta, source, file_name, column_index, min_length) := result if {
+	header := source[file_name].table.headers[column_index]
+	header.columnStructure == "SINGLE_COLUMN_AND_UNIT_ONTOLOGY"
+
+	unit_column_header := "Unit"
 	term_source_column_header := "Term Source REF"
 	accession_column_header := "Term Accession Number"
-	unit_column_header := "Unit"
-	some a
-	source[file_name].table.headers[column_index].additionalColumns[a] == term_source_column_header
-	some b
-	source[file_name].table.headers[column_index].additionalColumns[b] == accession_column_header
-	some c
-	source[file_name].table.headers[column_index].additionalColumns[c] == unit_column_header
-
-	column_name := source[file_name].table.headers[column_index].columnName
-	column_header := source[file_name].table.headers[column_index].columnHeader
-	source_ref_column_index := (source[file_name].table.headers[column_index].columnIndex + a) + 1
+	column_name := header.columnName
+	column_header := header.columnHeader
+	source_ref_column_index := header.columnIndex + 2
 	source_ref_column_name := source[file_name].table.columns[source_ref_column_index]
 
-	accession_number_column_index := (source[file_name].table.headers[column_index].columnIndex + b) + 1
+	accession_number_column_index := header.columnIndex + 3
 	accession_number_column_name := source[file_name].table.columns[accession_number_column_index]
 
-	unit_column_index := (source[file_name].table.headers[column_index].columnIndex + c) + 1
+	unit_column_index := header.columnIndex + 1
 	unit_column_name := source[file_name].table.columns[unit_column_index]
 	count(source[file_name].table.data[column_name]) > 0
 	violated_values = {sprintf("[row: %v, value: '%v', unit: '%v', 'source ref':'%v', accession number: '']", [x1, x2, x3, x4]) |
@@ -610,25 +627,28 @@ accession_number_min_length_check_for_unit(meta, source, file_name, column_index
 }
 
 accession_number_is_defined_for_empty_term(meta, source, file_name, column_index) := result if {
+	print(column_index)
 	term_source_column_header := "Term Source REF"
 	accession_column_header := "Term Accession Number"
+	header := source[file_name].table.headers[column_index]
+	print(header)
 
+	header.columnStructure == "ONTOLOGY_COLUMN"
 	# unit_column_header := "Unit"
-	some a
-	source[file_name].table.headers[column_index].additionalColumns[a] == term_source_column_header
-	some b
-	source[file_name].table.headers[column_index].additionalColumns[b] == accession_column_header
-	not "Unit" in source[file_name].table.headers[column_index].additionalColumns
+	# some a
+	# source[file_name].table.headers[column_index].additionalColumns[a] == term_source_column_header
+	# some b
+	# source[file_name].table.headers[column_index].additionalColumns[b] == accession_column_header
+	# not "Unit" in source[file_name].table.headers[column_index].additionalColumns
 
 	# some c
 	# source[file_name].table.headers[column_index].additionalColumns[c] == unit_column_header
 
-	column_name := source[file_name].table.headers[column_index].columnName
-	column_header := source[file_name].table.headers[column_index].columnHeader
-
-	source_ref_column_index := (source[file_name].table.headers[column_index].columnIndex + a) + 1
+	column_name := header.columnName
+	column_header := header.columnHeader
+	source_ref_column_index := source[file_name].table.headers[column_index].columnIndex + 1
 	source_ref_column_name := source[file_name].table.columns[source_ref_column_index]
-	accession_number_column_index := (source[file_name].table.headers[column_index].columnIndex + b) + 1
+	accession_number_column_index := source[file_name].table.headers[column_index].columnIndex + 2
 	accession_number_column_name := source[file_name].table.columns[accession_number_column_index]
 
 	count(source[file_name].table.data[column_name]) > 0
@@ -647,36 +667,35 @@ accession_number_is_defined_for_empty_term(meta, source, file_name, column_index
 		x4 := accession
 	}
 	file_column_header := sprintf("%v (of %v)", [accession_column_header, column_header])
-	source_file := file_name
 	file_column_index := accession_number_column_index + 1
-	result := format_with_values(meta, source_file, file_column_index, file_column_header, violated_values)
+	result := format_with_values(meta, file_name, file_column_index, file_column_header, violated_values)
 }
 
 accession_number_is_defined_for_empty_unit(meta, source, file_name, heder_index) := result if {
+	header := source[file_name].table.headers[heder_index]
+	header.columnStructure == "SINGLE_COLUMN_AND_UNIT_ONTOLOGY"
 	term_source_column_header := "Term Source REF"
 	accession_column_header := "Term Accession Number"
 	unit_column_header := "Unit"
-	some a
-	source[file_name].table.headers[heder_index].additionalColumns[a] == term_source_column_header
-	some b
-	source[file_name].table.headers[heder_index].additionalColumns[b] == accession_column_header
-	some c
-	source[file_name].table.headers[heder_index].additionalColumns[c] == unit_column_header
-	column_name := source[file_name].table.headers[heder_index].columnName
-	column_header := source[file_name].table.headers[heder_index].columnHeader
+	# some a
+	# source[file_name].table.headers[heder_index].additionalColumns[a] == term_source_column_header
+	# some b
+	# source[file_name].table.headers[heder_index].additionalColumns[b] == accession_column_header
+	# some c
+	# source[file_name].table.headers[heder_index].additionalColumns[c] == unit_column_header
+	column_name := header.columnName
+	column_header := header.columnHeader
 
-	source_ref_column_index := (source[file_name].table.headers[heder_index].columnIndex + a) + 1
+	source_ref_column_index := source[file_name].table.headers[heder_index].columnIndex + 2
 	source_ref_column_name := source[file_name].table.columns[source_ref_column_index]
-	accession_number_column_index := (source[file_name].table.headers[heder_index].columnIndex + b) + 1
+	accession_number_column_index := source[file_name].table.headers[heder_index].columnIndex + 3
 	accession_number_column_name := source[file_name].table.columns[accession_number_column_index]
-	unit_column_index := (source[file_name].table.headers[heder_index].columnIndex + c) + 1
+	unit_column_index := source[file_name].table.headers[heder_index].columnIndex + 1
 	unit_column_name := source[file_name].table.columns[unit_column_index]
 
 	count(source[file_name].table.data[column_name]) > 0
 	violated_values = {sprintf("[row: %v. value:'%v', unit:'%v', 'source ref':'%v', 'accession number':'%v']", [x1, x2, x3, x4, x5]) |
-		some j
-		unit := source[file_name].table.data[unit_column_name][j]
-
+		some j, unit in source[file_name].table.data[unit_column_name]
 		# count(trim_space(unit)) == 0
 		source_ref := source[file_name].table.data[source_ref_column_name][j]
 		accession := source[file_name].table.data[accession_number_column_name][j]
@@ -692,9 +711,8 @@ accession_number_is_defined_for_empty_unit(meta, source, file_name, heder_index)
 	}
 
 	file_column_header := sprintf("%v (of %v for %v)", [accession_column_header, unit_column_header, column_header])
-	source_file := file_name
 	file_column_index := accession_number_column_index + 1
-	result := format_with_values(meta, source_file, file_column_index, file_column_header, violated_values)
+	result := format_with_values(meta, file_name, file_column_index, file_column_header, violated_values)
 }
 
 extension(value, extensions) := {extension |

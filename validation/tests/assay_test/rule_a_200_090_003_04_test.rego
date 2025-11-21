@@ -17,19 +17,48 @@ import rego.v1
 #  section: assays.general
 rule_a_200_090_003_04_test_cases := 1
 
-# # METADATA
-# # title: <title>.
-# # description: <description>.
-# test_tests.assay_test_no_violation_01 if {
-# 	result := rules.tests.assay_test with input as {
-# 	}
-# 	count(result) == 0
-# }
-# # METADATA
-# # title: <title>.
-# # description: <description>.
-# test_tests.assay_test_violation_01 if {
-# 	result := rules.tests.assay_test with input as {
-# 	}
-# 	count(result) == 1
-# }
+
+# METADATA
+# title: <title>.
+# description: <description>.
+test_rule_a_200_090_003_04_no_violation_01 if {
+	input_01 := data.tests.data.inputs.minimum_01
+	input_data := input_01
+	result := rules.rule_a_200_090_003_04 with input as input_data
+	count(result) == 0
+}
+
+# METADATA
+# title: <title>.
+# description: <description>.
+test_rule_a_200_090_003_04_violation_01 if {
+	input_01 := data.tests.data.inputs.minimum_01
+	input_data := json.patch(
+		input_01,
+		[
+			{
+				"op": "replace",
+				"path": "/assays/a_REQ2025111188888-01_MS_metabolite_profiling.txt/table/data/Parameter Value[Test Data]/0",
+				"value": "Test data",
+			},
+			{
+				"op": "replace",
+				"path": "/assays/a_REQ2025111188888-01_MS_metabolite_profiling.txt/table/data/Unit/0",
+				"value": "Data",
+			},
+			{
+				"op": "replace",
+				"path": "/assays/a_REQ2025111188888-01_MS_metabolite_profiling.txt/table/data/Term Source REF.5/0",
+				"value": "",
+			},
+			{
+				"op": "replace",
+				"path": "/assays/a_REQ2025111188888-01_MS_metabolite_profiling.txt/table/data/Term Accession Number.5/0",
+				"value": "OBI",
+			},
+		],
+	)
+	result := rules.rule_a_200_090_003_04 with input as input_data
+
+	count(result) == 1
+}
