@@ -4,6 +4,7 @@
 package tests.assay_test
 
 import data.metabolights.validation.v2.rules.phase2.violations as rules
+import data.tests.data.inputs.rules as test_rules
 
 import rego.v1
 
@@ -17,19 +18,64 @@ import rego.v1
 #  section: assays.general
 rule_a_200_090_002_25_test_cases := 1
 
-# # METADATA
-# # title: <title>.
-# # description: <description>.
-# test_tests.assay_test_no_violation_01 if {
-# 	result := rules.tests.assay_test with input as {
-# 	}
-# 	count(result) == 0
-# }
-# # METADATA
-# # title: <title>.
-# # description: <description>.
-# test_tests.assay_test_violation_01 if {
-# 	result := rules.tests.assay_test with input as {
-# 	}
-# 	count(result) == 1
-# }
+# METADATA
+# title: <title>.
+# description: <description>.
+test_rule_a_200_090_002_25_no_violation_01 if {
+	input_01 := data.tests.data.inputs.minimum_01
+	input_data := json.patch(
+		input_01,
+		[{
+			"op": "replace",
+			"path": "/assays/a_REQ2025111188888-01_MS_metabolite_profiling.txt/table/data/Sample Name/0",
+			"value": "data",
+		}],
+	)
+
+	selected_rule := json.patch(
+		test_rules.assay.any_ontology_term_01,
+		[{
+			"op": "replace",
+			"path": "constraints",
+			"value": {"pattern": {
+				"constraint": ".+",
+				"errorMessage": "Sample error",
+				"enforcementLevel": "recommended",
+			}},
+		}],
+	)
+	result := rules.rule_a_200_090_002_25 with input as input_data
+		with data.metabolights.validation.v2.controls.assayFileControls as {"Sample Name": [selected_rule]}
+	count(result) == 0
+}
+
+# METADATA
+# title: <title>.
+# description: <description>.
+test_rule_a_200_090_002_25_violation_01 if {
+	input_01 := data.tests.data.inputs.minimum_01
+	input_data := json.patch(
+		input_01,
+		[{
+			"op": "replace",
+			"path": "/assays/a_REQ2025111188888-01_MS_metabolite_profiling.txt/table/data/Sample Name/0",
+			"value": "data",
+		}],
+	)
+
+	selected_rule := json.patch(
+		test_rules.assay.any_ontology_term_01,
+		[{
+			"op": "replace",
+			"path": "constraints",
+			"value": {"pattern": {
+				"constraint": ".+ value",
+				"errorMessage": "Sample error",
+				"enforcementLevel": "recommended",
+			}},
+		}],
+	)
+	result := rules.rule_a_200_090_002_25 with input as input_data
+		with data.metabolights.validation.v2.controls.assayFileControls as {"Sample Name": [selected_rule]}
+	count(result) == 1
+}

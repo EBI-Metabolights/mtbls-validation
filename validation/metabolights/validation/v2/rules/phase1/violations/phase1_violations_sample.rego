@@ -82,10 +82,10 @@ rule_s_100_100_001_04 contains result if {
 	def := data.metabolights.validation.v2.rules.phase1.definitions
 	headers := {sprintf("['%v', column index: %v]", [x, y]) |
 		some j, header in input.samples[file_name].table.headers
-		header.columnCategory != "Characteristics"
-		header.columnCategory != "Protocol"
-		header.columnCategory != "Comment"
-		header.columnCategory != "Factor Value"
+		not startswith(header.columnHeader, "Protocol REF")
+		not startswith(header.columnHeader, "Comment[")
+		not startswith(header.columnHeader, "Characteristics[")
+		not startswith(header.columnHeader, "Factor Value[")
 		header.columnStructure != "LINKED_COLUMN"
 		header.columnStructure != "ADDITIONAL_COLUMN"
 		header.columnStructure != "INVALID_MULTI_COLUMN"
@@ -112,7 +112,7 @@ rule_s_100_100_001_05 contains result if {
 	some file_name, _ in input.samples
 	headers := {sprintf("['%v', column index: %v]", [x, y]) |
 		some j, header in input.samples[file_name].table.headers
-		header.columnCategory == "Protocol"
+		startswith(header.columnHeader, "Protocol REF")
 		x := header.columnHeader
 		y := header.columnIndex + 1
 	}
@@ -182,7 +182,8 @@ rule_s_100_100_001_08 contains result if {
 	headers := [header |
 		some header in input.samples[file_name].table.headers
 		header.columnHeader in def._DEFAULT_SAMPLE_HEADER_NAMES
-		header.columnCategory != "Comment"
+		not startswith(header.columnHeader, "Comment[")
+		
 	]
 
 	default_headers := def.SELECTED_STUDY_SAMPLE_FILE_TEMPLATE_HEADERS
@@ -213,12 +214,14 @@ rule_s_100_100_001_09 contains result if {
 	def := data.metabolights.validation.v2.rules.phase1.definitions
 	headers := [header |
 		some header in input.samples[file_name].table.headers
-		header.columnCategory == "Characteristics"
+		startswith(header.columnHeader, "Characteristics[")
+
 		not header.columnHeader in def._DEFAULT_SAMPLE_HEADER_NAMES
 	]
 	count(headers) > 0
 	some protocol_column in input.samples[i].table.headers
-	protocol_column.columnCategory == "Protocol"
+	startswith(protocol_column.columnHeader, "Protocol REF")
+
 
 	protocol_index := protocol_column.columnIndex
 
@@ -247,10 +250,10 @@ rule_s_100_100_001_10 contains result if {
 	some file_name, _ in input.samples
 	headers := [header |
 		some header in input.samples[file_name].table.headers
-		header.columnCategory == "Factor Value"
+		startswith(header.columnHeader, "Factor Value[")
 	]
 	count(headers) > 0
-	input.samples[i].table.headers[protocol].columnCategory == "Protocol"
+	startswith(input.samples[i].table.headers[protocol].columnHeader, "Protocol REF")
 	protocol_index := input.samples[i].table.headers[protocol].columnIndex
 
 	matches := [sprintf("[column: '%v' index: %v]", [x1, x2]) |
@@ -315,7 +318,7 @@ rule_s_100_100_001_12 contains result if {
 	headers := {header |
 		some header in input.samples[file_name].table.headers
 		not header.columnHeader in def._DEFAULT_SAMPLE_HEADER_NAMES
-		header.columnCategory == "Factor Value"
+		startswith(header.columnHeader, "Factor Value[")
 	}
 
 	matches := [sprintf("[Column Index: %v: The structure of '%v' factor value column is '%v']", [x1, x2, x3]) |
@@ -377,7 +380,11 @@ rule_s_100_100_001_14 contains result if {
 	some file_name, _ in input.samples
 	header_names := {header.columnHeader: same_headers |
 		some header in input.samples[file_name].table.headers
-		header.columnCategory in {"Characteristics", "Factor Value"}
+		expected_names := {x |
+			some x in  {"Characteristics[", "Factor Value["}
+			startswith(header.columnHeader, x)
+		}
+		count(expected_names) > 0
 		same_headers := [idx |
 			some x in input.samples[file_name].table.headers
 			x.columnHeader == header.columnHeader

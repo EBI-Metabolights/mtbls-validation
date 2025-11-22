@@ -930,6 +930,8 @@ check_unexpected_value(
 ) := result if {
 	header := table.headers[header_index]
 	header.columnStructure == "ONTOLOGY_COLUMN"
+	
+
 	result := ontology_term_has_unexpected_value(
 		meta,
 		study_category,
@@ -965,8 +967,7 @@ check_unexpected_value(
 ) := result if {
 	header := table.headers[header_index]
 	header.columnStructure == "SINGLE_COLUMN"
-
-	# print(meta.custom.rule_id, header.columnHeader)
+	
 
 	result := single_column_has_unexpected_value(
 		meta,
@@ -1003,6 +1004,7 @@ check_unexpected_value(
 ) := result if {
 	header := table.headers[header_index]
 	header.columnStructure == "SINGLE_COLUMN_AND_UNIT_ONTOLOGY"
+	
 
 	result := unit_value_has_unexpected_value(
 		meta,
@@ -1040,8 +1042,9 @@ ontology_term_has_unexpected_value(
 ) := result if {
 	search_header := "Term Source REF"
 	header := table.headers[header_index]
-	some t, "Term Source REF" in header.additionalColumns
 	column_header := header.columnHeader
+	print(meta.custom.rule_id, header.columnHeader, header.columnStructure, control_lists)
+	
 	control_list := control_lists[control_list_key]
 	selected_controls = [x |
 		some x in control_list
@@ -1062,9 +1065,9 @@ ontology_term_has_unexpected_value(
 	control.unexpectedTermEnforcementLevel in enforcement_levels
 
 	term_name = table.columns[header.columnIndex]
-	source_ref_column_index := (header.columnIndex + t) + 1
+	source_ref_column_index := header.columnIndex + 1
 	source_ref_column_name := table.columns[source_ref_column_index]
-	accession_column_index := (header.columnIndex + t) + 2
+	accession_column_index := header.columnIndex + 2
 	accession_column_name := table.columns[accession_column_index]
 
 	violated_values = {sprintf("Row: %v, column: %v, value: [%v, %v ,%v]", [j + 1, column_header, term, source_ref, accession]) |
@@ -1216,6 +1219,7 @@ single_column_has_unexpected_value(
 	header := table.headers[header_index]
 	column_header := header.columnHeader
 	control_list := control_lists[control_list_key]
+	
 	selected_controls = [x |
 		some x in control_list
 		criteria = x.selectionCriteria
@@ -1228,6 +1232,7 @@ single_column_has_unexpected_value(
 			template_name, null, null,
 		)
 	]
+
 	count(selected_controls) > 0
 	control := selected_controls[0]
 	count(control.unexpectedTerms) > 0

@@ -18,7 +18,6 @@ import rego.v1
 #  section: samples.general
 rule_s_200_090_002_09_test_cases := 1
 
-
 # METADATA
 # title: <title>.
 # description: <description>.
@@ -31,7 +30,8 @@ test_rule_s_200_090_002_09_no_violation_01 if {
 				"op": "replace",
 				"path": "/samples/s_REQ2025111188888.txt/table/data/Factor Value[Disease]/0",
 				"value": "data",
-			},{
+			},
+			{
 				"op": "replace",
 				"path": "/samples/s_REQ2025111188888.txt/table/data/Term Source REF.4/0",
 				"value": "OBI",
@@ -43,32 +43,27 @@ test_rule_s_200_090_002_09_no_violation_01 if {
 			},
 		],
 	)
-    
-    selected_rule := json.patch(
-        test_rules.sample.any_ontology_term_01,
-        [
+
+	selected_rule := json.patch(
+		test_rules.sample.any_ontology_term_01,
+		[
 			{
 				"op": "replace",
 				"path": "termEnforcementLevel",
 				"value": "required",
 			},
-            {
+			{
 				"op": "replace",
 				"path": "allowedPlaceholders",
 				"value": [],
 			},
-            
 		],
-    )
+	)
 	result := rules.rule_s_200_090_002_09 with input as input_data
-    with data.metabolights.validation.v2.controls.sampleFileControls as {
-        "Factor Value[Disease]":[selected_rule]
-    }
+		with data.metabolights.validation.v2.controls.sampleFileControls as {"Factor Value[Disease]": [selected_rule]}
 
 	count(result) == 0
 }
-
-
 
 # METADATA
 # title: <title>.
@@ -82,7 +77,8 @@ test_rule_s_200_090_002_09_no_violation_02 if {
 				"op": "replace",
 				"path": "/samples/s_REQ2025111188888.txt/table/data/Factor Value[Disease]",
 				"value": ["gram", "gram", "gram"],
-			},{
+			},
+			{
 				"op": "replace",
 				"path": "/samples/s_REQ2025111188888.txt/table/data/Term Source REF.4",
 				"value": ["UO", "UO", "UO"],
@@ -94,30 +90,26 @@ test_rule_s_200_090_002_09_no_violation_02 if {
 			},
 		],
 	)
-    
-    selected_rule := json.patch(
-        test_rules.sample.select_ontology_term_01,
-        [
+
+	selected_rule := json.patch(
+		test_rules.sample.select_ontology_term_01,
+		[
 			{
 				"op": "replace",
 				"path": "termEnforcementLevel",
 				"value": "required",
 			},
-            {
+			{
 				"op": "replace",
 				"path": "allowedPlaceholders",
 				"value": [],
 			},
-            
 		],
-    )
+	)
 	result := rules.rule_s_200_090_002_09 with input as input_data
-    with data.metabolights.validation.v2.controls.sampleFileControls as {
-        "Factor Value[Disease]":[selected_rule]
-    }
+		with data.metabolights.validation.v2.controls.sampleFileControls as {"Factor Value[Disease]": [selected_rule]}
 	count(result) == 0
 }
-
 
 # METADATA
 # title: <title>.
@@ -131,7 +123,8 @@ test_rule_s_200_090_002_09_no_violation_03 if {
 				"op": "replace",
 				"path": "/samples/s_REQ2025111188888.txt/table/data/Factor Value[Disease]",
 				"value": ["gram", "gram", "gram"],
-			},{
+			},
+			{
 				"op": "replace",
 				"path": "/samples/s_REQ2025111188888.txt/table/data/Term Source REF.4",
 				"value": ["UO", "UO", "UO"],
@@ -143,32 +136,26 @@ test_rule_s_200_090_002_09_no_violation_03 if {
 			},
 		],
 	)
-    
-    selected_rule := json.patch(
-        test_rules.sample.selected_ontologies_01,
-        [
+
+	selected_rule := json.patch(
+		test_rules.sample.selected_ontologies_01,
+		[
 			{
 				"op": "replace",
 				"path": "termEnforcementLevel",
 				"value": "required",
 			},
-            {
+			{
 				"op": "replace",
 				"path": "allowedPlaceholders",
 				"value": [],
 			},
-            
 		],
-    )
+	)
 	result := rules.rule_s_200_090_002_09 with input as input_data
-    with data.metabolights.validation.v2.controls.sampleFileControls as {
-        "Factor Value[Disease]":[selected_rule]
-    }
+		with data.metabolights.validation.v2.controls.sampleFileControls as {"Factor Value[Disease]": [selected_rule]}
 	count(result) == 0
 }
-
-
-
 
 # METADATA
 # title: <title>.
@@ -182,7 +169,8 @@ test_rule_s_200_090_002_09_no_violation_04 if {
 				"op": "replace",
 				"path": "/samples/s_REQ2025111188888.txt/table/data/Factor Value[Disease]",
 				"value": ["gram", "gram", "gram"],
-			},{
+			},
+			{
 				"op": "replace",
 				"path": "/samples/s_REQ2025111188888.txt/table/data/Term Source REF.4",
 				"value": ["UO", "UO", "UO"],
@@ -194,27 +182,24 @@ test_rule_s_200_090_002_09_no_violation_04 if {
 			},
 		],
 	)
-    
-    selected_rule := json.patch(
-        test_rules.sample.child_ontology_term_01,
-        [
+
+	selected_rule := json.patch(
+		test_rules.sample.child_ontology_term_01,
+		[
 			{
 				"op": "replace",
 				"path": "termEnforcementLevel",
 				"value": "required",
 			},
-            {
+			{
 				"op": "replace",
 				"path": "allowedPlaceholders",
 				"value": [],
 			},
-            
 		],
-    )
+	)
 	result := rules.rule_s_200_090_002_09 with input as input_data
-    with data.metabolights.validation.v2.controls.sampleFileControls as {
-        "Factor Value[Disease]":[selected_rule]
-    }
+		with data.metabolights.validation.v2.controls.sampleFileControls as {"Factor Value[Disease]": [selected_rule]}
 	count(result) == 0
 }
 
@@ -230,7 +215,8 @@ test_rule_s_200_090_002_09_violation_01 if {
 				"op": "replace",
 				"path": "/samples/s_REQ2025111188888.txt/table/data/Factor Value[Disease]/0",
 				"value": "data",
-			},{
+			},
+			{
 				"op": "replace",
 				"path": "/samples/s_REQ2025111188888.txt/table/data/Term Source REF.4/0",
 				"value": "",
@@ -242,32 +228,27 @@ test_rule_s_200_090_002_09_violation_01 if {
 			},
 		],
 	)
-    
-    selected_rule := json.patch(
-        test_rules.sample.any_ontology_term_01,
-        [
+
+	selected_rule := json.patch(
+		test_rules.sample.any_ontology_term_01,
+		[
 			{
 				"op": "replace",
 				"path": "termEnforcementLevel",
 				"value": "required",
 			},
-            {
+			{
 				"op": "replace",
 				"path": "allowedPlaceholders",
 				"value": [],
 			},
-            
 		],
-    )
+	)
 	result := rules.rule_s_200_090_002_09 with input as input_data
-    with data.metabolights.validation.v2.controls.sampleFileControls as {
-        "Factor Value[Disease]":[selected_rule]
-    }
+		with data.metabolights.validation.v2.controls.sampleFileControls as {"Factor Value[Disease]": [selected_rule]}
 
 	count(result) == 1
 }
-
-
 
 # METADATA
 # title: <title>.
@@ -281,7 +262,8 @@ test_rule_s_200_090_002_09_violation_02 if {
 				"op": "replace",
 				"path": "/samples/s_REQ2025111188888.txt/table/data/Factor Value[Disease]",
 				"value": ["gram", "gram", "gram"],
-			},{
+			},
+			{
 				"op": "replace",
 				"path": "/samples/s_REQ2025111188888.txt/table/data/Term Source REF.4",
 				"value": ["UOX", "UO", "UO"],
@@ -293,28 +275,25 @@ test_rule_s_200_090_002_09_violation_02 if {
 			},
 		],
 	)
-    
-    selected_rule := json.patch(
-        test_rules.sample.select_ontology_term_01,
-        [
+
+	selected_rule := json.patch(
+		test_rules.sample.select_ontology_term_01,
+		[
 			{
 				"op": "replace",
 				"path": "termEnforcementLevel",
 				"value": "required",
 			},
-            {
+			{
 				"op": "replace",
 				"path": "allowedPlaceholders",
 				"value": [],
 			},
-            
 		],
-    )
+	)
 	result := rules.rule_s_200_090_002_09 with input as input_data
-    with data.metabolights.validation.v2.controls.sampleFileControls as {
-        "Factor Value[Disease]":[selected_rule]
-    }
-    
+		with data.metabolights.validation.v2.controls.sampleFileControls as {"Factor Value[Disease]": [selected_rule]}
+
 	count(result) == 1
 }
 
@@ -330,7 +309,8 @@ test_rule_s_200_090_002_09_violation_03 if {
 				"op": "replace",
 				"path": "/samples/s_REQ2025111188888.txt/table/data/Factor Value[Disease]",
 				"value": ["gram", "gram", "gram"],
-			},{
+			},
+			{
 				"op": "replace",
 				"path": "/samples/s_REQ2025111188888.txt/table/data/Term Source REF.4",
 				"value": ["UOX", "UO", "UO"],
@@ -342,30 +322,26 @@ test_rule_s_200_090_002_09_violation_03 if {
 			},
 		],
 	)
-    
-    selected_rule := json.patch(
-        test_rules.sample.selected_ontologies_01,
-        [
+
+	selected_rule := json.patch(
+		test_rules.sample.selected_ontologies_01,
+		[
 			{
 				"op": "replace",
 				"path": "termEnforcementLevel",
 				"value": "required",
 			},
-            {
+			{
 				"op": "replace",
 				"path": "allowedPlaceholders",
 				"value": [],
 			},
-            
 		],
-    )
+	)
 	result := rules.rule_s_200_090_002_09 with input as input_data
-    with data.metabolights.validation.v2.controls.sampleFileControls as {
-        "Factor Value[Disease]":[selected_rule]
-    }
+		with data.metabolights.validation.v2.controls.sampleFileControls as {"Factor Value[Disease]": [selected_rule]}
 	count(result) == 1
 }
-
 
 # METADATA
 # title: <title>.
@@ -379,7 +355,8 @@ test_rule_s_200_090_002_09_violation_04 if {
 				"op": "replace",
 				"path": "/samples/s_REQ2025111188888.txt/table/data/Factor Value[Disease]",
 				"value": ["gram", "gram", "gram"],
-			},{
+			},
+			{
 				"op": "replace",
 				"path": "/samples/s_REQ2025111188888.txt/table/data/Term Source REF.4",
 				"value": ["UOX", "UO", "UO"],
@@ -391,26 +368,23 @@ test_rule_s_200_090_002_09_violation_04 if {
 			},
 		],
 	)
-    
-    selected_rule := json.patch(
-        test_rules.sample.child_ontology_term_01,
-        [
+
+	selected_rule := json.patch(
+		test_rules.sample.child_ontology_term_01,
+		[
 			{
 				"op": "replace",
 				"path": "termEnforcementLevel",
 				"value": "required",
 			},
-            {
+			{
 				"op": "replace",
 				"path": "allowedPlaceholders",
 				"value": [],
 			},
-            
 		],
-    )
+	)
 	result := rules.rule_s_200_090_002_09 with input as input_data
-    with data.metabolights.validation.v2.controls.sampleFileControls as {
-        "Factor Value[Disease]":[selected_rule]
-    }
+		with data.metabolights.validation.v2.controls.sampleFileControls as {"Factor Value[Disease]": [selected_rule]}
 	count(result) == 1
 }

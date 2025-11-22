@@ -33,6 +33,7 @@ test_rule_i_100_360_011_03_no_violation_01 if {
 			}],
 		}],
 	)
+
 	# print(input_data.investigation.studies[0].studyContacts.comments)
 	result := rules.rule_i_100_360_011_03 with input as input_data
 
@@ -55,6 +56,7 @@ test_rule_i_100_360_011_03_no_violation_02 if {
 			}],
 		}],
 	)
+
 	# print(input_data.investigation.studies[0].studyContacts.comments)
 	result := rules.rule_i_100_360_011_03 with input as input_data
 
@@ -77,6 +79,7 @@ test_rule_i_100_360_011_03_violation_01 if {
 			}],
 		}],
 	)
+
 	# print(input_data.investigation.studies[0].studyContacts.comments)
 	result := rules.rule_i_100_360_011_03 with input as input_data
 
@@ -99,6 +102,7 @@ test_rule_i_100_360_011_03_violation_02 if {
 			}],
 		}],
 	)
+
 	# print(input_data.investigation.studies[0].studyContacts.comments)
 	result := rules.rule_i_100_360_011_03 with input as input_data
 

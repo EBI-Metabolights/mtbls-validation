@@ -16,7 +16,6 @@ import rego.v1
 #  section: samples.general
 rule_s_200_090_003_04_test_cases := 1
 
-
 # METADATA
 # title: <title>.
 # description: <description>.
@@ -51,7 +50,6 @@ test_rule_s_200_090_003_04_no_violation_02 if {
 
 	count(result) == 0
 }
-
 
 # METADATA
 # title: <title>.

@@ -215,6 +215,7 @@ rule_s_200_090_002_12 contains result if {
 	some column_index, header in input.samples[file_name].table.headers
 	not control_lists[header.columnHeader]
 	startswith(header.columnHeader, "Characteristics[")
+
 	# header.columnStructure == "ONTOLOGY_COLUMN"
 	selected_validation_types = {
 		"ontology-term-in-selected-ontologies",
@@ -456,7 +457,8 @@ rule_s_200_090_005_01 contains result if {
 	column_index := header.columnIndex
 	default_values = [header.defaultValue |
 		some header in template.headers
-		header.columnCategory == "Protocol"
+		startswith(header.columnHeader, "Protocol REF")
+
 	]
 
 	default_value = default_values[t]
@@ -645,11 +647,12 @@ rule_s_200_100_002_01 contains result if {
 	some header in sheet.table.headers
 
 	row_offset := sheet.table.rowOffset
-	header.columnCategory == "Characteristics"
+	startswith(header.columnHeader, "Characteristics[")
+
 	template := data.metabolights.validation.v2.rules.phase1.definitions.SELECTED_STUDY_SAMPLE_FILE_TEMPLATE
 	default_headers := {t_header.columnHeader |
 		some t_header in template.headers
-		t_header.columnCategory == "Characteristics"
+		startswith(t_header.columnHeader, "Characteristics[")
 	}
 	not header.columnHeader in default_headers
 	column_name := input.samples[fileName].table.columns[header.columnIndex]
@@ -674,18 +677,18 @@ rule_s_200_100_002_01 contains result if {
 #  section: samples.source
 rule_s_200_100_002_04 contains result if {
 	searchHeader := "Term Accession Number"
-	input.samples[fileName].table.headers[columnIndex].additionalColumns[t] == searchHeader
-	input.samples[fileName].table.headers[columnIndex].columnStructure == "ONTOLOGY_COLUMN"
-	input.samples[fileName].table.headers[columnIndex].columnCategory == "Characteristics"
+	header := input.samples[fileName].table.headers[columnIndex]
+	header.columnStructure == "ONTOLOGY_COLUMN"
 
-	columnName := input.samples[fileName].table.headers[columnIndex].columnName
-	columnHeader := input.samples[fileName].table.headers[columnIndex].columnHeader
+	columnName := header.columnName
+	columnHeader := header.columnHeader
+	startswith(columnHeader, "Characteristics[")
 
 	not columnHeader in def._SAMPLES_DEFAULT_CHARACTERISTICS_HEADERS
 
 	row_offset := input.samples[fileName].table.rowOffset
 
-	accession_number_column_index := (input.samples[fileName].table.headers[columnIndex].columnIndex + t) + 1
+	accession_number_column_index := header.columnIndex + 2
 	accession_number_column_name := input.samples[fileName].table.columns[accession_number_column_index]
 
 	count(input.samples[fileName].table.data[columnName]) > 0
@@ -786,7 +789,8 @@ rule_s_200_200_002_01 contains result if {
 	rowOffset = input.samples[fileName].table.rowOffset
 
 	non_empty_columns := {sprintf("['%v', column index: %v]", [header.columnHeader, header.columnIndex]) |
-		header.columnCategory == "Factor Value"
+		startswith(header.columnHeader, "Factor Value[")
+		
 		vals := {x |
 			some x in input.samples[fileName].table.data[columnName]
 			count(trim_space(x)) > 0
@@ -814,7 +818,7 @@ rule_s_200_200_002_02 contains result if {
 	some _, header in sheet.table.headers
 	column_name := input.samples[file_name].table.columns[header.columnIndex]
 	violated_values := {sprintf("['%v', column index: %v]", [header.columnHeader, header.columnIndex]) |
-		header.columnCategory == "Factor Value"
+		startswith(header.columnHeader, "Factor Value[")
 		vals := {x |
 			some x in sheet.table.data[column_name]
 			count(trim_space(x)) > 0

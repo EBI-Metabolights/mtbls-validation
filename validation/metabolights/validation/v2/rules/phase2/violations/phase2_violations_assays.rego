@@ -182,9 +182,8 @@ rule_a_200_090_002_22 contains result if {
 rule_a_200_090_002_23 contains result if {
 	control_lists := data.metabolights.validation.v2.controls.assayFileControls
 	some file_name, file_table in input.assays
-	some column_index, header in input.assays[file_name].table.headers
-	control_lists[header.columnHeader]
-	template_name := file_table.assayTechnique.name
+	some column_index, header in file_table.table.headers
+	not control_lists[header.columnHeader]
 	selected_validation_types = {
 		"ontology-term-in-selected-ontologies",
 		"child-ontology-term",
@@ -197,7 +196,7 @@ rule_a_200_090_002_23 contains result if {
 		def1.STUDY_CATEGORY,
 		def1.STUDY_TEMPLATE_VERSION,
 		def1.STUDY_CREATED_AT,
-		template_name,
+		file_table.assayTechnique.name,
 		"assay",
 		file_table.table,
 		file_name,
@@ -362,7 +361,6 @@ rule_a_200_090_002_28 contains result if {
 	control_lists := data.metabolights.validation.v2.controls.assayFileControls
 	some file_name, file_table in input.assays
 	some column_index, header in file_table.table.headers
-	control_lists[header.columnHeader]
 	template_name := file_table.assayTechnique.name
 	selected_validation_types = {
 		"selected-ontology-term",
@@ -382,9 +380,9 @@ rule_a_200_090_002_28 contains result if {
 		file_table.table,
 		file_name,
 		column_index,
-		control_lists,
 		selected_validation_types,
 		enforcement_levels,
+		control_lists,
 		"__default__",
 	)
 }
@@ -401,7 +399,6 @@ rule_a_200_090_002_29 contains result if {
 	control_lists := data.metabolights.validation.v2.controls.assayFileControls
 	some file_name, file_table in input.assays
 	some column_index, header in file_table.table.headers
-	control_lists[header.columnHeader]
 	template_name := file_table.assayTechnique.name
 
 	selected_validation_types = {
@@ -581,14 +578,15 @@ rule_a_200_090_005_01 contains result if {
 		some template in template_list
 		template.version == data.metabolights.validation.v2.rules.phase1.definitions.STUDY_TEMPLATE_VERSION
 		some template_header in template.headers
-		template_header.columnCategory == "Protocol"
+		startswith(template_header.columnHeader, "Protocol REF")
+
 	]
 
 	count(template_protocol_headers) > 0
 
 	protocol_headers := [header |
 		some _, header in sheet.table.headers
-		header.columnCategory == "Protocol"
+		startswith(header.columnHeader, "Protocol REF")
 	]
 
 	some protocol_order, header in protocol_headers

@@ -261,7 +261,7 @@ __ASSAY_DEFAULT_PROTOCOL_HEADERS := {file_name: default_values |
 		some template in data.metabolights.validation.v2.templates.assayFileHeaderTemplates[assay_type]
 		template.version == STUDY_TEMPLATE_VERSION
 		some header in template.headers
-		header.columnCategory == "Protocol"
+		startswith(header.columnHeader, "Protocol REF")
 	]
 }
 

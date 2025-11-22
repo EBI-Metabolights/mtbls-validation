@@ -25,36 +25,27 @@ test_rule_s_200_090_002_13_no_violation_01 if {
 	input_01 := data.tests.data.inputs.minimum_01
 	input_data := json.patch(
 		input_01,
-		[
-			{
-				"op": "replace",
-				"path": "/samples/s_REQ2025111188888.txt/table/data/Sample Name/0",
-				"value": "data",
-			}
-		],
+		[{
+			"op": "replace",
+			"path": "/samples/s_REQ2025111188888.txt/table/data/Sample Name/0",
+			"value": "data",
+		}],
 	)
-    
-    selected_rule := json.patch(
-        test_rules.sample.any_ontology_term_01,
-        [
-            {
-				"op": "replace",
-				"path": "constraints",
-				"value": {
-                    "pattern": {
-                        "constraint": ".+",
-                        "errorMessage": "Sample error",
-                        "enforcementLevel": "required"
-                    }
-                },
-			},
-            
-		],
-    )
+
+	selected_rule := json.patch(
+		test_rules.sample.any_ontology_term_01,
+		[{
+			"op": "replace",
+			"path": "constraints",
+			"value": {"pattern": {
+				"constraint": ".+",
+				"errorMessage": "Sample error",
+				"enforcementLevel": "required",
+			}},
+		}],
+	)
 	result := rules.rule_s_200_090_002_13 with input as input_data
-    with data.metabolights.validation.v2.controls.sampleFileControls as {
-        "Sample Name": [selected_rule]
-    }
+		with data.metabolights.validation.v2.controls.sampleFileControls as {"Sample Name": [selected_rule]}
 	count(result) == 0
 }
 
@@ -65,35 +56,26 @@ test_rule_s_200_090_002_13_violation_01 if {
 	input_01 := data.tests.data.inputs.minimum_01
 	input_data := json.patch(
 		input_01,
-		[
-			{
-				"op": "replace",
-				"path": "/samples/s_REQ2025111188888.txt/table/data/Sample Name/0",
-				"value": "data",
-			}
-		],
+		[{
+			"op": "replace",
+			"path": "/samples/s_REQ2025111188888.txt/table/data/Sample Name/0",
+			"value": "data",
+		}],
 	)
-    
-    selected_rule := json.patch(
-        test_rules.sample.any_ontology_term_01,
-        [
-            {
-				"op": "replace",
-				"path": "constraints",
-				"value": {
-                    "pattern": {
-                        "constraint": ".+ value",
-                        "errorMessage": "Sample error",
-                        "enforcementLevel": "required"
-                    }
-                },
-			},
-            
-		],
-    )
+
+	selected_rule := json.patch(
+		test_rules.sample.any_ontology_term_01,
+		[{
+			"op": "replace",
+			"path": "constraints",
+			"value": {"pattern": {
+				"constraint": ".+ value",
+				"errorMessage": "Sample error",
+				"enforcementLevel": "required",
+			}},
+		}],
+	)
 	result := rules.rule_s_200_090_002_13 with input as input_data
-    with data.metabolights.validation.v2.controls.sampleFileControls as {
-        "Sample Name": [selected_rule]
-    }
+		with data.metabolights.validation.v2.controls.sampleFileControls as {"Sample Name": [selected_rule]}
 	count(result) == 1
 }

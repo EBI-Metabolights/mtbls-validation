@@ -90,7 +90,7 @@ rule_a_100_100_001_04 contains result if {
 		header.columnStructure != "LINKED_COLUMN"
 		header.columnStructure != "ADDITIONAL_COLUMN"
 		header.columnStructure != "INVALID_MULTI_COLUMN"
-		
+
 		y := header.columnHeader
 		x := header.columnIndex + 1
 	}
@@ -212,7 +212,8 @@ rule_a_100_100_001_09 contains result if {
 	some file_name, _ in input.assays
 	header_names := {header.columnHeader: same_headers |
 		some header in input.assays[file_name].table.headers
-		header.columnCategory == "Parameter Value"
+		startswith(header.columnHeader, "Parameter Value[")
+
 		same_headers := [idx |
 			some x in input.assays[file_name].table.headers
 			x.columnHeader == header.columnHeader

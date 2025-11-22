@@ -17,7 +17,6 @@ import rego.v1
 #  section: assays.general
 rule_a_200_090_002_06_test_cases := 1
 
-
 # METADATA
 # title: <title>.
 # description: <description>.

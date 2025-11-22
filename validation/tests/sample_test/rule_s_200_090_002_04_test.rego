@@ -16,9 +16,6 @@ import rego.v1
 #  section: samples.general
 rule_s_200_090_002_04_test_cases := 1
 
-
-
-
 # METADATA
 # title: <title>.
 # description: <description>.
@@ -31,7 +28,8 @@ test_rule_s_200_090_002_04_no_violation_01 if {
 				"op": "replace",
 				"path": "/samples/s_REQ2025111188888.txt/table/data/Factor Value[Disease]/0",
 				"value": "data",
-			},{
+			},
+			{
 				"op": "replace",
 				"path": "/samples/s_REQ2025111188888.txt/table/data/Term Source REF.4/0",
 				"value": "NCBITAXON",
@@ -43,12 +41,10 @@ test_rule_s_200_090_002_04_no_violation_01 if {
 			},
 		],
 	)
-    
+
 	result := rules.rule_s_200_090_002_04 with input as input_data
 	count(result) == 0
 }
-
-
 
 # METADATA
 # title: <title>.
@@ -62,7 +58,8 @@ test_rule_s_200_090_002_04_violation_01 if {
 				"op": "replace",
 				"path": "/samples/s_REQ2025111188888.txt/table/data/Factor Value[Disease]/0",
 				"value": "",
-			},{
+			},
+			{
 				"op": "replace",
 				"path": "/samples/s_REQ2025111188888.txt/table/data/Term Source REF.4/0",
 				"value": "NCBITAXON",
@@ -74,7 +71,7 @@ test_rule_s_200_090_002_04_violation_01 if {
 			},
 		],
 	)
-    
+
 	result := rules.rule_s_200_090_002_04 with input as input_data
 	count(result) == 1
 }

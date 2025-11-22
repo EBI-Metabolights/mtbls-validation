@@ -17,7 +17,6 @@ import rego.v1
 #  section: assays.general
 rule_a_200_090_003_01_test_cases := 1
 
-
 # METADATA
 # title: <title>.
 # description: <description>.
@@ -27,7 +26,6 @@ test_rule_a_200_090_003_01_no_violation_01 if {
 	result := rules.rule_a_200_090_003_01 with input as input_data
 	count(result) == 0
 }
-
 
 # METADATA
 # title: <title>.
@@ -41,7 +39,8 @@ test_rule_a_200_090_003_01_no_violation_02 if {
 				"op": "replace",
 				"path": "/assays/a_REQ2025111188888-01_MS_metabolite_profiling.txt/table/data/Parameter Value[Instrument]/0",
 				"value": "",
-			},{
+			},
+			{
 				"op": "replace",
 				"path": "/assays/a_REQ2025111188888-01_MS_metabolite_profiling.txt/table/data/Term Source REF.2/0",
 				"value": "OBI",
@@ -70,7 +69,8 @@ test_rule_a_200_090_003_01_violation_01 if {
 				"op": "replace",
 				"path": "/assays/a_REQ2025111188888-01_MS_metabolite_profiling.txt/table/data/Parameter Value[Instrument]/0",
 				"value": "Test Data",
-			},{
+			},
+			{
 				"op": "replace",
 				"path": "/assays/a_REQ2025111188888-01_MS_metabolite_profiling.txt/table/data/Term Source REF.2/0",
 				"value": "OBI",

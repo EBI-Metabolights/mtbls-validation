@@ -16,7 +16,6 @@ import rego.v1
 #  section: samples.general
 rule_s_200_090_003_01_test_cases := 1
 
-
 # METADATA
 # title: <title>.
 # description: <description>.
@@ -27,7 +26,6 @@ test_rule_s_200_090_003_01_no_violation_01 if {
 	print(result)
 	count(result) == 0
 }
-
 
 # METADATA
 # title: <title>.
@@ -41,7 +39,8 @@ test_rule_s_200_090_003_01_no_violation_02 if {
 				"op": "replace",
 				"path": "/samples/s_REQ2025111188888.txt/table/data/Characteristics[Organism]/0",
 				"value": "",
-			},{
+			},
+			{
 				"op": "replace",
 				"path": "/samples/s_REQ2025111188888.txt/table/data/Term Source REF/0",
 				"value": "OBI",
@@ -70,7 +69,8 @@ test_rule_s_200_090_003_01_violation_01 if {
 				"op": "replace",
 				"path": "/samples/s_REQ2025111188888.txt/table/data/Characteristics[Organism]/0",
 				"value": "Test Data",
-			},{
+			},
+			{
 				"op": "replace",
 				"path": "/samples/s_REQ2025111188888.txt/table/data/Term Source REF/0",
 				"value": "OBI",
