@@ -158,7 +158,6 @@ test_rule_a_200_090_002_23_no_violation_02 if {
 			"Protocol REF.2": [],
 			"Protocol REF.1": [],
 		}
-	print(result)
 	count(result) == 0
 }
 

@@ -23,7 +23,6 @@ test_rule_s_200_090_003_03_no_violation_01 if {
 	input_01 := data.tests.data.inputs.minimum_01
 	input_data := input_01
 	result := rules.rule_s_200_090_003_03 with input as input_data
-	print(result)
 	count(result) == 0
 }
 

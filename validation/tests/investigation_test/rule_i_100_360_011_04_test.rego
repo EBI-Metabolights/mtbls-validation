@@ -55,7 +55,6 @@ test_rule_i_100_360_011_04_no_violation_02 if {
 		}],
 	)
 
-	# print(input_data.investigation.studies[0].studyContacts.comments)
 	result := rules.rule_i_100_360_011_04 with input as input_data
 
 	count(result) == 0
@@ -78,7 +77,6 @@ test_rule_i_100_360_011_04_violation_01 if {
 		}],
 	)
 
-	# print(input_data.investigation.studies[0].studyContacts.comments)
 	result := rules.rule_i_100_360_011_04 with input as input_data
 
 	count(result) == 1
@@ -101,7 +99,6 @@ test_rule_i_100_360_011_04_violation_02 if {
 		}],
 	)
 
-	# print(input_data.investigation.studies[0].studyContacts.comments)
 	result := rules.rule_i_100_360_011_04 with input as input_data
 
 	count(result) == 1

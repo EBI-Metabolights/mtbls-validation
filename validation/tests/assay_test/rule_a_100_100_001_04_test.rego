@@ -127,6 +127,5 @@ test_rule_a_100_100_001_04_violation_01 if {
 			"Metabolite Assignment File",
 		}}
 
-	# print(result)
 	count(result) == 1
 }

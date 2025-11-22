@@ -42,14 +42,10 @@ rule___100_100_001_01 contains result if {
 rule___100_100_001_02 contains result if {
 	[x, errors] := json.match_schema(input, data.schemas)
 
-	# print(x)
 	count(errors) > 0
-
-	# print(errors)
 	result := f.format_schema_error(rego.metadata.rule(), errors)
 }
 
-# print(result)
 
 # METADATA
 # title: There is a critical file parse error for i_Investigation.txt.

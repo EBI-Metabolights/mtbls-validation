@@ -285,14 +285,9 @@ term_source_ref_not_in_source_references_list(meta, source, file_name, column_in
 	search_headers_list := [x | some x in search_headers]
 	search_header = search_headers_list[0]
 
-	# print(search_header)
 	some target_column_index in source_header_indices
-
-	# target_column_index := (source[file_name].table.headers[column_index].columnIndex + t) + 1
 	target_column_name := source[file_name].table.columns[target_column_index]
 
-	# startswith(target_column_name, "Term Source REF")
-	# print(column_name)
 	count(source[file_name].table.data[column_name]) > 0
 
 	violated_values = {sprintf("%v", [value]) |
@@ -356,7 +351,6 @@ term_source_ref_is_defined_for_empty_unit(meta, source, file_name, header_index)
 		count(trim_space(source_ref)) > 0
 		accession := source[file_name].table.data[accession_number_column_name][j]
 
-		# print(value, unit, source_ref, accession)
 		x1 := (source[file_name].table.rowOffset + j) + 1
 		x2 := value
 		x3 := unit
@@ -436,11 +430,9 @@ accession_number_min_length_check_for_unit(meta, source, file_name, column_index
 }
 
 accession_number_is_defined_for_empty_term(meta, source, file_name, column_index) := result if {
-	print(column_index)
 	term_source_column_header := "Term Source REF"
 	accession_column_header := "Term Accession Number"
 	header := source[file_name].table.headers[column_index]
-	print(header)
 
 	header.columnStructure == "ONTOLOGY_COLUMN"
 

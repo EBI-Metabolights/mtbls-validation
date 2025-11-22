@@ -3,6 +3,7 @@ import json
 from pathlib import Path
 import re
 from typing import Any, OrderedDict
+import jsonschema
 from pydantic import BaseModel
 from pydantic.alias_generators import to_snake
 from scripts import control_list_models as models
@@ -20,6 +21,7 @@ class DateEncoder(json.JSONEncoder):
 
 
 def update_controls():
+    control_schema = models.FieldValueValidation.model_json_schema(by_alias=True)
     control_folder = "validation/metabolights/validation/v2/controls"
     files = Path(control_folder).rglob("*.json")
     controls = models.ValidationControls()
@@ -33,6 +35,7 @@ def update_controls():
         for key, input_data in file_content.items():
             file_content_data.data[key] = []
             for x in input_data:
+                jsonschema.validate(x, control_schema)
                 data = models.FieldValueValidation.model_validate(x, by_alias=True)
                 parents = data.allowed_parent_ontology_terms
                 if parents:
@@ -47,6 +50,21 @@ def update_controls():
         with file.open("w") as f:
             json.dump(file_obj.get("data", ""), f, indent=4, cls=DateEncoder)
 
+
+        test_rules_folder = "validation/tests/data/inputs/rules"
+        files = Path(test_rules_folder).rglob("*.json")
+        for file in list(files):
+            file_content = json.loads(file.read_text())
+            jsonschema.validate(file_content, control_schema)
+            data = models.FieldValueValidation.model_validate(file_content, by_alias=True)
+            parents = data.allowed_parent_ontology_terms
+            if parents:
+                if parents.exclude_by_label_pattern:
+                    for pattern in parents.exclude_by_label_pattern:
+                        # raise error if not valid pattern format
+                        re.match(pattern, "test")
+            with file.open("w") as f:
+                f.write(data.model_dump_json(indent=4, by_alias=True))
 
 if __name__ == "__main__":
     update_controls()

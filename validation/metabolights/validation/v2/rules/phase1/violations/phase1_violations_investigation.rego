@@ -570,9 +570,6 @@ rule_i_100_310_002_14 contains result if {
 
 	msg := sprintf("Study design type source reference at index %v, '%v', is not in the sources reference list for study: %v.", [j + 1, termSourceRef, study.identifier])
 	source := input.investigationFilePath
-
-	# print(design_descriptor.termSourceRef, def1.ONTOLOGY_SOURCE_REFERENCE_NAMES)
-
 	result := f.format(rego.metadata.rule(), msg, source)
 }
 
@@ -2027,7 +2024,6 @@ rule_i_100_360_008_13 contains result if {
 		"selected-ontology-term",
 	}
 	enforcement_levels := {"required", "recommended", "optional"}
-	print(def1.RULE_DEFAULT_ONTOLOGIES)
 	result := f.check_term_rule_by_enforcement_level(
 		rego.metadata.rule(),
 		input.investigationFilePath,

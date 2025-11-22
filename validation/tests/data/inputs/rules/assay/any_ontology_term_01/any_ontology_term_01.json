@@ -11,9 +11,9 @@
         "isaFileTemplateNameFilter": null,
         "linkedFieldAndValueFilter": null
     },
-    "validationType": "any-ontology-term",
     "termEnforcementLevel": "required",
     "unexpectedTermEnforcementLevel": "required",
+    "validationType": "any-ontology-term",
     "constraints": {},
     "defaultValue": null,
     "allowedMissingOntologyTerms": [

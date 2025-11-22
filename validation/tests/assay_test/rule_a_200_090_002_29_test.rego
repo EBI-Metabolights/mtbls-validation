@@ -121,7 +121,6 @@ test_rule_a_200_090_002_29_violation_01 if {
 	)
 	result := rules.rule_a_200_090_002_29 with input as input_data
 		with data.metabolights.validation.v2.controls.assayFileControls as {"__default__": [selected_rule]}
-    
-    print(result)
+
     count(result) == 1
 }

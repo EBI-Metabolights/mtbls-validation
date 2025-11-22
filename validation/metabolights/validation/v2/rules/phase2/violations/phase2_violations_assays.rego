@@ -54,12 +54,10 @@ rule_a_200_090_001_01 contains result if {
 rule_a_200_090_002_03 contains result if {
 	some file_name, sheet in input.assays
 
-	# print(file_name, sheet.table.headers)
 	some header_index, header in sheet.table.headers
 	ontology_source_references := {ref.sourceName | some ref in input.investigation.ontologySourceReferences.references}
 	ontology_source_references_str := concat(", ", ontology_source_references)
 
-	# print(rego.metadata.rule().custom.rule_id, header.columnHeader)
 	result := f.term_source_ref_not_in_source_references_list(rego.metadata.rule(), assays, file_name, header_index, ontology_source_references, ontology_source_references_str)
 }
 
@@ -113,7 +111,6 @@ rule_a_200_090_002_21 contains result if {
 		"selected-ontology-term",
 	}
 
-	# print(header.columnHeader, template_name)
 	result := f.check_rule_by_enforcement_level(
 		rego.metadata.rule(),
 		def1.STUDY_CATEGORY,
@@ -153,7 +150,6 @@ rule_a_200_090_002_22 contains result if {
 	control_lists[header.columnHeader]
 	template_name := file_table.assayTechnique.name
 
-	# print(header.columnHeader, template_name)
 	result := f.check_rule_by_enforcement_level(
 		rego.metadata.rule(),
 		def1.STUDY_CATEGORY,

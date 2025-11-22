@@ -24,7 +24,6 @@ rule___100_100_001_02_test_cases := 1
 test_rule___100_100_001_02_no_violation_01 if {
 	result := rules.rule___100_100_001_02 with input as data.tests.data.inputs.empty
 
-	# print(result)
 	count(result) == 0
 }
 

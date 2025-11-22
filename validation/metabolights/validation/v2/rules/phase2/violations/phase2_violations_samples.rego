@@ -106,7 +106,6 @@ rule_s_200_090_002_09 contains result if {
 	enforcement_levels = {"required"}
 	control_lists[header.columnHeader]
 
-	# print(header.columnHeader)
 	result := f.check_rule_by_enforcement_level(
 		rego.metadata.rule(),
 		def1.STUDY_CATEGORY,
@@ -572,7 +571,6 @@ rule_s_200_090_007_03 contains result if {
 
 	enforcement_levels = {"required"}
 
-	# print("rule", rego.metadata.rule().custom.rule_id, header.columnHeader, header.columnStructure)
 
 	result := f.check_unexpected_value(
 		rego.metadata.rule(),

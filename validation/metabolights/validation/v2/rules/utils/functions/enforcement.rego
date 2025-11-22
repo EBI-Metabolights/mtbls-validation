@@ -446,7 +446,6 @@ check_rule_by_enforcement_level(
 	rule.validationType in {"selected-ontology-term"}
 	rule.termEnforcementLevel in enforcement_levels
 
-	# print("Find rule in selected-ontology-term", meta.custom.rule_id, header.columnHeader)
 	message_suffix = sprintf("Use an ontology term from the list [%v]", [rule.termEnforcementLevel])
 
 	result := check_selected_ontology_terms_rule(
@@ -610,7 +609,6 @@ check_ontology_source_rule(
 		excludes = (missing_excludes | placeholder_excludes) | other_source_excludes
 		count(excludes) == 0
 
-		# print(meta.custom.rule_id, rule.ruleName, rule.validationType, rule.termEnforcementLevel, source_ref)
 		not all_sources[source_ref]
 	}
 	count(violated_values) > 0
@@ -678,13 +676,11 @@ check_unit_ontology_source_rule(
 		excludes = (missing_excludes | placeholder_excludes) | other_source_excludes
 		count(excludes) == 0
 
-		# print(meta.custom.rule_id, rule.ruleName, rule.validationType, rule.termEnforcementLevel, source_ref)
 		not all_sources[source_ref]
 	}
 	count(violated_values) > 0
 	ontologies_str := concat(", ", expected_sources)
 
-	# print(meta.custom.rule_id,  column_header, expected_sources, rule.ruleName)
 
 	file_column_header := sprintf("%v (of %v)", [search_header, column_header])
 	desc := sprintf("Rule '%v' - %v", [rule.ruleName, description_suffix])
@@ -1042,7 +1038,6 @@ ontology_term_has_unexpected_value(
 	search_header := "Term Source REF"
 	header := table.headers[header_index]
 	column_header := header.columnHeader
-	print(meta.custom.rule_id, header.columnHeader, header.columnStructure, control_lists)
 	
 	control_list := control_lists[control_list_key]
 	selected_controls = [x |
@@ -1251,7 +1246,6 @@ single_column_has_unexpected_value(
 			term == x.term
 		}
 
-		# print(meta.custom.rule_id, header.columnHeader, term, missing_excludes)
 		count(missing_excludes) == 0
 	}
 	count(violated_values) > 0

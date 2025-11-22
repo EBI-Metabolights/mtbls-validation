@@ -1,4 +1,6 @@
 
+import subprocess
+
 from scripts.check_unit_tests import find_diff_between_rules_and_tests
 from scripts.create_template_documentation import create_file_structure_documentation, create_recommended_assay_control_lists, create_recommended_control_lists
 from scripts.create_validations_summary import create_summary_files
@@ -27,6 +29,7 @@ if __name__ == "__main__":
     update_controls()
     rules = get_rules()
     create_summary_files(rules)
+    subprocess.run(["./build_bundle.sh"], check=True)
 
     # assay_controlled_terms = create_recommended_assay_control_lists()
 
