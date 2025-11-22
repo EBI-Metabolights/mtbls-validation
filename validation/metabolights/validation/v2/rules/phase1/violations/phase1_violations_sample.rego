@@ -183,7 +183,6 @@ rule_s_100_100_001_08 contains result if {
 		some header in input.samples[file_name].table.headers
 		header.columnHeader in def._DEFAULT_SAMPLE_HEADER_NAMES
 		not startswith(header.columnHeader, "Comment[")
-		
 	]
 
 	default_headers := def.SELECTED_STUDY_SAMPLE_FILE_TEMPLATE_HEADERS
@@ -221,7 +220,6 @@ rule_s_100_100_001_09 contains result if {
 	count(headers) > 0
 	some protocol_column in input.samples[i].table.headers
 	startswith(protocol_column.columnHeader, "Protocol REF")
-
 
 	protocol_index := protocol_column.columnIndex
 
@@ -381,7 +379,7 @@ rule_s_100_100_001_14 contains result if {
 	header_names := {header.columnHeader: same_headers |
 		some header in input.samples[file_name].table.headers
 		expected_names := {x |
-			some x in  {"Characteristics[", "Factor Value["}
+			some x in {"Characteristics[", "Factor Value["}
 			startswith(header.columnHeader, x)
 		}
 		count(expected_names) > 0

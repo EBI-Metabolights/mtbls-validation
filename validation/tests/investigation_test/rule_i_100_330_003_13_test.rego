@@ -18,8 +18,6 @@ import rego.v1
 #  section: investigation.studyFactors
 rule_i_100_330_003_13_test_cases := 1
 
-
-
 # METADATA
 # title: Study Factor Type term is in the control list
 # description: There are two study publication. Update both of them
@@ -50,13 +48,11 @@ test_rule_i_100_330_003_13_no_violation_01 if {
 	)
 	test_rule := json.patch(
 		test_rules.investigation.select_ontology_term_01,
-		[
-			{
-				"op": "replace",
-				"path": "/termEnforcementLevel",
-				"value": "required",
-			},
-		],
+		[{
+			"op": "replace",
+			"path": "/termEnforcementLevel",
+			"value": "required",
+		}],
 	)
 	result := rules.rule_i_100_330_003_13 with input as input_data
 		with def.RULE_STUDY_FACTOR_TYPE as null
@@ -94,13 +90,11 @@ test_rule_i_100_330_003_13_no_violation_02 if {
 	)
 	test_rule := json.patch(
 		test_rules.investigation.selected_ontologies_01,
-		[
-			{
-				"op": "replace",
-				"path": "/termEnforcementLevel",
-				"value": "required",
-			},
-		],
+		[{
+			"op": "replace",
+			"path": "/termEnforcementLevel",
+			"value": "required",
+		}],
 	)
 	result := rules.rule_i_100_330_003_13 with input as input_data
 		with def.RULE_STUDY_FACTOR_TYPE as null
@@ -138,13 +132,11 @@ test_rule_i_100_330_003_13_no_violation_03 if {
 	)
 	test_rule := json.patch(
 		test_rules.investigation.child_ontology_term_01,
-		[
-			{
-				"op": "replace",
-				"path": "/termEnforcementLevel",
-				"value": "required",
-			},
-		],
+		[{
+			"op": "replace",
+			"path": "/termEnforcementLevel",
+			"value": "required",
+		}],
 	)
 	result := rules.rule_i_100_330_003_13 with input as input_data
 		with def.RULE_STUDY_FACTOR_TYPE as null
@@ -182,20 +174,17 @@ test_rule_i_100_330_003_13_no_violation_04 if {
 	)
 	test_rule := json.patch(
 		test_rules.investigation.any_ontology_term_01,
-		[
-			{
-				"op": "replace",
-				"path": "/termEnforcementLevel",
-				"value": "required",
-			},
-		],
+		[{
+			"op": "replace",
+			"path": "/termEnforcementLevel",
+			"value": "required",
+		}],
 	)
 	result := rules.rule_i_100_330_003_13 with input as input_data
 		with def.RULE_STUDY_FACTOR_TYPE as null
 		with def.RULE_DEFAULT_ONTOLOGIES as test_rule
 	count(result) == 0
 }
-
 
 # METADATA
 # title: Study Factor Type term is  empty
@@ -222,13 +211,11 @@ test_rule_i_100_330_003_13_violation_01 if {
 	)
 	test_rule := json.patch(
 		test_rules.investigation.select_ontology_term_01,
-		[
-			{
-				"op": "replace",
-				"path": "/termEnforcementLevel",
-				"value": "required",
-			},
-		],
+		[{
+			"op": "replace",
+			"path": "/termEnforcementLevel",
+			"value": "required",
+		}],
 	)
 	result := rules.rule_i_100_330_003_13 with input as input_data
 		with def.RULE_STUDY_FACTOR_TYPE as null
@@ -261,13 +248,11 @@ test_rule_i_100_330_003_13_violation_02 if {
 	)
 	test_rule := json.patch(
 		test_rules.investigation.child_ontology_term_01,
-		[
-			{
-				"op": "replace",
-				"path": "/termEnforcementLevel",
-				"value": "required",
-			},
-		],
+		[{
+			"op": "replace",
+			"path": "/termEnforcementLevel",
+			"value": "required",
+		}],
 	)
 	result := rules.rule_i_100_330_003_13 with input as input_data
 		with def.RULE_STUDY_FACTOR_TYPE as null
@@ -300,13 +285,11 @@ test_rule_i_100_330_003_13_violation_03 if {
 	)
 	test_rule := json.patch(
 		test_rules.investigation.selected_ontologies_01,
-		[
-			{
-				"op": "replace",
-				"path": "/termEnforcementLevel",
-				"value": "required",
-			},
-		],
+		[{
+			"op": "replace",
+			"path": "/termEnforcementLevel",
+			"value": "required",
+		}],
 	)
 	result := rules.rule_i_100_330_003_13 with input as input_data
 		with def.RULE_STUDY_FACTOR_TYPE as {}
@@ -339,27 +322,14 @@ test_rule_i_100_330_003_13_violation_04 if {
 	)
 	test_rule := json.patch(
 		test_rules.investigation.any_ontology_term_01,
-		[
-			{
-				"op": "replace",
-				"path": "/termEnforcementLevel",
-				"value": "required",
-			},
-		],
+		[{
+			"op": "replace",
+			"path": "/termEnforcementLevel",
+			"value": "required",
+		}],
 	)
 	result := rules.rule_i_100_330_003_13 with input as input_data
-		with def.RULE_STUDY_FACTOR_TYPE as  {"validationType": "check-only-constraints"}
+		with def.RULE_STUDY_FACTOR_TYPE as {"validationType": "check-only-constraints"}
 		with def.RULE_DEFAULT_ONTOLOGIES as test_rule
 	count(result) == 1
 }
-
-
-
-
-
-
-
-
-
-
-

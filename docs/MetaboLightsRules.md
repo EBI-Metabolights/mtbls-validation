@@ -115,7 +115,7 @@
 | 113 | rule_i_100_300_005_01 | WARNING | Study Submission Date not valid. | Study Submission Date should be valid date and ISO8601 format (e.g., 2023-01-01). |
 | 114 | rule_i_100_300_006_01 | WARNING | Study Public Release Date not valid. | Study Public Release Date should be valid date and ISO8601 format (e.g., 2023-01-01). |
 | 115 | rule_i_100_310_001_01 | ERROR | There are less than 3 Study Design Descriptors in the Study Design Descriptors section of investigation file. | At least 3 study design descriptors should be defined. |
-| 116 | rule_i_100_310_002_01 | ERROR | Study Design Type is empty | Study Design Type should be defined. |
+| 116 | rule_i_100_310_002_01 | ERROR | Study Design Type is empty. | Study Design Type should be defined. |
 | 117 | rule_i_100_310_002_11 | ERROR | Value is not in the required ontologies or controlled lists associated with this field. | A term MUST be selected from the required ontologies or controlled lists associated with this field. |
 | 118 | rule_i_100_310_002_12 | WARNING | Value is not in the predefined ontologies or controlled lists associated with this field. | A term SHOULD be selected from the predefined ontologies or controlled lists associated with this field. |
 | 119 | rule_i_100_310_002_13 | WARNING | Value is not in the default ontologies or controlled lists | A term SHOULD be selected from the default ontologies or controlled lists. |
@@ -126,14 +126,14 @@
 | 124 | rule_i_100_320_004_02 | ERROR | PubMed ID format invalid for study publication. | If PubMed ID is defined, its format should be valid PubMed ID. Valid PubMed ID contains only digits. |
 | 125 | rule_i_100_320_005_01 | ERROR | Study Publication Title length less than 20 characters. | Study Publication Title must be defined with length equal or greater than 25 characters. |
 | 126 | rule_i_100_320_006_01 | ERROR | Study Publication Author List is empty. | Study Publication Author List must be defined. |
-| 127 | rule_i_100_320_007_01 | WARNING | Study Publication Status Term is empty | Study Publication Status Term should be defined |
+| 127 | rule_i_100_320_007_01 | ERROR | Study Publication Status Term is empty. | Study Publication Status Term should be defined |
 | 128 | rule_i_100_320_007_11 | ERROR | Value is not in the required ontologies or controlled lists associated with this field. | A term MUST be selected from the required ontologies or controlled lists associated with this field. |
 | 129 | rule_i_100_320_007_12 | WARNING | Value is not in the predefined ontologies or controlled lists associated with this field. | A term SHOULD be selected from the predefined ontologies or controlled lists associated with this field. |
 | 130 | rule_i_100_320_007_13 | WARNING | Value is not in the default ontologies or controlled lists | A term SHOULD be selected from the default ontologies or controlled lists. |
 | 131 | rule_i_100_320_007_14 | WARNING | Study Publication Status Term Source REF not referenced in investigation file. | Study Publication Status Term Source REFs should be referenced in the ONTOLOGY SOURCE REFERENCE section in i_Investigation.txt. |
 | 132 | rule_i_100_330_001_01 | ERROR | No study factors referenced in investigation file. | At least one study factors must be defined in i_Investigation.txt. |
 | 133 | rule_i_100_330_002_01 | ERROR | Study Factor Name is empty. | Study Factor Name must be defined. |
-| 134 | rule_i_100_330_003_01 | WARNING | Study Factor Type Term Source REF is empty | Study Factor Type Term Source REF should be defined. |
+| 134 | rule_i_100_330_003_01 | ERROR | Study Factor Type Term Source REF is empty. | Study Factor Type Term Source REF should be defined. |
 | 135 | rule_i_100_330_003_11 | ERROR | Value is not in the required ontologies or controlled lists associated with this field. | A term MUST be selected from the required ontologies or controlled lists associated with this field. |
 | 136 | rule_i_100_330_003_12 | WARNING | Value is not in the predefined ontologies or controlled lists associated with this field. | A term SHOULD be selected from the predefined ontologies or controlled lists associated with this field. |
 | 137 | rule_i_100_330_003_13 | WARNING | Value is not in the default ontologies or controlled lists | A term SHOULD be selected from the default ontologies or controlled lists. |
@@ -143,12 +143,12 @@
 | 141 | rule_i_100_340_002_02 | ERROR | Study Assay File Name not correct pattern. | Assay file name must start with 'a_' and have extension '.txt'. |
 | 142 | rule_i_100_340_002_03 | ERROR | There are invalid characters in assay file name. | Use only .-_A-Za-z0-9 characters for an assay file name. |
 | 143 | rule_i_100_340_002_04 | ERROR | Study Assay File Name must be unique. | Assay file name must be unique for each study in i_Investigation.txt. |
-| 144 | rule_i_100_340_003_01 | WARNING | Study Assay Measurement Type is empty | Study Assay Measurement Type should be defined. |
+| 144 | rule_i_100_340_003_01 | ERROR | Study Assay Measurement Type is empty. | Study Assay Measurement Type should be defined. |
 | 145 | rule_i_100_340_003_11 | ERROR | Value is not in the required ontologies or controlled lists associated with this field. | A term MUST be selected from the required ontologies or controlled lists associated with this field. |
 | 146 | rule_i_100_340_003_12 | WARNING | Value is not in the predefined ontologies or controlled lists associated with this field. | A term SHOULD be selected from the predefined ontologies or controlled lists associated with this field. |
 | 147 | rule_i_100_340_003_13 | WARNING | Value is not in the default ontologies or controlled lists | A term SHOULD be selected from the default ontologies or controlled lists. |
 | 148 | rule_i_100_340_003_14 | ERROR | Study Assay Measurement Type Term Source REF not referenced in investigation file. | Study Assay Measurement Type Term Source REFs should be referenced in the ONTOLOGY SOURCE REFERENCE section in i_Investigation.txt. |
-| 149 | rule_i_100_340_006_01 | WARNING | Study Assay Technology Type is empty. | Study Assay Technology Type should be defined. |
+| 149 | rule_i_100_340_006_01 | ERROR | Study Assay Technology Type is empty. | Study Assay Technology Type should be defined. |
 | 150 | rule_i_100_340_006_11 | ERROR | Value is not in the required ontologies or controlled lists associated with this field. | A term MUST be selected from the required ontologies or controlled lists associated with this field. |
 | 151 | rule_i_100_340_006_12 | WARNING | Value is not in the predefined ontologies or controlled lists associated with this field. | A term SHOULD be selected from the predefined ontologies or controlled lists associated with this field. |
 | 152 | rule_i_100_340_006_13 | WARNING | Value is not in the default ontologies or controlled lists | A term SHOULD be selected from the default ontologies or controlled lists. |
@@ -170,7 +170,7 @@
 | 168 | rule_i_100_360_004_02 | ERROR | Study Person Email not valid. | Study Person Email must have valid format. |
 | 169 | rule_i_100_360_006_01 | ERROR | Study Person affiliation length is less than 10 characters. | Define full name of contact's primary affiliation. e.g. European Bioinformatics Institute |
 | 170 | rule_i_100_360_007_01 | ERROR | Study Person Roles is empty. | At least one role should be defined for a study contact. |
-| 171 | rule_i_100_360_008_01 | INFO | Study Person Roles length less than 2 characters. | Study Person Roles should be defined with length equal or greater than 2 characters. |
+| 171 | rule_i_100_360_008_01 | WARNING | Study Person Role value is empty. | Study Person Role should be defined. |
 | 172 | rule_i_100_360_008_11 | ERROR | Value is not in the required ontologies or controlled lists associated with this field. | A term MUST be selected from the required ontologies or controlled lists associated with this field. |
 | 173 | rule_i_100_360_008_12 | WARNING | Value is not in the predefined ontologies or controlled lists associated with this field. | A term SHOULD be selected from the predefined ontologies or controlled lists associated with this field. |
 | 174 | rule_i_100_360_008_13 | WARNING | Value is not in the default ontologies or controlled lists | A term SHOULD be selected from the default ontologies or controlled lists. |

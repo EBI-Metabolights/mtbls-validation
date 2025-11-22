@@ -46,7 +46,6 @@ rule___100_100_001_02 contains result if {
 	result := f.format_schema_error(rego.metadata.rule(), errors)
 }
 
-
 # METADATA
 # title: There is a critical file parse error for i_Investigation.txt.
 # description: Update i_Investigation.txt file considering error messages.

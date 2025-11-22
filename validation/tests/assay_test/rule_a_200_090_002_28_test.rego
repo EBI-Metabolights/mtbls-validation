@@ -18,7 +18,6 @@ import rego.v1
 #  section: assays.general
 rule_a_200_090_002_28_test_cases := 1
 
-
 # METADATA
 # title: <title>.
 # description: <description>.
@@ -67,7 +66,7 @@ test_rule_a_200_090_002_28_no_violation_01 if {
 	)
 	result := rules.rule_a_200_090_002_28 with input as input_data
 		with data.metabolights.validation.v2.controls.assayFileControls as {"__default__": [selected_rule]}
-    count(result) == 0
+	count(result) == 0
 }
 
 # METADATA
@@ -80,8 +79,8 @@ test_rule_a_200_090_002_28_violation_01 if {
 		[
 			{
 				"op": "replace",
-				"path": "/assays/a_REQ2025111188888-01_MS_metabolite_profiling.txt/table/data/Parameter Value[Instrument]", 
-                "value": ["unexpected value", "gram", "gram"],
+				"path": "/assays/a_REQ2025111188888-01_MS_metabolite_profiling.txt/table/data/Parameter Value[Instrument]",
+				"value": ["unexpected value", "gram", "gram"],
 			},
 			{
 				"op": "replace",
@@ -122,6 +121,6 @@ test_rule_a_200_090_002_28_violation_01 if {
 	)
 	result := rules.rule_a_200_090_002_28 with input as input_data
 		with data.metabolights.validation.v2.controls.assayFileControls as {"__default__": [selected_rule]}
-    
-    count(result) == 1
+
+	count(result) == 1
 }

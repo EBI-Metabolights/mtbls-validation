@@ -681,7 +681,6 @@ check_unit_ontology_source_rule(
 	count(violated_values) > 0
 	ontologies_str := concat(", ", expected_sources)
 
-
 	file_column_header := sprintf("%v (of %v)", [search_header, column_header])
 	desc := sprintf("Rule '%v' - %v", [rule.ruleName, description_suffix])
 	file_column_index := source_ref_column_index + 1
@@ -925,7 +924,6 @@ check_unexpected_value(
 ) := result if {
 	header := table.headers[header_index]
 	header.columnStructure == "ONTOLOGY_COLUMN"
-	
 
 	result := ontology_term_has_unexpected_value(
 		meta,
@@ -962,7 +960,6 @@ check_unexpected_value(
 ) := result if {
 	header := table.headers[header_index]
 	header.columnStructure == "SINGLE_COLUMN"
-	
 
 	result := single_column_has_unexpected_value(
 		meta,
@@ -999,7 +996,6 @@ check_unexpected_value(
 ) := result if {
 	header := table.headers[header_index]
 	header.columnStructure == "SINGLE_COLUMN_AND_UNIT_ONTOLOGY"
-	
 
 	result := unit_value_has_unexpected_value(
 		meta,
@@ -1038,7 +1034,7 @@ ontology_term_has_unexpected_value(
 	search_header := "Term Source REF"
 	header := table.headers[header_index]
 	column_header := header.columnHeader
-	
+
 	control_list := control_lists[control_list_key]
 	selected_controls = [x |
 		some x in control_list
@@ -1213,7 +1209,7 @@ single_column_has_unexpected_value(
 	header := table.headers[header_index]
 	column_header := header.columnHeader
 	control_list := control_lists[control_list_key]
-	
+
 	selected_controls = [x |
 		some x in control_list
 		criteria = x.selectionCriteria

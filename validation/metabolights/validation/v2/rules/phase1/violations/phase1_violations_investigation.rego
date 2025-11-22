@@ -422,7 +422,7 @@ rule_i_100_310_001_01 contains result if {
 }
 
 # METADATA
-# title: Study Design Type is empty
+# title: Study Design Type is empty.
 # description: Study Design Type should be defined.
 # custom:
 #  rule_id: rule_i_100_310_002_01
@@ -695,11 +695,11 @@ rule_i_100_320_006_01 contains result if {
 }
 
 # METADATA
-# title: Study Publication Status Term is empty
+# title: Study Publication Status Term is empty.
 # description: Study Publication Status Term should be defined
 # custom:
 #  rule_id: rule_i_100_320_007_01
-#  type: WARNING
+#  type: ERROR
 #  priority: HIGH
 #  section: investigation.studyPublications
 rule_i_100_320_007_01 contains result if {
@@ -881,11 +881,11 @@ rule_i_100_330_002_01 contains result if {
 }
 
 # METADATA
-# title: Study Factor Type Term Source REF is empty
+# title: Study Factor Type Term Source REF is empty.
 # description: Study Factor Type Term Source REF should be defined.
 # custom:
 #  rule_id: rule_i_100_330_003_01
-#  type: WARNING
+#  type: ERROR
 #  priority: HIGH
 #  section: investigation.studyFactors
 rule_i_100_330_003_01 contains result if {
@@ -1144,11 +1144,11 @@ rule_i_100_340_002_04 contains result if {
 }
 
 # METADATA
-# title: Study Assay Measurement Type is empty
+# title: Study Assay Measurement Type is empty.
 # description: Study Assay Measurement Type should be defined.
 # custom:
 #  rule_id: rule_i_100_340_003_01
-#  type: WARNING
+#  type: ERROR
 #  priority: HIGH
 #  section: investigation.studyAssays
 rule_i_100_340_003_01 contains result if {
@@ -1300,7 +1300,7 @@ rule_i_100_340_003_14 contains result if {
 # description: Study Assay Technology Type should be defined.
 # custom:
 #  rule_id: rule_i_100_340_006_01
-#  type: WARNING
+#  type: ERROR
 #  priority: HIGH
 #  section: investigation.studyAssays
 rule_i_100_340_006_01 contains result if {
@@ -1907,13 +1907,13 @@ rule_i_100_360_007_01 contains result if {
 }
 
 # METADATA
-# title: Study Person Roles length less than 2 characters.
-# description: Study Person Roles should be defined with length equal or greater than 2 characters.
+# title: Study Person Role value is empty.
+# description: Study Person Role should be defined.
 # custom:
 #  rule_id: rule_i_100_360_008_01
-#  type: 
-#  priority: 
-#  section: 
+#  type: WARNING
+#  priority: HIGH
+#  section: investigation.studyContacts
 rule_i_100_360_008_01 contains result if {
 	some study in input.investigation.studies
 	some idx, contact in study.studyContacts.people
@@ -2013,7 +2013,7 @@ rule_i_100_360_008_13 contains result if {
 		}
 		x := 1
 	}
-	
+
 	condition := case_1 | case_2
 	count(condition) > 0
 

@@ -575,7 +575,6 @@ rule_a_200_090_005_01 contains result if {
 		template.version == data.metabolights.validation.v2.rules.phase1.definitions.STUDY_TEMPLATE_VERSION
 		some template_header in template.headers
 		startswith(template_header.columnHeader, "Protocol REF")
-
 	]
 
 	count(template_protocol_headers) > 0

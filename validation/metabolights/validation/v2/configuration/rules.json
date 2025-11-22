@@ -1,7 +1,7 @@
 {
     "rules": {
         "validation_version": "2.1.4",
-        "created_at": "2025-11-22T12:10:24.271750+00:00",
+        "created_at": "2025-11-22T13:23:03.287594+00:00",
         "violations": [
             {
                 "rule_id": "rule___100_100_001_01",
@@ -925,7 +925,7 @@
             },
             {
                 "rule_id": "rule_i_100_310_002_01",
-                "title": "Study Design Type is empty",
+                "title": "Study Design Type is empty.",
                 "description": "Study Design Type should be defined.",
                 "type": "ERROR",
                 "section": "investigation",
@@ -1013,9 +1013,9 @@
             },
             {
                 "rule_id": "rule_i_100_320_007_01",
-                "title": "Study Publication Status Term is empty",
+                "title": "Study Publication Status Term is empty.",
                 "description": "Study Publication Status Term should be defined",
-                "type": "WARNING",
+                "type": "ERROR",
                 "section": "investigation",
                 "priority": "HIGH"
             },
@@ -1069,9 +1069,9 @@
             },
             {
                 "rule_id": "rule_i_100_330_003_01",
-                "title": "Study Factor Type Term Source REF is empty",
+                "title": "Study Factor Type Term Source REF is empty.",
                 "description": "Study Factor Type Term Source REF should be defined.",
-                "type": "WARNING",
+                "type": "ERROR",
                 "section": "investigation",
                 "priority": "HIGH"
             },
@@ -1149,9 +1149,9 @@
             },
             {
                 "rule_id": "rule_i_100_340_003_01",
-                "title": "Study Assay Measurement Type is empty",
+                "title": "Study Assay Measurement Type is empty.",
                 "description": "Study Assay Measurement Type should be defined.",
-                "type": "WARNING",
+                "type": "ERROR",
                 "section": "investigation",
                 "priority": "HIGH"
             },
@@ -1191,7 +1191,7 @@
                 "rule_id": "rule_i_100_340_006_01",
                 "title": "Study Assay Technology Type is empty.",
                 "description": "Study Assay Technology Type should be defined.",
-                "type": "WARNING",
+                "type": "ERROR",
                 "section": "investigation",
                 "priority": "HIGH"
             },
@@ -1365,11 +1365,11 @@
             },
             {
                 "rule_id": "rule_i_100_360_008_01",
-                "title": "Study Person Roles length less than 2 characters.",
-                "description": "Study Person Roles should be defined with length equal or greater than 2 characters.",
-                "type": "INFO",
-                "section": "",
-                "priority": ""
+                "title": "Study Person Role value is empty.",
+                "description": "Study Person Role should be defined.",
+                "type": "WARNING",
+                "section": "investigation",
+                "priority": "HIGH"
             },
             {
                 "rule_id": "rule_i_100_360_008_11",

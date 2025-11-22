@@ -3,8 +3,8 @@
 #########################################################################################################
 package tests.investigation_test
 
-import data.metabolights.validation.v2.rules.phase1.violations as rules
 import data.metabolights.validation.v2.rules.phase1.definitions as def
+import data.metabolights.validation.v2.rules.phase1.violations as rules
 import data.tests.data.inputs.rules as test_rules
 import rego.v1
 
@@ -17,8 +17,6 @@ import rego.v1
 #  priority: HIGH
 #  section: investigation.studyContacts
 rule_i_100_360_008_11_test_cases := 1
-
-
 
 # METADATA
 # title: Study Person Roles Term term is in the control list
@@ -53,10 +51,9 @@ test_rule_i_100_360_008_11_no_violation_01 if {
 		],
 	)
 	result := rules.rule_i_100_360_008_11 with input as input_data
-    	with def.RULE_STUDY_PERSON_ROLES as selected_rule
+		with def.RULE_STUDY_PERSON_ROLES as selected_rule
 	count(result) == 0
 }
-
 
 # METADATA
 # title: Study Person Roles Term term is in the control list
@@ -91,6 +88,6 @@ test_rule_i_100_360_008_11_violation_01 if {
 		],
 	)
 	result := rules.rule_i_100_360_008_11 with input as input_data
-    	with def.RULE_STUDY_PERSON_ROLES as selected_rule
+		with def.RULE_STUDY_PERSON_ROLES as selected_rule
 	count(result) == 1
 }

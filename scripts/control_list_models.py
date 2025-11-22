@@ -70,6 +70,9 @@ class OntologyTerm(StudyBaseModel):
         Field(description="Source reference name of ontology term. e.g., EFO, OBO."),
     ]
 
+    def __str__(self):
+        return f"[{self.term}, {self.term_source_ref}, {self.term_accession_number}]"
+
 
 class OntologyTermPlaceholder(StudyBaseModel):
     term_accession_number: Annotated[
@@ -80,6 +83,9 @@ class OntologyTermPlaceholder(StudyBaseModel):
         str,
         Field(description="Source reference name of placeholder. e.g., MTBLS."),
     ]
+
+    def __str__(self):
+        return f"[{self.term_source_ref}, {self.term_accession_number}]"
 
 
 class FieldSelector(StudyBaseModel):
@@ -149,6 +155,9 @@ class AdditionalSource(StudyBaseModel):
             "e.g., https://www.wikidata.org/wiki/, http://uri.interlex.org/base/ilx_"
         ),
     ]
+
+    def __str__(self):
+        return f"[{self.source_label}, {self.accession_prefix}]"
 
 
 class FieldConstraint(StudyBaseModel):

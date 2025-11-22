@@ -17,7 +17,6 @@ import rego.v1
 #  section: investigation.studyAssays
 rule_i_100_340_006_14_test_cases := 1
 
-
 # METADATA
 # title: <title>.
 # description: <description>.
@@ -35,18 +34,15 @@ test_rule_i_100_340_006_14_violation_01 if {
 	input_01 := data.tests.data.inputs.minimum_01
 	input_data := json.patch(
 		input_01,
-		[
-
-			{
-				"op": "replace",
-				"path": "/investigation/studies/0/studyAssays/assays/0/technologyType",
-				"value": {
-					"term": "",
-					"termAccessionNumber": "http://purl.obolibrary.org/obo/UO_0000009",
-					"termSourceRef": "UOXX",
-				},
+		[{
+			"op": "replace",
+			"path": "/investigation/studies/0/studyAssays/assays/0/technologyType",
+			"value": {
+				"term": "",
+				"termAccessionNumber": "http://purl.obolibrary.org/obo/UO_0000009",
+				"termSourceRef": "UOXX",
 			},
-		],
+		}],
 	)
 	result := rules.rule_i_100_340_006_14 with input as input_data
 

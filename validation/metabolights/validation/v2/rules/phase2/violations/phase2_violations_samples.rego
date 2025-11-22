@@ -457,7 +457,6 @@ rule_s_200_090_005_01 contains result if {
 	default_values = [header.defaultValue |
 		some header in template.headers
 		startswith(header.columnHeader, "Protocol REF")
-
 	]
 
 	default_value = default_values[t]
@@ -570,7 +569,6 @@ rule_s_200_090_007_03 contains result if {
 	}
 
 	enforcement_levels = {"required"}
-
 
 	result := f.check_unexpected_value(
 		rego.metadata.rule(),
@@ -788,7 +786,7 @@ rule_s_200_200_002_01 contains result if {
 
 	non_empty_columns := {sprintf("['%v', column index: %v]", [header.columnHeader, header.columnIndex]) |
 		startswith(header.columnHeader, "Factor Value[")
-		
+
 		vals := {x |
 			some x in input.samples[fileName].table.data[columnName]
 			count(trim_space(x)) > 0

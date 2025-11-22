@@ -43,19 +43,16 @@ test_rule_i_100_320_007_12_no_violation_01 if {
 	)
 	test_rule := json.patch(
 		test_rules.investigation.selected_ontologies_01,
-		[
-			{
-				"op": "replace",
-				"path": "/termEnforcementLevel",
-				"value": "recommended",
-			},
-		],
+		[{
+			"op": "replace",
+			"path": "/termEnforcementLevel",
+			"value": "recommended",
+		}],
 	)
 	result := rules.rule_i_100_320_007_12 with input as input_data
 		with def.RULE_PUBLICATION_STATUS as test_rule
 	count(result) == 0
 }
-
 
 # METADATA
 # title: Study Design Type term is in the control list
@@ -82,19 +79,16 @@ test_rule_i_100_320_007_12_no_violation_02 if {
 	)
 	test_rule := json.patch(
 		test_rules.investigation.select_ontology_term_01,
-		[
-			{
-				"op": "replace",
-				"path": "/termEnforcementLevel",
-				"value": "recommended",
-			},
-		],
+		[{
+			"op": "replace",
+			"path": "/termEnforcementLevel",
+			"value": "recommended",
+		}],
 	)
 	result := rules.rule_i_100_320_007_12 with input as input_data
 		with def.RULE_PUBLICATION_STATUS as test_rule
 	count(result) == 0
 }
-
 
 # METADATA
 # title: Study Design Type term is in the control list
@@ -121,19 +115,16 @@ test_rule_i_100_320_007_12_no_violation_03 if {
 	)
 	test_rule := json.patch(
 		test_rules.investigation.child_ontology_term_01,
-		[
-			{
-				"op": "replace",
-				"path": "/termEnforcementLevel",
-				"value": "recommended",
-			},
-		],
+		[{
+			"op": "replace",
+			"path": "/termEnforcementLevel",
+			"value": "recommended",
+		}],
 	)
 	result := rules.rule_i_100_320_007_12 with input as input_data
 		with def.RULE_PUBLICATION_STATUS as test_rule
 	count(result) == 0
 }
-
 
 # METADATA
 # title: Study Design Type term is in the control list
@@ -160,13 +151,11 @@ test_rule_i_100_320_007_12_no_violation_04 if {
 	)
 	test_rule := json.patch(
 		test_rules.investigation.any_ontology_term_01,
-		[
-			{
-				"op": "replace",
-				"path": "/termEnforcementLevel",
-				"value": "recommended",
-			},
-		],
+		[{
+			"op": "replace",
+			"path": "/termEnforcementLevel",
+			"value": "recommended",
+		}],
 	)
 	result := rules.rule_i_100_320_007_12 with input as input_data
 		with def.RULE_PUBLICATION_STATUS as test_rule
@@ -198,13 +187,11 @@ test_rule_i_100_320_007_12_violation_01 if {
 	)
 	test_rule := json.patch(
 		test_rules.investigation.selected_ontologies_01,
-		[
-			{
-				"op": "replace",
-				"path": "/termEnforcementLevel",
-				"value": "recommended",
-			},
-		],
+		[{
+			"op": "replace",
+			"path": "/termEnforcementLevel",
+			"value": "recommended",
+		}],
 	)
 	result := rules.rule_i_100_320_007_12 with input as input_data
 		with def.RULE_PUBLICATION_STATUS as test_rule
