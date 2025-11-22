@@ -47,8 +47,18 @@ test_rule_i_100_330_003_11_no_violation_01 if {
 			},
 		],
 	)
+	test_rule := json.patch(
+		test_rules.investigation.select_ontology_term_01,
+		[
+			{
+				"op": "replace",
+				"path": "/termEnforcementLevel",
+				"value": "required",
+			},
+		],
+	)
 	result := rules.rule_i_100_330_003_11 with input as input_data
-		with def.RULE_STUDY_FACTOR_TYPE as test_rules.investigation.select_ontology_term_01
+		with def.RULE_STUDY_FACTOR_TYPE as test_rule
 	count(result) == 0
 }
 
@@ -80,8 +90,18 @@ test_rule_i_100_330_003_11_no_violation_02 if {
 			},
 		],
 	)
+	test_rule := json.patch(
+		test_rules.investigation.selected_ontologies_01,
+		[
+			{
+				"op": "replace",
+				"path": "/termEnforcementLevel",
+				"value": "required",
+			},
+		],
+	)
 	result := rules.rule_i_100_330_003_11 with input as input_data
-		with def.RULE_STUDY_FACTOR_TYPE as test_rules.investigation.select_ontology_term_01
+		with def.RULE_STUDY_FACTOR_TYPE as test_rule
 	count(result) == 0
 }
 
@@ -113,8 +133,18 @@ test_rule_i_100_330_003_11_no_violation_03 if {
 			},
 		],
 	)
+	test_rule := json.patch(
+		test_rules.investigation.child_ontology_term_01,
+		[
+			{
+				"op": "replace",
+				"path": "/termEnforcementLevel",
+				"value": "required",
+			},
+		],
+	)
 	result := rules.rule_i_100_330_003_11 with input as input_data
-		with def.RULE_STUDY_FACTOR_TYPE as test_rules.investigation.select_ontology_term_01
+		with def.RULE_STUDY_FACTOR_TYPE as test_rule
 	count(result) == 0
 }
 
@@ -146,43 +176,21 @@ test_rule_i_100_330_003_11_no_violation_04 if {
 			},
 		],
 	)
-	result := rules.rule_i_100_330_003_11 with input as input_data
-		with def.RULE_STUDY_FACTOR_TYPE as test_rules.investigation.select_ontology_term_01
-	count(result) == 0
-}
-
-# METADATA
-# title: Study Factor Type term is in the selected ontologies
-# description: Study Factor Type term is in the selected ontologies
-test_rule_i_100_330_003_11_no_violation_selected_ontologies_01 if {
-	input_01 := data.tests.data.inputs.minimum_01
-	input_data := json.patch(
-		input_01,
+	test_rule := json.patch(
+		test_rules.investigation.any_ontology_term_01,
 		[
 			{
 				"op": "replace",
-				"path": "/investigation/studies/0/studyFactors/factors/0/type",
-				"value": {
-					"term": "Mus musculus",
-					"termAccessionNumber": "http://purl.obolibrary.org/obo/NCBITaxon_10090",
-					"termSourceRef": "NCBITAXON",
-				},
-			},
-			{
-				"op": "replace",
-				"path": "/investigation/studies/0/studyFactors/factors/1/type",
-				"value": {
-					"term": "kilogram",
-					"termAccessionNumber": "http://purl.obolibrary.org/obo/UO_0000009",
-					"termSourceRef": "UO",
-				},
+				"path": "/termEnforcementLevel",
+				"value": "required",
 			},
 		],
 	)
 	result := rules.rule_i_100_330_003_11 with input as input_data
-		with def.RULE_STUDY_FACTOR_TYPE as test_rules.investigation.selected_ontologies_01
+		with def.RULE_STUDY_FACTOR_TYPE as test_rule
 	count(result) == 0
 }
+
 
 # METADATA
 # title: Study Factor Type term is  empty
@@ -207,8 +215,18 @@ test_rule_i_100_330_003_11_violation_01 if {
 			},
 		],
 	)
+	test_rule := json.patch(
+		test_rules.investigation.select_ontology_term_01,
+		[
+			{
+				"op": "replace",
+				"path": "/termEnforcementLevel",
+				"value": "required",
+			},
+		],
+	)
 	result := rules.rule_i_100_330_003_11 with input as input_data
-		with def.RULE_STUDY_FACTOR_TYPE as test_rules.investigation.select_ontology_term_01
+		with def.RULE_STUDY_FACTOR_TYPE as test_rule
 	count(result) == 1
 }
 
@@ -235,8 +253,18 @@ test_rule_i_100_330_003_11_violation_02 if {
 			},
 		],
 	)
+	test_rule := json.patch(
+		test_rules.investigation.child_ontology_term_01,
+		[
+			{
+				"op": "replace",
+				"path": "/termEnforcementLevel",
+				"value": "required",
+			},
+		],
+	)
 	result := rules.rule_i_100_330_003_11 with input as input_data
-		with def.RULE_STUDY_FACTOR_TYPE as test_rules.investigation.select_ontology_term_01
+		with def.RULE_STUDY_FACTOR_TYPE as test_rule
 	count(result) == 1
 }
 
@@ -258,13 +286,23 @@ test_rule_i_100_330_003_11_violation_03 if {
 				"value": {
 					"term": "kilogram",
 					"termAccessionNumber": "",
-					"termSourceRef": "UO",
+					"termSourceRef": "UOX",
 				},
 			},
 		],
 	)
+	test_rule := json.patch(
+		test_rules.investigation.selected_ontologies_01,
+		[
+			{
+				"op": "replace",
+				"path": "/termEnforcementLevel",
+				"value": "required",
+			},
+		],
+	)
 	result := rules.rule_i_100_330_003_11 with input as input_data
-		with def.RULE_STUDY_FACTOR_TYPE as test_rules.investigation.select_ontology_term_01
+		with def.RULE_STUDY_FACTOR_TYPE as test_rule
 	count(result) == 1
 }
 
@@ -286,180 +324,22 @@ test_rule_i_100_330_003_11_violation_04 if {
 				"value": {
 					"term": "microgram",
 					"termAccessionNumber": "http://purl.obolibrary.org/obo/UO_0000023",
-					"termSourceRef": "UO",
-				},
-			},
-		],
-	)
-	result := rules.rule_i_100_330_003_11 with input as input_data
-		with def.RULE_STUDY_FACTOR_TYPE as test_rules.investigation.select_ontology_term_01
-	count(result) == 1
-}
-
-# METADATA
-# title: Study Factor Type term has invalid placeholder value
-# description: Study Factor Type term has invalid placeholder value
-test_rule_i_100_330_003_11_violation_05 if {
-	input_01 := data.tests.data.inputs.minimum_01
-	input_data := json.patch(
-		input_01,
-		[
-			{
-				"op": "remove",
-				"path": "/investigation/studies/0/studyFactors/factors/1",
-			},
-			{
-				"op": "replace",
-				"path": "/investigation/studies/0/studyFactors/factors/0/type",
-				"value": {
-					"term": "Example",
-					"termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS1",
-					"termSourceRef": "MTBLS",
-				},
-			},
-		],
-	)
-	result := rules.rule_i_100_330_003_11 with input as input_data
-		with def.RULE_STUDY_FACTOR_TYPE as test_rules.investigation.select_ontology_term_01
-	count(result) == 1
-}
-
-# METADATA
-# title: Study Factor Type term has an ontology term not in the control list
-# description: Study Factor Type term has an ontology term not in the control list
-test_rule_i_100_330_003_11_violation_06 if {
-	input_01 := data.tests.data.inputs.minimum_01
-	input_data := json.patch(
-		input_01,
-		[
-			{
-				"op": "remove",
-				"path": "/investigation/studies/0/studyFactors/factors/1",
-			},
-			{
-				"op": "replace",
-				"path": "/investigation/studies/0/studyFactors/factors/0/type",
-				"value": {
-					"term": "",
-					"termAccessionNumber": "",
 					"termSourceRef": "",
 				},
 			},
 		],
 	)
-	result := rules.rule_i_100_330_003_11 with input as input_data
-		with def.RULE_STUDY_FACTOR_TYPE as test_rules.investigation.select_ontology_term_01
-	count(result) == 1
-}
-
-# METADATA
-# title: Study Factor Type term is  not in the selected ontologies
-# description: Study Factor Type term is not in the selected ontologies
-test_rule_i_100_330_003_11_violation_selected_ontologies_01 if {
-	input_01 := data.tests.data.inputs.minimum_01
-	input_data := json.patch(
-		input_01,
+	test_rule := json.patch(
+		test_rules.investigation.any_ontology_term_01,
 		[
 			{
-				"op": "remove",
-				"path": "/investigation/studies/0/studyFactors/factors/1",
-			},
-			{
 				"op": "replace",
-				"path": "/investigation/studies/0/studyFactors/factors/0/type",
-				"value": {
-					"term": "Kilogram",
-					"termAccessionNumber": "http://purl.obolibrary.org/obo/NCIT_C28252",
-					"termSourceRef": "NCIT",
-				},
+				"path": "/termEnforcementLevel",
+				"value": "required",
 			},
 		],
 	)
 	result := rules.rule_i_100_330_003_11 with input as input_data
-		with def.RULE_STUDY_FACTOR_TYPE as test_rules.investigation.select_ontology_term_01
-	count(result) == 1
-}
-
-# METADATA
-# title: Study Factor Type term source ref is  empty
-# description: Study Factor Type term  source ref is empty
-test_rule_i_100_330_003_11_violation_selected_ontologies_02 if {
-	input_01 := data.tests.data.inputs.minimum_01
-	input_data := json.patch(
-		input_01,
-		[
-			{
-				"op": "remove",
-				"path": "/investigation/studies/0/studyFactors/factors/1",
-			},
-			{
-				"op": "replace",
-				"path": "/investigation/studies/0/studyFactors/factors/0/type",
-				"value": {
-					"term": "kilogram",
-					"termAccessionNumber": "http://purl.obolibrary.org/obo/UO_0000009",
-					"termSourceRef": "",
-				},
-			},
-		],
-	)
-	result := rules.rule_i_100_330_003_11 with input as input_data
-		with def.RULE_STUDY_FACTOR_TYPE as test_rules.investigation.select_ontology_term_01
-	count(result) == 1
-}
-
-# METADATA
-# title: Study Factor Type term has invalid placeholder value
-# description: Study Factor Type term has invalid placeholder value
-test_rule_i_100_330_003_11_violation_selected_ontologies_03 if {
-	input_01 := data.tests.data.inputs.minimum_01
-	input_data := json.patch(
-		input_01,
-		[
-			{
-				"op": "remove",
-				"path": "/investigation/studies/0/studyFactors/factors/1",
-			},
-			{
-				"op": "replace",
-				"path": "/investigation/studies/0/studyFactors/factors/0/type",
-				"value": {
-					"term": "Example",
-					"termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS1",
-					"termSourceRef": "MTBLS",
-				},
-			},
-		],
-	)
-	result := rules.rule_i_100_330_003_11 with input as input_data
-		with def.RULE_STUDY_FACTOR_TYPE as test_rules.investigation.select_ontology_term_01
-	count(result) == 1
-}
-
-# METADATA
-# title: Study Factor Type term is not a child of the selected ontology terms
-# description: Study Factor Type term is not a child of the selected ontology terms
-test_rule_i_100_330_003_11_violation_child_ontology_01 if {
-	input_01 := data.tests.data.inputs.minimum_01
-	input_data := json.patch(
-		input_01,
-		[
-			{
-				"op": "remove",
-				"path": "/investigation/studies/0/studyFactors/factors/1",
-			},
-			{
-				"op": "replace",
-				"path": "/investigation/studies/0/studyFactors/factors/0/type",
-				"value": {
-					"term": "Mus musculus",
-					"termAccessionNumber": "http://purl.obolibrary.org/obo/NCBITaxon_10090",
-					"termSourceRef": "NCBITAXON",
-				},
-			},
-		],
-	)
-	result := rules.rule_i_100_330_003_11 with input as input_data
-		with def.RULE_STUDY_FACTOR_TYPE as test_rules.investigation.child_ontology_term_01
+		with def.RULE_STUDY_FACTOR_TYPE as test_rule
 	count(result) == 1
 }

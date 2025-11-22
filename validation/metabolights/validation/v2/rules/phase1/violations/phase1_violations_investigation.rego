@@ -1925,7 +1925,7 @@ rule_i_100_360_008_01 contains result if {
 	count(role) > 0
 	count(role.term) == 0
 	source := input.investigationFilePath
-	msg := sprintf("Study contact at % has an empty role (^v. role).", [idx + 1, s_idx + 1])
+	msg := sprintf("Study contact at %v has an empty role definition (%v. role).", [idx + 1, s_idx + 1])
 	result := f.format(rego.metadata.rule(), msg, source)
 }
 
@@ -2016,7 +2016,7 @@ rule_i_100_360_008_13 contains result if {
 		}
 		x := 1
 	}
-
+	
 	condition := case_1 | case_2
 	count(condition) > 0
 
@@ -2027,11 +2027,11 @@ rule_i_100_360_008_13 contains result if {
 		"selected-ontology-term",
 	}
 	enforcement_levels := {"required", "recommended", "optional"}
-
+	print(def1.RULE_DEFAULT_ONTOLOGIES)
 	result := f.check_term_rule_by_enforcement_level(
 		rego.metadata.rule(),
 		input.investigationFilePath,
-		def1.RULE_STUDY_PERSON_ROLES,
+		def1.RULE_DEFAULT_ONTOLOGIES,
 		role,
 		sprintf("Study Contact [%v] Role [%v]", [idx + 1, s_idx + 1]),
 		"Select valid ontologies ",

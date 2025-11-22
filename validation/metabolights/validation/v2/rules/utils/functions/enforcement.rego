@@ -87,7 +87,7 @@ check_term_rule_by_enforcement_level(
 	selected_validation_types,
 	enforcement_levels,
 ) := result if {
-	control.validationType == "selected-ontology-term"
+	control.validationType == "any-ontology-term"
 	control.validationType in selected_validation_types
 	control.termEnforcementLevel in enforcement_levels
 	result := single_ontology_term_source_ref_empty(
@@ -156,7 +156,6 @@ single_ontology_term_source_ref_not_valid(
 		control.validationType in {"any-ontology-term", "ontology-term-in-selected-ontologies"}
 		some x in control.ontologies
 	}
-
 	other_sources := {x.sourceLabel | some x in control.allowedOtherSources}
 	parent_sources := {x.termSourceRef |
 		control.validationType == "child-ontology-term"

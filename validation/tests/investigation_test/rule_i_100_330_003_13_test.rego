@@ -18,19 +18,17 @@ import rego.v1
 #  section: investigation.studyFactors
 rule_i_100_330_003_13_test_cases := 1
 
+
+
 # METADATA
-# title: Study Factor Type term is in the ontology list - RULE_STUDY_FACTOR_TYPE null
-# description: Study Factor Type term is in the ontology list
+# title: Study Factor Type term is in the control list
+# description: There are two study publication. Update both of them
 test_rule_i_100_330_003_13_no_violation_01 if {
 	input_01 := data.tests.data.inputs.minimum_01
 	input_data := json.patch(
 		input_01,
 		[
 			{
-				"op": "remove",
-				"path": "/investigation/studies/0/studyFactors/factors/1",
-			},
-			{
 				"op": "replace",
 				"path": "/investigation/studies/0/studyFactors/factors/0/type",
 				"value": {
@@ -39,75 +37,169 @@ test_rule_i_100_330_003_13_no_violation_01 if {
 					"termSourceRef": "UO",
 				},
 			},
+			{
+				"op": "replace",
+				"path": "/investigation/studies/0/studyFactors/factors/1/type",
+				"value": {
+					"term": "kilogram",
+					"termAccessionNumber": "http://purl.obolibrary.org/obo/UO_0000009",
+					"termSourceRef": "UO",
+				},
+			},
+		],
+	)
+	test_rule := json.patch(
+		test_rules.investigation.select_ontology_term_01,
+		[
+			{
+				"op": "replace",
+				"path": "/termEnforcementLevel",
+				"value": "required",
+			},
 		],
 	)
 	result := rules.rule_i_100_330_003_13 with input as input_data
 		with def.RULE_STUDY_FACTOR_TYPE as null
-		with def.RULE_DEFAULT_ONTOLOGIES as test_rules.investigation.any_ontology_term_01
+		with def.RULE_DEFAULT_ONTOLOGIES as test_rule
 	count(result) == 0
 }
 
 # METADATA
-# title: Study Factor Type term is in the ontology list
-# description: RULE_STUDY_FACTOR_TYPE empty dict
+# title: Study Factor Type term is wikidata input
+# description: Study Factor Type term is wikidata input
 test_rule_i_100_330_003_13_no_violation_02 if {
 	input_01 := data.tests.data.inputs.minimum_01
 	input_data := json.patch(
 		input_01,
 		[
 			{
-				"op": "remove",
-				"path": "/investigation/studies/0/studyFactors/factors/1",
+				"op": "replace",
+				"path": "/investigation/studies/0/studyFactors/factors/0/type",
+				"value": {
+					"term": "kilogram",
+					"termAccessionNumber": "https://www.wikidata.org/wiki/Q11570",
+					"termSourceRef": "wikidata",
+				},
 			},
 			{
 				"op": "replace",
-				"path": "/investigation/studies/0/studyFactors/factors/0/type",
-				"value": [{
+				"path": "/investigation/studies/0/studyFactors/factors/1/type",
+				"value": {
 					"term": "kilogram",
-					"termAccessionNumber": "http://purl.obolibrary.org/obo/UO_0000009",
-					"termSourceRef": "UO",
-				}],
+					"termAccessionNumber": "http://uri.interlex.org/base/ilx_12233",
+					"termSourceRef": "ILX",
+				},
+			},
+		],
+	)
+	test_rule := json.patch(
+		test_rules.investigation.selected_ontologies_01,
+		[
+			{
+				"op": "replace",
+				"path": "/termEnforcementLevel",
+				"value": "required",
 			},
 		],
 	)
 	result := rules.rule_i_100_330_003_13 with input as input_data
-		with def.RULE_STUDY_FACTOR_TYPE as {}
-		with def.RULE_DEFAULT_ONTOLOGIES as test_rules.investigation.any_ontology_term_01
+		with def.RULE_STUDY_FACTOR_TYPE as null
+		with def.RULE_DEFAULT_ONTOLOGIES as test_rule
 	count(result) == 0
 }
 
 # METADATA
-# title: Study Factor Type term is in the ontology list
-# description:  RULE_STUDY_FACTOR_TYPE  is 'check-only-constraints' type
+# title: Study Factor Type term has missing data input value
+# description: Study Factor Type term has missing data input value
 test_rule_i_100_330_003_13_no_violation_03 if {
 	input_01 := data.tests.data.inputs.minimum_01
 	input_data := json.patch(
 		input_01,
 		[
 			{
-				"op": "remove",
-				"path": "/investigation/studies/0/studyFactors/factors/1",
-			},
-			{
 				"op": "replace",
 				"path": "/investigation/studies/0/studyFactors/factors/0/type",
 				"value": {
+					"term": "Not Applicable",
+					"termAccessionNumber": "http://purl.obolibrary.org/obo/NCIT_C48660",
+					"termSourceRef": "NCIT",
+				},
+			},
+			{
+				"op": "replace",
+				"path": "/investigation/studies/0/studyFactors/factors/1/type",
+				"value": {
 					"term": "kilogram",
-					"termAccessionNumber": "http://purl.obolibrary.org/obo/UO_0000009",
-					"termSourceRef": "UO",
+					"termAccessionNumber": "http://uri.interlex.org/base/ilx_12233",
+					"termSourceRef": "ILX",
 				},
 			},
 		],
 	)
+	test_rule := json.patch(
+		test_rules.investigation.child_ontology_term_01,
+		[
+			{
+				"op": "replace",
+				"path": "/termEnforcementLevel",
+				"value": "required",
+			},
+		],
+	)
 	result := rules.rule_i_100_330_003_13 with input as input_data
-		with def.RULE_STUDY_FACTOR_TYPE as {"validationType": "check-only-constraints"}
-		with def.RULE_DEFAULT_ONTOLOGIES as test_rules.investigation.any_ontology_term_01
+		with def.RULE_STUDY_FACTOR_TYPE as null
+		with def.RULE_DEFAULT_ONTOLOGIES as test_rule
 	count(result) == 0
 }
 
 # METADATA
-# title: Study Factor Type term is not in the ontology list
-# description: RULE_STUDY_FACTOR_TYPE null
+# title: Study Factor Type term has placeholder value
+# description: Study Factor Type term has placeholder value
+test_rule_i_100_330_003_13_no_violation_04 if {
+	input_01 := data.tests.data.inputs.minimum_01
+	input_data := json.patch(
+		input_01,
+		[
+			{
+				"op": "replace",
+				"path": "/investigation/studies/0/studyFactors/factors/0/type",
+				"value": {
+					"term": "Example",
+					"termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/placeholder",
+					"termSourceRef": "MTBLS",
+				},
+			},
+			{
+				"op": "replace",
+				"path": "/investigation/studies/0/studyFactors/factors/1/type",
+				"value": {
+					"term": "kilogram",
+					"termAccessionNumber": "http://uri.interlex.org/base/ilx_12233",
+					"termSourceRef": "ILX",
+				},
+			},
+		],
+	)
+	test_rule := json.patch(
+		test_rules.investigation.any_ontology_term_01,
+		[
+			{
+				"op": "replace",
+				"path": "/termEnforcementLevel",
+				"value": "required",
+			},
+		],
+	)
+	result := rules.rule_i_100_330_003_13 with input as input_data
+		with def.RULE_STUDY_FACTOR_TYPE as null
+		with def.RULE_DEFAULT_ONTOLOGIES as test_rule
+	count(result) == 0
+}
+
+
+# METADATA
+# title: Study Factor Type term is  empty
+# description: Study Factor Type term is empty
 test_rule_i_100_330_003_13_violation_01 if {
 	input_01 := data.tests.data.inputs.minimum_01
 	input_data := json.patch(
@@ -121,22 +213,32 @@ test_rule_i_100_330_003_13_violation_01 if {
 				"op": "replace",
 				"path": "/investigation/studies/0/studyFactors/factors/0/type",
 				"value": {
-					"term": "kilogram",
+					"term": "",
 					"termAccessionNumber": "http://purl.obolibrary.org/obo/UO_0000009",
-					"termSourceRef": "UOX",
+					"termSourceRef": "UO",
 				},
+			},
+		],
+	)
+	test_rule := json.patch(
+		test_rules.investigation.select_ontology_term_01,
+		[
+			{
+				"op": "replace",
+				"path": "/termEnforcementLevel",
+				"value": "required",
 			},
 		],
 	)
 	result := rules.rule_i_100_330_003_13 with input as input_data
 		with def.RULE_STUDY_FACTOR_TYPE as null
-		with def.RULE_DEFAULT_ONTOLOGIES as test_rules.investigation.any_ontology_term_01
+		with def.RULE_DEFAULT_ONTOLOGIES as test_rule
 	count(result) == 1
 }
 
 # METADATA
-# title: Study Factor Type term is not in the ontology list
-# description: RULE_STUDY_FACTOR_TYPE empty dict
+# title: Study Factor Type term source ref is  empty
+# description: Study Factor Type term  source ref is empty
 test_rule_i_100_330_003_13_violation_02 if {
 	input_01 := data.tests.data.inputs.minimum_01
 	input_data := json.patch(
@@ -152,20 +254,30 @@ test_rule_i_100_330_003_13_violation_02 if {
 				"value": {
 					"term": "kilogram",
 					"termAccessionNumber": "http://purl.obolibrary.org/obo/UO_0000009",
-					"termSourceRef": "UOX",
+					"termSourceRef": "",
 				},
 			},
 		],
 	)
+	test_rule := json.patch(
+		test_rules.investigation.child_ontology_term_01,
+		[
+			{
+				"op": "replace",
+				"path": "/termEnforcementLevel",
+				"value": "required",
+			},
+		],
+	)
 	result := rules.rule_i_100_330_003_13 with input as input_data
-		with def.RULE_STUDY_FACTOR_TYPE as {}
-		with def.RULE_DEFAULT_ONTOLOGIES as test_rules.investigation.any_ontology_term_01
+		with def.RULE_STUDY_FACTOR_TYPE as null
+		with def.RULE_DEFAULT_ONTOLOGIES as test_rule
 	count(result) == 1
 }
 
 # METADATA
-# title: Study Factor Type term is not in the ontology list
-# description:  RULE_STUDY_FACTOR_TYPE  is 'check-only-constraints' type
+# title: Study Factor Type term accession is  empty
+# description: Study Factor Type term accession is empty
 test_rule_i_100_330_003_13_violation_03 if {
 	input_01 := data.tests.data.inputs.minimum_01
 	input_data := json.patch(
@@ -180,14 +292,74 @@ test_rule_i_100_330_003_13_violation_03 if {
 				"path": "/investigation/studies/0/studyFactors/factors/0/type",
 				"value": {
 					"term": "kilogram",
-					"termAccessionNumber": "http://purl.obolibrary.org/obo/UO_0000009",
+					"termAccessionNumber": "",
 					"termSourceRef": "UOX",
 				},
 			},
 		],
 	)
+	test_rule := json.patch(
+		test_rules.investigation.selected_ontologies_01,
+		[
+			{
+				"op": "replace",
+				"path": "/termEnforcementLevel",
+				"value": "required",
+			},
+		],
+	)
 	result := rules.rule_i_100_330_003_13 with input as input_data
-		with def.RULE_STUDY_FACTOR_TYPE as {"validationType": "check-only-constraints"}
-		with def.RULE_DEFAULT_ONTOLOGIES as test_rules.investigation.any_ontology_term_01
+		with def.RULE_STUDY_FACTOR_TYPE as {}
+		with def.RULE_DEFAULT_ONTOLOGIES as test_rule
 	count(result) == 1
 }
+
+# METADATA
+# title: Study Factor Type term is not in the control list
+# description: Study Factor Type term is not in the control list
+test_rule_i_100_330_003_13_violation_04 if {
+	input_01 := data.tests.data.inputs.minimum_01
+	input_data := json.patch(
+		input_01,
+		[
+			{
+				"op": "remove",
+				"path": "/investigation/studies/0/studyFactors/factors/1",
+			},
+			{
+				"op": "replace",
+				"path": "/investigation/studies/0/studyFactors/factors/0/type",
+				"value": {
+					"term": "microgram",
+					"termAccessionNumber": "http://purl.obolibrary.org/obo/UO_0000023",
+					"termSourceRef": "",
+				},
+			},
+		],
+	)
+	test_rule := json.patch(
+		test_rules.investigation.any_ontology_term_01,
+		[
+			{
+				"op": "replace",
+				"path": "/termEnforcementLevel",
+				"value": "required",
+			},
+		],
+	)
+	result := rules.rule_i_100_330_003_13 with input as input_data
+		with def.RULE_STUDY_FACTOR_TYPE as  {"validationType": "check-only-constraints"}
+		with def.RULE_DEFAULT_ONTOLOGIES as test_rule
+	count(result) == 1
+}
+
+
+
+
+
+
+
+
+
+
+
