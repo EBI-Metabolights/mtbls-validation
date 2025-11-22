@@ -13,8 +13,8 @@
                 "isaFileTemplateNameFilter": null,
                 "linkedFieldAndValueFilter": null
             },
-            "termEnforcementLevel": "required",
-            "unexpectedTermEnforcementLevel": "required",
+            "termEnforcementLevel": "recommended",
+            "unexpectedTermEnforcementLevel": "recommended",
             "validationType": "child-ontology-term",
             "constraints": {},
             "defaultValue": {

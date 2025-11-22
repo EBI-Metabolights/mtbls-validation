@@ -14,82 +14,12 @@
                 "linkedFieldAndValueFilter": null
             },
             "termEnforcementLevel": "recommended",
-            "unexpectedTermEnforcementLevel": "required",
-            "validationType": "any-ontology-term",
+            "unexpectedTermEnforcementLevel": "recommended",
+            "validationType": "ontology-term-in-selected-ontologies",
             "constraints": {},
             "defaultValue": null,
             "allowedMissingOntologyTerms": [],
             "allowedOtherSources": [
-                {
-                    "sourceLabel": "wikidata",
-                    "accessionPrefix": "https://www.wikidata.org/wiki/"
-                },
-                {
-                    "sourceLabel": "ILX",
-                    "accessionPrefix": "http://uri.interlex.org/base/ilx_"
-                }
-            ],
-            "allowedPlaceholders": [
-                {
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/placeholder",
-                    "termSourceRef": "MTBLS"
-                }
-            ],
-            "terms": [],
-            "ontologies": [
-                "OBI",
-                "EFO",
-                "CHMO",
-                "NCIT",
-                "NCBITAXON",
-                "MS",
-                "BTO",
-                "CHEBI",
-                "UO",
-                "MESH",
-                "BAO",
-                "OMIT",
-                "GO",
-                "ENVO",
-                "MSIO",
-                "PO",
-                "MONDO",
-                "UBERON",
-                "SNOMED",
-                "CL",
-                "CLO",
-                "MI",
-                "EDAM",
-                "HP",
-                "MP"
-            ],
-            "allowedParentOntologyTerms": null,
-            "unexpectedTerms": []
-        },
-        {
-            "ruleName": "default-sample-characteristic-rule-02",
-            "description": "default",
-            "fieldName": "",
-            "selectionCriteria": {
-                "isaFileType": "sample",
-                "studyCreatedAtOrAfter": null,
-                "studyCreatedBefore": null,
-                "studyCategoryFilter": null,
-                "templateVersionFilter": null,
-                "isaFileTemplateNameFilter": null,
-                "linkedFieldAndValueFilter": null
-            },
-            "termEnforcementLevel": "required",
-            "unexpectedTermEnforcementLevel": "required",
-            "validationType": "any-ontology-term",
-            "constraints": {},
-            "defaultValue": null,
-            "allowedMissingOntologyTerms": [],
-            "allowedOtherSources": [
-                {
-                    "sourceLabel": "MTBLS",
-                    "accessionPrefix": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_"
-                },
                 {
                     "sourceLabel": "wikidata",
                     "accessionPrefix": "https://www.wikidata.org/wiki/"

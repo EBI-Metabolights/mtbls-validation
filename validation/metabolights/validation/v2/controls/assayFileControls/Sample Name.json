@@ -14,13 +14,13 @@
                 "linkedFieldAndValueFilter": null
             },
             "termEnforcementLevel": "not-applicable",
-            "unexpectedTermEnforcementLevel": "required",
+            "unexpectedTermEnforcementLevel": "not-applicable",
             "validationType": "check-only-constraints",
             "constraints": {
                 "pattern": {
                     "constraint": "^[a-zA-Z0-9][a-zA-Z0-9-_ ]+[a-zA-Z0-9]$",
                     "errorMessage": "Value must be at least 3 characters and contain only alphanumeric characters, space, - and _ characters",
-                    "enforcementLevel": "required"
+                    "enforcementLevel": "recommended"
                 }
             },
             "defaultValue": null,

@@ -8,7 +8,7 @@
                 "isaFileType": "sample",
                 "studyCreatedAtOrAfter": null,
                 "studyCreatedBefore": null,
-                "studyCategoryFilter": null,
+                "studyCategoryFilter": ["ms-mhd-enabled"],
                 "templateVersionFilter": null,
                 "isaFileTemplateNameFilter": null,
                 "linkedFieldAndValueFilter": [
@@ -133,9 +133,9 @@
                     }
                 ]
             },
-            "termEnforcementLevel": "required",
+            "termEnforcementLevel": "recommended",
             "unexpectedTermEnforcementLevel": "required",
-            "validationType": "any-ontology-term",
+            "validationType": "ontology-term-in-selected-ontologies",
             "constraints": {},
             "defaultValue": null,
             "allowedMissingOntologyTerms": [],
