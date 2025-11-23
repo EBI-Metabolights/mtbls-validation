@@ -89,3 +89,4 @@
 | 85 | rule_i_100_360_011_05 | ERROR | Study Person Additional Email Address is not valid\. | Study Person Additional Email Address must have valid format\. |
 | 86 | rule_i_100_360_011_06 | WARNING | Study Person ORCID is not defined for principal investigator\. | Study Person ORCID is not defined for principal investigator\. |
 | 87 | rule_i_100_360_011_07 | WARNING | Study Person Affiliation ROR ID is not defined for principal investigator\. | Study Person Affiliation ROR ID is not defined for principal investigator\. |
+| 88 | rule_i_200_900_001_01 | WARNING | Ontology term is not validated on Ontology Search Service \(e\.g\. OLS\)\. | Ensure ontology term is valid\. |

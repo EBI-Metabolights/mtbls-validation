@@ -1,6 +1,6 @@
 {
     "validation_version": "2.2.0",
-    "created_at": "2025-11-23T17:02:26.117929+00:00",
+    "created_at": "2025-11-23T22:59:40.669614+00:00",
     "violations": [
         {
             "rule_id": "rule___100_100_001_01",
@@ -681,6 +681,14 @@
             "type": "WARNING",
             "section": "assays",
             "priority": "CRITICAL"
+        },
+        {
+            "rule_id": "rule_a_200_900_001_01",
+            "title": "Ontology terms are not validated on Ontology Search Service \\(e\\.g\\. OLS\\)\\.",
+            "description": "Ensure ontology terms are valid\\.",
+            "type": "WARNING",
+            "section": "assay",
+            "priority": "HIGH"
         },
         {
             "rule_id": "rule_f_400_090_001_01",
@@ -1467,6 +1475,14 @@
             "priority": "WARNING"
         },
         {
+            "rule_id": "rule_i_200_900_001_01",
+            "title": "Ontology term is not validated on Ontology Search Service \\(e\\.g\\. OLS\\)\\.",
+            "description": "Ensure ontology term is valid\\.",
+            "type": "WARNING",
+            "section": "investigation",
+            "priority": "HIGH"
+        },
+        {
             "rule_id": "rule_m_100_100_001_01",
             "title": "Default columns not in metabolite assignment file\\.",
             "description": "Default columns must exist in metabolite assignment file\\.",
@@ -2001,9 +2017,25 @@
             "type": "ERROR",
             "section": "samples",
             "priority": "HIGH"
+        },
+        {
+            "rule_id": "rule_s_200_900_001_01",
+            "title": "Ontology terms are not validated on Ontology Search Service \\(e\\.g\\. OLS\\)\\.",
+            "description": "Ensure ontology terms are valid\\.",
+            "type": "WARNING",
+            "section": "samples",
+            "priority": "HIGH"
         }
     ],
     "summary": [
+        {
+            "rule_id": "",
+            "title": "",
+            "description": "",
+            "type": "INFO",
+            "section": "",
+            "priority": ""
+        },
         {
             "rule_id": "rule___100_000",
             "title": "Input schema validation summary\\.",

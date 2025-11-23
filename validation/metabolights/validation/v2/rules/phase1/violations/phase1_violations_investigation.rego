@@ -2350,3 +2350,122 @@ rule_i_100_360_011_07 contains result if {
 	source := input.investigationFilePath
 	result := f.format(rego.metadata.rule(), msg, source)
 }
+
+investigation_ontologies := ontology_set if {
+	measurement_types := {{
+		"key": "Study Assay Measurement Type",
+		"name": assay.fileName,
+		"value": sprintf("[%v, %v, %v]", [onto.term, onto.termSourceRef, onto.termAccessionNumber]),
+	} |
+		some study in input.investigation.studies
+
+		some assay in study.studyAssays.assays
+
+		onto := assay.measurementType
+		count(onto.term) > 0
+		count(onto.termSourceRef) > 0
+		count(onto.termAccessionNumber) > 0
+	}
+	technology_types := {{
+		"key": "Study Assay Technology Type",
+		"name": assay.fileName,
+		"value": sprintf("[%v, %v, %v]", [onto.term, onto.termSourceRef, onto.termAccessionNumber]),
+	} |
+		some study in input.investigation.studies
+
+		some assay in study.studyAssays.assays
+
+		onto := assay.technologyType
+		count(onto.term) > 0
+		count(onto.termSourceRef) > 0
+		count(onto.termAccessionNumber) > 0
+	}
+	design_descriptors := {{
+		"key": "Study Design Type",
+		"name": study.title,
+		"value": sprintf("[%v, %v, %v]", [onto.term, onto.termSourceRef, onto.termAccessionNumber]),
+	} |
+		some study in input.investigation.studies
+
+		some onto in study.studyDesignDescriptors.designTypes
+
+		count(onto.term) > 0
+		count(onto.termSourceRef) > 0
+		count(onto.termAccessionNumber) > 0
+	}
+	study_factors := {{
+		"key": "Study Factor Type",
+		"name": factor.name,
+		"value": sprintf("[%v, %v, %v]", [onto.term, onto.termSourceRef, onto.termAccessionNumber]),
+	} |
+		some study in input.investigation.studies
+
+		some factor in study.studyFactors.factors
+		onto := factor.type
+		count(onto.term) > 0
+		count(onto.termSourceRef) > 0
+		count(onto.termAccessionNumber) > 0
+	}
+	study_publications := {{
+		"key": "Study Publication Status",
+		"name": publication.title,
+		"value": sprintf("[%v, %v, %v]", [onto.term, onto.termSourceRef, onto.termAccessionNumber]),
+	} |
+		some study in input.investigation.studies
+
+		some publication in study.studyPublications.publications
+		onto := publication.status
+		count(onto.term) > 0
+		count(onto.termSourceRef) > 0
+		count(onto.termAccessionNumber) > 0
+	}
+	contact_roles := {{
+		"key": "Study Contact Roles",
+		"name": contact.email,
+		"value": sprintf("[%v, %v, %v]", [onto.term, onto.termSourceRef, onto.termAccessionNumber]),
+	} |
+		some study in input.investigation.studies
+
+		some contact in study.studyContacts.people
+		some onto in contact.roles
+
+		count(onto.term) > 0
+		count(onto.termSourceRef) > 0
+		count(onto.termAccessionNumber) > 0
+	}
+	ontology_set := ((((measurement_types | technology_types) | study_publications) | contact_roles) | design_descriptors) | study_factors
+
+	count(ontology_set) > 0
+}
+
+# METADATA
+# title: Ontology term is not validated on Ontology Search Service (e.g. OLS).
+# description: Ensure ontology term is valid.
+# custom:
+#  rule_id: rule_i_200_900_001_01
+#  type: WARNING
+#  priority: HIGH
+#  section: investigation.general
+rule_i_200_900_001_01 contains result if {
+	some ontology in investigation_ontologies
+
+	source := input.investigationFilePath
+	meta := rego.metadata.rule()
+	msg := sprintf("%v ontology term defined for '%v' is not validated on ontology search services: %v", [ontology.key, ontology.name, ontology.value])
+	str_value := sprintf("%v: %v", [ontology.key, ontology.value])
+	result := {
+		"identifier": meta.custom.rule_id,
+		"title": meta.title,
+		"description": meta.description,
+		"type": meta.custom.type,
+		"priority": meta.custom.priority,
+		"section": meta.custom.section,
+		"sourceFile": source,
+		"sourceColumnIndex": "",
+		"sourceColumnHeader": "",
+		"values": [str_value],
+		"hasMoreViolations": false,
+		"totalViolations": 1,
+		"violation": msg,
+	}
+}

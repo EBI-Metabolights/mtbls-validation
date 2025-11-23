@@ -1,55 +1,59 @@
-## METABOLIGHTS VALIDATION FRAMEWORK
+# METABOLIGHTS VALIDATION FRAMEWORK
 
-MetaboLights validation framework is dynamic and based on [Open Policy Agent](https://www.openpolicyagent.org/) 
+MetaboLights validation framework is dynamic and based on [Open Policy Agent](https://www.openpolicyagent.org/)
 
-### Validation Rules and Default Metadata File Structure
+You can find details on [MetaboLights Validation Framework Documentation](https://ebi-metabolights.github.io/mtbls-validation)
 
-| #  | SECTION | FILE TEMPLATES | VALIDATION RULES | DEFAULT FILE COLUMNS | PRIORITISED CONTROL LISTS|
-|----|---------|----------------|------------------|----------------------|--------------------------|
-| 1  | ALL | | [Validation Rules](docs/MetaboLightsRules.md) | - | - |
-| 2  | INVESTIGATION FILE (i_Investigation.txt) |[i_Investigation.txt](docs/templates/investigation-file/i_Investigation.txt) | [Validation Rules](docs/validation-rules/investigation-validation-rules.md) | - | [Prioritised Control Lists](docs/prioritised-control-lists/investigation-file-control-lists/investigation-file.md) |
-| 3  | SAMPLE FILE (s_REQxxx.txt or s_MTBLSxxx.txt) | [s_REQXXX.txt](docs/templates/sample-file/s_template.txt) | [Validation Rules](docs/validation-rules/sample-validation-rules.md) |[Default Sample File](docs/file-structures/sample-file-structure/2.0/sample-file.md) | [Characteristics & Factors](docs/prioritised-control-lists/sample-file-control-lists/sample-file.md), [Units](docs/prioritised-control-lists/unit-columns-control-lists/unit-columns.md) |
-| 4  | ASSAY FILE (a_REQxxx.txt or a_MTBLSxxx.txt) | [LC-MS](docs/templates/assay-file/a_template_LC-MS-2.0-metabolite_profiling.txt), [GC-MS](docs/templates/assay-file/a_template_GC-MS-2.0-metabolite_profiling.txt), [GCxGC-MS](docs/templates/assay-file/a_template_GCxGC-2.0-metabolite_profiling.txt), [DI-MS](docs/templates/assay-file/a_template_DI-MS-2.0-metabolite_profiling.txt), [FIA-MS](docs/templates/assay-file/a_template_FIA-MS-2.0-metabolite_profiling.txt), [LC-DAD](docs/templates/assay-file/a_template_LC-DAD-2.0-metabolite_profiling.txt), [CE-MS](docs/templates/assay-file/a_template_CE-MS-2.0-metabolite_profiling.txt), [MS Imaging](docs/templates/assay-file/a_template_MSImaging-2.0-metabolite_profiling.txt), [GC-FID](docs/templates/assay-file/a_template_GC-FID-2.0-metabolite_profiling.txt), [MALDI-MS](docs/templates/assay-file/a_template_MALDI-MS-2.0-metabolite_profiling.txt), [MS](docs/templates/assay-file/a_template_MS-2.0-metabolite_profiling.txt), [NMR](docs/templates/assay-file/a_template_NMR-2.0-metabolite_profiling.txt), [MR Imaging](docs/templates/assay-file/a_template_MRImaging-2.0-metabolite_profiling.txt) | [Validation Rules](docs/validation-rules/assay-validation-rules.md) | [LC-MS](docs/file-structures/assay-file-structure/2.0/lc-ms.md), [GC-MS](docs/file-structures/assay-file-structure/2.0/gc-ms.md), [GCxGC-MS](docs/file-structures/assay-file-structure/2.0/gcxgc-ms.md), [DI-MS](docs/file-structures/assay-file-structure/2.0/di-ms.md), [FIA-MS](docs/file-structures/assay-file-structure/2.0/fia-ms.md), [LC-DAD](docs/file-structures/assay-file-structure/2.0/lc-dad.md), [CE-MS](docs/file-structures/assay-file-structure/2.0/ce-ms.md), [MS Imaging](docs/file-structures/assay-file-structure/2.0/msimaging.md), [GC-FID](docs/file-structures/assay-file-structure/2.0/gc-fid.md), [MALDI-MS](docs/file-structures/assay-file-structure/2.0/maldi-ms.md), [MS](docs/file-structures/assay-file-structure/2.0/ms.md), [NMR](docs/file-structures/assay-file-structure/2.0/nmr.md), [MR Imaging](docs/file-structures/assay-file-structure/2.0/mrimaging.md) | [LC-MS](docs/prioritised-control-lists/assay-file-control-lists/lc-ms.md), [GC-MS](docs/prioritised-control-lists/assay-file-control-lists/gc-ms.md), [FIA-MS](docs/prioritised-control-lists/assay-file-control-lists/fia-ms.md), [DI-MS](docs/prioritised-control-lists/assay-file-control-lists/di-ms.md), [GCxGC-MS](docs/prioritised-control-lists/assay-file-control-lists/gcxgc-ms.md), [MALDI-MS](docs/prioritised-control-lists/assay-file-control-lists/maldi-ms.md), [MSImaging](docs/prioritised-control-lists/assay-file-control-lists/msimaging.md), [NMR](docs/prioritised-control-lists/assay-file-control-lists/nmr.md), [Units](docs/prioritised-control-lists/unit-columns-control-lists/unit-columns.md) |
-| 5  | MAF FILE (m_REQxxx.tsv or a_MTBLSxxx.tsv) | [MAF file for MS Assays](docs/templates/maf-file/m_template_MS_metabolite_profiling_v2_maf.tsv), [MAF file for NMR Assays](docs/templates/maf-file/m_template_NMR_metabolite_profiling_v2_maf.tsv) | [Validation Rules](docs/validation-rules/metabolite-validation-rules.md) | [MAF File for MS Assays](docs/file-structures/maf-file-structure/2.0/ms.md), [MAF File for NMR Assays](docs/file-structures/maf-file-structure/2.0/nmr.md) |  | 
-| 6  | DATA FILES | | [Validation Rules](docs/validation-rules/file-validation-rules.md) | | |
+Download the latest MetaboLights Validation OPA bundle [as tar.gz](https://ebi-metabolights.github.io/mtbls-validation/bundle.tar.gz)
 
+Download the latest validation rules  [as JSON](https://ebi-metabolights.github.io/mtbls-validation/json/all_rules.json)
 
-## Validate your study on local
-Step 1:  Download opa executable from [here](https://www.openpolicyagent.org/docs/latest/#running-opa) 
+Download the latest Controls [as JSON](https://ebi-metabolights.github.io/mtbls-validation/json/all_controls.json)
 
-Step 2: Create Validation Rule bundle
-```
+Download the latest Templates [as JSON](https://ebi-metabolights.github.io/mtbls-validation/json/all_templates.json)
+
+## Validate Your Study on Local
+
+Step 1:  Download requirements:
+
+* OPA executable from [OPA Download Page](https://www.openpolicyagent.org/docs/latest/#running-opa)
+* metabolights validation opa bundle from [MetaboLights Validation Framework Documentation Page](https://ebi-metabolights.github.io/mtbls-validation/bundle.tar.gz)
+* (Optional) Test Data from [Github mtbls-validation repository](https://github.com/EBI-Metabolights/mtbls-validation)
+
+```bash
 opa version
 
-git pull https://github.com/EBI-Metabolights/mtbls-validation.git
-cd validation
-rm -f bundle.tar.gz
-opa test . -v
-opa build  --ignore tests --ignore input.json .
-mv bundle.tar.gz ..
-cd ..
+git clone https://github.com/EBI-Metabolights/mtbls-validation
+cd mtbls-validation
+
 ```
 
-Step 3: Install metabolights-utils (>1.4.0)
-```
+Step 2: Install metabolights-utils (>1.4.12)
+
+```bash
 pip install --upgrade metabolights-utils --no-cache
-# test mtbls commandline tool
+# test mtbls command line tool
 mtbls --version
 ```
 
-Step 4: Create metabolights json data model (input of validation) from local storage
-```
+Step 3: Create metabolights json data model (input of validation) from local storage
+
+```bash
 # First argument is path of study folder, second argument is path of output file
+# NOTE: data files must be stored on FILES subfolder
 mtbls model create tests/test-data/MTBLS1 -o ./MTBLS1.json
 ```
 
-Step 5: Run validation:
-```
-# update input json file
-opa eval --data bundle.tar.gz 'data.metabolights.validation.v2.report.complete_report.violations' -i ./MTBLS1.json
+Step 4: Run validation:
+
+```bash
+
+# validate input json file
+# 
+opa eval --data docs/bundle.tar.gz 'data.metabolights.validation.v2.report.complete_report.violations' -i ./MTBLS1.json
 ```
 
-## Open Policy Agent Deployment 
+## Open Policy Agent Deployment
 
 ### Development with vscode
 

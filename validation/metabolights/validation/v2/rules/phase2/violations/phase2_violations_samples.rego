@@ -824,3 +824,15 @@ rule_s_200_200_002_02 contains result if {
 
 	result := f.format_with_values(rego.metadata.rule(), file_name, header.columnIndex + 1, header.columnHeader, violated_values)
 }
+
+# METADATA
+# title: Ontology terms are not validated on Ontology Search Service (e.g. OLS).
+# description: Ensure ontology terms are valid.
+# custom:
+#  rule_id: rule_s_200_900_001_01
+#  type: WARNING
+#  priority: HIGH
+#  section: samples.general
+rule_s_200_900_001_01 contains result if {
+	result := f.get_table_ontologies(rego.metadata.rule(), input.samples)
+}

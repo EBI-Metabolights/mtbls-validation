@@ -1014,3 +1014,15 @@ rule_a_200_600_001_01 contains result if {
 	desc := sprintf("column type in filename does not match with the value '%v' in column Parameter Value[Column type]", [column_type_label])
 	result := f.format_with_file_description_and_values(rego.metadata.rule(), file_name, desc, column_types)
 }
+
+# METADATA
+# title: Ontology terms are not validated on Ontology Search Service (e.g. OLS).
+# description: Ensure ontology terms are valid.
+# custom:
+#  rule_id: rule_a_200_900_001_01
+#  type: WARNING
+#  priority: HIGH
+#  section: assay.general
+rule_a_200_900_001_01 contains result if {
+	result := f.get_table_ontologies(rego.metadata.rule(), input.samples)
+}

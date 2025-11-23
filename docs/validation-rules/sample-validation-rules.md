@@ -57,3 +57,4 @@
 | 53 | rule_s_200_200_001_02 | ERROR | Values for Sample Name column not in any assay file\. | Each sample name should be referenced at least one time in assay files\. |
 | 54 | rule_s_200_200_002_01 | WARNING | There are empty values in Factor Value column\. | Factor values should be defined for each row\. |
 | 55 | rule_s_200_200_002_02 | ERROR | Factor Value column not complete\. | At least two values must be defined in Factor Value column\. |
+| 56 | rule_s_200_900_001_01 | WARNING | Ontology terms are not validated on Ontology Search Service \(e\.g\. OLS\)\. | Ensure ontology terms are valid\. |
