@@ -1,27 +1,29 @@
-# Fia-ms Assay File Default Structure v2.0
+# FIA-MS Assay File Default Structure v2.0
 
-| # |Header  | Column Structure  | Required | Min Length | Max Length | Description | Examples | Controlled Terms| Default Value  |
-|---|--------|-------------------|----------|------------|------------|-------------|----------|-----------------|----------------|
-| 1 | Sample Name | single column | True | 1 | - |  |  | [Controlled Terms](../../../docs/prioritised-control-lists/assay-control-lists/v2.0/assay-file-FIA-MS-v2.0.md#sample-name-column) | |
-| 2 | Protocol REF | single column | True | - | - |  |  | [Controlled Terms](../../../docs/prioritised-control-lists/assay-control-lists/v2.0/assay-file-FIA-MS-v2.0.md#protocol-ref-column) | Extraction|
-| 3 | Parameter Value[Post Extraction] | ontology column | False | - | - |  |  | [Controlled Terms](../../../docs/prioritised-control-lists/assay-control-lists/v2.0/assay-file-FIA-MS-v2.0.md#parameter-valuepost-extraction-column) | |
-| 4 | Parameter Value[Derivatization] | ontology column | False | - | - |  |  | [Controlled Terms](../../../docs/prioritised-control-lists/assay-control-lists/v2.0/assay-file-FIA-MS-v2.0.md#parameter-valuederivatization-column) | |
-| 5 | Extract Name | single column | False | - | - |  |  | [Controlled Terms](../../../docs/prioritised-control-lists/assay-control-lists/v2.0/assay-file-FIA-MS-v2.0.md#extract-name-column) | |
-| 6 | Protocol REF | single column | True | - | - |  |  | [Controlled Terms](../../../docs/prioritised-control-lists/assay-control-lists/v2.0/assay-file-FIA-MS-v2.0.md#protocol-ref-column) | Flow Injection Analysis|
-| 7 | Parameter Value[FIA Instrument] | ontology column | True | 5 | - |  |  | [Controlled Terms](../../../docs/prioritised-control-lists/assay-control-lists/v2.0/assay-file-FIA-MS-v2.0.md#parameter-valuefia-instrument-column) | |
-| 8 | Labeled Extract Name | single column | False | - | - |  |  | [Controlled Terms](../../../docs/prioritised-control-lists/assay-control-lists/v2.0/assay-file-FIA-MS-v2.0.md#labeled-extract-name-column) | |
-| 9 | Label | ontology column | False | - | - |  |  | [Controlled Terms](../../../docs/prioritised-control-lists/assay-control-lists/v2.0/assay-file-FIA-MS-v2.0.md#label-column) | |
-| 10 | Protocol REF | single column | True | - | - |  |  | [Controlled Terms](../../../docs/prioritised-control-lists/assay-control-lists/v2.0/assay-file-FIA-MS-v2.0.md#protocol-ref-column) | Mass spectrometry|
-| 11 | Parameter Value[Scan polarity] | ontology column | True | 1 | - |  |  | [Controlled Terms](../../../docs/prioritised-control-lists/assay-control-lists/v2.0/assay-file-FIA-MS-v2.0.md#parameter-valuescan-polarity-column) | |
-| 12 | Parameter Value[Scan m/z range] | single column and unit ontology | True | 1 | - |  |  | [Controlled Terms](../../../docs/prioritised-control-lists/assay-control-lists/v2.0/assay-file-FIA-MS-v2.0.md#parameter-valuescan-m/z-range-column) | |
-| 13 | Parameter Value[Instrument] | ontology column | True | 1 | - |  |  | [Controlled Terms](../../../docs/prioritised-control-lists/assay-control-lists/v2.0/assay-file-FIA-MS-v2.0.md#parameter-valueinstrument-column) | |
-| 14 | Parameter Value[Ion source] | ontology column | False | - | - |  |  | [Controlled Terms](../../../docs/prioritised-control-lists/assay-control-lists/v2.0/assay-file-FIA-MS-v2.0.md#parameter-valueion-source-column) | |
-| 15 | Parameter Value[Mass analyzer] | ontology column | False | - | - |  |  | [Controlled Terms](../../../docs/prioritised-control-lists/assay-control-lists/v2.0/assay-file-FIA-MS-v2.0.md#parameter-valuemass-analyzer-column) | |
-| 16 | MS Assay Name | single column | False | - | - |  |  | [Controlled Terms](../../../docs/prioritised-control-lists/assay-control-lists/v2.0/assay-file-FIA-MS-v2.0.md#ms-assay-name-column) | |
-| 17 | Raw Spectral Data File | single column | False | - | - |  |  | [Controlled Terms](../../../docs/prioritised-control-lists/assay-control-lists/v2.0/assay-file-FIA-MS-v2.0.md#raw-spectral-data-file-column) | |
-| 18 | Protocol REF | single column | True | - | - |  |  | [Controlled Terms](../../../docs/prioritised-control-lists/assay-control-lists/v2.0/assay-file-FIA-MS-v2.0.md#protocol-ref-column) | Data transformation|
-| 19 | Normalization Name | single column | False | - | - |  |  | [Controlled Terms](../../../docs/prioritised-control-lists/assay-control-lists/v2.0/assay-file-FIA-MS-v2.0.md#normalization-name-column) | |
-| 20 | Derived Spectral Data File | single column | False | - | - |  |  | [Controlled Terms](../../../docs/prioritised-control-lists/assay-control-lists/v2.0/assay-file-FIA-MS-v2.0.md#derived-spectral-data-file-column) | |
-| 21 | Protocol REF | single column | True | - | - |  |  | [Controlled Terms](../../../docs/prioritised-control-lists/assay-control-lists/v2.0/assay-file-FIA-MS-v2.0.md#protocol-ref-column) | Metabolite identification|
-| 22 | Data Transformation Name | single column | False | - | - |  |  | [Controlled Terms](../../../docs/prioritised-control-lists/assay-control-lists/v2.0/assay-file-FIA-MS-v2.0.md#data-transformation-name-column) | |
-| 23 | Metabolite Assignment File | single column | True | 1 | - |  |  | [Controlled Terms](../../../docs/prioritised-control-lists/assay-control-lists/v2.0/assay-file-FIA-MS-v2.0.md#metabolite-assignment-file-column) | |
+Download file template as [zip file](../../../template-files/assay-file/FIA-MS/a_template-FIA-MS-metabolite_profiling-v2.0.txt.zip) or [txt file](../../../template-files/assay-file/FIA-MS/a_template-FIA-MS-metabolite_profiling-v2.0.txt)
+
+| Header  | Column Structure  | Constraints | <div style="width: 300px">Description</div> | <div style="width: 100px">Examples</div> |
+|--------|-------------------|----------|-------------|----------
+| Sample Name | single column | *Required*<br/>MinLength: 1<br/><br/>[Controls](../../../prioritised-control-lists/assay-file-control-lists/FIA-MS/FIA-MS-v2.0.md#sample-name){:target="_blank"} |  |  |
+| Protocol REF | single column | *Required*<br/>Default: Extraction |  |  |
+| Parameter Value[Post Extraction] | ontology column |  |  |  |
+| Parameter Value[Derivatization] | ontology column |  |  |  |
+| Extract Name | single column |  |  |  |
+| Protocol REF | single column | *Required*<br/>Default: Flow Injection Analysis |  |  |
+| Parameter Value[FIA Instrument] | ontology column | *Required*<br/>MinLength: 5 |  |  |
+| Labeled Extract Name | single column |  |  |  |
+| Label | ontology column |  |  |  |
+| Protocol REF | single column | *Required*<br/>Default: Mass spectrometry |  |  |
+| Parameter Value[Scan polarity] | ontology column | *Required*<br/>MinLength: 1<br/><br/>[Controls](../../../prioritised-control-lists/assay-file-control-lists/FIA-MS/FIA-MS-v2.0.md#parameter-valuescan-polarity){:target="_blank"} |  |  |
+| Parameter Value[Scan m/z range] | single column and unit ontology | *Required*<br/>MinLength: 1 |  |  |
+| Parameter Value[Instrument] | ontology column | *Required*<br/>MinLength: 1 |  |  |
+| Parameter Value[Ion source] | ontology column |  |  |  |
+| Parameter Value[Mass analyzer] | ontology column | [Controls](../../../prioritised-control-lists/assay-file-control-lists/FIA-MS/FIA-MS-v2.0.md#parameter-valuemass-analyzer){:target="_blank"} |  |  |
+| MS Assay Name | single column | [Controls](../../../prioritised-control-lists/assay-file-control-lists/FIA-MS/FIA-MS-v2.0.md#ms-assay-name){:target="_blank"} |  |  |
+| Raw Spectral Data File | single column |  |  |  |
+| Protocol REF | single column | *Required*<br/>Default: Data transformation |  |  |
+| Normalization Name | single column |  |  |  |
+| Derived Spectral Data File | single column |  |  |  |
+| Protocol REF | single column | *Required*<br/>Default: Metabolite identification |  |  |
+| Data Transformation Name | single column |  |  |  |
+| Metabolite Assignment File | single column | *Required*<br/>MinLength: 1 |  |  |

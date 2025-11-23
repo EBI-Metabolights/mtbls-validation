@@ -1,22 +1,24 @@
 # MAF File Default Structure for NMR Assay v1.0
 
-| # |Header  | Column Structure  | Required | Min Length | Max Length | Description | Examples | Controlled Terms| Default Value  |
-|---|--------|-------------------|----------|------------|------------|-------------|----------|-----------------|----------------|
-| 1 | database_identifier | single column | False | - | - |  |  | [Controlled Terms](../../../docs/prioritised-control-lists/maf-control-lists/v1.0/maf-file-NMR-v1.0.md#database_identifier-column) | |
-| 2 | chemical_formula | single column | False | - | - |  |  | [Controlled Terms](../../../docs/prioritised-control-lists/maf-control-lists/v1.0/maf-file-NMR-v1.0.md#chemical_formula-column) | |
-| 3 | smiles | single column | False | - | - |  |  | [Controlled Terms](../../../docs/prioritised-control-lists/maf-control-lists/v1.0/maf-file-NMR-v1.0.md#smiles-column) | |
-| 4 | inchi | single column | False | - | - |  |  | [Controlled Terms](../../../docs/prioritised-control-lists/maf-control-lists/v1.0/maf-file-NMR-v1.0.md#inchi-column) | |
-| 5 | metabolite_identification | single column | True | 2 | - |  |  | [Controlled Terms](../../../docs/prioritised-control-lists/maf-control-lists/v1.0/maf-file-NMR-v1.0.md#metabolite_identification-column) | |
-| 6 | chemical_shift | single column | False | - | - |  |  | [Controlled Terms](../../../docs/prioritised-control-lists/maf-control-lists/v1.0/maf-file-NMR-v1.0.md#chemical_shift-column) | |
-| 7 | multiplicity | single column | False | - | - |  |  | [Controlled Terms](../../../docs/prioritised-control-lists/maf-control-lists/v1.0/maf-file-NMR-v1.0.md#multiplicity-column) | |
-| 8 | taxid | single column | False | - | - |  |  | [Controlled Terms](../../../docs/prioritised-control-lists/maf-control-lists/v1.0/maf-file-NMR-v1.0.md#taxid-column) | |
-| 9 | species | single column | False | - | - |  |  | [Controlled Terms](../../../docs/prioritised-control-lists/maf-control-lists/v1.0/maf-file-NMR-v1.0.md#species-column) | |
-| 10 | database | single column | False | - | - |  |  | [Controlled Terms](../../../docs/prioritised-control-lists/maf-control-lists/v1.0/maf-file-NMR-v1.0.md#database-column) | |
-| 11 | database_version | single column | False | - | - |  |  | [Controlled Terms](../../../docs/prioritised-control-lists/maf-control-lists/v1.0/maf-file-NMR-v1.0.md#database_version-column) | |
-| 12 | reliability | single column | False | - | - |  |  | [Controlled Terms](../../../docs/prioritised-control-lists/maf-control-lists/v1.0/maf-file-NMR-v1.0.md#reliability-column) | |
-| 13 | uri | single column | False | - | - |  |  | [Controlled Terms](../../../docs/prioritised-control-lists/maf-control-lists/v1.0/maf-file-NMR-v1.0.md#uri-column) | |
-| 14 | search_engine | single column | False | - | - |  |  | [Controlled Terms](../../../docs/prioritised-control-lists/maf-control-lists/v1.0/maf-file-NMR-v1.0.md#search_engine-column) | |
-| 15 | search_engine_score | single column | False | - | - |  |  | [Controlled Terms](../../../docs/prioritised-control-lists/maf-control-lists/v1.0/maf-file-NMR-v1.0.md#search_engine_score-column) | |
-| 16 | smallmolecule_abundance_sub | single column | False | - | - |  |  | [Controlled Terms](../../../docs/prioritised-control-lists/maf-control-lists/v1.0/maf-file-NMR-v1.0.md#smallmolecule_abundance_sub-column) | |
-| 17 | smallmolecule_abundance_stdev_sub | single column | False | - | - |  |  | [Controlled Terms](../../../docs/prioritised-control-lists/maf-control-lists/v1.0/maf-file-NMR-v1.0.md#smallmolecule_abundance_stdev_sub-column) | |
-| 18 | smallmolecule_abundance_std_error_sub | single column | False | - | - |  |  | [Controlled Terms](../../../docs/prioritised-control-lists/maf-control-lists/v1.0/maf-file-NMR-v1.0.md#smallmolecule_abundance_std_error_sub-column) | |
+Download file template as [zip file](../../../template-files/maf-file/NMR/m_template-NMR-v1.0_metabolite_profiling_v2_maf.tsv.zip) or [tsv file](../../../template-files/maf-file/NMR/m_template-NMR-v1.0_metabolite_profiling_v2_maf.tsv)
+
+| Header  | Column Structure  | Constraints | <div style="width: 300px">Description</div> | <div style="width: 100px">Examples</div> |
+|--------|-------------------|----------|-------------|----------
+| database_identifier | single column |  |  |  |
+| chemical_formula | single column |  |  |  |
+| smiles | single column |  |  |  |
+| inchi | single column |  |  |  |
+| metabolite_identification | single column | *Required*<br/>MinLength: 2 |  |  |
+| chemical_shift | single column |  |  |  |
+| multiplicity | single column |  |  |  |
+| taxid | single column |  |  |  |
+| species | single column |  |  |  |
+| database | single column |  |  |  |
+| database_version | single column |  |  |  |
+| reliability | single column |  |  |  |
+| uri | single column |  |  |  |
+| search_engine | single column |  |  |  |
+| search_engine_score | single column |  |  |  |
+| smallmolecule_abundance_sub | single column |  |  |  |
+| smallmolecule_abundance_stdev_sub | single column |  |  |  |
+| smallmolecule_abundance_std_error_sub | single column |  |  |  |

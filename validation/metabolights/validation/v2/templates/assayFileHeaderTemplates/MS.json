@@ -3,136 +3,160 @@
         {
             "fixedColumnCount": 1,
             "description": "Mass spectrometry",
+            "version": "1.0",
             "headers": [
                 {
                     "columnStructure": "SINGLE_COLUMN",
                     "columnCategory": "Basic",
                     "columnHeader": "Sample Name",
                     "columnPrefix": "",
-                    "defaultColumnIndex": 0,
                     "defaultValue": null,
-                    "maxLength": 0,
+                    "defaultColumnIndex": 0,
                     "minLength": 1,
-                    "required": true
+                    "maxLength": null,
+                    "required": true,
+                    "description": null,
+                    "examples": null
                 },
                 {
                     "columnStructure": "SINGLE_COLUMN",
                     "columnCategory": "Protocol",
                     "columnHeader": "Protocol REF",
                     "columnPrefix": "",
-                    "defaultColumnIndex": 1,
                     "defaultValue": "Extraction",
-                    "maxLength": 0,
-                    "minLength": 0,
-                    "required": true
+                    "defaultColumnIndex": 1,
+                    "minLength": null,
+                    "maxLength": null,
+                    "required": true,
+                    "description": null,
+                    "examples": null
                 },
                 {
                     "columnStructure": "SINGLE_COLUMN",
                     "columnCategory": "Parameter",
                     "columnHeader": "Parameter Value[Post Extraction]",
                     "columnPrefix": "Parameter Value",
-                    "defaultColumnIndex": 2,
                     "defaultValue": null,
-                    "maxLength": 0,
-                    "minLength": 0,
-                    "required": false
+                    "defaultColumnIndex": 2,
+                    "minLength": null,
+                    "maxLength": null,
+                    "required": false,
+                    "description": null,
+                    "examples": null
                 },
                 {
                     "columnStructure": "SINGLE_COLUMN",
                     "columnCategory": "Parameter",
                     "columnHeader": "Parameter Value[Derivatization]",
                     "columnPrefix": "Parameter Value",
-                    "defaultColumnIndex": 3,
                     "defaultValue": null,
-                    "maxLength": 0,
-                    "minLength": 0,
-                    "required": false
+                    "defaultColumnIndex": 3,
+                    "minLength": null,
+                    "maxLength": null,
+                    "required": false,
+                    "description": null,
+                    "examples": null
                 },
                 {
                     "columnStructure": "SINGLE_COLUMN",
                     "columnCategory": "Basic",
                     "columnHeader": "Extract Name",
                     "columnPrefix": "",
-                    "defaultColumnIndex": 4,
                     "defaultValue": null,
-                    "maxLength": 0,
-                    "minLength": 0,
-                    "required": false
+                    "defaultColumnIndex": 4,
+                    "minLength": null,
+                    "maxLength": null,
+                    "required": false,
+                    "description": null,
+                    "examples": null
                 },
                 {
                     "columnStructure": "SINGLE_COLUMN",
                     "columnCategory": "Basic",
                     "columnHeader": "Labeled Extract Name",
                     "columnPrefix": "",
-                    "defaultColumnIndex": 5,
                     "defaultValue": null,
-                    "maxLength": 0,
-                    "minLength": 0,
-                    "required": false
+                    "defaultColumnIndex": 5,
+                    "minLength": null,
+                    "maxLength": null,
+                    "required": false,
+                    "description": null,
+                    "examples": null
                 },
                 {
                     "columnStructure": "ONTOLOGY_COLUMN",
                     "columnCategory": "Label",
                     "columnHeader": "Label",
-                    "defaultColumnIndex": 6,
+                    "columnPrefix": null,
                     "defaultValue": null,
-                    "maxLength": 0,
-                    "minLength": 0,
-                    "required": false
+                    "defaultColumnIndex": 6,
+                    "minLength": null,
+                    "maxLength": null,
+                    "required": false,
+                    "description": null,
+                    "examples": null
                 },
                 {
                     "columnStructure": "SINGLE_COLUMN",
                     "columnCategory": "Protocol",
                     "columnHeader": "Protocol REF",
                     "columnPrefix": "",
-                    "defaultColumnIndex": 9,
                     "defaultValue": "Mass spectrometry",
-                    "maxLength": 0,
-                    "minLength": 0,
-                    "required": true
+                    "defaultColumnIndex": 9,
+                    "minLength": null,
+                    "maxLength": null,
+                    "required": true,
+                    "description": null,
+                    "examples": null
                 },
                 {
                     "columnStructure": "SINGLE_COLUMN",
                     "columnCategory": "Parameter",
                     "columnHeader": "Parameter Value[Scan polarity]",
                     "columnPrefix": "Parameter Value",
-                    "defaultColumnIndex": 10,
                     "defaultValue": null,
-                    "maxLength": 0,
+                    "defaultColumnIndex": 10,
                     "minLength": 1,
-                    "required": true
+                    "maxLength": null,
+                    "required": true,
+                    "description": null,
+                    "examples": null
                 },
                 {
                     "columnStructure": "SINGLE_COLUMN",
                     "columnCategory": "Parameter",
                     "columnHeader": "Parameter Value[Scan m/z range]",
                     "columnPrefix": "Parameter Value",
-                    "defaultColumnIndex": 11,
                     "defaultValue": null,
-                    "maxLength": 0,
+                    "defaultColumnIndex": 11,
                     "minLength": 1,
-                    "required": true
+                    "maxLength": null,
+                    "required": true,
+                    "description": null,
+                    "examples": null
                 },
                 {
                     "columnStructure": "ONTOLOGY_COLUMN",
                     "columnCategory": "Parameter",
                     "columnHeader": "Parameter Value[Instrument]",
                     "columnPrefix": "Parameter Value",
-                    "defaultColumnIndex": 12,
                     "defaultValue": null,
-                    "maxLength": 0,
+                    "defaultColumnIndex": 12,
                     "minLength": 1,
-                    "required": true
+                    "maxLength": null,
+                    "required": true,
+                    "description": null,
+                    "examples": null
                 },
                 {
+                    "columnStructure": "ONTOLOGY_COLUMN",
                     "columnCategory": "Parameter",
                     "columnHeader": "Parameter Value[Ion source]",
                     "columnPrefix": "Parameter Value",
-                    "columnStructure": "ONTOLOGY_COLUMN",
-                    "defaultColumnIndex": 15,
                     "defaultValue": null,
-                    "maxLength": 0,
-                    "minLength": 0,
+                    "defaultColumnIndex": 15,
+                    "minLength": null,
+                    "maxLength": null,
                     "required": false,
                     "description": "Where applicable to the instrument.",
                     "examples": [
@@ -140,14 +164,14 @@
                     ]
                 },
                 {
+                    "columnStructure": "ONTOLOGY_COLUMN",
                     "columnCategory": "Parameter",
                     "columnHeader": "Parameter Value[Mass analyzer]",
                     "columnPrefix": "Parameter Value",
-                    "columnStructure": "ONTOLOGY_COLUMN",
-                    "defaultColumnIndex": 18,
                     "defaultValue": null,
-                    "maxLength": 0,
-                    "minLength": 0,
+                    "defaultColumnIndex": 18,
+                    "minLength": null,
+                    "maxLength": null,
                     "required": false,
                     "description": "The analyser/detector of the mass fragments generated during the assay.",
                     "examples": [
@@ -159,234 +183,264 @@
                     "columnCategory": "Basic",
                     "columnHeader": "MS Assay Name",
                     "columnPrefix": "",
-                    "defaultColumnIndex": 21,
                     "defaultValue": null,
-                    "maxLength": 0,
-                    "minLength": 0,
-                    "required": false
+                    "defaultColumnIndex": 21,
+                    "minLength": null,
+                    "maxLength": null,
+                    "required": false,
+                    "description": null,
+                    "examples": null
                 },
                 {
                     "columnStructure": "SINGLE_COLUMN",
                     "columnCategory": "File",
                     "columnHeader": "Raw Spectral Data File",
                     "columnPrefix": "",
-                    "defaultColumnIndex": 22,
                     "defaultValue": null,
-                    "maxLength": 0,
-                    "minLength": 0,
+                    "defaultColumnIndex": 22,
+                    "minLength": null,
+                    "maxLength": null,
                     "required": false,
-                    "tags": {
-                        "fileType": "raw"
-                    }
+                    "description": null,
+                    "examples": null
                 },
                 {
                     "columnStructure": "SINGLE_COLUMN",
                     "columnCategory": "Protocol",
                     "columnHeader": "Protocol REF",
                     "columnPrefix": "",
-                    "defaultColumnIndex": 23,
                     "defaultValue": "Data transformation",
-                    "maxLength": 0,
-                    "minLength": 0,
-                    "required": true
+                    "defaultColumnIndex": 23,
+                    "minLength": null,
+                    "maxLength": null,
+                    "required": true,
+                    "description": null,
+                    "examples": null
                 },
                 {
                     "columnStructure": "SINGLE_COLUMN",
                     "columnCategory": "Basic",
                     "columnHeader": "Normalization Name",
                     "columnPrefix": "",
-                    "defaultColumnIndex": 24,
                     "defaultValue": null,
-                    "maxLength": 0,
-                    "minLength": 0,
-                    "required": false
+                    "defaultColumnIndex": 24,
+                    "minLength": null,
+                    "maxLength": null,
+                    "required": false,
+                    "description": null,
+                    "examples": null
                 },
                 {
                     "columnStructure": "SINGLE_COLUMN",
                     "columnCategory": "File",
                     "columnHeader": "Derived Spectral Data File",
                     "columnPrefix": "",
-                    "defaultColumnIndex": 25,
                     "defaultValue": null,
-                    "maxLength": 0,
-                    "minLength": 0,
+                    "defaultColumnIndex": 25,
+                    "minLength": null,
+                    "maxLength": null,
                     "required": false,
-                    "tags": {
-                        "fileType": "derived"
-                    }
+                    "description": null,
+                    "examples": null
                 },
                 {
                     "columnStructure": "SINGLE_COLUMN",
                     "columnCategory": "Protocol",
                     "columnHeader": "Protocol REF",
                     "columnPrefix": "",
-                    "defaultColumnIndex": 26,
                     "defaultValue": "Metabolite identification",
-                    "maxLength": 0,
-                    "minLength": 0,
-                    "required": true
+                    "defaultColumnIndex": 26,
+                    "minLength": null,
+                    "maxLength": null,
+                    "required": true,
+                    "description": null,
+                    "examples": null
                 },
                 {
                     "columnStructure": "SINGLE_COLUMN",
                     "columnCategory": "Basic",
                     "columnHeader": "Data Transformation Name",
                     "columnPrefix": "",
-                    "defaultColumnIndex": 27,
                     "defaultValue": null,
-                    "maxLength": 0,
-                    "minLength": 0,
-                    "required": false
+                    "defaultColumnIndex": 27,
+                    "minLength": null,
+                    "maxLength": null,
+                    "required": false,
+                    "description": null,
+                    "examples": null
                 },
                 {
                     "columnStructure": "SINGLE_COLUMN",
                     "columnCategory": "File",
                     "columnHeader": "Metabolite Assignment File",
                     "columnPrefix": "",
-                    "defaultColumnIndex": 28,
                     "defaultValue": null,
-                    "maxLength": 0,
+                    "defaultColumnIndex": 28,
                     "minLength": 1,
+                    "maxLength": null,
                     "required": true,
-                    "tags": {
-                        "fileType": "metadata_maf"
-                    }
+                    "description": null,
+                    "examples": null
                 }
-            ],
-            "version": "1.0"
+            ]
         },
         {
             "fixedColumnCount": 1,
             "description": "Mass spectrometry",
+            "version": "2.0",
             "headers": [
                 {
                     "columnStructure": "SINGLE_COLUMN",
                     "columnCategory": "Basic",
                     "columnHeader": "Sample Name",
                     "columnPrefix": "",
-                    "defaultColumnIndex": 0,
                     "defaultValue": null,
-                    "maxLength": 0,
+                    "defaultColumnIndex": 0,
                     "minLength": 1,
-                    "required": true
+                    "maxLength": null,
+                    "required": true,
+                    "description": null,
+                    "examples": null
                 },
                 {
                     "columnStructure": "SINGLE_COLUMN",
                     "columnCategory": "Protocol",
                     "columnHeader": "Protocol REF",
                     "columnPrefix": "",
-                    "defaultColumnIndex": 1,
                     "defaultValue": "Extraction",
-                    "maxLength": 0,
-                    "minLength": 0,
-                    "required": true
+                    "defaultColumnIndex": 1,
+                    "minLength": null,
+                    "maxLength": null,
+                    "required": true,
+                    "description": null,
+                    "examples": null
                 },
                 {
                     "columnStructure": "ONTOLOGY_COLUMN",
                     "columnCategory": "Parameter",
                     "columnHeader": "Parameter Value[Post Extraction]",
                     "columnPrefix": "Parameter Value",
-                    "defaultColumnIndex": 2,
                     "defaultValue": null,
-                    "maxLength": 0,
-                    "minLength": 0,
-                    "required": false
+                    "defaultColumnIndex": 2,
+                    "minLength": null,
+                    "maxLength": null,
+                    "required": false,
+                    "description": null,
+                    "examples": null
                 },
                 {
                     "columnStructure": "ONTOLOGY_COLUMN",
                     "columnCategory": "Parameter",
                     "columnHeader": "Parameter Value[Derivatization]",
                     "columnPrefix": "Parameter Value",
-                    "defaultColumnIndex": 5,
                     "defaultValue": null,
-                    "maxLength": 0,
-                    "minLength": 0,
-                    "required": false
+                    "defaultColumnIndex": 5,
+                    "minLength": null,
+                    "maxLength": null,
+                    "required": false,
+                    "description": null,
+                    "examples": null
                 },
                 {
                     "columnStructure": "SINGLE_COLUMN",
                     "columnCategory": "Basic",
                     "columnHeader": "Extract Name",
                     "columnPrefix": "",
-                    "defaultColumnIndex": 8,
                     "defaultValue": null,
-                    "maxLength": 0,
-                    "minLength": 0,
-                    "required": false
+                    "defaultColumnIndex": 8,
+                    "minLength": null,
+                    "maxLength": null,
+                    "required": false,
+                    "description": null,
+                    "examples": null
                 },
                 {
                     "columnStructure": "SINGLE_COLUMN",
                     "columnCategory": "Basic",
                     "columnHeader": "Labeled Extract Name",
                     "columnPrefix": "",
-                    "defaultColumnIndex": 9,
                     "defaultValue": null,
-                    "maxLength": 0,
-                    "minLength": 0,
-                    "required": false
+                    "defaultColumnIndex": 9,
+                    "minLength": null,
+                    "maxLength": null,
+                    "required": false,
+                    "description": null,
+                    "examples": null
                 },
                 {
                     "columnStructure": "ONTOLOGY_COLUMN",
                     "columnCategory": "Label",
                     "columnHeader": "Label",
-                    "defaultColumnIndex": 10,
+                    "columnPrefix": null,
                     "defaultValue": null,
-                    "maxLength": 0,
-                    "minLength": 0,
-                    "required": false
+                    "defaultColumnIndex": 10,
+                    "minLength": null,
+                    "maxLength": null,
+                    "required": false,
+                    "description": null,
+                    "examples": null
                 },
                 {
                     "columnStructure": "SINGLE_COLUMN",
                     "columnCategory": "Protocol",
                     "columnHeader": "Protocol REF",
                     "columnPrefix": "",
-                    "defaultColumnIndex": 13,
                     "defaultValue": "Mass spectrometry",
-                    "maxLength": 0,
-                    "minLength": 0,
-                    "required": true
+                    "defaultColumnIndex": 13,
+                    "minLength": null,
+                    "maxLength": null,
+                    "required": true,
+                    "description": null,
+                    "examples": null
                 },
                 {
                     "columnStructure": "ONTOLOGY_COLUMN",
                     "columnCategory": "Parameter",
                     "columnHeader": "Parameter Value[Scan polarity]",
                     "columnPrefix": "Parameter Value",
-                    "defaultColumnIndex": 14,
                     "defaultValue": null,
-                    "maxLength": 0,
+                    "defaultColumnIndex": 14,
                     "minLength": 1,
-                    "required": true
+                    "maxLength": null,
+                    "required": true,
+                    "description": null,
+                    "examples": null
                 },
                 {
                     "columnStructure": "SINGLE_COLUMN_AND_UNIT_ONTOLOGY",
                     "columnCategory": "Parameter",
                     "columnHeader": "Parameter Value[Scan m/z range]",
                     "columnPrefix": "Parameter Value",
-                    "defaultColumnIndex": 17,
                     "defaultValue": null,
-                    "maxLength": 0,
+                    "defaultColumnIndex": 17,
                     "minLength": 1,
-                    "required": true
+                    "maxLength": null,
+                    "required": true,
+                    "description": null,
+                    "examples": null
                 },
                 {
                     "columnStructure": "ONTOLOGY_COLUMN",
                     "columnCategory": "Parameter",
                     "columnHeader": "Parameter Value[Instrument]",
                     "columnPrefix": "Parameter Value",
-                    "defaultColumnIndex": 21,
                     "defaultValue": null,
-                    "maxLength": 0,
+                    "defaultColumnIndex": 21,
                     "minLength": 1,
-                    "required": true
+                    "maxLength": null,
+                    "required": true,
+                    "description": null,
+                    "examples": null
                 },
                 {
+                    "columnStructure": "ONTOLOGY_COLUMN",
                     "columnCategory": "Parameter",
                     "columnHeader": "Parameter Value[Ion source]",
                     "columnPrefix": "Parameter Value",
-                    "columnStructure": "ONTOLOGY_COLUMN",
-                    "defaultColumnIndex": 24,
                     "defaultValue": null,
-                    "maxLength": 0,
-                    "minLength": 0,
+                    "defaultColumnIndex": 24,
+                    "minLength": null,
+                    "maxLength": null,
                     "required": false,
                     "description": "Where applicable to the instrument.",
                     "examples": [
@@ -394,14 +448,14 @@
                     ]
                 },
                 {
+                    "columnStructure": "ONTOLOGY_COLUMN",
                     "columnCategory": "Parameter",
                     "columnHeader": "Parameter Value[Mass analyzer]",
                     "columnPrefix": "Parameter Value",
-                    "columnStructure": "ONTOLOGY_COLUMN",
-                    "defaultColumnIndex": 27,
                     "defaultValue": null,
-                    "maxLength": 0,
-                    "minLength": 0,
+                    "defaultColumnIndex": 27,
+                    "minLength": null,
+                    "maxLength": null,
                     "required": false,
                     "description": "The analyser/detector of the mass fragments generated during the assay.",
                     "examples": [
@@ -413,100 +467,106 @@
                     "columnCategory": "Basic",
                     "columnHeader": "MS Assay Name",
                     "columnPrefix": "",
-                    "defaultColumnIndex": 30,
                     "defaultValue": null,
-                    "maxLength": 0,
-                    "minLength": 0,
-                    "required": false
+                    "defaultColumnIndex": 30,
+                    "minLength": null,
+                    "maxLength": null,
+                    "required": false,
+                    "description": null,
+                    "examples": null
                 },
                 {
                     "columnStructure": "SINGLE_COLUMN",
                     "columnCategory": "File",
                     "columnHeader": "Raw Spectral Data File",
                     "columnPrefix": "",
-                    "defaultColumnIndex": 31,
                     "defaultValue": null,
-                    "maxLength": 0,
-                    "minLength": 0,
+                    "defaultColumnIndex": 31,
+                    "minLength": null,
+                    "maxLength": null,
                     "required": false,
-                    "tags": {
-                        "fileType": "raw"
-                    }
+                    "description": null,
+                    "examples": null
                 },
                 {
                     "columnStructure": "SINGLE_COLUMN",
                     "columnCategory": "Protocol",
                     "columnHeader": "Protocol REF",
                     "columnPrefix": "",
-                    "defaultColumnIndex": 32,
                     "defaultValue": "Data transformation",
-                    "maxLength": 0,
-                    "minLength": 0,
-                    "required": true
+                    "defaultColumnIndex": 32,
+                    "minLength": null,
+                    "maxLength": null,
+                    "required": true,
+                    "description": null,
+                    "examples": null
                 },
                 {
                     "columnStructure": "SINGLE_COLUMN",
                     "columnCategory": "Basic",
                     "columnHeader": "Normalization Name",
                     "columnPrefix": "",
-                    "defaultColumnIndex": 33,
                     "defaultValue": null,
-                    "maxLength": 0,
-                    "minLength": 0,
-                    "required": false
+                    "defaultColumnIndex": 33,
+                    "minLength": null,
+                    "maxLength": null,
+                    "required": false,
+                    "description": null,
+                    "examples": null
                 },
                 {
                     "columnStructure": "SINGLE_COLUMN",
                     "columnCategory": "File",
                     "columnHeader": "Derived Spectral Data File",
                     "columnPrefix": "",
-                    "defaultColumnIndex": 34,
                     "defaultValue": null,
-                    "maxLength": 0,
-                    "minLength": 0,
+                    "defaultColumnIndex": 34,
+                    "minLength": null,
+                    "maxLength": null,
                     "required": false,
-                    "tags": {
-                        "fileType": "derived"
-                    }
+                    "description": null,
+                    "examples": null
                 },
                 {
                     "columnStructure": "SINGLE_COLUMN",
                     "columnCategory": "Protocol",
                     "columnHeader": "Protocol REF",
                     "columnPrefix": "",
-                    "defaultColumnIndex": 35,
                     "defaultValue": "Metabolite identification",
-                    "maxLength": 0,
-                    "minLength": 0,
-                    "required": true
+                    "defaultColumnIndex": 35,
+                    "minLength": null,
+                    "maxLength": null,
+                    "required": true,
+                    "description": null,
+                    "examples": null
                 },
                 {
                     "columnStructure": "SINGLE_COLUMN",
                     "columnCategory": "Basic",
                     "columnHeader": "Data Transformation Name",
                     "columnPrefix": "",
-                    "defaultColumnIndex": 36,
                     "defaultValue": null,
-                    "maxLength": 0,
-                    "minLength": 0,
-                    "required": false
+                    "defaultColumnIndex": 36,
+                    "minLength": null,
+                    "maxLength": null,
+                    "required": false,
+                    "description": null,
+                    "examples": null
                 },
                 {
                     "columnStructure": "SINGLE_COLUMN",
                     "columnCategory": "File",
                     "columnHeader": "Metabolite Assignment File",
                     "columnPrefix": "",
-                    "defaultColumnIndex": 37,
                     "defaultValue": null,
-                    "maxLength": 0,
+                    "defaultColumnIndex": 37,
                     "minLength": 1,
+                    "maxLength": null,
                     "required": true,
-                    "tags": {
-                        "fileType": "metadata_maf"
-                    }
+                    "description": null,
+                    "examples": null
                 }
-            ],
-            "version": "2.0"
+            ]
         }
     ]
 }

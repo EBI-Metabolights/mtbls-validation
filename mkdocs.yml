@@ -1,0 +1,183 @@
+site_name: MetaboLights Validation Framework
+site_url: https://github.com/EBI-Metabolights/mtbls-validation
+
+theme:
+  name: material
+  logo: assets/metabolights.png
+  favicon: assets/favicon.png
+  features:
+  - content.code.annotate
+  - content.code.copy
+  # - content.code.select
+  - content.footnote.tooltips
+  - content.tabs.link
+  - content.tooltips
+  - navigation.footer
+  - navigation.indexes
+  - navigation.instant
+  - navigation.instant.prefetch
+  # - navigation.instant.preview
+  - navigation.instant.progress
+  - navigation.path
+  - navigation.tabs
+  - navigation.tabs.sticky
+  - navigation.top
+  - navigation.tracking
+  - search.highlight
+  - search.share
+  - search.suggest
+  - toc.follow
+  - toc.integrate
+  nav_depth: 3
+extra:
+  social:
+  - icon: fontawesome/brands/x-twitter
+    link: https://x.com/MetaboLights
+  - icon: fontawesome/brands/bluesky
+    link: https://bsky.app/profile/metabolights.bsky.social
+extra_css:
+- stylesheets/extra.css
+nav:
+- index.md
+- Validation Rules:
+  - All Rules: validation-rules/all-rules.md
+  - Investigation File Rules: validation-rules/investigation-validation-rules.md
+  - Sample File Rules: validation-rules/sample-validation-rules.md
+  - Assay File Rules: validation-rules/assay-validation-rules.md
+  - Metabolite (MAF) File Rules: validation-rules/metabolite-validation-rules.md
+  - Raw/Derived File Rules: validation-rules/file-validation-rules.md
+  - Other Rules: validation-rules/input-validation-rules.md
+- File Structures:
+  - Template Files v1.0:
+    - Metabolite (MAF) File v1.0:
+      - MS: file-structures/maf-file-structure/MS/maf-file-MS-v1.0.md
+      - NMR: file-structures/maf-file-structure/NMR/maf-file-NMR-v1.0.md
+    - Sample File v1.0:
+      - minimum: file-structures/sample-file-structure/minimum/sample-file-minimum-v1.0.md
+    - Assay File v1.0:
+      - CE-MS: file-structures/assay-file-structure/CE-MS/assay-file-CE-MS-v1.0.md
+      - DI-MS: file-structures/assay-file-structure/DI-MS/assay-file-DI-MS-v1.0.md
+      - FIA-MS: file-structures/assay-file-structure/FIA-MS/assay-file-FIA-MS-v1.0.md
+      - GC-FID: file-structures/assay-file-structure/GC-FID/assay-file-GC-FID-v1.0.md
+      - GC-MS: file-structures/assay-file-structure/GC-MS/assay-file-GC-MS-v1.0.md
+      - GCxGC-MS: file-structures/assay-file-structure/GCxGC-MS/assay-file-GCxGC-MS-v1.0.md
+      - LC-DAD: file-structures/assay-file-structure/LC-DAD/assay-file-LC-DAD-v1.0.md
+      - LC-MS: file-structures/assay-file-structure/LC-MS/assay-file-LC-MS-v1.0.md
+      - MALDI-MS: file-structures/assay-file-structure/MALDI-MS/assay-file-MALDI-MS-v1.0.md
+      - MRImaging: file-structures/assay-file-structure/MRImaging/assay-file-MRImaging-v1.0.md
+      - MS: file-structures/assay-file-structure/MS/assay-file-MS-v1.0.md
+      - MSImaging: file-structures/assay-file-structure/MSImaging/assay-file-MSImaging-v1.0.md
+      - NMR: file-structures/assay-file-structure/NMR/assay-file-NMR-v1.0.md
+  - Template Files v2.0:
+    - Metabolite (MAF) File v2.0:
+      - MS: file-structures/maf-file-structure/MS/maf-file-MS-v2.0.md
+      - NMR: file-structures/maf-file-structure/NMR/maf-file-NMR-v2.0.md
+    - Sample File v2.0:
+      - minimum: file-structures/sample-file-structure/minimum/sample-file-minimum-v2.0.md
+    - Assay File v2.0:
+      - CE-MS: file-structures/assay-file-structure/CE-MS/assay-file-CE-MS-v2.0.md
+      - DI-MS: file-structures/assay-file-structure/DI-MS/assay-file-DI-MS-v2.0.md
+      - FIA-MS: file-structures/assay-file-structure/FIA-MS/assay-file-FIA-MS-v2.0.md
+      - GC-FID: file-structures/assay-file-structure/GC-FID/assay-file-GC-FID-v2.0.md
+      - GC-MS: file-structures/assay-file-structure/GC-MS/assay-file-GC-MS-v2.0.md
+      - GCxGC-MS: file-structures/assay-file-structure/GCxGC-MS/assay-file-GCxGC-MS-v2.0.md
+      - LC-DAD: file-structures/assay-file-structure/LC-DAD/assay-file-LC-DAD-v2.0.md
+      - LC-MS: file-structures/assay-file-structure/LC-MS/assay-file-LC-MS-v2.0.md
+      - MALDI-MS: file-structures/assay-file-structure/MALDI-MS/assay-file-MALDI-MS-v2.0.md
+      - MRImaging: file-structures/assay-file-structure/MRImaging/assay-file-MRImaging-v2.0.md
+      - MS: file-structures/assay-file-structure/MS/assay-file-MS-v2.0.md
+      - MSImaging: file-structures/assay-file-structure/MSImaging/assay-file-MSImaging-v2.0.md
+      - NMR: file-structures/assay-file-structure/NMR/assay-file-NMR-v2.0.md
+- Controls:
+  - Controls for Templates v1.0:
+    - Investigation File v1.0 Controls:
+      - minimum: prioritised-control-lists/investigation-file-control-lists/minimum/minimum-v1.0.md
+    - Sample File v1.0 Controls:
+      - minimum: prioritised-control-lists/sample-file-control-lists/minimum/minimum-v1.0.md
+    - Assay File v1.0 Controls:
+      - CE-MS: prioritised-control-lists/assay-file-control-lists/CE-MS/CE-MS-v1.0.md
+      - DI-MS: prioritised-control-lists/assay-file-control-lists/DI-MS/DI-MS-v1.0.md
+      - FIA-MS: prioritised-control-lists/assay-file-control-lists/FIA-MS/FIA-MS-v1.0.md
+      - GC-FID: prioritised-control-lists/assay-file-control-lists/GC-FID/GC-FID-v1.0.md
+      - GC-MS: prioritised-control-lists/assay-file-control-lists/GC-MS/GC-MS-v1.0.md
+      - GCxGC-MS: prioritised-control-lists/assay-file-control-lists/GCxGC-MS/GCxGC-MS-v1.0.md
+      - LC-DAD: prioritised-control-lists/assay-file-control-lists/LC-DAD/LC-DAD-v1.0.md
+      - LC-MS: prioritised-control-lists/assay-file-control-lists/LC-MS/LC-MS-v1.0.md
+      - MALDI-MS: prioritised-control-lists/assay-file-control-lists/MALDI-MS/MALDI-MS-v1.0.md
+      - MRImaging: prioritised-control-lists/assay-file-control-lists/MRImaging/MRImaging-v1.0.md
+      - MS: prioritised-control-lists/assay-file-control-lists/MS/MS-v1.0.md
+      - MSImaging: prioritised-control-lists/assay-file-control-lists/MSImaging/MSImaging-v1.0.md
+      - NMR: prioritised-control-lists/assay-file-control-lists/NMR/NMR-v1.0.md
+  - Controls for Templates v2.0:
+    - Investigation File v2.0 Controls:
+      - minimum: prioritised-control-lists/investigation-file-control-lists/minimum/minimum-v2.0.md
+    - Sample File v2.0 Controls:
+      - minimum: prioritised-control-lists/sample-file-control-lists/minimum/minimum-v2.0.md
+    - Assay File v2.0 Controls:
+      - CE-MS: prioritised-control-lists/assay-file-control-lists/CE-MS/CE-MS-v2.0.md
+      - DI-MS: prioritised-control-lists/assay-file-control-lists/DI-MS/DI-MS-v2.0.md
+      - FIA-MS: prioritised-control-lists/assay-file-control-lists/FIA-MS/FIA-MS-v2.0.md
+      - GC-FID: prioritised-control-lists/assay-file-control-lists/GC-FID/GC-FID-v2.0.md
+      - GC-MS: prioritised-control-lists/assay-file-control-lists/GC-MS/GC-MS-v2.0.md
+      - GCxGC-MS: prioritised-control-lists/assay-file-control-lists/GCxGC-MS/GCxGC-MS-v2.0.md
+      - LC-DAD: prioritised-control-lists/assay-file-control-lists/LC-DAD/LC-DAD-v2.0.md
+      - LC-MS: prioritised-control-lists/assay-file-control-lists/LC-MS/LC-MS-v2.0.md
+      - MALDI-MS: prioritised-control-lists/assay-file-control-lists/MALDI-MS/MALDI-MS-v2.0.md
+      - MRImaging: prioritised-control-lists/assay-file-control-lists/MRImaging/MRImaging-v2.0.md
+      - MS: prioritised-control-lists/assay-file-control-lists/MS/MS-v2.0.md
+      - MSImaging: prioritised-control-lists/assay-file-control-lists/MSImaging/MSImaging-v2.0.md
+      - NMR: prioritised-control-lists/assay-file-control-lists/NMR/NMR-v2.0.md
+plugins:
+- search
+
+markdown_extensions:
+# Python Markdown
+- abbr:
+- attr_list:
+- footnotes:
+- md_in_html:
+- tables:
+- admonition:
+- def_list:
+- toc:
+    permalink: true
+  # Python Markdown Extensions
+- pymdownx.tasklist:
+    custom_checkbox: true
+- pymdownx.highlight:
+    anchor_linenums: true
+    line_spans: __span
+    pygments_lang_class: true
+    use_pygments: true
+    linenums: true
+    linenums_style: pymdownx-inline
+- pymdownx.inlinehilite:
+- pymdownx.snippets:
+    base_path: [ "validation", "docs" ]
+    check_paths: true
+- pymdownx.betterem:
+- pymdownx.caret:
+- pymdownx.inlinehilite:
+- pymdownx.keys:
+- pymdownx.mark:
+- pymdownx.tilde:
+
+    # pymdownx blocks
+- pymdownx.blocks.admonition:
+    types:
+    - note
+    - attention
+    - caution
+    - danger
+    - error
+    - tip
+    - hint
+    - warning
+    # Custom types
+    - info
+    - check
+    - example
+    - success
+- pymdownx.blocks.details:
+- pymdownx.blocks.tab:
+    alternate_style: True

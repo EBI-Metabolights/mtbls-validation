@@ -1,13 +1,15 @@
-# Minimum Sample File Default Structure v2.0
+# minimum Sample File Default Structure v2.0
 
-| # |Header  | Column Structure  | Required | Min Length | Max Length | Description | Examples | Controlled Terms| Default Value  |
-|---|--------|-------------------|----------|------------|------------|-------------|----------|-----------------|----------------|
-| 1 | Source Name | single column | True | 3 | 128 |  |  | [Controlled Terms](../../../docs/prioritised-control-lists/sample-control-lists/v2.0/sample-file-minimum-v2.0.md#source-name-column) | |
-| 2 | Characteristics[Organism] | ontology column | True | 5 | - |  |  | [Controlled Terms](../../../docs/prioritised-control-lists/sample-control-lists/v2.0/sample-file-minimum-v2.0.md#characteristicsorganism-column) | |
-| 3 | Characteristics[Organism part] | ontology column | True | 3 | - |  |  | [Controlled Terms](../../../docs/prioritised-control-lists/sample-control-lists/v2.0/sample-file-minimum-v2.0.md#characteristicsorganism-part-column) | |
-| 4 | Characteristics[Variant] | ontology column | False | - | - |  |  | [Controlled Terms](../../../docs/prioritised-control-lists/sample-control-lists/v2.0/sample-file-minimum-v2.0.md#characteristicsvariant-column) | |
-| 5 | Characteristics[Sample type] | ontology column | False | - | - |  |  | [Controlled Terms](../../../docs/prioritised-control-lists/sample-control-lists/v2.0/sample-file-minimum-v2.0.md#characteristicssample-type-column) | |
-| 6 | Characteristics[Cell type] | ontology column | False | - | - |  |  | [Controlled Terms](../../../docs/prioritised-control-lists/sample-control-lists/v2.0/sample-file-minimum-v2.0.md#characteristicscell-type-column) | |
-| 7 | Characteristics[Disease] | ontology column | False | - | - |  |  | [Controlled Terms](../../../docs/prioritised-control-lists/sample-control-lists/v2.0/sample-file-minimum-v2.0.md#characteristicsdisease-column) | |
-| 8 | Protocol REF | single column | True | 1 | - |  |  | [Controlled Terms](../../../docs/prioritised-control-lists/sample-control-lists/v2.0/sample-file-minimum-v2.0.md#protocol-ref-column) | Sample collection|
-| 9 | Sample Name | single column | True | 3 | 128 |  |  | [Controlled Terms](../../../docs/prioritised-control-lists/sample-control-lists/v2.0/sample-file-minimum-v2.0.md#sample-name-column) | |
+Download file template as [zip file](../../../template-files/sample-file/minimum/s_template-minimum-v2.0.txt.zip) or [txt file](../../../template-files/sample-file/minimum/s_template-minimum-v2.0.txt)
+
+| Header  | Column Structure  | Constraints | <div style="width: 300px">Description</div> | <div style="width: 100px">Examples</div> |
+|--------|-------------------|----------|-------------|----------
+| Source Name | single column | *Required*<br/>MinLength: 3<br/>MaxLength: 128<br/><br/>[Controls](../../../prioritised-control-lists/sample-file-control-lists/minimum/minimum-v2.0.md#source-name){:target="_blank"} |  |  |
+| Characteristics[Organism] | ontology column | *Required*<br/>MinLength: 5<br/><br/>[Controls](../../../prioritised-control-lists/sample-file-control-lists/minimum/minimum-v2.0.md#characteristicsorganism){:target="_blank"} |  |  |
+| Characteristics[Organism part] | ontology column | *Required*<br/>MinLength: 3<br/><br/>[Controls](../../../prioritised-control-lists/sample-file-control-lists/minimum/minimum-v2.0.md#characteristicsorganism-part){:target="_blank"} |  |  |
+| Characteristics[Variant] | ontology column |  |  |  |
+| Characteristics[Sample type] | ontology column | [Controls](../../../prioritised-control-lists/sample-file-control-lists/minimum/minimum-v2.0.md#characteristicssample-type){:target="_blank"} |  |  |
+| Characteristics[Cell type] | ontology column | [Controls](../../../prioritised-control-lists/sample-file-control-lists/minimum/minimum-v2.0.md#characteristicscell-type){:target="_blank"} |  |  |
+| Characteristics[Disease] | ontology column | [Controls](../../../prioritised-control-lists/sample-file-control-lists/minimum/minimum-v2.0.md#characteristicsdisease){:target="_blank"} |  |  |
+| Protocol REF | single column | *Required*<br/>MinLength: 1<br/>Default: Sample collection |  |  |
+| Sample Name | single column | *Required*<br/>MinLength: 3<br/>MaxLength: 128<br/><br/>[Controls](../../../prioritised-control-lists/sample-file-control-lists/minimum/minimum-v2.0.md#sample-name){:target="_blank"} |  |  |

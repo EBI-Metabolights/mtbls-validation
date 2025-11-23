@@ -1,26 +1,28 @@
-# Gc-fid Assay File Default Structure v1.0
+# GC-FID Assay File Default Structure v1.0
 
-| # |Header  | Column Structure  | Required | Min Length | Max Length | Description | Examples | Controlled Terms| Default Value  |
-|---|--------|-------------------|----------|------------|------------|-------------|----------|-----------------|----------------|
-| 1 | Sample Name | single column | True | 1 | - |  |  | [Controlled Terms](../../../docs/prioritised-control-lists/assay-control-lists/v1.0/assay-file-GC-FID-v1.0.md#sample-name-column) | |
-| 2 | Protocol REF | single column | True | - | - |  |  | [Controlled Terms](../../../docs/prioritised-control-lists/assay-control-lists/v1.0/assay-file-GC-FID-v1.0.md#protocol-ref-column) | Extraction|
-| 3 | Parameter Value[Post Extraction] | single column | False | - | - |  |  | [Controlled Terms](../../../docs/prioritised-control-lists/assay-control-lists/v1.0/assay-file-GC-FID-v1.0.md#parameter-valuepost-extraction-column) | |
-| 4 | Parameter Value[Derivatization] | single column | False | - | - |  |  | [Controlled Terms](../../../docs/prioritised-control-lists/assay-control-lists/v1.0/assay-file-GC-FID-v1.0.md#parameter-valuederivatization-column) | |
-| 5 | Extract Name | single column | False | - | - |  |  | [Controlled Terms](../../../docs/prioritised-control-lists/assay-control-lists/v1.0/assay-file-GC-FID-v1.0.md#extract-name-column) | |
-| 6 | Protocol REF | single column | True | - | - |  |  | [Controlled Terms](../../../docs/prioritised-control-lists/assay-control-lists/v1.0/assay-file-GC-FID-v1.0.md#protocol-ref-column) | Chromatography|
-| 7 | Parameter Value[Chromatography Instrument] | ontology column | True | 5 | - |  |  | [Controlled Terms](../../../docs/prioritised-control-lists/assay-control-lists/v1.0/assay-file-GC-FID-v1.0.md#parameter-valuechromatography-instrument-column) | |
-| 8 | Parameter Value[Autosampler model] | single column | False | - | - |  |  | [Controlled Terms](../../../docs/prioritised-control-lists/assay-control-lists/v1.0/assay-file-GC-FID-v1.0.md#parameter-valueautosampler-model-column) | |
-| 9 | Parameter Value[Column model] | single column | True | 5 | - |  |  | [Controlled Terms](../../../docs/prioritised-control-lists/assay-control-lists/v1.0/assay-file-GC-FID-v1.0.md#parameter-valuecolumn-model-column) | |
-| 10 | Parameter Value[Column type] | single column | True | 5 | - |  |  | [Controlled Terms](../../../docs/prioritised-control-lists/assay-control-lists/v1.0/assay-file-GC-FID-v1.0.md#parameter-valuecolumn-type-column) | |
-| 11 | Parameter Value[Guard column] | single column | False | - | - |  |  | [Controlled Terms](../../../docs/prioritised-control-lists/assay-control-lists/v1.0/assay-file-GC-FID-v1.0.md#parameter-valueguard-column-column) | |
-| 12 | Parameter Value[Detector] | single column | True | 1 | - |  |  | [Controlled Terms](../../../docs/prioritised-control-lists/assay-control-lists/v1.0/assay-file-GC-FID-v1.0.md#parameter-valuedetector-column) | |
-| 13 | Parameter Value[Temperature] | single column and unit ontology | False | - | - |  |  | [Controlled Terms](../../../docs/prioritised-control-lists/assay-control-lists/v1.0/assay-file-GC-FID-v1.0.md#parameter-valuetemperature-column) | |
-| 14 | Labeled Extract Name | single column | False | - | - |  |  | [Controlled Terms](../../../docs/prioritised-control-lists/assay-control-lists/v1.0/assay-file-GC-FID-v1.0.md#labeled-extract-name-column) | |
-| 15 | Label | ontology column | False | - | - |  |  | [Controlled Terms](../../../docs/prioritised-control-lists/assay-control-lists/v1.0/assay-file-GC-FID-v1.0.md#label-column) | |
-| 16 | Raw Spectral Data File | single column | False | - | - |  |  | [Controlled Terms](../../../docs/prioritised-control-lists/assay-control-lists/v1.0/assay-file-GC-FID-v1.0.md#raw-spectral-data-file-column) | |
-| 17 | Protocol REF | single column | False | - | - |  |  | [Controlled Terms](../../../docs/prioritised-control-lists/assay-control-lists/v1.0/assay-file-GC-FID-v1.0.md#protocol-ref-column) | Data transformation|
-| 18 | Normalization Name | single column | False | - | - |  |  | [Controlled Terms](../../../docs/prioritised-control-lists/assay-control-lists/v1.0/assay-file-GC-FID-v1.0.md#normalization-name-column) | |
-| 19 | Derived Spectral Data File | single column | False | - | - |  |  | [Controlled Terms](../../../docs/prioritised-control-lists/assay-control-lists/v1.0/assay-file-GC-FID-v1.0.md#derived-spectral-data-file-column) | |
-| 20 | Protocol REF | single column | True | - | - |  |  | [Controlled Terms](../../../docs/prioritised-control-lists/assay-control-lists/v1.0/assay-file-GC-FID-v1.0.md#protocol-ref-column) | Metabolite identification|
-| 21 | Data Transformation Name | single column | False | - | - |  |  | [Controlled Terms](../../../docs/prioritised-control-lists/assay-control-lists/v1.0/assay-file-GC-FID-v1.0.md#data-transformation-name-column) | |
-| 22 | Metabolite Assignment File | single column | True | 1 | - |  |  | [Controlled Terms](../../../docs/prioritised-control-lists/assay-control-lists/v1.0/assay-file-GC-FID-v1.0.md#metabolite-assignment-file-column) | |
+Download file template as [zip file](../../../template-files/assay-file/GC-FID/a_template-GC-FID-metabolite_profiling-v1.0.txt.zip) or [txt file](../../../template-files/assay-file/GC-FID/a_template-GC-FID-metabolite_profiling-v1.0.txt)
+
+| Header  | Column Structure  | Constraints | <div style="width: 300px">Description</div> | <div style="width: 100px">Examples</div> |
+|--------|-------------------|----------|-------------|----------
+| Sample Name | single column | *Required*<br/>MinLength: 1<br/><br/>[Controls](../../../prioritised-control-lists/assay-file-control-lists/GC-FID/GC-FID-v1.0.md#sample-name){:target="_blank"} |  |  |
+| Protocol REF | single column | *Required*<br/>Default: Extraction |  |  |
+| Parameter Value[Post Extraction] | single column |  |  |  |
+| Parameter Value[Derivatization] | single column |  |  |  |
+| Extract Name | single column |  |  |  |
+| Protocol REF | single column | *Required*<br/>Default: Chromatography |  |  |
+| Parameter Value[Chromatography Instrument] | ontology column | *Required*<br/>MinLength: 5 |  |  |
+| Parameter Value[Autosampler model] | single column |  |  |  |
+| Parameter Value[Column model] | single column | *Required*<br/>MinLength: 5 |  |  |
+| Parameter Value[Column type] | single column | *Required*<br/>MinLength: 5 |  |  |
+| Parameter Value[Guard column] | single column |  |  |  |
+| Parameter Value[Detector] | single column | *Required*<br/>MinLength: 1 |  |  |
+| Parameter Value[Temperature] | single column and unit ontology |  |  |  |
+| Labeled Extract Name | single column |  |  |  |
+| Label | ontology column |  |  |  |
+| Raw Spectral Data File | single column |  |  |  |
+| Protocol REF | single column | Default: Data transformation |  |  |
+| Normalization Name | single column |  |  |  |
+| Derived Spectral Data File | single column |  |  |  |
+| Protocol REF | single column | *Required*<br/>Default: Metabolite identification |  |  |
+| Data Transformation Name | single column |  |  |  |
+| Metabolite Assignment File | single column | *Required*<br/>MinLength: 1 |  |  |

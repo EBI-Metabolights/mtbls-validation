@@ -1,61 +1,63 @@
-# Msimaging Assay File Default Structure v1.0
+# MSImaging Assay File Default Structure v1.0
 
-| # |Header  | Column Structure  | Required | Min Length | Max Length | Description | Examples | Controlled Terms| Default Value  |
-|---|--------|-------------------|----------|------------|------------|-------------|----------|-----------------|----------------|
-| 1 | Sample Name | single column | True | 1 | - |  |  | [Controlled Terms](../../../docs/prioritised-control-lists/assay-control-lists/v1.0/assay-file-MSImaging-v1.0.md#sample-name-column) | |
-| 2 | Protocol REF | single column | True | - | - |  |  | [Controlled Terms](../../../docs/prioritised-control-lists/assay-control-lists/v1.0/assay-file-MSImaging-v1.0.md#protocol-ref-column) | Preparation|
-| 3 | Parameter Value[Sample mounting] | single column | True | 1 | - |  |  | [Controlled Terms](../../../docs/prioritised-control-lists/assay-control-lists/v1.0/assay-file-MSImaging-v1.0.md#parameter-valuesample-mounting-column) | |
-| 4 | Parameter Value[Sample preservation] | single column | True | 1 | - |  |  | [Controlled Terms](../../../docs/prioritised-control-lists/assay-control-lists/v1.0/assay-file-MSImaging-v1.0.md#parameter-valuesample-preservation-column) | |
-| 5 | Parameter Value[Tissue modification] | single column | True | 1 | - |  |  | [Controlled Terms](../../../docs/prioritised-control-lists/assay-control-lists/v1.0/assay-file-MSImaging-v1.0.md#parameter-valuetissue-modification-column) | |
-| 6 | Parameter Value[Sectioning instrument] | single column | False | - | - |  |  | [Controlled Terms](../../../docs/prioritised-control-lists/assay-control-lists/v1.0/assay-file-MSImaging-v1.0.md#parameter-valuesectioning-instrument-column) | |
-| 7 | Parameter Value[Section thickness] | single column and unit ontology | False | - | - |  |  | [Controlled Terms](../../../docs/prioritised-control-lists/assay-control-lists/v1.0/assay-file-MSImaging-v1.0.md#parameter-valuesection-thickness-column) | |
-| 8 | Parameter Value[Matrix] | single column | False | - | - |  |  | [Controlled Terms](../../../docs/prioritised-control-lists/assay-control-lists/v1.0/assay-file-MSImaging-v1.0.md#parameter-valuematrix-column) | |
-| 9 | Parameter Value[Matrix application] | single column | False | - | - |  |  | [Controlled Terms](../../../docs/prioritised-control-lists/assay-control-lists/v1.0/assay-file-MSImaging-v1.0.md#parameter-valuematrix-application-column) | |
-| 10 | Extract Name | single column | False | - | - |  |  | [Controlled Terms](../../../docs/prioritised-control-lists/assay-control-lists/v1.0/assay-file-MSImaging-v1.0.md#extract-name-column) | |
-| 11 | Labeled Extract Name | single column | False | - | - |  |  | [Controlled Terms](../../../docs/prioritised-control-lists/assay-control-lists/v1.0/assay-file-MSImaging-v1.0.md#labeled-extract-name-column) | |
-| 12 | Protocol REF | single column | True | - | - |  |  | [Controlled Terms](../../../docs/prioritised-control-lists/assay-control-lists/v1.0/assay-file-MSImaging-v1.0.md#protocol-ref-column) | Mass spectrometry|
-| 13 | Parameter Value[Scan polarity] | single column | True | 1 | - |  |  | [Controlled Terms](../../../docs/prioritised-control-lists/assay-control-lists/v1.0/assay-file-MSImaging-v1.0.md#parameter-valuescan-polarity-column) | |
-| 14 | Parameter Value[Scan m/z range] | single column | True | 1 | - |  |  | [Controlled Terms](../../../docs/prioritised-control-lists/assay-control-lists/v1.0/assay-file-MSImaging-v1.0.md#parameter-valuescan-m/z-range-column) | |
-| 15 | Parameter Value[Instrument] | single column | True | 1 | - |  |  | [Controlled Terms](../../../docs/prioritised-control-lists/assay-control-lists/v1.0/assay-file-MSImaging-v1.0.md#parameter-valueinstrument-column) | |
-| 16 | Parameter Value[Instrument manufacturer] | single column | False | - | - |  |  | [Controlled Terms](../../../docs/prioritised-control-lists/assay-control-lists/v1.0/assay-file-MSImaging-v1.0.md#parameter-valueinstrument-manufacturer-column) | |
-| 17 | Parameter Value[Ion source] | single column | True | 1 | - |  |  | [Controlled Terms](../../../docs/prioritised-control-lists/assay-control-lists/v1.0/assay-file-MSImaging-v1.0.md#parameter-valueion-source-column) | |
-| 18 | Parameter Value[Mass analyzer] | single column | True | 1 | - |  |  | [Controlled Terms](../../../docs/prioritised-control-lists/assay-control-lists/v1.0/assay-file-MSImaging-v1.0.md#parameter-valuemass-analyzer-column) | |
-| 19 | Parameter Value[Solvent] | single column | True | 1 | - |  |  | [Controlled Terms](../../../docs/prioritised-control-lists/assay-control-lists/v1.0/assay-file-MSImaging-v1.0.md#parameter-valuesolvent-column) | |
-| 20 | Parameter Value[Target material] | single column | False | - | - |  |  | [Controlled Terms](../../../docs/prioritised-control-lists/assay-control-lists/v1.0/assay-file-MSImaging-v1.0.md#parameter-valuetarget-material-column) | |
-| 21 | Parameter Value[Spatial resolution] | single column and unit ontology | False | - | - |  |  | [Controlled Terms](../../../docs/prioritised-control-lists/assay-control-lists/v1.0/assay-file-MSImaging-v1.0.md#parameter-valuespatial-resolution-column) | |
-| 22 | Parameter Value[Pixel size x] | single column and unit ontology | False | - | - |  |  | [Controlled Terms](../../../docs/prioritised-control-lists/assay-control-lists/v1.0/assay-file-MSImaging-v1.0.md#parameter-valuepixel-size-x-column) | |
-| 23 | Parameter Value[Pixel size y] | single column and unit ontology | False | - | - |  |  | [Controlled Terms](../../../docs/prioritised-control-lists/assay-control-lists/v1.0/assay-file-MSImaging-v1.0.md#parameter-valuepixel-size-y-column) | |
-| 24 | Parameter Value[Max count of pixel x] | single column | False | - | - |  |  | [Controlled Terms](../../../docs/prioritised-control-lists/assay-control-lists/v1.0/assay-file-MSImaging-v1.0.md#parameter-valuemax-count-of-pixel-x-column) | |
-| 25 | Parameter Value[Max count of pixel y] | single column | False | - | - |  |  | [Controlled Terms](../../../docs/prioritised-control-lists/assay-control-lists/v1.0/assay-file-MSImaging-v1.0.md#parameter-valuemax-count-of-pixel-y-column) | |
-| 26 | Parameter Value[Max dimension x] | single column and unit ontology | False | - | - |  |  | [Controlled Terms](../../../docs/prioritised-control-lists/assay-control-lists/v1.0/assay-file-MSImaging-v1.0.md#parameter-valuemax-dimension-x-column) | |
-| 27 | Parameter Value[Max dimension y] | single column and unit ontology | False | - | - |  |  | [Controlled Terms](../../../docs/prioritised-control-lists/assay-control-lists/v1.0/assay-file-MSImaging-v1.0.md#parameter-valuemax-dimension-y-column) | |
-| 28 | Parameter Value[Inlet type] | single column | False | - | - |  |  | [Controlled Terms](../../../docs/prioritised-control-lists/assay-control-lists/v1.0/assay-file-MSImaging-v1.0.md#parameter-valueinlet-type-column) | |
-| 29 | Parameter Value[Detector] | single column | False | - | - |  |  | [Controlled Terms](../../../docs/prioritised-control-lists/assay-control-lists/v1.0/assay-file-MSImaging-v1.0.md#parameter-valuedetector-column) | |
-| 30 | Parameter Value[Detector mode] | single column | False | - | - |  |  | [Controlled Terms](../../../docs/prioritised-control-lists/assay-control-lists/v1.0/assay-file-MSImaging-v1.0.md#parameter-valuedetector-mode-column) | |
-| 31 | Parameter Value[Resolving power] | single column | True | 1 | - |  |  | [Controlled Terms](../../../docs/prioritised-control-lists/assay-control-lists/v1.0/assay-file-MSImaging-v1.0.md#parameter-valueresolving-power-column) | |
-| 32 | Parameter Value[Resolving power m/z] | single column | True | 1 | - |  |  | [Controlled Terms](../../../docs/prioritised-control-lists/assay-control-lists/v1.0/assay-file-MSImaging-v1.0.md#parameter-valueresolving-power-m/z-column) | |
-| 33 | Parameter Value[Native spectrum identifier format] | single column | False | - | - |  |  | [Controlled Terms](../../../docs/prioritised-control-lists/assay-control-lists/v1.0/assay-file-MSImaging-v1.0.md#parameter-valuenative-spectrum-identifier-format-column) | |
-| 34 | Parameter Value[Data file content] | single column | False | - | - |  |  | [Controlled Terms](../../../docs/prioritised-control-lists/assay-control-lists/v1.0/assay-file-MSImaging-v1.0.md#parameter-valuedata-file-content-column) | |
-| 35 | Parameter Value[Spectrum representation] | single column | False | - | - |  |  | [Controlled Terms](../../../docs/prioritised-control-lists/assay-control-lists/v1.0/assay-file-MSImaging-v1.0.md#parameter-valuespectrum-representation-column) | |
-| 36 | Parameter Value[Raw data file format] | single column | False | - | - |  |  | [Controlled Terms](../../../docs/prioritised-control-lists/assay-control-lists/v1.0/assay-file-MSImaging-v1.0.md#parameter-valueraw-data-file-format-column) | |
-| 37 | Parameter Value[Instrument software] | single column | False | - | - |  |  | [Controlled Terms](../../../docs/prioritised-control-lists/assay-control-lists/v1.0/assay-file-MSImaging-v1.0.md#parameter-valueinstrument-software-column) | |
-| 38 | Parameter Value[Instrument software version] | single column | False | - | - |  |  | [Controlled Terms](../../../docs/prioritised-control-lists/assay-control-lists/v1.0/assay-file-MSImaging-v1.0.md#parameter-valueinstrument-software-version-column) | |
-| 39 | Parameter Value[Line scan direction] | single column | True | 1 | - |  |  | [Controlled Terms](../../../docs/prioritised-control-lists/assay-control-lists/v1.0/assay-file-MSImaging-v1.0.md#parameter-valueline-scan-direction-column) | |
-| 40 | Parameter Value[Linescan sequence] | single column | True | 1 | - |  |  | [Controlled Terms](../../../docs/prioritised-control-lists/assay-control-lists/v1.0/assay-file-MSImaging-v1.0.md#parameter-valuelinescan-sequence-column) | |
-| 41 | Parameter Value[Scan pattern] | single column | True | 1 | - |  |  | [Controlled Terms](../../../docs/prioritised-control-lists/assay-control-lists/v1.0/assay-file-MSImaging-v1.0.md#parameter-valuescan-pattern-column) | |
-| 42 | Parameter Value[Scan type] | single column | True | 1 | - |  |  | [Controlled Terms](../../../docs/prioritised-control-lists/assay-control-lists/v1.0/assay-file-MSImaging-v1.0.md#parameter-valuescan-type-column) | |
-| 43 | Parameter Value[Number of scans] | single column | False | - | - |  |  | [Controlled Terms](../../../docs/prioritised-control-lists/assay-control-lists/v1.0/assay-file-MSImaging-v1.0.md#parameter-valuenumber-of-scans-column) | |
-| 44 | MS Assay Name | single column | False | - | - |  |  | [Controlled Terms](../../../docs/prioritised-control-lists/assay-control-lists/v1.0/assay-file-MSImaging-v1.0.md#ms-assay-name-column) | |
-| 45 | Raw Spectral Data File | single column | False | - | - |  |  | [Controlled Terms](../../../docs/prioritised-control-lists/assay-control-lists/v1.0/assay-file-MSImaging-v1.0.md#raw-spectral-data-file-column) | |
-| 46 | Protocol REF | single column | True | - | - |  |  | [Controlled Terms](../../../docs/prioritised-control-lists/assay-control-lists/v1.0/assay-file-MSImaging-v1.0.md#protocol-ref-column) | Histology|
-| 47 | Parameter Value[Stain] | single column | False | - | - |  |  | [Controlled Terms](../../../docs/prioritised-control-lists/assay-control-lists/v1.0/assay-file-MSImaging-v1.0.md#parameter-valuestain-column) | |
-| 48 | Parameter Value[High-res image] | single column | False | - | - |  |  | [Controlled Terms](../../../docs/prioritised-control-lists/assay-control-lists/v1.0/assay-file-MSImaging-v1.0.md#parameter-valuehigh-res-image-column) | |
-| 49 | Parameter Value[Low-res image] | single column | False | - | - |  |  | [Controlled Terms](../../../docs/prioritised-control-lists/assay-control-lists/v1.0/assay-file-MSImaging-v1.0.md#parameter-valuelow-res-image-column) | |
-| 50 | Protocol REF | single column | True | - | - |  |  | [Controlled Terms](../../../docs/prioritised-control-lists/assay-control-lists/v1.0/assay-file-MSImaging-v1.0.md#protocol-ref-column) | Data transformation|
-| 51 | Normalization Name | single column | False | - | - |  |  | [Controlled Terms](../../../docs/prioritised-control-lists/assay-control-lists/v1.0/assay-file-MSImaging-v1.0.md#normalization-name-column) | |
-| 52 | Derived Spectral Data File | single column | False | - | - |  |  | [Controlled Terms](../../../docs/prioritised-control-lists/assay-control-lists/v1.0/assay-file-MSImaging-v1.0.md#derived-spectral-data-file-column) | |
-| 53 | Parameter Value[Data Transformation software] | single column | False | - | - |  |  | [Controlled Terms](../../../docs/prioritised-control-lists/assay-control-lists/v1.0/assay-file-MSImaging-v1.0.md#parameter-valuedata-transformation-software-column) | |
-| 54 | Parameter Value[Data Transformation software version] | single column | False | - | - |  |  | [Controlled Terms](../../../docs/prioritised-control-lists/assay-control-lists/v1.0/assay-file-MSImaging-v1.0.md#parameter-valuedata-transformation-software-version-column) | |
-| 55 | Protocol REF | single column | True | - | - |  |  | [Controlled Terms](../../../docs/prioritised-control-lists/assay-control-lists/v1.0/assay-file-MSImaging-v1.0.md#protocol-ref-column) | Metabolite identification|
-| 56 | Data Transformation Name | single column | False | - | - |  |  | [Controlled Terms](../../../docs/prioritised-control-lists/assay-control-lists/v1.0/assay-file-MSImaging-v1.0.md#data-transformation-name-column) | |
-| 57 | Metabolite Assignment File | single column | True | 1 | - |  |  | [Controlled Terms](../../../docs/prioritised-control-lists/assay-control-lists/v1.0/assay-file-MSImaging-v1.0.md#metabolite-assignment-file-column) | |
+Download file template as [zip file](../../../template-files/assay-file/MSImaging/a_template-MSImaging-metabolite_profiling-v1.0.txt.zip) or [txt file](../../../template-files/assay-file/MSImaging/a_template-MSImaging-metabolite_profiling-v1.0.txt)
+
+| Header  | Column Structure  | Constraints | <div style="width: 300px">Description</div> | <div style="width: 100px">Examples</div> |
+|--------|-------------------|----------|-------------|----------
+| Sample Name | single column | *Required*<br/>MinLength: 1<br/><br/>[Controls](../../../prioritised-control-lists/assay-file-control-lists/MSImaging/MSImaging-v1.0.md#sample-name){:target="_blank"} |  |  |
+| Protocol REF | single column | *Required*<br/>Default: Preparation |  |  |
+| Parameter Value[Sample mounting] | single column | *Required*<br/>MinLength: 1 |  |  |
+| Parameter Value[Sample preservation] | single column | *Required*<br/>MinLength: 1 |  |  |
+| Parameter Value[Tissue modification] | single column | *Required*<br/>MinLength: 1 |  |  |
+| Parameter Value[Sectioning instrument] | single column |  |  |  |
+| Parameter Value[Section thickness] | single column and unit ontology |  |  |  |
+| Parameter Value[Matrix] | single column |  |  |  |
+| Parameter Value[Matrix application] | single column |  |  |  |
+| Extract Name | single column |  |  |  |
+| Labeled Extract Name | single column |  |  |  |
+| Protocol REF | single column | *Required*<br/>Default: Mass spectrometry |  |  |
+| Parameter Value[Scan polarity] | single column | *Required*<br/>MinLength: 1<br/><br/>[Controls](../../../prioritised-control-lists/assay-file-control-lists/MSImaging/MSImaging-v1.0.md#parameter-valuescan-polarity){:target="_blank"} |  |  |
+| Parameter Value[Scan m/z range] | single column | *Required*<br/>MinLength: 1 |  |  |
+| Parameter Value[Instrument] | single column | *Required*<br/>MinLength: 1 |  |  |
+| Parameter Value[Instrument manufacturer] | single column |  |  |  |
+| Parameter Value[Ion source] | single column | *Required*<br/>MinLength: 1 |  |  |
+| Parameter Value[Mass analyzer] | single column | *Required*<br/>MinLength: 1<br/><br/>[Controls](../../../prioritised-control-lists/assay-file-control-lists/MSImaging/MSImaging-v1.0.md#parameter-valuemass-analyzer){:target="_blank"} |  |  |
+| Parameter Value[Solvent] | single column | *Required*<br/>MinLength: 1 |  |  |
+| Parameter Value[Target material] | single column |  |  |  |
+| Parameter Value[Spatial resolution] | single column and unit ontology |  |  |  |
+| Parameter Value[Pixel size x] | single column and unit ontology |  |  |  |
+| Parameter Value[Pixel size y] | single column and unit ontology |  |  |  |
+| Parameter Value[Max count of pixel x] | single column |  |  |  |
+| Parameter Value[Max count of pixel y] | single column |  |  |  |
+| Parameter Value[Max dimension x] | single column and unit ontology |  |  |  |
+| Parameter Value[Max dimension y] | single column and unit ontology |  |  |  |
+| Parameter Value[Inlet type] | single column |  |  |  |
+| Parameter Value[Detector] | single column |  |  |  |
+| Parameter Value[Detector mode] | single column |  |  |  |
+| Parameter Value[Resolving power] | single column | *Required*<br/>MinLength: 1 |  |  |
+| Parameter Value[Resolving power m/z] | single column | *Required*<br/>MinLength: 1 |  |  |
+| Parameter Value[Native spectrum identifier format] | single column |  |  |  |
+| Parameter Value[Data file content] | single column |  |  |  |
+| Parameter Value[Spectrum representation] | single column |  |  |  |
+| Parameter Value[Raw data file format] | single column |  |  |  |
+| Parameter Value[Instrument software] | single column |  |  |  |
+| Parameter Value[Instrument software version] | single column |  |  |  |
+| Parameter Value[Line scan direction] | single column | *Required*<br/>MinLength: 1 |  |  |
+| Parameter Value[Linescan sequence] | single column | *Required*<br/>MinLength: 1 |  |  |
+| Parameter Value[Scan pattern] | single column | *Required*<br/>MinLength: 1 |  |  |
+| Parameter Value[Scan type] | single column | *Required*<br/>MinLength: 1 |  |  |
+| Parameter Value[Number of scans] | single column |  |  |  |
+| MS Assay Name | single column | [Controls](../../../prioritised-control-lists/assay-file-control-lists/MSImaging/MSImaging-v1.0.md#ms-assay-name){:target="_blank"} |  |  |
+| Raw Spectral Data File | single column |  |  |  |
+| Protocol REF | single column | *Required*<br/>Default: Histology |  |  |
+| Parameter Value[Stain] | single column |  |  |  |
+| Parameter Value[High-res image] | single column |  |  |  |
+| Parameter Value[Low-res image] | single column |  |  |  |
+| Protocol REF | single column | *Required*<br/>Default: Data transformation |  |  |
+| Normalization Name | single column |  |  |  |
+| Derived Spectral Data File | single column |  |  |  |
+| Parameter Value[Data Transformation software] | single column |  |  |  |
+| Parameter Value[Data Transformation software version] | single column |  |  |  |
+| Protocol REF | single column | *Required*<br/>Default: Metabolite identification |  |  |
+| Data Transformation Name | single column |  |  |  |
+| Metabolite Assignment File | single column | *Required*<br/>MinLength: 1 |  |  |
