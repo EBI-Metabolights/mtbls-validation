@@ -834,7 +834,10 @@ rule_s_200_200_002_02 contains result if {
 #  priority: HIGH
 #  section: samples.general
 rule_s_200_900_001_01 contains result if {
-	ontologies := f.get_table_ontologies(rego.metadata.rule(), input.samples)
-	count(ontologies) > 0
+	some filename, sample_table in input.samples
+	some header in sample_table.table.headers
+
+	ontologies := f.get_table_ontologies(rego.metadata.rule(), sample_table, header)
+	count(ontologies.values) > 0
 	result := ontologies
 }

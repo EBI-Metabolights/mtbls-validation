@@ -1024,8 +1024,10 @@ rule_a_200_600_001_01 contains result if {
 #  priority: HIGH
 #  section: assay.general
 rule_a_200_900_001_01 contains result if {
-	ontologies := f.get_table_ontologies(rego.metadata.rule(), input.assays)
-	count(ontologies) > 0
+	some filename, assay in input.assays
+	some header in assay.table.headers
+	ontologies := f.get_table_ontologies(rego.metadata.rule(), assay, header)
+	count(ontologies.values) > 0
 
 	result := ontologies
 }
