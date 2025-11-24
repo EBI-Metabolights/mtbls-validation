@@ -2354,93 +2354,196 @@ rule_i_100_360_011_07 contains result if {
 investigation_ontologies := ontology_set if {
 	measurement_types := {{
 		"key": "Study Assay Measurement Type",
-		"name": assay.fileName,
-		"value": sprintf("[%v, %v, %v]", [onto.term, onto.termSourceRef, onto.termAccessionNumber]),
+		"nameType": "assay file name",
+		"values": values,
 	} |
-		some study in input.investigation.studies
+		values := {
+		{
+			"name": assay.fileName,
+			"value": sprintf("[%v, %v, %v]", [onto.term, onto.termSourceRef, onto.termAccessionNumber]),
+		} |
+			some study in input.investigation.studies
 
-		some assay in study.studyAssays.assays
+			some assay in study.studyAssays.assays
 
-		onto := assay.measurementType
-		count(onto.term) > 0
-		count(onto.termSourceRef) > 0
-		count(onto.termAccessionNumber) > 0
+			onto := assay.measurementType
+			count(onto.term) > 0
+			count(onto.termSourceRef) > 0
+			count(onto.termAccessionNumber) > 0
+		}
+		count(values) > 0
 	}
 	technology_types := {{
 		"key": "Study Assay Technology Type",
-		"name": assay.fileName,
-		"value": sprintf("[%v, %v, %v]", [onto.term, onto.termSourceRef, onto.termAccessionNumber]),
+		"nameType": "assay file name",
+		"values": values,
 	} |
-		some study in input.investigation.studies
+		values := {
+		{
+			"name": assay.fileName,
+			"value": sprintf("[%v, %v, %v]", [onto.term, onto.termSourceRef, onto.termAccessionNumber]),
+		} |
+			some study in input.investigation.studies
 
-		some assay in study.studyAssays.assays
+			some assay in study.studyAssays.assays
 
-		onto := assay.technologyType
-		count(onto.term) > 0
-		count(onto.termSourceRef) > 0
-		count(onto.termAccessionNumber) > 0
+			onto := assay.technologyType
+			count(onto.term) > 0
+			count(onto.termSourceRef) > 0
+			count(onto.termAccessionNumber) > 0
+		}
+		count(values) > 0
 	}
 	design_descriptors := {{
 		"key": "Study Design Type",
-		"name": study.title,
-		"value": sprintf("[%v, %v, %v]", [onto.term, onto.termSourceRef, onto.termAccessionNumber]),
+		"nameType": "study title",
+		"values": values,
 	} |
-		some study in input.investigation.studies
+		values := {
+		{
+			"name": study.title,
+			"value": sprintf("[%v, %v, %v]", [onto.term, onto.termSourceRef, onto.termAccessionNumber]),
+		} |
+			some study in input.investigation.studies
 
-		some onto in study.studyDesignDescriptors.designTypes
+			some onto in study.studyDesignDescriptors.designTypes
 
-		count(onto.term) > 0
-		count(onto.termSourceRef) > 0
-		count(onto.termAccessionNumber) > 0
+			count(onto.term) > 0
+			count(onto.termSourceRef) > 0
+			count(onto.termAccessionNumber) > 0
+		}
+		count(values) > 0
 	}
 	study_factors := {{
 		"key": "Study Factor Type",
-		"name": factor.name,
-		"value": sprintf("[%v, %v, %v]", [onto.term, onto.termSourceRef, onto.termAccessionNumber]),
+		"nameType": "factor name",
+		"values": values,
 	} |
-		some study in input.investigation.studies
+		values := {
+		{
+			"name": factor.name,
+			"value": sprintf("[%v, %v, %v]", [onto.term, onto.termSourceRef, onto.termAccessionNumber]),
+		} |
+			some study in input.investigation.studies
 
-		some factor in study.studyFactors.factors
-		onto := factor.type
-		count(onto.term) > 0
-		count(onto.termSourceRef) > 0
-		count(onto.termAccessionNumber) > 0
+			some factor in study.studyFactors.factors
+			onto := factor.type
+			count(onto.term) > 0
+			count(onto.termSourceRef) > 0
+			count(onto.termAccessionNumber) > 0
+		}
+		count(values) > 0
 	}
+
 	study_publications := {{
 		"key": "Study Publication Status",
-		"name": publication.title,
-		"value": sprintf("[%v, %v, %v]", [onto.term, onto.termSourceRef, onto.termAccessionNumber]),
+		"nameType": "publication title",
+		"values": values,
 	} |
-		some study in input.investigation.studies
+		values := {
+		{
+			"name": publication.title,
+			"value": sprintf("[%v, %v, %v]", [onto.term, onto.termSourceRef, onto.termAccessionNumber]),
+		} |
+			some study in input.investigation.studies
 
-		some publication in study.studyPublications.publications
-		onto := publication.status
-		count(onto.term) > 0
-		count(onto.termSourceRef) > 0
-		count(onto.termAccessionNumber) > 0
+			some publication in study.studyPublications.publications
+			onto := publication.status
+			count(onto.term) > 0
+			count(onto.termSourceRef) > 0
+			count(onto.termAccessionNumber) > 0
+		}
+		count(values) > 0
 	}
 	contact_roles := {{
 		"key": "Study Contact Roles",
-		"name": contact.email,
-		"value": sprintf("[%v, %v, %v]", [onto.term, onto.termSourceRef, onto.termAccessionNumber]),
+		"nameType": "contact email",
+		"values": values,
 	} |
-		some study in input.investigation.studies
+		values := {
+		{
+			"name": contact.email,
+			"value": sprintf("[%v, %v, %v]", [onto.term, onto.termSourceRef, onto.termAccessionNumber]),
+		} |
+			some idx, study in input.investigation.studies
+			some contact in study.studyContacts.people
+			some onto in contact.roles
 
-		some contact in study.studyContacts.people
-		some onto in contact.roles
-
-		count(onto.term) > 0
-		count(onto.termSourceRef) > 0
-		count(onto.termAccessionNumber) > 0
+			count(onto.term) > 0
+			count(onto.termSourceRef) > 0
+			count(onto.termAccessionNumber) > 0
+		}
+		count(values) > 0
 	}
-	ontology_set := ((((measurement_types | technology_types) | study_publications) | contact_roles) | design_descriptors) | study_factors
 
+	protocol_types := {{
+		"key": "Study Protocol Type",
+		"nameType": "protocol name",
+		"values": values,
+	} |
+		values := {
+		{
+			"name": protocol.name,
+			"value": sprintf("[%v, %v, %v]", [onto.term, onto.termSourceRef, onto.termAccessionNumber]),
+		} |
+			some idx, study in input.investigation.studies
+			some protocol in study.studyProtocols.protocols
+			onto := protocol.protocolType
+
+			count(onto.term) > 0
+			count(onto.termSourceRef) > 0
+			count(onto.termAccessionNumber) > 0
+		}
+		count(values) > 0
+	}
+
+	parameter_names := {{
+		"key": "Study Protocol Parameters Name",
+		"nameType": "protocol paname",
+		"values": values,
+	} |
+		values := {
+		{
+			"name": protocol.name,
+			"value": sprintf("[%v, %v, %v]", [onto.term, onto.termSourceRef, onto.termAccessionNumber]),
+		} |
+			some idx, study in input.investigation.studies
+			some protocol in study.studyProtocols.protocols
+			some onto in protocol.parameters
+
+			count(onto.term) > 0
+			count(onto.termSourceRef) > 0
+			count(onto.termAccessionNumber) > 0
+		}
+		count(values) > 0
+	}
+
+	components := {{
+		"key": "Study Protocol Parameters Name",
+		"nameType": "protocol name",
+		"values": values,
+	} |
+		values := {
+		{
+			"name": protocol.name,
+			"value": sprintf("[%v, %v, %v]", [onto.type, onto.termSourceRef, onto.termAccessionNumber]),
+		} |
+			some idx, study in input.investigation.studies
+			some protocol in study.studyProtocols.protocols
+			some onto in protocol.components
+			count(onto.type) > 0
+			count(onto.termSourceRef) > 0
+			count(onto.termAccessionNumber) > 0
+		}
+		count(values) > 0
+	}
+	ontology_set := (((((((measurement_types | technology_types) | study_publications) | contact_roles) | design_descriptors) | study_factors) | protocol_types) | parameter_names) | components
 	count(ontology_set) > 0
 }
 
 # METADATA
-# title: Ontology term is not validated on Ontology Search Service (e.g. OLS).
-# description: Ensure ontology term is valid.
+# title: Ontology terms are not validated on ontology search service (e.g. OLS).
+# description: Ensure ontology terms are valid and accessible on ontology search service.
 # custom:
 #  rule_id: rule_i_200_900_001_01
 #  type: WARNING
@@ -2451,8 +2554,10 @@ rule_i_200_900_001_01 contains result if {
 
 	source := input.investigationFilePath
 	meta := rego.metadata.rule()
-	msg := sprintf("%v ontology term defined for '%v' is not validated on ontology search services: %v", [ontology.key, ontology.name, ontology.value])
-	str_value := sprintf("%v: %v", [ontology.key, ontology.value])
+
+	msg := sprintf("%v ontology terms are not validated on ontology search service.", [ontology.key])
+	values_updates = [sprintf("%v\t%v: %v\t%v", [ontology.key, ontology.nameType, x.name, x.value]) | some x in ontology.values]
+
 	result := {
 		"identifier": meta.custom.rule_id,
 		"title": meta.title,
@@ -2463,7 +2568,7 @@ rule_i_200_900_001_01 contains result if {
 		"sourceFile": source,
 		"sourceColumnIndex": "",
 		"sourceColumnHeader": "",
-		"values": [str_value],
+		"values": values_updates,
 		"hasMoreViolations": false,
 		"totalViolations": 1,
 		"violation": msg,

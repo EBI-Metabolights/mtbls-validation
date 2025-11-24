@@ -1016,13 +1016,16 @@ rule_a_200_600_001_01 contains result if {
 }
 
 # METADATA
-# title: Ontology terms are not validated on Ontology Search Service (e.g. OLS).
-# description: Ensure ontology terms are valid.
+# title: Ontology terms are not validated on ontology search service (e.g. OLS).
+# description: Ensure ontology terms are valid and accessible on ontology search service.
 # custom:
 #  rule_id: rule_a_200_900_001_01
 #  type: WARNING
 #  priority: HIGH
 #  section: assay.general
 rule_a_200_900_001_01 contains result if {
-	result := f.get_table_ontologies(rego.metadata.rule(), input.samples)
+	ontologies := f.get_table_ontologies(rego.metadata.rule(), input.assays)
+	count(ontologies) > 0
+
+	result := ontologies
 }

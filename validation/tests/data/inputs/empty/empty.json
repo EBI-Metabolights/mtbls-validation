@@ -20,7 +20,53 @@
             "comments": [],
             "people": []
         },
-        "studies": []
+        "studies": [
+            {
+                "comments": [],
+                "identifier": "",
+                "title": "",
+                "description": "",
+                "submissionDate": "",
+                "publicReleaseDate": "",
+                "fileName": "",
+                "studyCategory": "",
+                "templateVersion": "",
+                "sampleTemplate": "",
+                "mhdAccession": "",
+                "mhdModelVersion": "",
+                "createdAt": "",
+                "revisionNumber": "",
+                "revisionDate": "",
+                "revisionComment": "",
+                "datasetLicense": "",
+                "funders": [],
+                "characteristicTypes": [],
+                "studyDesignDescriptors": {
+                    "comments": [],
+                    "designTypes": []
+                },
+                "studyPublications": {
+                    "comments": [],
+                    "publications": []
+                },
+                "studyFactors": {
+                    "comments": [],
+                    "factors": []
+                },
+                "studyAssays": {
+                    "comments": [],
+                    "assays": []
+                },
+                "studyProtocols": {
+                    "comments": [],
+                    "protocols": []
+                },
+                "studyContacts": {
+                    "comments": [],
+                    "people": []
+                }
+            }
+        ]
     },
     "samples": {},
     "assays": {},

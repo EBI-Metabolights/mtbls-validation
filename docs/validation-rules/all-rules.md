@@ -85,7 +85,7 @@
 | 83 | rule_a_200_400_002_01 | WARNING | Values for NMR Assay Name column not unique in assay file\. | All NMR Assay Name column values should be unique\. |
 | 84 | rule_a_200_500_001_01 | ERROR | Values for Derived Spectral Data File column not correct extension in assay file\. | All Derived Spectral Data File column values should have extension found in control list\. |
 | 85 | rule_a_200_600_001_01 | WARNING | Column Type column values are not same as assay file name\. | if all values in Column Type are in a control list, technique name defined in control list should be in assay file name\. |
-| 86 | rule_a_200_900_001_01 | WARNING | Ontology terms are not validated on Ontology Search Service \(e\.g\. OLS\)\. | Ensure ontology terms are valid\. |
+| 86 | rule_a_200_900_001_01 | WARNING | Ontology terms are not validated on ontology search service \(e\.g\. OLS\)\. | Ensure ontology terms are valid and accessible on ontology search service\. |
 | 87 | rule_f_400_090_001_01 | ERROR | Referenced data files not within study FILES folder\. | Referenced data files must exist within study FILES folder\. Reference data files with format FILES/\(sub folder if exists\)/\(file name\) in assay file\. |
 | 88 | rule_f_400_090_001_02 | ERROR | Referenced data files do not start with FILES/ prefix\. | Reference data files with format FILES/\(sub folder if exists>>/\(file name>> in assay file\. |
 | 89 | rule_f_400_090_001_03 | ERROR | Referenced data files contain invalid characters\. There are invalid characters in a referenced file name\. | Use only \.\- \_A\-Za\-z0\-9 characters as a referenced data file name\. |
@@ -184,7 +184,7 @@
 | 182 | rule_i_100_360_011_05 | ERROR | Study Person Additional Email Address is not valid\. | Study Person Additional Email Address must have valid format\. |
 | 183 | rule_i_100_360_011_06 | WARNING | Study Person ORCID is not defined for principal investigator\. | Study Person ORCID is not defined for principal investigator\. |
 | 184 | rule_i_100_360_011_07 | WARNING | Study Person Affiliation ROR ID is not defined for principal investigator\. | Study Person Affiliation ROR ID is not defined for principal investigator\. |
-| 185 | rule_i_200_900_001_01 | WARNING | Ontology term is not validated on Ontology Search Service \(e\.g\. OLS\)\. | Ensure ontology term is valid\. |
+| 185 | rule_i_200_900_001_01 | WARNING | Ontology terms are not validated on ontology search service \(e\.g\. OLS\)\. | Ensure ontology terms are valid and accessible on ontology search service\. |
 | 186 | rule_m_100_100_001_01 | ERROR | Default columns not in metabolite assignment file\. | Default columns must exist in metabolite assignment file\. |
 | 187 | rule_m_100_100_001_02 | ERROR | Unordered columns in metabolite assignment file\. | Unordered columns in metabolite assignment file\. |
 | 188 | rule_m_100_100_001_03 | ERROR | Empty columns in metabolite assignment file\. | Empty columns must not exist in metabolite assignment file\. All column headers should be defined\. |
@@ -252,4 +252,4 @@
 | 250 | rule_s_200_200_001_02 | ERROR | Values for Sample Name column not in any assay file\. | Each sample name should be referenced at least one time in assay files\. |
 | 251 | rule_s_200_200_002_01 | WARNING | There are empty values in Factor Value column\. | Factor values should be defined for each row\. |
 | 252 | rule_s_200_200_002_02 | ERROR | Factor Value column not complete\. | At least two values must be defined in Factor Value column\. |
-| 253 | rule_s_200_900_001_01 | WARNING | Ontology terms are not validated on Ontology Search Service \(e\.g\. OLS\)\. | Ensure ontology terms are valid\. |
+| 253 | rule_s_200_900_001_01 | WARNING | Ontology terms are not validated on ontology search service \(e\.g\. OLS\)\. | Ensure ontology terms are valid and accessible on ontology search service\. |

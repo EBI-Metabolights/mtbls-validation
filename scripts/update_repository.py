@@ -26,6 +26,7 @@ from scripts.update.rules.update_rego_rule_metadata_comments import (
 from scripts.update.rules.update_template_json_files import (
     update_template_json_files,
 )
+from scripts.update.test_data.minimum_01 import create_test_input_json_files
 from scripts.utils import read_rules_from_excel
 
 
@@ -63,7 +64,7 @@ if __name__ == "__main__":
     update_rego_rule_metadata_comments(excel_rules)
 
     check_differences_between_rules_and_tests(force=True)
-
+    create_test_input_json_files()
     update_control_list_json_files()
     update_template_json_files()
     create_all_templates_json()

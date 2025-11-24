@@ -1,18 +1,26 @@
 import datetime
 import json
-import os
 import re
 import zipfile
+from pathlib import Path
 from typing import Union
 
 import pandas as pd
 
+FIXED_DATE_TIME = (2025, 1, 1, 0, 0, 0)
+
 
 def zip_file(input_path, zip_path):
-    file_name = os.path.basename(input_path)
-
+    zip_path = Path(zip_path)
+    input_path = Path(input_path)
+    zi = zipfile.ZipInfo(input_path.name)
+    zi.date_time = FIXED_DATE_TIME
+    zi.compress_type = zipfile.ZIP_DEFLATED
+    zi.external_attr = 0o644 << 16
+    content = input_path.read_bytes()
     with zipfile.ZipFile(zip_path, "w", zipfile.ZIP_DEFLATED) as z:
-        z.write(input_path, arcname=file_name)
+        z.writestr(zi, content)
+    return zip_path
 
 
 class DateEncoder(json.JSONEncoder):
