@@ -384,6 +384,7 @@ accession_number_min_length_check_for_term(meta, source, file_name, column_index
 		count(value) > 0
 		accession_number := source[file_name].table.data[accession_number_column_name][j]
 		source_ref := source[file_name].table.data[source_column_name][j]
+		count(source_ref) > 0
 		count(accession_number) < min_length
 		x1 := (source[file_name].table.rowOffset + j) + 1
 		x2 := value
