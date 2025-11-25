@@ -584,7 +584,7 @@ check_ontology_source_rule(
 	accession_column_index := header.columnIndex + 2
 	accession_column_name := table.columns[accession_column_index]
 
-	violated_values = {sprintf("Row: %v, column: Term Source REF of %v, value: %v", [j + 1, column_header, source_ref]) |
+	violated_values = {sprintf("Row: %v, column: Term Source REF of %v, value: [%v, %v, %v]", [j + 1, column_header, term, source_ref, accession]) |
 		some j, term in table.data[term_name]
 		count(term) > 0
 		source_ref := table.data[source_ref_column_name][j]
@@ -649,7 +649,7 @@ check_unit_ontology_source_rule(
 	accession_column_index := header.columnIndex + 3
 	accession_column_name := table.columns[accession_column_index]
 
-	violated_values = {sprintf("Row: %v, column: Unit Term Source REF of %v, value: %v", [j + 1, column_header, source_ref]) |
+	violated_values = {sprintf("Row: %v, column: Unit Term Source REF of %v, value: %v, unit: [%v, %v, %v]", [j + 1, column_header, term, unit_value, source_ref, accession]) |
 		some j, term in table.data[term_name]
 		unit_value := table.data[unit_name][j]
 		count(term) > 0
@@ -717,7 +717,7 @@ check_unit_any_ontology_source_rule(
 	accession_column_index := header.columnIndex + 3
 	accession_column_name := table.columns[accession_column_index]
 
-	violated_values = {sprintf("Row: %v, column: Unit Term Source REF of %v, value: %v", [j + 1, column_header, source_ref]) |
+	violated_values = {sprintf("Row: %v, column: Unit Term Source REF of %v, value: %v, unit: [%v, %v, %v]", [j + 1, column_header, term, unit_value, source_ref, accession]) |
 		some j, term in table.data[term_name]
 		unit_value := table.data[unit_name][j]
 		count(term) > 0
@@ -781,7 +781,7 @@ check_any_ontology_term_rule(
 	accession_column_index := header.columnIndex + 2
 	accession_column_name := table.columns[accession_column_index]
 
-	violated_values = {sprintf("Row: %v, column: Term Source REF of %v, value: %v", [j + 1, column_header, source_ref]) |
+	violated_values = {sprintf("Row: %v, column: Term Source REF of %v, value: [%v, %v, %v]", [j + 1, column_header, term, source_ref, accession]) |
 		some j, term in table.data[term_name]
 		count(term) > 0
 		source_ref := table.data[source_ref_column_name][j]
@@ -866,7 +866,7 @@ check_selected_ontology_terms_rule(
 	}
 	count(violated_values) > 0
 	terms_str := concat(", ", terms)
-	file_column_header := sprintf("%v (of %v) - %v", [search_header, column_header])
+	file_column_header := sprintf("%v (of %v)", [search_header, column_header])
 	desc := sprintf("%v: %v", [rule.ruleName, message_suffix])
 	file_column_index := source_ref_column_index + 1
 	result := format_with_desc(meta, file_name, file_column_index, file_column_header, violated_values, desc, terms_str)

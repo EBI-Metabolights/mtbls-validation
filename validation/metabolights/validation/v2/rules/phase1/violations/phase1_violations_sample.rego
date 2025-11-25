@@ -86,6 +86,8 @@ rule_s_100_100_001_04 contains result if {
 		not startswith(header.columnHeader, "Comment[")
 		not startswith(header.columnHeader, "Characteristics[")
 		not startswith(header.columnHeader, "Factor Value[")
+		not startswith(header.columnHeader, "Performer")
+		not startswith(header.columnHeader, "Date")
 		header.columnStructure != "LINKED_COLUMN"
 		header.columnStructure != "ADDITIONAL_COLUMN"
 		header.columnStructure != "INVALID_MULTI_COLUMN"
@@ -183,6 +185,8 @@ rule_s_100_100_001_08 contains result if {
 		some header in input.samples[file_name].table.headers
 		header.columnHeader in def._DEFAULT_SAMPLE_HEADER_NAMES
 		not startswith(header.columnHeader, "Comment[")
+		not startswith(header.columnHeader, "Performer")
+		not startswith(header.columnHeader, "Date")
 	]
 
 	default_headers := def.SELECTED_STUDY_SAMPLE_FILE_TEMPLATE_HEADERS
@@ -283,6 +287,8 @@ rule_s_100_100_001_11 contains result if {
 		some header in input.samples[file_name].table.headers
 		data.metabolights.validation.v2.rules.phase1.definitions._DEFAULT_SAMPLE_FILE_HEADERS[header.columnHeader]
 		not startswith(header.columnHeader, "Comment[")
+		not startswith(header.columnHeader, "Performer")
+		not startswith(header.columnHeader, "Date")
 	}
 	default_headers := data.metabolights.validation.v2.rules.phase1.definitions._DEFAULT_SAMPLE_FILE_HEADERS
 	matches := [sprintf("[Column Index: %v: structure of '%v' column is '%v', but expected structure is '%v']", [x1, x2, x3, x4]) |

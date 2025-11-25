@@ -1431,6 +1431,7 @@ rule_i_100_340_006_14 contains result if {
 	some i, j
 	assay := input.investigation.studies[i].studyAssays.assays[j]
 	assay.technologyType.termSourceRef
+	count(assay.technologyType.termSourceRef) > 0
 	not assay.technologyType.termSourceRef in data.metabolights.validation.v2.rules.phase1.definitions.ONTOLOGY_SOURCE_REFERENCE_NAMES
 	msg := sprintf("Assay technology type source reference is not in the sources reference list. Study: %v, index: '%v', current value '%v'", [input.investigation.studies[i].identifier, j + 1, assay.technologyType.termSourceRef])
 	source := input.investigationFilePath
@@ -2104,9 +2105,9 @@ rule_i_100_360_011_01 contains result if {
 		some person in input.investigation.studies[i].studyContacts.people
 		some role in person.roles
 		count(role.term) > 0
-		lower(role.term) == "principal investigator"
+		contains(lower(role.term), "principal investigator")
 	}
-	count(pi) < 1
+	count(pi) == 0
 	msg := sprintf("There is no study contact with Principal Investigator role for study: %v", [input.investigation.studies[i].identifier])
 	source := input.investigationFilePath
 	result := f.format(rego.metadata.rule(), msg, source)

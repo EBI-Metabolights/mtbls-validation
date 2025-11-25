@@ -375,16 +375,20 @@ accession_number_min_length_check_for_term(meta, source, file_name, column_index
 
 	accession_number_column_index := header.columnIndex + 2
 	accession_number_column_name := source[file_name].table.columns[accession_number_column_index]
+	source_column_index := header.columnIndex + 1
+	source_column_name := source[file_name].table.columns[source_column_index]
 
 	count(source[file_name].table.data[column_name]) > 0
-	violated_values = {sprintf("[row: %v, value: '%v', 'accession number': '%v']", [x1, x2, x3]) |
+	violated_values = {sprintf("[row: %v, value: '[%v, %v, %v]']", [x1, x2, x3, x4]) |
 		some j, value in source[file_name].table.data[column_name]
 		count(value) > 0
 		accession_number := source[file_name].table.data[accession_number_column_name][j]
+		source_ref := source[file_name].table.data[source_column_name][j]
 		count(accession_number) < min_length
 		x1 := (source[file_name].table.rowOffset + j) + 1
 		x2 := value
-		x3 := accession_number
+		x3 := source_ref
+		x4 := accession_number
 	}
 	file_column_header := sprintf("%v (of %v)", [accession_column_header, column_header])
 	file := file_name
@@ -410,7 +414,7 @@ accession_number_min_length_check_for_unit(meta, source, file_name, column_index
 	unit_column_index := header.columnIndex + 1
 	unit_column_name := source[file_name].table.columns[unit_column_index]
 	count(source[file_name].table.data[column_name]) > 0
-	violated_values = {sprintf("[row: %v, value: '%v', unit: '%v', 'source ref':'%v', accession number: '']", [x1, x2, x3, x4]) |
+	violated_values = {sprintf("[row: %v, value: '%v', unit: [%v, %v, ]", [x1, x2, x3, x4]) |
 		some j
 		value := source[file_name].table.data[column_name][j]
 		unit := source[file_name].table.data[unit_column_name][j]
@@ -444,7 +448,7 @@ accession_number_is_defined_for_empty_term(meta, source, file_name, column_index
 	accession_number_column_name := source[file_name].table.columns[accession_number_column_index]
 
 	count(source[file_name].table.data[column_name]) > 0
-	violated_values = {sprintf("[row: %v, term:'%v', 'source ref':'%v', 'accession number':'%v']", [x1, x2, x3, x4]) |
+	violated_values = {sprintf("[row: %v, term: [%v, %v, %v]", [x1, x2, x3, x4]) |
 		some j
 		value := source[file_name].table.data[column_name][j]
 
@@ -481,10 +485,8 @@ accession_number_is_defined_for_empty_unit(meta, source, file_name, heder_index)
 	unit_column_name := source[file_name].table.columns[unit_column_index]
 
 	count(source[file_name].table.data[column_name]) > 0
-	violated_values = {sprintf("[row: %v. value:'%v', unit:'%v', 'source ref':'%v', 'accession number':'%v']", [x1, x2, x3, x4, x5]) |
+	violated_values = {sprintf("[row: %v. value:'%v', unit: [%v, %v, %v]", [x1, x2, x3, x4, x5]) |
 		some j, unit in source[file_name].table.data[unit_column_name]
-
-		# count(trim_space(unit)) == 0
 		source_ref := source[file_name].table.data[source_ref_column_name][j]
 		accession := source[file_name].table.data[accession_number_column_name][j]
 		value := source[file_name].table.data[column_name][j]

@@ -55,6 +55,8 @@ rule_m_100_100_001_02 contains result if {
 	maf_headers := [header |
 		some header in input.metaboliteAssignments[file_name].table.headers
 		not startswith(header.columnHeader, "Comment[")
+		not startswith(header.columnHeader, "Performer")
+		not startswith(header.columnHeader, "Date")
 	]
 
 	violated_values := [sprintf("[Expected column at index %v: '%v' found: '%v']", [x, y, z]) |
@@ -110,6 +112,8 @@ rule_m_100_100_001_04 contains result if {
 	header_names := {header.columnHeader: same_headers |
 		some header in template.headers
 		not startswith(header.columnHeader, "Comment[")
+		not startswith(header.columnHeader, "Performer")
+		not startswith(header.columnHeader, "Date")
 		same_headers := [idx |
 			some x in input.metaboliteAssignments[file_name].table.headers
 			x.columnHeader == header.columnHeader

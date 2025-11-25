@@ -87,6 +87,8 @@ rule_a_100_100_001_04 contains result if {
 		not startswith(header.columnHeader, "Parameter Value[")
 		not startswith(header.columnHeader, "Protocol REF")
 		not startswith(header.columnHeader, "Comment[")
+		not startswith(header.columnHeader, "Performer")
+		not startswith(header.columnHeader, "Date")
 		header.columnStructure != "LINKED_COLUMN"
 		header.columnStructure != "ADDITIONAL_COLUMN"
 		header.columnStructure != "INVALID_MULTI_COLUMN"
@@ -251,6 +253,8 @@ rule_a_100_100_001_10 contains result if {
 		not startswith(header.columnHeader, "Comment[")
 		not startswith(header.columnHeader, "Protocol REF")
 		not endswith(header.columnHeader, " Data File")
+		not startswith(header.columnHeader, "Performer")
+		not startswith(header.columnHeader, "Date")
 		same_headers := [idx |
 			some x in input.assays[file_name].table.headers
 			x.columnHeader == header.columnHeader
@@ -312,6 +316,8 @@ rule_a_100_100_001_12 contains result if {
 	header_names := [header.columnHeader |
 		some header in assay_file.table.headers
 		not startswith(header.columnHeader, "Comment[")
+		not startswith(header.columnHeader, "Performer")
+		not startswith(header.columnHeader, "Date")
 		not startswith(header.columnHeader, "Protocol REF")
 		not startswith(header.columnHeader, "Term Source REF")
 		not startswith(header.columnHeader, "Term Accession Number")
@@ -322,6 +328,8 @@ rule_a_100_100_001_12 contains result if {
 	matches := [header.columnHeader |
 		some header in header_set.headers
 		not startswith(header.columnHeader, "Comment[")
+		not startswith(header.columnHeader, "Performer")
+		not startswith(header.columnHeader, "Date")
 		not startswith(header.columnHeader, "Protocol REF")
 		not startswith(header.columnHeader, "Term Source REF")
 		not startswith(header.columnHeader, "Term Accession Number")
@@ -344,6 +352,8 @@ rule_a_100_100_001_13 contains result if {
 	headers := {header |
 		some header in assay_file.table.headers
 		not startswith(header.columnHeader, "Comment[")
+		not startswith(header.columnHeader, "Performer")
+		not startswith(header.columnHeader, "Date")
 	}
 
 	some technique_name, templates in data.metabolights.validation.v2.templates.assayFileHeaderTemplates
