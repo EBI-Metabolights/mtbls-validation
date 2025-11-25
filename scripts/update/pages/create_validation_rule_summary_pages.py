@@ -65,10 +65,10 @@ def create_validation_rule_summary_pages(rules: dict[str, pd.Series]):
             for idx, item in enumerate(section_violations[section]):
                 f.write(
                     f"| {idx + 1} "
-                    f"| {item.rule_id} "
-                    f"| {item.type.value} "
-                    f"| {item.title} "
-                    f"| {item.description} |\n"
+                    f"| {escape(item.rule_id)} "
+                    f"| {escape(item.type.value)} "
+                    f"| {escape(item.title)} "
+                    f"| {escape(item.description)} |\n"
                 )
 
     with open("docs/validation-rules/all-rules.md", "w") as f:
@@ -79,10 +79,10 @@ def create_validation_rule_summary_pages(rules: dict[str, pd.Series]):
         for idx, item in enumerate(violations):
             f.write(
                 f"| {idx + 1} "
-                f"| {item.rule_id} "
-                f"| {item.type.value} "
-                f"| {item.title} "
-                f"| {item.description} |\n"
+                f"| {escape(item.rule_id)} "
+                f"| {escape(item.type.value)} "
+                f"| {escape(item.title)} "
+                f"| {escape(item.description)} |\n"
             )
 
 
@@ -92,13 +92,13 @@ def get_items(rules):
     for rule_id, rule in rules.items():
         item = Violation(
             rule_id=rule_id,
-            title=escape(str(rule["TITLE"]).strip()),
-            description=escape(str(rule["DESCRIPTION"]).strip()),
+            title=str(rule["TITLE"]).strip(),
+            description=str(rule["DESCRIPTION"]).strip(),
             type=PolicyMessageType(
                 str(rule["TYPE"].strip()) if rule["TYPE"] else PolicyMessageType.INFO
             ),
-            section=escape(str(rule["SECTION"].split(".")[0])),
-            priority=escape(str(rule["PRIORITY"].split(".")[0])),
+            section=str(rule["SECTION"].split(".")[0]),
+            priority=str(rule["PRIORITY"].split(".")[0]),
         )
         if len(rule_id) < 15:
             summary.append(item)

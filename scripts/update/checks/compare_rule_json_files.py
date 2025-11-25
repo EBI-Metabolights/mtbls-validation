@@ -55,7 +55,7 @@ def compare_rules(
         )
 
         for rule_id in all_rules:
-            rule = all_rules_map.get(rule_id)
+            rule = all_rules_map.get(rule_id, {})
             row = [""] * 10
             row_updated = False
             row[0] = rule.get("rule_id")

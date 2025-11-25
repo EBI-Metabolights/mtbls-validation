@@ -17,8 +17,8 @@ def create_control_list_documentation(
     controls: dict[str, list[models.FieldValueValidation]],
     templates: dict[str, list[models.IsaTableFileTemplate]],
     isa_file_type: str,
-    control_lists_root_path: str,
-    common_headers: list[str] = None,
+    control_lists_root_path: Path,
+    common_headers: list[str],
 ):
     folder_path = control_lists_root_path / Path(
         isa_file_type.lower().replace(" ", "-") + "-control-lists"
@@ -69,13 +69,17 @@ def create_md_file(
             rule = find_rule(control_list, template_name, template_version)
             if not rule:
                 continue
-            pattern = rule.constraints.get(
-                models.ConstraintType.PATTERN,
-                models.FieldConstraint(
-                    constraint="",
-                    error_message="",
-                    enforcement_level=models.EnforcementLevel.NOT_APPLICABLE,
-                ),
+            pattern = (
+                rule.constraints.get(
+                    models.ConstraintType.PATTERN,
+                    models.FieldConstraint(
+                        constraint="",
+                        error_message="",
+                        enforcement_level=models.EnforcementLevel.NOT_APPLICABLE,
+                    ),
+                )
+                if rule.constraints
+                else None
             )
             f.write(f"## {escape(param)}\n\n")
             f.write("| Attribute | Value |\n|---|------|\n")
@@ -110,7 +114,7 @@ def create_md_file(
                 date_filter.append(
                     escape(
                         "Created before: "
-                        + rule.selection_criteria.study_created_at_or_after.isoformat()
+                        + rule.selection_criteria.study_created_before.isoformat()
                     )
                 )
             if rule.selection_criteria.study_created_at_or_after:
@@ -128,7 +132,7 @@ def create_md_file(
                 )
 
             f.write(f"| Validation Type | {rule.validation_type} |\n")
-            if pattern.constraint:
+            if pattern and pattern.constraint:
                 f.write(f"| Pattern | <code>{pattern.constraint}</code> |\n")
                 f.write(f"| Pattern Message | {escape(pattern.error_message)} |\n")
                 f.write(
@@ -218,8 +222,8 @@ def create_file_structure_documentation(
     assay_file_templates: dict[str, list[models.IsaTableFileTemplate]],
     sample_file_templates: dict[str, list[models.IsaTableFileTemplate]],
     assignment_file_templates: dict[str, list[models.IsaTableFileTemplate]],
-    assay_controls: dict[str, dict[str, list[models.FieldValueValidation]]],
-    sample_controls: dict[str, dict[str, list[models.FieldValueValidation]]],
+    assay_controls: dict[str, list[models.FieldValueValidation]],
+    sample_controls: dict[str, list[models.FieldValueValidation]],
     controls_root_path: Path,
 ):
     pairs = [

@@ -58,7 +58,6 @@ test_rule_s_200_900_001_01_no_violation_01 if {
 	)
 
 	result := rules.rule_s_200_900_001_01 with input as input_data
-	print(result)
 	count(result) == 0
 }
 
