@@ -345,10 +345,16 @@ class ColumnDescription(StudyBaseModel):
 
 class InvestigationFileSection(StudyBaseModel):
     name: Annotated[str, Field(description="Section name")]
-    fields: Annotated[list[str], Field(description="Section row prefixes")]
+    fields: Annotated[list[str], Field(description="Section row prefixes")] = []
     default_comments: Annotated[
         list[str], Field(description="Default comments for the section")
-    ]
+    ] = []
+    default_field_values: Annotated[
+        dict[str, str], Field(description="Default field values")
+    ] = {}
+    default_comment_values: Annotated[
+        dict[str, str], Field(description="Default comment values")
+    ] = {}
 
 
 class InvestigationFileTemplate(StudyBaseModel):

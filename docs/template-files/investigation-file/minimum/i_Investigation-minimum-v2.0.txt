@@ -1,15 +1,15 @@
-ONTOLOGY SOURCE REFERENCE	
+ONTOLOGY SOURCE REFERENCE
 Term Source Name	
 Term Source File	
 Term Source Version	
 Term Source Description	
-INVESTIGATION	
+INVESTIGATION
 Investigation Identifier	
 Investigation Title	
 Investigation Description	
 Investigation Submission Date	
 Investigation Public Release Date	
-INVESTIGATION PUBLICATIONS	
+INVESTIGATION PUBLICATIONS
 Investigation PubMed ID	
 Investigation Publication DOI	
 Investigation Publication Author List	
@@ -17,7 +17,7 @@ Investigation Publication Title
 Investigation Publication Status	
 Investigation Publication Status Term Accession Number	
 Investigation Publication Status Term Source REF	
-INVESTIGATION CONTACTS	
+INVESTIGATION CONTACTS
 Investigation Person Last Name	
 Investigation Person First Name	
 Investigation Person Mid Initials	
@@ -29,25 +29,28 @@ Investigation Person Affiliation
 Investigation Person Roles	
 Investigation Person Roles Term Accession Number	
 Investigation Person Roles Term Source REF	
-STUDY	
-Study Identifier	
-Study Title	
-Study Description	
+STUDY
+Study Identifier	MTBLS
+Study Title	Please update the study title
+Study Description	Please update the study abstract/description
 Study Submission Date	
 Study Public Release Date	
-Study File Name	
-Comment[License]	
-Comment[Revision]	
-Comment[Revision Date]	
-Comment[Revision Log]	
-Comment[Sample Template]	
-Comment[Study Category]	
-Comment[Template Version]	
-STUDY DESIGN DESCRIPTORS	
+Study File Name	s_Sample.txt
+Created At	
+License	CC0 1.0 Universal
+Sample Template	minimum
+Study Category	other
+Template Version	2.0
+Funder	
+Funder ROR Id	
+Grant Identifier	
+STUDY DESIGN DESCRIPTORS
 Study Design Type	
 Study Design Type Term Accession Number	
 Study Design Type Term Source REF	
-STUDY PUBLICATIONS	
+Study Design Category	
+Study Design Source	
+STUDY PUBLICATIONS
 Study PubMed ID	
 Study Publication DOI	
 Study Publication Author List	
@@ -55,12 +58,13 @@ Study Publication Title
 Study Publication Status	
 Study Publication Status Term Accession Number	
 Study Publication Status Term Source REF	
-STUDY FACTORS	
+STUDY FACTORS
 Study Factor Name	
 Study Factor Type	
 Study Factor Type Term Accession Number	
 Study Factor Type Term Source REF	
-STUDY ASSAYS	
+Study Factor Value Format	
+STUDY ASSAYS
 Study Assay File Name	
 Study Assay Measurement Type	
 Study Assay Measurement Type Term Accession Number	
@@ -69,7 +73,7 @@ Study Assay Technology Type
 Study Assay Technology Type Term Accession Number	
 Study Assay Technology Type Term Source REF	
 Study Assay Technology Platform	
-STUDY PROTOCOLS	
+STUDY PROTOCOLS
 Study Protocol Name	
 Study Protocol Type	
 Study Protocol Type Term Accession Number	
@@ -84,7 +88,8 @@ Study Protocol Components Name
 Study Protocol Components Type	
 Study Protocol Components Type Term Accession Number	
 Study Protocol Components Type Term Source REF	
-STUDY CONTACTS	
+Study Protocol Parameters Value Format	
+STUDY CONTACTS
 Study Person Last Name	
 Study Person First Name	
 Study Person Mid Initials	
@@ -96,3 +101,6 @@ Study Person Affiliation
 Study Person Roles	
 Study Person Roles Term Accession Number	
 Study Person Roles Term Source REF	
+Study Person ORCID	
+Study Person Additional Email	
+Study Person Affiliation ROR Id	

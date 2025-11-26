@@ -12,7 +12,9 @@
                         "Term Source Version",
                         "Term Source Description"
                     ],
-                    "defaultComments": []
+                    "defaultComments": [],
+                    "defaultCommentValues": {},
+                    "defaultFieldValues": {}
                 },
                 {
                     "name": "INVESTIGATION",
@@ -23,7 +25,9 @@
                         "Investigation Submission Date",
                         "Investigation Public Release Date"
                     ],
-                    "defaultComments": []
+                    "defaultComments": [],
+                    "defaultCommentValues": {},
+                    "defaultFieldValues": {}
                 },
                 {
                     "name": "INVESTIGATION PUBLICATIONS",
@@ -36,7 +40,9 @@
                         "Investigation Publication Status Term Accession Number",
                         "Investigation Publication Status Term Source REF"
                     ],
-                    "defaultComments": []
+                    "defaultComments": [],
+                    "defaultCommentValues": {},
+                    "defaultFieldValues": {}
                 },
                 {
                     "name": "INVESTIGATION CONTACTS",
@@ -53,7 +59,9 @@
                         "Investigation Person Roles Term Accession Number",
                         "Investigation Person Roles Term Source REF"
                     ],
-                    "defaultComments": []
+                    "defaultComments": [],
+                    "defaultCommentValues": {},
+                    "defaultFieldValues": {}
                 },
                 {
                     "name": "STUDY",
@@ -66,14 +74,27 @@
                         "Study File Name"
                     ],
                     "defaultComments": [
+                        "Created At",
                         "License",
-                        "Revision",
-                        "Revision Date",
-                        "Revision Log",
                         "Sample Template",
                         "Study Category",
-                        "Template Version"
-                    ]
+                        "Template Version",
+                        "Funder",
+                        "Funder ROR Id",
+                        "Grant Identifier"
+                    ],
+                    "defaultCommentValues": {
+                        "License": "CC0 1.0 Universal",
+                        "Template Version": "1.0",
+                        "Sample Template": "minimum",
+                        "Study Category": "other"
+                    },
+                    "defaultFieldValues": {
+                        "Study File Name": "s_Sample.txt",
+                        "Study Title": "Please update the study title",
+                        "Study Identifier": "MTBLS",
+                        "Study Description": "Please update the study abstract/description"
+                    }
                 },
                 {
                     "name": "STUDY DESIGN DESCRIPTORS",
@@ -82,7 +103,12 @@
                         "Study Design Type Term Accession Number",
                         "Study Design Type Term Source REF"
                     ],
-                    "defaultComments": []
+                    "defaultComments": [
+                        "Study Design Category",
+                        "Study Design Source"
+                    ],
+                    "defaultCommentValues": {},
+                    "defaultFieldValues": {}
                 },
                 {
                     "name": "STUDY PUBLICATIONS",
@@ -95,7 +121,9 @@
                         "Study Publication Status Term Accession Number",
                         "Study Publication Status Term Source REF"
                     ],
-                    "defaultComments": []
+                    "defaultComments": [],
+                    "defaultCommentValues": {},
+                    "defaultFieldValues": {}
                 },
                 {
                     "name": "STUDY FACTORS",
@@ -105,7 +133,11 @@
                         "Study Factor Type Term Accession Number",
                         "Study Factor Type Term Source REF"
                     ],
-                    "defaultComments": []
+                    "defaultComments": [
+                        "Study Factor Value Format"
+                    ],
+                    "defaultCommentValues": {},
+                    "defaultFieldValues": {}
                 },
                 {
                     "name": "STUDY ASSAYS",
@@ -119,7 +151,9 @@
                         "Study Assay Technology Type Term Source REF",
                         "Study Assay Technology Platform"
                     ],
-                    "defaultComments": []
+                    "defaultComments": [],
+                    "defaultCommentValues": {},
+                    "defaultFieldValues": {}
                 },
                 {
                     "name": "STUDY PROTOCOLS",
@@ -139,7 +173,11 @@
                         "Study Protocol Components Type Term Accession Number",
                         "Study Protocol Components Type Term Source REF"
                     ],
-                    "defaultComments": []
+                    "defaultComments": [
+                        "Study Protocol Parameters Value Format"
+                    ],
+                    "defaultCommentValues": {},
+                    "defaultFieldValues": {}
                 },
                 {
                     "name": "STUDY CONTACTS",
@@ -156,13 +194,19 @@
                         "Study Person Roles Term Accession Number",
                         "Study Person Roles Term Source REF"
                     ],
-                    "defaultComments": []
+                    "defaultComments": [
+                        "Study Person ORCID",
+                        "Study Person Additional Email",
+                        "Study Person Affiliation ROR Id"
+                    ],
+                    "defaultCommentValues": {},
+                    "defaultFieldValues": {}
                 }
             ]
         },
         {
             "version": "2.0",
-            "description": "ISA-TAB Investigation File template 2.0.",
+            "description": "ISA-TAB Investigation File template 1.0.",
             "sections": [
                 {
                     "name": "ONTOLOGY SOURCE REFERENCE",
@@ -172,7 +216,9 @@
                         "Term Source Version",
                         "Term Source Description"
                     ],
-                    "defaultComments": []
+                    "defaultComments": [],
+                    "defaultCommentValues": {},
+                    "defaultFieldValues": {}
                 },
                 {
                     "name": "INVESTIGATION",
@@ -183,7 +229,9 @@
                         "Investigation Submission Date",
                         "Investigation Public Release Date"
                     ],
-                    "defaultComments": []
+                    "defaultComments": [],
+                    "defaultCommentValues": {},
+                    "defaultFieldValues": {}
                 },
                 {
                     "name": "INVESTIGATION PUBLICATIONS",
@@ -196,7 +244,9 @@
                         "Investigation Publication Status Term Accession Number",
                         "Investigation Publication Status Term Source REF"
                     ],
-                    "defaultComments": []
+                    "defaultComments": [],
+                    "defaultCommentValues": {},
+                    "defaultFieldValues": {}
                 },
                 {
                     "name": "INVESTIGATION CONTACTS",
@@ -213,7 +263,9 @@
                         "Investigation Person Roles Term Accession Number",
                         "Investigation Person Roles Term Source REF"
                     ],
-                    "defaultComments": []
+                    "defaultComments": [],
+                    "defaultCommentValues": {},
+                    "defaultFieldValues": {}
                 },
                 {
                     "name": "STUDY",
@@ -226,14 +278,27 @@
                         "Study File Name"
                     ],
                     "defaultComments": [
+                        "Created At",
                         "License",
-                        "Revision",
-                        "Revision Date",
-                        "Revision Log",
                         "Sample Template",
                         "Study Category",
-                        "Template Version"
-                    ]
+                        "Template Version",
+                        "Funder",
+                        "Funder ROR Id",
+                        "Grant Identifier"
+                    ],
+                    "defaultCommentValues": {
+                        "License": "CC0 1.0 Universal",
+                        "Template Version": "2.0",
+                        "Sample Template": "minimum",
+                        "Study Category": "other"
+                    },
+                    "defaultFieldValues": {
+                        "Study File Name": "s_Sample.txt",
+                        "Study Title": "Please update the study title",
+                        "Study Identifier": "MTBLS",
+                        "Study Description": "Please update the study abstract/description"
+                    }
                 },
                 {
                     "name": "STUDY DESIGN DESCRIPTORS",
@@ -242,7 +307,12 @@
                         "Study Design Type Term Accession Number",
                         "Study Design Type Term Source REF"
                     ],
-                    "defaultComments": []
+                    "defaultComments": [
+                        "Study Design Category",
+                        "Study Design Source"
+                    ],
+                    "defaultCommentValues": {},
+                    "defaultFieldValues": {}
                 },
                 {
                     "name": "STUDY PUBLICATIONS",
@@ -255,7 +325,9 @@
                         "Study Publication Status Term Accession Number",
                         "Study Publication Status Term Source REF"
                     ],
-                    "defaultComments": []
+                    "defaultComments": [],
+                    "defaultCommentValues": {},
+                    "defaultFieldValues": {}
                 },
                 {
                     "name": "STUDY FACTORS",
@@ -265,7 +337,11 @@
                         "Study Factor Type Term Accession Number",
                         "Study Factor Type Term Source REF"
                     ],
-                    "defaultComments": []
+                    "defaultComments": [
+                        "Study Factor Value Format"
+                    ],
+                    "defaultCommentValues": {},
+                    "defaultFieldValues": {}
                 },
                 {
                     "name": "STUDY ASSAYS",
@@ -279,7 +355,9 @@
                         "Study Assay Technology Type Term Source REF",
                         "Study Assay Technology Platform"
                     ],
-                    "defaultComments": []
+                    "defaultComments": [],
+                    "defaultCommentValues": {},
+                    "defaultFieldValues": {}
                 },
                 {
                     "name": "STUDY PROTOCOLS",
@@ -299,7 +377,11 @@
                         "Study Protocol Components Type Term Accession Number",
                         "Study Protocol Components Type Term Source REF"
                     ],
-                    "defaultComments": []
+                    "defaultComments": [
+                        "Study Protocol Parameters Value Format"
+                    ],
+                    "defaultCommentValues": {},
+                    "defaultFieldValues": {}
                 },
                 {
                     "name": "STUDY CONTACTS",
@@ -316,7 +398,13 @@
                         "Study Person Roles Term Accession Number",
                         "Study Person Roles Term Source REF"
                     ],
-                    "defaultComments": []
+                    "defaultComments": [
+                        "Study Person ORCID",
+                        "Study Person Additional Email",
+                        "Study Person Affiliation ROR Id"
+                    ],
+                    "defaultCommentValues": {},
+                    "defaultFieldValues": {}
                 }
             ]
         }
