@@ -1118,7 +1118,9 @@
                     "isaFileType": "assay",
                     "studyCreatedAtOrAfter": null,
                     "studyCreatedBefore": null,
-                    "studyCategoryFilter": null,
+                    "studyCategoryFilter": [
+                        "ms-mhd-enabled"
+                    ],
                     "templateVersionFilter": null,
                     "isaFileTemplateNameFilter": [
                         "LC-MS",
@@ -1155,7 +1157,9 @@
                 ],
                 "allowedPlaceholders": [],
                 "terms": [],
-                "ontologies": [],
+                "ontologies": [
+                    "MS"
+                ],
                 "allowedParentOntologyTerms": {
                     "excludeByLabelPattern": [
                         "^.*instrument model$"
