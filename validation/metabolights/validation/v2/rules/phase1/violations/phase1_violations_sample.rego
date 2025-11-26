@@ -481,8 +481,8 @@ rule_s_100_100_001_16 contains result if {
 #  section: samples.rows
 rule_s_100_100_002_01 contains result if {
 	input.samples[fileName].table.rowOffset == 0
-	input.samples[fileName].table.totalRowCount < 1
-
+	sample_name_values := input.samples[fileName].table.data["Sample Name"]
+	count(sample_name_values) == 0
 	msg := sprintf("There is no row in file '%v'.", [fileName])
 	sourceFile := fileName
 
@@ -500,7 +500,8 @@ rule_s_100_100_002_01 contains result if {
 #  section: samples.rows
 rule_s_100_100_002_02 contains result if {
 	input.samples[fileName].table.rowOffset == 0
-	input.samples[fileName].table.totalRowCount == 1
+	sample_name_values := input.samples[fileName].table.data["Sample Name"]
+	count(sample_name_values) == 1
 
 	msg := sprintf("Only one row is defined in '%v'.", [fileName])
 	source := fileName

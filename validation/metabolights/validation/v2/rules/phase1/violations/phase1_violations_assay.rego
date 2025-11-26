@@ -415,7 +415,8 @@ rule_a_100_100_002_01 contains result if {
 #  section: assays.rows
 rule_a_100_100_005_01 contains result if {
 	input.assays[fileName].table.rowOffset == 0
-	input.assays[fileName].table.totalRowCount == 0
+	sample_column_values := input.assays[fileName].table.data["Sample Name"]
+	count(sample_column_values) == 0
 
 	msg := sprintf("There is no row in the file '%v'.", [fileName])
 	sourceFile := fileName
@@ -435,7 +436,8 @@ rule_a_100_100_005_01 contains result if {
 rule_a_100_100_005_02 contains result if {
 	some file_name, assay_file in input.assays
 	assay_file.table.rowOffset == 0
-	assay_file.table.totalRowCount == 1
+	sample_column_values := assay_file.table.data["Sample Name"]
+	count(sample_column_values) == 1
 
 	msg := sprintf("There is only one row in the file '%v'.", [file_name])
 	result := f.format(rego.metadata.rule(), msg, file_name)

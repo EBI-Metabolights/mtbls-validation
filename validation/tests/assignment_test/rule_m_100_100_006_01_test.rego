@@ -36,7 +36,7 @@ test_rule_m_100_100_006_01_no_violation_01 if {
 test_rule_m_100_100_006_01_violation_01 if {
 	result := rules.rule_m_100_100_006_01 with input as {
 		"investigationFilePath": "i_Investigation.txt",
-		"metaboliteAssignments": {"a_MTBLS1.tsv": {"table": {"rowOffset": 0, "totalRowCount": 0}}},
+		"metaboliteAssignments": {"a_MTBLS1.tsv": {"table": {"data": {"database_identification": []}, "rowOffset": 0, "totalRowCount": 0}}},
 		"investigation": {"studies": [{"fileName": "s_MTBLS1.txt", "studyAssays": {"assays": [{"fileName": "a_MTBLS1.txt"}]}}]},
 		"parserMessages": {"a_MTBLS1.txt": []},
 	}

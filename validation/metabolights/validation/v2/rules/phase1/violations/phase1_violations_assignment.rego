@@ -261,7 +261,8 @@ rule_m_100_100_005_01 contains result if {
 rule_m_100_100_006_01 contains result if {
 	some file_name, assignment in input.metaboliteAssignments
 	assignment.table.rowOffset == 0
-	assignment.table.totalRowCount == 0
+	database_identification_values := assignment.table.data.database_identification
+	count(database_identification_values) == 0
 
 	msg := sprintf("There is no row in the file '%v'.", [file_name])
 	sourceFile := file_name
@@ -281,7 +282,8 @@ rule_m_100_100_006_01 contains result if {
 rule_m_100_100_006_02 contains result if {
 	some file_name, assignment in input.metaboliteAssignments
 	assignment.table.rowOffset == 0
-	assignment.table.totalRowCount == 1
+	database_identification_values := assignment.table.data.database_identification
+	count(database_identification_values) == 1
 
 	msg := sprintf("There is only one row in the file '%v'.", [file_name])
 	sourceFile := file_name

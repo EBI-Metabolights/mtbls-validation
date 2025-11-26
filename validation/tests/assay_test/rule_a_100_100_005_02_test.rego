@@ -36,7 +36,7 @@ test_rule_a_100_100_005_02_no_violation_01 if {
 test_rule_a_100_100_005_02_violation_01 if {
 	result := rules.rule_a_100_100_005_02 with input as {
 		"investigationFilePath": "i_Investigation.txt",
-		"assays": {"a_MTBLS1.txt": {"table": {"rowOffset": 0, "totalRowCount": 1}}},
+		"assays": {"a_MTBLS1.txt": {"table": {"data": {"Sample Name": ["sample 1"]}, "rowOffset": 0, "totalRowCount": 1}}},
 		"investigation": {"studies": [{"fileName": "s_MTBLS1.txt", "studyAssays": {"assays": [{"fileName": "a_MTBLS1.txt"}]}}]},
 		"parserMessages": {"a_MTBLS1.txt": []},
 	}

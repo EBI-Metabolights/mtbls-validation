@@ -718,14 +718,21 @@ rule_s_200_100_002_04 contains result if {
 rule_s_200_200_001_01 contains result if {
 	some file_name, _ in input.samples
 
-	row_count := input.samples[file_name].table.totalRowCount
+	# sample_name_values := assignment.table.data["Sample Name"]
+	# row_count = count(sample_name_values)
+
 	sample_names := {trimmed_name |
 		some sample_name in input.samples[file_name].sampleNames
 		trimmed_name := trim_space(sample_name)
 		count(trimmed_name) > 0
 	}
-	count(sample_names) != row_count
-	msg := sprintf("Number of rows: %v. Number of unique sample names is %v in '%v'.", [row_count, count(sample_names), file_name])
+	sample_names_list := [trimmed_name |
+		some sample_name in input.samples[file_name].sampleNames
+		trimmed_name := trim_space(sample_name)
+		count(trimmed_name) > 0
+	]
+	count(sample_names) != count(sample_names_list)
+	msg := sprintf("Number of sample names: %v. Number of unique sample names is %v in '%v'.", [count(sample_names_list), count(sample_names), file_name])
 
 	result := f.format(rego.metadata.rule(), msg, file_name)
 }
