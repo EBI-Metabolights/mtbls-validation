@@ -533,9 +533,7 @@ term_value_has_invalid_pattern(
 
 	term_name = table.columns[header.columnIndex]
 	violated_values = {sprintf("Row: %v, column: %v, value: %v", [j + 1, header.columnHeader, term]) |
-		some j
-		count(table.data[column_name][j]) > 0
-		term := table.data[term_name][j]
+		some j, term in table.data[term_name]
 		count(term) > 0
 		missing_excludes := {x.term |
 			some x in rule.allowedMissingOntologyTerms
