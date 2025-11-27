@@ -1,8 +1,8 @@
 {
-    "minimum": [
+    "other": [
         {
             "version": "1.0",
-            "description": "ISA-TAB Investigation File template 1.0.",
+            "description": "MetaboLights ISA-TAB Investigation File Template 1.0.",
             "sections": [
                 {
                     "name": "ONTOLOGY SOURCE REFERENCE",
@@ -14,7 +14,36 @@
                     ],
                     "defaultComments": [],
                     "defaultCommentValues": {},
-                    "defaultFieldValues": {}
+                    "defaultFieldValues": {
+                        "Term Source Name": [
+                            "CHMO",
+                            "EFO",
+                            "MTBLS",
+                            "NCIT",
+                            "OBI"
+                        ],
+                        "Term Source File": [
+                            "http://purl.obolibrary.org/obo/chmo.owl",
+                            "http://www.ebi.ac.uk/efo/efo.owl",
+                            "https://www.ebi.ac.uk/metabolights/",
+                            "https://github.com/EBI-Metabolights/MtblsWS-Py/blob/main/resources/Metabolights.owl",
+                            "http://purl.obolibrary.org/obo/obi.owl"
+                        ],
+                        "Term Source Version": [
+                            "",
+                            "",
+                            "",
+                            "",
+                            ""
+                        ],
+                        "Term Source Description": [
+                            "Chemical Methods Ontology",
+                            "Experimental Factor Ontology",
+                            "MetaboLights Controlled Vocabulary",
+                            "National Cancer Institute Thesaurus",
+                            "Ontology for Biomedical Investigations"
+                        ]
+                    }
                 },
                 {
                     "name": "INVESTIGATION",
@@ -84,16 +113,16 @@
                         "Grant Identifier"
                     ],
                     "defaultCommentValues": {
-                        "License": "CC0 1.0 Universal",
-                        "Template Version": "1.0",
-                        "Sample Template": "minimum",
-                        "Study Category": "other"
+                        "License": ["CC0 1.0 Universal"],
+                        "Template Version": ["1.0"],
+                        "Sample Template": ["minimum"],
+                        "Study Category": ["other"]
                     },
                     "defaultFieldValues": {
-                        "Study File Name": "s_Sample.txt",
-                        "Study Title": "Please update the study title",
-                        "Study Identifier": "MTBLS",
-                        "Study Description": "Please update the study abstract/description"
+                        "Study File Name": ["s_Sample.txt"],
+                        "Study Title": ["Please update the study title"],
+                        "Study Identifier": ["MTBLS"],
+                        "Study Description": ["Please update the study abstract/description"]
                     }
                 },
                 {
@@ -123,7 +152,9 @@
                     ],
                     "defaultComments": [],
                     "defaultCommentValues": {},
-                    "defaultFieldValues": {}
+                    "defaultFieldValues": {
+                        "Study Publication Title": ["Please update the publication title"]
+                    }
                 },
                 {
                     "name": "STUDY FACTORS",
@@ -206,7 +237,7 @@
         },
         {
             "version": "2.0",
-            "description": "ISA-TAB Investigation File template 1.0.",
+            "description": "MetaboLights ISA-TAB Investigation File Template 2.0.",
             "sections": [
                 {
                     "name": "ONTOLOGY SOURCE REFERENCE",
@@ -218,7 +249,36 @@
                     ],
                     "defaultComments": [],
                     "defaultCommentValues": {},
-                    "defaultFieldValues": {}
+                    "defaultFieldValues": {
+                        "Term Source Name": [
+                            "CHMO",
+                            "EFO",
+                            "MTBLS",
+                            "NCIT",
+                            "OBI"
+                        ],
+                        "Term Source File": [
+                            "http://purl.obolibrary.org/obo/chmo.owl",
+                            "http://www.ebi.ac.uk/efo/efo.owl",
+                            "https://www.ebi.ac.uk/metabolights/",
+                            "https://github.com/EBI-Metabolights/MtblsWS-Py/blob/main/resources/Metabolights.owl",
+                            "http://purl.obolibrary.org/obo/obi.owl"
+                        ],
+                        "Term Source Version": [
+                            "",
+                            "",
+                            "",
+                            "",
+                            ""
+                        ],
+                        "Term Source Description": [
+                            "Chemical Methods Ontology",
+                            "Experimental Factor Ontology",
+                            "MetaboLights Controlled Vocabulary",
+                            "National Cancer Institute Thesaurus",
+                            "Ontology for Biomedical Investigations"
+                        ]
+                    }
                 },
                 {
                     "name": "INVESTIGATION",
@@ -288,16 +348,16 @@
                         "Grant Identifier"
                     ],
                     "defaultCommentValues": {
-                        "License": "CC0 1.0 Universal",
-                        "Template Version": "2.0",
-                        "Sample Template": "minimum",
-                        "Study Category": "other"
+                        "License": ["CC0 1.0 Universal"],
+                        "Template Version": ["2.0"],
+                        "Sample Template": ["minimum"],
+                        "Study Category": ["other"]
                     },
                     "defaultFieldValues": {
-                        "Study File Name": "s_Sample.txt",
-                        "Study Title": "Please update the study title",
-                        "Study Identifier": "MTBLS",
-                        "Study Description": "Please update the study abstract/description"
+                        "Study File Name": ["s_Sample.txt"],
+                        "Study Title": ["Please update the study title"],
+                        "Study Identifier": ["MTBLS"],
+                        "Study Description": ["Please update the study abstract/description"]
                     }
                 },
                 {
@@ -327,7 +387,9 @@
                     ],
                     "defaultComments": [],
                     "defaultCommentValues": {},
-                    "defaultFieldValues": {}
+                    "defaultFieldValues": {
+                        "Study Publication Title": ["Please update the publication title"]
+                    }
                 },
                 {
                     "name": "STUDY FACTORS",

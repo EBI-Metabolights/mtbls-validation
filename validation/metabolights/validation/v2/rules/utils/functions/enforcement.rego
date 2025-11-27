@@ -532,7 +532,7 @@ term_value_has_invalid_pattern(
 	message_suffix = sprintf("Expected value pattern [%v]", [rule.termEnforcementLevel])
 
 	term_name = table.columns[header.columnIndex]
-	violated_values = {sprintf("Row: %v, column: %v, value: %v", [j + 1, header.columnHeader, term]) |
+	violated_values = {sprintf("Row: %v, column: %v, value: '%v'", [j + 1, header.columnHeader, term]) |
 		some j, term in table.data[term_name]
 		count(term) > 0
 		missing_excludes := {x.term |

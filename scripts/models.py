@@ -350,10 +350,12 @@ class InvestigationFileSection(StudyBaseModel):
         list[str], Field(description="Default comments for the section")
     ] = []
     default_field_values: Annotated[
-        dict[str, str], Field(description="Default field values")
+        dict[str, str | list[str] | list[list[str]]],
+        Field(description="Default field values"),
     ] = {}
     default_comment_values: Annotated[
-        dict[str, str], Field(description="Default comment values")
+        dict[str, str | list[str] | list[list[str]]],
+        Field(description="Default comment values"),
     ] = {}
 
 
