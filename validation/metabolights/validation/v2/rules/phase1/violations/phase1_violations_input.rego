@@ -112,9 +112,10 @@ rule___100_100_100_03 contains result if {
 #  priority: CRITICAL
 #  section: investigation.general
 rule___100_100_100_04 contains result if {
-	configuration := data.metabolights.validation.v2.configuration
-	input.investigationFilePath != configuration.investigationFileName
-	msg := sprintf("Investigation file name should be '%v' found: '%v'", [configuration.investigationFileName, input.investigationFilePath])
+	configuration := data.metabolights.validation.v2.templates.configuration
+	template_version == data.metabolights.validation.v2.rules.phase1.definitions.STUDY_TEMPLATE_VERSION
+	input.investigationFilePath != configuration.versions[template_version].investigationFileName
+	msg := sprintf("Investigation file name should be '%v' found: '%v'", [configuration.versions[template_version].investigationFileName, input.investigationFilePath])
 	result := f.format(rego.metadata.rule(), msg, input.investigationFilePath)
 }
 
@@ -127,7 +128,11 @@ rule___100_100_100_04 contains result if {
 #  priority: CRITICAL
 #  section: investigation.parserMessages
 rule___100_100_100_05 contains result if {
-	template_file_name := data.metabolights.validation.v2.configuration.investigationFileName
+	configuration := data.metabolights.validation.v2.templates.configuration
+
+	template_version := data.metabolights.validation.v2.rules.phase1.definitions.STUDY_TEMPLATE_VERSION
+	template_file_name := configuration.versions[template_version].investigationFileName
+
 	input.parserMessages
 	not input.parserMessages[template_file_name]
 

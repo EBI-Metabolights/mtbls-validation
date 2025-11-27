@@ -3,7 +3,12 @@ from pathlib import Path
 from pydantic import BaseModel
 
 from scripts import models as models
-from scripts.update.pages.utils import find_rule, get_controls, get_templates
+from scripts.update.pages.utils import (
+    find_rule,
+    get_controls,
+    get_template_settings,
+    get_templates,
+)
 from scripts.utils import escape, zip_file
 
 
@@ -19,6 +24,7 @@ def create_control_list_documentation(
     isa_file_type: str,
     control_lists_root_path: Path,
     common_headers: list[str],
+    template_settings: models.TemplateSettings,
 ):
     folder_path = control_lists_root_path / Path(
         isa_file_type.lower().replace(" ", "-") + "-control-lists"
@@ -33,6 +39,7 @@ def create_control_list_documentation(
                 / Path(template_name)
                 / f"{folder_name}-v{template.version}.md"
             )
+
             # print(f"- {template_name}: {target_path}")
             target_path.parent.mkdir(parents=True, exist_ok=True)
             create_md_file(
@@ -43,6 +50,7 @@ def create_control_list_documentation(
                 [x.column_header for x in template.headers],
                 template.version,
                 target_path,
+                template_settings,
             )
 
 
@@ -54,7 +62,25 @@ def create_md_file(
     template_headers: list[str],
     template_version: str,
     target_path: Path,
+    template_settings: models.TemplateSettings,
 ):
+    versions = template_settings.versions
+    if template_version not in template_settings.active_template_versions:
+        return
+    for version in template_settings.active_template_versions:
+        version_template = versions.get(version)
+        for file_type, active_templates in [
+            ("Assay File", version_template.active_assay_file_templates),
+            ("Sample File", version_template.active_sample_file_templates),
+            ("MAF File", version_template.active_assignment_file_templates),
+            (
+                "Investigation File",
+                version_template.active_investigation_file_templates,
+            ),
+        ]:
+            if isa_file_type == file_type and template_name not in active_templates:
+                return
+
     added_fields = set()
     with target_path.open("w") as f:
         f.write(f"# {template_name} - {isa_file_type} Field Controls\n\n")
@@ -225,6 +251,7 @@ def create_file_structure_documentation(
     assay_controls: dict[str, list[models.FieldValueValidation]],
     sample_controls: dict[str, list[models.FieldValueValidation]],
     controls_root_path: Path,
+    template_settings: models.TemplateSettings = None,
 ):
     pairs = [
         (sample_file_templates, "sample-file-structure", sample_controls),
@@ -237,6 +264,28 @@ def create_file_structure_documentation(
         for name, template_list in templates.items():
             for template in template_list:
                 version = template.version
+
+                versions = template_settings.versions
+                if version not in template_settings.active_template_versions:
+                    continue
+                version_template = versions.get(version)
+                for file_type, active_templates in [
+                    (
+                        "assay-file-structure",
+                        version_template.active_assay_file_templates,
+                    ),
+                    (
+                        "sample-file-structure",
+                        version_template.active_sample_file_templates,
+                    ),
+                    (
+                        "maf-file-structure",
+                        version_template.active_assignment_file_templates,
+                    ),
+                ]:
+                    if folder == file_type and name not in active_templates:
+                        continue
+
                 headers = template.headers
                 doc_file_name = f"{parent_folder}-{name}-v{version}.md"
                 target_path = Path(
@@ -372,7 +421,11 @@ def create_file_structure_documentation(
                     zip_file(str(template_path), str(zip_template_path))
 
 
-def create_control_and_template_pages():
+def create_control_and_template_pages(template_settings: models.TemplateSettings):
+    maf_file_templates = get_templates("assignmentFileHeaderTemplates")
+    maf_common_fields = {"__default__": "Common", "Unit": "Unit"}
+    maf_controls = get_controls("assignmentFileControls", maf_common_fields)
+
     assay_file_templates = get_templates("assayFileHeaderTemplates")
     assay_common_fields = {"__default__": "Common", "Unit": "Unit"}
     assay_controls = get_controls("assayFileControls", assay_common_fields)
@@ -400,6 +453,7 @@ def create_control_and_template_pages():
         "Assay File",
         docs_path / control_lists_root_path,
         list(assay_common_fields.values()),
+        template_settings=template_settings,
     )
     create_control_list_documentation(
         sample_controls,
@@ -407,27 +461,40 @@ def create_control_and_template_pages():
         "Sample File",
         docs_path / control_lists_root_path,
         list(sample_common_fields.values()),
+        template_settings=template_settings,
     )
+    create_control_list_documentation(
+        maf_controls,
+        maf_file_templates,
+        "MAF File",
+        docs_path / control_lists_root_path,
+        list(maf_common_fields.values()),
+        template_settings=template_settings,
+    )
+
     investigation_fields = [
         x for x in investigation_controls.keys() if x not in investigation_common_fields
     ]
-    for version in ["1.0", "2.0"]:
-        target_root_path = (
-            docs_path
-            / control_lists_root_path
-            / Path("investigation-file-control-lists/minimum")
-        )
-        target_root_path.mkdir(parents=True, exist_ok=True)
-        target_path = target_root_path / Path(f"minimum-v{version}.md")
-        create_md_file(
-            investigation_controls,
-            "Investigation File",
-            list(investigation_common_fields.values()),
-            "Minimum",
-            investigation_fields,
-            version,
-            target_path,
-        )
+    for version in template_settings.active_template_versions:
+        template = template_settings.versions.get(version)
+        for template_name in template.active_investigation_file_templates:
+            target_root_path = (
+                docs_path
+                / control_lists_root_path
+                / Path(f"investigation-file-control-lists/{template_name}")
+            )
+            target_root_path.mkdir(parents=True, exist_ok=True)
+            target_path = target_root_path / Path(f"{template_name}-v{version}.md")
+            create_md_file(
+                investigation_controls,
+                "Investigation File",
+                list(investigation_common_fields.values()),
+                template_name,
+                investigation_fields,
+                version,
+                target_path,
+                template_settings,
+            )
     create_file_structure_documentation(
         assay_file_templates,
         sample_file_templates,
@@ -435,8 +502,10 @@ def create_control_and_template_pages():
         assay_controls,
         sample_controls,
         control_lists_root_path,
+        template_settings,
     )
 
 
 if __name__ == "__main__":
-    create_control_and_template_pages()
+    template_settings = get_template_settings()
+    create_control_and_template_pages(template_settings)

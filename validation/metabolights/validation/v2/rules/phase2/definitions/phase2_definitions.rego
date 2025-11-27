@@ -15,10 +15,11 @@ ONTOLOGY_SOURCE_REFERENCE_NAMES_STR := concat(", ", ONTOLOGY_SOURCE_REFERENCE_NA
 
 _ALLOWED_CHARS_PATTERN := concat("", data.metabolights.validation.v2.configuration.allowedChars)
 
-CL_DERIVED_FILE_EXTENSIONS := data.metabolights.validation.v2.configuration.derivedFileExtensions
+template_version := data.metabolights.validation.v2.rules.phase1.definitions.STUDY_TEMPLATE_VERSION
+CL_DERIVED_FILE_EXTENSIONS := data.metabolights.validation.v2.templates.configuration.versions[template_version].derivedFileExtensions
 
 CL_DERIVED_FILE_EXTENSIONS_STR := concat(",", CL_DERIVED_FILE_EXTENSIONS)
 
-CL_RAW_FILE_EXTENSIONS := data.metabolights.validation.v2.configuration.rawFileExtensions
+CL_RAW_FILE_EXTENSIONS := data.metabolights.validation.v2.templates.configuration.versions[template_version].rawFileExtensions
 
 CL_RAW_FILE_EXTENSIONS_STR := concat(",", CL_RAW_FILE_EXTENSIONS)

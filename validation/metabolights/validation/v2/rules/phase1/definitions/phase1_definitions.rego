@@ -133,12 +133,13 @@ STUDY_TEMPLATE_VERSION := METADATA_STUDY_TEMPLATE_VERSION if {
 	count(METADATA_STUDY_TEMPLATE_VERSION) > 0
 }
 
-STUDY_TEMPLATE_VERSION := data.metabolights.validation.v2.configuration.defaultStudyTemplateVersion if {
+STUDY_TEMPLATE_VERSION := data.metabolights.validation.v2.templates.configuration.defaultTemplateVersion if {
 	count(DB_STUDY_TEMPLATE_VERSION) == 0
+
 	count(METADATA_STUDY_TEMPLATE_VERSION) == 0
 }
 
-DEFAULT_STUDY_CATEGORIES := data.metabolights.validation.v2.configuration.studyCategories
+DEFAULT_STUDY_CATEGORIES := data.metabolights.validation.v2.templates.configuration.versions[STUDY_TEMPLATE_VERSION].studyCategoryIndexMapping
 
 DB_STUDY_CATEGORY := DEFAULT_STUDY_CATEGORIES[sprintf("%v", [input.studyDbMetadata.studyCategory])]
 
@@ -153,7 +154,7 @@ STUDY_CATEGORY := METADATA_STUDY_CATEGORY if {
 	count(METADATA_STUDY_CATEGORY) > 0
 }
 
-STUDY_CATEGORY := data.metabolights.validation.v2.configuration.defaultStudyCategory if {
+STUDY_CATEGORY := data.metabolights.validation.v2.templates.configuration.versions[STUDY_TEMPLATE_VERSION].defaultStudyCategory if {
 	count(DB_STUDY_CATEGORY) == 0
 	count(METADATA_STUDY_CATEGORY) == 0
 }
@@ -171,7 +172,7 @@ STUDY_SAMPLE_TEMPLATE_NAME := METADATA_SAMPLE_TEMPLATE if {
 	count(METADATA_SAMPLE_TEMPLATE) > 0
 }
 
-STUDY_SAMPLE_TEMPLATE_NAME := data.metabolights.validation.v2.configuration.defaultSampleTemplate if {
+STUDY_SAMPLE_TEMPLATE_NAME := data.metabolights.validation.v2.templates.configuration.versions[STUDY_TEMPLATE_VERSION].defaultSampleTemplate if {
 	count(DB_SAMPLE_TEMPLATE) == 0
 	count(METADATA_SAMPLE_TEMPLATE) == 0
 }

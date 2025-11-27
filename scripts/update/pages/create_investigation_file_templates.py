@@ -1,7 +1,11 @@
 import shutil
 from pathlib import Path
 
-from scripts.update.pages.utils import get_investigation_file_templates
+from scripts import models
+from scripts.update.pages.utils import (
+    get_investigation_file_templates,
+    get_template_settings,
+)
 from scripts.utils import zip_file
 
 
@@ -21,15 +25,20 @@ def serialize_investigation_value(value: str | list[str] | list[list[str]]):
     return str(value)
 
 
-def create_investigation_file_templates():
+def create_investigation_file_templates(template_settings: models.TemplateSettings):
     templates = get_investigation_file_templates()
     root_path = Path("docs/template-files/investigation-file")
     shutil.rmtree(root_path, ignore_errors=True)
     for name, template_list in templates.items():
         target_root_path = root_path / Path(name)
         target_root_path.mkdir(parents=True, exist_ok=True)
-
+        versions = template_settings.versions
+        for version in template_settings.active_template_versions:
+            if name not in versions.get(version).active_investigation_file_templates:
+                continue
         for template in template_list:
+            if version not in template_settings.active_template_versions:
+                continue
             rows = []
             for section in template.sections:
                 rows.append(f"{section.name}")
@@ -62,4 +71,5 @@ def create_investigation_file_templates():
 
 
 if __name__ == "__main__":
-    create_investigation_file_templates()
+    template_settings = get_template_settings()
+    create_investigation_file_templates(template_settings)

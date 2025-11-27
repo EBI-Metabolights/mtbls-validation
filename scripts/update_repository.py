@@ -1,5 +1,8 @@
+import shutil
 import subprocess
+from pathlib import Path
 
+from scripts import models as models
 from scripts.update.checks.check_unit_tests import (
     check_differences_between_rules_and_tests,
 )
@@ -45,6 +48,13 @@ def check_uniqueness(rules):
 
 
 if __name__ == "__main__":
+    configuration_path = "validation/metabolights/validation/v2/templates/configuration"
+    config_path = Path(configuration_path) / Path("configuration.json")
+
+    template_settings = models.TemplateSettings.model_validate_json(
+        config_path.read_text(), by_alias=True
+    )
+
     excel_rules = read_rules_from_excel()
     implemented_rules = get_implemented_rules()
     try:
@@ -65,14 +75,24 @@ if __name__ == "__main__":
 
     check_differences_between_rules_and_tests(force=True)
     create_test_input_json_files()
+
     update_control_list_json_files()
     update_template_json_files()
-    create_all_templates_json()
+    for folder in [
+        "docs/file-structures",
+        "docs/json",
+        "docs/prioritised-control-lists",
+        "docs/template-files",
+        "docs/validation-rules",
+    ]:
+        shutil.rmtree(folder)
+
+    create_all_templates_json(template_settings)
     create_all_controls_json()
-    create_investigation_file_templates()
+    create_investigation_file_templates(template_settings)
     create_validation_rule_summary_pages(excel_rules)
-    create_control_and_template_pages()
-    create_index_md_file()
+    create_control_and_template_pages(template_settings)
+    create_index_md_file(template_settings)
     try:
         result = subprocess.run(["/bin/bash", "./build_bundle.sh"], check=True)
     except Exception as ex:

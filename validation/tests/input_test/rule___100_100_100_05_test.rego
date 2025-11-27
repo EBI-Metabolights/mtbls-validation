@@ -32,9 +32,16 @@ test_rule___100_100_100_05_no_violation_01 if {
 # title: Input data has no parser message list for i_Investigation.txt.
 # description: i_Investigation.txt key is missing in parserMessages.
 test_rule___100_100_100_05_violation_01 if {
-	result := rules.rule___100_100_100_05 with input as {
-		"parserMessages": {"s_MTBLS1.txt": []},
-		"investigationFilePath": "i_Investigation.txt",
-	}
+	input_01 := data.tests.data.inputs.minimum_01
+	input_data := json.patch(
+		input_01,
+		[{
+			"op": "replace",
+			"path": "/parserMessages",
+			"value": [],
+		}],
+	)
+
+	result := rules.rule___100_100_100_05 with input as input_data
 	count(result) == 1
 }

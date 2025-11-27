@@ -71,6 +71,16 @@ def get_investigation_file_templates(key_labels: None | dict[str, str] = None):
     return templates
 
 
+def get_template_settings() -> models.TemplateSettings:
+    configuration_path = "validation/metabolights/validation/v2/templates/configuration"
+    config_path = Path(configuration_path) / Path("configuration.json")
+
+    template_settings = models.TemplateSettings.model_validate_json(
+        config_path.read_text(), by_alias=True
+    )
+    return template_settings
+
+
 def find_rule(
     control_list: list[models.FieldValueValidation],
     template_name: str,

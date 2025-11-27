@@ -1,14 +1,16 @@
 from pathlib import Path
 
+from scripts import models
 from scripts.models import IsaTableFileTemplate
 from scripts.update.pages.utils import (
     get_controls,
     get_investigation_file_templates,
+    get_template_settings,
     get_templates,
 )
 
 
-def create_index_md_file():
+def create_index_md_file(template_settings: models.TemplateSettings):
     assay_common_fields = {"__default__": "Default for All Fields", "Unit": "Unit"}
 
     assay_controls = get_controls("assayFileControls", assay_common_fields)
@@ -171,10 +173,12 @@ def create_index_md_file():
                 )
             v1_table.append("\n")
             v2_table.append("\n")
-
-            f.writelines(v1_table)
-            f.writelines(v2_table)
+            if "1.0" in template_settings.active_template_versions:
+                f.writelines(v1_table)
+            if "2.0" in template_settings.active_template_versions:
+                f.writelines(v2_table)
 
 
 if __name__ == "__main__":
-    create_index_md_file()
+    template_settings = get_template_settings()
+    create_index_md_file(template_settings)

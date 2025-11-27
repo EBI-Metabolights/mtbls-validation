@@ -1,0 +1,160 @@
+{
+    "activeTemplateVersions": [
+        "1.0"
+    ],
+    "defaultTemplateVersion": "1.0",
+    "versions": {
+        "1.0": {
+            "activeInvestigationFileTemplates": [
+                "minimum",
+                "metabolon"
+            ],
+            "activeAssignmentFileTemplates": [
+                "MS",
+                "NMR"
+            ],
+            "activeSampleFileTemplates": [
+                "minimum"
+            ],
+            "activeAssayFileTemplates": [
+                "LC-MS",
+                "GC-MS",
+                "GCxGC-MS",
+                "MALDI-MS",
+                "FIA-MS",
+                "DI-MS",
+                "CE-MS",
+                "MS",
+                "NMR",
+                "MRImaging",
+                "MSImaging",
+                "GC-FID",
+                "LC-DAD"
+            ],
+            "activeStudyCategories": [
+                "other",
+                "ms-mhd-enabled",
+                "ms-mhd-legacy",
+                "nmr",
+                "ms-imaging"
+            ],
+            "investigationFileName": "i_Investigation.txt",
+            "defaultSampleFileTemplate": "minimum",
+            "defaultInvestigationFileTemplate": "minimum",
+            "defaultStudyCategory": "other",
+            "studyCategoryIndexMapping": {
+                "0": "other",
+                "1": "ms-mhd-enabled",
+                "2": "ms-ms-imaging",
+                "3": "ms-other",
+                "5": "nmr",
+                "6": "ms-mhd-legacy"
+            },
+            "derivedFileExtensions": [
+                ".cdf",
+                ".imzml",
+                ".mzml",
+                ".mzmlb",
+                ".mzxml",
+                ".nmrml",
+                ".scan",
+                ".wiff"
+            ],
+            "rawFileExtensions": [
+                ".cmp",
+                ".d",
+                ".dat",
+                ".fid",
+                ".hr",
+                ".ibd",
+                ".jpf",
+                ".lcd",
+                ".ms",
+                ".peg",
+                ".qgd",
+                ".raw",
+                ".ser",
+                ".scan",
+                ".wiff",
+                ".zip",
+                ".smp"
+            ]
+        },
+        "2.0": {
+            "activeInvestigationFileTemplates": [
+                "minimum",
+                "metabolon"
+            ],
+            "activeAssignmentFileTemplates": [
+                "MS",
+                "NMR"
+            ],
+            "activeSampleFileTemplates": [
+                "minimum"
+            ],
+            "activeAssayFileTemplates": [
+                "LC-MS",
+                "GC-MS",
+                "GCxGC-MS",
+                "MALDI-MS",
+                "FIA-MS",
+                "DI-MS",
+                "CE-MS",
+                "MS",
+                "NMR",
+                "MRImaging",
+                "MSImaging",
+                "GC-FID",
+                "LC-DAD"
+            ],
+            "activeStudyCategories": [
+                "other",
+                "ms-mhd-enabled",
+                "ms-mhd-legacy",
+                "nmr",
+                "ms-imaging"
+            ],
+            "investigationFileName": "i_Investigation.txt",
+            "defaultSampleFileTemplate": "minimum",
+            "defaultInvestigationFileTemplate": "minimum",
+            "defaultStudyCategory": "other",
+            "studyCategoryIndexMapping": {
+                "0": "other",
+                "1": "ms-mhd-enabled",
+                "2": "ms-ms-imaging",
+                "3": "ms-other",
+                "5": "nmr",
+                "6": "ms-mhd-legacy"
+            },
+            "derivedFileExtensions": [
+                ".cdf",
+                ".imzml",
+                ".mzml",
+                ".mzmlb",
+                ".mzxml",
+                ".nmrml",
+                ".scan",
+                ".wiff"
+            ],
+            "rawFileExtensions": [
+                ".cmp",
+                ".d",
+                ".dat",
+                ".fid",
+                ".hr",
+                ".ibd",
+                ".jpf",
+                ".lcd",
+                ".ms",
+                ".peg",
+                ".qgd",
+                ".raw",
+                ".ser",
+                ".scan",
+                ".wiff",
+                ".zip",
+                ".smp"
+            ]
+        }
+    }
+}

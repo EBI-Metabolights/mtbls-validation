@@ -13,7 +13,6 @@
                         "Term Source Description"
                     ],
                     "defaultComments": [],
-                    "defaultCommentValues": {},
                     "defaultFieldValues": {
                         "Term Source Name": [
                             "CHMO",
@@ -41,7 +40,8 @@
                             "National Cancer Institute Thesaurus",
                             "Ontology for Biomedical Investigations"
                         ]
-                    }
+                    },
+                    "defaultCommentValues": {}
                 },
                 {
                     "name": "INVESTIGATION",
@@ -53,8 +53,8 @@
                         "Investigation Public Release Date"
                     ],
                     "defaultComments": [],
-                    "defaultCommentValues": {},
-                    "defaultFieldValues": {}
+                    "defaultFieldValues": {},
+                    "defaultCommentValues": {}
                 },
                 {
                     "name": "INVESTIGATION PUBLICATIONS",
@@ -68,8 +68,8 @@
                         "Investigation Publication Status Term Source REF"
                     ],
                     "defaultComments": [],
-                    "defaultCommentValues": {},
-                    "defaultFieldValues": {}
+                    "defaultFieldValues": {},
+                    "defaultCommentValues": {}
                 },
                 {
                     "name": "INVESTIGATION CONTACTS",
@@ -87,8 +87,8 @@
                         "Investigation Person Roles Term Source REF"
                     ],
                     "defaultComments": [],
-                    "defaultCommentValues": {},
-                    "defaultFieldValues": {}
+                    "defaultFieldValues": {},
+                    "defaultCommentValues": {}
                 },
                 {
                     "name": "STUDY",
@@ -111,6 +111,20 @@
                         "Funder ROR Id",
                         "Grant Identifier"
                     ],
+                    "defaultFieldValues": {
+                        "Study File Name": [
+                            "s_Sample.txt"
+                        ],
+                        "Study Title": [
+                            "Please update the study title"
+                        ],
+                        "Study Identifier": [
+                            "MTBLS"
+                        ],
+                        "Study Description": [
+                            "Please update the study abstract/description"
+                        ]
+                    },
                     "defaultCommentValues": {
                         "License": [
                             "CC0 1.0 Universal"
@@ -127,20 +141,6 @@
                         "Study Category": [
                             "other"
                         ]
-                    },
-                    "defaultFieldValues": {
-                        "Study File Name": [
-                            "s_Sample.txt"
-                        ],
-                        "Study Title": [
-                            "Please update the study title"
-                        ],
-                        "Study Identifier": [
-                            "MTBLS"
-                        ],
-                        "Study Description": [
-                            "Please update the study abstract/description"
-                        ]
                     }
                 },
                 {
@@ -154,7 +154,6 @@
                         "Study Design Category",
                         "Study Design Source"
                     ],
-                    "defaultCommentValues": {},
                     "defaultFieldValues": {
                         "Study Design Type": [
                             "metabolon",
@@ -174,7 +173,8 @@
                             "MSIO",
                             "MSIO"
                         ]
-                    }
+                    },
+                    "defaultCommentValues": {}
                 },
                 {
                     "name": "STUDY PUBLICATIONS",
@@ -188,12 +188,12 @@
                         "Study Publication Status Term Source REF"
                     ],
                     "defaultComments": [],
-                    "defaultCommentValues": {},
                     "defaultFieldValues": {
                         "Study Publication Title": [
                             "Insert title here - Title should be identical to study title"
                         ]
-                    }
+                    },
+                    "defaultCommentValues": {}
                 },
                 {
                     "name": "STUDY FACTORS",
@@ -206,8 +206,8 @@
                     "defaultComments": [
                         "Study Factor Value Format"
                     ],
-                    "defaultCommentValues": {},
-                    "defaultFieldValues": {}
+                    "defaultFieldValues": {},
+                    "defaultCommentValues": {}
                 },
                 {
                     "name": "STUDY ASSAYS",
@@ -222,7 +222,6 @@
                         "Study Assay Technology Platform"
                     ],
                     "defaultComments": [],
-                    "defaultCommentValues": {},
                     "defaultFieldValues": {
                         "Study Assay File Name": [
                             "a_MTBLS310_Method1_POS_1_metabolite_profiling_mass_spectrometry"
@@ -269,7 +268,8 @@
                             "Q Exactive",
                             "Q Exactive"
                         ]
-                    }
+                    },
+                    "defaultCommentValues": {}
                 },
                 {
                     "name": "STUDY PROTOCOLS",
@@ -292,48 +292,6 @@
                     "defaultComments": [
                         "Study Protocol Parameters Value Format"
                     ],
-                    "defaultCommentValues": {
-                        "Study Protocol Parameters Value Format": [
-                            [],
-                            [
-                                "",
-                                ""
-                            ],
-                            [
-                                "",
-                                "",
-                                ""
-                            ],
-                            [
-                                "",
-                                "",
-                                "",
-                                "",
-                                "",
-                                "",
-                                "",
-                                "",
-                                "",
-                                "",
-                                "",
-                                "",
-                                "",
-                                "",
-                                "",
-                                "",
-                                "",
-                                "",
-                                "",
-                                "",
-                                ""
-                            ],
-                            [
-                                "",
-                                ""
-                            ],
-                            []
-                        ]
-                    },
                     "defaultFieldValues": {
                         "Study Protocol Name": [
                             "Sample collection",
@@ -369,7 +327,7 @@
                         ],
                         "Study Protocol Description": [
                             "Client to add information here",
-                            "Samples are prepared using the automated MicroLab STAR® system from Hamilton Company.  Several recovery standards are added prior to the first step in the extraction process for QC purposes.  Samples are extracted with methanol under vigorous shaking for 2 min (Glen Mills GenoGrinder 2000) to precipitate protein and dissociate small molecules bound to protein or trapped in the precipitated protein matrix, followed by centrifugation to recover chemically diverse metabolites.  The resulting extract is divided into five fractions: two for analysis by two separate reverse phase (RP)/UPLC-MS/MS methods using positive ion mode electrospray ionization (ESI), one for analysis by RP/UPLC-MS/MS using negative ion mode ESI, one for analysis by HILIC/UPLC-MS/MS using negative ion mode ESI, and one reserved for backup. Samples are placed briefly on a TurboVap® (Zymark) to remove the organic solvent and stored overnight under nitrogen. In preparation for analysis, samples are then reconstituted in solvents compatible to each of the four methods.",
+                            "Samples are prepared using the automated MicroLab STAR\u00ae system from Hamilton Company.  Several recovery standards are added prior to the first step in the extraction process for QC purposes.  Samples are extracted with methanol under vigorous shaking for 2 min (Glen Mills GenoGrinder 2000) to precipitate protein and dissociate small molecules bound to protein or trapped in the precipitated protein matrix, followed by centrifugation to recover chemically diverse metabolites.  The resulting extract is divided into five fractions: two for analysis by two separate reverse phase (RP)/UPLC-MS/MS methods using positive ion mode electrospray ionization (ESI), one for analysis by RP/UPLC-MS/MS using negative ion mode ESI, one for analysis by HILIC/UPLC-MS/MS using negative ion mode ESI, and one reserved for backup. Samples are placed briefly on a TurboVap\u00ae (Zymark) to remove the organic solvent and stored overnight under nitrogen. In preparation for analysis, samples are then reconstituted in solvents compatible to each of the four methods.",
                             "All methods utilize a Waters ACQUITY ultra-performance liquid chromatography (UPLC). Each reconstitution solvent contains a series of standards at fixed concentrations to ensure injection and chromatographic consistency. Method 1/Pos 1: One aliquot is analyzed using acidic positive ion conditions, chromatographically optimized for more hydrophilic compounds. In this method, the extract is gradient-eluted from a C18 column (Waters UPLC BEH C18-2.1x100 mm, 1.7 um) using water and methanol, containing 0.05% perfluoropentanoic acid (PFPA) and 0.1% formic acid (FA). Method 2/Pos 2: A second aliquot is also analyzed using acidic positive ion conditions, but is chromatographically optimized for more hydrophobic compounds. In this method, the extract is gradient eluted from the aforementioned C18 column using methanol, acetonitrile, water, 0.05% PFPA and 0.01% FA, and is operated at an overall higher organic content. Method 3/Neg 1: A third aliquot is analyzed using basic negative ion optimized conditions using a separate dedicated C18 column. The basic extracts are gradient-eluted from the column using methanol and water, however with 6.5 mM Ammonium Bicarbonate at pH 8. Method 4/Neg 2: The fourth aliquot is analyzed via negative ionization following elution from a HILIC column (Waters UPLC BEH Amide 2.1x150 mm, 1.7 um) using a gradient consisting of water and acetonitrile with 10 mM Ammonium Formate, pH 10.8.",
                             "A Thermo Scientific Q-Exactive high resolution/accurate mass spectrometer interfaced with a heated electrospray ionization (HESI-II) source and Orbitrap mass analyzer operated at 35,000 mass resolution was used. The MS analysis alternates between MS and data-dependent MSn scans using dynamic exclusion.",
                             "Raw data were extracted, peak-identified, and QC processed using Metabolon's hardware and software. These systems are built on a web-service platform utilizing Microsoft's .NET technologies, which run on high-performance application servers and fiber-channel storage arrays in clusters to provide active failover and load-balancing.",
@@ -543,6 +501,48 @@
                             "",
                             ""
                         ]
+                    },
+                    "defaultCommentValues": {
+                        "Study Protocol Parameters Value Format": [
+                            [],
+                            [
+                                "",
+                                ""
+                            ],
+                            [
+                                "",
+                                "",
+                                ""
+                            ],
+                            [
+                                "",
+                                "",
+                                "",
+                                "",
+                                "",
+                                "",
+                                "",
+                                "",
+                                "",
+                                "",
+                                "",
+                                "",
+                                "",
+                                "",
+                                "",
+                                "",
+                                "",
+                                "",
+                                "",
+                                "",
+                                ""
+                            ],
+                            [
+                                "",
+                                ""
+                            ],
+                            []
+                        ]
                     }
                 },
                 {
@@ -565,8 +565,8 @@
                         "Study Person Additional Email",
                         "Study Person Affiliation ROR Id"
                     ],
-                    "defaultCommentValues": {},
-                    "defaultFieldValues": {}
+                    "defaultFieldValues": {},
+                    "defaultCommentValues": {}
                 }
             ]
         },
@@ -583,7 +583,6 @@
                         "Term Source Description"
                     ],
                     "defaultComments": [],
-                    "defaultCommentValues": {},
                     "defaultFieldValues": {
                         "Term Source Name": [
                             "CHMO",
@@ -611,7 +610,8 @@
                             "National Cancer Institute Thesaurus",
                             "Ontology for Biomedical Investigations"
                         ]
-                    }
+                    },
+                    "defaultCommentValues": {}
                 },
                 {
                     "name": "INVESTIGATION",
@@ -623,8 +623,8 @@
                         "Investigation Public Release Date"
                     ],
                     "defaultComments": [],
-                    "defaultCommentValues": {},
-                    "defaultFieldValues": {}
+                    "defaultFieldValues": {},
+                    "defaultCommentValues": {}
                 },
                 {
                     "name": "INVESTIGATION PUBLICATIONS",
@@ -638,8 +638,8 @@
                         "Investigation Publication Status Term Source REF"
                     ],
                     "defaultComments": [],
-                    "defaultCommentValues": {},
-                    "defaultFieldValues": {}
+                    "defaultFieldValues": {},
+                    "defaultCommentValues": {}
                 },
                 {
                     "name": "INVESTIGATION CONTACTS",
@@ -657,8 +657,8 @@
                         "Investigation Person Roles Term Source REF"
                     ],
                     "defaultComments": [],
-                    "defaultCommentValues": {},
-                    "defaultFieldValues": {}
+                    "defaultFieldValues": {},
+                    "defaultCommentValues": {}
                 },
                 {
                     "name": "STUDY",
@@ -681,6 +681,20 @@
                         "Funder ROR Id",
                         "Grant Identifier"
                     ],
+                    "defaultFieldValues": {
+                        "Study File Name": [
+                            "s_Sample.txt"
+                        ],
+                        "Study Title": [
+                            "Please update the study title"
+                        ],
+                        "Study Identifier": [
+                            "MTBLS"
+                        ],
+                        "Study Description": [
+                            "Please update the study abstract/description"
+                        ]
+                    },
                     "defaultCommentValues": {
                         "License": [
                             "CC0 1.0 Universal"
@@ -697,20 +711,6 @@
                         "Study Category": [
                             "other"
                         ]
-                    },
-                    "defaultFieldValues": {
-                        "Study File Name": [
-                            "s_Sample.txt"
-                        ],
-                        "Study Title": [
-                            "Please update the study title"
-                        ],
-                        "Study Identifier": [
-                            "MTBLS"
-                        ],
-                        "Study Description": [
-                            "Please update the study abstract/description"
-                        ]
                     }
                 },
                 {
@@ -724,7 +724,6 @@
                         "Study Design Category",
                         "Study Design Source"
                     ],
-                    "defaultCommentValues": {},
                     "defaultFieldValues": {
                         "Study Design Type": [
                             "metabolon",
@@ -744,7 +743,8 @@
                             "MSIO",
                             "MSIO"
                         ]
-                    }
+                    },
+                    "defaultCommentValues": {}
                 },
                 {
                     "name": "STUDY PUBLICATIONS",
@@ -758,12 +758,12 @@
                         "Study Publication Status Term Source REF"
                     ],
                     "defaultComments": [],
-                    "defaultCommentValues": {},
                     "defaultFieldValues": {
                         "Study Publication Title": [
                             "Insert title here - Title should be identical to study title"
                         ]
-                    }
+                    },
+                    "defaultCommentValues": {}
                 },
                 {
                     "name": "STUDY FACTORS",
@@ -776,8 +776,8 @@
                     "defaultComments": [
                         "Study Factor Value Format"
                     ],
-                    "defaultCommentValues": {},
-                    "defaultFieldValues": {}
+                    "defaultFieldValues": {},
+                    "defaultCommentValues": {}
                 },
                 {
                     "name": "STUDY ASSAYS",
@@ -792,7 +792,6 @@
                         "Study Assay Technology Platform"
                     ],
                     "defaultComments": [],
-                    "defaultCommentValues": {},
                     "defaultFieldValues": {
                         "Study Assay File Name": [
                             "a_MTBLS310_Method1_POS_1_metabolite_profiling_mass_spectrometry"
@@ -839,7 +838,8 @@
                             "Q Exactive",
                             "Q Exactive"
                         ]
-                    }
+                    },
+                    "defaultCommentValues": {}
                 },
                 {
                     "name": "STUDY PROTOCOLS",
@@ -862,48 +862,6 @@
                     "defaultComments": [
                         "Study Protocol Parameters Value Format"
                     ],
-                    "defaultCommentValues": {
-                        "Study Protocol Parameters Value Format": [
-                            [],
-                            [
-                                "",
-                                ""
-                            ],
-                            [
-                                "",
-                                "",
-                                ""
-                            ],
-                            [
-                                "",
-                                "",
-                                "",
-                                "",
-                                "",
-                                "",
-                                "",
-                                "",
-                                "",
-                                "",
-                                "",
-                                "",
-                                "",
-                                "",
-                                "",
-                                "",
-                                "",
-                                "",
-                                "",
-                                "",
-                                ""
-                            ],
-                            [
-                                "",
-                                ""
-                            ],
-                            []
-                        ]
-                    },
                     "defaultFieldValues": {
                         "Study Protocol Name": [
                             "Sample collection",
@@ -939,7 +897,7 @@
                         ],
                         "Study Protocol Description": [
                             "Client to add information here",
-                            "Samples are prepared using the automated MicroLab STAR® system from Hamilton Company.  Several recovery standards are added prior to the first step in the extraction process for QC purposes.  Samples are extracted with methanol under vigorous shaking for 2 min (Glen Mills GenoGrinder 2000) to precipitate protein and dissociate small molecules bound to protein or trapped in the precipitated protein matrix, followed by centrifugation to recover chemically diverse metabolites.  The resulting extract is divided into five fractions: two for analysis by two separate reverse phase (RP)/UPLC-MS/MS methods using positive ion mode electrospray ionization (ESI), one for analysis by RP/UPLC-MS/MS using negative ion mode ESI, one for analysis by HILIC/UPLC-MS/MS using negative ion mode ESI, and one reserved for backup. Samples are placed briefly on a TurboVap® (Zymark) to remove the organic solvent and stored overnight under nitrogen. In preparation for analysis, samples are then reconstituted in solvents compatible to each of the four methods.",
+                            "Samples are prepared using the automated MicroLab STAR\u00ae system from Hamilton Company.  Several recovery standards are added prior to the first step in the extraction process for QC purposes.  Samples are extracted with methanol under vigorous shaking for 2 min (Glen Mills GenoGrinder 2000) to precipitate protein and dissociate small molecules bound to protein or trapped in the precipitated protein matrix, followed by centrifugation to recover chemically diverse metabolites.  The resulting extract is divided into five fractions: two for analysis by two separate reverse phase (RP)/UPLC-MS/MS methods using positive ion mode electrospray ionization (ESI), one for analysis by RP/UPLC-MS/MS using negative ion mode ESI, one for analysis by HILIC/UPLC-MS/MS using negative ion mode ESI, and one reserved for backup. Samples are placed briefly on a TurboVap\u00ae (Zymark) to remove the organic solvent and stored overnight under nitrogen. In preparation for analysis, samples are then reconstituted in solvents compatible to each of the four methods.",
                             "All methods utilize a Waters ACQUITY ultra-performance liquid chromatography (UPLC). Each reconstitution solvent contains a series of standards at fixed concentrations to ensure injection and chromatographic consistency. Method 1/Pos 1: One aliquot is analyzed using acidic positive ion conditions, chromatographically optimized for more hydrophilic compounds. In this method, the extract is gradient-eluted from a C18 column (Waters UPLC BEH C18-2.1x100 mm, 1.7 um) using water and methanol, containing 0.05% perfluoropentanoic acid (PFPA) and 0.1% formic acid (FA). Method 2/Pos 2: A second aliquot is also analyzed using acidic positive ion conditions, but is chromatographically optimized for more hydrophobic compounds. In this method, the extract is gradient eluted from the aforementioned C18 column using methanol, acetonitrile, water, 0.05% PFPA and 0.01% FA, and is operated at an overall higher organic content. Method 3/Neg 1: A third aliquot is analyzed using basic negative ion optimized conditions using a separate dedicated C18 column. The basic extracts are gradient-eluted from the column using methanol and water, however with 6.5 mM Ammonium Bicarbonate at pH 8. Method 4/Neg 2: The fourth aliquot is analyzed via negative ionization following elution from a HILIC column (Waters UPLC BEH Amide 2.1x150 mm, 1.7 um) using a gradient consisting of water and acetonitrile with 10 mM Ammonium Formate, pH 10.8.",
                             "A Thermo Scientific Q-Exactive high resolution/accurate mass spectrometer interfaced with a heated electrospray ionization (HESI-II) source and Orbitrap mass analyzer operated at 35,000 mass resolution was used. The MS analysis alternates between MS and data-dependent MSn scans using dynamic exclusion.",
                             "Raw data were extracted, peak-identified, and QC processed using Metabolon's hardware and software. These systems are built on a web-service platform utilizing Microsoft's .NET technologies, which run on high-performance application servers and fiber-channel storage arrays in clusters to provide active failover and load-balancing.",
@@ -1113,6 +1071,48 @@
                             "",
                             ""
                         ]
+                    },
+                    "defaultCommentValues": {
+                        "Study Protocol Parameters Value Format": [
+                            [],
+                            [
+                                "",
+                                ""
+                            ],
+                            [
+                                "",
+                                "",
+                                ""
+                            ],
+                            [
+                                "",
+                                "",
+                                "",
+                                "",
+                                "",
+                                "",
+                                "",
+                                "",
+                                "",
+                                "",
+                                "",
+                                "",
+                                "",
+                                "",
+                                "",
+                                "",
+                                "",
+                                "",
+                                "",
+                                "",
+                                ""
+                            ],
+                            [
+                                "",
+                                ""
+                            ],
+                            []
+                        ]
                     }
                 },
                 {
@@ -1135,8 +1135,8 @@
                         "Study Person Additional Email",
                         "Study Person Affiliation ROR Id"
                     ],
-                    "defaultCommentValues": {},
-                    "defaultFieldValues": {}
+                    "defaultFieldValues": {},
+                    "defaultCommentValues": {}
                 }
             ]
         }

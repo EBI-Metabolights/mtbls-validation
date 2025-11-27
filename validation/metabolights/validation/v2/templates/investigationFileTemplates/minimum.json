@@ -13,7 +13,6 @@
                         "Term Source Description"
                     ],
                     "defaultComments": [],
-                    "defaultCommentValues": {},
                     "defaultFieldValues": {
                         "Term Source Name": [
                             "CHMO",
@@ -43,7 +42,8 @@
                             "National Cancer Institute Thesaurus",
                             "Ontology for Biomedical Investigations"
                         ]
-                    }
+                    },
+                    "defaultCommentValues": {}
                 },
                 {
                     "name": "INVESTIGATION",
@@ -55,8 +55,8 @@
                         "Investigation Public Release Date"
                     ],
                     "defaultComments": [],
-                    "defaultCommentValues": {},
-                    "defaultFieldValues": {}
+                    "defaultFieldValues": {},
+                    "defaultCommentValues": {}
                 },
                 {
                     "name": "INVESTIGATION PUBLICATIONS",
@@ -70,8 +70,8 @@
                         "Investigation Publication Status Term Source REF"
                     ],
                     "defaultComments": [],
-                    "defaultCommentValues": {},
-                    "defaultFieldValues": {}
+                    "defaultFieldValues": {},
+                    "defaultCommentValues": {}
                 },
                 {
                     "name": "INVESTIGATION CONTACTS",
@@ -89,8 +89,8 @@
                         "Investigation Person Roles Term Source REF"
                     ],
                     "defaultComments": [],
-                    "defaultCommentValues": {},
-                    "defaultFieldValues": {}
+                    "defaultFieldValues": {},
+                    "defaultCommentValues": {}
                 },
                 {
                     "name": "STUDY",
@@ -113,6 +113,20 @@
                         "Funder ROR Id",
                         "Grant Identifier"
                     ],
+                    "defaultFieldValues": {
+                        "Study File Name": [
+                            "s_Sample.txt"
+                        ],
+                        "Study Title": [
+                            "Please update the study title"
+                        ],
+                        "Study Identifier": [
+                            "MTBLS"
+                        ],
+                        "Study Description": [
+                            "Please update the study abstract/description"
+                        ]
+                    },
                     "defaultCommentValues": {
                         "License": [
                             "CC0 1.0 Universal"
@@ -129,20 +143,6 @@
                         "Study Category": [
                             "other"
                         ]
-                    },
-                    "defaultFieldValues": {
-                        "Study File Name": [
-                            "s_Sample.txt"
-                        ],
-                        "Study Title": [
-                            "Please update the study title"
-                        ],
-                        "Study Identifier": [
-                            "MTBLS"
-                        ],
-                        "Study Description": [
-                            "Please update the study abstract/description"
-                        ]
                     }
                 },
                 {
@@ -156,8 +156,8 @@
                         "Study Design Category",
                         "Study Design Source"
                     ],
-                    "defaultCommentValues": {},
-                    "defaultFieldValues": {}
+                    "defaultFieldValues": {},
+                    "defaultCommentValues": {}
                 },
                 {
                     "name": "STUDY PUBLICATIONS",
@@ -171,12 +171,12 @@
                         "Study Publication Status Term Source REF"
                     ],
                     "defaultComments": [],
-                    "defaultCommentValues": {},
                     "defaultFieldValues": {
                         "Study Publication Title": [
                             "Please update the publication title"
                         ]
-                    }
+                    },
+                    "defaultCommentValues": {}
                 },
                 {
                     "name": "STUDY FACTORS",
@@ -189,8 +189,8 @@
                     "defaultComments": [
                         "Study Factor Value Format"
                     ],
-                    "defaultCommentValues": {},
-                    "defaultFieldValues": {}
+                    "defaultFieldValues": {},
+                    "defaultCommentValues": {}
                 },
                 {
                     "name": "STUDY ASSAYS",
@@ -205,8 +205,8 @@
                         "Study Assay Technology Platform"
                     ],
                     "defaultComments": [],
-                    "defaultCommentValues": {},
-                    "defaultFieldValues": {}
+                    "defaultFieldValues": {},
+                    "defaultCommentValues": {}
                 },
                 {
                     "name": "STUDY PROTOCOLS",
@@ -229,8 +229,8 @@
                     "defaultComments": [
                         "Study Protocol Parameters Value Format"
                     ],
-                    "defaultCommentValues": {},
-                    "defaultFieldValues": {}
+                    "defaultFieldValues": {},
+                    "defaultCommentValues": {}
                 },
                 {
                     "name": "STUDY CONTACTS",
@@ -252,8 +252,8 @@
                         "Study Person Additional Email",
                         "Study Person Affiliation ROR Id"
                     ],
-                    "defaultCommentValues": {},
-                    "defaultFieldValues": {}
+                    "defaultFieldValues": {},
+                    "defaultCommentValues": {}
                 }
             ]
         },
@@ -270,7 +270,6 @@
                         "Term Source Description"
                     ],
                     "defaultComments": [],
-                    "defaultCommentValues": {},
                     "defaultFieldValues": {
                         "Term Source Name": [
                             "CHMO",
@@ -300,7 +299,8 @@
                             "National Cancer Institute Thesaurus",
                             "Ontology for Biomedical Investigations"
                         ]
-                    }
+                    },
+                    "defaultCommentValues": {}
                 },
                 {
                     "name": "INVESTIGATION",
@@ -312,8 +312,8 @@
                         "Investigation Public Release Date"
                     ],
                     "defaultComments": [],
-                    "defaultCommentValues": {},
-                    "defaultFieldValues": {}
+                    "defaultFieldValues": {},
+                    "defaultCommentValues": {}
                 },
                 {
                     "name": "INVESTIGATION PUBLICATIONS",
@@ -327,8 +327,8 @@
                         "Investigation Publication Status Term Source REF"
                     ],
                     "defaultComments": [],
-                    "defaultCommentValues": {},
-                    "defaultFieldValues": {}
+                    "defaultFieldValues": {},
+                    "defaultCommentValues": {}
                 },
                 {
                     "name": "INVESTIGATION CONTACTS",
@@ -346,8 +346,8 @@
                         "Investigation Person Roles Term Source REF"
                     ],
                     "defaultComments": [],
-                    "defaultCommentValues": {},
-                    "defaultFieldValues": {}
+                    "defaultFieldValues": {},
+                    "defaultCommentValues": {}
                 },
                 {
                     "name": "STUDY",
@@ -370,6 +370,20 @@
                         "Funder ROR Id",
                         "Grant Identifier"
                     ],
+                    "defaultFieldValues": {
+                        "Study File Name": [
+                            "s_Sample.txt"
+                        ],
+                        "Study Title": [
+                            "Please update the study title"
+                        ],
+                        "Study Identifier": [
+                            "MTBLS"
+                        ],
+                        "Study Description": [
+                            "Please update the study abstract/description"
+                        ]
+                    },
                     "defaultCommentValues": {
                         "License": [
                             "CC0 1.0 Universal"
@@ -386,20 +400,6 @@
                         "Study Category": [
                             "other"
                         ]
-                    },
-                    "defaultFieldValues": {
-                        "Study File Name": [
-                            "s_Sample.txt"
-                        ],
-                        "Study Title": [
-                            "Please update the study title"
-                        ],
-                        "Study Identifier": [
-                            "MTBLS"
-                        ],
-                        "Study Description": [
-                            "Please update the study abstract/description"
-                        ]
                     }
                 },
                 {
@@ -413,8 +413,8 @@
                         "Study Design Category",
                         "Study Design Source"
                     ],
-                    "defaultCommentValues": {},
-                    "defaultFieldValues": {}
+                    "defaultFieldValues": {},
+                    "defaultCommentValues": {}
                 },
                 {
                     "name": "STUDY PUBLICATIONS",
@@ -428,12 +428,12 @@
                         "Study Publication Status Term Source REF"
                     ],
                     "defaultComments": [],
-                    "defaultCommentValues": {},
                     "defaultFieldValues": {
                         "Study Publication Title": [
                             "Please update the publication title"
                         ]
-                    }
+                    },
+                    "defaultCommentValues": {}
                 },
                 {
                     "name": "STUDY FACTORS",
@@ -446,8 +446,8 @@
                     "defaultComments": [
                         "Study Factor Value Format"
                     ],
-                    "defaultCommentValues": {},
-                    "defaultFieldValues": {}
+                    "defaultFieldValues": {},
+                    "defaultCommentValues": {}
                 },
                 {
                     "name": "STUDY ASSAYS",
@@ -462,8 +462,8 @@
                         "Study Assay Technology Platform"
                     ],
                     "defaultComments": [],
-                    "defaultCommentValues": {},
-                    "defaultFieldValues": {}
+                    "defaultFieldValues": {},
+                    "defaultCommentValues": {}
                 },
                 {
                     "name": "STUDY PROTOCOLS",
@@ -486,8 +486,8 @@
                     "defaultComments": [
                         "Study Protocol Parameters Value Format"
                     ],
-                    "defaultCommentValues": {},
-                    "defaultFieldValues": {}
+                    "defaultFieldValues": {},
+                    "defaultCommentValues": {}
                 },
                 {
                     "name": "STUDY CONTACTS",
@@ -509,8 +509,8 @@
                         "Study Person Additional Email",
                         "Study Person Affiliation ROR Id"
                     ],
-                    "defaultCommentValues": {},
-                    "defaultFieldValues": {}
+                    "defaultFieldValues": {},
+                    "defaultCommentValues": {}
                 }
             ]
         }

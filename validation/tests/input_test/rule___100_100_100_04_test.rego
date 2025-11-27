@@ -29,7 +29,16 @@ test_rule___100_100_100_04_no_violation_01 if {
 # title: Invalid investigation file name.
 # description: File  extension does not match.
 test_rule___100_100_100_04_violation_01 if {
-	result := rules.rule___100_100_100_04 with input as {"investigationFilePath": "i_Investigation.tsv"}
+	input_01 := data.tests.data.inputs.minimum_01
+	input_data := json.patch(
+		input_01,
+		[{
+			"op": "replace",
+			"path": "/investigationFilePath",
+			"value": "i_Investigation.tsv",
+		}],
+	)
+	result := rules.rule___100_100_100_04 with input as input_data
 	count(result) == 1
 }
 
@@ -37,6 +46,15 @@ test_rule___100_100_100_04_violation_01 if {
 # title: Invalid investigation file name.
 # description: i_Investigation.txt file name is case sensitive so other combinations are invalid.
 test_rule___100_100_100_04_violation_02 if {
-	result := rules.rule___100_100_100_04 with input as {"investigationFilePath": "i_investigation.txt"}
+	input_01 := data.tests.data.inputs.minimum_01
+	input_data := json.patch(
+		input_01,
+		[{
+			"op": "replace",
+			"path": "/investigationFilePath",
+			"value": "i_investigation.txt",
+		}],
+	)
+	result := rules.rule___100_100_100_04 with input as input_data
 	count(result) == 1
 }

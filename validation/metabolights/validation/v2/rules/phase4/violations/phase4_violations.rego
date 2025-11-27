@@ -4,6 +4,7 @@
 #   - input: schema["study-model-schema"]
 package metabolights.validation.v2.rules.phase4.violations
 
+import data.metabolights.validation.v2.rules.phase1.definitions as def
 import data.metabolights.validation.v2.templates
 import data.metabolights.validation.v2.utils.functions as f
 import input.assays
@@ -304,13 +305,29 @@ rule_f_400_100_001_02 contains result if {
 #  priority: CRITICAL
 #  section: files.general
 rule_f_400_100_001_03 contains result if {
-	raw_files := {x | some x in input.referencedRawFiles}
-	derived_files := {x | some x in input.referencedDerivedFiles}
+	referenced_files := {referenced_file |
+		some filename, table_file in assays
+		some j, study in input.investigation.studies
 
-	referenced_files := raw_files | derived_files
+		some assay in study.studyAssays.assays
+		assay.fileName == filename
+
+		some header in table_file.table.headers
+		endswith(header.columnHeader, " File")
+		column_name = header.columnName
+		some row_value in table_file.table[column_name]
+		referenced_file := row_value
+		count(referenced_file) > 0
+	}
+
+	# raw_files := {x | some x in input.referencedRawFiles}
+	# derived_files := {x | some x in input.referencedDerivedFiles}
+	# referenced_files := raw_files | derived_files
+
+	template_version := def.STUDY_TEMPLATE_VERSION
 	violated_values := [file_name |
 		some file_name, file_meta in input.studyFolderMetadata.files
-		lower(file_meta.extension) in data.metabolights.validation.v2.configuration.derivedFileExtensions
+		lower(file_meta.extension) in data.metabolights.validation.v2.templates.configuration.versions[template_version].derivedFileExtensions
 		not file_name in referenced_files
 	]
 	count(violated_values) > 0
@@ -331,10 +348,10 @@ rule_f_400_100_001_04 contains result if {
 	derived_files := {x | some x in input.referencedDerivedFiles}
 
 	referenced_files := raw_files | derived_files
-
+	template_version := def.STUDY_TEMPLATE_VERSION
 	violated_values := [file_name |
 		some file_name, file_meta in input.studyFolderMetadata.files
-		lower(file_meta.extension) in data.metabolights.validation.v2.configuration.rawFileExtensions
+		lower(file_meta.extension) in data.metabolights.validation.v2.templates.configuration.versions[template_version].rawFileExtensions
 		not file_name in referenced_files
 	]
 	count(violated_values) > 0

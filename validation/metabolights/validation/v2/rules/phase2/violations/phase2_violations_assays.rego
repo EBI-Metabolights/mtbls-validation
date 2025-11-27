@@ -798,6 +798,7 @@ rule_a_200_300_001_02 contains result if {
 #  section: assays.mass_spectrometry
 rule_a_200_300_001_03 contains result if {
 	some file_name, sheet in input.assays
+
 	some header_index, header in sheet.table.headers
 	header.columnHeader == "Raw Spectral Data File"
 	row_offset := sheet.table.rowOffset
@@ -808,6 +809,7 @@ rule_a_200_300_001_03 contains result if {
 		some i, name in sheet.table.data[column_name]
 		count(name) > 0
 		extensions := f.extension(name, def.CL_RAW_FILE_EXTENSIONS)
+		print(name, extensions)
 		count(extensions) == 0
 		row := (i + 1) + row_offset
 	}
@@ -965,7 +967,9 @@ rule_a_200_500_001_01 contains result if {
 	some file_name, sheet in input.assays
 	some _, sample_sheet in input.samples
 	some header_index, header in sheet.table.headers
-	startswith(header.columnHeader, "Derived Spectral Data File")
+	header.columnHeader == "Derived Spectral Data File"
+
+	# startswith(header.columnHeader, "Derived Spectral Data File")
 	raw_data_file_column_name = "Raw Spectral Data File"
 	row_offset := sheet.table.rowOffset
 	column_index := header.columnIndex
@@ -976,6 +980,8 @@ rule_a_200_500_001_01 contains result if {
 		raw_file_name = sheet.table.data[raw_data_file_column_name][i]
 		count(trim_space(raw_file_name)) == 0
 		count(name) > 0
+
+		# print(name, raw_file_name)
 		extensions := f.extension(name, def.CL_DERIVED_FILE_EXTENSIONS)
 		count(extensions) == 0
 		row := (i + 1) + row_offset

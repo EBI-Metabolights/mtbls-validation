@@ -26,6 +26,7 @@ class IsaTabFileType(enum.StrEnum):
     ASSAY = "assay"
     SAMPLE = "sample"
     INVESTIGATION = "investigation"
+    ASSIGNMENT = "assignment"
 
 
 class ValidationType(enum.StrEnum):
@@ -433,6 +434,54 @@ class OntologySourceReferenceTemplate(StudyBaseModel):
     ]
 
 
+class TemplateConfiguration(StudyBaseModel):
+    active_investigation_file_templates: Annotated[
+        list[str], Field(description="active investigation file templates")
+    ]
+    active_assignment_file_templates: Annotated[
+        list[str], Field(description="active assignment file templates")
+    ]
+    active_sample_file_templates: Annotated[
+        list[str], Field(description="active sample file templates")
+    ]
+    active_assay_file_templates: Annotated[
+        list[str], Field(description="active assay file templates")
+    ]
+    active_study_categories: Annotated[
+        list[str], Field(description="active study categories")
+    ]
+    investigation_file_name: Annotated[
+        str, Field(description="investigation file name")
+    ]
+    default_sample_file_template: Annotated[
+        str, Field(description="default sample file name")
+    ]
+    default_investigation_file_template: Annotated[
+        str, Field(description="default study file name")
+    ]
+    default_study_category: Annotated[str, Field(description="default study category")]
+    study_category_index_mapping: Annotated[
+        dict[str | int, str], Field(description="study category mapping")
+    ]
+    derived_file_extensions: Annotated[
+        list[str], Field(description="derived file extensions")
+    ]
+    raw_file_extensions: Annotated[list[str], Field(description="raw file extensions")]
+
+
+class TemplateSettings(StudyBaseModel):
+    active_template_versions: Annotated[
+        list[str], Field(description="active temlate versions")
+    ]
+    default_template_version: Annotated[
+        str, Field(description="default study template version")
+    ]
+    versions: Annotated[
+        dict[str, TemplateConfiguration],
+        Field(description="MetaboLights template versions"),
+    ] = {}
+
+
 class FileTemplates(StudyBaseModel):
     assay_file_header_templates: Annotated[
         dict[str, list[IsaTableFileTemplate]],
@@ -458,6 +507,10 @@ class FileTemplates(StudyBaseModel):
         dict[str, OntologySourceReferenceTemplate],
         Field(description="Ontology source reference templates"),
     ] = {}
+    configuration: Annotated[
+        TemplateSettings,
+        Field(description="Validation template settings"),
+    ] = {}
 
 
 class ValidationControls(StudyBaseModel):
@@ -474,6 +527,15 @@ class ValidationControls(StudyBaseModel):
         dict[str, list[FieldValueValidation]],
         Field(
             description="Controls for sample file columns. "
+            "Field value validations are ordered by precedence. "
+            "If there are more than one matches for the field."
+            "Select the first one."
+        ),
+    ] = {}
+    assignment_file_controls: Annotated[
+        dict[str, list[FieldValueValidation]],
+        Field(
+            description="Controls for MAF file columns. "
             "Field value validations are ordered by precedence. "
             "If there are more than one matches for the field."
             "Select the first one."

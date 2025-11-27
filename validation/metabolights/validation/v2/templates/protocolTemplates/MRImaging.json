@@ -17,8 +17,8 @@
                     "description": "A procedure whereby biological samples for an experiment are sourced.",
                     "type": {
                         "term": "sample collection protocol",
-                        "termSourceRef": "EFO",
-                        "termAccessionNumber": "http://www.ebi.ac.uk/efo/EFO_0005518"
+                        "termAccessionNumber": "http://www.ebi.ac.uk/efo/EFO_0005518",
+                        "termSourceRef": "EFO"
                     },
                     "typeCurie": "EFO:0005518",
                     "parameters": [],
@@ -29,8 +29,8 @@
                     "description": "",
                     "type": {
                         "term": "Magnetic resonance imaging",
-                        "termSourceRef": "",
-                        "termAccessionNumber": ""
+                        "termAccessionNumber": "",
+                        "termSourceRef": ""
                     },
                     "typeCurie": "",
                     "parameters": [
@@ -43,31 +43,34 @@
                             "definition": "Instrument",
                             "type": {
                                 "term": "Instrument",
-                                "termSourceRef": "",
-                                "termAccessionNumber": ""
+                                "termAccessionNumber": "",
+                                "termSourceRef": ""
                             },
                             "typeCurie": "",
-                            "format": "Text"
+                            "format": "Text",
+                            "examples": []
                         },
                         "Tomography": {
                             "definition": "Tomography",
                             "type": {
                                 "term": "Tomography",
-                                "termSourceRef": "",
-                                "termAccessionNumber": ""
+                                "termAccessionNumber": "",
+                                "termSourceRef": ""
                             },
                             "typeCurie": "",
-                            "format": "Text"
+                            "format": "Text",
+                            "examples": []
                         },
                         "Temperature": {
                             "definition": "Temperature",
                             "type": {
                                 "term": "Temperature",
-                                "termSourceRef": "",
-                                "termAccessionNumber": ""
+                                "termAccessionNumber": "",
+                                "termSourceRef": ""
                             },
                             "typeCurie": "",
-                            "format": "Text"
+                            "format": "Text",
+                            "examples": []
                         }
                     }
                 },
@@ -76,8 +79,8 @@
                     "description": "",
                     "type": {
                         "term": "In vivo magnetic resonance spectroscopy",
-                        "termSourceRef": "",
-                        "termAccessionNumber": ""
+                        "termAccessionNumber": "",
+                        "termSourceRef": ""
                     },
                     "typeCurie": "",
                     "parameters": [
@@ -96,91 +99,100 @@
                             "definition": "",
                             "type": {
                                 "term": "Spatial resolution",
-                                "termSourceRef": "",
-                                "termAccessionNumber": ""
+                                "termAccessionNumber": "",
+                                "termSourceRef": ""
                             },
                             "typeCurie": "",
-                            "format": "Text"
+                            "format": "Text",
+                            "examples": []
                         },
                         "Field of view": {
                             "definition": "",
                             "type": {
                                 "term": "Field of view",
-                                "termSourceRef": "",
-                                "termAccessionNumber": ""
+                                "termAccessionNumber": "",
+                                "termSourceRef": ""
                             },
                             "typeCurie": "",
-                            "format": "Text"
+                            "format": "Text",
+                            "examples": []
                         },
                         "Matrix": {
                             "definition": "",
                             "type": {
                                 "term": "Matrix",
-                                "termSourceRef": "",
-                                "termAccessionNumber": ""
+                                "termAccessionNumber": "",
+                                "termSourceRef": ""
                             },
                             "typeCurie": "",
-                            "format": "Text"
+                            "format": "Text",
+                            "examples": []
                         },
                         "Magnetic pulse sequence name": {
                             "definition": "",
                             "type": {
                                 "term": "Magnetic pulse sequence name",
-                                "termSourceRef": "",
-                                "termAccessionNumber": ""
+                                "termAccessionNumber": "",
+                                "termSourceRef": ""
                             },
                             "typeCurie": "",
-                            "format": "Text"
+                            "format": "Text",
+                            "examples": []
                         },
                         "Voxel size": {
                             "definition": "",
                             "type": {
                                 "term": "Voxel size",
-                                "termSourceRef": "",
-                                "termAccessionNumber": ""
+                                "termAccessionNumber": "",
+                                "termSourceRef": ""
                             },
                             "typeCurie": "",
-                            "format": "Text"
+                            "format": "Text",
+                            "examples": []
                         },
                         "Localisation pulse sequence name": {
                             "definition": "",
                             "type": {
                                 "term": "Localisation pulse sequence name",
-                                "termSourceRef": "",
-                                "termAccessionNumber": ""
+                                "termAccessionNumber": "",
+                                "termSourceRef": ""
                             },
                             "typeCurie": "",
-                            "format": "Text"
+                            "format": "Text",
+                            "examples": []
                         },
                         "Number of transients": {
                             "definition": "",
                             "type": {
                                 "term": "Number of transients",
-                                "termSourceRef": "",
-                                "termAccessionNumber": ""
+                                "termAccessionNumber": "",
+                                "termSourceRef": ""
                             },
                             "typeCurie": "",
-                            "format": "Text"
+                            "format": "Text",
+                            "examples": []
                         },
                         "Water inhibition pulse sequence name": {
                             "definition": "",
                             "type": {
                                 "term": "Water inhibition pulse sequence name",
-                                "termSourceRef": "",
-                                "termAccessionNumber": ""
+                                "termAccessionNumber": "",
+                                "termSourceRef": ""
                             },
                             "typeCurie": "",
-                            "format": "Text"
+                            "format": "Text",
+                            "examples": []
                         },
                         "Magnetic field strength": {
                             "definition": "",
                             "type": {
                                 "term": "Magnetic field strength",
-                                "termSourceRef": "",
-                                "termAccessionNumber": ""
+                                "termAccessionNumber": "",
+                                "termSourceRef": ""
                             },
                             "typeCurie": "",
-                            "format": "Text"
+                            "format": "Text",
+                            "examples": []
                         }
                     }
                 },
@@ -189,8 +201,8 @@
                     "description": "",
                     "type": {
                         "term": "In vivo magnetic resonance assay",
-                        "termSourceRef": "",
-                        "termAccessionNumber": ""
+                        "termAccessionNumber": "",
+                        "termSourceRef": ""
                     },
                     "typeCurie": "",
                     "parameters": [
@@ -204,41 +216,45 @@
                             "definition": "",
                             "type": {
                                 "term": "NMR tube type",
-                                "termSourceRef": "",
-                                "termAccessionNumber": ""
+                                "termAccessionNumber": "",
+                                "termSourceRef": ""
                             },
                             "typeCurie": "",
-                            "format": "Text"
+                            "format": "Text",
+                            "examples": []
                         },
                         "Solvent": {
                             "definition": "",
                             "type": {
                                 "term": "Solvent",
-                                "termSourceRef": "",
-                                "termAccessionNumber": ""
+                                "termAccessionNumber": "",
+                                "termSourceRef": ""
                             },
                             "typeCurie": "",
-                            "format": "Text"
+                            "format": "Text",
+                            "examples": []
                         },
                         "Sample pH": {
                             "definition": "",
                             "type": {
                                 "term": "Sample pH",
-                                "termSourceRef": "",
-                                "termAccessionNumber": ""
+                                "termAccessionNumber": "",
+                                "termSourceRef": ""
                             },
                             "typeCurie": "",
-                            "format": "Text"
+                            "format": "Text",
+                            "examples": []
                         },
                         "Temperature": {
                             "definition": "",
                             "type": {
                                 "term": "Temperature",
-                                "termSourceRef": "",
-                                "termAccessionNumber": ""
+                                "termAccessionNumber": "",
+                                "termSourceRef": ""
                             },
                             "typeCurie": "",
-                            "format": "Text"
+                            "format": "Text",
+                            "examples": []
                         }
                     }
                 },
@@ -247,8 +263,8 @@
                     "description": "A planned process that produces output data from raw data.",
                     "type": {
                         "term": "data transformation",
-                        "termSourceRef": "OBI",
-                        "termAccessionNumber": "http://purl.obolibrary.org/obo/OBI_0200000"
+                        "termAccessionNumber": "http://purl.obolibrary.org/obo/OBI_0200000",
+                        "termSourceRef": "OBI"
                     },
                     "typeCurie": "OBI:0200000",
                     "parameters": [],
@@ -259,8 +275,8 @@
                     "description": "Identification of the breakdown products of a substance, either through chemical instability or the actions of enzymes within the body.",
                     "type": {
                         "term": "metabolite identification",
-                        "termSourceRef": "MI",
-                        "termAccessionNumber": "http://purl.obolibrary.org/obo/MI_2131"
+                        "termAccessionNumber": "http://purl.obolibrary.org/obo/MI_2131",
+                        "termSourceRef": "MI"
                     },
                     "typeCurie": "MI:2131",
                     "parameters": [],
@@ -285,8 +301,8 @@
                     "description": "A procedure whereby biological samples for an experiment are sourced.",
                     "type": {
                         "term": "sample collection protocol",
-                        "termSourceRef": "EFO",
-                        "termAccessionNumber": "http://www.ebi.ac.uk/efo/EFO_0005518"
+                        "termAccessionNumber": "http://www.ebi.ac.uk/efo/EFO_0005518",
+                        "termSourceRef": "EFO"
                     },
                     "typeCurie": "EFO:0005518",
                     "parameters": [],
@@ -297,8 +313,8 @@
                     "description": "",
                     "type": {
                         "term": "Magnetic resonance imaging",
-                        "termSourceRef": "",
-                        "termAccessionNumber": ""
+                        "termAccessionNumber": "",
+                        "termSourceRef": ""
                     },
                     "typeCurie": "",
                     "parameters": [
@@ -311,31 +327,34 @@
                             "definition": "Instrument",
                             "type": {
                                 "term": "Instrument",
-                                "termSourceRef": "",
-                                "termAccessionNumber": ""
+                                "termAccessionNumber": "",
+                                "termSourceRef": ""
                             },
                             "typeCurie": "",
-                            "format": "Text"
+                            "format": "Text",
+                            "examples": []
                         },
                         "Tomography": {
                             "definition": "Tomography",
                             "type": {
                                 "term": "Tomography",
-                                "termSourceRef": "",
-                                "termAccessionNumber": ""
+                                "termAccessionNumber": "",
+                                "termSourceRef": ""
                             },
                             "typeCurie": "",
-                            "format": "Text"
+                            "format": "Text",
+                            "examples": []
                         },
                         "Temperature": {
                             "definition": "Temperature",
                             "type": {
                                 "term": "Temperature",
-                                "termSourceRef": "",
-                                "termAccessionNumber": ""
+                                "termAccessionNumber": "",
+                                "termSourceRef": ""
                             },
                             "typeCurie": "",
-                            "format": "Text"
+                            "format": "Text",
+                            "examples": []
                         }
                     }
                 },
@@ -344,8 +363,8 @@
                     "description": "",
                     "type": {
                         "term": "In vivo magnetic resonance spectroscopy",
-                        "termSourceRef": "",
-                        "termAccessionNumber": ""
+                        "termAccessionNumber": "",
+                        "termSourceRef": ""
                     },
                     "typeCurie": "",
                     "parameters": [
@@ -364,91 +383,100 @@
                             "definition": "",
                             "type": {
                                 "term": "Spatial resolution",
-                                "termSourceRef": "",
-                                "termAccessionNumber": ""
+                                "termAccessionNumber": "",
+                                "termSourceRef": ""
                             },
                             "typeCurie": "",
-                            "format": "Text"
+                            "format": "Text",
+                            "examples": []
                         },
                         "Field of view": {
                             "definition": "",
                             "type": {
                                 "term": "Field of view",
-                                "termSourceRef": "",
-                                "termAccessionNumber": ""
+                                "termAccessionNumber": "",
+                                "termSourceRef": ""
                             },
                             "typeCurie": "",
-                            "format": "Text"
+                            "format": "Text",
+                            "examples": []
                         },
                         "Matrix": {
                             "definition": "",
                             "type": {
                                 "term": "Matrix",
-                                "termSourceRef": "",
-                                "termAccessionNumber": ""
+                                "termAccessionNumber": "",
+                                "termSourceRef": ""
                             },
                             "typeCurie": "",
-                            "format": "Text"
+                            "format": "Text",
+                            "examples": []
                         },
                         "Magnetic pulse sequence name": {
                             "definition": "",
                             "type": {
                                 "term": "Magnetic pulse sequence name",
-                                "termSourceRef": "",
-                                "termAccessionNumber": ""
+                                "termAccessionNumber": "",
+                                "termSourceRef": ""
                             },
                             "typeCurie": "",
-                            "format": "Text"
+                            "format": "Text",
+                            "examples": []
                         },
                         "Voxel size": {
                             "definition": "",
                             "type": {
                                 "term": "Voxel size",
-                                "termSourceRef": "",
-                                "termAccessionNumber": ""
+                                "termAccessionNumber": "",
+                                "termSourceRef": ""
                             },
                             "typeCurie": "",
-                            "format": "Text"
+                            "format": "Text",
+                            "examples": []
                         },
                         "Localisation pulse sequence name": {
                             "definition": "",
                             "type": {
                                 "term": "Localisation pulse sequence name",
-                                "termSourceRef": "",
-                                "termAccessionNumber": ""
+                                "termAccessionNumber": "",
+                                "termSourceRef": ""
                             },
                             "typeCurie": "",
-                            "format": "Text"
+                            "format": "Text",
+                            "examples": []
                         },
                         "Number of transients": {
                             "definition": "",
                             "type": {
                                 "term": "Number of transients",
-                                "termSourceRef": "",
-                                "termAccessionNumber": ""
+                                "termAccessionNumber": "",
+                                "termSourceRef": ""
                             },
                             "typeCurie": "",
-                            "format": "Text"
+                            "format": "Text",
+                            "examples": []
                         },
                         "Water inhibition pulse sequence name": {
                             "definition": "",
                             "type": {
                                 "term": "Water inhibition pulse sequence name",
-                                "termSourceRef": "",
-                                "termAccessionNumber": ""
+                                "termAccessionNumber": "",
+                                "termSourceRef": ""
                             },
                             "typeCurie": "",
-                            "format": "Text"
+                            "format": "Text",
+                            "examples": []
                         },
                         "Magnetic field strength": {
                             "definition": "",
                             "type": {
                                 "term": "Magnetic field strength",
-                                "termSourceRef": "",
-                                "termAccessionNumber": ""
+                                "termAccessionNumber": "",
+                                "termSourceRef": ""
                             },
                             "typeCurie": "",
-                            "format": "Text"
+                            "format": "Text",
+                            "examples": []
                         }
                     }
                 },
@@ -457,8 +485,8 @@
                     "description": "",
                     "type": {
                         "term": "In vivo magnetic resonance assay",
-                        "termSourceRef": "",
-                        "termAccessionNumber": ""
+                        "termAccessionNumber": "",
+                        "termSourceRef": ""
                     },
                     "typeCurie": "",
                     "parameters": [
@@ -472,41 +500,45 @@
                             "definition": "",
                             "type": {
                                 "term": "NMR tube type",
-                                "termSourceRef": "",
-                                "termAccessionNumber": ""
+                                "termAccessionNumber": "",
+                                "termSourceRef": ""
                             },
                             "typeCurie": "",
-                            "format": "Text"
+                            "format": "Text",
+                            "examples": []
                         },
                         "Solvent": {
                             "definition": "",
                             "type": {
                                 "term": "Solvent",
-                                "termSourceRef": "",
-                                "termAccessionNumber": ""
+                                "termAccessionNumber": "",
+                                "termSourceRef": ""
                             },
                             "typeCurie": "",
-                            "format": "Text"
+                            "format": "Text",
+                            "examples": []
                         },
                         "Sample pH": {
                             "definition": "",
                             "type": {
                                 "term": "Sample pH",
-                                "termSourceRef": "",
-                                "termAccessionNumber": ""
+                                "termAccessionNumber": "",
+                                "termSourceRef": ""
                             },
                             "typeCurie": "",
-                            "format": "Text"
+                            "format": "Text",
+                            "examples": []
                         },
                         "Temperature": {
                             "definition": "",
                             "type": {
                                 "term": "Temperature",
-                                "termSourceRef": "",
-                                "termAccessionNumber": ""
+                                "termAccessionNumber": "",
+                                "termSourceRef": ""
                             },
                             "typeCurie": "",
-                            "format": "Text"
+                            "format": "Text",
+                            "examples": []
                         }
                     }
                 },
@@ -515,8 +547,8 @@
                     "description": "A planned process that produces output data from raw data.",
                     "type": {
                         "term": "data transformation",
-                        "termSourceRef": "OBI",
-                        "termAccessionNumber": "http://purl.obolibrary.org/obo/OBI_0200000"
+                        "termAccessionNumber": "http://purl.obolibrary.org/obo/OBI_0200000",
+                        "termSourceRef": "OBI"
                     },
                     "typeCurie": "OBI:0200000",
                     "parameters": [],
@@ -527,8 +559,8 @@
                     "description": "Identification of the breakdown products of a substance, either through chemical instability or the actions of enzymes within the body.",
                     "type": {
                         "term": "metabolite identification",
-                        "termSourceRef": "MI",
-                        "termAccessionNumber": "http://purl.obolibrary.org/obo/MI_2131"
+                        "termAccessionNumber": "http://purl.obolibrary.org/obo/MI_2131",
+                        "termSourceRef": "MI"
                     },
                     "typeCurie": "MI:2131",
                     "parameters": [],
