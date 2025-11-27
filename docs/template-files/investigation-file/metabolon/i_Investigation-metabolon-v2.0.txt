@@ -39,7 +39,8 @@ Study File Name	s_Sample.txt
 Comment[Created At]	
 Comment[License]	CC0 1.0 Universal
 Comment[Sample Template]	minimum
-Comment[Study Category]	metabolon
+Comment[Study Template]	minimum
+Comment[Study Category]	other
 Comment[Template Version]	2.0
 Comment[Funder]	
 Comment[Funder ROR Id]	

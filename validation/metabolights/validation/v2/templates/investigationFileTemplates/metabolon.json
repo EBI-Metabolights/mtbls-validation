@@ -104,6 +104,7 @@
                         "Created At",
                         "License",
                         "Sample Template",
+                        "Study Template",
                         "Study Category",
                         "Template Version",
                         "Funder",
@@ -120,8 +121,11 @@
                         "Sample Template": [
                             "minimum"
                         ],
+                        "Study Template": [
+                            "minimum"
+                        ],
                         "Study Category": [
-                            "metabolon"
+                            "other"
                         ]
                     },
                     "defaultFieldValues": {
@@ -566,7 +570,7 @@
                 }
             ]
         },
-     {
+        {
             "version": "2.0",
             "description": "MetaboLights ISA-TAB Investigation File Template 1.0.",
             "sections": [
@@ -670,6 +674,7 @@
                         "Created At",
                         "License",
                         "Sample Template",
+                        "Study Template",
                         "Study Category",
                         "Template Version",
                         "Funder",
@@ -686,8 +691,11 @@
                         "Sample Template": [
                             "minimum"
                         ],
+                        "Study Template": [
+                            "minimum"
+                        ],
                         "Study Category": [
-                            "metabolon"
+                            "other"
                         ]
                     },
                     "defaultFieldValues": {

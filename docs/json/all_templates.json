@@ -11061,8 +11061,9 @@
                             "Created At",
                             "License",
                             "Sample Template",
-                            "Study Category",
+                            "Study Template",
                             "Template Version",
+                            "Study Category",
                             "Funder",
                             "Funder ROR Id",
                             "Grant Identifier"
@@ -11085,11 +11086,14 @@
                             "License": [
                                 "CC0 1.0 Universal"
                             ],
-                            "Template Version": [
-                                "1.0"
-                            ],
                             "Sample Template": [
                                 "minimum"
+                            ],
+                            "Study Template": [
+                                "minimum"
+                            ],
+                            "Template Version": [
+                                "1.0"
                             ],
                             "Study Category": [
                                 "other"
@@ -11314,8 +11318,9 @@
                             "Created At",
                             "License",
                             "Sample Template",
-                            "Study Category",
+                            "Study Template",
                             "Template Version",
+                            "Study Category",
                             "Funder",
                             "Funder ROR Id",
                             "Grant Identifier"
@@ -11338,11 +11343,14 @@
                             "License": [
                                 "CC0 1.0 Universal"
                             ],
-                            "Template Version": [
-                                "2.0"
-                            ],
                             "Sample Template": [
                                 "minimum"
+                            ],
+                            "Study Template": [
+                                "minimum"
+                            ],
+                            "Template Version": [
+                                "2.0"
                             ],
                             "Study Category": [
                                 "other"
@@ -11567,6 +11575,7 @@
                             "Created At",
                             "License",
                             "Sample Template",
+                            "Study Template",
                             "Study Category",
                             "Template Version",
                             "Funder",
@@ -11597,8 +11606,11 @@
                             "Sample Template": [
                                 "minimum"
                             ],
+                            "Study Template": [
+                                "minimum"
+                            ],
                             "Study Category": [
-                                "metabolon"
+                                "other"
                             ]
                         }
                     },
@@ -12133,6 +12145,7 @@
                             "Created At",
                             "License",
                             "Sample Template",
+                            "Study Template",
                             "Study Category",
                             "Template Version",
                             "Funder",
@@ -12163,8 +12176,11 @@
                             "Sample Template": [
                                 "minimum"
                             ],
+                            "Study Template": [
+                                "minimum"
+                            ],
                             "Study Category": [
-                                "metabolon"
+                                "other"
                             ]
                         }
                     },

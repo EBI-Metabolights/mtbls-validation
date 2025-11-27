@@ -106,23 +106,43 @@
                         "Created At",
                         "License",
                         "Sample Template",
-                        "Study Category",
+                        "Study Template",
                         "Template Version",
+                        "Study Category",
                         "Funder",
                         "Funder ROR Id",
                         "Grant Identifier"
                     ],
                     "defaultCommentValues": {
-                        "License": ["CC0 1.0 Universal"],
-                        "Template Version": ["1.0"],
-                        "Sample Template": ["minimum"],
-                        "Study Category": ["other"]
+                        "License": [
+                            "CC0 1.0 Universal"
+                        ],
+                        "Sample Template": [
+                            "minimum"
+                        ],
+                        "Study Template": [
+                            "minimum"
+                        ],
+                        "Template Version": [
+                            "1.0"
+                        ],
+                        "Study Category": [
+                            "other"
+                        ]
                     },
                     "defaultFieldValues": {
-                        "Study File Name": ["s_Sample.txt"],
-                        "Study Title": ["Please update the study title"],
-                        "Study Identifier": ["MTBLS"],
-                        "Study Description": ["Please update the study abstract/description"]
+                        "Study File Name": [
+                            "s_Sample.txt"
+                        ],
+                        "Study Title": [
+                            "Please update the study title"
+                        ],
+                        "Study Identifier": [
+                            "MTBLS"
+                        ],
+                        "Study Description": [
+                            "Please update the study abstract/description"
+                        ]
                     }
                 },
                 {
@@ -153,7 +173,9 @@
                     "defaultComments": [],
                     "defaultCommentValues": {},
                     "defaultFieldValues": {
-                        "Study Publication Title": ["Please update the publication title"]
+                        "Study Publication Title": [
+                            "Please update the publication title"
+                        ]
                     }
                 },
                 {
@@ -341,23 +363,43 @@
                         "Created At",
                         "License",
                         "Sample Template",
-                        "Study Category",
+                        "Study Template",
                         "Template Version",
+                        "Study Category",
                         "Funder",
                         "Funder ROR Id",
                         "Grant Identifier"
                     ],
                     "defaultCommentValues": {
-                        "License": ["CC0 1.0 Universal"],
-                        "Template Version": ["2.0"],
-                        "Sample Template": ["minimum"],
-                        "Study Category": ["other"]
+                        "License": [
+                            "CC0 1.0 Universal"
+                        ],
+                        "Sample Template": [
+                            "minimum"
+                        ],
+                        "Study Template": [
+                            "minimum"
+                        ],
+                        "Template Version": [
+                            "2.0"
+                        ],
+                        "Study Category": [
+                            "other"
+                        ]
                     },
                     "defaultFieldValues": {
-                        "Study File Name": ["s_Sample.txt"],
-                        "Study Title": ["Please update the study title"],
-                        "Study Identifier": ["MTBLS"],
-                        "Study Description": ["Please update the study abstract/description"]
+                        "Study File Name": [
+                            "s_Sample.txt"
+                        ],
+                        "Study Title": [
+                            "Please update the study title"
+                        ],
+                        "Study Identifier": [
+                            "MTBLS"
+                        ],
+                        "Study Description": [
+                            "Please update the study abstract/description"
+                        ]
                     }
                 },
                 {
@@ -388,7 +430,9 @@
                     "defaultComments": [],
                     "defaultCommentValues": {},
                     "defaultFieldValues": {
-                        "Study Publication Title": ["Please update the publication title"]
+                        "Study Publication Title": [
+                            "Please update the publication title"
+                        ]
                     }
                 },
                 {
