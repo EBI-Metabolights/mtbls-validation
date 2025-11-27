@@ -22,7 +22,7 @@ class Violation(BaseModel):
     priority: str = ""
 
 
-class IsaTabFileType(enum.StrEnum):
+class MetadataFileType(enum.StrEnum):
     ASSAY = "assay"
     SAMPLE = "sample"
     INVESTIGATION = "investigation"
@@ -120,7 +120,7 @@ class FieldSelector(StudyBaseModel):
 
 class SelectionCriteria(StudyBaseModel):
     isa_file_type: Annotated[
-        IsaTabFileType,
+        MetadataFileType,
         Field(description="ISA-TAB file type."),
     ]
     study_created_at_or_after: Annotated[
