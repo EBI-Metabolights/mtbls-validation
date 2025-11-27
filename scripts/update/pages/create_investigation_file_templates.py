@@ -1,3 +1,4 @@
+import shutil
 from pathlib import Path
 
 from scripts.update.pages.utils import get_investigation_file_templates
@@ -22,9 +23,12 @@ def serialize_investigation_value(value: str | list[str] | list[list[str]]):
 
 def create_investigation_file_templates():
     templates = get_investigation_file_templates()
+    root_path = Path("docs/template-files/investigation-file")
+    shutil.rmtree(root_path, ignore_errors=True)
     for name, template_list in templates.items():
-        target_root_path = Path(f"docs/template-files/investigation-file/{name}")
+        target_root_path = root_path / Path(name)
         target_root_path.mkdir(parents=True, exist_ok=True)
+
         for template in template_list:
             rows = []
             for section in template.sections:

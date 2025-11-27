@@ -1,5 +1,5 @@
 {
-    "other": [
+    "minimum": [
         {
             "version": "1.0",
             "description": "MetaboLights ISA-TAB Investigation File Template 1.0.",

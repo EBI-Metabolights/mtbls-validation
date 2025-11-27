@@ -15,14 +15,14 @@ Investigation File Templates & Controls v1.0
 | Template Name | File Structure | Template File | Controls |
 |-------------|--------------|--------------|--------------|
 metabolon|-|[metabolon-v1.0 Template (zip)](template-files/investigation-file/metabolon/i_Investigation-metabolon-v1.0.txt.zip){:target="_blank"}<br/>[metabolon-v1.0 Template (txt)](template-files/investigation-file/metabolon/i_Investigation-metabolon-v1.0.txt){:target="_blank"}|[metabolon-v1.0 Control](prioritised-control-lists/investigation-file-control-lists/metabolon/metabolon-v1.0.md)
-other|-|[other-v1.0 Template (zip)](template-files/investigation-file/other/i_Investigation-other-v1.0.txt.zip){:target="_blank"}<br/>[other-v1.0 Template (txt)](template-files/investigation-file/other/i_Investigation-other-v1.0.txt){:target="_blank"}|[other-v1.0 Control](prioritised-control-lists/investigation-file-control-lists/other/other-v1.0.md)
+minimum|-|[minimum-v1.0 Template (zip)](template-files/investigation-file/minimum/i_Investigation-minimum-v1.0.txt.zip){:target="_blank"}<br/>[minimum-v1.0 Template (txt)](template-files/investigation-file/minimum/i_Investigation-minimum-v1.0.txt){:target="_blank"}|[minimum-v1.0 Control](prioritised-control-lists/investigation-file-control-lists/minimum/minimum-v1.0.md)
 
 Investigation File Templates & Controls v2.0
 
 | Template Name | File Structure | Template File | Controls |
 |-------------|--------------|--------------|--------------|
 metabolon|-|[metabolon-v2.0 Template (zip)](template-files/investigation-file/metabolon/i_Investigation-metabolon-v2.0.txt.zip){:target="_blank"}<br/>[metabolon-v2.0 Template (txt)](template-files/investigation-file/metabolon/i_Investigation-metabolon-v2.0.txt){:target="_blank"}|[metabolon-v2.0 Control](prioritised-control-lists/investigation-file-control-lists/metabolon/metabolon-v2.0.md)
-other|-|[other-v2.0 Template (zip)](template-files/investigation-file/other/i_Investigation-other-v2.0.txt.zip){:target="_blank"}<br/>[other-v2.0 Template (txt)](template-files/investigation-file/other/i_Investigation-other-v2.0.txt){:target="_blank"}|[other-v2.0 Control](prioritised-control-lists/investigation-file-control-lists/other/other-v2.0.md)
+minimum|-|[minimum-v2.0 Template (zip)](template-files/investigation-file/minimum/i_Investigation-minimum-v2.0.txt.zip){:target="_blank"}<br/>[minimum-v2.0 Template (txt)](template-files/investigation-file/minimum/i_Investigation-minimum-v2.0.txt){:target="_blank"}|[minimum-v2.0 Control](prioritised-control-lists/investigation-file-control-lists/minimum/minimum-v2.0.md)
 
 ## Sample File Templates & Controls 
 
