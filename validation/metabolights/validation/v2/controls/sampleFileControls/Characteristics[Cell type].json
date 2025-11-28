@@ -2,8 +2,14 @@
     "Characteristics[Cell type]": [
         {
             "ruleName": "Characteristics[Cell type]-01",
-            "description": "",
             "fieldName": "Characteristics[Cell type]",
+            "ontologyValidationType": "any-ontology-term",
+            "ontologies": [
+                "CL",
+                "CLO"
+            ],
+            "allowedParentOntologyTerms": null,
+            "description": "",
             "selectionCriteria": {
                 "isaFileType": "sample",
                 "studyCreatedAtOrAfter": null,
@@ -52,11 +58,6 @@
             ],
             "allowedPlaceholders": [],
             "terms": [],
-            "ontologies": [
-                "CL",
-                "CLO"
-            ],
-            "allowedParentOntologyTerms": null,
             "unexpectedTerms": []
         }
     ]

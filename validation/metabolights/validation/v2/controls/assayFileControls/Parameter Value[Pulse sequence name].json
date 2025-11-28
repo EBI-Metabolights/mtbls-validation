@@ -2,8 +2,11 @@
     "Parameter Value[Pulse sequence name]": [
         {
             "ruleName": "Parameter Value[Pulse sequence name]-01",
-            "description": "",
             "fieldName": "Parameter Value[Pulse sequence name]",
+            "ontologyValidationType": "any-ontology-term",
+            "ontologies": [],
+            "allowedParentOntologyTerms": null,
+            "description": "",
             "selectionCriteria": {
                 "isaFileType": "assay",
                 "studyCreatedAtOrAfter": null,
@@ -343,8 +346,6 @@
                     "termSourceRef": "MTBLS"
                 }
             ],
-            "ontologies": [],
-            "allowedParentOntologyTerms": null,
             "unexpectedTerms": []
         }
     ]

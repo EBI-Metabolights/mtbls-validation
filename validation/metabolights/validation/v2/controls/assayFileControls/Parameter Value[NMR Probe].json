@@ -2,8 +2,13 @@
     "Parameter Value[NMR Probe]": [
         {
             "ruleName": "Parameter Value[NMR Probe]-01",
-            "description": "",
             "fieldName": "Parameter Value[NMR Probe]",
+            "ontologyValidationType": "any-ontology-term",
+            "ontologies": [
+                "MTBLS"
+            ],
+            "allowedParentOntologyTerms": null,
+            "description": "",
             "selectionCriteria": {
                 "isaFileType": "assay",
                 "studyCreatedAtOrAfter": null,
@@ -468,10 +473,6 @@
                     "termSourceRef": "MTBLS"
                 }
             ],
-            "ontologies": [
-                "MTBLS"
-            ],
-            "allowedParentOntologyTerms": null,
             "unexpectedTerms": []
         }
     ]

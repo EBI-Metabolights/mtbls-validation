@@ -1,7 +1,40 @@
 {
     "ruleName": "child-ontology-term-01",
-    "description": "",
     "fieldName": "",
+    "ontologyValidationType": "any-ontology-term",
+    "ontologies": [],
+    "allowedParentOntologyTerms": {
+        "excludeByLabelPattern": [
+            "^.*unit$",
+            "^.*Unit of.*$"
+        ],
+        "excludeByAccession": [
+            "http://purl.obolibrary.org/obo/NCIT_C41139"
+        ],
+        "parents": [
+            {
+                "term": "unit",
+                "termAccessionNumber": "http://purl.obolibrary.org/obo/UO_0000000",
+                "termSourceRef": "UO"
+            },
+            {
+                "term": "unit",
+                "termAccessionNumber": "http://purl.obolibrary.org/obo/UO_0000000",
+                "termSourceRef": "EFO"
+            },
+            {
+                "term": "Qualifier",
+                "termAccessionNumber": "http://purl.obolibrary.org/obo/NCIT_C41009",
+                "termSourceRef": "NCIT"
+            },
+            {
+                "term": "Unit of Measure",
+                "termAccessionNumber": "http://purl.obolibrary.org/obo/NCIT_C25709",
+                "termSourceRef": "NCIT"
+            }
+        ]
+    },
+    "description": "",
     "selectionCriteria": {
         "isaFileType": "assay",
         "studyCreatedAtOrAfter": null,
@@ -40,37 +73,5 @@
         }
     ],
     "terms": [],
-    "ontologies": [],
-    "allowedParentOntologyTerms": {
-        "excludeByLabelPattern": [
-            "^.*unit$",
-            "^.*Unit of.*$"
-        ],
-        "excludeByAccession": [
-            "http://purl.obolibrary.org/obo/NCIT_C41139"
-        ],
-        "parents": [
-            {
-                "term": "unit",
-                "termAccessionNumber": "http://purl.obolibrary.org/obo/UO_0000000",
-                "termSourceRef": "UO"
-            },
-            {
-                "term": "unit",
-                "termAccessionNumber": "http://purl.obolibrary.org/obo/UO_0000000",
-                "termSourceRef": "EFO"
-            },
-            {
-                "term": "Qualifier",
-                "termAccessionNumber": "http://purl.obolibrary.org/obo/NCIT_C41009",
-                "termSourceRef": "NCIT"
-            },
-            {
-                "term": "Unit of Measure",
-                "termAccessionNumber": "http://purl.obolibrary.org/obo/NCIT_C25709",
-                "termSourceRef": "NCIT"
-            }
-        ]
-    },
     "unexpectedTerms": []
 }

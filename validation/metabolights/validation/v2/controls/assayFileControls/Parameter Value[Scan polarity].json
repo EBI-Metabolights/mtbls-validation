@@ -2,8 +2,13 @@
     "Parameter Value[Scan polarity]": [
         {
             "ruleName": "Parameter Value[Scan polarity]-01",
-            "description": "",
             "fieldName": "Parameter Value[Scan polarity]",
+            "ontologyValidationType": "any-ontology-term",
+            "ontologies": [
+                "AFO"
+            ],
+            "allowedParentOntologyTerms": null,
+            "description": "",
             "selectionCriteria": {
                 "isaFileType": "assay",
                 "studyCreatedAtOrAfter": null,
@@ -45,16 +50,18 @@
                     "termSourceRef": "AFO"
                 }
             ],
-            "ontologies": [
-                "AFO"
-            ],
-            "allowedParentOntologyTerms": null,
             "unexpectedTerms": []
         },
         {
             "ruleName": "Parameter Value[Scan polarity]-02",
-            "description": "",
             "fieldName": "Parameter Value[Scan polarity]",
+            "ontologyValidationType": "any-ontology-term",
+            "ontologies": [
+                "AFO",
+                "MS"
+            ],
+            "allowedParentOntologyTerms": null,
+            "description": "",
             "selectionCriteria": {
                 "isaFileType": "assay",
                 "studyCreatedAtOrAfter": null,
@@ -94,11 +101,6 @@
                     "termSourceRef": ""
                 }
             ],
-            "ontologies": [
-                "AFO",
-                "MS"
-            ],
-            "allowedParentOntologyTerms": null,
             "unexpectedTerms": []
         }
     ]

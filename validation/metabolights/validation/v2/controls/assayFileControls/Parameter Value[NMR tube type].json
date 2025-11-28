@@ -2,8 +2,11 @@
     "Parameter Value[NMR tube type]": [
         {
             "ruleName": "Parameter Value[NMR tube type]-01",
-            "description": "",
             "fieldName": "Parameter Value[NMR tube type]",
+            "ontologyValidationType": "any-ontology-term",
+            "ontologies": [],
+            "allowedParentOntologyTerms": null,
+            "description": "",
             "selectionCriteria": {
                 "isaFileType": "assay",
                 "studyCreatedAtOrAfter": null,
@@ -168,8 +171,6 @@
                     "termSourceRef": "MTBLS"
                 }
             ],
-            "ontologies": [],
-            "allowedParentOntologyTerms": null,
             "unexpectedTerms": []
         }
     ]

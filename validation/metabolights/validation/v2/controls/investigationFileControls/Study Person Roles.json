@@ -2,8 +2,23 @@
     "Study Person Roles": [
         {
             "ruleName": "Study Person Roles-01",
-            "description": "",
             "fieldName": "Study Person Roles",
+            "ontologyValidationType": "any-ontology-term",
+            "ontologies": [
+                "NCIT"
+            ],
+            "allowedParentOntologyTerms": {
+                "excludeByLabelPattern": [],
+                "excludeByAccession": [],
+                "parents": [
+                    {
+                        "term": "Personnel",
+                        "termAccessionNumber": "http://purl.obolibrary.org/obo/NCIT_C60758",
+                        "termSourceRef": "NCIT"
+                    }
+                ]
+            },
+            "description": "",
             "selectionCriteria": {
                 "isaFileType": "investigation",
                 "studyCreatedAtOrAfter": null,
@@ -42,20 +57,6 @@
                     "termSourceRef": "NCIT"
                 }
             ],
-            "ontologies": [
-                "NCIT"
-            ],
-            "allowedParentOntologyTerms": {
-                "excludeByLabelPattern": [],
-                "excludeByAccession": [],
-                "parents": [
-                    {
-                        "term": "Personnel",
-                        "termAccessionNumber": "http://purl.obolibrary.org/obo/NCIT_C60758",
-                        "termSourceRef": "NCIT"
-                    }
-                ]
-            },
             "unexpectedTerms": []
         }
     ]

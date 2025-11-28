@@ -2,8 +2,25 @@
     "Parameter Value[Instrument]": [
         {
             "ruleName": "Parameter Value[Instrument]-01",
-            "description": "",
             "fieldName": "Parameter Value[Instrument]",
+            "ontologyValidationType": "any-ontology-term",
+            "ontologies": [
+                "MS"
+            ],
+            "allowedParentOntologyTerms": {
+                "excludeByLabelPattern": [
+                    "^.*instrument model$"
+                ],
+                "excludeByAccession": [],
+                "parents": [
+                    {
+                        "term": "instrument model",
+                        "termAccessionNumber": "http://purl.obolibrary.org/obo/MS_1000031",
+                        "termSourceRef": "MS"
+                    }
+                ]
+            },
+            "description": "",
             "selectionCriteria": {
                 "isaFileType": "assay",
                 "studyCreatedAtOrAfter": null,
@@ -47,28 +64,17 @@
             ],
             "allowedPlaceholders": [],
             "terms": [],
-            "ontologies": [
-                "MS"
-            ],
-            "allowedParentOntologyTerms": {
-                "excludeByLabelPattern": [
-                    "^.*instrument model$"
-                ],
-                "excludeByAccession": [],
-                "parents": [
-                    {
-                        "term": "instrument model",
-                        "termAccessionNumber": "http://purl.obolibrary.org/obo/MS_1000031",
-                        "termSourceRef": "MS"
-                    }
-                ]
-            },
             "unexpectedTerms": []
         },
         {
             "ruleName": "Parameter Value[Instrument]-03",
-            "description": "",
             "fieldName": "Parameter Value[Instrument]",
+            "ontologyValidationType": "any-ontology-term",
+            "ontologies": [
+                "MS"
+            ],
+            "allowedParentOntologyTerms": null,
+            "description": "",
             "selectionCriteria": {
                 "isaFileType": "assay",
                 "studyCreatedAtOrAfter": null,
@@ -964,16 +970,17 @@
                     "termSourceRef": "MTBLS"
                 }
             ],
-            "ontologies": [
-                "MS"
-            ],
-            "allowedParentOntologyTerms": null,
             "unexpectedTerms": []
         },
         {
             "ruleName": "Parameter Value[Instrument]-04",
-            "description": "",
             "fieldName": "Parameter Value[Instrument]",
+            "ontologyValidationType": "any-ontology-term",
+            "ontologies": [
+                "MS"
+            ],
+            "allowedParentOntologyTerms": null,
+            "description": "",
             "selectionCriteria": {
                 "isaFileType": "assay",
                 "studyCreatedAtOrAfter": "2025-12-01T00:00:00",
@@ -1235,16 +1242,17 @@
                     "termSourceRef": "MTBLS"
                 }
             ],
-            "ontologies": [
-                "MS"
-            ],
-            "allowedParentOntologyTerms": null,
             "unexpectedTerms": []
         },
         {
             "ruleName": "Parameter Value[Instrument]-05",
-            "description": "",
             "fieldName": "Parameter Value[Instrument]",
+            "ontologyValidationType": "any-ontology-term",
+            "ontologies": [
+                "MTBLS"
+            ],
+            "allowedParentOntologyTerms": null,
+            "description": "",
             "selectionCriteria": {
                 "isaFileType": "assay",
                 "studyCreatedAtOrAfter": null,
@@ -1486,10 +1494,6 @@
                     "termSourceRef": "MTBLS"
                 }
             ],
-            "ontologies": [
-                "MTBLS"
-            ],
-            "allowedParentOntologyTerms": null,
             "unexpectedTerms": []
         }
     ]

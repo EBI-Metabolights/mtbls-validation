@@ -2,8 +2,22 @@
     "Study Design Type": [
         {
             "ruleName": "Study Design Type-01",
-            "description": "",
             "fieldName": "Study Design Type",
+            "ontologyValidationType": "any-ontology-term",
+            "ontologies": [
+                "EFO",
+                "MSIO",
+                "NCIT",
+                "MTBLS",
+                "CHEBI",
+                "CHMO",
+                "MONDO",
+                "PRIDE",
+                "GO",
+                "MESH"
+            ],
+            "allowedParentOntologyTerms": null,
+            "description": "",
             "selectionCriteria": {
                 "isaFileType": "investigation",
                 "studyCreatedAtOrAfter": null,
@@ -95,19 +109,6 @@
                     "termSourceRef": "MONDO"
                 }
             ],
-            "ontologies": [
-                "EFO",
-                "MSIO",
-                "NCIT",
-                "MTBLS",
-                "CHEBI",
-                "CHMO",
-                "MONDO",
-                "PRIDE",
-                "GO",
-                "MESH"
-            ],
-            "allowedParentOntologyTerms": null,
             "unexpectedTerms": []
         }
     ]

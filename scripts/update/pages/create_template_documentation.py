@@ -165,10 +165,11 @@ def create_md_file(
                     f"| Pattern Enforcement Level | {escape(pattern.enforcement_level)} |\n",
                 )
             is_any_ontology_rule = (
-                rule.validation_type == models.ValidationType.ANY_ONTOLOGY_TERM
+                rule.validation_type == models.OntologyValidationType.ANY_ONTOLOGY_TERM
             )
             is_selected_terms_rule = (
-                rule.validation_type == models.ValidationType.SELECTED_ONTOLOGY_TERM
+                rule.validation_type
+                == models.OntologyValidationType.SELECTED_ONTOLOGY_TERM
             )
             if rule.ontologies:
                 label = (

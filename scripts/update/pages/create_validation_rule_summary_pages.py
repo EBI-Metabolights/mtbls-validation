@@ -6,8 +6,8 @@ from typing import OrderedDict
 import pandas as pd
 from pydantic.alias_generators import to_pascal
 
-from scripts.models import PolicyMessageType, Violation
 from scripts.utils import escape, read_rules_from_excel
+from scripts.validation_models import PolicyMessageType, Violation
 
 metadata_lines = [
     "# METADATA",

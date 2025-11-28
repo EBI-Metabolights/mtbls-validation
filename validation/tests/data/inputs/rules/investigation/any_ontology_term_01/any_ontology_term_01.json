@@ -1,7 +1,13 @@
 {
     "ruleName": "any-ontology-term-01",
-    "description": "",
     "fieldName": "",
+    "ontologyValidationType": "any-ontology-term",
+    "ontologies": [
+        "UO",
+        "NCIT"
+    ],
+    "allowedParentOntologyTerms": null,
+    "description": "",
     "selectionCriteria": {
         "isaFileType": "sample",
         "studyCreatedAtOrAfter": null,
@@ -44,10 +50,5 @@
         }
     ],
     "terms": [],
-    "ontologies": [
-        "UO",
-        "NCIT"
-    ],
-    "allowedParentOntologyTerms": null,
     "unexpectedTerms": []
 }

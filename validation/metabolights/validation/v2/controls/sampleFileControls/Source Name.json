@@ -2,8 +2,11 @@
     "Source Name": [
         {
             "ruleName": "Source Name-01",
-            "description": "",
             "fieldName": "Source Name",
+            "ontologyValidationType": "any-ontology-term",
+            "ontologies": [],
+            "allowedParentOntologyTerms": null,
+            "description": "",
             "selectionCriteria": {
                 "isaFileType": "sample",
                 "studyCreatedAtOrAfter": null,
@@ -28,8 +31,6 @@
             "allowedOtherSources": [],
             "allowedPlaceholders": [],
             "terms": [],
-            "ontologies": [],
-            "allowedParentOntologyTerms": null,
             "unexpectedTerms": []
         }
     ]

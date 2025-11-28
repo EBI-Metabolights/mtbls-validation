@@ -2,8 +2,16 @@
     "Characteristics[Organism part]": [
         {
             "ruleName": "Characteristics[Organism part]-01",
-            "description": "",
             "fieldName": "Characteristics[Organism part]",
+            "ontologyValidationType": "any-ontology-term",
+            "ontologies": [
+                "UBERON",
+                "BTO",
+                "NCIT",
+                "MSIO"
+            ],
+            "allowedParentOntologyTerms": null,
+            "description": "",
             "selectionCriteria": {
                 "isaFileType": "sample",
                 "studyCreatedAtOrAfter": null,
@@ -89,19 +97,23 @@
                     "termSourceRef": "MTBLS"
                 }
             ],
-            "ontologies": [
-                "UBERON",
-                "BTO",
-                "NCIT",
-                "MSIO"
-            ],
-            "allowedParentOntologyTerms": null,
             "unexpectedTerms": []
         },
         {
             "ruleName": "Characteristics[Organism part]-02",
-            "description": "",
             "fieldName": "Characteristics[Organism part]",
+            "ontologyValidationType": "any-ontology-term",
+            "ontologies": [
+                "BTO",
+                "NCIT",
+                "MTBLS",
+                "EFO",
+                "PO",
+                "ENVO",
+                "CHEBI"
+            ],
+            "allowedParentOntologyTerms": null,
+            "description": "",
             "selectionCriteria": {
                 "isaFileType": "sample",
                 "studyCreatedAtOrAfter": null,
@@ -181,16 +193,6 @@
                     "termSourceRef": "MTBLS"
                 }
             ],
-            "ontologies": [
-                "BTO",
-                "NCIT",
-                "MTBLS",
-                "EFO",
-                "PO",
-                "ENVO",
-                "CHEBI"
-            ],
-            "allowedParentOntologyTerms": null,
             "unexpectedTerms": []
         }
     ]

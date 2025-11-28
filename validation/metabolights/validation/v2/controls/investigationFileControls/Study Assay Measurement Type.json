@@ -2,8 +2,11 @@
     "Study Assay Measurement Type": [
         {
             "ruleName": "Study Assay Measurement Type-01",
-            "description": "",
             "fieldName": "Study Assay Measurement Type",
+            "ontologyValidationType": "any-ontology-term",
+            "ontologies": [],
+            "allowedParentOntologyTerms": null,
+            "description": "",
             "selectionCriteria": {
                 "isaFileType": "investigation",
                 "studyCreatedAtOrAfter": null,
@@ -35,14 +38,18 @@
                     "termSourceRef": "MSIO"
                 }
             ],
-            "ontologies": [],
-            "allowedParentOntologyTerms": null,
             "unexpectedTerms": []
         },
         {
             "ruleName": "Study Assay Measurement Type-03",
-            "description": "",
             "fieldName": "Study Assay Measurement Type",
+            "ontologyValidationType": "any-ontology-term",
+            "ontologies": [
+                "MSIO",
+                "OBI"
+            ],
+            "allowedParentOntologyTerms": null,
+            "description": "",
             "selectionCriteria": {
                 "isaFileType": "investigation",
                 "studyCreatedAtOrAfter": null,
@@ -77,11 +84,6 @@
                     "termSourceRef": "MSIO"
                 }
             ],
-            "ontologies": [
-                "MSIO",
-                "OBI"
-            ],
-            "allowedParentOntologyTerms": null,
             "unexpectedTerms": []
         }
     ]

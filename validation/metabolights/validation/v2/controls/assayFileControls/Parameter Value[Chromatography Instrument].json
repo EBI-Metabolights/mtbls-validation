@@ -2,8 +2,14 @@
     "Parameter Value[Chromatography Instrument]": [
         {
             "ruleName": "Parameter Value[Chromatography Instrument]-01",
-            "description": "",
             "fieldName": "Parameter Value[Chromatography Instrument]",
+            "ontologyValidationType": "any-ontology-term",
+            "ontologies": [
+                "MS",
+                "MTBLS"
+            ],
+            "allowedParentOntologyTerms": null,
+            "description": "",
             "selectionCriteria": {
                 "isaFileType": "assay",
                 "studyCreatedAtOrAfter": null,
@@ -438,17 +444,18 @@
                     "termSourceRef": "MTBLS"
                 }
             ],
+            "unexpectedTerms": []
+        },
+        {
+            "ruleName": "Parameter Value[Chromatography Instrument]-02",
+            "fieldName": "Parameter Value[Chromatography Instrument]",
+            "ontologyValidationType": "any-ontology-term",
             "ontologies": [
                 "MS",
                 "MTBLS"
             ],
             "allowedParentOntologyTerms": null,
-            "unexpectedTerms": []
-        },
-        {
-            "ruleName": "Parameter Value[Chromatography Instrument]-02",
             "description": "",
-            "fieldName": "Parameter Value[Chromatography Instrument]",
             "selectionCriteria": {
                 "isaFileType": "assay",
                 "studyCreatedAtOrAfter": null,
@@ -828,11 +835,6 @@
                     "termSourceRef": "MTBLS"
                 }
             ],
-            "ontologies": [
-                "MS",
-                "MTBLS"
-            ],
-            "allowedParentOntologyTerms": null,
             "unexpectedTerms": []
         }
     ]

@@ -2,8 +2,14 @@
     "Parameter Value[Autosampler model]": [
         {
             "ruleName": "Parameter Value[Autosampler model]-01",
-            "description": "",
             "fieldName": "Parameter Value[Autosampler model]",
+            "ontologyValidationType": "any-ontology-term",
+            "ontologies": [
+                "MS",
+                "MTBLS"
+            ],
+            "allowedParentOntologyTerms": null,
+            "description": "",
             "selectionCriteria": {
                 "isaFileType": "assay",
                 "studyCreatedAtOrAfter": null,
@@ -208,17 +214,18 @@
                     "termSourceRef": "MTBLS"
                 }
             ],
+            "unexpectedTerms": []
+        },
+        {
+            "ruleName": "Parameter Value[Autosampler model]-02",
+            "fieldName": "Parameter Value[Autosampler model]",
+            "ontologyValidationType": "any-ontology-term",
             "ontologies": [
                 "MS",
                 "MTBLS"
             ],
             "allowedParentOntologyTerms": null,
-            "unexpectedTerms": []
-        },
-        {
-            "ruleName": "Parameter Value[Autosampler model]-02",
             "description": "",
-            "fieldName": "Parameter Value[Autosampler model]",
             "selectionCriteria": {
                 "isaFileType": "assay",
                 "studyCreatedAtOrAfter": null,
@@ -418,11 +425,6 @@
                     "termSourceRef": "MTBLS"
                 }
             ],
-            "ontologies": [
-                "MS",
-                "MTBLS"
-            ],
-            "allowedParentOntologyTerms": null,
             "unexpectedTerms": []
         }
     ]

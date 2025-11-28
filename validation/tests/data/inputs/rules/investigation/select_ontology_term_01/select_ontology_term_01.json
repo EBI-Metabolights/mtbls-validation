@@ -1,7 +1,10 @@
 {
     "ruleName": "select-ontology-term-01",
-    "description": "",
     "fieldName": "",
+    "ontologyValidationType": "any-ontology-term",
+    "ontologies": [],
+    "allowedParentOntologyTerms": null,
+    "description": "",
     "selectionCriteria": {
         "isaFileType": "investigation",
         "studyCreatedAtOrAfter": null,
@@ -56,7 +59,5 @@
             "termSourceRef": "UO"
         }
     ],
-    "ontologies": [],
-    "allowedParentOntologyTerms": null,
     "unexpectedTerms": []
 }

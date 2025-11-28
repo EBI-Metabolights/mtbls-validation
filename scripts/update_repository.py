@@ -85,7 +85,7 @@ if __name__ == "__main__":
         "docs/template-files",
         "docs/validation-rules",
     ]:
-        shutil.rmtree(folder)
+        shutil.rmtree(folder, ignore_errors=True)
 
     create_all_templates_json(template_settings)
     create_all_controls_json()

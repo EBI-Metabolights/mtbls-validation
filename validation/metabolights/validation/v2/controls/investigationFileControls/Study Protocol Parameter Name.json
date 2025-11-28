@@ -2,8 +2,22 @@
     "Study Protocol Parameter Name": [
         {
             "ruleName": "Study Protocol Parameter Name-01",
-            "description": "",
             "fieldName": "Study Protocol Parameter Name",
+            "ontologyValidationType": "any-ontology-term",
+            "ontologies": [
+                "MS",
+                "EFO",
+                "NCIT",
+                "MTBLS",
+                "CHMO",
+                "MONDO",
+                "PRIDE",
+                "GO",
+                "MESH",
+                "MI"
+            ],
+            "allowedParentOntologyTerms": null,
+            "description": "",
             "selectionCriteria": {
                 "isaFileType": "investigation",
                 "studyCreatedAtOrAfter": null,
@@ -412,19 +426,6 @@
                     "termSourceRef": ""
                 }
             ],
-            "ontologies": [
-                "MS",
-                "EFO",
-                "NCIT",
-                "MTBLS",
-                "CHMO",
-                "MONDO",
-                "PRIDE",
-                "GO",
-                "MESH",
-                "MI"
-            ],
-            "allowedParentOntologyTerms": null,
             "unexpectedTerms": []
         }
     ]

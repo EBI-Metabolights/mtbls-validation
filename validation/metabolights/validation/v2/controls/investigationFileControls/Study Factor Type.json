@@ -2,8 +2,20 @@
     "Study Factor Type": [
         {
             "ruleName": "Study Factor Type-01",
-            "description": "",
             "fieldName": "Study Factor Type",
+            "ontologyValidationType": "any-ontology-term",
+            "ontologies": [
+                "EFO",
+                "MTBLS",
+                "ENVO",
+                "MESH",
+                "CHEBI",
+                "CHMO",
+                "NCIT",
+                "PO"
+            ],
+            "allowedParentOntologyTerms": null,
+            "description": "",
             "selectionCriteria": {
                 "isaFileType": "investigation",
                 "studyCreatedAtOrAfter": null,
@@ -100,17 +112,6 @@
                     "termSourceRef": "NCIT"
                 }
             ],
-            "ontologies": [
-                "EFO",
-                "MTBLS",
-                "ENVO",
-                "MESH",
-                "CHEBI",
-                "CHMO",
-                "NCIT",
-                "PO"
-            ],
-            "allowedParentOntologyTerms": null,
             "unexpectedTerms": []
         }
     ]

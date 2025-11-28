@@ -2,8 +2,11 @@
     "Study Assay Technology Type": [
         {
             "ruleName": "Study Assay Technology Type-01",
-            "description": "",
             "fieldName": "Study Assay Technology Type",
+            "ontologyValidationType": "any-ontology-term",
+            "ontologies": [],
+            "allowedParentOntologyTerms": null,
+            "description": "",
             "selectionCriteria": {
                 "isaFileType": "investigation",
                 "studyCreatedAtOrAfter": null,
@@ -30,14 +33,15 @@
                     "termSourceRef": "OBI"
                 }
             ],
-            "ontologies": [],
-            "allowedParentOntologyTerms": null,
             "unexpectedTerms": []
         },
         {
             "ruleName": "Study Assay Technology Type-02",
-            "description": "",
             "fieldName": "Study Assay Technology Type",
+            "ontologyValidationType": "any-ontology-term",
+            "ontologies": [],
+            "allowedParentOntologyTerms": null,
+            "description": "",
             "selectionCriteria": {
                 "isaFileType": "investigation",
                 "studyCreatedAtOrAfter": null,
@@ -71,14 +75,15 @@
                     "termSourceRef": "OBI"
                 }
             ],
-            "ontologies": [],
-            "allowedParentOntologyTerms": null,
             "unexpectedTerms": []
         },
         {
             "ruleName": "Study Assay Technology Type-03",
-            "description": "",
             "fieldName": "Study Assay Technology Type",
+            "ontologyValidationType": "any-ontology-term",
+            "ontologies": [],
+            "allowedParentOntologyTerms": null,
+            "description": "",
             "selectionCriteria": {
                 "isaFileType": "investigation",
                 "studyCreatedAtOrAfter": null,
@@ -105,14 +110,15 @@
                     "termSourceRef": "OBI"
                 }
             ],
-            "ontologies": [],
-            "allowedParentOntologyTerms": null,
             "unexpectedTerms": []
         },
         {
             "ruleName": "Study Assay Technology Type-05",
-            "description": "",
             "fieldName": "Study Assay Technology Type",
+            "ontologyValidationType": "any-ontology-term",
+            "ontologies": [],
+            "allowedParentOntologyTerms": null,
+            "description": "",
             "selectionCriteria": {
                 "isaFileType": "investigation",
                 "studyCreatedAtOrAfter": null,
@@ -150,14 +156,15 @@
                     "termSourceRef": "OBI"
                 }
             ],
-            "ontologies": [],
-            "allowedParentOntologyTerms": null,
             "unexpectedTerms": []
         },
         {
             "ruleName": "Study Assay Technology Type-07",
-            "description": "",
             "fieldName": "Study Assay Technology Type",
+            "ontologyValidationType": "any-ontology-term",
+            "ontologies": [],
+            "allowedParentOntologyTerms": null,
+            "description": "",
             "selectionCriteria": {
                 "isaFileType": "investigation",
                 "studyCreatedAtOrAfter": null,
@@ -190,8 +197,6 @@
                     "termSourceRef": "OBI"
                 }
             ],
-            "ontologies": [],
-            "allowedParentOntologyTerms": null,
             "unexpectedTerms": []
         }
     ]

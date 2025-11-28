@@ -2,8 +2,13 @@
     "Parameter Value[Ion source]": [
         {
             "ruleName": "Parameter Value[Ion source]-01",
-            "description": "",
             "fieldName": "Parameter Value[Ion source]",
+            "ontologyValidationType": "any-ontology-term",
+            "ontologies": [
+                "MS"
+            ],
+            "allowedParentOntologyTerms": null,
+            "description": "",
             "selectionCriteria": {
                 "isaFileType": "assay",
                 "studyCreatedAtOrAfter": null,
@@ -78,16 +83,17 @@
                     "termSourceRef": "MS"
                 }
             ],
-            "ontologies": [
-                "MS"
-            ],
-            "allowedParentOntologyTerms": null,
             "unexpectedTerms": []
         },
         {
             "ruleName": "Parameter Value[Ion source]-02",
-            "description": "",
             "fieldName": "Parameter Value[Ion source]",
+            "ontologyValidationType": "any-ontology-term",
+            "ontologies": [
+                "MS"
+            ],
+            "allowedParentOntologyTerms": null,
+            "description": "",
             "selectionCriteria": {
                 "isaFileType": "assay",
                 "studyCreatedAtOrAfter": null,
@@ -147,16 +153,17 @@
                     "termSourceRef": "MS"
                 }
             ],
-            "ontologies": [
-                "MS"
-            ],
-            "allowedParentOntologyTerms": null,
             "unexpectedTerms": []
         },
         {
             "ruleName": "Parameter Value[Ion source]-03",
-            "description": "",
             "fieldName": "Parameter Value[Ion source]",
+            "ontologyValidationType": "any-ontology-term",
+            "ontologies": [
+                "MS"
+            ],
+            "allowedParentOntologyTerms": null,
+            "description": "",
             "selectionCriteria": {
                 "isaFileType": "assay",
                 "studyCreatedAtOrAfter": null,
@@ -211,10 +218,6 @@
                     "termSourceRef": "MTBLS"
                 }
             ],
-            "ontologies": [
-                "MS"
-            ],
-            "allowedParentOntologyTerms": null,
             "unexpectedTerms": []
         }
     ]

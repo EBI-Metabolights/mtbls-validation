@@ -2,35 +2,8 @@
     "Unit": [
         {
             "ruleName": "Unit-01",
-            "description": "",
             "fieldName": "Unit",
-            "selectionCriteria": {
-                "isaFileType": "sample",
-                "studyCreatedAtOrAfter": null,
-                "studyCreatedBefore": null,
-                "studyCategoryFilter": null,
-                "templateVersionFilter": null,
-                "isaFileTemplateNameFilter": null,
-                "linkedFieldAndValueFilter": null
-            },
-            "termEnforcementLevel": "recommended",
-            "unexpectedTermEnforcementLevel": "recommended",
-            "validationType": "child-ontology-term",
-            "constraints": {},
-            "defaultValue": null,
-            "allowedMissingOntologyTerms": [],
-            "allowedOtherSources": [
-                {
-                    "sourceLabel": "wikidata",
-                    "accessionPrefix": "https://www.wikidata.org/wiki/"
-                },
-                {
-                    "sourceLabel": "ILX",
-                    "accessionPrefix": "http://uri.interlex.org/base/ilx_"
-                }
-            ],
-            "allowedPlaceholders": [],
-            "terms": [],
+            "ontologyValidationType": "any-ontology-term",
             "ontologies": [],
             "allowedParentOntologyTerms": {
                 "excludeByLabelPattern": [
@@ -63,6 +36,34 @@
                     }
                 ]
             },
+            "description": "",
+            "selectionCriteria": {
+                "isaFileType": "sample",
+                "studyCreatedAtOrAfter": null,
+                "studyCreatedBefore": null,
+                "studyCategoryFilter": null,
+                "templateVersionFilter": null,
+                "isaFileTemplateNameFilter": null,
+                "linkedFieldAndValueFilter": null
+            },
+            "termEnforcementLevel": "recommended",
+            "unexpectedTermEnforcementLevel": "recommended",
+            "validationType": "child-ontology-term",
+            "constraints": {},
+            "defaultValue": null,
+            "allowedMissingOntologyTerms": [],
+            "allowedOtherSources": [
+                {
+                    "sourceLabel": "wikidata",
+                    "accessionPrefix": "https://www.wikidata.org/wiki/"
+                },
+                {
+                    "sourceLabel": "ILX",
+                    "accessionPrefix": "http://uri.interlex.org/base/ilx_"
+                }
+            ],
+            "allowedPlaceholders": [],
+            "terms": [],
             "unexpectedTerms": []
         }
     ]

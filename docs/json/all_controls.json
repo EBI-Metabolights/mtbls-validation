@@ -3,8 +3,37 @@
         "__default__": [
             {
                 "ruleName": "default-assay-file-rule-01",
-                "description": "default",
                 "fieldName": "",
+                "ontologyValidationType": "any-ontology-term",
+                "ontologies": [
+                    "OBI",
+                    "EFO",
+                    "CHMO",
+                    "NCIT",
+                    "NCBITAXON",
+                    "MS",
+                    "BTO",
+                    "CHEBI",
+                    "UO",
+                    "MESH",
+                    "BAO",
+                    "OMIT",
+                    "GO",
+                    "ENVO",
+                    "MSIO",
+                    "PO",
+                    "MONDO",
+                    "UBERON",
+                    "SNOMED",
+                    "CL",
+                    "CLO",
+                    "MI",
+                    "EDAM",
+                    "HP",
+                    "MP"
+                ],
+                "allowedParentOntologyTerms": null,
+                "description": "default",
                 "selectionCriteria": {
                     "isaFileType": "assay",
                     "studyCreatedAtOrAfter": null,
@@ -45,34 +74,6 @@
                     }
                 ],
                 "terms": [],
-                "ontologies": [
-                    "OBI",
-                    "EFO",
-                    "CHMO",
-                    "NCIT",
-                    "NCBITAXON",
-                    "MS",
-                    "BTO",
-                    "CHEBI",
-                    "UO",
-                    "MESH",
-                    "BAO",
-                    "OMIT",
-                    "GO",
-                    "ENVO",
-                    "MSIO",
-                    "PO",
-                    "MONDO",
-                    "UBERON",
-                    "SNOMED",
-                    "CL",
-                    "CLO",
-                    "MI",
-                    "EDAM",
-                    "HP",
-                    "MP"
-                ],
-                "allowedParentOntologyTerms": null,
                 "unexpectedTerms": [
                     "unknown",
                     "undefined",
@@ -94,8 +95,11 @@
         "Sample Name": [
             {
                 "ruleName": "Sample Name-01",
-                "description": "",
                 "fieldName": "Sample Name",
+                "ontologyValidationType": "any-ontology-term",
+                "ontologies": [],
+                "allowedParentOntologyTerms": null,
+                "description": "",
                 "selectionCriteria": {
                     "isaFileType": "assay",
                     "studyCreatedAtOrAfter": null,
@@ -120,16 +124,19 @@
                 "allowedOtherSources": [],
                 "allowedPlaceholders": [],
                 "terms": [],
-                "ontologies": [],
-                "allowedParentOntologyTerms": null,
                 "unexpectedTerms": []
             }
         ],
         "Parameter Value[Scan polarity]": [
             {
                 "ruleName": "Parameter Value[Scan polarity]-01",
-                "description": "",
                 "fieldName": "Parameter Value[Scan polarity]",
+                "ontologyValidationType": "any-ontology-term",
+                "ontologies": [
+                    "AFO"
+                ],
+                "allowedParentOntologyTerms": null,
+                "description": "",
                 "selectionCriteria": {
                     "isaFileType": "assay",
                     "studyCreatedAtOrAfter": null,
@@ -171,16 +178,18 @@
                         "termSourceRef": "AFO"
                     }
                 ],
-                "ontologies": [
-                    "AFO"
-                ],
-                "allowedParentOntologyTerms": null,
                 "unexpectedTerms": []
             },
             {
                 "ruleName": "Parameter Value[Scan polarity]-02",
-                "description": "",
                 "fieldName": "Parameter Value[Scan polarity]",
+                "ontologyValidationType": "any-ontology-term",
+                "ontologies": [
+                    "AFO",
+                    "MS"
+                ],
+                "allowedParentOntologyTerms": null,
+                "description": "",
                 "selectionCriteria": {
                     "isaFileType": "assay",
                     "studyCreatedAtOrAfter": null,
@@ -220,19 +229,17 @@
                         "termSourceRef": ""
                     }
                 ],
-                "ontologies": [
-                    "AFO",
-                    "MS"
-                ],
-                "allowedParentOntologyTerms": null,
                 "unexpectedTerms": []
             }
         ],
         "Parameter Value[Pulse sequence name]": [
             {
                 "ruleName": "Parameter Value[Pulse sequence name]-01",
-                "description": "",
                 "fieldName": "Parameter Value[Pulse sequence name]",
+                "ontologyValidationType": "any-ontology-term",
+                "ontologies": [],
+                "allowedParentOntologyTerms": null,
+                "description": "",
                 "selectionCriteria": {
                     "isaFileType": "assay",
                     "studyCreatedAtOrAfter": null,
@@ -572,16 +579,19 @@
                         "termSourceRef": "MTBLS"
                     }
                 ],
-                "ontologies": [],
-                "allowedParentOntologyTerms": null,
                 "unexpectedTerms": []
             }
         ],
         "Parameter Value[NMR Probe]": [
             {
                 "ruleName": "Parameter Value[NMR Probe]-01",
-                "description": "",
                 "fieldName": "Parameter Value[NMR Probe]",
+                "ontologyValidationType": "any-ontology-term",
+                "ontologies": [
+                    "MTBLS"
+                ],
+                "allowedParentOntologyTerms": null,
+                "description": "",
                 "selectionCriteria": {
                     "isaFileType": "assay",
                     "studyCreatedAtOrAfter": null,
@@ -1046,18 +1056,31 @@
                         "termSourceRef": "MTBLS"
                     }
                 ],
-                "ontologies": [
-                    "MTBLS"
-                ],
-                "allowedParentOntologyTerms": null,
                 "unexpectedTerms": []
             }
         ],
         "Parameter Value[Instrument]": [
             {
                 "ruleName": "Parameter Value[Instrument]-01",
-                "description": "",
                 "fieldName": "Parameter Value[Instrument]",
+                "ontologyValidationType": "any-ontology-term",
+                "ontologies": [
+                    "MS"
+                ],
+                "allowedParentOntologyTerms": {
+                    "excludeByLabelPattern": [
+                        "^.*instrument model$"
+                    ],
+                    "excludeByAccession": [],
+                    "parents": [
+                        {
+                            "term": "instrument model",
+                            "termAccessionNumber": "http://purl.obolibrary.org/obo/MS_1000031",
+                            "termSourceRef": "MS"
+                        }
+                    ]
+                },
+                "description": "",
                 "selectionCriteria": {
                     "isaFileType": "assay",
                     "studyCreatedAtOrAfter": null,
@@ -1101,28 +1124,17 @@
                 ],
                 "allowedPlaceholders": [],
                 "terms": [],
-                "ontologies": [
-                    "MS"
-                ],
-                "allowedParentOntologyTerms": {
-                    "excludeByLabelPattern": [
-                        "^.*instrument model$"
-                    ],
-                    "excludeByAccession": [],
-                    "parents": [
-                        {
-                            "term": "instrument model",
-                            "termAccessionNumber": "http://purl.obolibrary.org/obo/MS_1000031",
-                            "termSourceRef": "MS"
-                        }
-                    ]
-                },
                 "unexpectedTerms": []
             },
             {
                 "ruleName": "Parameter Value[Instrument]-03",
-                "description": "",
                 "fieldName": "Parameter Value[Instrument]",
+                "ontologyValidationType": "any-ontology-term",
+                "ontologies": [
+                    "MS"
+                ],
+                "allowedParentOntologyTerms": null,
+                "description": "",
                 "selectionCriteria": {
                     "isaFileType": "assay",
                     "studyCreatedAtOrAfter": null,
@@ -2018,16 +2030,17 @@
                         "termSourceRef": "MTBLS"
                     }
                 ],
-                "ontologies": [
-                    "MS"
-                ],
-                "allowedParentOntologyTerms": null,
                 "unexpectedTerms": []
             },
             {
                 "ruleName": "Parameter Value[Instrument]-04",
-                "description": "",
                 "fieldName": "Parameter Value[Instrument]",
+                "ontologyValidationType": "any-ontology-term",
+                "ontologies": [
+                    "MS"
+                ],
+                "allowedParentOntologyTerms": null,
+                "description": "",
                 "selectionCriteria": {
                     "isaFileType": "assay",
                     "studyCreatedAtOrAfter": "2025-12-01T00:00:00",
@@ -2289,16 +2302,17 @@
                         "termSourceRef": "MTBLS"
                     }
                 ],
-                "ontologies": [
-                    "MS"
-                ],
-                "allowedParentOntologyTerms": null,
                 "unexpectedTerms": []
             },
             {
                 "ruleName": "Parameter Value[Instrument]-05",
-                "description": "",
                 "fieldName": "Parameter Value[Instrument]",
+                "ontologyValidationType": "any-ontology-term",
+                "ontologies": [
+                    "MTBLS"
+                ],
+                "allowedParentOntologyTerms": null,
+                "description": "",
                 "selectionCriteria": {
                     "isaFileType": "assay",
                     "studyCreatedAtOrAfter": null,
@@ -2540,18 +2554,20 @@
                         "termSourceRef": "MTBLS"
                     }
                 ],
-                "ontologies": [
-                    "MTBLS"
-                ],
-                "allowedParentOntologyTerms": null,
                 "unexpectedTerms": []
             }
         ],
         "Parameter Value[Chromatography Instrument]": [
             {
                 "ruleName": "Parameter Value[Chromatography Instrument]-01",
-                "description": "",
                 "fieldName": "Parameter Value[Chromatography Instrument]",
+                "ontologyValidationType": "any-ontology-term",
+                "ontologies": [
+                    "MS",
+                    "MTBLS"
+                ],
+                "allowedParentOntologyTerms": null,
+                "description": "",
                 "selectionCriteria": {
                     "isaFileType": "assay",
                     "studyCreatedAtOrAfter": null,
@@ -2986,17 +3002,18 @@
                         "termSourceRef": "MTBLS"
                     }
                 ],
+                "unexpectedTerms": []
+            },
+            {
+                "ruleName": "Parameter Value[Chromatography Instrument]-02",
+                "fieldName": "Parameter Value[Chromatography Instrument]",
+                "ontologyValidationType": "any-ontology-term",
                 "ontologies": [
                     "MS",
                     "MTBLS"
                 ],
                 "allowedParentOntologyTerms": null,
-                "unexpectedTerms": []
-            },
-            {
-                "ruleName": "Parameter Value[Chromatography Instrument]-02",
                 "description": "",
-                "fieldName": "Parameter Value[Chromatography Instrument]",
                 "selectionCriteria": {
                     "isaFileType": "assay",
                     "studyCreatedAtOrAfter": null,
@@ -3376,19 +3393,19 @@
                         "termSourceRef": "MTBLS"
                     }
                 ],
-                "ontologies": [
-                    "MS",
-                    "MTBLS"
-                ],
-                "allowedParentOntologyTerms": null,
                 "unexpectedTerms": []
             }
         ],
         "Parameter Value[Ion source]": [
             {
                 "ruleName": "Parameter Value[Ion source]-01",
-                "description": "",
                 "fieldName": "Parameter Value[Ion source]",
+                "ontologyValidationType": "any-ontology-term",
+                "ontologies": [
+                    "MS"
+                ],
+                "allowedParentOntologyTerms": null,
+                "description": "",
                 "selectionCriteria": {
                     "isaFileType": "assay",
                     "studyCreatedAtOrAfter": null,
@@ -3463,16 +3480,17 @@
                         "termSourceRef": "MS"
                     }
                 ],
-                "ontologies": [
-                    "MS"
-                ],
-                "allowedParentOntologyTerms": null,
                 "unexpectedTerms": []
             },
             {
                 "ruleName": "Parameter Value[Ion source]-02",
-                "description": "",
                 "fieldName": "Parameter Value[Ion source]",
+                "ontologyValidationType": "any-ontology-term",
+                "ontologies": [
+                    "MS"
+                ],
+                "allowedParentOntologyTerms": null,
+                "description": "",
                 "selectionCriteria": {
                     "isaFileType": "assay",
                     "studyCreatedAtOrAfter": null,
@@ -3532,16 +3550,17 @@
                         "termSourceRef": "MS"
                     }
                 ],
-                "ontologies": [
-                    "MS"
-                ],
-                "allowedParentOntologyTerms": null,
                 "unexpectedTerms": []
             },
             {
                 "ruleName": "Parameter Value[Ion source]-03",
-                "description": "",
                 "fieldName": "Parameter Value[Ion source]",
+                "ontologyValidationType": "any-ontology-term",
+                "ontologies": [
+                    "MS"
+                ],
+                "allowedParentOntologyTerms": null,
+                "description": "",
                 "selectionCriteria": {
                     "isaFileType": "assay",
                     "studyCreatedAtOrAfter": null,
@@ -3596,18 +3615,20 @@
                         "termSourceRef": "MTBLS"
                     }
                 ],
-                "ontologies": [
-                    "MS"
-                ],
-                "allowedParentOntologyTerms": null,
                 "unexpectedTerms": []
             }
         ],
         "Parameter Value[Guard column]": [
             {
                 "ruleName": "Parameter Value[Guard column]-01",
-                "description": "",
                 "fieldName": "Parameter Value[Guard column]",
+                "ontologyValidationType": "any-ontology-term",
+                "ontologies": [
+                    "MS",
+                    "MTBLS"
+                ],
+                "allowedParentOntologyTerms": null,
+                "description": "",
                 "selectionCriteria": {
                     "isaFileType": "assay",
                     "studyCreatedAtOrAfter": null,
@@ -3887,17 +3908,18 @@
                         "termSourceRef": "MTBLS"
                     }
                 ],
+                "unexpectedTerms": []
+            },
+            {
+                "ruleName": "Parameter Value[Guard column]-02",
+                "fieldName": "Parameter Value[Guard column]",
+                "ontologyValidationType": "any-ontology-term",
                 "ontologies": [
                     "MS",
                     "MTBLS"
                 ],
                 "allowedParentOntologyTerms": null,
-                "unexpectedTerms": []
-            },
-            {
-                "ruleName": "Parameter Value[Guard column]-02",
                 "description": "",
-                "fieldName": "Parameter Value[Guard column]",
                 "selectionCriteria": {
                     "isaFileType": "assay",
                     "studyCreatedAtOrAfter": null,
@@ -3992,19 +4014,17 @@
                         "termSourceRef": "MTBLS"
                     }
                 ],
-                "ontologies": [
-                    "MS",
-                    "MTBLS"
-                ],
-                "allowedParentOntologyTerms": null,
                 "unexpectedTerms": []
             }
         ],
         "Parameter Value[NMR tube type]": [
             {
                 "ruleName": "Parameter Value[NMR tube type]-01",
-                "description": "",
                 "fieldName": "Parameter Value[NMR tube type]",
+                "ontologyValidationType": "any-ontology-term",
+                "ontologies": [],
+                "allowedParentOntologyTerms": null,
+                "description": "",
                 "selectionCriteria": {
                     "isaFileType": "assay",
                     "studyCreatedAtOrAfter": null,
@@ -4169,16 +4189,17 @@
                         "termSourceRef": "MTBLS"
                     }
                 ],
-                "ontologies": [],
-                "allowedParentOntologyTerms": null,
                 "unexpectedTerms": []
             }
         ],
         "NMR Assay Name": [
             {
                 "ruleName": "NMR Assay Name-01",
-                "description": "",
                 "fieldName": "NMR Assay Name",
+                "ontologyValidationType": "any-ontology-term",
+                "ontologies": [],
+                "allowedParentOntologyTerms": null,
+                "description": "",
                 "selectionCriteria": {
                     "isaFileType": "assay",
                     "studyCreatedAtOrAfter": null,
@@ -4203,16 +4224,17 @@
                 "allowedOtherSources": [],
                 "allowedPlaceholders": [],
                 "terms": [],
-                "ontologies": [],
-                "allowedParentOntologyTerms": null,
                 "unexpectedTerms": []
             }
         ],
         "MS Assay Name": [
             {
                 "ruleName": "MS Assay Name-01",
-                "description": "",
                 "fieldName": "MS Assay Name",
+                "ontologyValidationType": "any-ontology-term",
+                "ontologies": [],
+                "allowedParentOntologyTerms": null,
+                "description": "",
                 "selectionCriteria": {
                     "isaFileType": "assay",
                     "studyCreatedAtOrAfter": null,
@@ -4237,16 +4259,20 @@
                 "allowedOtherSources": [],
                 "allowedPlaceholders": [],
                 "terms": [],
-                "ontologies": [],
-                "allowedParentOntologyTerms": null,
                 "unexpectedTerms": []
             }
         ],
         "Parameter Value[Autosampler model]": [
             {
                 "ruleName": "Parameter Value[Autosampler model]-01",
-                "description": "",
                 "fieldName": "Parameter Value[Autosampler model]",
+                "ontologyValidationType": "any-ontology-term",
+                "ontologies": [
+                    "MS",
+                    "MTBLS"
+                ],
+                "allowedParentOntologyTerms": null,
+                "description": "",
                 "selectionCriteria": {
                     "isaFileType": "assay",
                     "studyCreatedAtOrAfter": null,
@@ -4451,17 +4477,18 @@
                         "termSourceRef": "MTBLS"
                     }
                 ],
+                "unexpectedTerms": []
+            },
+            {
+                "ruleName": "Parameter Value[Autosampler model]-02",
+                "fieldName": "Parameter Value[Autosampler model]",
+                "ontologyValidationType": "any-ontology-term",
                 "ontologies": [
                     "MS",
                     "MTBLS"
                 ],
                 "allowedParentOntologyTerms": null,
-                "unexpectedTerms": []
-            },
-            {
-                "ruleName": "Parameter Value[Autosampler model]-02",
                 "description": "",
-                "fieldName": "Parameter Value[Autosampler model]",
                 "selectionCriteria": {
                     "isaFileType": "assay",
                     "studyCreatedAtOrAfter": null,
@@ -4661,19 +4688,19 @@
                         "termSourceRef": "MTBLS"
                     }
                 ],
-                "ontologies": [
-                    "MS",
-                    "MTBLS"
-                ],
-                "allowedParentOntologyTerms": null,
                 "unexpectedTerms": []
             }
         ],
         "Parameter Value[Mass analyzer]": [
             {
                 "ruleName": "Parameter Value[Mass analyzer]-01",
-                "description": "",
                 "fieldName": "Parameter Value[Mass analyzer]",
+                "ontologyValidationType": "any-ontology-term",
+                "ontologies": [
+                    "MS"
+                ],
+                "allowedParentOntologyTerms": null,
+                "description": "",
                 "selectionCriteria": {
                     "isaFileType": "assay",
                     "studyCreatedAtOrAfter": null,
@@ -4771,18 +4798,19 @@
                         "termSourceRef": "MS"
                     }
                 ],
-                "ontologies": [
-                    "MS"
-                ],
-                "allowedParentOntologyTerms": null,
                 "unexpectedTerms": []
             }
         ],
         "Parameter Value[Solvent]": [
             {
                 "ruleName": "Parameter Value[Solvent]-01",
-                "description": "",
                 "fieldName": "Parameter Value[Solvent]",
+                "ontologyValidationType": "any-ontology-term",
+                "ontologies": [
+                    "MTBLS"
+                ],
+                "allowedParentOntologyTerms": null,
+                "description": "",
                 "selectionCriteria": {
                     "isaFileType": "assay",
                     "studyCreatedAtOrAfter": null,
@@ -4982,45 +5010,14 @@
                         "termSourceRef": "MTBLS"
                     }
                 ],
-                "ontologies": [
-                    "MTBLS"
-                ],
-                "allowedParentOntologyTerms": null,
                 "unexpectedTerms": []
             }
         ],
         "Unit": [
             {
                 "ruleName": "Unit-01",
-                "description": "",
                 "fieldName": "Unit",
-                "selectionCriteria": {
-                    "isaFileType": "assay",
-                    "studyCreatedAtOrAfter": null,
-                    "studyCreatedBefore": null,
-                    "studyCategoryFilter": null,
-                    "templateVersionFilter": null,
-                    "isaFileTemplateNameFilter": null,
-                    "linkedFieldAndValueFilter": null
-                },
-                "termEnforcementLevel": "recommended",
-                "unexpectedTermEnforcementLevel": "not-applicable",
-                "validationType": "child-ontology-term",
-                "constraints": {},
-                "defaultValue": null,
-                "allowedMissingOntologyTerms": [],
-                "allowedOtherSources": [
-                    {
-                        "sourceLabel": "wikidata",
-                        "accessionPrefix": "https://www.wikidata.org/wiki/"
-                    },
-                    {
-                        "sourceLabel": "ILX",
-                        "accessionPrefix": "http://uri.interlex.org/base/ilx_"
-                    }
-                ],
-                "allowedPlaceholders": [],
-                "terms": [],
+                "ontologyValidationType": "any-ontology-term",
                 "ontologies": [],
                 "allowedParentOntologyTerms": {
                     "excludeByLabelPattern": [
@@ -5053,14 +5050,48 @@
                         }
                     ]
                 },
+                "description": "",
+                "selectionCriteria": {
+                    "isaFileType": "assay",
+                    "studyCreatedAtOrAfter": null,
+                    "studyCreatedBefore": null,
+                    "studyCategoryFilter": null,
+                    "templateVersionFilter": null,
+                    "isaFileTemplateNameFilter": null,
+                    "linkedFieldAndValueFilter": null
+                },
+                "termEnforcementLevel": "recommended",
+                "unexpectedTermEnforcementLevel": "not-applicable",
+                "validationType": "child-ontology-term",
+                "constraints": {},
+                "defaultValue": null,
+                "allowedMissingOntologyTerms": [],
+                "allowedOtherSources": [
+                    {
+                        "sourceLabel": "wikidata",
+                        "accessionPrefix": "https://www.wikidata.org/wiki/"
+                    },
+                    {
+                        "sourceLabel": "ILX",
+                        "accessionPrefix": "http://uri.interlex.org/base/ilx_"
+                    }
+                ],
+                "allowedPlaceholders": [],
+                "terms": [],
                 "unexpectedTerms": []
             }
         ],
         "Parameter Value[Column model]": [
             {
                 "ruleName": "Parameter Value[Column model]-01",
-                "description": "",
                 "fieldName": "Parameter Value[Column model]",
+                "ontologyValidationType": "any-ontology-term",
+                "ontologies": [
+                    "MS",
+                    "MTBLS"
+                ],
+                "allowedParentOntologyTerms": null,
+                "description": "",
                 "selectionCriteria": {
                     "isaFileType": "assay",
                     "studyCreatedAtOrAfter": null,
@@ -6460,17 +6491,18 @@
                         "termSourceRef": "MTBLS"
                     }
                 ],
+                "unexpectedTerms": []
+            },
+            {
+                "ruleName": "Parameter Value[Column model]-02",
+                "fieldName": "Parameter Value[Column model]",
+                "ontologyValidationType": "any-ontology-term",
                 "ontologies": [
                     "MS",
                     "MTBLS"
                 ],
                 "allowedParentOntologyTerms": null,
-                "unexpectedTerms": []
-            },
-            {
-                "ruleName": "Parameter Value[Column model]-02",
                 "description": "",
-                "fieldName": "Parameter Value[Column model]",
                 "selectionCriteria": {
                     "isaFileType": "assay",
                     "studyCreatedAtOrAfter": null,
@@ -6880,11 +6912,6 @@
                         "termSourceRef": "MTBLS"
                     }
                 ],
-                "ontologies": [
-                    "MS",
-                    "MTBLS"
-                ],
-                "allowedParentOntologyTerms": null,
                 "unexpectedTerms": []
             }
         ]
@@ -6893,8 +6920,37 @@
         "__default__": [
             {
                 "ruleName": "default-sample-file-rule-01",
-                "description": "default",
                 "fieldName": "",
+                "ontologyValidationType": "any-ontology-term",
+                "ontologies": [
+                    "OBI",
+                    "EFO",
+                    "CHMO",
+                    "NCIT",
+                    "NCBITAXON",
+                    "MS",
+                    "BTO",
+                    "CHEBI",
+                    "UO",
+                    "MESH",
+                    "BAO",
+                    "OMIT",
+                    "GO",
+                    "ENVO",
+                    "MSIO",
+                    "PO",
+                    "MONDO",
+                    "UBERON",
+                    "SNOMED",
+                    "CL",
+                    "CLO",
+                    "MI",
+                    "EDAM",
+                    "HP",
+                    "MP"
+                ],
+                "allowedParentOntologyTerms": null,
+                "description": "default",
                 "selectionCriteria": {
                     "isaFileType": "sample",
                     "studyCreatedAtOrAfter": null,
@@ -6935,34 +6991,6 @@
                     }
                 ],
                 "terms": [],
-                "ontologies": [
-                    "OBI",
-                    "EFO",
-                    "CHMO",
-                    "NCIT",
-                    "NCBITAXON",
-                    "MS",
-                    "BTO",
-                    "CHEBI",
-                    "UO",
-                    "MESH",
-                    "BAO",
-                    "OMIT",
-                    "GO",
-                    "ENVO",
-                    "MSIO",
-                    "PO",
-                    "MONDO",
-                    "UBERON",
-                    "SNOMED",
-                    "CL",
-                    "CLO",
-                    "MI",
-                    "EDAM",
-                    "HP",
-                    "MP"
-                ],
-                "allowedParentOntologyTerms": null,
                 "unexpectedTerms": [
                     "unknown",
                     "undefined",
@@ -6986,8 +7014,15 @@
         "Factor Value[Disease]": [
             {
                 "ruleName": "Factor Value[Disease]-01",
-                "description": "",
                 "fieldName": "Factor Value[Disease]",
+                "ontologyValidationType": "any-ontology-term",
+                "ontologies": [
+                    "MONDO",
+                    "MP",
+                    "SNOMED"
+                ],
+                "allowedParentOntologyTerms": null,
+                "description": "",
                 "selectionCriteria": {
                     "isaFileType": "sample",
                     "studyCreatedAtOrAfter": "2026-01-01T00:00:00",
@@ -7026,18 +7061,19 @@
                 ],
                 "allowedPlaceholders": [],
                 "terms": [],
+                "unexpectedTerms": []
+            },
+            {
+                "ruleName": "Factor Value[Disease]-02",
+                "fieldName": "Factor Value[Disease]",
+                "ontologyValidationType": "any-ontology-term",
                 "ontologies": [
                     "MONDO",
                     "MP",
                     "SNOMED"
                 ],
                 "allowedParentOntologyTerms": null,
-                "unexpectedTerms": []
-            },
-            {
-                "ruleName": "Factor Value[Disease]-02",
                 "description": "",
-                "fieldName": "Factor Value[Disease]",
                 "selectionCriteria": {
                     "isaFileType": "sample",
                     "studyCreatedAtOrAfter": null,
@@ -7076,20 +7112,21 @@
                 ],
                 "allowedPlaceholders": [],
                 "terms": [],
-                "ontologies": [
-                    "MONDO",
-                    "MP",
-                    "SNOMED"
-                ],
-                "allowedParentOntologyTerms": null,
                 "unexpectedTerms": []
             }
         ],
         "Characteristics[Sample type]": [
             {
                 "ruleName": "Characteristics[Sample type]-01",
-                "description": "",
                 "fieldName": "Characteristics[Sample type]",
+                "ontologyValidationType": "any-ontology-term",
+                "ontologies": [
+                    "CHMO",
+                    "MSIO",
+                    "MTBLS"
+                ],
+                "allowedParentOntologyTerms": null,
+                "description": "",
                 "selectionCriteria": {
                     "isaFileType": "sample",
                     "studyCreatedAtOrAfter": null,
@@ -7144,20 +7181,17 @@
                         "termSourceRef": "MSIO"
                     }
                 ],
-                "ontologies": [
-                    "CHMO",
-                    "MSIO",
-                    "MTBLS"
-                ],
-                "allowedParentOntologyTerms": null,
                 "unexpectedTerms": []
             }
         ],
         "Sample Name": [
             {
                 "ruleName": "Sample Name-01",
-                "description": "",
                 "fieldName": "Sample Name",
+                "ontologyValidationType": "any-ontology-term",
+                "ontologies": [],
+                "allowedParentOntologyTerms": null,
+                "description": "",
                 "selectionCriteria": {
                     "isaFileType": "sample",
                     "studyCreatedAtOrAfter": null,
@@ -7182,16 +7216,43 @@
                 "allowedOtherSources": [],
                 "allowedPlaceholders": [],
                 "terms": [],
-                "ontologies": [],
-                "allowedParentOntologyTerms": null,
                 "unexpectedTerms": []
             }
         ],
         "__default_characteristic__": [
             {
                 "ruleName": "default-sample-characteristic-rule-01",
-                "description": "default",
                 "fieldName": "",
+                "ontologyValidationType": "any-ontology-term",
+                "ontologies": [
+                    "OBI",
+                    "EFO",
+                    "CHMO",
+                    "NCIT",
+                    "NCBITAXON",
+                    "MS",
+                    "BTO",
+                    "CHEBI",
+                    "UO",
+                    "MESH",
+                    "BAO",
+                    "OMIT",
+                    "GO",
+                    "ENVO",
+                    "MSIO",
+                    "PO",
+                    "MONDO",
+                    "UBERON",
+                    "SNOMED",
+                    "CL",
+                    "CLO",
+                    "MI",
+                    "EDAM",
+                    "HP",
+                    "MP"
+                ],
+                "allowedParentOntologyTerms": null,
+                "description": "default",
                 "selectionCriteria": {
                     "isaFileType": "sample",
                     "studyCreatedAtOrAfter": null,
@@ -7224,42 +7285,21 @@
                     }
                 ],
                 "terms": [],
-                "ontologies": [
-                    "OBI",
-                    "EFO",
-                    "CHMO",
-                    "NCIT",
-                    "NCBITAXON",
-                    "MS",
-                    "BTO",
-                    "CHEBI",
-                    "UO",
-                    "MESH",
-                    "BAO",
-                    "OMIT",
-                    "GO",
-                    "ENVO",
-                    "MSIO",
-                    "PO",
-                    "MONDO",
-                    "UBERON",
-                    "SNOMED",
-                    "CL",
-                    "CLO",
-                    "MI",
-                    "EDAM",
-                    "HP",
-                    "MP"
-                ],
-                "allowedParentOntologyTerms": null,
                 "unexpectedTerms": []
             }
         ],
         "Characteristics[Disease]": [
             {
                 "ruleName": "Characteristics[Disease]-01",
-                "description": "",
                 "fieldName": "Characteristics[Disease]",
+                "ontologyValidationType": "any-ontology-term",
+                "ontologies": [
+                    "MONDO",
+                    "MP",
+                    "SNOMED"
+                ],
+                "allowedParentOntologyTerms": null,
+                "description": "",
                 "selectionCriteria": {
                     "isaFileType": "sample",
                     "studyCreatedAtOrAfter": null,
@@ -7308,20 +7348,20 @@
                 ],
                 "allowedPlaceholders": [],
                 "terms": [],
-                "ontologies": [
-                    "MONDO",
-                    "MP",
-                    "SNOMED"
-                ],
-                "allowedParentOntologyTerms": null,
                 "unexpectedTerms": []
             }
         ],
         "Characteristics[Cell type]": [
             {
                 "ruleName": "Characteristics[Cell type]-01",
-                "description": "",
                 "fieldName": "Characteristics[Cell type]",
+                "ontologyValidationType": "any-ontology-term",
+                "ontologies": [
+                    "CL",
+                    "CLO"
+                ],
+                "allowedParentOntologyTerms": null,
+                "description": "",
                 "selectionCriteria": {
                     "isaFileType": "sample",
                     "studyCreatedAtOrAfter": null,
@@ -7370,19 +7410,43 @@
                 ],
                 "allowedPlaceholders": [],
                 "terms": [],
-                "ontologies": [
-                    "CL",
-                    "CLO"
-                ],
-                "allowedParentOntologyTerms": null,
                 "unexpectedTerms": []
             }
         ],
         "__default_factor_value__": [
             {
                 "ruleName": "default-sample-factor_value-rule-01",
-                "description": "default",
                 "fieldName": "",
+                "ontologyValidationType": "any-ontology-term",
+                "ontologies": [
+                    "OBI",
+                    "EFO",
+                    "CHMO",
+                    "NCIT",
+                    "NCBITAXON",
+                    "MS",
+                    "BTO",
+                    "CHEBI",
+                    "UO",
+                    "MESH",
+                    "BAO",
+                    "OMIT",
+                    "GO",
+                    "ENVO",
+                    "MSIO",
+                    "PO",
+                    "MONDO",
+                    "UBERON",
+                    "SNOMED",
+                    "CL",
+                    "CLO",
+                    "MI",
+                    "EDAM",
+                    "HP",
+                    "MP"
+                ],
+                "allowedParentOntologyTerms": null,
+                "description": "default",
                 "selectionCriteria": {
                     "isaFileType": "sample",
                     "studyCreatedAtOrAfter": null,
@@ -7419,42 +7483,22 @@
                     }
                 ],
                 "terms": [],
-                "ontologies": [
-                    "OBI",
-                    "EFO",
-                    "CHMO",
-                    "NCIT",
-                    "NCBITAXON",
-                    "MS",
-                    "BTO",
-                    "CHEBI",
-                    "UO",
-                    "MESH",
-                    "BAO",
-                    "OMIT",
-                    "GO",
-                    "ENVO",
-                    "MSIO",
-                    "PO",
-                    "MONDO",
-                    "UBERON",
-                    "SNOMED",
-                    "CL",
-                    "CLO",
-                    "MI",
-                    "EDAM",
-                    "HP",
-                    "MP"
-                ],
-                "allowedParentOntologyTerms": null,
                 "unexpectedTerms": []
             }
         ],
         "Characteristics[Organism part]": [
             {
                 "ruleName": "Characteristics[Organism part]-01",
-                "description": "",
                 "fieldName": "Characteristics[Organism part]",
+                "ontologyValidationType": "any-ontology-term",
+                "ontologies": [
+                    "UBERON",
+                    "BTO",
+                    "NCIT",
+                    "MSIO"
+                ],
+                "allowedParentOntologyTerms": null,
+                "description": "",
                 "selectionCriteria": {
                     "isaFileType": "sample",
                     "studyCreatedAtOrAfter": null,
@@ -7540,19 +7584,23 @@
                         "termSourceRef": "MTBLS"
                     }
                 ],
-                "ontologies": [
-                    "UBERON",
-                    "BTO",
-                    "NCIT",
-                    "MSIO"
-                ],
-                "allowedParentOntologyTerms": null,
                 "unexpectedTerms": []
             },
             {
                 "ruleName": "Characteristics[Organism part]-02",
-                "description": "",
                 "fieldName": "Characteristics[Organism part]",
+                "ontologyValidationType": "any-ontology-term",
+                "ontologies": [
+                    "BTO",
+                    "NCIT",
+                    "MTBLS",
+                    "EFO",
+                    "PO",
+                    "ENVO",
+                    "CHEBI"
+                ],
+                "allowedParentOntologyTerms": null,
+                "description": "",
                 "selectionCriteria": {
                     "isaFileType": "sample",
                     "studyCreatedAtOrAfter": null,
@@ -7632,51 +7680,14 @@
                         "termSourceRef": "MTBLS"
                     }
                 ],
-                "ontologies": [
-                    "BTO",
-                    "NCIT",
-                    "MTBLS",
-                    "EFO",
-                    "PO",
-                    "ENVO",
-                    "CHEBI"
-                ],
-                "allowedParentOntologyTerms": null,
                 "unexpectedTerms": []
             }
         ],
         "Unit": [
             {
                 "ruleName": "Unit-01",
-                "description": "",
                 "fieldName": "Unit",
-                "selectionCriteria": {
-                    "isaFileType": "sample",
-                    "studyCreatedAtOrAfter": null,
-                    "studyCreatedBefore": null,
-                    "studyCategoryFilter": null,
-                    "templateVersionFilter": null,
-                    "isaFileTemplateNameFilter": null,
-                    "linkedFieldAndValueFilter": null
-                },
-                "termEnforcementLevel": "recommended",
-                "unexpectedTermEnforcementLevel": "recommended",
-                "validationType": "child-ontology-term",
-                "constraints": {},
-                "defaultValue": null,
-                "allowedMissingOntologyTerms": [],
-                "allowedOtherSources": [
-                    {
-                        "sourceLabel": "wikidata",
-                        "accessionPrefix": "https://www.wikidata.org/wiki/"
-                    },
-                    {
-                        "sourceLabel": "ILX",
-                        "accessionPrefix": "http://uri.interlex.org/base/ilx_"
-                    }
-                ],
-                "allowedPlaceholders": [],
-                "terms": [],
+                "ontologyValidationType": "any-ontology-term",
                 "ontologies": [],
                 "allowedParentOntologyTerms": {
                     "excludeByLabelPattern": [
@@ -7709,14 +7720,48 @@
                         }
                     ]
                 },
+                "description": "",
+                "selectionCriteria": {
+                    "isaFileType": "sample",
+                    "studyCreatedAtOrAfter": null,
+                    "studyCreatedBefore": null,
+                    "studyCategoryFilter": null,
+                    "templateVersionFilter": null,
+                    "isaFileTemplateNameFilter": null,
+                    "linkedFieldAndValueFilter": null
+                },
+                "termEnforcementLevel": "recommended",
+                "unexpectedTermEnforcementLevel": "recommended",
+                "validationType": "child-ontology-term",
+                "constraints": {},
+                "defaultValue": null,
+                "allowedMissingOntologyTerms": [],
+                "allowedOtherSources": [
+                    {
+                        "sourceLabel": "wikidata",
+                        "accessionPrefix": "https://www.wikidata.org/wiki/"
+                    },
+                    {
+                        "sourceLabel": "ILX",
+                        "accessionPrefix": "http://uri.interlex.org/base/ilx_"
+                    }
+                ],
+                "allowedPlaceholders": [],
+                "terms": [],
                 "unexpectedTerms": []
             }
         ],
         "Characteristics[Organism]": [
             {
                 "ruleName": "Characteristics[Organism]-01",
-                "description": "",
                 "fieldName": "Characteristics[Organism]",
+                "ontologyValidationType": "any-ontology-term",
+                "ontologies": [
+                    "NCBITAXON",
+                    "ENVO"
+                ],
+                "allowedParentOntologyTerms": null,
+                "description": "",
                 "selectionCriteria": {
                     "isaFileType": "sample",
                     "studyCreatedAtOrAfter": null,
@@ -7792,11 +7837,6 @@
                         "termSourceRef": "ENVO"
                     }
                 ],
-                "ontologies": [
-                    "NCBITAXON",
-                    "ENVO"
-                ],
-                "allowedParentOntologyTerms": null,
                 "unexpectedTerms": [
                     "cat",
                     "chicken",
@@ -7832,8 +7872,19 @@
             },
             {
                 "ruleName": "Characteristics[Organism]-02",
-                "description": "",
                 "fieldName": "Characteristics[Organism]",
+                "ontologyValidationType": "any-ontology-term",
+                "ontologies": [
+                    "NCBITAXON",
+                    "ENVO",
+                    "MTBLS",
+                    "WoRMs",
+                    "EFO",
+                    "NCIT",
+                    "MSIO"
+                ],
+                "allowedParentOntologyTerms": null,
+                "description": "",
                 "selectionCriteria": {
                     "isaFileType": "sample",
                     "studyCreatedAtOrAfter": null,
@@ -7918,16 +7969,6 @@
                         "termSourceRef": "MSIO"
                     }
                 ],
-                "ontologies": [
-                    "NCBITAXON",
-                    "ENVO",
-                    "MTBLS",
-                    "WoRMs",
-                    "EFO",
-                    "NCIT",
-                    "MSIO"
-                ],
-                "allowedParentOntologyTerms": null,
                 "unexpectedTerms": [
                     "cat",
                     "chicken",
@@ -7965,8 +8006,11 @@
         "Source Name": [
             {
                 "ruleName": "Source Name-01",
-                "description": "",
                 "fieldName": "Source Name",
+                "ontologyValidationType": "any-ontology-term",
+                "ontologies": [],
+                "allowedParentOntologyTerms": null,
+                "description": "",
                 "selectionCriteria": {
                     "isaFileType": "sample",
                     "studyCreatedAtOrAfter": null,
@@ -7991,8 +8035,6 @@
                 "allowedOtherSources": [],
                 "allowedPlaceholders": [],
                 "terms": [],
-                "ontologies": [],
-                "allowedParentOntologyTerms": null,
                 "unexpectedTerms": []
             }
         ]
@@ -8001,8 +8043,15 @@
         "__default__": [
             {
                 "ruleName": "default-assignment-file-rule-01",
-                "description": "default",
                 "fieldName": "",
+                "ontologyValidationType": "any-ontology-term",
+                "ontologies": [
+                    "CHEBI",
+                    "EFO",
+                    "CHMO"
+                ],
+                "allowedParentOntologyTerms": null,
+                "description": "default",
                 "selectionCriteria": {
                     "isaFileType": "assignment",
                     "studyCreatedAtOrAfter": null,
@@ -8039,12 +8088,6 @@
                     }
                 ],
                 "terms": [],
-                "ontologies": [
-                    "CHEBI",
-                    "EFO",
-                    "CHMO"
-                ],
-                "allowedParentOntologyTerms": null,
                 "unexpectedTerms": [
                     "unknown",
                     "undefined",
@@ -8070,8 +8113,37 @@
         "__default__": [
             {
                 "ruleName": "default-investigation-file-rule-01",
-                "description": "default",
                 "fieldName": "",
+                "ontologyValidationType": "any-ontology-term",
+                "ontologies": [
+                    "OBI",
+                    "EFO",
+                    "CHMO",
+                    "NCIT",
+                    "NCBITAXON",
+                    "MS",
+                    "BTO",
+                    "CHEBI",
+                    "UO",
+                    "MESH",
+                    "BAO",
+                    "OMIT",
+                    "GO",
+                    "ENVO",
+                    "MSIO",
+                    "PO",
+                    "MONDO",
+                    "UBERON",
+                    "SNOMED",
+                    "CL",
+                    "CLO",
+                    "MI",
+                    "EDAM",
+                    "HP",
+                    "MP"
+                ],
+                "allowedParentOntologyTerms": null,
+                "description": "default",
                 "selectionCriteria": {
                     "isaFileType": "investigation",
                     "studyCreatedAtOrAfter": null,
@@ -8108,34 +8180,6 @@
                     }
                 ],
                 "terms": [],
-                "ontologies": [
-                    "OBI",
-                    "EFO",
-                    "CHMO",
-                    "NCIT",
-                    "NCBITAXON",
-                    "MS",
-                    "BTO",
-                    "CHEBI",
-                    "UO",
-                    "MESH",
-                    "BAO",
-                    "OMIT",
-                    "GO",
-                    "ENVO",
-                    "MSIO",
-                    "PO",
-                    "MONDO",
-                    "UBERON",
-                    "SNOMED",
-                    "CL",
-                    "CLO",
-                    "MI",
-                    "EDAM",
-                    "HP",
-                    "MP"
-                ],
-                "allowedParentOntologyTerms": null,
                 "unexpectedTerms": [
                     "unknown",
                     "undefined",
@@ -8159,8 +8203,23 @@
         "Study Protocol Type": [
             {
                 "ruleName": "Study Protocol Type-01",
-                "description": "",
                 "fieldName": "Study Protocol Type",
+                "ontologyValidationType": "any-ontology-term",
+                "ontologies": [
+                    "EFO",
+                    "NCIT",
+                    "MTBLS",
+                    "CHEBI",
+                    "CHMO",
+                    "MONDO",
+                    "PRIDE",
+                    "GO",
+                    "MESH",
+                    "MI",
+                    "MS"
+                ],
+                "allowedParentOntologyTerms": null,
+                "description": "",
                 "selectionCriteria": {
                     "isaFileType": "investigation",
                     "studyCreatedAtOrAfter": null,
@@ -8249,8 +8308,17 @@
                         "termSourceRef": "MTBLS"
                     }
                 ],
+                "unexpectedTerms": []
+            }
+        ],
+        "Study Design Type": [
+            {
+                "ruleName": "Study Design Type-01",
+                "fieldName": "Study Design Type",
+                "ontologyValidationType": "any-ontology-term",
                 "ontologies": [
                     "EFO",
+                    "MSIO",
                     "NCIT",
                     "MTBLS",
                     "CHEBI",
@@ -8258,19 +8326,10 @@
                     "MONDO",
                     "PRIDE",
                     "GO",
-                    "MESH",
-                    "MI",
-                    "MS"
+                    "MESH"
                 ],
                 "allowedParentOntologyTerms": null,
-                "unexpectedTerms": []
-            }
-        ],
-        "Study Design Type": [
-            {
-                "ruleName": "Study Design Type-01",
                 "description": "",
-                "fieldName": "Study Design Type",
                 "selectionCriteria": {
                     "isaFileType": "investigation",
                     "studyCreatedAtOrAfter": null,
@@ -8362,27 +8421,29 @@
                         "termSourceRef": "MONDO"
                     }
                 ],
-                "ontologies": [
-                    "EFO",
-                    "MSIO",
-                    "NCIT",
-                    "MTBLS",
-                    "CHEBI",
-                    "CHMO",
-                    "MONDO",
-                    "PRIDE",
-                    "GO",
-                    "MESH"
-                ],
-                "allowedParentOntologyTerms": null,
                 "unexpectedTerms": []
             }
         ],
         "Study Person Roles": [
             {
                 "ruleName": "Study Person Roles-01",
-                "description": "",
                 "fieldName": "Study Person Roles",
+                "ontologyValidationType": "any-ontology-term",
+                "ontologies": [
+                    "NCIT"
+                ],
+                "allowedParentOntologyTerms": {
+                    "excludeByLabelPattern": [],
+                    "excludeByAccession": [],
+                    "parents": [
+                        {
+                            "term": "Personnel",
+                            "termAccessionNumber": "http://purl.obolibrary.org/obo/NCIT_C60758",
+                            "termSourceRef": "NCIT"
+                        }
+                    ]
+                },
+                "description": "",
                 "selectionCriteria": {
                     "isaFileType": "investigation",
                     "studyCreatedAtOrAfter": null,
@@ -8421,28 +8482,17 @@
                         "termSourceRef": "NCIT"
                     }
                 ],
-                "ontologies": [
-                    "NCIT"
-                ],
-                "allowedParentOntologyTerms": {
-                    "excludeByLabelPattern": [],
-                    "excludeByAccession": [],
-                    "parents": [
-                        {
-                            "term": "Personnel",
-                            "termAccessionNumber": "http://purl.obolibrary.org/obo/NCIT_C60758",
-                            "termSourceRef": "NCIT"
-                        }
-                    ]
-                },
                 "unexpectedTerms": []
             }
         ],
         "Study Assay Measurement Type": [
             {
                 "ruleName": "Study Assay Measurement Type-01",
-                "description": "",
                 "fieldName": "Study Assay Measurement Type",
+                "ontologyValidationType": "any-ontology-term",
+                "ontologies": [],
+                "allowedParentOntologyTerms": null,
+                "description": "",
                 "selectionCriteria": {
                     "isaFileType": "investigation",
                     "studyCreatedAtOrAfter": null,
@@ -8474,14 +8524,18 @@
                         "termSourceRef": "MSIO"
                     }
                 ],
-                "ontologies": [],
-                "allowedParentOntologyTerms": null,
                 "unexpectedTerms": []
             },
             {
                 "ruleName": "Study Assay Measurement Type-03",
-                "description": "",
                 "fieldName": "Study Assay Measurement Type",
+                "ontologyValidationType": "any-ontology-term",
+                "ontologies": [
+                    "MSIO",
+                    "OBI"
+                ],
+                "allowedParentOntologyTerms": null,
+                "description": "",
                 "selectionCriteria": {
                     "isaFileType": "investigation",
                     "studyCreatedAtOrAfter": null,
@@ -8516,19 +8570,27 @@
                         "termSourceRef": "MSIO"
                     }
                 ],
-                "ontologies": [
-                    "MSIO",
-                    "OBI"
-                ],
-                "allowedParentOntologyTerms": null,
                 "unexpectedTerms": []
             }
         ],
         "Study Protocol Components Type": [
             {
                 "ruleName": "Study Protocol Components Type-01",
-                "description": "",
                 "fieldName": "Study Protocol Components Type",
+                "ontologyValidationType": "any-ontology-term",
+                "ontologies": [
+                    "EFO",
+                    "NCIT",
+                    "MTBLS",
+                    "CHEBI",
+                    "CHMO",
+                    "MONDO",
+                    "PRIDE",
+                    "GO",
+                    "MESH"
+                ],
+                "allowedParentOntologyTerms": null,
+                "description": "",
                 "selectionCriteria": {
                     "isaFileType": "investigation",
                     "studyCreatedAtOrAfter": null,
@@ -8569,26 +8631,28 @@
                     }
                 ],
                 "terms": [],
-                "ontologies": [
-                    "EFO",
-                    "NCIT",
-                    "MTBLS",
-                    "CHEBI",
-                    "CHMO",
-                    "MONDO",
-                    "PRIDE",
-                    "GO",
-                    "MESH"
-                ],
-                "allowedParentOntologyTerms": null,
                 "unexpectedTerms": []
             }
         ],
         "Study Protocol Parameter Name": [
             {
                 "ruleName": "Study Protocol Parameter Name-01",
-                "description": "",
                 "fieldName": "Study Protocol Parameter Name",
+                "ontologyValidationType": "any-ontology-term",
+                "ontologies": [
+                    "MS",
+                    "EFO",
+                    "NCIT",
+                    "MTBLS",
+                    "CHMO",
+                    "MONDO",
+                    "PRIDE",
+                    "GO",
+                    "MESH",
+                    "MI"
+                ],
+                "allowedParentOntologyTerms": null,
+                "description": "",
                 "selectionCriteria": {
                     "isaFileType": "investigation",
                     "studyCreatedAtOrAfter": null,
@@ -8997,27 +9061,17 @@
                         "termSourceRef": ""
                     }
                 ],
-                "ontologies": [
-                    "MS",
-                    "EFO",
-                    "NCIT",
-                    "MTBLS",
-                    "CHMO",
-                    "MONDO",
-                    "PRIDE",
-                    "GO",
-                    "MESH",
-                    "MI"
-                ],
-                "allowedParentOntologyTerms": null,
                 "unexpectedTerms": []
             }
         ],
         "Study Assay Technology Type": [
             {
                 "ruleName": "Study Assay Technology Type-01",
-                "description": "",
                 "fieldName": "Study Assay Technology Type",
+                "ontologyValidationType": "any-ontology-term",
+                "ontologies": [],
+                "allowedParentOntologyTerms": null,
+                "description": "",
                 "selectionCriteria": {
                     "isaFileType": "investigation",
                     "studyCreatedAtOrAfter": null,
@@ -9044,14 +9098,15 @@
                         "termSourceRef": "OBI"
                     }
                 ],
-                "ontologies": [],
-                "allowedParentOntologyTerms": null,
                 "unexpectedTerms": []
             },
             {
                 "ruleName": "Study Assay Technology Type-02",
-                "description": "",
                 "fieldName": "Study Assay Technology Type",
+                "ontologyValidationType": "any-ontology-term",
+                "ontologies": [],
+                "allowedParentOntologyTerms": null,
+                "description": "",
                 "selectionCriteria": {
                     "isaFileType": "investigation",
                     "studyCreatedAtOrAfter": null,
@@ -9085,14 +9140,15 @@
                         "termSourceRef": "OBI"
                     }
                 ],
-                "ontologies": [],
-                "allowedParentOntologyTerms": null,
                 "unexpectedTerms": []
             },
             {
                 "ruleName": "Study Assay Technology Type-03",
-                "description": "",
                 "fieldName": "Study Assay Technology Type",
+                "ontologyValidationType": "any-ontology-term",
+                "ontologies": [],
+                "allowedParentOntologyTerms": null,
+                "description": "",
                 "selectionCriteria": {
                     "isaFileType": "investigation",
                     "studyCreatedAtOrAfter": null,
@@ -9119,14 +9175,15 @@
                         "termSourceRef": "OBI"
                     }
                 ],
-                "ontologies": [],
-                "allowedParentOntologyTerms": null,
                 "unexpectedTerms": []
             },
             {
                 "ruleName": "Study Assay Technology Type-05",
-                "description": "",
                 "fieldName": "Study Assay Technology Type",
+                "ontologyValidationType": "any-ontology-term",
+                "ontologies": [],
+                "allowedParentOntologyTerms": null,
+                "description": "",
                 "selectionCriteria": {
                     "isaFileType": "investigation",
                     "studyCreatedAtOrAfter": null,
@@ -9164,14 +9221,15 @@
                         "termSourceRef": "OBI"
                     }
                 ],
-                "ontologies": [],
-                "allowedParentOntologyTerms": null,
                 "unexpectedTerms": []
             },
             {
                 "ruleName": "Study Assay Technology Type-07",
-                "description": "",
                 "fieldName": "Study Assay Technology Type",
+                "ontologyValidationType": "any-ontology-term",
+                "ontologies": [],
+                "allowedParentOntologyTerms": null,
+                "description": "",
                 "selectionCriteria": {
                     "isaFileType": "investigation",
                     "studyCreatedAtOrAfter": null,
@@ -9204,16 +9262,26 @@
                         "termSourceRef": "OBI"
                     }
                 ],
-                "ontologies": [],
-                "allowedParentOntologyTerms": null,
                 "unexpectedTerms": []
             }
         ],
         "Study Factor Type": [
             {
                 "ruleName": "Study Factor Type-01",
-                "description": "",
                 "fieldName": "Study Factor Type",
+                "ontologyValidationType": "any-ontology-term",
+                "ontologies": [
+                    "EFO",
+                    "MTBLS",
+                    "ENVO",
+                    "MESH",
+                    "CHEBI",
+                    "CHMO",
+                    "NCIT",
+                    "PO"
+                ],
+                "allowedParentOntologyTerms": null,
+                "description": "",
                 "selectionCriteria": {
                     "isaFileType": "investigation",
                     "studyCreatedAtOrAfter": null,
@@ -9310,25 +9378,17 @@
                         "termSourceRef": "NCIT"
                     }
                 ],
-                "ontologies": [
-                    "EFO",
-                    "MTBLS",
-                    "ENVO",
-                    "MESH",
-                    "CHEBI",
-                    "CHMO",
-                    "NCIT",
-                    "PO"
-                ],
-                "allowedParentOntologyTerms": null,
                 "unexpectedTerms": []
             }
         ],
         "Study Publication Status": [
             {
                 "ruleName": "Study Publication Status-01",
-                "description": "",
                 "fieldName": "Study Publication Status",
+                "ontologyValidationType": "any-ontology-term",
+                "ontologies": [],
+                "allowedParentOntologyTerms": null,
+                "description": "",
                 "selectionCriteria": {
                     "isaFileType": "investigation",
                     "studyCreatedAtOrAfter": "2026-01-01T00:00:00",
@@ -9373,14 +9433,18 @@
                         "termSourceRef": "EDAM"
                     }
                 ],
-                "ontologies": [],
-                "allowedParentOntologyTerms": null,
                 "unexpectedTerms": []
             },
             {
                 "ruleName": "Study Publication Status-02",
-                "description": "",
                 "fieldName": "Study Publication Status",
+                "ontologyValidationType": "any-ontology-term",
+                "ontologies": [
+                    "EFO",
+                    "EDAM"
+                ],
+                "allowedParentOntologyTerms": null,
+                "description": "",
                 "selectionCriteria": {
                     "isaFileType": "investigation",
                     "studyCreatedAtOrAfter": null,
@@ -9430,46 +9494,14 @@
                         "termSourceRef": "EDAM"
                     }
                 ],
-                "ontologies": [
-                    "EFO",
-                    "EDAM"
-                ],
-                "allowedParentOntologyTerms": null,
                 "unexpectedTerms": []
             }
         ],
         "Unit": [
             {
                 "ruleName": "Unit-01",
-                "description": "",
                 "fieldName": "Unit",
-                "selectionCriteria": {
-                    "isaFileType": "investigation",
-                    "studyCreatedAtOrAfter": null,
-                    "studyCreatedBefore": null,
-                    "studyCategoryFilter": null,
-                    "templateVersionFilter": null,
-                    "isaFileTemplateNameFilter": null,
-                    "linkedFieldAndValueFilter": null
-                },
-                "termEnforcementLevel": "recommended",
-                "unexpectedTermEnforcementLevel": "recommended",
-                "validationType": "child-ontology-term",
-                "constraints": {},
-                "defaultValue": null,
-                "allowedMissingOntologyTerms": [],
-                "allowedOtherSources": [
-                    {
-                        "sourceLabel": "wikidata",
-                        "accessionPrefix": "https://www.wikidata.org/wiki/"
-                    },
-                    {
-                        "sourceLabel": "ILX",
-                        "accessionPrefix": "http://uri.interlex.org/base/ilx_"
-                    }
-                ],
-                "allowedPlaceholders": [],
-                "terms": [],
+                "ontologyValidationType": "any-ontology-term",
                 "ontologies": [],
                 "allowedParentOntologyTerms": {
                     "excludeByLabelPattern": [
@@ -9502,6 +9534,34 @@
                         }
                     ]
                 },
+                "description": "",
+                "selectionCriteria": {
+                    "isaFileType": "investigation",
+                    "studyCreatedAtOrAfter": null,
+                    "studyCreatedBefore": null,
+                    "studyCategoryFilter": null,
+                    "templateVersionFilter": null,
+                    "isaFileTemplateNameFilter": null,
+                    "linkedFieldAndValueFilter": null
+                },
+                "termEnforcementLevel": "recommended",
+                "unexpectedTermEnforcementLevel": "recommended",
+                "validationType": "child-ontology-term",
+                "constraints": {},
+                "defaultValue": null,
+                "allowedMissingOntologyTerms": [],
+                "allowedOtherSources": [
+                    {
+                        "sourceLabel": "wikidata",
+                        "accessionPrefix": "https://www.wikidata.org/wiki/"
+                    },
+                    {
+                        "sourceLabel": "ILX",
+                        "accessionPrefix": "http://uri.interlex.org/base/ilx_"
+                    }
+                ],
+                "allowedPlaceholders": [],
+                "terms": [],
                 "unexpectedTerms": []
             }
         ]

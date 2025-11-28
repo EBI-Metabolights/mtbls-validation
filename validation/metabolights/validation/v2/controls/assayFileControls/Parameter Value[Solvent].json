@@ -2,8 +2,13 @@
     "Parameter Value[Solvent]": [
         {
             "ruleName": "Parameter Value[Solvent]-01",
-            "description": "",
             "fieldName": "Parameter Value[Solvent]",
+            "ontologyValidationType": "any-ontology-term",
+            "ontologies": [
+                "MTBLS"
+            ],
+            "allowedParentOntologyTerms": null,
+            "description": "",
             "selectionCriteria": {
                 "isaFileType": "assay",
                 "studyCreatedAtOrAfter": null,
@@ -203,10 +208,6 @@
                     "termSourceRef": "MTBLS"
                 }
             ],
-            "ontologies": [
-                "MTBLS"
-            ],
-            "allowedParentOntologyTerms": null,
             "unexpectedTerms": []
         }
     ]

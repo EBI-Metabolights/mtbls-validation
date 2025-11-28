@@ -2,8 +2,11 @@
     "MS Assay Name": [
         {
             "ruleName": "MS Assay Name-01",
-            "description": "",
             "fieldName": "MS Assay Name",
+            "ontologyValidationType": "any-ontology-term",
+            "ontologies": [],
+            "allowedParentOntologyTerms": null,
+            "description": "",
             "selectionCriteria": {
                 "isaFileType": "assay",
                 "studyCreatedAtOrAfter": null,
@@ -28,8 +31,6 @@
             "allowedOtherSources": [],
             "allowedPlaceholders": [],
             "terms": [],
-            "ontologies": [],
-            "allowedParentOntologyTerms": null,
             "unexpectedTerms": []
         }
     ]

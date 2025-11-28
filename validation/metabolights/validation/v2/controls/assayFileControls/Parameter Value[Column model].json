@@ -2,8 +2,14 @@
     "Parameter Value[Column model]": [
         {
             "ruleName": "Parameter Value[Column model]-01",
-            "description": "",
             "fieldName": "Parameter Value[Column model]",
+            "ontologyValidationType": "any-ontology-term",
+            "ontologies": [
+                "MS",
+                "MTBLS"
+            ],
+            "allowedParentOntologyTerms": null,
+            "description": "",
             "selectionCriteria": {
                 "isaFileType": "assay",
                 "studyCreatedAtOrAfter": null,
@@ -1403,17 +1409,18 @@
                     "termSourceRef": "MTBLS"
                 }
             ],
+            "unexpectedTerms": []
+        },
+        {
+            "ruleName": "Parameter Value[Column model]-02",
+            "fieldName": "Parameter Value[Column model]",
+            "ontologyValidationType": "any-ontology-term",
             "ontologies": [
                 "MS",
                 "MTBLS"
             ],
             "allowedParentOntologyTerms": null,
-            "unexpectedTerms": []
-        },
-        {
-            "ruleName": "Parameter Value[Column model]-02",
             "description": "",
-            "fieldName": "Parameter Value[Column model]",
             "selectionCriteria": {
                 "isaFileType": "assay",
                 "studyCreatedAtOrAfter": null,
@@ -1823,11 +1830,6 @@
                     "termSourceRef": "MTBLS"
                 }
             ],
-            "ontologies": [
-                "MS",
-                "MTBLS"
-            ],
-            "allowedParentOntologyTerms": null,
             "unexpectedTerms": []
         }
     ]

@@ -6,22 +6,6 @@ from pydantic import BaseModel, ConfigDict, Field, field_validator, model_valida
 from pydantic.alias_generators import to_camel, to_pascal
 
 
-class PolicyMessageType(str, enum.Enum):
-    ERROR = "ERROR"
-    WARNING = "WARNING"
-    INFO = "INFO"
-    SUCCESS = "SUCCESS"
-
-
-class Violation(BaseModel):
-    rule_id: str = ""
-    title: str = ""
-    description: str = ""
-    type: PolicyMessageType = PolicyMessageType.INFO
-    section: str = ""
-    priority: str = ""
-
-
 class MetadataFileType(enum.StrEnum):
     ASSAY = "assay"
     SAMPLE = "sample"
@@ -29,7 +13,7 @@ class MetadataFileType(enum.StrEnum):
     ASSIGNMENT = "assignment"
 
 
-class ValidationType(enum.StrEnum):
+class OntologyValidationType(enum.StrEnum):
     ANY_ONTOLOGY_TERM = "any-ontology-term"
     CHILD_ONTOLOGY_TERM = "child-ontology-term"
     SELECTED_ONTOLOGY = "ontology-term-in-selected-ontologies"
@@ -79,7 +63,8 @@ class OntologyTerm(StudyBaseModel):
     term_accession_number: Annotated[
         str,
         Field(
-            description="The accession number from the Term Source associated with the term.",
+            description="The accession number from the Term Source "
+            "associated with the term.",
         ),
     ]
     term_source_ref: Annotated[
@@ -113,16 +98,17 @@ class FieldSelector(StudyBaseModel):
     value: Annotated[
         None | str,
         Field(
-            description="Node value to find . e.g. Protocol REF with value 'Sample collection'"
+            description="Node value to match."
+            " e.g. Protocol REF with value 'Sample collection'"
         ),
     ]
 
 
 class SelectionCriteria(StudyBaseModel):
     isa_file_type: Annotated[
-        MetadataFileType,
+        None | MetadataFileType,
         Field(description="ISA-TAB file type."),
-    ]
+    ] = None
     study_created_at_or_after: Annotated[
         None | datetime.datetime,
         Field(description="Filter to select studies created after the defined date."),
@@ -155,8 +141,10 @@ class SelectionCriteria(StudyBaseModel):
             "Characteristics can be linked to Sample Name or Source Name. "
             "Parameter Value can be linked to Protocol REF with value. "
             "e.g., {name: 'Protocol REF', 'value': 'Mass spectrometry'}, "
-            "Units can be linked to Parameter Value, Factor Value and Characteristic fields."
-            "Comments can be linked to ISA-TAB nodes (Sample Name, Source Name, Protocol REF, etc.)"
+            "Units can be linked to Parameter Value, Factor Value "
+            "and Characteristic fields."
+            "Comments can be linked to ISA-TAB nodes "
+            "(Sample Name, Source Name, Protocol REF, etc.)"
         ),
     ] = None
 
@@ -206,7 +194,7 @@ class ParentOntologyTerms(StudyBaseModel):
     ] = []
 
 
-class FieldValueValidation(StudyBaseModel):
+class BaseOntologyValidation(StudyBaseModel):
     rule_name: Annotated[
         str,
         Field(
@@ -215,10 +203,6 @@ class FieldValueValidation(StudyBaseModel):
             "e.g., Parameter Value[Instrument]-01, Parameter Value[Instrument]-02"
         ),
     ]
-    description: Annotated[
-        str,
-        Field(description="Definition of rule and summary of selection criteria."),
-    ] = ""
     field_name: Annotated[
         str,
         Field(
@@ -226,6 +210,36 @@ class FieldValueValidation(StudyBaseModel):
             "e.g., Parameter Value[Instrument], Study Assay Measurement Type."
         ),
     ]
+
+    ontology_validation_type: Annotated[
+        None | OntologyValidationType, Field(description="Validation rule type")
+    ] = OntologyValidationType.ANY_ONTOLOGY_TERM
+
+    ontologies: Annotated[
+        None | list[str],
+        Field(
+            description="Ordered ontology source references. "
+            "If validation type is ontology-term-in-selected-ontologies, "
+            "it defines ontology sources, "
+            "otherwise it lists recommended ontology sources."
+        ),
+    ] = None
+
+    allowed_parent_ontology_terms: Annotated[
+        None | ParentOntologyTerms,
+        Field(
+            description="Parent ontology terms "
+            "to find the allowed child ontology terms. "
+            "Applicable only for validation type child-ontology-term"
+        ),
+    ] = None
+
+
+class FieldValueValidation(BaseOntologyValidation):
+    description: Annotated[
+        str,
+        Field(description="Definition of rule and summary of selection criteria."),
+    ] = ""
     selection_criteria: Annotated[
         SelectionCriteria, Field(description="Field selection criteria")
     ]
@@ -238,8 +252,8 @@ class FieldValueValidation(StudyBaseModel):
     ] = EnforcementLevel.REQUIRED
 
     validation_type: Annotated[
-        ValidationType, Field(description="Validation rule type")
-    ] = ValidationType.ANY_ONTOLOGY_TERM
+        OntologyValidationType, Field(description="Validation rule type")
+    ] = OntologyValidationType.ANY_ONTOLOGY_TERM
     constraints: Annotated[
         None | dict[ConstraintType, FieldConstraint],
         Field(description="Field constraints"),
@@ -272,14 +286,16 @@ class FieldValueValidation(StudyBaseModel):
         Field(
             description="Ordered ontology source references. "
             "If validation type is ontology-term-in-selected-ontologies, "
-            "it defines ontology sources, otherwise it lists recommended ontology sources."
+            "it defines ontology sources, "
+            "otherwise it lists recommended ontology sources."
         ),
     ] = []
 
     allowed_parent_ontology_terms: Annotated[
         None | ParentOntologyTerms,
         Field(
-            description="Parent ontology terms to find the allowed child ontology terms. "
+            description="Parent ontology terms to "
+            "find the allowed child ontology terms. "
             "Applicable only for validation type child-ontology-term"
         ),
     ] = None

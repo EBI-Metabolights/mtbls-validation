@@ -2,8 +2,15 @@
     "Characteristics[Disease]": [
         {
             "ruleName": "Characteristics[Disease]-01",
-            "description": "",
             "fieldName": "Characteristics[Disease]",
+            "ontologyValidationType": "any-ontology-term",
+            "ontologies": [
+                "MONDO",
+                "MP",
+                "SNOMED"
+            ],
+            "allowedParentOntologyTerms": null,
+            "description": "",
             "selectionCriteria": {
                 "isaFileType": "sample",
                 "studyCreatedAtOrAfter": null,
@@ -52,12 +59,6 @@
             ],
             "allowedPlaceholders": [],
             "terms": [],
-            "ontologies": [
-                "MONDO",
-                "MP",
-                "SNOMED"
-            ],
-            "allowedParentOntologyTerms": null,
             "unexpectedTerms": []
         }
     ]

@@ -2,8 +2,15 @@
     "Characteristics[Sample type]": [
         {
             "ruleName": "Characteristics[Sample type]-01",
-            "description": "",
             "fieldName": "Characteristics[Sample type]",
+            "ontologyValidationType": "any-ontology-term",
+            "ontologies": [
+                "CHMO",
+                "MSIO",
+                "MTBLS"
+            ],
+            "allowedParentOntologyTerms": null,
+            "description": "",
             "selectionCriteria": {
                 "isaFileType": "sample",
                 "studyCreatedAtOrAfter": null,
@@ -58,12 +65,6 @@
                     "termSourceRef": "MSIO"
                 }
             ],
-            "ontologies": [
-                "CHMO",
-                "MSIO",
-                "MTBLS"
-            ],
-            "allowedParentOntologyTerms": null,
             "unexpectedTerms": []
         }
     ]

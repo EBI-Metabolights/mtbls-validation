@@ -2,8 +2,11 @@
     "Study Publication Status": [
         {
             "ruleName": "Study Publication Status-01",
-            "description": "",
             "fieldName": "Study Publication Status",
+            "ontologyValidationType": "any-ontology-term",
+            "ontologies": [],
+            "allowedParentOntologyTerms": null,
+            "description": "",
             "selectionCriteria": {
                 "isaFileType": "investigation",
                 "studyCreatedAtOrAfter": "2026-01-01T00:00:00",
@@ -48,14 +51,18 @@
                     "termSourceRef": "EDAM"
                 }
             ],
-            "ontologies": [],
-            "allowedParentOntologyTerms": null,
             "unexpectedTerms": []
         },
         {
             "ruleName": "Study Publication Status-02",
-            "description": "",
             "fieldName": "Study Publication Status",
+            "ontologyValidationType": "any-ontology-term",
+            "ontologies": [
+                "EFO",
+                "EDAM"
+            ],
+            "allowedParentOntologyTerms": null,
+            "description": "",
             "selectionCriteria": {
                 "isaFileType": "investigation",
                 "studyCreatedAtOrAfter": null,
@@ -105,11 +112,6 @@
                     "termSourceRef": "EDAM"
                 }
             ],
-            "ontologies": [
-                "EFO",
-                "EDAM"
-            ],
-            "allowedParentOntologyTerms": null,
             "unexpectedTerms": []
         }
     ]

@@ -2,8 +2,14 @@
     "Characteristics[Organism]": [
         {
             "ruleName": "Characteristics[Organism]-01",
-            "description": "",
             "fieldName": "Characteristics[Organism]",
+            "ontologyValidationType": "any-ontology-term",
+            "ontologies": [
+                "NCBITAXON",
+                "ENVO"
+            ],
+            "allowedParentOntologyTerms": null,
+            "description": "",
             "selectionCriteria": {
                 "isaFileType": "sample",
                 "studyCreatedAtOrAfter": null,
@@ -79,11 +85,6 @@
                     "termSourceRef": "ENVO"
                 }
             ],
-            "ontologies": [
-                "NCBITAXON",
-                "ENVO"
-            ],
-            "allowedParentOntologyTerms": null,
             "unexpectedTerms": [
                 "cat",
                 "chicken",
@@ -119,8 +120,19 @@
         },
         {
             "ruleName": "Characteristics[Organism]-02",
-            "description": "",
             "fieldName": "Characteristics[Organism]",
+            "ontologyValidationType": "any-ontology-term",
+            "ontologies": [
+                "NCBITAXON",
+                "ENVO",
+                "MTBLS",
+                "WoRMs",
+                "EFO",
+                "NCIT",
+                "MSIO"
+            ],
+            "allowedParentOntologyTerms": null,
+            "description": "",
             "selectionCriteria": {
                 "isaFileType": "sample",
                 "studyCreatedAtOrAfter": null,
@@ -205,16 +217,6 @@
                     "termSourceRef": "MSIO"
                 }
             ],
-            "ontologies": [
-                "NCBITAXON",
-                "ENVO",
-                "MTBLS",
-                "WoRMs",
-                "EFO",
-                "NCIT",
-                "MSIO"
-            ],
-            "allowedParentOntologyTerms": null,
             "unexpectedTerms": [
                 "cat",
                 "chicken",

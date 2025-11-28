@@ -2,8 +2,13 @@
     "Parameter Value[Mass analyzer]": [
         {
             "ruleName": "Parameter Value[Mass analyzer]-01",
-            "description": "",
             "fieldName": "Parameter Value[Mass analyzer]",
+            "ontologyValidationType": "any-ontology-term",
+            "ontologies": [
+                "MS"
+            ],
+            "allowedParentOntologyTerms": null,
+            "description": "",
             "selectionCriteria": {
                 "isaFileType": "assay",
                 "studyCreatedAtOrAfter": null,
@@ -101,10 +106,6 @@
                     "termSourceRef": "MS"
                 }
             ],
-            "ontologies": [
-                "MS"
-            ],
-            "allowedParentOntologyTerms": null,
             "unexpectedTerms": []
         }
     ]

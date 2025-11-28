@@ -2,8 +2,15 @@
     "Factor Value[Disease]": [
         {
             "ruleName": "Factor Value[Disease]-01",
-            "description": "",
             "fieldName": "Factor Value[Disease]",
+            "ontologyValidationType": "any-ontology-term",
+            "ontologies": [
+                "MONDO",
+                "MP",
+                "SNOMED"
+            ],
+            "allowedParentOntologyTerms": null,
+            "description": "",
             "selectionCriteria": {
                 "isaFileType": "sample",
                 "studyCreatedAtOrAfter": "2026-01-01T00:00:00",
@@ -42,18 +49,19 @@
             ],
             "allowedPlaceholders": [],
             "terms": [],
+            "unexpectedTerms": []
+        },
+        {
+            "ruleName": "Factor Value[Disease]-02",
+            "fieldName": "Factor Value[Disease]",
+            "ontologyValidationType": "any-ontology-term",
             "ontologies": [
                 "MONDO",
                 "MP",
                 "SNOMED"
             ],
             "allowedParentOntologyTerms": null,
-            "unexpectedTerms": []
-        },
-        {
-            "ruleName": "Factor Value[Disease]-02",
             "description": "",
-            "fieldName": "Factor Value[Disease]",
             "selectionCriteria": {
                 "isaFileType": "sample",
                 "studyCreatedAtOrAfter": null,
@@ -92,12 +100,6 @@
             ],
             "allowedPlaceholders": [],
             "terms": [],
-            "ontologies": [
-                "MONDO",
-                "MP",
-                "SNOMED"
-            ],
-            "allowedParentOntologyTerms": null,
             "unexpectedTerms": []
         }
     ]

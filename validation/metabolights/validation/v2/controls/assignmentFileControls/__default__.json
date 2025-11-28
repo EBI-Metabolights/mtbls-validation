@@ -2,8 +2,15 @@
     "__default__": [
         {
             "ruleName": "default-assignment-file-rule-01",
-            "description": "default",
             "fieldName": "",
+            "ontologyValidationType": "any-ontology-term",
+            "ontologies": [
+                "CHEBI",
+                "EFO",
+                "CHMO"
+            ],
+            "allowedParentOntologyTerms": null,
+            "description": "default",
             "selectionCriteria": {
                 "isaFileType": "assignment",
                 "studyCreatedAtOrAfter": null,
@@ -40,12 +47,6 @@
                 }
             ],
             "terms": [],
-            "ontologies": [
-                "CHEBI",
-                "EFO",
-                "CHMO"
-            ],
-            "allowedParentOntologyTerms": null,
             "unexpectedTerms": [
                 "unknown",
                 "undefined",
