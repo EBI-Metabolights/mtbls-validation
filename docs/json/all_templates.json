@@ -6463,6 +6463,49 @@
             "1.0"
         ],
         "defaultTemplateVersion": "1.0",
+        "datasetLicenses": {
+            "CC0 1.0 Universal": {
+                "name": "CC0 1.0 Universal",
+                "version": "1.0",
+                "url": "https://creativecommons.org/public-domain/cc0/"
+            },
+            "EMBL-EBI terms of use": {
+                "name": "EMBL-EBI terms of use",
+                "version": "5th February 2024",
+                "url": "https://www.ebi.ac.uk/about/terms-of-use/"
+            }
+        },
+        "studyCategories": [
+            "other",
+            "ms-mhd-enabled",
+            "ms-mhd-legacy",
+            "nmr",
+            "ms-imaging"
+        ],
+        "studyCategoryIndexMapping": {
+            "0": "other",
+            "1": "ms-mhd-enabled",
+            "2": "ms-ms-imaging",
+            "3": "ms-other",
+            "5": "nmr",
+            "6": "ms-mhd-legacy"
+        },
+        "mhdProfiles": {
+            "ms-profile": {
+                "0.1": {
+                    "fileSchema": "https://metabolomicshub.github.io/mhd-model/schemas/v0_1/common-data-model-v0.1.schema.json",
+                    "mhdFileProfile": "https://metabolomicshub.github.io/mhd-model/schemas/v0_1/common-data-model-v0.1.ms-profile.json",
+                    "announcementFileProfile": "https://metabolomicshub.github.io/mhd-model/schemas/v0_1/common-data-model-v0.1.ms-profile.json"
+                }
+            },
+            "legacy-profile": {
+                "0.1": {
+                    "fileSchema": "https://metabolomicshub.github.io/mhd-model/schemas/v0_1/common-data-model-v0.1.schema.json",
+                    "mhdFileProfile": "https://metabolomicshub.github.io/mhd-model/schemas/v0_1/common-data-model-v0.1.legacy-profile.json",
+                    "announcementFileProfile": "https://metabolomicshub.github.io/mhd-model/schemas/v0_1/common-data-model-v0.1.legacy-profile.json"
+                }
+            }
+        },
         "versions": {
             "1.0": {
                 "activeInvestigationFileTemplates": [
@@ -6498,18 +6541,64 @@
                     "nmr",
                     "ms-imaging"
                 ],
-                "investigationFileName": "i_Investigation.txt",
+                "activeDatasetLicenses": [
+                    "CC0 1.0 Universal"
+                ],
+                "activeMhdProfiles": {
+                    "ms-mhd-enabled": {
+                        "profileName": "ms-profile",
+                        "defaultVersion": "0.1",
+                        "activeVersions": [
+                            "0.1"
+                        ]
+                    },
+                    "ms-mhd-legacy": {
+                        "profileName": "legacy-profile",
+                        "defaultVersion": "0.1",
+                        "activeVersions": [
+                            "0.1"
+                        ]
+                    }
+                },
                 "defaultSampleFileTemplate": "minimum",
                 "defaultInvestigationFileTemplate": "minimum",
                 "defaultStudyCategory": "other",
-                "studyCategoryIndexMapping": {
-                    "0": "other",
-                    "1": "ms-mhd-enabled",
-                    "2": "ms-ms-imaging",
-                    "3": "ms-other",
-                    "5": "nmr",
-                    "6": "ms-mhd-legacy"
+                "defaultDatasetLicense": "CC0 1.0 Universal",
+                "defaultFileControls": {
+                    "assignment": [
+                        {
+                            "keyPattern": ".+",
+                            "defaultKey": "__default__"
+                        }
+                    ],
+                    "sample": [
+                        {
+                            "keyPattern": "Characteristics\\[.+\\]",
+                            "defaultKey": "__default_characteristic__"
+                        },
+                        {
+                            "keyPattern": "Parameter Value \\[.+\\]",
+                            "defaultKey": "__default_factor_value__"
+                        },
+                        {
+                            "keyPattern": ".+",
+                            "defaultKey": "__default__"
+                        }
+                    ],
+                    "investigation": [
+                        {
+                            "keyPattern": ".+",
+                            "defaultKey": "__default__"
+                        }
+                    ],
+                    "assay": [
+                        {
+                            "keyPattern": ".+",
+                            "defaultKey": "__default__"
+                        }
+                    ]
                 },
+                "investigationFileName": "i_Investigation.txt",
                 "derivedFileExtensions": [
                     ".cdf",
                     ".imzml",
@@ -6574,18 +6663,64 @@
                     "nmr",
                     "ms-imaging"
                 ],
-                "investigationFileName": "i_Investigation.txt",
+                "activeDatasetLicenses": [
+                    "CC0 1.0 Universal"
+                ],
+                "activeMhdProfiles": {
+                    "ms-mhd-enabled": {
+                        "profileName": "ms-profile",
+                        "defaultVersion": "0.1",
+                        "activeVersions": [
+                            "0.1"
+                        ]
+                    },
+                    "ms-mhd-legacy": {
+                        "profileName": "legacy-profile",
+                        "defaultVersion": "0.1",
+                        "activeVersions": [
+                            "0.1"
+                        ]
+                    }
+                },
                 "defaultSampleFileTemplate": "minimum",
                 "defaultInvestigationFileTemplate": "minimum",
                 "defaultStudyCategory": "other",
-                "studyCategoryIndexMapping": {
-                    "0": "other",
-                    "1": "ms-mhd-enabled",
-                    "2": "ms-ms-imaging",
-                    "3": "ms-other",
-                    "5": "nmr",
-                    "6": "ms-mhd-legacy"
+                "defaultDatasetLicense": "CC0 1.0 Universal",
+                "defaultFileControls": {
+                    "assignment": [
+                        {
+                            "keyPattern": ".+",
+                            "defaultKey": "__default__"
+                        }
+                    ],
+                    "sample": [
+                        {
+                            "keyPattern": "Characteristics\\[.+\\]",
+                            "defaultKey": "__default_characteristic__"
+                        },
+                        {
+                            "keyPattern": "Parameter Value \\[.+\\]",
+                            "defaultKey": "__default_factor_value__"
+                        },
+                        {
+                            "keyPattern": ".+",
+                            "defaultKey": "__default__"
+                        }
+                    ],
+                    "investigation": [
+                        {
+                            "keyPattern": ".+",
+                            "defaultKey": "__default__"
+                        }
+                    ],
+                    "assay": [
+                        {
+                            "keyPattern": ".+",
+                            "defaultKey": "__default__"
+                        }
+                    ]
                 },
+                "investigationFileName": "i_Investigation.txt",
                 "derivedFileExtensions": [
                     ".cdf",
                     ".imzml",

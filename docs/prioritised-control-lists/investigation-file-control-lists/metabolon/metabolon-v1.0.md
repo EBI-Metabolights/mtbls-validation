@@ -72,7 +72,7 @@
 | Applicable Template Names | All |
 | Applicable Template Versions | All |
 | Validation Type | ontology-term-in-selected-ontologies |
-| Ontologies [Ordered] | EFO, NCIT, MTBLS, CHEBI, CHMO, MONDO, PRIDE, GO, MESH |
+| Ontologies [Ordered] | EFO, MSIO, NCIT, MTBLS, CHEBI, CHMO, MONDO, PRIDE, GO, MESH |
 | Allowed Placeholders | \[MTBLS, http://www\.ebi\.ac\.uk/metabolights/ontology/placeholder\], \[, \] |
 | Allowed Other Sources | \[MTBLS, http://www\.ebi\.ac\.uk/metabolights/ontology/MTBLS\_\], \[wikidata, https://www\.wikidata\.org/wiki/\], \[ILX, http://uri\.interlex\.org/base/ilx\_\] |
 | Ontology Term Enforcement Level | recommended |

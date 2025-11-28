@@ -97,6 +97,7 @@
             ],
             "ontologies": [
                 "EFO",
+                "MSIO",
                 "NCIT",
                 "MTBLS",
                 "CHEBI",

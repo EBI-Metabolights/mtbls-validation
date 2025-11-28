@@ -139,7 +139,7 @@ STUDY_TEMPLATE_VERSION := data.metabolights.validation.v2.templates.configuratio
 	count(METADATA_STUDY_TEMPLATE_VERSION) == 0
 }
 
-DEFAULT_STUDY_CATEGORIES := data.metabolights.validation.v2.templates.configuration.versions[STUDY_TEMPLATE_VERSION].studyCategoryIndexMapping
+DEFAULT_STUDY_CATEGORIES := data.metabolights.validation.v2.templates.configuration.studyCategoryIndexMapping
 
 DB_STUDY_CATEGORY := DEFAULT_STUDY_CATEGORIES[sprintf("%v", [input.studyDbMetadata.studyCategory])]
 
