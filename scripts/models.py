@@ -468,6 +468,14 @@ class TemplateConfiguration(StudyBaseModel):
         dict[StudyCategoryStr, ActiveMhdProfile],
         Field(description="active dataset licenses"),
     ]
+    active_study_design_descriptor_categories: Annotated[
+        list[str],
+        Field(description="active study design descriptor categories"),
+    ]
+    active_assay_design_descriptor_categories: Annotated[
+        list[str],
+        Field(description="active assay design descriptor categories"),
+    ]
     default_sample_file_template: Annotated[
         str, Field(description="default sample file name")
     ]
@@ -478,10 +486,6 @@ class TemplateConfiguration(StudyBaseModel):
     default_dataset_license: Annotated[
         str, Field(description="default dataset license name")
     ]
-    default_file_controls: Annotated[
-        dict[MetadataFileType, list[DefaultControl]],
-        Field(description="default control lists"),
-    ]
     investigation_file_name: Annotated[
         str, Field(description="investigation file name")
     ]
@@ -489,6 +493,11 @@ class TemplateConfiguration(StudyBaseModel):
         list[str], Field(description="derived file extensions")
     ]
     raw_file_extensions: Annotated[list[str], Field(description="raw file extensions")]
+
+    assay_file_type_mappings: Annotated[
+        dict[StudyCategoryStr, list[str]],
+        Field(description="Study category assay file type mappings"),
+    ]
 
 
 class LicenseInfo(StudyBaseModel):
@@ -505,9 +514,104 @@ class MhdProfileInfo(StudyBaseModel):
     ] = ""
 
 
+class StudyCategoryDefinition(StudyBaseModel):
+    index: Annotated[int, Field(description="study category index")]
+    name: Annotated[str, Field(description="study category name")]
+    label: Annotated[str, Field(description="study category label")]
+    description: Annotated[str, Field(description="study category description")]
+
+
+class CommentDescription(StudyBaseModel):
+    name: Annotated[str, Field(description="Comment name")]
+    label: Annotated[str, Field(description="Comment label")]
+    is_ontology: Annotated[
+        bool, Field(description="Is the comment an ontology term")
+    ] = False
+    control_list_key: Annotated[
+        None | str, Field(description="Comment control list key")
+    ] = None
+
+
+class CommentGroupDefinition(StudyBaseModel):
+    allow_multiple: Annotated[
+        bool, Field(description="comment group can be defined multiple")
+    ] = False
+    join_operator: Annotated[
+        None | str,
+        Field(description="join operator if group has multiple values"),
+    ] = None
+    comments: Annotated[
+        list[CommentDescription], Field(description="comments in group")
+    ] = False
+
+
+class SectionDefaultComments(StudyBaseModel):
+    groups: Annotated[list[str], Field(description="comment groups in section")] = []
+
+    groupDefinitions: Annotated[
+        dict[str, CommentGroupDefinition],
+        Field(description="section comment group definitions"),
+    ] = {}
+
+
+class DefaultCommentConfiguration(StudyBaseModel):
+    study_comments: Annotated[
+        SectionDefaultComments, Field(description="study section comments")
+    ]
+    assay_comments: Annotated[
+        SectionDefaultComments, Field(description="study assay section comments")
+    ]
+    study_design_descriptor_comments: Annotated[
+        SectionDefaultComments,
+        Field(description="study design descriptors section comments"),
+    ]
+    study_factor_comments: Annotated[
+        SectionDefaultComments, Field(description="study factors section comments")
+    ]
+    study_protocol_comments: Annotated[
+        SectionDefaultComments, Field(description="study protocol section comments")
+    ]
+    study_publication_comments: Annotated[
+        SectionDefaultComments, Field(description="study publications section comments")
+    ]
+    study_contact_comments: Annotated[
+        SectionDefaultComments, Field(description="study contacts section comments")
+    ]
+
+
+class DescriptorCategoryDefinition(StudyBaseModel):
+    name: Annotated[str, Field(description="study category name")]
+    label: Annotated[str, Field(description="study category label")]
+    control_list_key: Annotated[
+        None | str, Field(description="study category description")
+    ]
+
+
+class DescriptorConfiguration(StudyBaseModel):
+    default_descriptor_category: Annotated[
+        str, Field(description="default descriptor category")
+    ] = "default"
+    default_submitter_source: Annotated[
+        str, Field(description="default submitter source")
+    ] = ""
+    default_data_curation_source: Annotated[
+        str, Field(description="default data curation source")
+    ] = ""
+    default_workflow_source: Annotated[
+        str, Field(description="default workflow source")
+    ] = ""
+    default_descriptor_categories: Annotated[
+        dict[str, DescriptorCategoryDefinition],
+        Field(description="default descriptor sources"),
+    ] = {}
+    default_descriptor_sources: Annotated[
+        dict[str, OntologyTerm], Field(description="default descriptor sources")
+    ] = {}
+
+
 class TemplateSettings(StudyBaseModel):
     active_template_versions: Annotated[
-        list[str], Field(description="active temlate versions")
+        list[str], Field(description="active template versions")
     ]
     default_template_version: Annotated[
         str, Field(description="default study template version")
@@ -516,10 +620,22 @@ class TemplateSettings(StudyBaseModel):
         dict[str, LicenseInfo],
         Field(description="MetaboLights template versions"),
     ] = {}
-    study_categories: Annotated[list[str], Field(description="study categories")]
-    study_category_index_mapping: Annotated[
-        dict[str | int, str], Field(description="study category index mapping")
+    descriptor_configuration: Annotated[
+        DescriptorConfiguration, Field(description="default comment configuration")
+    ] = DescriptorConfiguration()
+    result_file_formats: Annotated[
+        dict[str, OntologyTerm], Field(description="result file formats")
+    ] = {}
+    default_file_controls: Annotated[
+        dict[MetadataFileType, list[DefaultControl]],
+        Field(description="default control lists"),
     ]
+    default_comments: Annotated[
+        DefaultCommentConfiguration, Field(description="default comment configuration")
+    ]
+    study_categories: Annotated[
+        dict[str, StudyCategoryDefinition], Field(description="study categories")
+    ] = {}
     mhd_profiles: Annotated[
         dict[str, dict[str, MhdProfileInfo]],
         Field(description="MHD profiles and versions"),

@@ -15,20 +15,486 @@
             "url": "https://www.ebi.ac.uk/about/terms-of-use/"
         }
     },
-    "studyCategories": [
-        "other",
-        "ms-mhd-enabled",
-        "ms-mhd-legacy",
-        "nmr",
-        "ms-imaging"
-    ],
-    "studyCategoryIndexMapping": {
-        "0": "other",
-        "1": "ms-mhd-enabled",
-        "2": "ms-ms-imaging",
-        "3": "ms-other",
-        "5": "nmr",
-        "6": "ms-mhd-legacy"
+    "descriptorConfiguration": {
+        "defaultDescriptorCategory": "default",
+        "defaultSubmitterSource": "submitter",
+        "defaultDataCurationSource": "data-curation",
+        "defaultWorkflowSource": "workflows",
+        "defaultDescriptorCategories": {
+            "disease": {
+                "name": "disease",
+                "label": "Disease",
+                "controlListKey": "Characteristics[Disease]"
+            },
+            "measurement-type": {
+                "name": "measurement-type",
+                "label": "Measurement Type",
+                "controlListKey": "Assay Measurement Type"
+            },
+            "organism": {
+                "name": "organism",
+                "label": "Organism",
+                "controlListKey": "Characteristics[Organism]"
+            },
+            "organism-part": {
+                "name": "organism-part",
+                "label": "Organism part",
+                "controlListKey": "Characteristics[Organism part]"
+            },
+            "omics-type": {
+                "name": "omics-type",
+                "label": "Omics Type",
+                "controlListKey": "Omics Type"
+            },
+            "cell-type: ": {
+                "name": "cell-type",
+                "label": "Cell Type",
+                "controlListKey": "Characteristics[Cell type]"
+            }
+        },
+        "defaultDescriptorSources": {
+            "submitter": {
+                "term": "dataset submitter",
+                "termAccessionNumber": "http://purl.obolibrary.org/obo/MS_1002037",
+                "termSourceRef": "MS"
+            },
+            "data-curation": {
+                "term": "Data curation and archival",
+                "termAccessionNumber": "http://edamontology.org/topic_0219",
+                "termSourceRef": "EDAM"
+            },
+            "workflows": {
+                "term": "Workflows",
+                "termAccessionNumber": "http://edamontology.org/topic_0769",
+                "termSourceRef": "EDAM"
+            }
+        }
+    },
+    "resultFileFormats": {
+        "maf": {
+            "term": "MAF",
+            "termAccessionNumber": "",
+            "termSourceRef": ""
+        },
+        "mzTab-M": {
+            "term": "mzTab-M",
+            "termAccessionNumber": "http://edamontology.org/format_4058",
+            "termSourceRef": "EDAM"
+        }
+    },
+    "defaultFileControls": {
+        "assignment": [
+            {
+                "keyPattern": ".+",
+                "defaultKey": "__default__"
+            }
+        ],
+        "sample": [
+            {
+                "keyPattern": "Characteristics\\[.+\\]",
+                "defaultKey": "__default_characteristic__"
+            },
+            {
+                "keyPattern": "Parameter Value \\[.+\\]",
+                "defaultKey": "__default_factor_value__"
+            },
+            {
+                "keyPattern": ".+",
+                "defaultKey": "__default__"
+            }
+        ],
+        "investigation": [
+            {
+                "keyPattern": ".+",
+                "defaultKey": "__default__"
+            }
+        ],
+        "assay": [
+            {
+                "keyPattern": ".+",
+                "defaultKey": "__default__"
+            }
+        ]
+    },
+    "defaultComments": {
+        "studyComments": {
+            "groups": [
+                "default",
+                "revision",
+                "mhd",
+                "funding",
+                "characteristic-categories"
+            ],
+            "groupDefinitions": {
+                "default": {
+                    "allowMultiple": false,
+                    "joinOperator": null,
+                    "comments": [
+                        {
+                            "name": "Created At",
+                            "label": "Created At",
+                            "isOntology": false,
+                            "controlListKey": null
+                        },
+                        {
+                            "name": "License",
+                            "label": "License",
+                            "isOntology": false,
+                            "controlListKey": null
+                        },
+                        {
+                            "name": "Study Category",
+                            "label": "Study Category",
+                            "isOntology": false,
+                            "controlListKey": null
+                        },
+                        {
+                            "name": "Study Template",
+                            "label": "Study Template",
+                            "isOntology": false,
+                            "controlListKey": null
+                        },
+                        {
+                            "name": "Sample Template",
+                            "label": "Sample Template",
+                            "isOntology": false,
+                            "controlListKey": null
+                        },
+                        {
+                            "name": "Template Version",
+                            "label": "Template Version",
+                            "isOntology": false,
+                            "controlListKey": null
+                        }
+                    ]
+                },
+                "mhd": {
+                    "allowMultiple": false,
+                    "joinOperator": null,
+                    "comments": [
+                        {
+                            "name": "MHD Accession",
+                            "label": "MHD Accession",
+                            "isOntology": false,
+                            "controlListKey": null
+                        },
+                        {
+                            "name": "MHD Model Version",
+                            "label": "MHD Model Version",
+                            "isOntology": false,
+                            "controlListKey": null
+                        }
+                    ]
+                },
+                "revision": {
+                    "allowMultiple": false,
+                    "joinOperator": null,
+                    "comments": [
+                        {
+                            "name": "Revision",
+                            "label": "Revision",
+                            "isOntology": false,
+                            "controlListKey": null
+                        },
+                        {
+                            "name": "Revision Date",
+                            "label": "Revision Date",
+                            "isOntology": false,
+                            "controlListKey": null
+                        },
+                        {
+                            "name": "Revision Log",
+                            "label": "Revision Log",
+                            "isOntology": false,
+                            "controlListKey": null
+                        }
+                    ]
+                },
+                "funding": {
+                    "allowMultiple": true,
+                    "joinOperator": ";",
+                    "comments": [
+                        {
+                            "name": "Funder Organization",
+                            "label": "Funder Organization",
+                            "isOntology": true,
+                            "controlListKey": "Funder"
+                        },
+                        {
+                            "name": "Grant Identifier",
+                            "label": "Grant Identifier",
+                            "isOntology": false,
+                            "controlListKey": null
+                        }
+                    ]
+                },
+                "characteristic-categories": {
+                    "allowMultiple": true,
+                    "joinOperator": ";",
+                    "comments": [
+                        {
+                            "name": "Characteristic Category Name",
+                            "label": "Characteristic Category Name",
+                            "isOntology": false,
+                            "controlListKey": null
+                        },
+                        {
+                            "name": "Characteristic Category Type",
+                            "label": "Characteristic Category Type",
+                            "isOntology": true,
+                            "controlListKey": null
+                        },
+                        {
+                            "name": "Characteristic Value Format",
+                            "label": "Characteristic Value Format",
+                            "isOntology": false,
+                            "controlListKey": null
+                        },
+                        {
+                            "name": "Default Characteristic Unit Value",
+                            "label": "Default Characteristic Unit Value",
+                            "isOntology": true,
+                            "controlListKey": null
+                        }
+                    ]
+                }
+            }
+        },
+        "assayComments": {
+            "groups": [
+                "default",
+                "result-files",
+                "assay-descriptors"
+            ],
+            "groupDefinitions": {
+                "default": {
+                    "allowMultiple": false,
+                    "joinOperator": null,
+                    "comments": [
+                        {
+                            "name": "Assay Identifier",
+                            "label": "Assay Identifier",
+                            "isOntology": false,
+                            "controlListKey": null
+                        },
+                        {
+                            "name": "Assay Type Label",
+                            "label": "Assay Type Label",
+                            "isOntology": false,
+                            "controlListKey": null
+                        },
+                        {
+                            "name": "Assay Type",
+                            "label": "Assay Type",
+                            "isOntology": true,
+                            "controlListKey": "Study Assay Type"
+                        },
+                        {
+                            "name": "Related Omics Type",
+                            "label": "Related Omics Type",
+                            "isOntology": true,
+                            "controlListKey": "Omics Type"
+                        }
+                    ]
+                },
+                "result-files": {
+                    "allowMultiple": true,
+                    "joinOperator": ";",
+                    "comments": [
+                        {
+                            "name": "Result Files",
+                            "label": "Result Files",
+                            "isOntology": false,
+                            "controlListKey": null
+                        },
+                        {
+                            "name": "Result File Formats",
+                            "label": "Result File Formats",
+                            "isOntology": true,
+                            "controlListKey": "Result File Format"
+                        }
+                    ]
+                },
+                "assay-descriptors": {
+                    "allowMultiple": true,
+                    "joinOperator": ";",
+                    "comments": [
+                        {
+                            "name": "Assay Descriptor",
+                            "label": "Assay Descriptor",
+                            "isOntology": true,
+                            "controlListKey": null
+                        },
+                        {
+                            "name": "Assay Descriptor Category",
+                            "label": "Assay Descriptor Category",
+                            "isOntology": false,
+                            "controlListKey": null
+                        },
+                        {
+                            "name": "Assay Descriptor Source",
+                            "label": "Assay Descriptor Source",
+                            "isOntology": false,
+                            "controlListKey": null
+                        }
+                    ]
+                }
+            }
+        },
+        "studyDesignDescriptorComments": {
+            "groups": [
+                "default"
+            ],
+            "groupDefinitions": {
+                "default": {
+                    "allowMultiple": false,
+                    "joinOperator": null,
+                    "comments": [
+                        {
+                            "name": "Study Design Type Category",
+                            "label": "Study Design Type Category",
+                            "isOntology": false,
+                            "controlListKey": null
+                        },
+                        {
+                            "name": "Study Design Type Source",
+                            "label": "Study Design Type Source",
+                            "isOntology": false,
+                            "controlListKey": null
+                        }
+                    ]
+                }
+            }
+        },
+        "studyFactorComments": {
+            "groups": [
+                "default"
+            ],
+            "groupDefinitions": {
+                "default": {
+                    "allowMultiple": false,
+                    "joinOperator": null,
+                    "comments": [
+                        {
+                            "name": "Factor Value Format",
+                            "label": "Factor Value Format",
+                            "isOntology": false,
+                            "controlListKey": null
+                        },
+                        {
+                            "name": "Default Factor Value Unit",
+                            "label": "Default Factor Value Unit",
+                            "isOntology": true,
+                            "controlListKey": "Unit"
+                        }
+                    ]
+                }
+            }
+        },
+        "studyProtocolComments": {
+            "groups": [
+                "parameters"
+            ],
+            "groupDefinitions": {
+                "parameters": {
+                    "allowMultiple": true,
+                    "joinOperator": null,
+                    "comments": [
+                        {
+                            "name": "Study Protocol Parameter Value Format",
+                            "label": "Study Protocol Parameter Value Format",
+                            "isOntology": false,
+                            "controlListKey": "Value Format"
+                        },
+                        {
+                            "name": "Default Study Protocol Parameter Value",
+                            "label": "Default Study Protocol Parameter Value",
+                            "isOntology": true,
+                            "controlListKey": null
+                        },
+                        {
+                            "name": "Default Study Protocol Parameter Unit Value",
+                            "label": "Default Study Protocol Parameter Unit Value",
+                            "isOntology": true,
+                            "controlListKey": "Unit"
+                        }
+                    ]
+                }
+            }
+        },
+        "studyPublicationComments": {
+            "groups": [],
+            "groupDefinitions": {}
+        },
+        "studyContactComments": {
+            "groups": [
+                "default"
+            ],
+            "groupDefinitions": {
+                "default": {
+                    "allowMultiple": false,
+                    "joinOperator": null,
+                    "comments": [
+                        {
+                            "name": "Study Person Alternative Email",
+                            "label": "Study Person Alternative Email",
+                            "isOntology": false,
+                            "controlListKey": null
+                        },
+                        {
+                            "name": "Study Person ORCID",
+                            "label": "Study Person ORCID",
+                            "isOntology": false,
+                            "controlListKey": null
+                        },
+                        {
+                            "name": "Study Person Affiliation ROR ID",
+                            "label": "Study Person Affiliation ROR ID",
+                            "isOntology": false,
+                            "controlListKey": null
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "studyCategories": {
+        "other": {
+            "index": 0,
+            "name": "other",
+            "label": "Other",
+            "description": "MS study"
+        },
+        "ms-mhd-enabled": {
+            "index": 1,
+            "name": "ms-mhd-enabled",
+            "label": "MS",
+            "description": "MS study shared with MetabolomicsHub MS profile"
+        },
+        "ms-mhd-legacy": {
+            "index": 2,
+            "name": "ms-mhd-legacy",
+            "label": "MS ",
+            "description": "MS study shared with MetabolomicsHub legacy profile"
+        },
+        "ms-other": {
+            "index": 3,
+            "name": "ms-other",
+            "label": "MS Other ",
+            "description": "MS study not shared with MetabolomicsHub legacy profile"
+        },
+        "ms-imaging": {
+            "index": 10,
+            "name": "ms-imaging",
+            "label": "MS Imaging ",
+            "description": "MS Imaging assays"
+        },
+        "nmr": {
+            "index": 20,
+            "name": "nmr",
+            "label": "NMR ",
+            "description": "NMR assays"
+        }
     },
     "mhdProfiles": {
         "ms-profile": {
@@ -47,128 +513,6 @@
         }
     },
     "versions": {
-        "1.0": {
-            "activeInvestigationFileTemplates": [
-                "minimum",
-                "metabolon"
-            ],
-            "activeAssignmentFileTemplates": [
-                "MS",
-                "NMR"
-            ],
-            "activeSampleFileTemplates": [
-                "minimum"
-            ],
-            "activeAssayFileTemplates": [
-                "LC-MS",
-                "GC-MS",
-                "GCxGC-MS",
-                "MALDI-MS",
-                "FIA-MS",
-                "DI-MS",
-                "CE-MS",
-                "MS",
-                "NMR",
-                "MRImaging",
-                "MSImaging",
-                "GC-FID",
-                "LC-DAD"
-            ],
-            "activeStudyCategories": [
-                "other",
-                "ms-mhd-enabled",
-                "ms-mhd-legacy",
-                "nmr",
-                "ms-imaging"
-            ],
-            "activeDatasetLicenses": [
-                "CC0 1.0 Universal"
-            ],
-            "activeMhdProfiles": {
-                "ms-mhd-enabled": {
-                    "profileName": "ms-profile",
-                    "defaultVersion": "0.1",
-                    "activeVersions": [
-                        "0.1"
-                    ]
-                },
-                "ms-mhd-legacy": {
-                    "profileName": "legacy-profile",
-                    "defaultVersion": "0.1",
-                    "activeVersions": [
-                        "0.1"
-                    ]
-                }
-            },
-            "defaultSampleFileTemplate": "minimum",
-            "defaultInvestigationFileTemplate": "minimum",
-            "defaultStudyCategory": "other",
-            "defaultDatasetLicense": "CC0 1.0 Universal",
-            "defaultFileControls": {
-                "assignment": [
-                    {
-                        "keyPattern": ".+",
-                        "defaultKey": "__default__"
-                    }
-                ],
-                "sample": [
-                    {
-                        "keyPattern": "Characteristics\\[.+\\]",
-                        "defaultKey": "__default_characteristic__"
-                    },
-                    {
-                        "keyPattern": "Parameter Value \\[.+\\]",
-                        "defaultKey": "__default_factor_value__"
-                    },
-                    {
-                        "keyPattern": ".+",
-                        "defaultKey": "__default__"
-                    }
-                ],
-                "investigation": [
-                    {
-                        "keyPattern": ".+",
-                        "defaultKey": "__default__"
-                    }
-                ],
-                "assay": [
-                    {
-                        "keyPattern": ".+",
-                        "defaultKey": "__default__"
-                    }
-                ]
-            },
-            "investigationFileName": "i_Investigation.txt",
-            "derivedFileExtensions": [
-                ".cdf",
-                ".imzml",
-                ".mzml",
-                ".mzmlb",
-                ".mzxml",
-                ".nmrml",
-                ".scan",
-                ".wiff"
-            ],
-            "rawFileExtensions": [
-                ".cmp",
-                ".d",
-                ".dat",
-                ".fid",
-                ".hr",
-                ".ibd",
-                ".jpf",
-                ".lcd",
-                ".ms",
-                ".peg",
-                ".qgd",
-                ".raw",
-                ".ser",
-                ".scan",
-                ".wiff",
-                ".zip",
-                ".smp"
-            ]
-        },
         "2.0": {
             "activeInvestigationFileTemplates": [
                 "minimum",
@@ -222,44 +566,18 @@
                     ]
                 }
             },
+            "activeStudyDesignDescriptorCategories": [
+                "disease",
+                "measurement-type",
+                "omics-type",
+                "organism",
+                "organism-part"
+            ],
+            "activeAssayDesignDescriptorCategories": [],
             "defaultSampleFileTemplate": "minimum",
             "defaultInvestigationFileTemplate": "minimum",
             "defaultStudyCategory": "other",
             "defaultDatasetLicense": "CC0 1.0 Universal",
-            "defaultFileControls": {
-                "assignment": [
-                    {
-                        "keyPattern": ".+",
-                        "defaultKey": "__default__"
-                    }
-                ],
-                "sample": [
-                    {
-                        "keyPattern": "Characteristics\\[.+\\]",
-                        "defaultKey": "__default_characteristic__"
-                    },
-                    {
-                        "keyPattern": "Parameter Value \\[.+\\]",
-                        "defaultKey": "__default_factor_value__"
-                    },
-                    {
-                        "keyPattern": ".+",
-                        "defaultKey": "__default__"
-                    }
-                ],
-                "investigation": [
-                    {
-                        "keyPattern": ".+",
-                        "defaultKey": "__default__"
-                    }
-                ],
-                "assay": [
-                    {
-                        "keyPattern": ".+",
-                        "defaultKey": "__default__"
-                    }
-                ]
-            },
             "investigationFileName": "i_Investigation.txt",
             "derivedFileExtensions": [
                 ".cdf",
@@ -289,7 +607,169 @@
                 ".wiff",
                 ".zip",
                 ".smp"
-            ]
+            ],
+            "assayFileTypeMappings": {
+                "ms-mhd-enabled": [
+                    "LC-MS",
+                    "GC-MS",
+                    "GCxGC-MS",
+                    "MALDI-MS",
+                    "FIA-MS",
+                    "DI-MS",
+                    "CE-MS",
+                    "MS"
+                ],
+                "ms-mhd-legacy": [
+                    "LC-MS",
+                    "GC-MS",
+                    "GCxGC-MS",
+                    "MALDI-MS",
+                    "FIA-MS",
+                    "DI-MS",
+                    "CE-MS",
+                    "MS"
+                ],
+                "ms-imaging": [
+                    "MSImaging"
+                ],
+                "nmr": [
+                    "NMR"
+                ],
+                "other": [
+                    "MRImaging",
+                    "GC-FID",
+                    "LC-DAD"
+                ]
+            }
+        },
+        "1.0": {
+            "activeInvestigationFileTemplates": [
+                "minimum",
+                "metabolon"
+            ],
+            "activeAssignmentFileTemplates": [
+                "MS",
+                "NMR"
+            ],
+            "activeSampleFileTemplates": [
+                "minimum"
+            ],
+            "activeAssayFileTemplates": [
+                "LC-MS",
+                "GC-MS",
+                "GCxGC-MS",
+                "MALDI-MS",
+                "FIA-MS",
+                "DI-MS",
+                "CE-MS",
+                "MS",
+                "NMR",
+                "MRImaging",
+                "MSImaging",
+                "GC-FID",
+                "LC-DAD"
+            ],
+            "activeStudyCategories": [
+                "other",
+                "ms-mhd-enabled",
+                "ms-mhd-legacy",
+                "nmr",
+                "ms-imaging"
+            ],
+            "activeDatasetLicenses": [
+                "CC0 1.0 Universal"
+            ],
+            "activeMhdProfiles": {
+                "ms-mhd-enabled": {
+                    "profileName": "ms-profile",
+                    "defaultVersion": "0.1",
+                    "activeVersions": [
+                        "0.1"
+                    ]
+                },
+                "ms-mhd-legacy": {
+                    "profileName": "legacy-profile",
+                    "defaultVersion": "0.1",
+                    "activeVersions": [
+                        "0.1"
+                    ]
+                }
+            },
+            "activeStudyDesignDescriptorCategories": [
+                "disease",
+                "measurement-type",
+                "omics-type",
+                "organism",
+                "organism-part"
+            ],
+            "activeAssayDesignDescriptorCategories": [],
+            "defaultSampleFileTemplate": "minimum",
+            "defaultInvestigationFileTemplate": "minimum",
+            "defaultStudyCategory": "other",
+            "defaultDatasetLicense": "CC0 1.0 Universal",
+            "investigationFileName": "i_Investigation.txt",
+            "derivedFileExtensions": [
+                ".cdf",
+                ".imzml",
+                ".mzml",
+                ".mzmlb",
+                ".mzxml",
+                ".nmrml",
+                ".scan",
+                ".wiff"
+            ],
+            "rawFileExtensions": [
+                ".cmp",
+                ".d",
+                ".dat",
+                ".fid",
+                ".hr",
+                ".ibd",
+                ".jpf",
+                ".lcd",
+                ".ms",
+                ".peg",
+                ".qgd",
+                ".raw",
+                ".ser",
+                ".scan",
+                ".wiff",
+                ".zip",
+                ".smp"
+            ],
+            "assayFileTypeMappings": {
+                "ms-mhd-enabled": [
+                    "LC-MS",
+                    "GC-MS",
+                    "GCxGC-MS",
+                    "MALDI-MS",
+                    "FIA-MS",
+                    "DI-MS",
+                    "CE-MS",
+                    "MS"
+                ],
+                "ms-mhd-legacy": [
+                    "LC-MS",
+                    "GC-MS",
+                    "GCxGC-MS",
+                    "MALDI-MS",
+                    "FIA-MS",
+                    "DI-MS",
+                    "CE-MS",
+                    "MS"
+                ],
+                "ms-imaging": [
+                    "MSImaging"
+                ],
+                "nmr": [
+                    "NMR"
+                ],
+                "other": [
+                    "MRImaging",
+                    "GC-FID",
+                    "LC-DAD"
+                ]
+            }
         }
     }
 }
