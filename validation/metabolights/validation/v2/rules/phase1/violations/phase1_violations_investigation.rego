@@ -1547,6 +1547,7 @@ rule_i_100_350_003_01 contains result if {
 	some j, protocol in input.investigation.studies[0].studyProtocols.protocols
 	length := count(protocol.description)
 	length < min_count
+	not startswith(lower(protocol.description), "please update")
 	msg := sprintf("Description of study protocol '%v' is too short for the study %v. Min length: %v current length: %v, protocol index: %v", [protocol.name, input.investigation.studies[i].identifier, min_count, length, j + 1])
 	source := input.investigationFilePath
 	result := f.format(rego.metadata.rule(), msg, source)
@@ -1587,6 +1588,7 @@ rule_i_100_350_003_03 contains result if {
 	some i, j
 	protocol := input.investigation.studies[i].studyProtocols.protocols[j]
 	startswith(lower(protocol.description), "please update")
+	
 	msg := sprintf("Description of study protocol '%v' description starts with template message, protocol index: %v: value: '%v'", [protocol.name, j + 1, protocol.description])
 	source := input.investigationFilePath
 	result := f.format(rego.metadata.rule(), msg, source)

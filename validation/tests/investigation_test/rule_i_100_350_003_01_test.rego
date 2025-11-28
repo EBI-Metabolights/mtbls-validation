@@ -81,7 +81,7 @@ test_rule_i_100_350_003_01_violation_01 if {
 					"termAccessionNumber": "",
 					"termSourceRef": "",
 				},
-				"description": "Please update this protocol description",
+				"description": "update this protocol description -- 40.",
 				"uri": "",
 				"version": "",
 				"parameters": [],
