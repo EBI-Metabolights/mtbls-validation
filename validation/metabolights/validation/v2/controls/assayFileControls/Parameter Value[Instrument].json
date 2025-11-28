@@ -965,8 +965,7 @@
                 }
             ],
             "ontologies": [
-                "MS",
-                "MTBLS"
+                "MS"
             ],
             "allowedParentOntologyTerms": null,
             "unexpectedTerms": []
@@ -1007,10 +1006,6 @@
                 {
                     "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/placeholder",
                     "termSourceRef": "MTBLS"
-                },
-                {
-                    "termAccessionNumber": "",
-                    "termSourceRef": ""
                 }
             ],
             "terms": [
@@ -1241,8 +1236,7 @@
                 }
             ],
             "ontologies": [
-                "MS",
-                "MTBLS"
+                "MS"
             ],
             "allowedParentOntologyTerms": null,
             "unexpectedTerms": []
@@ -1283,10 +1277,6 @@
                 {
                     "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/placeholder",
                     "termSourceRef": "MTBLS"
-                },
-                {
-                    "termAccessionNumber": "",
-                    "termSourceRef": ""
                 }
             ],
             "terms": [

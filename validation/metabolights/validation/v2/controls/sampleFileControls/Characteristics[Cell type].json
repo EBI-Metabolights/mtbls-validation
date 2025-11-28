@@ -8,10 +8,10 @@
                 "isaFileType": "sample",
                 "studyCreatedAtOrAfter": null,
                 "studyCreatedBefore": null,
-                "studyCategoryFilter": null,
-                "templateVersionFilter": [
-                    "2.0"
+                "studyCategoryFilter": [
+                    "ms-mhd-enabled"
                 ],
+                "templateVersionFilter": null,
                 "isaFileTemplateNameFilter": null,
                 "linkedFieldAndValueFilter": [
                     {

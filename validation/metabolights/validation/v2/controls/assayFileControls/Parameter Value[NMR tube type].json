@@ -22,7 +22,7 @@
             },
             "termEnforcementLevel": "recommended",
             "unexpectedTermEnforcementLevel": "recommended",
-            "validationType": "ontology-term-in-selected-ontologies",
+            "validationType": "selected-ontology-term",
             "constraints": {},
             "defaultValue": null,
             "allowedMissingOntologyTerms": [],
@@ -44,10 +44,6 @@
                 {
                     "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/placeholder",
                     "termSourceRef": "MTBLS"
-                },
-                {
-                    "termAccessionNumber": "",
-                    "termSourceRef": ""
                 }
             ],
             "terms": [
@@ -172,9 +168,7 @@
                     "termSourceRef": "MTBLS"
                 }
             ],
-            "ontologies": [
-                "MTBLS"
-            ],
+            "ontologies": [],
             "allowedParentOntologyTerms": null,
             "unexpectedTerms": []
         }

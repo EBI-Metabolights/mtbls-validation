@@ -183,55 +183,6 @@
                 "fieldName": "Parameter Value[Scan polarity]",
                 "selectionCriteria": {
                     "isaFileType": "assay",
-                    "studyCreatedAtOrAfter": "2025-11-01T00:00:00",
-                    "studyCreatedBefore": null,
-                    "studyCategoryFilter": null,
-                    "templateVersionFilter": null,
-                    "isaFileTemplateNameFilter": null,
-                    "linkedFieldAndValueFilter": [
-                        {
-                            "name": "Protocol REF",
-                            "value": "Mass spectrometry"
-                        }
-                    ]
-                },
-                "termEnforcementLevel": "required",
-                "unexpectedTermEnforcementLevel": "required",
-                "validationType": "selected-ontology-term",
-                "constraints": {},
-                "defaultValue": null,
-                "allowedMissingOntologyTerms": [],
-                "allowedOtherSources": [],
-                "allowedPlaceholders": [],
-                "terms": [
-                    {
-                        "term": "negative ionization polarity",
-                        "termAccessionNumber": "http://purl.allotrope.org/ontologies/quality#AFQ_0000150",
-                        "termSourceRef": "AFO"
-                    },
-                    {
-                        "term": "positive ionization polarity",
-                        "termAccessionNumber": "http://purl.allotrope.org/ontologies/quality#AFQ_0000151",
-                        "termSourceRef": "AFO"
-                    },
-                    {
-                        "term": "alternating ionization polarity",
-                        "termAccessionNumber": "http://purl.allotrope.org/ontologies/quality#AFQ_0000152",
-                        "termSourceRef": "AFO"
-                    }
-                ],
-                "ontologies": [
-                    "AFO"
-                ],
-                "allowedParentOntologyTerms": null,
-                "unexpectedTerms": []
-            },
-            {
-                "ruleName": "Parameter Value[Scan polarity]-03",
-                "description": "",
-                "fieldName": "Parameter Value[Scan polarity]",
-                "selectionCriteria": {
-                    "isaFileType": "assay",
                     "studyCreatedAtOrAfter": null,
                     "studyCreatedBefore": null,
                     "studyCategoryFilter": null,
@@ -254,22 +205,25 @@
                 "allowedPlaceholders": [],
                 "terms": [
                     {
-                        "term": "positive",
-                        "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_001087",
-                        "termSourceRef": "MTBLS"
+                        "term": "negative",
+                        "termAccessionNumber": "",
+                        "termSourceRef": ""
                     },
                     {
-                        "term": "negative",
-                        "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_001088",
-                        "termSourceRef": "MTBLS"
+                        "term": "positive",
+                        "termAccessionNumber": "",
+                        "termSourceRef": ""
                     },
                     {
                         "term": "alternating",
-                        "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_001089",
-                        "termSourceRef": "MTBLS"
+                        "termAccessionNumber": "",
+                        "termSourceRef": ""
                     }
                 ],
-                "ontologies": [],
+                "ontologies": [
+                    "AFO",
+                    "MS"
+                ],
                 "allowedParentOntologyTerms": null,
                 "unexpectedTerms": []
             }
@@ -297,7 +251,7 @@
                 },
                 "termEnforcementLevel": "recommended",
                 "unexpectedTermEnforcementLevel": "recommended",
-                "validationType": "ontology-term-in-selected-ontologies",
+                "validationType": "selected-ontology-term",
                 "constraints": {},
                 "defaultValue": null,
                 "allowedMissingOntologyTerms": [],
@@ -319,10 +273,6 @@
                     {
                         "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/placeholder",
                         "termSourceRef": "MTBLS"
-                    },
-                    {
-                        "termAccessionNumber": "",
-                        "termSourceRef": ""
                     }
                 ],
                 "terms": [
@@ -622,9 +572,7 @@
                         "termSourceRef": "MTBLS"
                     }
                 ],
-                "ontologies": [
-                    "MTBLS"
-                ],
+                "ontologies": [],
                 "allowedParentOntologyTerms": null,
                 "unexpectedTerms": []
             }
@@ -674,10 +622,6 @@
                     {
                         "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/placeholder",
                         "termSourceRef": "MTBLS"
-                    },
-                    {
-                        "termAccessionNumber": "",
-                        "termSourceRef": ""
                     }
                 ],
                 "terms": [
@@ -2075,8 +2019,7 @@
                     }
                 ],
                 "ontologies": [
-                    "MS",
-                    "MTBLS"
+                    "MS"
                 ],
                 "allowedParentOntologyTerms": null,
                 "unexpectedTerms": []
@@ -2117,10 +2060,6 @@
                     {
                         "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/placeholder",
                         "termSourceRef": "MTBLS"
-                    },
-                    {
-                        "termAccessionNumber": "",
-                        "termSourceRef": ""
                     }
                 ],
                 "terms": [
@@ -2351,8 +2290,7 @@
                     }
                 ],
                 "ontologies": [
-                    "MS",
-                    "MTBLS"
+                    "MS"
                 ],
                 "allowedParentOntologyTerms": null,
                 "unexpectedTerms": []
@@ -2393,10 +2331,6 @@
                     {
                         "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/placeholder",
                         "termSourceRef": "MTBLS"
-                    },
-                    {
-                        "termAccessionNumber": "",
-                        "termSourceRef": ""
                     }
                 ],
                 "terms": [
@@ -2636,7 +2570,7 @@
                 },
                 "termEnforcementLevel": "recommended",
                 "unexpectedTermEnforcementLevel": "recommended",
-                "validationType": "ontology-term-in-selected-ontologies",
+                "validationType": "selected-ontology-term",
                 "constraints": {},
                 "defaultValue": null,
                 "allowedMissingOntologyTerms": [],
@@ -2658,10 +2592,6 @@
                     {
                         "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/placeholder",
                         "termSourceRef": "MTBLS"
-                    },
-                    {
-                        "termAccessionNumber": "",
-                        "termSourceRef": ""
                     }
                 ],
                 "terms": [
@@ -3085,7 +3015,7 @@
                 },
                 "termEnforcementLevel": "recommended",
                 "unexpectedTermEnforcementLevel": "recommended",
-                "validationType": "any-ontology-term",
+                "validationType": "selected-ontology-term",
                 "constraints": {},
                 "defaultValue": null,
                 "allowedMissingOntologyTerms": [],
@@ -3107,10 +3037,6 @@
                     {
                         "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/placeholder",
                         "termSourceRef": "MTBLS"
-                    },
-                    {
-                        "termAccessionNumber": "",
-                        "termSourceRef": ""
                     }
                 ],
                 "terms": [
@@ -3503,10 +3429,6 @@
                     {
                         "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/placeholder",
                         "termSourceRef": "MTBLS"
-                    },
-                    {
-                        "termAccessionNumber": "",
-                        "termSourceRef": ""
                     }
                 ],
                 "terms": [
@@ -3542,8 +3464,7 @@
                     }
                 ],
                 "ontologies": [
-                    "MS",
-                    "MTBLS"
+                    "MS"
                 ],
                 "allowedParentOntologyTerms": null,
                 "unexpectedTerms": []
@@ -3592,10 +3513,6 @@
                     {
                         "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/placeholder",
                         "termSourceRef": "MTBLS"
-                    },
-                    {
-                        "termAccessionNumber": "",
-                        "termSourceRef": ""
                     }
                 ],
                 "terms": [
@@ -3616,8 +3533,7 @@
                     }
                 ],
                 "ontologies": [
-                    "MS",
-                    "MTBLS"
+                    "MS"
                 ],
                 "allowedParentOntologyTerms": null,
                 "unexpectedTerms": []
@@ -3666,10 +3582,6 @@
                     {
                         "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/placeholder",
                         "termSourceRef": "MTBLS"
-                    },
-                    {
-                        "termAccessionNumber": "",
-                        "termSourceRef": ""
                     }
                 ],
                 "terms": [
@@ -3685,8 +3597,7 @@
                     }
                 ],
                 "ontologies": [
-                    "MS",
-                    "MTBLS"
+                    "MS"
                 ],
                 "allowedParentOntologyTerms": null,
                 "unexpectedTerms": []
@@ -3715,7 +3626,7 @@
                 },
                 "termEnforcementLevel": "recommended",
                 "unexpectedTermEnforcementLevel": "recommended",
-                "validationType": "ontology-term-in-selected-ontologies",
+                "validationType": "selected-ontology-term",
                 "constraints": {},
                 "defaultValue": null,
                 "allowedMissingOntologyTerms": [],
@@ -3737,10 +3648,6 @@
                     {
                         "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/placeholder",
                         "termSourceRef": "MTBLS"
-                    },
-                    {
-                        "termAccessionNumber": "",
-                        "termSourceRef": ""
                     }
                 ],
                 "terms": [
@@ -4009,7 +3916,7 @@
                 },
                 "termEnforcementLevel": "recommended",
                 "unexpectedTermEnforcementLevel": "recommended",
-                "validationType": "ontology-term-in-selected-ontologies",
+                "validationType": "selected-ontology-term",
                 "constraints": {},
                 "defaultValue": null,
                 "allowedMissingOntologyTerms": [],
@@ -4031,10 +3938,6 @@
                     {
                         "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/placeholder",
                         "termSourceRef": "MTBLS"
-                    },
-                    {
-                        "termAccessionNumber": "",
-                        "termSourceRef": ""
                     }
                 ],
                 "terms": [
@@ -4120,7 +4023,7 @@
                 },
                 "termEnforcementLevel": "recommended",
                 "unexpectedTermEnforcementLevel": "recommended",
-                "validationType": "ontology-term-in-selected-ontologies",
+                "validationType": "selected-ontology-term",
                 "constraints": {},
                 "defaultValue": null,
                 "allowedMissingOntologyTerms": [],
@@ -4142,10 +4045,6 @@
                     {
                         "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/placeholder",
                         "termSourceRef": "MTBLS"
-                    },
-                    {
-                        "termAccessionNumber": "",
-                        "termSourceRef": ""
                     }
                 ],
                 "terms": [
@@ -4270,9 +4169,7 @@
                         "termSourceRef": "MTBLS"
                     }
                 ],
-                "ontologies": [
-                    "MTBLS"
-                ],
+                "ontologies": [],
                 "allowedParentOntologyTerms": null,
                 "unexpectedTerms": []
             }
@@ -4368,7 +4265,7 @@
                 },
                 "termEnforcementLevel": "recommended",
                 "unexpectedTermEnforcementLevel": "recommended",
-                "validationType": "ontology-term-in-selected-ontologies",
+                "validationType": "selected-ontology-term",
                 "constraints": {},
                 "defaultValue": null,
                 "allowedMissingOntologyTerms": [],
@@ -4390,10 +4287,6 @@
                     {
                         "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/placeholder",
                         "termSourceRef": "MTBLS"
-                    },
-                    {
-                        "termAccessionNumber": "",
-                        "termSourceRef": ""
                     }
                 ],
                 "terms": [
@@ -4609,10 +4502,6 @@
                     {
                         "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/placeholder",
                         "termSourceRef": "MTBLS"
-                    },
-                    {
-                        "termAccessionNumber": "",
-                        "termSourceRef": ""
                     }
                 ],
                 "terms": [
@@ -4823,10 +4712,6 @@
                     {
                         "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/placeholder",
                         "termSourceRef": "MTBLS"
-                    },
-                    {
-                        "termAccessionNumber": "",
-                        "termSourceRef": ""
                     }
                 ],
                 "terms": [
@@ -4887,8 +4772,7 @@
                     }
                 ],
                 "ontologies": [
-                    "MS",
-                    "MTBLS"
+                    "MS"
                 ],
                 "allowedParentOntologyTerms": null,
                 "unexpectedTerms": []
@@ -4917,7 +4801,7 @@
                 },
                 "termEnforcementLevel": "recommended",
                 "unexpectedTermEnforcementLevel": "recommended",
-                "validationType": "ontology-term-in-selected-ontologies",
+                "validationType": "selected-ontology-term",
                 "constraints": {},
                 "defaultValue": null,
                 "allowedMissingOntologyTerms": [],
@@ -4939,10 +4823,6 @@
                     {
                         "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/placeholder",
                         "termSourceRef": "MTBLS"
-                    },
-                    {
-                        "termAccessionNumber": "",
-                        "termSourceRef": ""
                     }
                 ],
                 "terms": [
@@ -5199,7 +5079,7 @@
                 },
                 "termEnforcementLevel": "recommended",
                 "unexpectedTermEnforcementLevel": "recommended",
-                "validationType": "ontology-term-in-selected-ontologies",
+                "validationType": "selected-ontology-term",
                 "constraints": {},
                 "defaultValue": null,
                 "allowedMissingOntologyTerms": [],
@@ -5221,10 +5101,6 @@
                     {
                         "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/placeholder",
                         "termSourceRef": "MTBLS"
-                    },
-                    {
-                        "termAccessionNumber": "",
-                        "termSourceRef": ""
                     }
                 ],
                 "terms": [
@@ -6613,7 +6489,7 @@
                 },
                 "termEnforcementLevel": "recommended",
                 "unexpectedTermEnforcementLevel": "recommended",
-                "validationType": "ontology-term-in-selected-ontologies",
+                "validationType": "selected-ontology-term",
                 "constraints": {},
                 "defaultValue": null,
                 "allowedMissingOntologyTerms": [],
@@ -6635,10 +6511,6 @@
                     {
                         "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/placeholder",
                         "termSourceRef": "MTBLS"
-                    },
-                    {
-                        "termAccessionNumber": "",
-                        "termSourceRef": ""
                     }
                 ],
                 "terms": [
@@ -7454,10 +7326,10 @@
                     "isaFileType": "sample",
                     "studyCreatedAtOrAfter": null,
                     "studyCreatedBefore": null,
-                    "studyCategoryFilter": null,
-                    "templateVersionFilter": [
-                        "2.0"
+                    "studyCategoryFilter": [
+                        "ms-mhd-enabled"
                     ],
+                    "templateVersionFilter": null,
                     "isaFileTemplateNameFilter": null,
                     "linkedFieldAndValueFilter": [
                         {
@@ -9528,10 +9400,6 @@
                     {
                         "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/placeholder",
                         "termSourceRef": "MTBLS"
-                    },
-                    {
-                        "termAccessionNumber": "",
-                        "termSourceRef": ""
                     }
                 ],
                 "terms": [
