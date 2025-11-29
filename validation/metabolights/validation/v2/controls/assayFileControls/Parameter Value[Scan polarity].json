@@ -3,7 +3,6 @@
         {
             "ruleName": "Parameter Value[Scan polarity]-01",
             "fieldName": "Parameter Value[Scan polarity]",
-            "ontologyValidationType": "any-ontology-term",
             "ontologies": [
                 "AFO"
             ],
@@ -55,7 +54,6 @@
         {
             "ruleName": "Parameter Value[Scan polarity]-02",
             "fieldName": "Parameter Value[Scan polarity]",
-            "ontologyValidationType": "any-ontology-term",
             "ontologies": [
                 "AFO",
                 "MS"

@@ -1,7 +1,6 @@
 {
     "ruleName": "select-ontology-term-01",
     "fieldName": "",
-    "ontologyValidationType": "any-ontology-term",
     "ontologies": [],
     "allowedParentOntologyTerms": null,
     "description": "",

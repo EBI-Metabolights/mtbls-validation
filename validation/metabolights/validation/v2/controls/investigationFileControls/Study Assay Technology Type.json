@@ -3,7 +3,6 @@
         {
             "ruleName": "Study Assay Technology Type-01",
             "fieldName": "Study Assay Technology Type",
-            "ontologyValidationType": "any-ontology-term",
             "ontologies": [],
             "allowedParentOntologyTerms": null,
             "description": "",
@@ -38,7 +37,6 @@
         {
             "ruleName": "Study Assay Technology Type-02",
             "fieldName": "Study Assay Technology Type",
-            "ontologyValidationType": "any-ontology-term",
             "ontologies": [],
             "allowedParentOntologyTerms": null,
             "description": "",
@@ -80,7 +78,6 @@
         {
             "ruleName": "Study Assay Technology Type-03",
             "fieldName": "Study Assay Technology Type",
-            "ontologyValidationType": "any-ontology-term",
             "ontologies": [],
             "allowedParentOntologyTerms": null,
             "description": "",
@@ -115,7 +112,6 @@
         {
             "ruleName": "Study Assay Technology Type-05",
             "fieldName": "Study Assay Technology Type",
-            "ontologyValidationType": "any-ontology-term",
             "ontologies": [],
             "allowedParentOntologyTerms": null,
             "description": "",
@@ -161,7 +157,6 @@
         {
             "ruleName": "Study Assay Technology Type-07",
             "fieldName": "Study Assay Technology Type",
-            "ontologyValidationType": "any-ontology-term",
             "ontologies": [],
             "allowedParentOntologyTerms": null,
             "description": "",

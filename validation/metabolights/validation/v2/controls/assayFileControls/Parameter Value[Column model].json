@@ -3,7 +3,6 @@
         {
             "ruleName": "Parameter Value[Column model]-01",
             "fieldName": "Parameter Value[Column model]",
-            "ontologyValidationType": "any-ontology-term",
             "ontologies": [
                 "MS",
                 "MTBLS"
@@ -1414,7 +1413,6 @@
         {
             "ruleName": "Parameter Value[Column model]-02",
             "fieldName": "Parameter Value[Column model]",
-            "ontologyValidationType": "any-ontology-term",
             "ontologies": [
                 "MS",
                 "MTBLS"

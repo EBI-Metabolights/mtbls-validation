@@ -3,7 +3,6 @@
         {
             "ruleName": "Factor Value[Disease]-01",
             "fieldName": "Factor Value[Disease]",
-            "ontologyValidationType": "any-ontology-term",
             "ontologies": [
                 "MONDO",
                 "MP",
@@ -54,7 +53,6 @@
         {
             "ruleName": "Factor Value[Disease]-02",
             "fieldName": "Factor Value[Disease]",
-            "ontologyValidationType": "any-ontology-term",
             "ontologies": [
                 "MONDO",
                 "MP",

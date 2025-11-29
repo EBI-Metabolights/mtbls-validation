@@ -3,7 +3,6 @@
         {
             "ruleName": "Parameter Value[Mass analyzer]-01",
             "fieldName": "Parameter Value[Mass analyzer]",
-            "ontologyValidationType": "any-ontology-term",
             "ontologies": [
                 "MS"
             ],

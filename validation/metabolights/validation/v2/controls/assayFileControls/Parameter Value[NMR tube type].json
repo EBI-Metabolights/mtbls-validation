@@ -3,7 +3,6 @@
         {
             "ruleName": "Parameter Value[NMR tube type]-01",
             "fieldName": "Parameter Value[NMR tube type]",
-            "ontologyValidationType": "any-ontology-term",
             "ontologies": [],
             "allowedParentOntologyTerms": null,
             "description": "",

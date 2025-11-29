@@ -3,7 +3,6 @@
         {
             "ruleName": "Characteristics[Organism]-01",
             "fieldName": "Characteristics[Organism]",
-            "ontologyValidationType": "any-ontology-term",
             "ontologies": [
                 "NCBITAXON",
                 "ENVO"
@@ -121,7 +120,6 @@
         {
             "ruleName": "Characteristics[Organism]-02",
             "fieldName": "Characteristics[Organism]",
-            "ontologyValidationType": "any-ontology-term",
             "ontologies": [
                 "NCBITAXON",
                 "ENVO",

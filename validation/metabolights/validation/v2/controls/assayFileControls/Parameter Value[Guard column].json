@@ -3,7 +3,6 @@
         {
             "ruleName": "Parameter Value[Guard column]-01",
             "fieldName": "Parameter Value[Guard column]",
-            "ontologyValidationType": "any-ontology-term",
             "ontologies": [
                 "MS",
                 "MTBLS"
@@ -294,7 +293,6 @@
         {
             "ruleName": "Parameter Value[Guard column]-02",
             "fieldName": "Parameter Value[Guard column]",
-            "ontologyValidationType": "any-ontology-term",
             "ontologies": [
                 "MS",
                 "MTBLS"

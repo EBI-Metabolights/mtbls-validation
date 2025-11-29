@@ -3,7 +3,6 @@
         {
             "ruleName": "Parameter Value[Instrument]-01",
             "fieldName": "Parameter Value[Instrument]",
-            "ontologyValidationType": "any-ontology-term",
             "ontologies": [
                 "MS"
             ],
@@ -69,7 +68,6 @@
         {
             "ruleName": "Parameter Value[Instrument]-03",
             "fieldName": "Parameter Value[Instrument]",
-            "ontologyValidationType": "any-ontology-term",
             "ontologies": [
                 "MS"
             ],
@@ -975,7 +973,6 @@
         {
             "ruleName": "Parameter Value[Instrument]-04",
             "fieldName": "Parameter Value[Instrument]",
-            "ontologyValidationType": "any-ontology-term",
             "ontologies": [
                 "MS"
             ],
@@ -1247,7 +1244,6 @@
         {
             "ruleName": "Parameter Value[Instrument]-05",
             "fieldName": "Parameter Value[Instrument]",
-            "ontologyValidationType": "any-ontology-term",
             "ontologies": [
                 "MTBLS"
             ],

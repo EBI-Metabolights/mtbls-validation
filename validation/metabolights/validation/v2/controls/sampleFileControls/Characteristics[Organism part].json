@@ -3,7 +3,6 @@
         {
             "ruleName": "Characteristics[Organism part]-01",
             "fieldName": "Characteristics[Organism part]",
-            "ontologyValidationType": "any-ontology-term",
             "ontologies": [
                 "UBERON",
                 "BTO",
@@ -102,7 +101,6 @@
         {
             "ruleName": "Characteristics[Organism part]-02",
             "fieldName": "Characteristics[Organism part]",
-            "ontologyValidationType": "any-ontology-term",
             "ontologies": [
                 "BTO",
                 "NCIT",

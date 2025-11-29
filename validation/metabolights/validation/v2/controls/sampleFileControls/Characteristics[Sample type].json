@@ -3,7 +3,6 @@
         {
             "ruleName": "Characteristics[Sample type]-01",
             "fieldName": "Characteristics[Sample type]",
-            "ontologyValidationType": "any-ontology-term",
             "ontologies": [
                 "CHMO",
                 "MSIO",

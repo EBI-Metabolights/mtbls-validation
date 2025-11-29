@@ -3,7 +3,6 @@
         {
             "ruleName": "NMR Assay Name-01",
             "fieldName": "NMR Assay Name",
-            "ontologyValidationType": "any-ontology-term",
             "ontologies": [],
             "allowedParentOntologyTerms": null,
             "description": "",

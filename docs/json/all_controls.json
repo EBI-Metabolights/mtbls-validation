@@ -4,7 +4,6 @@
             {
                 "ruleName": "default-assay-file-rule-01",
                 "fieldName": "",
-                "ontologyValidationType": "any-ontology-term",
                 "ontologies": [
                     "OBI",
                     "EFO",
@@ -96,7 +95,6 @@
             {
                 "ruleName": "Sample Name-01",
                 "fieldName": "Sample Name",
-                "ontologyValidationType": "any-ontology-term",
                 "ontologies": [],
                 "allowedParentOntologyTerms": null,
                 "description": "",
@@ -131,7 +129,6 @@
             {
                 "ruleName": "Parameter Value[Scan polarity]-01",
                 "fieldName": "Parameter Value[Scan polarity]",
-                "ontologyValidationType": "any-ontology-term",
                 "ontologies": [
                     "AFO"
                 ],
@@ -183,7 +180,6 @@
             {
                 "ruleName": "Parameter Value[Scan polarity]-02",
                 "fieldName": "Parameter Value[Scan polarity]",
-                "ontologyValidationType": "any-ontology-term",
                 "ontologies": [
                     "AFO",
                     "MS"
@@ -236,7 +232,6 @@
             {
                 "ruleName": "Parameter Value[Pulse sequence name]-01",
                 "fieldName": "Parameter Value[Pulse sequence name]",
-                "ontologyValidationType": "any-ontology-term",
                 "ontologies": [],
                 "allowedParentOntologyTerms": null,
                 "description": "",
@@ -586,7 +581,6 @@
             {
                 "ruleName": "Parameter Value[NMR Probe]-01",
                 "fieldName": "Parameter Value[NMR Probe]",
-                "ontologyValidationType": "any-ontology-term",
                 "ontologies": [
                     "MTBLS"
                 ],
@@ -1063,7 +1057,6 @@
             {
                 "ruleName": "Parameter Value[Instrument]-01",
                 "fieldName": "Parameter Value[Instrument]",
-                "ontologyValidationType": "any-ontology-term",
                 "ontologies": [
                     "MS"
                 ],
@@ -1129,7 +1122,6 @@
             {
                 "ruleName": "Parameter Value[Instrument]-03",
                 "fieldName": "Parameter Value[Instrument]",
-                "ontologyValidationType": "any-ontology-term",
                 "ontologies": [
                     "MS"
                 ],
@@ -2035,7 +2027,6 @@
             {
                 "ruleName": "Parameter Value[Instrument]-04",
                 "fieldName": "Parameter Value[Instrument]",
-                "ontologyValidationType": "any-ontology-term",
                 "ontologies": [
                     "MS"
                 ],
@@ -2307,7 +2298,6 @@
             {
                 "ruleName": "Parameter Value[Instrument]-05",
                 "fieldName": "Parameter Value[Instrument]",
-                "ontologyValidationType": "any-ontology-term",
                 "ontologies": [
                     "MTBLS"
                 ],
@@ -2561,7 +2551,6 @@
             {
                 "ruleName": "Parameter Value[Chromatography Instrument]-01",
                 "fieldName": "Parameter Value[Chromatography Instrument]",
-                "ontologyValidationType": "any-ontology-term",
                 "ontologies": [
                     "MS",
                     "MTBLS"
@@ -3007,7 +2996,6 @@
             {
                 "ruleName": "Parameter Value[Chromatography Instrument]-02",
                 "fieldName": "Parameter Value[Chromatography Instrument]",
-                "ontologyValidationType": "any-ontology-term",
                 "ontologies": [
                     "MS",
                     "MTBLS"
@@ -3400,7 +3388,6 @@
             {
                 "ruleName": "Parameter Value[Ion source]-01",
                 "fieldName": "Parameter Value[Ion source]",
-                "ontologyValidationType": "any-ontology-term",
                 "ontologies": [
                     "MS"
                 ],
@@ -3485,7 +3472,6 @@
             {
                 "ruleName": "Parameter Value[Ion source]-02",
                 "fieldName": "Parameter Value[Ion source]",
-                "ontologyValidationType": "any-ontology-term",
                 "ontologies": [
                     "MS"
                 ],
@@ -3555,7 +3541,6 @@
             {
                 "ruleName": "Parameter Value[Ion source]-03",
                 "fieldName": "Parameter Value[Ion source]",
-                "ontologyValidationType": "any-ontology-term",
                 "ontologies": [
                     "MS"
                 ],
@@ -3622,7 +3607,6 @@
             {
                 "ruleName": "Parameter Value[Guard column]-01",
                 "fieldName": "Parameter Value[Guard column]",
-                "ontologyValidationType": "any-ontology-term",
                 "ontologies": [
                     "MS",
                     "MTBLS"
@@ -3913,7 +3897,6 @@
             {
                 "ruleName": "Parameter Value[Guard column]-02",
                 "fieldName": "Parameter Value[Guard column]",
-                "ontologyValidationType": "any-ontology-term",
                 "ontologies": [
                     "MS",
                     "MTBLS"
@@ -4021,7 +4004,6 @@
             {
                 "ruleName": "Parameter Value[NMR tube type]-01",
                 "fieldName": "Parameter Value[NMR tube type]",
-                "ontologyValidationType": "any-ontology-term",
                 "ontologies": [],
                 "allowedParentOntologyTerms": null,
                 "description": "",
@@ -4196,7 +4178,6 @@
             {
                 "ruleName": "NMR Assay Name-01",
                 "fieldName": "NMR Assay Name",
-                "ontologyValidationType": "any-ontology-term",
                 "ontologies": [],
                 "allowedParentOntologyTerms": null,
                 "description": "",
@@ -4231,7 +4212,6 @@
             {
                 "ruleName": "MS Assay Name-01",
                 "fieldName": "MS Assay Name",
-                "ontologyValidationType": "any-ontology-term",
                 "ontologies": [],
                 "allowedParentOntologyTerms": null,
                 "description": "",
@@ -4266,7 +4246,6 @@
             {
                 "ruleName": "Parameter Value[Autosampler model]-01",
                 "fieldName": "Parameter Value[Autosampler model]",
-                "ontologyValidationType": "any-ontology-term",
                 "ontologies": [
                     "MS",
                     "MTBLS"
@@ -4482,7 +4461,6 @@
             {
                 "ruleName": "Parameter Value[Autosampler model]-02",
                 "fieldName": "Parameter Value[Autosampler model]",
-                "ontologyValidationType": "any-ontology-term",
                 "ontologies": [
                     "MS",
                     "MTBLS"
@@ -4695,7 +4673,6 @@
             {
                 "ruleName": "Parameter Value[Mass analyzer]-01",
                 "fieldName": "Parameter Value[Mass analyzer]",
-                "ontologyValidationType": "any-ontology-term",
                 "ontologies": [
                     "MS"
                 ],
@@ -4805,7 +4782,6 @@
             {
                 "ruleName": "Parameter Value[Solvent]-01",
                 "fieldName": "Parameter Value[Solvent]",
-                "ontologyValidationType": "any-ontology-term",
                 "ontologies": [
                     "MTBLS"
                 ],
@@ -5017,7 +4993,6 @@
             {
                 "ruleName": "Unit-01",
                 "fieldName": "Unit",
-                "ontologyValidationType": "any-ontology-term",
                 "ontologies": [],
                 "allowedParentOntologyTerms": {
                     "excludeByLabelPattern": [
@@ -5085,7 +5060,6 @@
             {
                 "ruleName": "Parameter Value[Column model]-01",
                 "fieldName": "Parameter Value[Column model]",
-                "ontologyValidationType": "any-ontology-term",
                 "ontologies": [
                     "MS",
                     "MTBLS"
@@ -6496,7 +6470,6 @@
             {
                 "ruleName": "Parameter Value[Column model]-02",
                 "fieldName": "Parameter Value[Column model]",
-                "ontologyValidationType": "any-ontology-term",
                 "ontologies": [
                     "MS",
                     "MTBLS"
@@ -6921,7 +6894,6 @@
             {
                 "ruleName": "default-sample-file-rule-01",
                 "fieldName": "",
-                "ontologyValidationType": "any-ontology-term",
                 "ontologies": [
                     "OBI",
                     "EFO",
@@ -7015,7 +6987,6 @@
             {
                 "ruleName": "Factor Value[Disease]-01",
                 "fieldName": "Factor Value[Disease]",
-                "ontologyValidationType": "any-ontology-term",
                 "ontologies": [
                     "MONDO",
                     "MP",
@@ -7066,7 +7037,6 @@
             {
                 "ruleName": "Factor Value[Disease]-02",
                 "fieldName": "Factor Value[Disease]",
-                "ontologyValidationType": "any-ontology-term",
                 "ontologies": [
                     "MONDO",
                     "MP",
@@ -7119,7 +7089,6 @@
             {
                 "ruleName": "Characteristics[Sample type]-01",
                 "fieldName": "Characteristics[Sample type]",
-                "ontologyValidationType": "any-ontology-term",
                 "ontologies": [
                     "CHMO",
                     "MSIO",
@@ -7188,7 +7157,6 @@
             {
                 "ruleName": "Sample Name-01",
                 "fieldName": "Sample Name",
-                "ontologyValidationType": "any-ontology-term",
                 "ontologies": [],
                 "allowedParentOntologyTerms": null,
                 "description": "",
@@ -7223,7 +7191,6 @@
             {
                 "ruleName": "default-sample-characteristic-rule-01",
                 "fieldName": "",
-                "ontologyValidationType": "any-ontology-term",
                 "ontologies": [
                     "OBI",
                     "EFO",
@@ -7292,7 +7259,6 @@
             {
                 "ruleName": "Characteristics[Disease]-01",
                 "fieldName": "Characteristics[Disease]",
-                "ontologyValidationType": "any-ontology-term",
                 "ontologies": [
                     "MONDO",
                     "MP",
@@ -7355,7 +7321,6 @@
             {
                 "ruleName": "Characteristics[Cell type]-01",
                 "fieldName": "Characteristics[Cell type]",
-                "ontologyValidationType": "any-ontology-term",
                 "ontologies": [
                     "CL",
                     "CLO"
@@ -7417,7 +7382,6 @@
             {
                 "ruleName": "default-sample-factor_value-rule-01",
                 "fieldName": "",
-                "ontologyValidationType": "any-ontology-term",
                 "ontologies": [
                     "OBI",
                     "EFO",
@@ -7490,7 +7454,6 @@
             {
                 "ruleName": "Characteristics[Organism part]-01",
                 "fieldName": "Characteristics[Organism part]",
-                "ontologyValidationType": "any-ontology-term",
                 "ontologies": [
                     "UBERON",
                     "BTO",
@@ -7589,7 +7552,6 @@
             {
                 "ruleName": "Characteristics[Organism part]-02",
                 "fieldName": "Characteristics[Organism part]",
-                "ontologyValidationType": "any-ontology-term",
                 "ontologies": [
                     "BTO",
                     "NCIT",
@@ -7687,7 +7649,6 @@
             {
                 "ruleName": "Unit-01",
                 "fieldName": "Unit",
-                "ontologyValidationType": "any-ontology-term",
                 "ontologies": [],
                 "allowedParentOntologyTerms": {
                     "excludeByLabelPattern": [
@@ -7755,7 +7716,6 @@
             {
                 "ruleName": "Characteristics[Organism]-01",
                 "fieldName": "Characteristics[Organism]",
-                "ontologyValidationType": "any-ontology-term",
                 "ontologies": [
                     "NCBITAXON",
                     "ENVO"
@@ -7873,7 +7833,6 @@
             {
                 "ruleName": "Characteristics[Organism]-02",
                 "fieldName": "Characteristics[Organism]",
-                "ontologyValidationType": "any-ontology-term",
                 "ontologies": [
                     "NCBITAXON",
                     "ENVO",
@@ -8007,7 +7966,6 @@
             {
                 "ruleName": "Source Name-01",
                 "fieldName": "Source Name",
-                "ontologyValidationType": "any-ontology-term",
                 "ontologies": [],
                 "allowedParentOntologyTerms": null,
                 "description": "",
@@ -8044,7 +8002,6 @@
             {
                 "ruleName": "default-assignment-file-rule-01",
                 "fieldName": "",
-                "ontologyValidationType": "any-ontology-term",
                 "ontologies": [
                     "CHEBI",
                     "EFO",
@@ -8107,6 +8064,73 @@
                     "."
                 ]
             }
+        ],
+        "Unit": [
+            {
+                "ruleName": "Unit-01",
+                "fieldName": "Unit",
+                "ontologies": [],
+                "allowedParentOntologyTerms": {
+                    "excludeByLabelPattern": [
+                        "^.*unit$",
+                        "^.*Unit of.*$"
+                    ],
+                    "excludeByAccession": [
+                        "http://purl.obolibrary.org/obo/NCIT_C41139"
+                    ],
+                    "parents": [
+                        {
+                            "term": "unit",
+                            "termAccessionNumber": "http://purl.obolibrary.org/obo/UO_0000000",
+                            "termSourceRef": "UO"
+                        },
+                        {
+                            "term": "unit",
+                            "termAccessionNumber": "http://purl.obolibrary.org/obo/UO_0000000",
+                            "termSourceRef": "EFO"
+                        },
+                        {
+                            "term": "Qualifier",
+                            "termAccessionNumber": "http://purl.obolibrary.org/obo/NCIT_C41009",
+                            "termSourceRef": "NCIT"
+                        },
+                        {
+                            "term": "Unit of Measure",
+                            "termAccessionNumber": "http://purl.obolibrary.org/obo/NCIT_C25709",
+                            "termSourceRef": "NCIT"
+                        }
+                    ]
+                },
+                "description": "",
+                "selectionCriteria": {
+                    "isaFileType": "assignment",
+                    "studyCreatedAtOrAfter": null,
+                    "studyCreatedBefore": null,
+                    "studyCategoryFilter": null,
+                    "templateVersionFilter": null,
+                    "isaFileTemplateNameFilter": null,
+                    "linkedFieldAndValueFilter": null
+                },
+                "termEnforcementLevel": "recommended",
+                "unexpectedTermEnforcementLevel": "not-applicable",
+                "validationType": "child-ontology-term",
+                "constraints": {},
+                "defaultValue": null,
+                "allowedMissingOntologyTerms": [],
+                "allowedOtherSources": [
+                    {
+                        "sourceLabel": "wikidata",
+                        "accessionPrefix": "https://www.wikidata.org/wiki/"
+                    },
+                    {
+                        "sourceLabel": "ILX",
+                        "accessionPrefix": "http://uri.interlex.org/base/ilx_"
+                    }
+                ],
+                "allowedPlaceholders": [],
+                "terms": [],
+                "unexpectedTerms": []
+            }
         ]
     },
     "investigationFileControls": {
@@ -8114,7 +8138,6 @@
             {
                 "ruleName": "default-investigation-file-rule-01",
                 "fieldName": "",
-                "ontologyValidationType": "any-ontology-term",
                 "ontologies": [
                     "OBI",
                     "EFO",
@@ -8204,7 +8227,6 @@
             {
                 "ruleName": "Study Protocol Type-01",
                 "fieldName": "Study Protocol Type",
-                "ontologyValidationType": "any-ontology-term",
                 "ontologies": [
                     "EFO",
                     "NCIT",
@@ -8315,7 +8337,6 @@
             {
                 "ruleName": "Study Design Type-01",
                 "fieldName": "Study Design Type",
-                "ontologyValidationType": "any-ontology-term",
                 "ontologies": [
                     "EFO",
                     "MSIO",
@@ -8428,7 +8449,6 @@
             {
                 "ruleName": "Study Person Roles-01",
                 "fieldName": "Study Person Roles",
-                "ontologyValidationType": "any-ontology-term",
                 "ontologies": [
                     "NCIT"
                 ],
@@ -8489,7 +8509,6 @@
             {
                 "ruleName": "Study Assay Measurement Type-01",
                 "fieldName": "Study Assay Measurement Type",
-                "ontologyValidationType": "any-ontology-term",
                 "ontologies": [],
                 "allowedParentOntologyTerms": null,
                 "description": "",
@@ -8529,7 +8548,6 @@
             {
                 "ruleName": "Study Assay Measurement Type-03",
                 "fieldName": "Study Assay Measurement Type",
-                "ontologyValidationType": "any-ontology-term",
                 "ontologies": [
                     "MSIO",
                     "OBI"
@@ -8577,7 +8595,6 @@
             {
                 "ruleName": "Study Protocol Components Type-01",
                 "fieldName": "Study Protocol Components Type",
-                "ontologyValidationType": "any-ontology-term",
                 "ontologies": [
                     "EFO",
                     "NCIT",
@@ -8638,7 +8655,6 @@
             {
                 "ruleName": "Study Protocol Parameter Name-01",
                 "fieldName": "Study Protocol Parameter Name",
-                "ontologyValidationType": "any-ontology-term",
                 "ontologies": [
                     "MS",
                     "EFO",
@@ -9068,7 +9084,6 @@
             {
                 "ruleName": "Study Assay Technology Type-01",
                 "fieldName": "Study Assay Technology Type",
-                "ontologyValidationType": "any-ontology-term",
                 "ontologies": [],
                 "allowedParentOntologyTerms": null,
                 "description": "",
@@ -9103,7 +9118,6 @@
             {
                 "ruleName": "Study Assay Technology Type-02",
                 "fieldName": "Study Assay Technology Type",
-                "ontologyValidationType": "any-ontology-term",
                 "ontologies": [],
                 "allowedParentOntologyTerms": null,
                 "description": "",
@@ -9145,7 +9159,6 @@
             {
                 "ruleName": "Study Assay Technology Type-03",
                 "fieldName": "Study Assay Technology Type",
-                "ontologyValidationType": "any-ontology-term",
                 "ontologies": [],
                 "allowedParentOntologyTerms": null,
                 "description": "",
@@ -9180,7 +9193,6 @@
             {
                 "ruleName": "Study Assay Technology Type-05",
                 "fieldName": "Study Assay Technology Type",
-                "ontologyValidationType": "any-ontology-term",
                 "ontologies": [],
                 "allowedParentOntologyTerms": null,
                 "description": "",
@@ -9226,7 +9238,6 @@
             {
                 "ruleName": "Study Assay Technology Type-07",
                 "fieldName": "Study Assay Technology Type",
-                "ontologyValidationType": "any-ontology-term",
                 "ontologies": [],
                 "allowedParentOntologyTerms": null,
                 "description": "",
@@ -9269,7 +9280,6 @@
             {
                 "ruleName": "Study Factor Type-01",
                 "fieldName": "Study Factor Type",
-                "ontologyValidationType": "any-ontology-term",
                 "ontologies": [
                     "EFO",
                     "MTBLS",
@@ -9385,7 +9395,6 @@
             {
                 "ruleName": "Study Publication Status-01",
                 "fieldName": "Study Publication Status",
-                "ontologyValidationType": "any-ontology-term",
                 "ontologies": [],
                 "allowedParentOntologyTerms": null,
                 "description": "",
@@ -9438,7 +9447,6 @@
             {
                 "ruleName": "Study Publication Status-02",
                 "fieldName": "Study Publication Status",
-                "ontologyValidationType": "any-ontology-term",
                 "ontologies": [
                     "EFO",
                     "EDAM"
@@ -9501,7 +9509,6 @@
             {
                 "ruleName": "Unit-01",
                 "fieldName": "Unit",
-                "ontologyValidationType": "any-ontology-term",
                 "ontologies": [],
                 "allowedParentOntologyTerms": {
                     "excludeByLabelPattern": [

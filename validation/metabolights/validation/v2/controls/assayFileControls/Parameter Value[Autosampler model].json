@@ -3,7 +3,6 @@
         {
             "ruleName": "Parameter Value[Autosampler model]-01",
             "fieldName": "Parameter Value[Autosampler model]",
-            "ontologyValidationType": "any-ontology-term",
             "ontologies": [
                 "MS",
                 "MTBLS"
@@ -219,7 +218,6 @@
         {
             "ruleName": "Parameter Value[Autosampler model]-02",
             "fieldName": "Parameter Value[Autosampler model]",
-            "ontologyValidationType": "any-ontology-term",
             "ontologies": [
                 "MS",
                 "MTBLS"

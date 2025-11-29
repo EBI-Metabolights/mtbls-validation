@@ -3,7 +3,6 @@
         {
             "ruleName": "Parameter Value[Pulse sequence name]-01",
             "fieldName": "Parameter Value[Pulse sequence name]",
-            "ontologyValidationType": "any-ontology-term",
             "ontologies": [],
             "allowedParentOntologyTerms": null,
             "description": "",

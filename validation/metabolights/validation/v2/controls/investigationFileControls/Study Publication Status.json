@@ -3,7 +3,6 @@
         {
             "ruleName": "Study Publication Status-01",
             "fieldName": "Study Publication Status",
-            "ontologyValidationType": "any-ontology-term",
             "ontologies": [],
             "allowedParentOntologyTerms": null,
             "description": "",
@@ -56,7 +55,6 @@
         {
             "ruleName": "Study Publication Status-02",
             "fieldName": "Study Publication Status",
-            "ontologyValidationType": "any-ontology-term",
             "ontologies": [
                 "EFO",
                 "EDAM"

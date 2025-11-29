@@ -3,7 +3,6 @@
         {
             "ruleName": "Sample Name-01",
             "fieldName": "Sample Name",
-            "ontologyValidationType": "any-ontology-term",
             "ontologies": [],
             "allowedParentOntologyTerms": null,
             "description": "",

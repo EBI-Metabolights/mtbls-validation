@@ -3,7 +3,6 @@
         {
             "ruleName": "Source Name-01",
             "fieldName": "Source Name",
-            "ontologyValidationType": "any-ontology-term",
             "ontologies": [],
             "allowedParentOntologyTerms": null,
             "description": "",

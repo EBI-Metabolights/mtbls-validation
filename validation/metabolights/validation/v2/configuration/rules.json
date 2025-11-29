@@ -1,7 +1,7 @@
 {
     "rules": {
         "validation_version": "2.2.0",
-        "created_at": "2025-11-28T21:54:45.654582+00:00",
+        "created_at": "2025-11-29T17:43:41.448714+00:00",
         "violations": [
             {
                 "rule_id": "rule___100_100_001_01",

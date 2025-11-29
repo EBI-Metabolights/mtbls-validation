@@ -3,7 +3,6 @@
         {
             "ruleName": "Parameter Value[Solvent]-01",
             "fieldName": "Parameter Value[Solvent]",
-            "ontologyValidationType": "any-ontology-term",
             "ontologies": [
                 "MTBLS"
             ],

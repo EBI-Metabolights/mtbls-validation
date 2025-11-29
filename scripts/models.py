@@ -211,10 +211,6 @@ class BaseOntologyValidation(StudyBaseModel):
         ),
     ]
 
-    ontology_validation_type: Annotated[
-        None | OntologyValidationType, Field(description="Validation rule type")
-    ] = OntologyValidationType.ANY_ONTOLOGY_TERM
-
     ontologies: Annotated[
         None | list[str],
         Field(

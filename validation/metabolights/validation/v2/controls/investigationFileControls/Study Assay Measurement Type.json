@@ -3,7 +3,6 @@
         {
             "ruleName": "Study Assay Measurement Type-01",
             "fieldName": "Study Assay Measurement Type",
-            "ontologyValidationType": "any-ontology-term",
             "ontologies": [],
             "allowedParentOntologyTerms": null,
             "description": "",
@@ -43,7 +42,6 @@
         {
             "ruleName": "Study Assay Measurement Type-03",
             "fieldName": "Study Assay Measurement Type",
-            "ontologyValidationType": "any-ontology-term",
             "ontologies": [
                 "MSIO",
                 "OBI"

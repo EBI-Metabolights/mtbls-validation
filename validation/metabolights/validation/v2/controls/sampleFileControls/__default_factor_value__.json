@@ -3,7 +3,6 @@
         {
             "ruleName": "default-sample-factor_value-rule-01",
             "fieldName": "",
-            "ontologyValidationType": "any-ontology-term",
             "ontologies": [
                 "OBI",
                 "EFO",

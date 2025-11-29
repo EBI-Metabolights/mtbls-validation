@@ -3,7 +3,6 @@
         {
             "ruleName": "Characteristics[Cell type]-01",
             "fieldName": "Characteristics[Cell type]",
-            "ontologyValidationType": "any-ontology-term",
             "ontologies": [
                 "CL",
                 "CLO"

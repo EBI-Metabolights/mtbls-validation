@@ -3,7 +3,6 @@
         {
             "ruleName": "Unit-01",
             "fieldName": "Unit",
-            "ontologyValidationType": "any-ontology-term",
             "ontologies": [],
             "allowedParentOntologyTerms": {
                 "excludeByLabelPattern": [

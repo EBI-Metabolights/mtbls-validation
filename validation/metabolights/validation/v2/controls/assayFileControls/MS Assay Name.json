@@ -3,7 +3,6 @@
         {
             "ruleName": "MS Assay Name-01",
             "fieldName": "MS Assay Name",
-            "ontologyValidationType": "any-ontology-term",
             "ontologies": [],
             "allowedParentOntologyTerms": null,
             "description": "",

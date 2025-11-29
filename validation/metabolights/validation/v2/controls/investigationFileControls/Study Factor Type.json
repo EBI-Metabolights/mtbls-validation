@@ -3,7 +3,6 @@
         {
             "ruleName": "Study Factor Type-01",
             "fieldName": "Study Factor Type",
-            "ontologyValidationType": "any-ontology-term",
             "ontologies": [
                 "EFO",
                 "MTBLS",

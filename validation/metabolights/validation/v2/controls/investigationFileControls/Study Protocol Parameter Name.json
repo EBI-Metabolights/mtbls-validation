@@ -3,7 +3,6 @@
         {
             "ruleName": "Study Protocol Parameter Name-01",
             "fieldName": "Study Protocol Parameter Name",
-            "ontologyValidationType": "any-ontology-term",
             "ontologies": [
                 "MS",
                 "EFO",

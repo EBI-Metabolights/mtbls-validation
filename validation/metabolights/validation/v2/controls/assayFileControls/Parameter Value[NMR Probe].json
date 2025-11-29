@@ -3,7 +3,6 @@
         {
             "ruleName": "Parameter Value[NMR Probe]-01",
             "fieldName": "Parameter Value[NMR Probe]",
-            "ontologyValidationType": "any-ontology-term",
             "ontologies": [
                 "MTBLS"
             ],

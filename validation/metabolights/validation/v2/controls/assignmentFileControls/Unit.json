@@ -37,7 +37,7 @@
             },
             "description": "",
             "selectionCriteria": {
-                "isaFileType": "assay",
+                "isaFileType": "assignment",
                 "studyCreatedAtOrAfter": null,
                 "studyCreatedBefore": null,
                 "studyCategoryFilter": null,

@@ -1,7 +1,6 @@
 {
     "ruleName": "ontology-term-in-selected-ontologies-01",
     "fieldName": "",
-    "ontologyValidationType": "any-ontology-term",
     "ontologies": [
         "UO",
         "NCBITAXON"

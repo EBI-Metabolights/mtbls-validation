@@ -3,7 +3,6 @@
         {
             "ruleName": "default-investigation-file-rule-01",
             "fieldName": "",
-            "ontologyValidationType": "any-ontology-term",
             "ontologies": [
                 "OBI",
                 "EFO",

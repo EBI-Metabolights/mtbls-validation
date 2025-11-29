@@ -3,7 +3,6 @@
         {
             "ruleName": "Study Person Roles-01",
             "fieldName": "Study Person Roles",
-            "ontologyValidationType": "any-ontology-term",
             "ontologies": [
                 "NCIT"
             ],

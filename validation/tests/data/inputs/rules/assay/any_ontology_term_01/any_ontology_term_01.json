@@ -1,7 +1,6 @@
 {
     "ruleName": "any-ontology-term-01",
     "fieldName": "",
-    "ontologyValidationType": "any-ontology-term",
     "ontologies": [
         "UO",
         "NCIT"

@@ -3,7 +3,6 @@
         {
             "ruleName": "Study Design Type-01",
             "fieldName": "Study Design Type",
-            "ontologyValidationType": "any-ontology-term",
             "ontologies": [
                 "EFO",
                 "MSIO",

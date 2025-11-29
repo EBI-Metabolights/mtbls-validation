@@ -3,7 +3,6 @@
         {
             "ruleName": "default-sample-characteristic-rule-01",
             "fieldName": "",
-            "ontologyValidationType": "any-ontology-term",
             "ontologies": [
                 "OBI",
                 "EFO",

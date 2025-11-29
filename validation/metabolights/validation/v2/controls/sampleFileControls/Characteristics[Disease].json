@@ -3,7 +3,6 @@
         {
             "ruleName": "Characteristics[Disease]-01",
             "fieldName": "Characteristics[Disease]",
-            "ontologyValidationType": "any-ontology-term",
             "ontologies": [
                 "MONDO",
                 "MP",
