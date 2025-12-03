@@ -26,7 +26,7 @@
             },
             "termEnforcementLevel": "recommended",
             "unexpectedTermEnforcementLevel": "recommended",
-            "validationType": "selected-ontology-term",
+            "validationType": "any-ontology-term",
             "constraints": {},
             "defaultValue": null,
             "allowedMissingOntologyTerms": [],

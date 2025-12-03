@@ -87,7 +87,7 @@ if __name__ == "__main__":
     ]:
         shutil.rmtree(folder, ignore_errors=True)
 
-    create_all_templates_json(template_settings)
+    create_all_templates_json()
     create_all_controls_json()
     create_investigation_file_templates(template_settings)
     create_validation_rule_summary_pages(excel_rules)

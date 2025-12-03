@@ -6,7 +6,7 @@ from pydantic.alias_generators import to_snake
 from scripts import models as models
 
 
-def create_all_templates_json(template_settings: models.TemplateSettings = None):
+def create_all_templates_json():
     template_folder = "validation/metabolights/validation/v2/templates"
 
     files = Path(template_folder).rglob("*.json")
@@ -47,28 +47,28 @@ def create_all_templates_json(template_settings: models.TemplateSettings = None)
         for key, input_data in file_content.items():
             templates_dict[key] = []
             for x in input_data:
-                version = x.get("version")
-                if version not in template_settings.active_template_versions:
-                    continue
-                versions = template_settings.versions
-                for version in template_settings.active_template_versions:
-                    version_config = versions.get(version)
-                    active_templates = []
-                    if name.startswith("investigation"):
-                        active_templates = (
-                            version_config.active_investigation_file_templates
-                        )
-                    elif name.startswith("sample"):
-                        active_templates = version_config.active_sample_file_templates
-                    elif name.startswith("assay"):
-                        active_templates = version_config.active_assay_file_templates
-                    elif name.startswith("assignment"):
-                        active_templates = (
-                            version_config.active_assignment_file_templates
-                        )
-                    if key in active_templates:
-                        item = base_type.model_validate(x)
-                        templates_dict[key].append(item)
+                # version = x.get("version")
+                # if version not in template_settings.active_template_versions:
+                #     continue
+                # versions = template_settings.versions
+                # for version in template_settings.active_template_versions:
+                # version_config = versions.get(version)
+                # active_templates = []
+                # if name.startswith("investigation"):
+                #     active_templates = (
+                #         version_config.active_investigation_file_templates
+                #     )
+                # elif name.startswith("sample"):
+                #     active_templates = version_config.active_sample_file_templates
+                # elif name.startswith("assay"):
+                #     active_templates = version_config.active_assay_file_templates
+                # elif name.startswith("assignment"):
+                #     active_templates = (
+                #         version_config.active_assignment_file_templates
+                #     )
+                # if key in active_templates:
+                item = base_type.model_validate(x)
+                templates_dict[key].append(item)
 
     templates_json = templates.model_dump_json(by_alias=True, indent=4)
     Path("docs/json").mkdir(exist_ok=True, parents=True)
