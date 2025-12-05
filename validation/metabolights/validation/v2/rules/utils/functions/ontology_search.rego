@@ -61,7 +61,8 @@ get_table_unit_ontologies(meta, files) := result if {
 		header.columnStructure == "SINGLE_COLUMN_AND_UNIT_COLUMN"
 
 		column_name = header.columnName
-		print(column_name)
+
+		# print(column_name)
 		unit_name = table_file.table.columns[header.columnIndex + 1]
 		source_ref_name = table_file.table.columns[header.columnIndex + 2]
 		accession_name = table_file.table.columns[header.columnIndex + 3]

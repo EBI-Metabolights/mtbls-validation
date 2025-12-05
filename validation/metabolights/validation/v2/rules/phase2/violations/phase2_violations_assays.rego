@@ -809,7 +809,8 @@ rule_a_200_300_001_03 contains result if {
 		some i, name in sheet.table.data[column_name]
 		count(name) > 0
 		extensions := f.extension(name, def.CL_RAW_FILE_EXTENSIONS)
-		print(name, extensions)
+
+		# print(name, extensions)
 		count(extensions) == 0
 		row := (i + 1) + row_offset
 	}

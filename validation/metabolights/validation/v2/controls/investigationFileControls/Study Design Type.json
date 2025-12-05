@@ -98,7 +98,7 @@
                     "termSourceRef": "EFO"
                 },
                 {
-                    "term": "aging",
+                    "term": "Aging",
                     "termAccessionNumber": "http://purl.obolibrary.org/obo/NCIT_C16269",
                     "termSourceRef": "NCIT"
                 },

@@ -27,11 +27,11 @@
                     "name": "Extraction",
                     "description": "Properties of the preparation steps which took place before the measurement was performed.",
                     "type": {
-                        "term": "sample preparation",
-                        "termAccessionNumber": "http://purl.obolibrary.org/obo/MS_1000831",
-                        "termSourceRef": "MS"
+                        "term": "Extraction",
+                        "termAccessionNumber": "",
+                        "termSourceRef": ""
                     },
-                    "typeCurie": "MS:1000831",
+                    "typeCurie": "",
                     "parameters": [
                         "Post Extraction",
                         "Derivatization"
@@ -176,10 +176,10 @@
                     "description": "A planned process that produces output data from raw data.",
                     "type": {
                         "term": "data transformation",
-                        "termAccessionNumber": "http://purl.obolibrary.org/obo/OBI_0200000",
-                        "termSourceRef": "OBI"
+                        "termAccessionNumber": "",
+                        "termSourceRef": ""
                     },
-                    "typeCurie": "OBI:0200000",
+                    "typeCurie": "",
                     "parameters": [],
                     "parameterDefinitions": {}
                 },
@@ -188,10 +188,10 @@
                     "description": "Identification of the breakdown products of a substance, either through chemical instability or the actions of enzymes within the body.",
                     "type": {
                         "term": "metabolite identification",
-                        "termAccessionNumber": "http://purl.obolibrary.org/obo/MI_2131",
-                        "termSourceRef": "MI"
+                        "termAccessionNumber": "",
+                        "termSourceRef": ""
                     },
-                    "typeCurie": "MI:2131",
+                    "typeCurie": "",
                     "parameters": [],
                     "parameterDefinitions": {}
                 }
@@ -224,11 +224,11 @@
                     "name": "Extraction",
                     "description": "Properties of the preparation steps which took place before the measurement was performed.",
                     "type": {
-                        "term": "sample preparation",
-                        "termAccessionNumber": "http://purl.obolibrary.org/obo/MS_1000831",
-                        "termSourceRef": "MS"
+                        "term": "Extraction",
+                        "termAccessionNumber": "",
+                        "termSourceRef": ""
                     },
-                    "typeCurie": "MS:1000831",
+                    "typeCurie": "",
                     "parameters": [
                         "Post Extraction",
                         "Derivatization"
@@ -373,10 +373,10 @@
                     "description": "A planned process that produces output data from raw data.",
                     "type": {
                         "term": "data transformation",
-                        "termAccessionNumber": "http://purl.obolibrary.org/obo/OBI_0200000",
-                        "termSourceRef": "OBI"
+                        "termAccessionNumber": "",
+                        "termSourceRef": ""
                     },
-                    "typeCurie": "OBI:0200000",
+                    "typeCurie": "",
                     "parameters": [],
                     "parameterDefinitions": {}
                 },
@@ -385,10 +385,10 @@
                     "description": "Identification of the breakdown products of a substance, either through chemical instability or the actions of enzymes within the body.",
                     "type": {
                         "term": "metabolite identification",
-                        "termAccessionNumber": "http://purl.obolibrary.org/obo/MI_2131",
-                        "termSourceRef": "MI"
+                        "termAccessionNumber": "",
+                        "termSourceRef": ""
                     },
-                    "typeCurie": "MI:2131",
+                    "typeCurie": "",
                     "parameters": [],
                     "parameterDefinitions": {}
                 }

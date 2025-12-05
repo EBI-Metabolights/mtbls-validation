@@ -52,7 +52,7 @@
 |---|------|--------------|----------------|
 | 1 | sample collection protocol | EFO | http://www\.ebi\.ac\.uk/efo/EFO\_0005518 |
 | 2 | sample preparation | MS | http://purl\.obolibrary\.org/obo/MS\_1000831 |
-| 3 | chromatography | CHMO | http://purl\.obolibrary\.org/obo/CHMO\_0000591 |
+| 3 | chromatography | CHMO | http://purl\.obolibrary\.org/obo/CHMO\_0001000 |
 | 4 | mass spectrometry | CHMO | http://purl\.obolibrary\.org/obo/CHMO\_0000470 |
 | 5 | data transform | OBI | http://purl\.obolibrary\.org/obo/OBI\_0200000 |
 | 6 | metabolite identification | MI | http://purl\.obolibrary\.org/obo/MI\_2131 |
@@ -89,7 +89,7 @@
 | 6 | tandem mass spectrometry | CHMO | http://purl\.obolibrary\.org/obo/CHMO\_0000575 |
 | 7 | Multi\-omics study | PRIDE | http://purl\.obolibrary\.org/obo/PRIDE\_0000461 |
 | 8 | microbiome | EFO | http://www\.ebi\.ac\.uk/efo/EFO\_0004982 |
-| 9 | aging | NCIT | http://purl\.obolibrary\.org/obo/NCIT\_C16269 |
+| 9 | Aging | NCIT | http://purl\.obolibrary\.org/obo/NCIT\_C16269 |
 | 10 | cancer | MONDO | http://purl\.obolibrary\.org/obo/MONDO\_0004992 |
 
 ## Study Person Roles

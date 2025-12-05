@@ -8348,7 +8348,7 @@
                     },
                     {
                         "term": "chromatography",
-                        "termAccessionNumber": "http://purl.obolibrary.org/obo/CHMO_0000591",
+                        "termAccessionNumber": "http://purl.obolibrary.org/obo/CHMO_0001000",
                         "termSourceRef": "CHMO"
                     },
                     {
@@ -8494,7 +8494,7 @@
                         "termSourceRef": "EFO"
                     },
                     {
-                        "term": "aging",
+                        "term": "Aging",
                         "termAccessionNumber": "http://purl.obolibrary.org/obo/NCIT_C16269",
                         "termSourceRef": "NCIT"
                     },

@@ -35,7 +35,8 @@ test_rule_i_200_900_001_01_no_violation_01 if {
 		}],
 	)
 	result := rules.rule_i_200_900_001_01 with input as input_data
-	print(result)
+
+	# print(result)
 	count(result) == 0
 }
 
