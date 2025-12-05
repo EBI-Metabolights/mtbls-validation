@@ -59,6 +59,55 @@
             "allowedPlaceholders": [],
             "terms": [],
             "unexpectedTerms": []
+        },
+        {
+            "ruleName": "Characteristics[Disease]-01",
+            "fieldName": "Characteristics[Disease]",
+            "ontologies": [
+                "MONDO",
+                "MP",
+                "SNOMED"
+            ],
+            "allowedParentOntologyTerms": null,
+            "description": "",
+            "selectionCriteria": {
+                "isaFileType": "sample",
+                "studyCreatedAtOrAfter": null,
+                "studyCreatedBefore": null,
+                "studyCategoryFilter": null,
+                "templateVersionFilter": null,
+                "isaFileTemplateNameFilter": null,
+                "linkedFieldAndValueFilter": null
+            },
+            "termEnforcementLevel": "recommended",
+            "unexpectedTermEnforcementLevel": "recommended",
+            "validationType": "ontology-term-in-selected-ontologies",
+            "constraints": {},
+            "defaultValue": {
+                "term": "Not Applicable",
+                "termAccessionNumber": "http://purl.obolibrary.org/obo/NCIT_C48660",
+                "termSourceRef": "NCIT"
+            },
+            "allowedMissingOntologyTerms": [
+                {
+                    "term": "Not Applicable",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/NCIT_C48660",
+                    "termSourceRef": "NCIT"
+                }
+            ],
+            "allowedOtherSources": [
+                {
+                    "sourceLabel": "wikidata",
+                    "accessionPrefix": "https://www.wikidata.org/wiki/"
+                },
+                {
+                    "sourceLabel": "ILX",
+                    "accessionPrefix": "http://uri.interlex.org/base/ilx_"
+                }
+            ],
+            "allowedPlaceholders": [],
+            "terms": [],
+            "unexpectedTerms": []
         }
     ]
 }

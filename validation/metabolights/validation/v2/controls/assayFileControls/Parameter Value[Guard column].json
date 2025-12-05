@@ -308,12 +308,7 @@
                 "isaFileTemplateNameFilter": [
                     "GC-MS"
                 ],
-                "linkedFieldAndValueFilter": [
-                    {
-                        "name": "Protocol REF",
-                        "value": "Chromatography"
-                    }
-                ]
+                "linkedFieldAndValueFilter": null
             },
             "termEnforcementLevel": "recommended",
             "unexpectedTermEnforcementLevel": "recommended",

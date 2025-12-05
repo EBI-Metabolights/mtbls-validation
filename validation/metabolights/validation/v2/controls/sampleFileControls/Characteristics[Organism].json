@@ -138,12 +138,7 @@
                 "studyCategoryFilter": null,
                 "templateVersionFilter": null,
                 "isaFileTemplateNameFilter": null,
-                "linkedFieldAndValueFilter": [
-                    {
-                        "name": "Source Name",
-                        "value": null
-                    }
-                ]
+                "linkedFieldAndValueFilter": null
             },
             "termEnforcementLevel": "recommended",
             "unexpectedTermEnforcementLevel": "required",

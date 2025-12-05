@@ -71,8 +71,8 @@
 | Applicable Study Categories | All |
 | Applicable Template Names | All |
 | Applicable Template Versions | All |
-| Validation Type | ontology-term-in-selected-ontologies |
-| Ontologies [Ordered] | EFO, MSIO, NCIT, MTBLS, CHEBI, CHMO, MONDO, PRIDE, GO, MESH |
+| Validation Type | any-ontology-term |
+| Recommended Ontologies [Ordered] | EFO, MSIO, NCIT, MTBLS, CHEBI, CHMO, MONDO, PRIDE, GO, MESH |
 | Allowed Placeholders | \[MTBLS, http://www\.ebi\.ac\.uk/metabolights/ontology/placeholder\], \[, \] |
 | Allowed Other Sources | \[MTBLS, http://www\.ebi\.ac\.uk/metabolights/ontology/MTBLS\_\], \[wikidata, https://www\.wikidata\.org/wiki/\], \[ILX, http://uri\.interlex\.org/base/ilx\_\] |
 | Ontology Term Enforcement Level | recommended |
@@ -142,8 +142,8 @@
 | Applicable Study Categories | All |
 | Applicable Template Names | All |
 | Applicable Template Versions | All |
-| Validation Type | ontology-term-in-selected-ontologies |
-| Ontologies [Ordered] | EFO, NCIT, MTBLS, CHEBI, CHMO, MONDO, PRIDE, GO, MESH |
+| Validation Type | any-ontology-term |
+| Recommended Ontologies [Ordered] | EFO, NCIT, MTBLS, CHEBI, CHMO, MONDO, PRIDE, GO, MESH |
 | Allowed Placeholders | \[MTBLS, http://www\.ebi\.ac\.uk/metabolights/ontology/placeholder\], \[, \] |
 | Allowed Other Sources | \[MTBLS, http://www\.ebi\.ac\.uk/metabolights/ontology/MTBLS\_\], \[wikidata, https://www\.wikidata\.org/wiki/\], \[ILX, http://uri\.interlex\.org/base/ilx\_\] |
 
@@ -156,8 +156,8 @@
 | Applicable Study Categories | All |
 | Applicable Template Names | All |
 | Applicable Template Versions | All |
-| Validation Type | ontology-term-in-selected-ontologies |
-| Ontologies [Ordered] | MS, EFO, NCIT, MTBLS, CHMO, MONDO, PRIDE, GO, MESH, MI |
+| Validation Type | any-ontology-term |
+| Recommended Ontologies [Ordered] | MS, EFO, NCIT, MTBLS, CHMO, MONDO, PRIDE, GO, MESH, MI |
 | Allowed Placeholders | \[MTBLS, http://www\.ebi\.ac\.uk/metabolights/ontology/placeholder\], \[, \] |
 | Allowed Other Sources | \[MTBLS, http://www\.ebi\.ac\.uk/metabolights/ontology/MTBLS\_\] |
 | Ontology Term Enforcement Level | recommended |
@@ -269,8 +269,8 @@
 | Applicable Study Categories | All |
 | Applicable Template Names | All |
 | Applicable Template Versions | All |
-| Validation Type | ontology-term-in-selected-ontologies |
-| Ontologies [Ordered] | EFO, MTBLS, ENVO, MESH, CHEBI, CHMO, NCIT, PO |
+| Validation Type | any-ontology-term |
+| Recommended Ontologies [Ordered] | EFO, MTBLS, ENVO, MESH, CHEBI, CHMO, NCIT, PO |
 | Allowed Placeholders | \[MTBLS, http://www\.ebi\.ac\.uk/metabolights/ontology/placeholder\], \[, \] |
 | Allowed Other Sources | \[MTBLS, http://www\.ebi\.ac\.uk/metabolights/ontology/MTBLS\_\], \[wikidata, https://www\.wikidata\.org/wiki/\], \[ILX, http://uri\.interlex\.org/base/ilx\_\] |
 | Ontology Term Enforcement Level | recommended |

@@ -1267,7 +1267,7 @@
             },
             "termEnforcementLevel": "recommended",
             "unexpectedTermEnforcementLevel": "recommended",
-            "validationType": "ontology-term-in-selected-ontologies",
+            "validationType": "any-ontology-term",
             "constraints": {},
             "defaultValue": null,
             "allowedMissingOntologyTerms": [],

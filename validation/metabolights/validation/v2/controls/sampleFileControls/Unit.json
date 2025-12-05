@@ -9,9 +9,7 @@
                     "^.*unit$",
                     "^.*Unit of.*$"
                 ],
-                "excludeByAccession": [
-                    "http://purl.obolibrary.org/obo/NCIT_C41139"
-                ],
+                "excludeByAccession": [],
                 "parents": [
                     {
                         "term": "unit",
