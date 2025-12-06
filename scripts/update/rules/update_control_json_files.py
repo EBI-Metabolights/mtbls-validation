@@ -35,7 +35,6 @@ def update_control_list_json_files():
                 if parents:
                     if parents.exclude_by_label_pattern:
                         for pattern in parents.exclude_by_label_pattern:
-                            # raise error if not valid pattern format
                             re.match(pattern, "test")
 
                 file_content_data.data[key].append(data)

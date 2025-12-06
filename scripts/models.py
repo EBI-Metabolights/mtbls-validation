@@ -441,9 +441,8 @@ class OntologySourceReferenceTemplate(StudyBaseModel):
     source_name: Annotated[str, Field(description="Source name")]
     source_file: Annotated[str, Field(description="Source file")]
     source_version: Annotated[str, Field(description="Source version")]
-    source_description: Annotated[
-        str, Field(description="Source description and full name")
-    ]
+    source_description: Annotated[str, Field(description="Source full name")]
+    source_details: Annotated[str, Field(description="Source details")] = ""
 
 
 class DefaultControl(StudyBaseModel):

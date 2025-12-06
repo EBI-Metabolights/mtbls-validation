@@ -47,26 +47,6 @@ def create_all_templates_json():
         for key, input_data in file_content.items():
             templates_dict[key] = []
             for x in input_data:
-                # version = x.get("version")
-                # if version not in template_settings.active_template_versions:
-                #     continue
-                # versions = template_settings.versions
-                # for version in template_settings.active_template_versions:
-                # version_config = versions.get(version)
-                # active_templates = []
-                # if name.startswith("investigation"):
-                #     active_templates = (
-                #         version_config.active_investigation_file_templates
-                #     )
-                # elif name.startswith("sample"):
-                #     active_templates = version_config.active_sample_file_templates
-                # elif name.startswith("assay"):
-                #     active_templates = version_config.active_assay_file_templates
-                # elif name.startswith("assignment"):
-                #     active_templates = (
-                #         version_config.active_assignment_file_templates
-                #     )
-                # if key in active_templates:
                 item = base_type.model_validate(x)
                 templates_dict[key].append(item)
 
