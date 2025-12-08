@@ -1,0 +1,518 @@
+{
+    "minimum": [
+        {
+            "version": "1.0",
+            "description": "MetaboLights ISA-TAB Investigation File Template 1.0.",
+            "sections": [
+                {
+                    "name": "ONTOLOGY SOURCE REFERENCE",
+                    "fields": [
+                        "Term Source Name",
+                        "Term Source File",
+                        "Term Source Version",
+                        "Term Source Description"
+                    ],
+                    "defaultComments": [],
+                    "defaultFieldValues": {
+                        "Term Source Name": [
+                            "CHMO",
+                            "EFO",
+                            "MTBLS",
+                            "NCIT",
+                            "OBI"
+                        ],
+                        "Term Source File": [
+                            "http://purl.obolibrary.org/obo/chmo.owl",
+                            "http://www.ebi.ac.uk/efo/efo.owl",
+                            "https://www.ebi.ac.uk/metabolights/",
+                            "https://github.com/EBI-Metabolights/MtblsWS-Py/blob/main/resources/Metabolights.owl",
+                            "http://purl.obolibrary.org/obo/obi.owl"
+                        ],
+                        "Term Source Version": [
+                            "",
+                            "",
+                            "",
+                            "",
+                            ""
+                        ],
+                        "Term Source Description": [
+                            "Chemical Methods Ontology",
+                            "Experimental Factor Ontology",
+                            "MetaboLights Controlled Vocabulary",
+                            "National Cancer Institute Thesaurus",
+                            "Ontology for Biomedical Investigations"
+                        ]
+                    },
+                    "defaultCommentValues": {}
+                },
+                {
+                    "name": "INVESTIGATION",
+                    "fields": [
+                        "Investigation Identifier",
+                        "Investigation Title",
+                        "Investigation Description",
+                        "Investigation Submission Date",
+                        "Investigation Public Release Date"
+                    ],
+                    "defaultComments": [],
+                    "defaultFieldValues": {},
+                    "defaultCommentValues": {}
+                },
+                {
+                    "name": "INVESTIGATION PUBLICATIONS",
+                    "fields": [
+                        "Investigation PubMed ID",
+                        "Investigation Publication DOI",
+                        "Investigation Publication Author List",
+                        "Investigation Publication Title",
+                        "Investigation Publication Status",
+                        "Investigation Publication Status Term Accession Number",
+                        "Investigation Publication Status Term Source REF"
+                    ],
+                    "defaultComments": [],
+                    "defaultFieldValues": {},
+                    "defaultCommentValues": {}
+                },
+                {
+                    "name": "INVESTIGATION CONTACTS",
+                    "fields": [
+                        "Investigation Person Last Name",
+                        "Investigation Person First Name",
+                        "Investigation Person Mid Initials",
+                        "Investigation Person Email",
+                        "Investigation Person Phone",
+                        "Investigation Person Fax",
+                        "Investigation Person Address",
+                        "Investigation Person Affiliation",
+                        "Investigation Person Roles",
+                        "Investigation Person Roles Term Accession Number",
+                        "Investigation Person Roles Term Source REF"
+                    ],
+                    "defaultComments": [],
+                    "defaultFieldValues": {},
+                    "defaultCommentValues": {}
+                },
+                {
+                    "name": "STUDY",
+                    "fields": [
+                        "Study Identifier",
+                        "Study Title",
+                        "Study Description",
+                        "Study Submission Date",
+                        "Study Public Release Date",
+                        "Study File Name"
+                    ],
+                    "defaultComments": [
+                        "Created At",
+                        "License",
+                        "Sample Template",
+                        "Study Template",
+                        "Template Version",
+                        "Study Category",
+                        "Funder",
+                        "Funder ROR Id",
+                        "Grant Identifier"
+                    ],
+                    "defaultFieldValues": {
+                        "Study File Name": [
+                            "s_Sample.txt"
+                        ],
+                        "Study Title": [
+                            "Please update the study title"
+                        ],
+                        "Study Identifier": [
+                            "MTBLS"
+                        ],
+                        "Study Description": [
+                            "Please update the study abstract/description"
+                        ]
+                    },
+                    "defaultCommentValues": {
+                        "License": [
+                            "CC0 1.0 Universal"
+                        ],
+                        "Sample Template": [
+                            "minimum"
+                        ],
+                        "Study Template": [
+                            "minimum"
+                        ],
+                        "Template Version": [
+                            "1.0"
+                        ],
+                        "Study Category": [
+                            "other"
+                        ]
+                    }
+                },
+                {
+                    "name": "STUDY DESIGN DESCRIPTORS",
+                    "fields": [
+                        "Study Design Type",
+                        "Study Design Type Term Accession Number",
+                        "Study Design Type Term Source REF"
+                    ],
+                    "defaultComments": [
+                        "Study Design Category",
+                        "Study Design Source"
+                    ],
+                    "defaultFieldValues": {},
+                    "defaultCommentValues": {}
+                },
+                {
+                    "name": "STUDY PUBLICATIONS",
+                    "fields": [
+                        "Study PubMed ID",
+                        "Study Publication DOI",
+                        "Study Publication Author List",
+                        "Study Publication Title",
+                        "Study Publication Status",
+                        "Study Publication Status Term Accession Number",
+                        "Study Publication Status Term Source REF"
+                    ],
+                    "defaultComments": [],
+                    "defaultFieldValues": {
+                        "Study Publication Title": [
+                            "Please update the publication title"
+                        ]
+                    },
+                    "defaultCommentValues": {}
+                },
+                {
+                    "name": "STUDY FACTORS",
+                    "fields": [
+                        "Study Factor Name",
+                        "Study Factor Type",
+                        "Study Factor Type Term Accession Number",
+                        "Study Factor Type Term Source REF"
+                    ],
+                    "defaultComments": [
+                        "Study Factor Value Format"
+                    ],
+                    "defaultFieldValues": {},
+                    "defaultCommentValues": {}
+                },
+                {
+                    "name": "STUDY ASSAYS",
+                    "fields": [
+                        "Study Assay File Name",
+                        "Study Assay Measurement Type",
+                        "Study Assay Measurement Type Term Accession Number",
+                        "Study Assay Measurement Type Term Source REF",
+                        "Study Assay Technology Type",
+                        "Study Assay Technology Type Term Accession Number",
+                        "Study Assay Technology Type Term Source REF",
+                        "Study Assay Technology Platform"
+                    ],
+                    "defaultComments": [],
+                    "defaultFieldValues": {},
+                    "defaultCommentValues": {}
+                },
+                {
+                    "name": "STUDY PROTOCOLS",
+                    "fields": [
+                        "Study Protocol Name",
+                        "Study Protocol Type",
+                        "Study Protocol Type Term Accession Number",
+                        "Study Protocol Type Term Source REF",
+                        "Study Protocol Description",
+                        "Study Protocol URI",
+                        "Study Protocol Version",
+                        "Study Protocol Parameters Name",
+                        "Study Protocol Parameters Name Term Accession Number",
+                        "Study Protocol Parameters Name Term Source REF",
+                        "Study Protocol Components Name",
+                        "Study Protocol Components Type",
+                        "Study Protocol Components Type Term Accession Number",
+                        "Study Protocol Components Type Term Source REF"
+                    ],
+                    "defaultComments": [
+                        "Study Protocol Parameters Value Format"
+                    ],
+                    "defaultFieldValues": {},
+                    "defaultCommentValues": {}
+                },
+                {
+                    "name": "STUDY CONTACTS",
+                    "fields": [
+                        "Study Person Last Name",
+                        "Study Person First Name",
+                        "Study Person Mid Initials",
+                        "Study Person Email",
+                        "Study Person Phone",
+                        "Study Person Fax",
+                        "Study Person Address",
+                        "Study Person Affiliation",
+                        "Study Person Roles",
+                        "Study Person Roles Term Accession Number",
+                        "Study Person Roles Term Source REF"
+                    ],
+                    "defaultComments": [
+                        "Study Person ORCID",
+                        "Study Person Additional Email",
+                        "Study Person Affiliation ROR Id"
+                    ],
+                    "defaultFieldValues": {},
+                    "defaultCommentValues": {}
+                }
+            ]
+        },
+        {
+            "version": "2.0",
+            "description": "MetaboLights ISA-TAB Investigation File Template 2.0.",
+            "sections": [
+                {
+                    "name": "ONTOLOGY SOURCE REFERENCE",
+                    "fields": [
+                        "Term Source Name",
+                        "Term Source File",
+                        "Term Source Version",
+                        "Term Source Description"
+                    ],
+                    "defaultComments": [],
+                    "defaultFieldValues": {
+                        "Term Source Name": [
+                            "CHMO",
+                            "EFO",
+                            "MTBLS",
+                            "NCIT",
+                            "OBI"
+                        ],
+                        "Term Source File": [
+                            "http://purl.obolibrary.org/obo/chmo.owl",
+                            "http://www.ebi.ac.uk/efo/efo.owl",
+                            "https://www.ebi.ac.uk/metabolights/",
+                            "https://github.com/EBI-Metabolights/MtblsWS-Py/blob/main/resources/Metabolights.owl",
+                            "http://purl.obolibrary.org/obo/obi.owl"
+                        ],
+                        "Term Source Version": [
+                            "",
+                            "",
+                            "",
+                            "",
+                            ""
+                        ],
+                        "Term Source Description": [
+                            "Chemical Methods Ontology",
+                            "Experimental Factor Ontology",
+                            "MetaboLights Controlled Vocabulary",
+                            "National Cancer Institute Thesaurus",
+                            "Ontology for Biomedical Investigations"
+                        ]
+                    },
+                    "defaultCommentValues": {}
+                },
+                {
+                    "name": "INVESTIGATION",
+                    "fields": [
+                        "Investigation Identifier",
+                        "Investigation Title",
+                        "Investigation Description",
+                        "Investigation Submission Date",
+                        "Investigation Public Release Date"
+                    ],
+                    "defaultComments": [],
+                    "defaultFieldValues": {},
+                    "defaultCommentValues": {}
+                },
+                {
+                    "name": "INVESTIGATION PUBLICATIONS",
+                    "fields": [
+                        "Investigation PubMed ID",
+                        "Investigation Publication DOI",
+                        "Investigation Publication Author List",
+                        "Investigation Publication Title",
+                        "Investigation Publication Status",
+                        "Investigation Publication Status Term Accession Number",
+                        "Investigation Publication Status Term Source REF"
+                    ],
+                    "defaultComments": [],
+                    "defaultFieldValues": {},
+                    "defaultCommentValues": {}
+                },
+                {
+                    "name": "INVESTIGATION CONTACTS",
+                    "fields": [
+                        "Investigation Person Last Name",
+                        "Investigation Person First Name",
+                        "Investigation Person Mid Initials",
+                        "Investigation Person Email",
+                        "Investigation Person Phone",
+                        "Investigation Person Fax",
+                        "Investigation Person Address",
+                        "Investigation Person Affiliation",
+                        "Investigation Person Roles",
+                        "Investigation Person Roles Term Accession Number",
+                        "Investigation Person Roles Term Source REF"
+                    ],
+                    "defaultComments": [],
+                    "defaultFieldValues": {},
+                    "defaultCommentValues": {}
+                },
+                {
+                    "name": "STUDY",
+                    "fields": [
+                        "Study Identifier",
+                        "Study Title",
+                        "Study Description",
+                        "Study Submission Date",
+                        "Study Public Release Date",
+                        "Study File Name"
+                    ],
+                    "defaultComments": [
+                        "Created At",
+                        "License",
+                        "Sample Template",
+                        "Study Template",
+                        "Template Version",
+                        "Study Category",
+                        "Funder",
+                        "Funder ROR Id",
+                        "Grant Identifier"
+                    ],
+                    "defaultFieldValues": {
+                        "Study File Name": [
+                            "s_Sample.txt"
+                        ],
+                        "Study Title": [
+                            "Please update the study title"
+                        ],
+                        "Study Identifier": [
+                            "MTBLS"
+                        ],
+                        "Study Description": [
+                            "Please update the study abstract/description"
+                        ]
+                    },
+                    "defaultCommentValues": {
+                        "License": [
+                            "CC0 1.0 Universal"
+                        ],
+                        "Sample Template": [
+                            "minimum"
+                        ],
+                        "Study Template": [
+                            "minimum"
+                        ],
+                        "Template Version": [
+                            "2.0"
+                        ],
+                        "Study Category": [
+                            "other"
+                        ]
+                    }
+                },
+                {
+                    "name": "STUDY DESIGN DESCRIPTORS",
+                    "fields": [
+                        "Study Design Type",
+                        "Study Design Type Term Accession Number",
+                        "Study Design Type Term Source REF"
+                    ],
+                    "defaultComments": [
+                        "Study Design Category",
+                        "Study Design Source"
+                    ],
+                    "defaultFieldValues": {},
+                    "defaultCommentValues": {}
+                },
+                {
+                    "name": "STUDY PUBLICATIONS",
+                    "fields": [
+                        "Study PubMed ID",
+                        "Study Publication DOI",
+                        "Study Publication Author List",
+                        "Study Publication Title",
+                        "Study Publication Status",
+                        "Study Publication Status Term Accession Number",
+                        "Study Publication Status Term Source REF"
+                    ],
+                    "defaultComments": [],
+                    "defaultFieldValues": {
+                        "Study Publication Title": [
+                            "Please update the publication title"
+                        ]
+                    },
+                    "defaultCommentValues": {}
+                },
+                {
+                    "name": "STUDY FACTORS",
+                    "fields": [
+                        "Study Factor Name",
+                        "Study Factor Type",
+                        "Study Factor Type Term Accession Number",
+                        "Study Factor Type Term Source REF"
+                    ],
+                    "defaultComments": [
+                        "Study Factor Value Format"
+                    ],
+                    "defaultFieldValues": {},
+                    "defaultCommentValues": {}
+                },
+                {
+                    "name": "STUDY ASSAYS",
+                    "fields": [
+                        "Study Assay File Name",
+                        "Study Assay Measurement Type",
+                        "Study Assay Measurement Type Term Accession Number",
+                        "Study Assay Measurement Type Term Source REF",
+                        "Study Assay Technology Type",
+                        "Study Assay Technology Type Term Accession Number",
+                        "Study Assay Technology Type Term Source REF",
+                        "Study Assay Technology Platform"
+                    ],
+                    "defaultComments": [],
+                    "defaultFieldValues": {},
+                    "defaultCommentValues": {}
+                },
+                {
+                    "name": "STUDY PROTOCOLS",
+                    "fields": [
+                        "Study Protocol Name",
+                        "Study Protocol Type",
+                        "Study Protocol Type Term Accession Number",
+                        "Study Protocol Type Term Source REF",
+                        "Study Protocol Description",
+                        "Study Protocol URI",
+                        "Study Protocol Version",
+                        "Study Protocol Parameters Name",
+                        "Study Protocol Parameters Name Term Accession Number",
+                        "Study Protocol Parameters Name Term Source REF",
+                        "Study Protocol Components Name",
+                        "Study Protocol Components Type",
+                        "Study Protocol Components Type Term Accession Number",
+                        "Study Protocol Components Type Term Source REF"
+                    ],
+                    "defaultComments": [
+                        "Study Protocol Parameters Value Format"
+                    ],
+                    "defaultFieldValues": {},
+                    "defaultCommentValues": {}
+                },
+                {
+                    "name": "STUDY CONTACTS",
+                    "fields": [
+                        "Study Person Last Name",
+                        "Study Person First Name",
+                        "Study Person Mid Initials",
+                        "Study Person Email",
+                        "Study Person Phone",
+                        "Study Person Fax",
+                        "Study Person Address",
+                        "Study Person Affiliation",
+                        "Study Person Roles",
+                        "Study Person Roles Term Accession Number",
+                        "Study Person Roles Term Source REF"
+                    ],
+                    "defaultComments": [
+                        "Study Person ORCID",
+                        "Study Person Additional Email",
+                        "Study Person Affiliation ROR Id"
+                    ],
+                    "defaultFieldValues": {},
+                    "defaultCommentValues": {}
+                }
+            ]
+        }
+    ]
+}

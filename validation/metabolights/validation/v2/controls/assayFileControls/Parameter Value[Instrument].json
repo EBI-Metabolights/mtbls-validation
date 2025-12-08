@@ -2,8 +2,24 @@
     "Parameter Value[Instrument]": [
         {
             "ruleName": "Parameter Value[Instrument]-01",
-            "description": "",
             "fieldName": "Parameter Value[Instrument]",
+            "ontologies": [
+                "MS"
+            ],
+            "allowedParentOntologyTerms": {
+                "excludeByLabelPattern": [
+                    "^.*instrument model$"
+                ],
+                "excludeByAccession": [],
+                "parents": [
+                    {
+                        "term": "instrument model",
+                        "termAccessionNumber": "http://purl.obolibrary.org/obo/MS_1000031",
+                        "termSourceRef": "MS"
+                    }
+                ]
+            },
+            "description": "",
             "selectionCriteria": {
                 "isaFileType": "assay",
                 "studyCreatedAtOrAfter": null,
@@ -11,54 +27,6 @@
                 "studyCategoryFilter": [
                     "ms-mhd-enabled"
                 ],
-                "templateVersionFilter": null,
-                "isaFileTemplateNameFilter": null,
-                "linkedFieldAndValueFilter": [
-                    {
-                        "name": "Protocol REF",
-                        "value": "Mass spectrometry"
-                    }
-                ]
-            },
-            "validationType": "child-ontology-term",
-            "defaultValue": null,
-            "allowedMissingOntologyTerms": [],
-            "allowedOtherSources": [
-                {
-                    "sourceLabel": "wikidata",
-                    "accessionPrefix": "https://www.wikidata.org/wiki/"
-                },
-                {
-                    "sourceLabel": "ILX",
-                    "accessionPrefix": "http://uri.interlex.org/base/ilx_"
-                }
-            ],
-            "allowedPlaceholders": null,
-            "terms": null,
-            "ontologies": null,
-            "allowedParentOntologyTerms": {
-                "excludeByLabelPattern": [
-                    "^*.instrument model$"
-                ],
-                "excludeByAccession": [],
-                "parents": [
-                    {
-                        "term": "instrument model",
-                        "termSourceRef": "MS",
-                        "termAccessionNumber": "http://purl.obolibrary.org/obo/MS_1000031"
-                    }
-                ]
-            }
-        },
-        {
-            "ruleName": "Parameter Value[Instrument]-02",
-            "description": "",
-            "fieldName": "Parameter Value[Instrument]",
-            "selectionCriteria": {
-                "isaFileType": "assay",
-                "studyCreatedAtOrAfter": "2025-12-01T00:00:00",
-                "studyCreatedBefore": null,
-                "studyCategoryFilter": null,
                 "templateVersionFilter": null,
                 "isaFileTemplateNameFilter": [
                     "LC-MS",
@@ -77,7 +45,10 @@
                     }
                 ]
             },
-            "validationType": "child-ontology-term",
+            "termEnforcementLevel": "recommended",
+            "unexpectedTermEnforcementLevel": "recommended",
+            "validationType": "ontology-term-in-selected-ontologies",
+            "constraints": {},
             "defaultValue": null,
             "allowedMissingOntologyTerms": [],
             "allowedOtherSources": [
@@ -90,31 +61,22 @@
                     "accessionPrefix": "http://uri.interlex.org/base/ilx_"
                 }
             ],
-            "allowedPlaceholders": null,
-            "terms": null,
-            "ontologies": null,
-            "allowedParentOntologyTerms": {
-                "excludeByLabelPattern": [
-                    "^*.instrument model$"
-                ],
-                "excludeByAccession": [],
-                "parents": [
-                    {
-                        "term": "instrument model",
-                        "termSourceRef": "MS",
-                        "termAccessionNumber": "http://purl.obolibrary.org/obo/MS_1000031"
-                    }
-                ]
-            }
+            "allowedPlaceholders": [],
+            "terms": [],
+            "unexpectedTerms": []
         },
         {
             "ruleName": "Parameter Value[Instrument]-03",
-            "description": "",
             "fieldName": "Parameter Value[Instrument]",
+            "ontologies": [
+                "MS"
+            ],
+            "allowedParentOntologyTerms": null,
+            "description": "",
             "selectionCriteria": {
                 "isaFileType": "assay",
                 "studyCreatedAtOrAfter": null,
-                "studyCreatedBefore": "2025-12-01T00:00:00",
+                "studyCreatedBefore": null,
                 "studyCategoryFilter": null,
                 "templateVersionFilter": null,
                 "isaFileTemplateNameFilter": [
@@ -127,7 +89,10 @@
                     }
                 ]
             },
-            "validationType": "any-ontology-term",
+            "termEnforcementLevel": "recommended",
+            "unexpectedTermEnforcementLevel": "recommended",
+            "validationType": "ontology-term-in-selected-ontologies",
+            "constraints": {},
             "defaultValue": null,
             "allowedMissingOntologyTerms": [],
             "allowedOtherSources": [
@@ -138,881 +103,881 @@
             ],
             "allowedPlaceholders": [
                 {
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/placeholder"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/placeholder",
+                    "termSourceRef": "MTBLS"
                 },
                 {
-                    "termSourceRef": "",
-                    "termAccessionNumber": ""
+                    "termAccessionNumber": "",
+                    "termSourceRef": ""
                 }
             ],
             "terms": [
                 {
                     "term": "AB SCIEX API 2000",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002035"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002035",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "AB SCIEX API 4000",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000593"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000593",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "AB SCIEX QTRAP 3200",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002298"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002298",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "AB SCIEX QTRAP 4000",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000594"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000594",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "AB SCIEX QTRAP 4500",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000595"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000595",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "AB SCIEX QTRAP 5500",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000598"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000598",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "AB SCIEX QTRAP 6500",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000599"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000599",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "AB SCIEX QTRAP 6500+",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002299"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002299",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "AB SCIEX Triple Quad 5500",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000600"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000600",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "AB SCIEX Triple Quad 5500+",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002036"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002036",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "AB SCIEX Triple Quad 5500+ QTRAP Ready",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002037"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002037",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "AB SCIEX Triple Quad 6500",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002038"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002038",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "AB SCIEX Triple Quad 6500+",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002039"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002039",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "AB SCIEX TripleTOF 4600",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002040"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002040",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "AB SCIEX TripleTOF 5600",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000601"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000601",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "AB SCIEX TripleTOF 5600+",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000602"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000602",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "AB SCIEX TripleTOF 6600",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000603"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000603",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "AB SCIEX TripleTOF 6600+",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000604"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000604",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Agilent 5973 MSD",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_001027"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_001027",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Agilent 5973N MSD",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000995"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000995",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Agilent 5975 MSD",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_001009"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_001009",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Agilent 5975C inert XL MSD",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_001026"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_001026",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Agilent 5975C MSD",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000994"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000994",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Agilent 5975T MSD",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002093"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002093",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Agilent 5977A MSD",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_001012"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_001012",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Agilent 5977B MSD",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_001013"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_001013",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Agilent 6210 TOF",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000605"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000605",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Agilent 6220 Accurate-Mass TOF",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000304"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000304",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Agilent 6224 Accurate-Mass TOF",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000606"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000606",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Agilent 6230 Accurate-Mass TOF",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000607"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000607",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Agilent 6430 Triple Quadrupole",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000608"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000608",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Agilent 6460 Triple Quadrupole",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000609"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000609",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Agilent 6470 Triple Quadrupole",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002094"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002094",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Agilent 6470B Triple Quadrupole",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002095"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002095",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Agilent 6490 Triple Quadrupole",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000610"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000610",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Agilent 6495 Triple Quadrupole",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000611"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000611",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Agilent 6495A Triple Quadrupole",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000612"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000612",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Agilent 6520 Q-TOF",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000613"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000613",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Agilent 6520A Q-TOF",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000614"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000614",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Agilent 6530 Accurate-Mass Q-TOF",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000615"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000615",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Agilent 6530A Accurate-Mass Q-TOF",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000616"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000616",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Agilent 6530B Accurate-Mass Q-TOF",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000617"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000617",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Agilent 6538 Accurate-Mass Q-TOF",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002096"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002096",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Agilent 6540 Q-TOF",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000618"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000618",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Agilent 6545 Q-TOF",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000619"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000619",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Agilent 6546 LC/Q-TOF",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002300"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002300",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Agilent 6550 iFunnel Q-TOF",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000620"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000620",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Agilent 6560 Ion Mobility Q-TOF",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000621"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000621",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Agilent 7000C Triple Quadrupole",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_001011"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_001011",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Agilent 7000D Triple Quadrupole",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002097"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002097",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Agilent 7010 Triple Quadrupole",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000998"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000998",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Agilent 7200 Q-TOF",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_001007"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_001007",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Agilent 7250 GC/Q-TOF",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002098"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002098",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Bruker APEX-Qe 9.4T",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000622"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000622",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Bruker CaptiveSpray nanoBooster and amaZon speed",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000623"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000623",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Bruker compact",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000624"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000624",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Bruker Esquire 3000",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000625"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000625",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Bruker Esquire 6000",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000626"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000626",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Bruker impact HD UHR-TOF",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002113"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002113",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Bruker impact II UHR-TOF",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000627"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000627",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Bruker maXis 4G UHR-ToF",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000630"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000630",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Bruker maXis II UHR-ToF",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002114"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002114",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Bruker maXis impact HD UHR-QTOF",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002115"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002115",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Bruker maXis impact UHR-QTOF",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000628"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000628",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Bruker maXis UHR-ToF",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000629"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000629",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Bruker micrOTOF",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000631"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000631",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Bruker micrOTOF-Q I",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000632"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000632",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Bruker micrOTOF-Q II",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000633"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000633",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Bruker micrOTOF-Q III",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000634"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000634",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Bruker scimaX MRMS",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000635"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000635",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Bruker solariX FTMS",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000636"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000636",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Bruker timsTOF",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002116"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002116",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Bruker timsTOF Pro",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002117"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002117",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Bruker timsTOF Pro 2",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002118"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002118",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "JEOL AccuTOF GCv",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_001017"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_001017",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "LECO Pegasus",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_001004"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_001004",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "LECO Pegasus 4D",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_001000"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_001000",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "LECO Pegasus 4D GCxGC-TOFMS",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002301"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002301",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "LECO Pegasus BT 4D GCxGC-TOFMS",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002302"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002302",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "LECO Pegasus BT TOFMS",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_001022"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_001022",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "LECO Pegasus GC-HRT",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000992"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000992",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "LECO Pegasus HT TOFMS",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_001019"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_001019",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "LECO Pegasus III",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000993"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000993",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "LECO Pegasus IV",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_001028"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_001028",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "PerkinElmer TurboMass",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_001015"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_001015",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "SCIEX QTRAP System",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002207"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002207",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Shimadzu GCMS-QP2010 Ultra",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000926"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000926",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Shimadzu GCMS-QP2020",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000920"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000920",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Shimadzu GCMS-QP5000",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_001008"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_001008",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Shimadzu GCMS-TQ8040",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_001024"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_001024",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Shimadzu GCMS-TQ8040 NX",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000996"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000996",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Shimadzu GCMS-TQ8050 NX",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002303"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002303",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Shimadzu LCMS-2020",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002213"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002213",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Shimadzu LCMS-8030",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002214"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002214",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Shimadzu LCMS-8030 Plus",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002215"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002215",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Shimadzu LCMS-8040",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002216"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002216",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Shimadzu LCMS-8050",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000637"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000637",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Shimadzu LCMS-9030",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002217"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002217",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Shimadzu LCMS-IT-TOF",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000638"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000638",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Thermo Electron PolarisQ",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_001021"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_001021",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Thermo Electron TRACE DSQ",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_001010"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_001010",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Thermo Finnigan TRACE DSQ",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_001025"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_001025",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Thermo Fisher LTQ",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000639"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000639",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Thermo Scientific DSQ II",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000997"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000997",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Thermo Scientific Exactive",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000640"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000640",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Thermo Scientific Exactive Plus",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000641"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000641",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Thermo Scientific ISQ",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_001018"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_001018",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Thermo Scientific ISQ LT",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000999"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000999",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Thermo Scientific ITQ 900",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_001005"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_001005",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Thermo Scientific LTQ FT Ultra",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000642"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000642",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Thermo Scientific LTQ Linear Ion Trap",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000652"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000652",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Thermo Scientific LTQ Orbitrap",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000644"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000644",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Thermo Scientific LTQ Orbitrap Classic",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000645"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000645",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Thermo Scientific LTQ Orbitrap Discovery",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000649"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000649",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Thermo Scientific LTQ Orbitrap Velos",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000650"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000650",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Thermo Scientific LTQ Orbitrap Velos ETD",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000651"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000651",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Thermo Scientific LTQ Orbitrap XL",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000647"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000647",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Thermo Scientific LTQ XL linear ion trap",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000653"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000653",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Thermo Scientific Orbitrap Elite",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000654"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000654",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Thermo Scientific Orbitrap Exploris 120",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002239"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002239",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Thermo Scientific Orbitrap Exploris 240",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002240"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002240",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Thermo Scientific Orbitrap Fusion",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000655"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000655",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Thermo Scientific Orbitrap Fusion Lumos Tribrid",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000656"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000656",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Thermo Scientific Orbitrap ID-X Tribrid",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002241"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002241",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Thermo Scientific Orbitrap IQ-X Tribrid",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002242"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002242",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Thermo Scientific Orbitrap Velos Pro",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000657"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000657",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Thermo Scientific Q Exactive",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000658"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000658",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Thermo Scientific Q Exactive Focus",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000659"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000659",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Thermo Scientific Q Exactive HF",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000660"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000660",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Thermo Scientific Q Exactive HF-X",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002243"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002243",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Thermo Scientific Q Exactive Plus",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000661"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000661",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Thermo Scientific TRACE DSQ",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_001001"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_001001",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Thermo Scientific TSQ 8000",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_001014"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_001014",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Thermo Scientific TSQ 9000",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002245"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002245",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Thermo Scientific TSQ Altis",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002246"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002246",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Thermo Scientific TSQ Altis Plus",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002247"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002247",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Thermo Scientific TSQ Quantiva",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000662"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000662",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Thermo Scientific TSQ Quantum",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002248"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002248",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Thermo Scientific TSQ Quantum Access MAX",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000663"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000663",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Thermo Scientific TSQ Quantum Ultra",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000664"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000664",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Thermo Scientific TSQ Quantum XLS",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_001023"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_001023",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Thermo Scientific TSQ Vantage",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000665"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000665",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Thermo Scientific Velos Pro",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000666"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000666",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "ThermoQuest Voyager",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_001006"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_001006",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Varian 4000 MSD",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_001002"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_001002",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Waters ACQUITY QDa",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002259"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002259",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Waters ACQUITY TQD",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000667"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000667",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Waters GCT Premier",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_001003"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_001003",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Waters LCT Premier",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000668"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000668",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Waters Micromass Q-Tof micro",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000669"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000669",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Waters Micromass Quattro micro API",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000670"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000670",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Waters Q-Tof Premier",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000671"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000671",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Waters Quattro Premier XE",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000672"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000672",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Waters SYNAPT G1 HDMS System",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000673"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000673",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Waters SYNAPT G2 HDMS System",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000674"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000674",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Waters SYNAPT G2-S",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002262"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002262",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Waters SYNAPT G2-S HDMS",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000675"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000675",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Waters SYNAPT G2-Si",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002263"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002263",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Waters SYNAPT G2-Si HDMS",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000676"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000676",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Waters SYNAPT HDMS System",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000677"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000677",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Waters Vion IMS QTof",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002264"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002264",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Waters Xevo G2 QTof",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000679"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000679",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Waters Xevo G2 Tof",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000678"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000678",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Waters Xevo G2-S QTof",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000680"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000680",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Waters Xevo G2-S Tof",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000681"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000681",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Waters Xevo G2-XS QTof",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000682"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000682",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Waters Xevo TQ",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000683"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000683",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Waters Xevo TQ MS",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000684"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000684",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Waters Xevo TQ-S",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000685"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000685",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Waters Xevo TQ-S micro",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000686"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000686",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "Waters Xevo TQ-XS",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000687"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000687",
+                    "termSourceRef": "MTBLS"
                 }
             ],
-            "ontologies": [
-                "MS",
-                "MTBLS"
-            ],
-            "allowedParentOntologyTerms": null
+            "unexpectedTerms": []
         },
         {
             "ruleName": "Parameter Value[Instrument]-04",
-            "description": "",
             "fieldName": "Parameter Value[Instrument]",
+            "ontologies": [
+                "MS"
+            ],
+            "allowedParentOntologyTerms": null,
+            "description": "",
             "selectionCriteria": {
                 "isaFileType": "assay",
                 "studyCreatedAtOrAfter": "2025-12-01T00:00:00",
@@ -1029,7 +994,10 @@
                     }
                 ]
             },
-            "validationType": "any-ontology-term",
+            "termEnforcementLevel": "recommended",
+            "unexpectedTermEnforcementLevel": "recommended",
+            "validationType": "ontology-term-in-selected-ontologies",
+            "constraints": {},
             "defaultValue": null,
             "allowedMissingOntologyTerms": [],
             "allowedOtherSources": [
@@ -1040,12 +1008,8 @@
             ],
             "allowedPlaceholders": [
                 {
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/placeholder"
-                },
-                {
-                    "termSourceRef": "",
-                    "termAccessionNumber": ""
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/placeholder",
+                    "termSourceRef": "MTBLS"
                 }
             ],
             "terms": [
@@ -1275,16 +1239,16 @@
                     "termSourceRef": "MTBLS"
                 }
             ],
-            "ontologies": [
-                "MS",
-                "MTBLS"
-            ],
-            "allowedParentOntologyTerms": null
+            "unexpectedTerms": []
         },
         {
             "ruleName": "Parameter Value[Instrument]-05",
-            "description": "",
             "fieldName": "Parameter Value[Instrument]",
+            "ontologies": [
+                "MTBLS"
+            ],
+            "allowedParentOntologyTerms": null,
+            "description": "",
             "selectionCriteria": {
                 "isaFileType": "assay",
                 "studyCreatedAtOrAfter": null,
@@ -1301,7 +1265,10 @@
                     }
                 ]
             },
+            "termEnforcementLevel": "recommended",
+            "unexpectedTermEnforcementLevel": "recommended",
             "validationType": "any-ontology-term",
+            "constraints": {},
             "defaultValue": null,
             "allowedMissingOntologyTerms": [],
             "allowedOtherSources": [
@@ -1312,12 +1279,8 @@
             ],
             "allowedPlaceholders": [
                 {
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/placeholder"
-                },
-                {
-                    "termSourceRef": "",
-                    "termAccessionNumber": ""
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/placeholder",
+                    "termSourceRef": "MTBLS"
                 }
             ],
             "terms": [
@@ -1527,10 +1490,7 @@
                     "termSourceRef": "MTBLS"
                 }
             ],
-            "ontologies": [
-                "MTBLS"
-            ],
-            "allowedParentOntologyTerms": null
+            "unexpectedTerms": []
         }
     ]
 }

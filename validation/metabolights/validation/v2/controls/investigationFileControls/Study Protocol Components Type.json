@@ -2,8 +2,20 @@
     "Study Protocol Components Type": [
         {
             "ruleName": "Study Protocol Components Type-01",
-            "description": "",
             "fieldName": "Study Protocol Components Type",
+            "ontologies": [
+                "EFO",
+                "NCIT",
+                "MTBLS",
+                "CHEBI",
+                "CHMO",
+                "MONDO",
+                "PRIDE",
+                "GO",
+                "MESH"
+            ],
+            "allowedParentOntologyTerms": null,
+            "description": "",
             "selectionCriteria": {
                 "isaFileType": "investigation",
                 "studyCreatedAtOrAfter": null,
@@ -13,9 +25,12 @@
                 "isaFileTemplateNameFilter": null,
                 "linkedFieldAndValueFilter": null
             },
+            "termEnforcementLevel": "recommended",
+            "unexpectedTermEnforcementLevel": "recommended",
             "validationType": "any-ontology-term",
+            "constraints": {},
             "defaultValue": null,
-            "allowedMissingOntologyTerms": null,
+            "allowedMissingOntologyTerms": [],
             "allowedOtherSources": [
                 {
                     "sourceLabel": "MTBLS",
@@ -32,27 +47,16 @@
             ],
             "allowedPlaceholders": [
                 {
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/placeholder"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/placeholder",
+                    "termSourceRef": "MTBLS"
                 },
                 {
-                    "termSourceRef": "",
-                    "termAccessionNumber": ""
+                    "termAccessionNumber": "",
+                    "termSourceRef": ""
                 }
             ],
             "terms": [],
-            "ontologies": [
-                "EFO",
-                "NCIT",
-                "MTBLS",
-                "CHEBI",
-                "CHMO",
-                "MONDO",
-                "PRIDE",
-                "GO",
-                "MESH"
-            ],
-            "allowedParentOntologyTerms": null
+            "unexpectedTerms": []
         }
     ]
 }

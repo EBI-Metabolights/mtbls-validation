@@ -8,7 +8,7 @@
             "name": "Update Docs and Bundle",
             "type": "debugpy",
             "request": "launch",
-            "program": "${workspaceFolder}/scripts/update.py",
+            "program": "${workspaceFolder}/scripts/update_repository.py",
             "console": "integratedTerminal",
             "envFile": "${workspaceFolder}/.env",
             "env": {"PYTHONPATH": "${workspaceFolder}"}

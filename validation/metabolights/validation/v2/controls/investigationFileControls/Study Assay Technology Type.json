@@ -2,8 +2,10 @@
     "Study Assay Technology Type": [
         {
             "ruleName": "Study Assay Technology Type-01",
-            "description": "",
             "fieldName": "Study Assay Technology Type",
+            "ontologies": [],
+            "allowedParentOntologyTerms": null,
+            "description": "",
             "selectionCriteria": {
                 "isaFileType": "investigation",
                 "studyCreatedAtOrAfter": null,
@@ -15,11 +17,14 @@
                 "isaFileTemplateNameFilter": null,
                 "linkedFieldAndValueFilter": null
             },
+            "termEnforcementLevel": "required",
+            "unexpectedTermEnforcementLevel": "required",
             "validationType": "selected-ontology-term",
+            "constraints": {},
             "defaultValue": null,
-            "allowedMissingOntologyTerms": null,
-            "allowedOtherSources": null,
-            "allowedPlaceholders": null,
+            "allowedMissingOntologyTerms": [],
+            "allowedOtherSources": [],
+            "allowedPlaceholders": [],
             "terms": [
                 {
                     "term": "mass spectrometry assay",
@@ -27,13 +32,14 @@
                     "termSourceRef": "OBI"
                 }
             ],
-            "ontologies": null,
-            "allowedParentOntologyTerms": null
+            "unexpectedTerms": []
         },
         {
             "ruleName": "Study Assay Technology Type-02",
-            "description": "",
             "fieldName": "Study Assay Technology Type",
+            "ontologies": [],
+            "allowedParentOntologyTerms": null,
+            "description": "",
             "selectionCriteria": {
                 "isaFileType": "investigation",
                 "studyCreatedAtOrAfter": null,
@@ -52,11 +58,14 @@
                 ],
                 "linkedFieldAndValueFilter": null
             },
+            "termEnforcementLevel": "required",
+            "unexpectedTermEnforcementLevel": "required",
             "validationType": "selected-ontology-term",
+            "constraints": {},
             "defaultValue": null,
-            "allowedMissingOntologyTerms": null,
-            "allowedOtherSources": null,
-            "allowedPlaceholders": null,
+            "allowedMissingOntologyTerms": [],
+            "allowedOtherSources": [],
+            "allowedPlaceholders": [],
             "terms": [
                 {
                     "term": "mass spectrometry assay",
@@ -64,13 +73,14 @@
                     "termSourceRef": "OBI"
                 }
             ],
-            "ontologies": null,
-            "allowedParentOntologyTerms": null
+            "unexpectedTerms": []
         },
         {
             "ruleName": "Study Assay Technology Type-03",
-            "description": "",
             "fieldName": "Study Assay Technology Type",
+            "ontologies": [],
+            "allowedParentOntologyTerms": null,
+            "description": "",
             "selectionCriteria": {
                 "isaFileType": "investigation",
                 "studyCreatedAtOrAfter": null,
@@ -82,11 +92,14 @@
                 ],
                 "linkedFieldAndValueFilter": null
             },
+            "termEnforcementLevel": "required",
+            "unexpectedTermEnforcementLevel": "required",
             "validationType": "selected-ontology-term",
+            "constraints": {},
             "defaultValue": null,
-            "allowedMissingOntologyTerms": null,
-            "allowedOtherSources": null,
-            "allowedPlaceholders": null,
+            "allowedMissingOntologyTerms": [],
+            "allowedOtherSources": [],
+            "allowedPlaceholders": [],
             "terms": [
                 {
                     "term": "NMR spectroscopy assay",
@@ -94,48 +107,18 @@
                     "termSourceRef": "OBI"
                 }
             ],
-            "ontologies": null,
-            "allowedParentOntologyTerms": null
-        },
-        {
-            "ruleName": "Study Assay Technology Type-04",
-            "description": "",
-            "fieldName": "Study Assay Technology Type",
-            "selectionCriteria": {
-                "isaFileType": "investigation",
-                "studyCreatedAtOrAfter": "2025-12-01T00:00:00",
-                "studyCreatedBefore": null,
-                "studyCategoryFilter": null,
-                "templateVersionFilter": null,
-                "isaFileTemplateNameFilter": [
-                    "MSImaging",
-                    "MRImaging"
-                ],
-                "linkedFieldAndValueFilter": null
-            },
-            "validationType": "selected-ontology-term",
-            "defaultValue": null,
-            "allowedMissingOntologyTerms": null,
-            "allowedOtherSources": null,
-            "allowedPlaceholders": null,
-            "terms": [
-                {
-                    "term": "imaging assay",
-                    "termAccessionNumber": "http://purl.obolibrary.org/obo/OBI_0000185",
-                    "termSourceRef": "OBI"
-                }
-            ],
-            "ontologies": null,
-            "allowedParentOntologyTerms": null
+            "unexpectedTerms": []
         },
         {
             "ruleName": "Study Assay Technology Type-05",
-            "description": "",
             "fieldName": "Study Assay Technology Type",
+            "ontologies": [],
+            "allowedParentOntologyTerms": null,
+            "description": "",
             "selectionCriteria": {
                 "isaFileType": "investigation",
                 "studyCreatedAtOrAfter": null,
-                "studyCreatedBefore": "2025-12-01T00:00:00",
+                "studyCreatedBefore": null,
                 "studyCategoryFilter": null,
                 "templateVersionFilter": null,
                 "isaFileTemplateNameFilter": [
@@ -144,11 +127,14 @@
                 ],
                 "linkedFieldAndValueFilter": null
             },
+            "termEnforcementLevel": "required",
+            "unexpectedTermEnforcementLevel": "required",
             "validationType": "selected-ontology-term",
+            "constraints": {},
             "defaultValue": null,
-            "allowedMissingOntologyTerms": null,
-            "allowedOtherSources": null,
-            "allowedPlaceholders": null,
+            "allowedMissingOntologyTerms": [],
+            "allowedOtherSources": [],
+            "allowedPlaceholders": [],
             "terms": [
                 {
                     "term": "imaging assay",
@@ -166,16 +152,17 @@
                     "termSourceRef": "OBI"
                 }
             ],
-            "ontologies": null,
-            "allowedParentOntologyTerms": null
+            "unexpectedTerms": []
         },
         {
-            "ruleName": "Study Assay Technology Type-06",
-            "description": "",
+            "ruleName": "Study Assay Technology Type-07",
             "fieldName": "Study Assay Technology Type",
+            "ontologies": [],
+            "allowedParentOntologyTerms": null,
+            "description": "",
             "selectionCriteria": {
                 "isaFileType": "investigation",
-                "studyCreatedAtOrAfter": "2025-12-01T00:00:00",
+                "studyCreatedAtOrAfter": null,
                 "studyCreatedBefore": null,
                 "studyCategoryFilter": null,
                 "templateVersionFilter": null,
@@ -185,42 +172,14 @@
                 ],
                 "linkedFieldAndValueFilter": null
             },
+            "termEnforcementLevel": "required",
+            "unexpectedTermEnforcementLevel": "required",
             "validationType": "selected-ontology-term",
+            "constraints": {},
             "defaultValue": null,
-            "allowedMissingOntologyTerms": null,
-            "allowedOtherSources": null,
-            "allowedPlaceholders": null,
-            "terms": [
-                {
-                    "term": "other",
-                    "termAccessionNumber": "http://purl.obolibrary.org/obo/NCIT_C17649",
-                    "termSourceRef": "NCIT"
-                }
-            ],
-            "ontologies": null,
-            "allowedParentOntologyTerms": null
-        },
-        {
-            "ruleName": "Study Assay Technology Type-07",
-            "description": "",
-            "fieldName": "Study Assay Technology Type",
-            "selectionCriteria": {
-                "isaFileType": "investigation",
-                "studyCreatedAtOrAfter": null,
-                "studyCreatedBefore": "2025-12-01T00:00:00",
-                "studyCategoryFilter": null,
-                "templateVersionFilter": null,
-                "isaFileTemplateNameFilter": [
-                    "LC-DAD",
-                    "GC-FID"
-                ],
-                "linkedFieldAndValueFilter": null
-            },
-            "validationType": "selected-ontology-term",
-            "defaultValue": null,
-            "allowedMissingOntologyTerms": null,
-            "allowedOtherSources": null,
-            "allowedPlaceholders": null,
+            "allowedMissingOntologyTerms": [],
+            "allowedOtherSources": [],
+            "allowedPlaceholders": [],
             "terms": [
                 {
                     "term": "other",
@@ -233,8 +192,7 @@
                     "termSourceRef": "OBI"
                 }
             ],
-            "ontologies": null,
-            "allowedParentOntologyTerms": null
+            "unexpectedTerms": []
         }
     ]
 }

@@ -2,8 +2,12 @@
     "Parameter Value[Scan polarity]": [
         {
             "ruleName": "Parameter Value[Scan polarity]-01",
-            "description": "",
             "fieldName": "Parameter Value[Scan polarity]",
+            "ontologies": [
+                "AFO"
+            ],
+            "allowedParentOntologyTerms": null,
+            "description": "",
             "selectionCriteria": {
                 "isaFileType": "assay",
                 "studyCreatedAtOrAfter": null,
@@ -20,11 +24,14 @@
                     }
                 ]
             },
+            "termEnforcementLevel": "required",
+            "unexpectedTermEnforcementLevel": "required",
             "validationType": "selected-ontology-term",
+            "constraints": {},
             "defaultValue": null,
             "allowedMissingOntologyTerms": [],
-            "allowedOtherSources": null,
-            "allowedPlaceholders": null,
+            "allowedOtherSources": [],
+            "allowedPlaceholders": [],
             "terms": [
                 {
                     "term": "negative ionization polarity",
@@ -42,18 +49,20 @@
                     "termSourceRef": "AFO"
                 }
             ],
-            "ontologies": [
-                "AFO"
-            ],
-            "allowedParentOntologyTerms": null
+            "unexpectedTerms": []
         },
         {
             "ruleName": "Parameter Value[Scan polarity]-02",
-            "description": "",
             "fieldName": "Parameter Value[Scan polarity]",
+            "ontologies": [
+                "AFO",
+                "MS"
+            ],
+            "allowedParentOntologyTerms": null,
+            "description": "",
             "selectionCriteria": {
                 "isaFileType": "assay",
-                "studyCreatedAtOrAfter": "2025-12-01T00:00:00",
+                "studyCreatedAtOrAfter": null,
                 "studyCreatedBefore": null,
                 "studyCategoryFilter": null,
                 "templateVersionFilter": null,
@@ -65,77 +74,32 @@
                     }
                 ]
             },
+            "termEnforcementLevel": "required",
+            "unexpectedTermEnforcementLevel": "required",
             "validationType": "selected-ontology-term",
+            "constraints": {},
             "defaultValue": null,
             "allowedMissingOntologyTerms": [],
-            "allowedOtherSources": null,
-            "allowedPlaceholders": null,
+            "allowedOtherSources": [],
+            "allowedPlaceholders": [],
             "terms": [
-                {
-                    "term": "negative ionization polarity",
-                    "termAccessionNumber": "http://purl.allotrope.org/ontologies/quality#AFQ_0000150",
-                    "termSourceRef": "AFO"
-                },
-                {
-                    "term": "positive ionization polarity",
-                    "termAccessionNumber": "http://purl.allotrope.org/ontologies/quality#AFQ_0000151",
-                    "termSourceRef": "AFO"
-                },
-                {
-                    "term": "alternating ionization polarity",
-                    "termAccessionNumber": "http://purl.allotrope.org/ontologies/quality#AFQ_0000152",
-                    "termSourceRef": "AFO"
-                }
-            ],
-            "ontologies": [
-                "AFO"
-            ],
-            "allowedParentOntologyTerms": null
-        },
-        {
-            "ruleName": "Parameter Value[Scan polarity]-03",
-            "description": "",
-            "fieldName": "Parameter Value[Scan polarity]",
-            "selectionCriteria": {
-                "isaFileType": "assay",
-                "studyCreatedAtOrAfter": null,
-                "studyCreatedBefore": null,
-                "studyCategoryFilter": null,
-                "templateVersionFilter": [
-                    "1.0"
-                ],
-                "isaFileTemplateNameFilter": null,
-                "linkedFieldAndValueFilter": [
-                    {
-                        "name": "Protocol REF",
-                        "value": "Mass spectrometry"
-                    }
-                ]
-            },
-            "validationType": "selected-ontology-term",
-            "defaultValue": null,
-            "allowedMissingOntologyTerms": null,
-            "allowedOtherSources": null,
-            "allowedPlaceholders": null,
-            "terms": [
-                {
-                    "term": "positive",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_001087",
-                    "termSourceRef": "MTBLS"
-                },
                 {
                     "term": "negative",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_001088",
-                    "termSourceRef": "MTBLS"
+                    "termAccessionNumber": "",
+                    "termSourceRef": ""
+                },
+                {
+                    "term": "positive",
+                    "termAccessionNumber": "",
+                    "termSourceRef": ""
                 },
                 {
                     "term": "alternating",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_001089",
-                    "termSourceRef": "MTBLS"
+                    "termAccessionNumber": "",
+                    "termSourceRef": ""
                 }
             ],
-            "ontologies": null,
-            "allowedParentOntologyTerms": null
+            "unexpectedTerms": []
         }
     ]
 }

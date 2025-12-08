@@ -2,8 +2,10 @@
     "Study Assay Measurement Type": [
         {
             "ruleName": "Study Assay Measurement Type-01",
-            "description": "",
             "fieldName": "Study Assay Measurement Type",
+            "ontologies": [],
+            "allowedParentOntologyTerms": null,
+            "description": "",
             "selectionCriteria": {
                 "isaFileType": "investigation",
                 "studyCreatedAtOrAfter": null,
@@ -15,11 +17,14 @@
                 "isaFileTemplateNameFilter": null,
                 "linkedFieldAndValueFilter": null
             },
+            "termEnforcementLevel": "required",
+            "unexpectedTermEnforcementLevel": "required",
             "validationType": "selected-ontology-term",
+            "constraints": {},
             "defaultValue": null,
-            "allowedMissingOntologyTerms": null,
-            "allowedOtherSources": null,
-            "allowedPlaceholders": null,
+            "allowedMissingOntologyTerms": [],
+            "allowedOtherSources": [],
+            "allowedPlaceholders": [],
             "terms": [
                 {
                     "term": "targeted metabolite profiling",
@@ -32,60 +37,34 @@
                     "termSourceRef": "MSIO"
                 }
             ],
-            "ontologies": null,
-            "allowedParentOntologyTerms": null
+            "unexpectedTerms": []
         },
         {
-            "ruleName": "Study Assay Measurement Type-02",
-            "description": "",
+            "ruleName": "Study Assay Measurement Type-03",
             "fieldName": "Study Assay Measurement Type",
+            "ontologies": [
+                "MSIO",
+                "OBI"
+            ],
+            "allowedParentOntologyTerms": null,
+            "description": "",
             "selectionCriteria": {
                 "isaFileType": "investigation",
-                "studyCreatedAtOrAfter": "2025-12-01T00:00:00",
+                "studyCreatedAtOrAfter": null,
                 "studyCreatedBefore": null,
                 "studyCategoryFilter": null,
                 "templateVersionFilter": null,
                 "isaFileTemplateNameFilter": null,
                 "linkedFieldAndValueFilter": null
             },
+            "termEnforcementLevel": "required",
+            "unexpectedTermEnforcementLevel": "not-applicable",
             "validationType": "selected-ontology-term",
+            "constraints": {},
             "defaultValue": null,
-            "allowedMissingOntologyTerms": null,
-            "allowedOtherSources": null,
-            "allowedPlaceholders": null,
-            "terms": [
-                {
-                    "term": "targeted metabolite profiling",
-                    "termAccessionNumber": "http://purl.obolibrary.org/obo/MSIO_0000100",
-                    "termSourceRef": "MSIO"
-                },
-                {
-                    "term": "untargeted metabolite profiling",
-                    "termAccessionNumber": "http://purl.obolibrary.org/obo/MSIO_0000101",
-                    "termSourceRef": "MSIO"
-                }
-            ],
-            "ontologies": ["MSIO"],
-            "allowedParentOntologyTerms": null
-        },
-        {
-            "ruleName": "Study Assay Measurement Type-03",
-            "description": "",
-            "fieldName": "Study Assay Measurement Type",
-            "selectionCriteria": {
-                "isaFileType": "investigation",
-                "studyCreatedAtOrAfter": null,
-                "studyCreatedBefore": "2025-12-01T00:00:00",
-                "studyCategoryFilter": null,
-                "templateVersionFilter": null,
-                "isaFileTemplateNameFilter": null,
-                "linkedFieldAndValueFilter": null
-            },
-            "validationType": "selected-ontology-term",
-            "defaultValue": null,
-            "allowedMissingOntologyTerms": null,
-            "allowedOtherSources": null,
-            "allowedPlaceholders": null,
+            "allowedMissingOntologyTerms": [],
+            "allowedOtherSources": [],
+            "allowedPlaceholders": [],
             "terms": [
                 {
                     "term": "metabolite profiling assay",
@@ -103,8 +82,7 @@
                     "termSourceRef": "MSIO"
                 }
             ],
-            "ontologies": ["MSIO", "OBI"],
-            "allowedParentOntologyTerms": null
+            "unexpectedTerms": []
         }
     ]
 }

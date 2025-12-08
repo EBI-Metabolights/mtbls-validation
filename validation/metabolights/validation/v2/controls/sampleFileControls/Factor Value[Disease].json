@@ -2,11 +2,17 @@
     "Factor Value[Disease]": [
         {
             "ruleName": "Factor Value[Disease]-01",
-            "description": "",
             "fieldName": "Factor Value[Disease]",
+            "ontologies": [
+                "MONDO",
+                "MP",
+                "SNOMED"
+            ],
+            "allowedParentOntologyTerms": null,
+            "description": "",
             "selectionCriteria": {
                 "isaFileType": "sample",
-                "studyCreatedAtOrAfter": null,
+                "studyCreatedAtOrAfter": "2026-01-01T00:00:00",
                 "studyCreatedBefore": null,
                 "studyCategoryFilter": null,
                 "templateVersionFilter": null,
@@ -18,16 +24,18 @@
                     }
                 ]
             },
+            "termEnforcementLevel": "required",
+            "unexpectedTermEnforcementLevel": "required",
             "validationType": "ontology-term-in-selected-ontologies",
+            "constraints": {},
             "defaultValue": null,
             "allowedMissingOntologyTerms": [
                 {
                     "term": "Not Applicable",
-                    "termSourceRef": "NCIT",
-                    "termAccessionNumber": "http://purl.obolibrary.org/obo/NCIT_C48660"
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/NCIT_C48660",
+                    "termSourceRef": "NCIT"
                 }
             ],
-            
             "allowedOtherSources": [
                 {
                     "sourceLabel": "wikidata",
@@ -38,14 +46,54 @@
                     "accessionPrefix": "http://uri.interlex.org/base/ilx_"
                 }
             ],
-            "allowedPlaceholders": null,
-            "terms": null,
+            "allowedPlaceholders": [],
+            "terms": [],
+            "unexpectedTerms": []
+        },
+        {
+            "ruleName": "Factor Value[Disease]-02",
+            "fieldName": "Factor Value[Disease]",
             "ontologies": [
                 "MONDO",
                 "MP",
                 "SNOMED"
             ],
-            "allowedParentOntologyTerms": null
+            "allowedParentOntologyTerms": null,
+            "description": "",
+            "selectionCriteria": {
+                "isaFileType": "sample",
+                "studyCreatedAtOrAfter": null,
+                "studyCreatedBefore": null,
+                "studyCategoryFilter": null,
+                "templateVersionFilter": null,
+                "isaFileTemplateNameFilter": null,
+                "linkedFieldAndValueFilter": null
+            },
+            "termEnforcementLevel": "recommended",
+            "unexpectedTermEnforcementLevel": "required",
+            "validationType": "ontology-term-in-selected-ontologies",
+            "constraints": {},
+            "defaultValue": null,
+            "allowedMissingOntologyTerms": [
+                {
+                    "term": "Not Applicable",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/NCIT_C48660",
+                    "termSourceRef": "NCIT"
+                }
+            ],
+            "allowedOtherSources": [
+                {
+                    "sourceLabel": "wikidata",
+                    "accessionPrefix": "https://www.wikidata.org/wiki/"
+                },
+                {
+                    "sourceLabel": "ILX",
+                    "accessionPrefix": "http://uri.interlex.org/base/ilx_"
+                }
+            ],
+            "allowedPlaceholders": [],
+            "terms": [],
+            "unexpectedTerms": []
         }
     ]
 }

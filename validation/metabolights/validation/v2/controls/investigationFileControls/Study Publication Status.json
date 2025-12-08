@@ -2,22 +2,27 @@
     "Study Publication Status": [
         {
             "ruleName": "Study Publication Status-01",
-            "description": "",
             "fieldName": "Study Publication Status",
+            "ontologies": [],
+            "allowedParentOntologyTerms": null,
+            "description": "",
             "selectionCriteria": {
                 "isaFileType": "investigation",
-                "studyCreatedAtOrAfter": "2025-12-01T00:00:00",
+                "studyCreatedAtOrAfter": "2026-01-01T00:00:00",
                 "studyCreatedBefore": null,
                 "studyCategoryFilter": null,
                 "templateVersionFilter": null,
                 "isaFileTemplateNameFilter": null,
                 "linkedFieldAndValueFilter": null
             },
+            "termEnforcementLevel": "required",
+            "unexpectedTermEnforcementLevel": "required",
             "validationType": "selected-ontology-term",
+            "constraints": {},
             "defaultValue": null,
-            "allowedMissingOntologyTerms": null,
-            "allowedOtherSources": null,
-            "allowedPlaceholders": null,
+            "allowedMissingOntologyTerms": [],
+            "allowedOtherSources": [],
+            "allowedPlaceholders": [],
             "terms": [
                 {
                     "term": "published",
@@ -45,34 +50,37 @@
                     "termSourceRef": "EDAM"
                 }
             ],
-            "ontologies": null,
-            "allowedParentOntologyTerms": null
+            "unexpectedTerms": []
         },
         {
             "ruleName": "Study Publication Status-02",
-            "description": "",
             "fieldName": "Study Publication Status",
+            "ontologies": [
+                "EFO",
+                "EDAM"
+            ],
+            "allowedParentOntologyTerms": null,
+            "description": "",
             "selectionCriteria": {
                 "isaFileType": "investigation",
                 "studyCreatedAtOrAfter": null,
-                "studyCreatedBefore": "2025-12-01T00:00:00",
+                "studyCreatedBefore": "2026-01-01T00:00:00",
                 "studyCategoryFilter": null,
                 "templateVersionFilter": null,
                 "isaFileTemplateNameFilter": null,
                 "linkedFieldAndValueFilter": null
             },
+            "termEnforcementLevel": "required",
+            "unexpectedTermEnforcementLevel": "required",
             "validationType": "ontology-term-in-selected-ontologies",
+            "constraints": {},
             "defaultValue": null,
-            "allowedMissingOntologyTerms": null,
-            "allowedOtherSources": null,
+            "allowedMissingOntologyTerms": [],
+            "allowedOtherSources": [],
             "allowedPlaceholders": [
                 {
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/placeholder"
-                },
-                {
-                    "termSourceRef": "",
-                    "termAccessionNumber": ""
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/placeholder",
+                    "termSourceRef": "MTBLS"
                 }
             ],
             "terms": [
@@ -102,8 +110,7 @@
                     "termSourceRef": "EDAM"
                 }
             ],
-            "ontologies": ["EFO", "EDAM"],
-            "allowedParentOntologyTerms": null
+            "unexpectedTerms": []
         }
     ]
 }

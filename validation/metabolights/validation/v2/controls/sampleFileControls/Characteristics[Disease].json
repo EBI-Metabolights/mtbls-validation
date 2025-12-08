@@ -2,14 +2,22 @@
     "Characteristics[Disease]": [
         {
             "ruleName": "Characteristics[Disease]-01",
-            "description": "",
             "fieldName": "Characteristics[Disease]",
+            "ontologies": [
+                "MONDO",
+                "MP",
+                "SNOMED"
+            ],
+            "allowedParentOntologyTerms": null,
+            "description": "",
             "selectionCriteria": {
                 "isaFileType": "sample",
                 "studyCreatedAtOrAfter": null,
                 "studyCreatedBefore": null,
                 "studyCategoryFilter": null,
-                "templateVersionFilter": null,
+                "templateVersionFilter": [
+                    "2.0"
+                ],
                 "isaFileTemplateNameFilter": null,
                 "linkedFieldAndValueFilter": [
                     {
@@ -22,15 +30,20 @@
                     }
                 ]
             },
+            "termEnforcementLevel": "required",
+            "unexpectedTermEnforcementLevel": "required",
             "validationType": "ontology-term-in-selected-ontologies",
-            "defaultValue": null,
-            
-            
+            "constraints": {},
+            "defaultValue": {
+                "term": "Not Applicable",
+                "termAccessionNumber": "http://purl.obolibrary.org/obo/NCIT_C48660",
+                "termSourceRef": "NCIT"
+            },
             "allowedMissingOntologyTerms": [
                 {
                     "term": "Not Applicable",
-                    "termSourceRef": "NCIT",
-                    "termAccessionNumber": "http://purl.obolibrary.org/obo/NCIT_C48660"
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/NCIT_C48660",
+                    "termSourceRef": "NCIT"
                 }
             ],
             "allowedOtherSources": [
@@ -43,14 +56,58 @@
                     "accessionPrefix": "http://uri.interlex.org/base/ilx_"
                 }
             ],
-            "allowedPlaceholders": null,
-            "terms": null,
+            "allowedPlaceholders": [],
+            "terms": [],
+            "unexpectedTerms": []
+        },
+        {
+            "ruleName": "Characteristics[Disease]-01",
+            "fieldName": "Characteristics[Disease]",
             "ontologies": [
                 "MONDO",
                 "MP",
                 "SNOMED"
             ],
-            "allowedParentOntologyTerms": null
+            "allowedParentOntologyTerms": null,
+            "description": "",
+            "selectionCriteria": {
+                "isaFileType": "sample",
+                "studyCreatedAtOrAfter": null,
+                "studyCreatedBefore": null,
+                "studyCategoryFilter": null,
+                "templateVersionFilter": null,
+                "isaFileTemplateNameFilter": null,
+                "linkedFieldAndValueFilter": null
+            },
+            "termEnforcementLevel": "recommended",
+            "unexpectedTermEnforcementLevel": "recommended",
+            "validationType": "ontology-term-in-selected-ontologies",
+            "constraints": {},
+            "defaultValue": {
+                "term": "Not Applicable",
+                "termAccessionNumber": "http://purl.obolibrary.org/obo/NCIT_C48660",
+                "termSourceRef": "NCIT"
+            },
+            "allowedMissingOntologyTerms": [
+                {
+                    "term": "Not Applicable",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/NCIT_C48660",
+                    "termSourceRef": "NCIT"
+                }
+            ],
+            "allowedOtherSources": [
+                {
+                    "sourceLabel": "wikidata",
+                    "accessionPrefix": "https://www.wikidata.org/wiki/"
+                },
+                {
+                    "sourceLabel": "ILX",
+                    "accessionPrefix": "http://uri.interlex.org/base/ilx_"
+                }
+            ],
+            "allowedPlaceholders": [],
+            "terms": [],
+            "unexpectedTerms": []
         }
     ]
 }

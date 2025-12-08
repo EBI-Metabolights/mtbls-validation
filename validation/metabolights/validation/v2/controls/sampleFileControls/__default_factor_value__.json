@@ -1,42 +1,8 @@
 {
     "__default_factor_value__": [
         {
-            "ruleName": "default-sample-file-rule-01",
-            "description": "default",
+            "ruleName": "default-sample-factor_value-rule-01",
             "fieldName": "",
-            "selectionCriteria": {
-                "isaFileType": "sample",
-                "studyCreatedAtOrAfter": null,
-                "studyCreatedBefore": null,
-                "studyCategoryFilter": null,
-                "templateVersionFilter": null,
-                "isaFileTemplateNameFilter": null,
-                "linkedFieldAndValueFilter": null
-            },
-            "validationType": "any-ontology-term",
-            "defaultValue": null,
-            "allowedMissingOntologyTerms": null,
-            "allowedOtherSources": [
-                {
-                    "sourceLabel": "MTBLS",
-                    "accessionPrefix": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_"
-                },
-                {
-                    "sourceLabel": "wikidata",
-                    "accessionPrefix": "https://www.wikidata.org/wiki/"
-                },
-                {
-                    "sourceLabel": "ILX",
-                    "accessionPrefix": "http://uri.interlex.org/base/ilx_"
-                }
-            ],
-            "allowedPlaceholders": [
-                {
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/placeholder"
-                }
-            ],
-            "terms": null,
             "ontologies": [
                 "OBI",
                 "EFO",
@@ -65,7 +31,44 @@
                 "MP"
             ],
             "allowedParentOntologyTerms": null,
-            "unexpectedTerms": null
+            "description": "default",
+            "selectionCriteria": {
+                "isaFileType": "sample",
+                "studyCreatedAtOrAfter": null,
+                "studyCreatedBefore": null,
+                "studyCategoryFilter": null,
+                "templateVersionFilter": null,
+                "isaFileTemplateNameFilter": null,
+                "linkedFieldAndValueFilter": null
+            },
+            "termEnforcementLevel": "recommended",
+            "unexpectedTermEnforcementLevel": "recommended",
+            "validationType": "any-ontology-term",
+            "constraints": {},
+            "defaultValue": null,
+            "allowedMissingOntologyTerms": [],
+            "allowedOtherSources": [
+                {
+                    "sourceLabel": "MTBLS",
+                    "accessionPrefix": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_"
+                },
+                {
+                    "sourceLabel": "wikidata",
+                    "accessionPrefix": "https://www.wikidata.org/wiki/"
+                },
+                {
+                    "sourceLabel": "ILX",
+                    "accessionPrefix": "http://uri.interlex.org/base/ilx_"
+                }
+            ],
+            "allowedPlaceholders": [
+                {
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/placeholder",
+                    "termSourceRef": "MTBLS"
+                }
+            ],
+            "terms": [],
+            "unexpectedTerms": []
         }
     ]
 }

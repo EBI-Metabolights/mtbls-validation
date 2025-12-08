@@ -1,5 +1,33 @@
+import datetime
+import json
+import re
+import zipfile
+from pathlib import Path
 from typing import Union
+
 import pandas as pd
+
+FIXED_DATE_TIME = (2025, 1, 1, 0, 0, 0)
+
+
+def zip_file(input_path, zip_path):
+    zip_path = Path(zip_path)
+    input_path = Path(input_path)
+    zi = zipfile.ZipInfo(input_path.name)
+    zi.date_time = FIXED_DATE_TIME
+    zi.compress_type = zipfile.ZIP_DEFLATED
+    zi.external_attr = 0o644 << 16
+    content = input_path.read_bytes()
+    with zipfile.ZipFile(zip_path, "w", zipfile.ZIP_DEFLATED) as z:
+        z.writestr(zi, content)
+    return zip_path
+
+
+class DateEncoder(json.JSONEncoder):
+    def default(self, obj):
+        if isinstance(obj, datetime.datetime):
+            return obj.isoformat()
+        return super().default(obj)
 
 
 def read_excel_rows(file_path, sheet_name="Sheet1"):
@@ -13,7 +41,16 @@ def read_excel_rows(file_path, sheet_name="Sheet1"):
         return None
 
 
-def get_rules(
+def escape(text: str) -> str:
+    if not text:
+        return ""
+    # Characters with special meaning in Markdown
+    md_chars = r"\`*_{}[]()#+-.!|"
+    # Escape each character with a backslash
+    return re.sub(f"([{re.escape(md_chars)}])", r"\\\1", text)
+
+
+def read_rules_from_excel(
     file_path: str = "MetaboLights-Validations-v2.0.xlsx",
     sheet_names: Union[None, list[str]] = None,
 ) -> dict[str, pd.Series]:
@@ -36,7 +73,7 @@ def get_rules(
             df = selected_rows
         else:
             df = pd.concat([df, selected_rows], ignore_index=True)
-    
+
     rules: dict[str, pd.Series] = {}
     if df is None:
         return rules
@@ -62,7 +99,7 @@ def get_rules(
     return rules
 
 
-def get_unit_tests_methods(
+def get_unit_test_names_methods(
     file_path: str = "MetaboLights-Validations-v2.0.xlsx",
     sheet_names: Union[None, list[str]] = None,
 ) -> dict[str, pd.Series]:

@@ -2,15 +2,21 @@
     "Parameter Value[Ion source]": [
         {
             "ruleName": "Parameter Value[Ion source]-01",
-            "description": "",
             "fieldName": "Parameter Value[Ion source]",
+            "ontologies": [
+                "MS"
+            ],
+            "allowedParentOntologyTerms": null,
+            "description": "",
             "selectionCriteria": {
                 "isaFileType": "assay",
                 "studyCreatedAtOrAfter": null,
                 "studyCreatedBefore": null,
                 "studyCategoryFilter": null,
                 "templateVersionFilter": null,
-                "isaFileTemplateNameFilter": ["LC-MS"],
+                "isaFileTemplateNameFilter": [
+                    "LC-MS"
+                ],
                 "linkedFieldAndValueFilter": [
                     {
                         "name": "Protocol REF",
@@ -18,9 +24,12 @@
                     }
                 ]
             },
-            "validationType": "any-ontology-term",
+            "termEnforcementLevel": "recommended",
+            "unexpectedTermEnforcementLevel": "recommended",
+            "validationType": "ontology-term-in-selected-ontologies",
+            "constraints": {},
             "defaultValue": null,
-            "allowedMissingOntologyTerms": null,
+            "allowedMissingOntologyTerms": [],
             "allowedOtherSources": [
                 {
                     "sourceLabel": "MTBLS",
@@ -37,63 +46,61 @@
             ],
             "allowedPlaceholders": [
                 {
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/placeholder"
-                },
-                {
-                    "termSourceRef": "",
-                    "termAccessionNumber": ""
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/placeholder",
+                    "termSourceRef": "MTBLS"
                 }
             ],
             "terms": [
                 {
                     "term": "electrospray ionization",
-                    "termSourceRef": "MS",
-                    "termAccessionNumber": "http://purl.obolibrary.org/obo/MS_1000073"
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/MS_1000073",
+                    "termSourceRef": "MS"
                 },
                 {
                     "term": "nanoelectrospray",
-                    "termSourceRef": "MS",
-                    "termAccessionNumber": "http://purl.obolibrary.org/obo/MS_1000398"
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/MS_1000398",
+                    "termSourceRef": "MS"
                 },
                 {
                     "term": "secondary electrospray ionization",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000690"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000690",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "atmospheric pressure chemical ionization",
-                    "termSourceRef": "MS",
-                    "termAccessionNumber": "http://purl.obolibrary.org/obo/MS_1000070"
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/MS_1000070",
+                    "termSourceRef": "MS"
                 },
                 {
                     "term": "matrix-assisted laser desorption ionization",
-                    "termSourceRef": "MS",
-                    "termAccessionNumber": "http://purl.obolibrary.org/obo/MS_1000075"
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/MS_1000075",
+                    "termSourceRef": "MS"
                 },
                 {
                     "term": "desorption electrospray ionization",
-                    "termSourceRef": "MS",
-                    "termAccessionNumber": "http://purl.obolibrary.org/obo/MS_1002011"
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/MS_1002011",
+                    "termSourceRef": "MS"
                 }
             ],
-            "ontologies": [
-                "MS",
-                "MTBLS"
-            ],
-            "allowedParentOntologyTerms": null
+            "unexpectedTerms": []
         },
         {
             "ruleName": "Parameter Value[Ion source]-02",
-            "description": "",
             "fieldName": "Parameter Value[Ion source]",
+            "ontologies": [
+                "MS"
+            ],
+            "allowedParentOntologyTerms": null,
+            "description": "",
             "selectionCriteria": {
                 "isaFileType": "assay",
                 "studyCreatedAtOrAfter": null,
                 "studyCreatedBefore": null,
                 "studyCategoryFilter": null,
                 "templateVersionFilter": null,
-                "isaFileTemplateNameFilter": ["GC-MS"],
+                "isaFileTemplateNameFilter": [
+                    "GC-MS"
+                ],
                 "linkedFieldAndValueFilter": [
                     {
                         "name": "Protocol REF",
@@ -101,9 +108,12 @@
                     }
                 ]
             },
-            "validationType": "any-ontology-term",
+            "termEnforcementLevel": "recommended",
+            "unexpectedTermEnforcementLevel": "recommended",
+            "validationType": "ontology-term-in-selected-ontologies",
+            "constraints": {},
             "defaultValue": null,
-            "allowedMissingOntologyTerms": null,
+            "allowedMissingOntologyTerms": [],
             "allowedOtherSources": [
                 {
                     "sourceLabel": "MTBLS",
@@ -120,48 +130,46 @@
             ],
             "allowedPlaceholders": [
                 {
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/placeholder"
-                },
-                {
-                    "termSourceRef": "",
-                    "termAccessionNumber": ""
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/placeholder",
+                    "termSourceRef": "MTBLS"
                 }
             ],
             "terms": [
-                    {
-                        "term": "electron ionization",
-                        "termSourceRef": "MS",
-                        "termAccessionNumber": "http://purl.obolibrary.org/obo/MS_1000389"
-                    },
-                    {
-                        "term": "chemical ionization",
-                        "termSourceRef": "MS",
-                        "termAccessionNumber": "http://purl.obolibrary.org/obo/MS_1000071"
-                    },
-                    {
-                        "term": "field ionization",
-                        "termSourceRef": "MS",
-                        "termAccessionNumber": "http://purl.obolibrary.org/obo/MS_1000258"
-                    }
-                ],
-            "ontologies": [
-                "MS",
-                "MTBLS"
+                {
+                    "term": "electron ionization",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/MS_1000389",
+                    "termSourceRef": "MS"
+                },
+                {
+                    "term": "chemical ionization",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/MS_1000071",
+                    "termSourceRef": "MS"
+                },
+                {
+                    "term": "field ionization",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/MS_1000258",
+                    "termSourceRef": "MS"
+                }
             ],
-            "allowedParentOntologyTerms": null
+            "unexpectedTerms": []
         },
         {
             "ruleName": "Parameter Value[Ion source]-03",
-            "description": "",
             "fieldName": "Parameter Value[Ion source]",
+            "ontologies": [
+                "MS"
+            ],
+            "allowedParentOntologyTerms": null,
+            "description": "",
             "selectionCriteria": {
                 "isaFileType": "assay",
                 "studyCreatedAtOrAfter": null,
                 "studyCreatedBefore": null,
                 "studyCategoryFilter": null,
                 "templateVersionFilter": null,
-                "isaFileTemplateNameFilter": ["DI-MS"],
+                "isaFileTemplateNameFilter": [
+                    "DI-MS"
+                ],
                 "linkedFieldAndValueFilter": [
                     {
                         "name": "Protocol REF",
@@ -169,9 +177,12 @@
                     }
                 ]
             },
-            "validationType": "any-ontology-term",
+            "termEnforcementLevel": "recommended",
+            "unexpectedTermEnforcementLevel": "recommended",
+            "validationType": "ontology-term-in-selected-ontologies",
+            "constraints": {},
             "defaultValue": null,
-            "allowedMissingOntologyTerms": null,
+            "allowedMissingOntologyTerms": [],
             "allowedOtherSources": [
                 {
                     "sourceLabel": "MTBLS",
@@ -188,29 +199,23 @@
             ],
             "allowedPlaceholders": [
                 {
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/placeholder"
-                },
-                {
-                    "termSourceRef": "",
-                    "termAccessionNumber": ""
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/placeholder",
+                    "termSourceRef": "MTBLS"
                 }
             ],
-            "terms": [{
-                        "term": "electrospray ionization",
-                        "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000688",
-                        "termSourceRef": "MTBLS"
-                    },
-                    {
-                        "term": "nanoelectrospray",
-                        "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000689",
-                        "termSourceRef": "MTBLS"
-                    }],
-            "ontologies": [
-                "MS",
-                "MTBLS"
+            "terms": [
+                {
+                    "term": "electrospray ionization",
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000688",
+                    "termSourceRef": "MTBLS"
+                },
+                {
+                    "term": "nanoelectrospray",
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000689",
+                    "termSourceRef": "MTBLS"
+                }
             ],
-            "allowedParentOntologyTerms": null
+            "unexpectedTerms": []
         }
     ]
 }

@@ -2,416 +2,8 @@
     "Study Protocol Parameter Name": [
         {
             "ruleName": "Study Protocol Parameter Name-01",
-            "description": "",
             "fieldName": "Study Protocol Parameter Name",
-            "selectionCriteria": {
-                "isaFileType": "investigation",
-                "studyCreatedAtOrAfter": null,
-                "studyCreatedBefore": null,
-                "studyCategoryFilter": null,
-                "templateVersionFilter": null,
-                "isaFileTemplateNameFilter": null,
-                "linkedFieldAndValueFilter": null
-            },
-            "validationType": "any-ontology-term",
-            "defaultValue": null,
-            "allowedMissingOntologyTerms": null,
-            "allowedOtherSources": [
-                {
-                    "sourceLabel": "MTBLS",
-                    "accessionPrefix": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_"
-                }
-            ],
-            "allowedPlaceholders": [
-                {
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/placeholder"
-                },
-                {
-                    "termSourceRef": "",
-                    "termAccessionNumber": ""
-                }
-            ],
-            "terms": [
-            {
-                "term": "Post Extraction",
-                "termAccessionNumber": "",
-                "termSourceRef": ""
-            },
-            {
-                "term": "Derivatization",
-                "termAccessionNumber": "",
-                "termSourceRef": ""
-            },
-            {
-                "term": "Chromatography Instrument",
-                "termAccessionNumber": "",
-                "termSourceRef": ""
-            },
-            {
-                "term": "Autosampler model",
-                "termAccessionNumber": "",
-                "termSourceRef": ""
-            },
-            {
-                "term": "Column model",
-                "termAccessionNumber": "",
-                "termSourceRef": ""
-            },
-            {
-                "term": "Column type",
-                "termAccessionNumber": "",
-                "termSourceRef": ""
-            },
-            {
-                "term": "Guard column",
-                "termAccessionNumber": "",
-                "termSourceRef": ""
-            },
-            {
-                "term": "Scan polarity",
-                "termAccessionNumber": "",
-                "termSourceRef": ""
-            },
-            {
-                "term": "Scan m/z range",
-                "termAccessionNumber": "",
-                "termSourceRef": ""
-            },
-            {
-                "term": "Instrument",
-                "termAccessionNumber": "",
-                "termSourceRef": ""
-            },
-            {
-                "term": "Ion source",
-                "termAccessionNumber": "",
-                "termSourceRef": ""
-            },
-            {
-                "term": "Mass analyzer",
-                "termAccessionNumber": "",
-                "termSourceRef": ""
-            },
-            {
-                "term": "DI Instrument",
-                "termAccessionNumber": "",
-                "termSourceRef": ""
-            },
-            {
-                "term": "FIA Instrument",
-                "termAccessionNumber": "",
-                "termSourceRef": ""
-            },
-            {
-                "term": "CE Instrument",
-                "termAccessionNumber": "",
-                "termSourceRef": ""
-            },
-            {
-                "term": "SPE-IMS Instrument",
-                "termAccessionNumber": "",
-                "termSourceRef": ""
-            },
-            {
-                "term": "Cartridge type",
-                "termAccessionNumber": "",
-                "termSourceRef": ""
-            },
-            {
-                "term": "Column model 1",
-                "termAccessionNumber": "",
-                "termSourceRef": ""
-            },
-            {
-                "term": "Column type 1",
-                "termAccessionNumber": "",
-                "termSourceRef": ""
-            },
-            {
-                "term": "Column model 2",
-                "termAccessionNumber": "",
-                "termSourceRef": ""
-            },
-            {
-                "term": "Column type 2",
-                "termAccessionNumber": "",
-                "termSourceRef": ""
-            },
-            {
-                "term": "Detector",
-                "termAccessionNumber": "",
-                "termSourceRef": ""
-            },
-            {
-                "term": "Signal range",
-                "termAccessionNumber": "",
-                "termSourceRef": ""
-            },
-            {
-                "term": "Resolution",
-                "termAccessionNumber": "",
-                "termSourceRef": ""
-            },
-            {
-                "term": "Temperature",
-                "termAccessionNumber": "",
-                "termSourceRef": ""
-            },
-            {
-                "term": "Sample mounting",
-                "termAccessionNumber": "",
-                "termSourceRef": ""
-            },
-            {
-                "term": "Sample preservation",
-                "termAccessionNumber": "",
-                "termSourceRef": ""
-            },
-            {
-                "term": "Tissue modification",
-                "termAccessionNumber": "",
-                "termSourceRef": ""
-            },
-            {
-                "term": "Sectioning instrument",
-                "termAccessionNumber": "",
-                "termSourceRef": ""
-            },
-            {
-                "term": "Section thickness",
-                "termAccessionNumber": "",
-                "termSourceRef": ""
-            },
-            {
-                "term": "Matrix",
-                "termAccessionNumber": "",
-                "termSourceRef": ""
-            },
-            {
-                "term": "Matrix application",
-                "termAccessionNumber": "",
-                "termSourceRef": ""
-            },
-            {
-                "term": "Stain",
-                "termAccessionNumber": "",
-                "termSourceRef": ""
-            },
-            {
-                "term": "High-res image",
-                "termAccessionNumber": "",
-                "termSourceRef": ""
-            },
-            {
-                "term": "Low-res image",
-                "termAccessionNumber": "",
-                "termSourceRef": ""
-            },
-            {
-                "term": "Data Transformation software",
-                "termAccessionNumber": "",
-                "termSourceRef": ""
-            },
-            {
-                "term": "Data Transformation software version",
-                "termAccessionNumber": "",
-                "termSourceRef": ""
-            },
-            {
-                "term": "Instrument manufacturer",
-                "termAccessionNumber": "",
-                "termSourceRef": ""
-            },
-            {
-                "term": "Solvent",
-                "termAccessionNumber": "",
-                "termSourceRef": ""
-            },
-            {
-                "term": "Target material",
-                "termAccessionNumber": "",
-                "termSourceRef": ""
-            },
-            {
-                "term": "Spatial resolution",
-                "termAccessionNumber": "",
-                "termSourceRef": ""
-            },
-            {
-                "term": "Pixel size x",
-                "termAccessionNumber": "",
-                "termSourceRef": ""
-            },
-            {
-                "term": "Pixel size y",
-                "termAccessionNumber": "",
-                "termSourceRef": ""
-            },
-            {
-                "term": "Max count of pixel x",
-                "termAccessionNumber": "",
-                "termSourceRef": ""
-            },
-            {
-                "term": "Max count of pixel y",
-                "termAccessionNumber": "",
-                "termSourceRef": ""
-            },
-            {
-                "term": "Max dimension x",
-                "termAccessionNumber": "",
-                "termSourceRef": ""
-            },
-            {
-                "term": "Max dimension y",
-                "termAccessionNumber": "",
-                "termSourceRef": ""
-            },
-            {
-                "term": "Inlet type",
-                "termAccessionNumber": "",
-                "termSourceRef": ""
-            },
-            {
-                "term": "Detector mode",
-                "termAccessionNumber": "",
-                "termSourceRef": ""
-            },
-            {
-                "term": "Resolving power",
-                "termAccessionNumber": "",
-                "termSourceRef": ""
-            },
-            {
-                "term": "Resolving power m/z",
-                "termAccessionNumber": "",
-                "termSourceRef": ""
-            },
-            {
-                "term": "Native spectrum identifier format",
-                "termAccessionNumber": "",
-                "termSourceRef": ""
-            },
-            {
-                "term": "Data file content",
-                "termAccessionNumber": "",
-                "termSourceRef": ""
-            },
-            {
-                "term": "Spectrum representation",
-                "termAccessionNumber": "",
-                "termSourceRef": ""
-            },
-            {
-                "term": "Raw data file format",
-                "termAccessionNumber": "",
-                "termSourceRef": ""
-            },
-            {
-                "term": "Instrument software",
-                "termAccessionNumber": "",
-                "termSourceRef": ""
-            },
-            {
-                "term": "Instrument software version",
-                "termAccessionNumber": "",
-                "termSourceRef": ""
-            },
-            {
-                "term": "Line scan direction",
-                "termAccessionNumber": "",
-                "termSourceRef": ""
-            },
-            {
-                "term": "Linescan sequence",
-                "termAccessionNumber": "",
-                "termSourceRef": ""
-            },
-            {
-                "term": "Scan pattern",
-                "termAccessionNumber": "",
-                "termSourceRef": ""
-            },
-            {
-                "term": "Number of scans",
-                "termAccessionNumber": "",
-                "termSourceRef": ""
-            },
-            {
-                "term": "Scan type",
-                "termAccessionNumber": "",
-                "termSourceRef": ""
-            },
-            {
-                "term": "Tomography",
-                "termAccessionNumber": "",
-                "termSourceRef": ""
-            },
-            {
-                "term": "Field of view",
-                "termAccessionNumber": "",
-                "termSourceRef": ""
-            },
-            {
-                "term": "Magnetic pulse sequence name",
-                "termAccessionNumber": "",
-                "termSourceRef": ""
-            },
-            {
-                "term": "Voxel size",
-                "termAccessionNumber": "",
-                "termSourceRef": ""
-            }
-            ,
-            {
-                "term": "Localisation pulse sequence name",
-                "termAccessionNumber": "",
-                "termSourceRef": ""
-            },
-            {
-                "term": "Number of transients",
-                "termAccessionNumber": "",
-                "termSourceRef": ""
-            },
-            {
-                "term": "Water inhibition pulse sequence name",
-                "termAccessionNumber": "",
-                "termSourceRef": ""
-            },
-            {
-                "term": "Magnetic field strength",
-                "termAccessionNumber": "",
-                "termSourceRef": ""
-            },
-            {
-                "term": "Extration Method",
-                "termAccessionNumber": "",
-                "termSourceRef": ""
-            },
-            {
-                "term": "NMR tube type",
-                "termAccessionNumber": "",
-                "termSourceRef": ""
-            },
-            {
-                "term": "Sample pH",
-                "termAccessionNumber": "",
-                "termSourceRef": ""
-            },
-            {
-                "term": "NMR Probe",
-                "termAccessionNumber": "",
-                "termSourceRef": ""
-            },
-            {
-                "term": "Pulse sequence name",
-                "termAccessionNumber": "",
-                "termSourceRef": ""
-            }
-        ],
             "ontologies": [
-
                 "MS",
                 "EFO",
                 "NCIT",
@@ -423,7 +15,417 @@
                 "MESH",
                 "MI"
             ],
-            "allowedParentOntologyTerms": null
+            "allowedParentOntologyTerms": null,
+            "description": "",
+            "selectionCriteria": {
+                "isaFileType": "investigation",
+                "studyCreatedAtOrAfter": null,
+                "studyCreatedBefore": null,
+                "studyCategoryFilter": null,
+                "templateVersionFilter": null,
+                "isaFileTemplateNameFilter": null,
+                "linkedFieldAndValueFilter": null
+            },
+            "termEnforcementLevel": "recommended",
+            "unexpectedTermEnforcementLevel": "recommended",
+            "validationType": "any-ontology-term",
+            "constraints": {},
+            "defaultValue": null,
+            "allowedMissingOntologyTerms": [],
+            "allowedOtherSources": [
+                {
+                    "sourceLabel": "MTBLS",
+                    "accessionPrefix": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_"
+                }
+            ],
+            "allowedPlaceholders": [
+                {
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/placeholder",
+                    "termSourceRef": "MTBLS"
+                },
+                {
+                    "termAccessionNumber": "",
+                    "termSourceRef": ""
+                }
+            ],
+            "terms": [
+                {
+                    "term": "Post Extraction",
+                    "termAccessionNumber": "",
+                    "termSourceRef": ""
+                },
+                {
+                    "term": "Derivatization",
+                    "termAccessionNumber": "",
+                    "termSourceRef": ""
+                },
+                {
+                    "term": "Chromatography Instrument",
+                    "termAccessionNumber": "",
+                    "termSourceRef": ""
+                },
+                {
+                    "term": "Autosampler model",
+                    "termAccessionNumber": "",
+                    "termSourceRef": ""
+                },
+                {
+                    "term": "Column model",
+                    "termAccessionNumber": "",
+                    "termSourceRef": ""
+                },
+                {
+                    "term": "Column type",
+                    "termAccessionNumber": "",
+                    "termSourceRef": ""
+                },
+                {
+                    "term": "Guard column",
+                    "termAccessionNumber": "",
+                    "termSourceRef": ""
+                },
+                {
+                    "term": "Scan polarity",
+                    "termAccessionNumber": "",
+                    "termSourceRef": ""
+                },
+                {
+                    "term": "Scan m/z range",
+                    "termAccessionNumber": "",
+                    "termSourceRef": ""
+                },
+                {
+                    "term": "Instrument",
+                    "termAccessionNumber": "",
+                    "termSourceRef": ""
+                },
+                {
+                    "term": "Ion source",
+                    "termAccessionNumber": "",
+                    "termSourceRef": ""
+                },
+                {
+                    "term": "Mass analyzer",
+                    "termAccessionNumber": "",
+                    "termSourceRef": ""
+                },
+                {
+                    "term": "DI Instrument",
+                    "termAccessionNumber": "",
+                    "termSourceRef": ""
+                },
+                {
+                    "term": "FIA Instrument",
+                    "termAccessionNumber": "",
+                    "termSourceRef": ""
+                },
+                {
+                    "term": "CE Instrument",
+                    "termAccessionNumber": "",
+                    "termSourceRef": ""
+                },
+                {
+                    "term": "SPE-IMS Instrument",
+                    "termAccessionNumber": "",
+                    "termSourceRef": ""
+                },
+                {
+                    "term": "Cartridge type",
+                    "termAccessionNumber": "",
+                    "termSourceRef": ""
+                },
+                {
+                    "term": "Column model 1",
+                    "termAccessionNumber": "",
+                    "termSourceRef": ""
+                },
+                {
+                    "term": "Column type 1",
+                    "termAccessionNumber": "",
+                    "termSourceRef": ""
+                },
+                {
+                    "term": "Column model 2",
+                    "termAccessionNumber": "",
+                    "termSourceRef": ""
+                },
+                {
+                    "term": "Column type 2",
+                    "termAccessionNumber": "",
+                    "termSourceRef": ""
+                },
+                {
+                    "term": "Detector",
+                    "termAccessionNumber": "",
+                    "termSourceRef": ""
+                },
+                {
+                    "term": "Signal range",
+                    "termAccessionNumber": "",
+                    "termSourceRef": ""
+                },
+                {
+                    "term": "Resolution",
+                    "termAccessionNumber": "",
+                    "termSourceRef": ""
+                },
+                {
+                    "term": "Temperature",
+                    "termAccessionNumber": "",
+                    "termSourceRef": ""
+                },
+                {
+                    "term": "Sample mounting",
+                    "termAccessionNumber": "",
+                    "termSourceRef": ""
+                },
+                {
+                    "term": "Sample preservation",
+                    "termAccessionNumber": "",
+                    "termSourceRef": ""
+                },
+                {
+                    "term": "Tissue modification",
+                    "termAccessionNumber": "",
+                    "termSourceRef": ""
+                },
+                {
+                    "term": "Sectioning instrument",
+                    "termAccessionNumber": "",
+                    "termSourceRef": ""
+                },
+                {
+                    "term": "Section thickness",
+                    "termAccessionNumber": "",
+                    "termSourceRef": ""
+                },
+                {
+                    "term": "Matrix",
+                    "termAccessionNumber": "",
+                    "termSourceRef": ""
+                },
+                {
+                    "term": "Matrix application",
+                    "termAccessionNumber": "",
+                    "termSourceRef": ""
+                },
+                {
+                    "term": "Stain",
+                    "termAccessionNumber": "",
+                    "termSourceRef": ""
+                },
+                {
+                    "term": "High-res image",
+                    "termAccessionNumber": "",
+                    "termSourceRef": ""
+                },
+                {
+                    "term": "Low-res image",
+                    "termAccessionNumber": "",
+                    "termSourceRef": ""
+                },
+                {
+                    "term": "Data Transformation software",
+                    "termAccessionNumber": "",
+                    "termSourceRef": ""
+                },
+                {
+                    "term": "Data Transformation software version",
+                    "termAccessionNumber": "",
+                    "termSourceRef": ""
+                },
+                {
+                    "term": "Instrument manufacturer",
+                    "termAccessionNumber": "",
+                    "termSourceRef": ""
+                },
+                {
+                    "term": "Solvent",
+                    "termAccessionNumber": "",
+                    "termSourceRef": ""
+                },
+                {
+                    "term": "Target material",
+                    "termAccessionNumber": "",
+                    "termSourceRef": ""
+                },
+                {
+                    "term": "Spatial resolution",
+                    "termAccessionNumber": "",
+                    "termSourceRef": ""
+                },
+                {
+                    "term": "Pixel size x",
+                    "termAccessionNumber": "",
+                    "termSourceRef": ""
+                },
+                {
+                    "term": "Pixel size y",
+                    "termAccessionNumber": "",
+                    "termSourceRef": ""
+                },
+                {
+                    "term": "Max count of pixel x",
+                    "termAccessionNumber": "",
+                    "termSourceRef": ""
+                },
+                {
+                    "term": "Max count of pixel y",
+                    "termAccessionNumber": "",
+                    "termSourceRef": ""
+                },
+                {
+                    "term": "Max dimension x",
+                    "termAccessionNumber": "",
+                    "termSourceRef": ""
+                },
+                {
+                    "term": "Max dimension y",
+                    "termAccessionNumber": "",
+                    "termSourceRef": ""
+                },
+                {
+                    "term": "Inlet type",
+                    "termAccessionNumber": "",
+                    "termSourceRef": ""
+                },
+                {
+                    "term": "Detector mode",
+                    "termAccessionNumber": "",
+                    "termSourceRef": ""
+                },
+                {
+                    "term": "Resolving power",
+                    "termAccessionNumber": "",
+                    "termSourceRef": ""
+                },
+                {
+                    "term": "Resolving power m/z",
+                    "termAccessionNumber": "",
+                    "termSourceRef": ""
+                },
+                {
+                    "term": "Native spectrum identifier format",
+                    "termAccessionNumber": "",
+                    "termSourceRef": ""
+                },
+                {
+                    "term": "Data file content",
+                    "termAccessionNumber": "",
+                    "termSourceRef": ""
+                },
+                {
+                    "term": "Spectrum representation",
+                    "termAccessionNumber": "",
+                    "termSourceRef": ""
+                },
+                {
+                    "term": "Raw data file format",
+                    "termAccessionNumber": "",
+                    "termSourceRef": ""
+                },
+                {
+                    "term": "Instrument software",
+                    "termAccessionNumber": "",
+                    "termSourceRef": ""
+                },
+                {
+                    "term": "Instrument software version",
+                    "termAccessionNumber": "",
+                    "termSourceRef": ""
+                },
+                {
+                    "term": "Line scan direction",
+                    "termAccessionNumber": "",
+                    "termSourceRef": ""
+                },
+                {
+                    "term": "Linescan sequence",
+                    "termAccessionNumber": "",
+                    "termSourceRef": ""
+                },
+                {
+                    "term": "Scan pattern",
+                    "termAccessionNumber": "",
+                    "termSourceRef": ""
+                },
+                {
+                    "term": "Number of scans",
+                    "termAccessionNumber": "",
+                    "termSourceRef": ""
+                },
+                {
+                    "term": "Scan type",
+                    "termAccessionNumber": "",
+                    "termSourceRef": ""
+                },
+                {
+                    "term": "Tomography",
+                    "termAccessionNumber": "",
+                    "termSourceRef": ""
+                },
+                {
+                    "term": "Field of view",
+                    "termAccessionNumber": "",
+                    "termSourceRef": ""
+                },
+                {
+                    "term": "Magnetic pulse sequence name",
+                    "termAccessionNumber": "",
+                    "termSourceRef": ""
+                },
+                {
+                    "term": "Voxel size",
+                    "termAccessionNumber": "",
+                    "termSourceRef": ""
+                },
+                {
+                    "term": "Localisation pulse sequence name",
+                    "termAccessionNumber": "",
+                    "termSourceRef": ""
+                },
+                {
+                    "term": "Number of transients",
+                    "termAccessionNumber": "",
+                    "termSourceRef": ""
+                },
+                {
+                    "term": "Water inhibition pulse sequence name",
+                    "termAccessionNumber": "",
+                    "termSourceRef": ""
+                },
+                {
+                    "term": "Magnetic field strength",
+                    "termAccessionNumber": "",
+                    "termSourceRef": ""
+                },
+                {
+                    "term": "Extration Method",
+                    "termAccessionNumber": "",
+                    "termSourceRef": ""
+                },
+                {
+                    "term": "NMR tube type",
+                    "termAccessionNumber": "",
+                    "termSourceRef": ""
+                },
+                {
+                    "term": "Sample pH",
+                    "termAccessionNumber": "",
+                    "termSourceRef": ""
+                },
+                {
+                    "term": "NMR Probe",
+                    "termAccessionNumber": "",
+                    "termSourceRef": ""
+                },
+                {
+                    "term": "Pulse sequence name",
+                    "termAccessionNumber": "",
+                    "termSourceRef": ""
+                }
+            ],
+            "unexpectedTerms": []
         }
     ]
 }

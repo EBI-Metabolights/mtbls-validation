@@ -3,214 +3,224 @@
         {
             "fixedColumnCount": 12,
             "description": "ISA-TAB Sample file with minimum columns.",
+            "version": "1.0",
             "headers": [
                 {
                     "columnStructure": "SINGLE_COLUMN",
                     "columnCategory": "Basic",
                     "columnHeader": "Source Name",
                     "columnPrefix": "",
-                    "controlLists": null,
-                    "defaultColumnIndex": 0,
                     "defaultValue": null,
-                    "maxLength": 128,
+                    "defaultColumnIndex": 0,
                     "minLength": 3,
-                    "required": true
+                    "maxLength": 128,
+                    "required": true,
+                    "description": null,
+                    "examples": null
                 },
                 {
                     "columnStructure": "ONTOLOGY_COLUMN",
                     "columnCategory": "Characteristics",
                     "columnHeader": "Characteristics[Organism]",
                     "columnPrefix": "Characteristics",
-                    "controlLists": {
-                        "termSourceRef": "prioritisedOrganismRefSources"
-                    },
-                    "defaultColumnIndex": 1,
                     "defaultValue": null,
-                    "maxLength": 0,
+                    "defaultColumnIndex": 1,
                     "minLength": 5,
-                    "required": true
+                    "maxLength": null,
+                    "required": true,
+                    "description": null,
+                    "examples": null
                 },
                 {
                     "columnStructure": "ONTOLOGY_COLUMN",
                     "columnCategory": "Characteristics",
                     "columnHeader": "Characteristics[Organism part]",
                     "columnPrefix": "Characteristics",
-                    "controlLists": {
-                        "termSourceRef": "prioritisedOrganismPartRefSources"
-                    },
-                    "defaultColumnIndex": 4,
                     "defaultValue": null,
-                    "maxLength": 0,
+                    "defaultColumnIndex": 4,
                     "minLength": 3,
-                    "required": true
+                    "maxLength": null,
+                    "required": true,
+                    "description": null,
+                    "examples": null
                 },
                 {
                     "columnStructure": "ONTOLOGY_COLUMN",
                     "columnCategory": "Characteristics",
                     "columnHeader": "Characteristics[Variant]",
                     "columnPrefix": "Characteristics",
-                    "controlLists": null,
-                    "defaultColumnIndex": 7,
                     "defaultValue": null,
-                    "maxLength": 0,
-                    "minLength": 0,
-                    "required": false
+                    "defaultColumnIndex": 7,
+                    "minLength": null,
+                    "maxLength": null,
+                    "required": false,
+                    "description": null,
+                    "examples": null
                 },
                 {
                     "columnStructure": "ONTOLOGY_COLUMN",
                     "columnCategory": "Characteristics",
                     "columnHeader": "Characteristics[Sample type]",
                     "columnPrefix": "Characteristics",
-                    "controlLists": null,
-                    "defaultColumnIndex": 10,
                     "defaultValue": null,
-                    "maxLength": 0,
-                    "minLength": 0,
-                    "required": false
+                    "defaultColumnIndex": 10,
+                    "minLength": null,
+                    "maxLength": null,
+                    "required": false,
+                    "description": null,
+                    "examples": null
                 },
                 {
                     "columnStructure": "SINGLE_COLUMN",
                     "columnCategory": "Protocol",
                     "columnHeader": "Protocol REF",
                     "columnPrefix": "",
-                    "defaultColumnIndex": 13,
                     "defaultValue": "Sample collection",
-                    "maxLength": 0,
+                    "defaultColumnIndex": 13,
                     "minLength": 1,
-                    "required": true
+                    "maxLength": null,
+                    "required": true,
+                    "description": null,
+                    "examples": null
                 },
                 {
                     "columnStructure": "SINGLE_COLUMN",
                     "columnCategory": "Basic",
                     "columnHeader": "Sample Name",
                     "columnPrefix": "",
-                    "controlLists": null,
-                    "defaultColumnIndex": 14,
                     "defaultValue": null,
-                    "maxLength": 128,
+                    "defaultColumnIndex": 14,
                     "minLength": 3,
-                    "required": true
+                    "maxLength": 128,
+                    "required": true,
+                    "description": null,
+                    "examples": null
                 }
-            ],
-            "version": "1.0"
+            ]
         },
         {
-            "description": "",
             "fixedColumnCount": 20,
+            "description": "",
+            "version": "2.0",
             "headers": [
                 {
                     "columnStructure": "SINGLE_COLUMN",
                     "columnCategory": "Basic",
                     "columnHeader": "Source Name",
                     "columnPrefix": "",
-                    "controlLists": null,
-                    "defaultColumnIndex": 0,
                     "defaultValue": null,
-                    "maxLength": 128,
+                    "defaultColumnIndex": 0,
                     "minLength": 3,
-                    "required": true
+                    "maxLength": 128,
+                    "required": true,
+                    "description": null,
+                    "examples": null
                 },
                 {
                     "columnStructure": "ONTOLOGY_COLUMN",
                     "columnCategory": "Characteristics",
                     "columnHeader": "Characteristics[Organism]",
                     "columnPrefix": "Characteristics",
-                    "controlLists": {
-                        "termSourceRef": "prioritisedOrganismRefSources"
-                    },
-                    "defaultColumnIndex": 1,
                     "defaultValue": null,
-                    "maxLength": 0,
+                    "defaultColumnIndex": 1,
                     "minLength": 5,
-                    "required": true
+                    "maxLength": null,
+                    "required": true,
+                    "description": null,
+                    "examples": null
                 },
                 {
                     "columnStructure": "ONTOLOGY_COLUMN",
                     "columnCategory": "Characteristics",
                     "columnHeader": "Characteristics[Organism part]",
                     "columnPrefix": "Characteristics",
-                    "controlLists": {
-                        "termSourceRef": "prioritisedOrganismPartRefSources"
-                    },
-                    "defaultColumnIndex": 4,
                     "defaultValue": null,
-                    "maxLength": 0,
+                    "defaultColumnIndex": 4,
                     "minLength": 3,
-                    "required": true
+                    "maxLength": null,
+                    "required": true,
+                    "description": null,
+                    "examples": null
                 },
                 {
                     "columnStructure": "ONTOLOGY_COLUMN",
                     "columnCategory": "Characteristics",
                     "columnHeader": "Characteristics[Variant]",
                     "columnPrefix": "Characteristics",
-                    "controlLists": null,
-                    "defaultColumnIndex": 7,
                     "defaultValue": null,
-                    "maxLength": 0,
-                    "minLength": 0,
-                    "required": false
+                    "defaultColumnIndex": 7,
+                    "minLength": null,
+                    "maxLength": null,
+                    "required": false,
+                    "description": null,
+                    "examples": null
                 },
                 {
                     "columnStructure": "ONTOLOGY_COLUMN",
                     "columnCategory": "Characteristics",
                     "columnHeader": "Characteristics[Sample type]",
                     "columnPrefix": "Characteristics",
-                    "controlLists": null,
-                    "defaultColumnIndex": 10,
                     "defaultValue": null,
-                    "maxLength": 0,
-                    "minLength": 0,
-                    "required": false
+                    "defaultColumnIndex": 10,
+                    "minLength": null,
+                    "maxLength": null,
+                    "required": false,
+                    "description": null,
+                    "examples": null
                 },
                 {
                     "columnStructure": "ONTOLOGY_COLUMN",
                     "columnCategory": "Characteristics",
                     "columnHeader": "Characteristics[Cell type]",
                     "columnPrefix": "Characteristics",
-                    "controlLists": null,
-                    "defaultColumnIndex": 13,
                     "defaultValue": null,
-                    "maxLength": 0,
-                    "minLength": 0,
-                    "required": false
+                    "defaultColumnIndex": 13,
+                    "minLength": null,
+                    "maxLength": null,
+                    "required": false,
+                    "description": null,
+                    "examples": null
                 },
                 {
                     "columnStructure": "ONTOLOGY_COLUMN",
                     "columnCategory": "Characteristics",
                     "columnHeader": "Characteristics[Disease]",
                     "columnPrefix": "Characteristics",
-                    "controlLists": null,
-                    "defaultColumnIndex": 16,
                     "defaultValue": null,
-                    "maxLength": 0,
-                    "minLength": 0,
-                    "required": false
+                    "defaultColumnIndex": 16,
+                    "minLength": null,
+                    "maxLength": null,
+                    "required": false,
+                    "description": null,
+                    "examples": null
                 },
                 {
                     "columnStructure": "SINGLE_COLUMN",
                     "columnCategory": "Protocol",
                     "columnHeader": "Protocol REF",
                     "columnPrefix": "",
-                    "defaultColumnIndex": 19,
                     "defaultValue": "Sample collection",
-                    "maxLength": 0,
+                    "defaultColumnIndex": 19,
                     "minLength": 1,
-                    "required": true
+                    "maxLength": null,
+                    "required": true,
+                    "description": null,
+                    "examples": null
                 },
                 {
                     "columnStructure": "SINGLE_COLUMN",
                     "columnCategory": "Basic",
                     "columnHeader": "Sample Name",
                     "columnPrefix": "",
-                    "controlLists": null,
-                    "defaultColumnIndex": 120,
                     "defaultValue": null,
-                    "maxLength": 128,
+                    "defaultColumnIndex": 120,
                     "minLength": 3,
-                    "required": true
+                    "maxLength": 128,
+                    "required": true,
+                    "description": null,
+                    "examples": null
                 }
-            ],
-            "version": "2.0"
+            ]
         }
     ]
 }

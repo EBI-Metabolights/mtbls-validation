@@ -12,6 +12,12 @@ dependencies = [
     "openpyxl>=3.1.5",
     "metabolights-utils>=1.4.0,<2",
     "pydantic2-to-typescript>=0.0.1",
+    "jsonschema>=4.25.1",
+    "pybreaker>=1.4.1",
+    "redis>=7.0.1",
+    "keyring>=25.7.0",
+    "mkdocs-material>=9.7.0",
+    "ruff>=0.14.6",
 ]
 
 [tool.hatch.build.targets.sdist]
@@ -23,3 +29,10 @@ include = ["scripts"]
 [build-system]
 requires = ["hatchling"]
 build-backend = "hatchling.build"
+
+
+[tool.ruff.lint]
+extend-select = ["E4", "E7", "E9", "F", "I", "G", "SLF", "Q"]
+ignore = [ "ANN401"]
+
+fixable = ["ALL"]

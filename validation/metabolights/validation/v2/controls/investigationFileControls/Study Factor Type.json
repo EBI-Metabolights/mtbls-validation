@@ -2,8 +2,19 @@
     "Study Factor Type": [
         {
             "ruleName": "Study Factor Type-01",
-            "description": "",
             "fieldName": "Study Factor Type",
+            "ontologies": [
+                "EFO",
+                "MTBLS",
+                "ENVO",
+                "MESH",
+                "CHEBI",
+                "CHMO",
+                "NCIT",
+                "PO"
+            ],
+            "allowedParentOntologyTerms": null,
+            "description": "",
             "selectionCriteria": {
                 "isaFileType": "investigation",
                 "studyCreatedAtOrAfter": null,
@@ -13,9 +24,12 @@
                 "isaFileTemplateNameFilter": null,
                 "linkedFieldAndValueFilter": null
             },
+            "termEnforcementLevel": "recommended",
+            "unexpectedTermEnforcementLevel": "recommended",
             "validationType": "any-ontology-term",
+            "constraints": {},
             "defaultValue": null,
-            "allowedMissingOntologyTerms": null,
+            "allowedMissingOntologyTerms": [],
             "allowedOtherSources": [
                 {
                     "sourceLabel": "MTBLS",
@@ -32,82 +46,72 @@
             ],
             "allowedPlaceholders": [
                 {
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/placeholder"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/placeholder",
+                    "termSourceRef": "MTBLS"
                 },
                 {
-                    "termSourceRef": "",
-                    "termAccessionNumber": ""
+                    "termAccessionNumber": "",
+                    "termSourceRef": ""
                 }
             ],
             "terms": [
                 {
                     "term": "disease",
-                    "termSourceRef": "EFO",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/efo/EFO_0000408"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/efo/EFO_0000408",
+                    "termSourceRef": "EFO"
                 },
                 {
                     "term": "timepoint",
-                    "termSourceRef": "EFO",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/efo/EFO_0000724"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/efo/EFO_0000724",
+                    "termSourceRef": "EFO"
                 },
                 {
                     "term": "treatment",
-                    "termSourceRef": "EFO",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/efo/EFO_0000727"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/efo/EFO_0000727",
+                    "termSourceRef": "EFO"
                 },
                 {
                     "term": "genotype",
-                    "termSourceRef": "EFO",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/efo/EFO_0000513"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/efo/EFO_0000513",
+                    "termSourceRef": "EFO"
                 },
                 {
                     "term": "age",
-                    "termSourceRef": "EFO",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/efo/EFO_0000246"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/efo/EFO_0000246",
+                    "termSourceRef": "EFO"
                 },
                 {
                     "term": "diet",
-                    "termSourceRef": "EFO",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/efo/EFO_0002755"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/efo/EFO_0002755",
+                    "termSourceRef": "EFO"
                 },
                 {
                     "term": "disease staging",
-                    "termSourceRef": "EFO",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/efo/EFO_0000410"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/efo/EFO_0000410",
+                    "termSourceRef": "EFO"
                 },
                 {
                     "term": "exposure",
-                    "termSourceRef": "EFO",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/efo/EFO_0000487"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/efo/EFO_0000487",
+                    "termSourceRef": "EFO"
                 },
                 {
                     "term": "biological replicate",
-                    "termSourceRef": "EFO",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/efo/EFO_0002091"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/efo/EFO_0002091",
+                    "termSourceRef": "EFO"
                 },
                 {
                     "term": "technical replicate",
-                    "termSourceRef": "EFO",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/efo/EFO_0002090"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/efo/EFO_0002090",
+                    "termSourceRef": "EFO"
                 },
                 {
                     "term": "Collection Date",
-                    "termSourceRef": "NCIT",
-                    "termAccessionNumber": "http://purl.obolibrary.org/obo/NCIT_C81286"
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/NCIT_C81286",
+                    "termSourceRef": "NCIT"
                 }
             ],
-            "ontologies": [
-                "EFO",
-                "MTBLS",
-                "ENVO",
-                "MESH",
-                "CHEBI",
-                "CHMO",
-                "NCIT",
-                "PO"
-            ],
-            "allowedParentOntologyTerms": null
+            "unexpectedTerms": []
         }
     ]
 }

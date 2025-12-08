@@ -1,0 +1,398 @@
+{
+    "LC-DAD": [
+        {
+            "version": "1.0",
+            "description": "Diode array detection MS",
+            "protocols": [
+                "Sample collection",
+                "Extraction",
+                "Chromatography",
+                "Data transformation",
+                "Metabolite identification"
+            ],
+            "protocolDefinitions": {
+                "Sample collection": {
+                    "name": "Sample collection",
+                    "description": "A procedure whereby biological samples for an experiment are sourced.",
+                    "type": {
+                        "term": "sample collection protocol",
+                        "termAccessionNumber": "http://www.ebi.ac.uk/efo/EFO_0005518",
+                        "termSourceRef": "EFO"
+                    },
+                    "typeCurie": "EFO:0005518",
+                    "parameters": [],
+                    "parameterDefinitions": {}
+                },
+                "Extraction": {
+                    "name": "Extraction",
+                    "description": "Properties of the preparation steps which took place before the measurement was performed.",
+                    "type": {
+                        "term": "Extraction",
+                        "termAccessionNumber": "",
+                        "termSourceRef": ""
+                    },
+                    "typeCurie": "",
+                    "parameters": [
+                        "Post Extraction",
+                        "Derivatization"
+                    ],
+                    "parameterDefinitions": {
+                        "Post Extraction": {
+                            "definition": "Post Extraction",
+                            "type": {
+                                "term": "Post Extraction",
+                                "termAccessionNumber": "",
+                                "termSourceRef": ""
+                            },
+                            "typeCurie": "",
+                            "format": "Text",
+                            "examples": []
+                        },
+                        "Post Derivatization": {
+                            "definition": "Post Derivatization",
+                            "type": {
+                                "term": "Post Derivatization",
+                                "termAccessionNumber": "",
+                                "termSourceRef": ""
+                            },
+                            "typeCurie": "",
+                            "format": "Text",
+                            "examples": []
+                        }
+                    }
+                },
+                "Chromatography": {
+                    "name": "Chromatography",
+                    "description": "A separation method where the components are distributed between two phases, one of which is stationary, while the other moves in a definite direction.",
+                    "type": {
+                        "term": "chromatography",
+                        "termAccessionNumber": "http://purl.obolibrary.org/obo/CHMO_0001000",
+                        "termSourceRef": "CHMO"
+                    },
+                    "typeCurie": "CHMO:0001000",
+                    "parameters": [
+                        "Chromatography Instrument",
+                        "Autosampler model",
+                        "Column model",
+                        "Column type",
+                        "Guard column",
+                        "Detector",
+                        "Signal range",
+                        "Resolution"
+                    ],
+                    "parameterDefinitions": {
+                        "Chromatography Instrument": {
+                            "definition": "A chromatography device that dissolves a mixture in liquid mobile phase to separate the analyte to be measured from other molecules in the mixture and allows it to be isolated.",
+                            "type": {
+                                "term": "liquid chromatography instrument",
+                                "termAccessionNumber": "http://purl.obolibrary.org/obo/OBI_0001139",
+                                "termSourceRef": "OBI"
+                            },
+                            "typeCurie": "OBI:0001139",
+                            "format": "Ontology",
+                            "examples": []
+                        },
+                        "Autosampler model": {
+                            "definition": "A piece of apparatus, consisting of a rotating circular tray containing a number of sealed vials, that is used for the automatic injection of samples during a mass spectrometry experiment.",
+                            "type": {
+                                "term": "autosampler",
+                                "termAccessionNumber": "http://purl.obolibrary.org/obo/CHMO_0002579",
+                                "termSourceRef": "CHMO"
+                            },
+                            "typeCurie": "CHMO:0002579",
+                            "format": "Ontology",
+                            "examples": []
+                        },
+                        "Column model": {
+                            "definition": "Column model",
+                            "type": {
+                                "term": "Column model",
+                                "termAccessionNumber": "",
+                                "termSourceRef": ""
+                            },
+                            "typeCurie": "",
+                            "format": "Ontology",
+                            "examples": []
+                        },
+                        "Column type": {
+                            "definition": "Column type",
+                            "type": {
+                                "term": "Column type",
+                                "termAccessionNumber": "",
+                                "termSourceRef": ""
+                            },
+                            "typeCurie": "",
+                            "format": "Ontology",
+                            "examples": []
+                        },
+                        "Guard column": {
+                            "definition": "Guard column",
+                            "type": {
+                                "term": "Guard column",
+                                "termAccessionNumber": "",
+                                "termSourceRef": ""
+                            },
+                            "typeCurie": "",
+                            "format": "Ontology",
+                            "examples": []
+                        },
+                        "Detector": {
+                            "definition": "Detector",
+                            "type": {
+                                "term": "Detector",
+                                "termAccessionNumber": "",
+                                "termSourceRef": ""
+                            },
+                            "typeCurie": "",
+                            "format": "Ontology",
+                            "examples": []
+                        },
+                        "Signal range": {
+                            "definition": "Signal range",
+                            "type": {
+                                "term": "Signal range",
+                                "termAccessionNumber": "",
+                                "termSourceRef": ""
+                            },
+                            "typeCurie": "",
+                            "format": "Text",
+                            "examples": []
+                        },
+                        "Resolution": {
+                            "definition": "Resolution",
+                            "type": {
+                                "term": "Resolution",
+                                "termAccessionNumber": "",
+                                "termSourceRef": ""
+                            },
+                            "typeCurie": "",
+                            "format": "Text",
+                            "examples": []
+                        }
+                    }
+                },
+                "Data transformation": {
+                    "name": "Data transformation",
+                    "description": "A planned process that produces output data from raw data.",
+                    "type": {
+                        "term": "data transformation",
+                        "termAccessionNumber": "",
+                        "termSourceRef": ""
+                    },
+                    "typeCurie": "",
+                    "parameters": [],
+                    "parameterDefinitions": {}
+                },
+                "Metabolite identification": {
+                    "name": "Metabolite identification",
+                    "description": "Identification of the breakdown products of a substance, either through chemical instability or the actions of enzymes within the body.",
+                    "type": {
+                        "term": "metabolite identification",
+                        "termAccessionNumber": "",
+                        "termSourceRef": ""
+                    },
+                    "typeCurie": "",
+                    "parameters": [],
+                    "parameterDefinitions": {}
+                }
+            }
+        },
+        {
+            "version": "2.0",
+            "description": "Diode array detection MS",
+            "protocols": [
+                "Sample collection",
+                "Extraction",
+                "Chromatography",
+                "Data transformation",
+                "Metabolite identification"
+            ],
+            "protocolDefinitions": {
+                "Sample collection": {
+                    "name": "Sample collection",
+                    "description": "A procedure whereby biological samples for an experiment are sourced.",
+                    "type": {
+                        "term": "sample collection protocol",
+                        "termAccessionNumber": "http://www.ebi.ac.uk/efo/EFO_0005518",
+                        "termSourceRef": "EFO"
+                    },
+                    "typeCurie": "EFO:0005518",
+                    "parameters": [],
+                    "parameterDefinitions": {}
+                },
+                "Extraction": {
+                    "name": "Extraction",
+                    "description": "Properties of the preparation steps which took place before the measurement was performed.",
+                    "type": {
+                        "term": "Extraction",
+                        "termAccessionNumber": "",
+                        "termSourceRef": ""
+                    },
+                    "typeCurie": "",
+                    "parameters": [
+                        "Post Extraction",
+                        "Derivatization"
+                    ],
+                    "parameterDefinitions": {
+                        "Post Extraction": {
+                            "definition": "Post Extraction",
+                            "type": {
+                                "term": "Post Extraction",
+                                "termAccessionNumber": "",
+                                "termSourceRef": ""
+                            },
+                            "typeCurie": "",
+                            "format": "Text",
+                            "examples": []
+                        },
+                        "Post Derivatization": {
+                            "definition": "Post Derivatization",
+                            "type": {
+                                "term": "Post Derivatization",
+                                "termAccessionNumber": "",
+                                "termSourceRef": ""
+                            },
+                            "typeCurie": "",
+                            "format": "Text",
+                            "examples": []
+                        }
+                    }
+                },
+                "Chromatography": {
+                    "name": "Chromatography",
+                    "description": "A separation method where the components are distributed between two phases, one of which is stationary, while the other moves in a definite direction.",
+                    "type": {
+                        "term": "chromatography",
+                        "termAccessionNumber": "http://purl.obolibrary.org/obo/CHMO_0001000",
+                        "termSourceRef": "CHMO"
+                    },
+                    "typeCurie": "CHMO:0001000",
+                    "parameters": [
+                        "Chromatography Instrument",
+                        "Autosampler model",
+                        "Column model",
+                        "Column type",
+                        "Guard column",
+                        "Detector",
+                        "Signal range",
+                        "Resolution"
+                    ],
+                    "parameterDefinitions": {
+                        "Chromatography Instrument": {
+                            "definition": "A chromatography device that dissolves a mixture in liquid mobile phase to separate the analyte to be measured from other molecules in the mixture and allows it to be isolated.",
+                            "type": {
+                                "term": "liquid chromatography instrument",
+                                "termAccessionNumber": "http://purl.obolibrary.org/obo/OBI_0001139",
+                                "termSourceRef": "OBI"
+                            },
+                            "typeCurie": "OBI:0001139",
+                            "format": "Ontology",
+                            "examples": []
+                        },
+                        "Autosampler model": {
+                            "definition": "A piece of apparatus, consisting of a rotating circular tray containing a number of sealed vials, that is used for the automatic injection of samples during a mass spectrometry experiment.",
+                            "type": {
+                                "term": "autosampler",
+                                "termAccessionNumber": "http://purl.obolibrary.org/obo/CHMO_0002579",
+                                "termSourceRef": "CHMO"
+                            },
+                            "typeCurie": "CHMO:0002579",
+                            "format": "Ontology",
+                            "examples": []
+                        },
+                        "Column model": {
+                            "definition": "Column model",
+                            "type": {
+                                "term": "Column model",
+                                "termAccessionNumber": "",
+                                "termSourceRef": ""
+                            },
+                            "typeCurie": "",
+                            "format": "Ontology",
+                            "examples": []
+                        },
+                        "Column type": {
+                            "definition": "Column type",
+                            "type": {
+                                "term": "Column type",
+                                "termAccessionNumber": "",
+                                "termSourceRef": ""
+                            },
+                            "typeCurie": "",
+                            "format": "Ontology",
+                            "examples": []
+                        },
+                        "Guard column": {
+                            "definition": "Guard column",
+                            "type": {
+                                "term": "Guard column",
+                                "termAccessionNumber": "",
+                                "termSourceRef": ""
+                            },
+                            "typeCurie": "",
+                            "format": "Ontology",
+                            "examples": []
+                        },
+                        "Detector": {
+                            "definition": "Detector",
+                            "type": {
+                                "term": "Detector",
+                                "termAccessionNumber": "",
+                                "termSourceRef": ""
+                            },
+                            "typeCurie": "",
+                            "format": "Ontology",
+                            "examples": []
+                        },
+                        "Signal range": {
+                            "definition": "Signal range",
+                            "type": {
+                                "term": "Signal range",
+                                "termAccessionNumber": "",
+                                "termSourceRef": ""
+                            },
+                            "typeCurie": "",
+                            "format": "Text",
+                            "examples": []
+                        },
+                        "Resolution": {
+                            "definition": "Resolution",
+                            "type": {
+                                "term": "Resolution",
+                                "termAccessionNumber": "",
+                                "termSourceRef": ""
+                            },
+                            "typeCurie": "",
+                            "format": "Text",
+                            "examples": []
+                        }
+                    }
+                },
+                "Data transformation": {
+                    "name": "Data transformation",
+                    "description": "A planned process that produces output data from raw data.",
+                    "type": {
+                        "term": "data transformation",
+                        "termAccessionNumber": "",
+                        "termSourceRef": ""
+                    },
+                    "typeCurie": "",
+                    "parameters": [],
+                    "parameterDefinitions": {}
+                },
+                "Metabolite identification": {
+                    "name": "Metabolite identification",
+                    "description": "Identification of the breakdown products of a substance, either through chemical instability or the actions of enzymes within the body.",
+                    "type": {
+                        "term": "metabolite identification",
+                        "termAccessionNumber": "",
+                        "termSourceRef": ""
+                    },
+                    "typeCurie": "",
+                    "parameters": [],
+                    "parameterDefinitions": {}
+                }
+            }
+        }
+    ]
+}

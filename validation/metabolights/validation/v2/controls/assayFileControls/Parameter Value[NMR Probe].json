@@ -2,8 +2,12 @@
     "Parameter Value[NMR Probe]": [
         {
             "ruleName": "Parameter Value[NMR Probe]-01",
-            "description": "",
             "fieldName": "Parameter Value[NMR Probe]",
+            "ontologies": [
+                "MTBLS"
+            ],
+            "allowedParentOntologyTerms": null,
+            "description": "",
             "selectionCriteria": {
                 "isaFileType": "assay",
                 "studyCreatedAtOrAfter": null,
@@ -20,9 +24,12 @@
                     }
                 ]
             },
+            "termEnforcementLevel": "recommended",
+            "unexpectedTermEnforcementLevel": "recommended",
             "validationType": "any-ontology-term",
+            "constraints": {},
             "defaultValue": null,
-            "allowedMissingOntologyTerms": null,
+            "allowedMissingOntologyTerms": [],
             "allowedOtherSources": [
                 {
                     "sourceLabel": "MTBLS",
@@ -39,440 +46,433 @@
             ],
             "allowedPlaceholders": [
                 {
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/placeholder"
-                },
-                {
-                    "termSourceRef": "",
-                    "termAccessionNumber": ""
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/placeholder",
+                    "termSourceRef": "MTBLS"
                 }
             ],
             "terms": [
                 {
                     "term": "1.7 mm CPTCI 1H-13C/15N/D Z-GRD",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000434"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000434",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "1.7 mm CPTCI 1H/13C/15N/D Z-GRD cryorobe",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000435"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000435",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "1.7 mm PATXI 1H/31P-13C-D Z-GRD",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002002"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002002",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "2.5 mm BBO-1H/D Z-GRD",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000436"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000436",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "2.5 mm QXI 1H/15N/13C/31P/D Z-GRD",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000437"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000437",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "3 mm 1H(X)-PFG inverse configuration",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000440"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000440",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "3 mm BB 1H",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000438"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000438",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "3 mm BB 1H/X",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000439"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000439",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "3 mm CPTCI 1H-13C/15N/D Z-GRD",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002025"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002025",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "3.2 mm MAS BB/1H",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000441"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000441",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "4 mm HR-MAS dual inverse 1H/13C with a Magic Angle gradient",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000445"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000445",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "4 mm HRMAS 1H/13C/15N/2H Z-GRD",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000444"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000444",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "4 mm HRMAS 1H/13C/2H Z-GRD",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000442"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000442",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "4 mm HRMAS 1H/13C/D Z-GRD",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000443"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000443",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "4 mm HRMAS 1H/31P/13C/D",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002026"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002026",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "5 mm 13C HCN cold probe",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002028"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002028",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "5 mm 1H-13C cryoprobe",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000446"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000446",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "5 mm 1H{13C,15N} triple resonance PFG salt tolerant cold probe",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000503"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000503",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "5 mm 1H{13C,15N} tunable triple resonance PFG probe",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000504"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000504",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "5 mm 4-Nucleus (13C/31P-1H/19F) (Standard Probe)",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000502"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000502",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "5 mm ATMA cryoprobe",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000447"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000447",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "5 mm AutoX DB",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000507"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000507",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "5 mm BBI",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000448"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000448",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "5 mm BBI 1H",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000449"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000449",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "5 mm BBI 1H-BB Z-GRD",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000450"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000450",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "5 mm BBI 1H/D-BB Z-GRD",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000451"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000451",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "5 mm BBI double resonance",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000452"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000452",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "5 mm BBO H&F cryoprobe",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000455"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000455",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "5 mm BBO-1H Z-GRD",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000453"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000453",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "5 mm BBO-1H/D Z-GRD",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000454"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000454",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "5 mm CPBBO BB-1H/19F/15N/D Z/GRD cryoprobe",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000457"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000457",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "5 mm CPBBO BB-1H/19F/D Z-GRD cryoprobe",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000456"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000456",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "5 mm CPP 1H/19F-13C/15N/D Z-GRD",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000458"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000458",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "5 mm CPPBBO BB-1H/19F/D Z-GRD",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002029"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002029",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "5 mm CPQCI 1H-31P/13C/15N/D Z-GRD",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000472"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000472",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "5 mm CPQCI 1H/19F-13C/15N/D Z-GRD",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000471"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000471",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "5 mm CPQNP 1H/13C/15N/31P/D Z-GRD",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002030"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002030",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "5 mm CPQNP 1H/15N/13C/31P Z-GRD",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002031"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002031",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "5 mm CPTCI",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000459"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000459",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "5 mm CPTCI 1H-13C/15N/D Z-GRD",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000460"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000460",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "5 mm CPTCI 1H-13C/31P/D cryoprobe",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000464"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000464",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "5 mm CPTCI 1H-13C/31P/D Z-GRD cryoprobe",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000465"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000465",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "5 mm CPTCI 1H-31P/13C/D Z-GRD",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000467"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000467",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "5 mm CPTCI 1H-31P/13C/D Z-GRD cryoprobe",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000468"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000468",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "5 mm CPTCI 1H/13C/15N/D Z-GRD cryoprobe",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000461"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000461",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "5 mm CPTCI 1H/13C/31P",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000462"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000462",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "5 mm CPTCI 1H/13C/31P Z-GRD cryoprobe",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000463"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000463",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "5 mm CPTCI 1H/19F-13C/15N/D Z-GRD",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000466"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000466",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "5 mm CPTCI 700S4 H&F/C/N-D-05 Z",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000506"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000506",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "5 mm CPTXI 1H-13C/15N/D Z-GRD",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000469"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000469",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "5 mm CPTXO 13C/15N-1H/D Z-GRD",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002032"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002032",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "5 mm CPTXO 13C/D-1H/15N Z-GRD",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000470"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000470",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "5 mm cryogenic",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000473"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000473",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "5 mm HCN triple resonance",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000474"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000474",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "5 mm HCN Z-gradient PFG RT",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000475"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000475",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "5 mm HRMAS BB/2H-1H MAS-GRD",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000476"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000476",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "5 mm HX",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000477"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000477",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "5 mm inverse",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000478"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000478",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "5 mm inverse 1H/13C/15N/D cryoprobe",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000479"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000479",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "5 mm PABBFO BB-19F/1H/D Z-GRD",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002033"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002033",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "5 mm PABBI 1H-BB/D Z-GRD",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000480"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000480",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "5 mm PABBI 1H/D-BB Z-GRD",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000481"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000481",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "5 mm PABBO BB-1H/D Z-GRD",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000482"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000482",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "5 mm PADUL 13C-1H/D Z-GRD",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000483"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000483",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "5 mm PATBO BB-1H/19F/D Z-GRD",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000484"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000484",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "5 mm PATXI 1H-13C/15N XYZ-GRD",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000486"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000486",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "5 mm PATXI 1H-13C/15N/D Z-GRD",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000487"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000487",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "5 mm PATXI 1H/D-13C/15N Z-GRD",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000485"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000485",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "5 mm PATXI 1H/D/19F-13C/15N Z-GRD",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002034"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002034",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "5 mm QNP 1H/13C/15N/31P",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000488"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000488",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "5 mm QXI 1H/15N/13C/31P/D Z-GRD",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000489"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000489",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "5 mm TBI 1H-BB XYZ-GRD",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000490"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000490",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "5 mm TBO BB-1H/19F/D Z-GRD",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000491"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000491",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "5 mm Triple 1H-13C/15N/D",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000492"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000492",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "5 mm triple resonance cryoprobe",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000493"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000493",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "5 mm Triple-resonance cryoprobe with z-gradients",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000500"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000500",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "5 mm Triple-resonance salt tolerant cold probe",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000501"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000501",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "5 mm TXI",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000494"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000494",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "5 mm TXI 1H/13C/15N/D Z/GRD cryoprobe",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000495"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000495",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "5 mm TXI 1H/D-13C/15N XYZ-GRD",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000496"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000496",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "5 mm TXI ATMA",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000497"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000497",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "5 mm TXI D/1H-13C/15N Z-GRD",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000498"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000498",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "5 mm TXI HCN CryoProbe",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000499"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000499",
+                    "termSourceRef": "MTBLS"
                 },
                 {
                     "term": "BBI",
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000505"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000505",
+                    "termSourceRef": "MTBLS"
                 }
             ],
-            "ontologies": [
-                "MTBLS"
-            ],
-            "allowedParentOntologyTerms": null
+            "unexpectedTerms": []
         }
     ]
 }

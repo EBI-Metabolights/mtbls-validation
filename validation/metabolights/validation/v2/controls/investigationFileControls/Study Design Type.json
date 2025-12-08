@@ -2,8 +2,21 @@
     "Study Design Type": [
         {
             "ruleName": "Study Design Type-01",
-            "description": "",
             "fieldName": "Study Design Type",
+            "ontologies": [
+                "EFO",
+                "MSIO",
+                "NCIT",
+                "MTBLS",
+                "CHEBI",
+                "CHMO",
+                "MONDO",
+                "PRIDE",
+                "GO",
+                "MESH"
+            ],
+            "allowedParentOntologyTerms": null,
+            "description": "",
             "selectionCriteria": {
                 "isaFileType": "investigation",
                 "studyCreatedAtOrAfter": null,
@@ -13,9 +26,12 @@
                 "isaFileTemplateNameFilter": null,
                 "linkedFieldAndValueFilter": null
             },
+            "termEnforcementLevel": "recommended",
+            "unexpectedTermEnforcementLevel": "recommended",
             "validationType": "any-ontology-term",
+            "constraints": {},
             "defaultValue": null,
-            "allowedMissingOntologyTerms": null,
+            "allowedMissingOntologyTerms": [],
             "allowedOtherSources": [
                 {
                     "sourceLabel": "MTBLS",
@@ -32,12 +48,12 @@
             ],
             "allowedPlaceholders": [
                 {
-                    "termSourceRef": "MTBLS",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/placeholder"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/placeholder",
+                    "termSourceRef": "MTBLS"
                 },
                 {
-                    "termSourceRef": "",
-                    "termAccessionNumber": ""
+                    "termAccessionNumber": "",
+                    "termSourceRef": ""
                 }
             ],
             "terms": [
@@ -53,57 +69,46 @@
                 },
                 {
                     "term": "nuclear magnetic resonance spectroscopy",
-                    "termSourceRef": "CHMO",
-                    "termAccessionNumber": "http://purl.obolibrary.org/obo/CHMO_0000591"
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/CHMO_0000591",
+                    "termSourceRef": "CHMO"
                 },
                 {
                     "term": "ultra-performance liquid chromatography-mass spectrometry",
-                    "termSourceRef": "CHMO",
-                    "termAccessionNumber": "http://purl.obolibrary.org/obo/CHMO_0000715"
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/CHMO_0000715",
+                    "termSourceRef": "CHMO"
                 },
                 {
                     "term": "gas chromatography-mass spectrometry",
-                    "termSourceRef": "CHMO",
-                    "termAccessionNumber": "http://purl.obolibrary.org/obo/CHMO_0000497"
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/CHMO_0000497",
+                    "termSourceRef": "CHMO"
                 },
                 {
                     "term": "tandem mass spectrometry",
-                    "termSourceRef": "CHMO",
-                    "termAccessionNumber": "http://purl.obolibrary.org/obo/CHMO_0000575"
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/CHMO_0000575",
+                    "termSourceRef": "CHMO"
                 },
                 {
                     "term": "Multi-omics study",
-                    "termSourceRef": "PRIDE",
-                    "termAccessionNumber": "http://purl.obolibrary.org/obo/PRIDE_0000461"
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/PRIDE_0000461",
+                    "termSourceRef": "PRIDE"
                 },
                 {
                     "term": "microbiome",
-                    "termSourceRef": "EFO",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/efo/EFO_0004982"
+                    "termAccessionNumber": "http://www.ebi.ac.uk/efo/EFO_0004982",
+                    "termSourceRef": "EFO"
                 },
                 {
-                    "term": "aging",
-                    "termSourceRef": "NCIT",
-                    "termAccessionNumber": "http://purl.obolibrary.org/obo/NCIT_C16269"
+                    "term": "Aging",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/NCIT_C16269",
+                    "termSourceRef": "NCIT"
                 },
                 {
                     "term": "cancer",
-                    "termSourceRef": "MONDO",
-                    "termAccessionNumber": "http://purl.obolibrary.org/obo/MONDO_0004992"
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/MONDO_0004992",
+                    "termSourceRef": "MONDO"
                 }
             ],
-            "ontologies": [
-                "EFO",
-                "NCIT",
-                "MTBLS",
-                "CHEBI",
-                "CHMO",
-                "MONDO",
-                "PRIDE",
-                "GO",
-                "MESH"
-            ],
-            "allowedParentOntologyTerms": null
+            "unexpectedTerms": []
         }
     ]
 }
