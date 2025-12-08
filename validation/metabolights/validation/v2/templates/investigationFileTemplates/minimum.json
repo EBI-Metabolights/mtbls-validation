@@ -110,7 +110,7 @@
                         "Template Version",
                         "Study Category",
                         "Funder",
-                        "Funder ROR Id",
+                        "Funder ROR ID",
                         "Grant Identifier"
                     ],
                     "defaultFieldValues": {
@@ -367,7 +367,7 @@
                         "Template Version",
                         "Study Category",
                         "Funder",
-                        "Funder ROR Id",
+                        "Funder ROR ID",
                         "Grant Identifier"
                     ],
                     "defaultFieldValues": {

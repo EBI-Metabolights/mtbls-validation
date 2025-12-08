@@ -43,7 +43,7 @@ Comment[Study Template]	minimum
 Comment[Template Version]	1.0
 Comment[Study Category]	other
 Comment[Funder]	
-Comment[Funder ROR Id]	
+Comment[Funder ROR ID]	
 Comment[Grant Identifier]	
 STUDY DESIGN DESCRIPTORS
 Study Design Type	
