@@ -5,7 +5,10 @@ import zipfile
 from pathlib import Path
 from typing import Union
 
+import httpx
 import pandas as pd
+
+from scripts.models import OntologyTerm
 
 FIXED_DATE_TIME = (2025, 1, 1, 0, 0, 0)
 
@@ -145,3 +148,72 @@ def get_unit_test_names_methods(
         for _, row in df.iterrows():
             rules[row.iloc[5]] = row
     return rules
+
+
+def search_ols_term(
+    keyword: str,
+    ontology_filter: None | list[str] = None,
+    exact_match_only: bool = True,
+    query_fields: None | list[str] = None,
+    field_list: None | list[str] = None,
+) -> None | OntologyTerm:
+    size = 100
+    url = "https://www.ebi.ac.uk/ols4/api/search"
+    if not query_fields:
+        query_fields_str = "label"
+    else:
+        query_fields_str = ",".join(query_fields)
+    if not field_list:
+        field_list = [
+            "iri",
+            "label",
+            "ontology_prefix",
+            "obo_id",
+            "description",
+            "type",
+            "synonym",
+        ]
+    params = {
+        "q": keyword,
+        "fieldList": ",".join(field_list),
+        "queryFields": query_fields_str,
+        "exact": exact_match_only,
+        "obsoletes": False,
+        "rows": size,
+        "format": "json",
+        "lang": "en",
+        "type": "class,individual",
+    }
+
+    params.update({"start": 0})
+    params.update({"ontology": ",".join([x.lower() for x in ontology_filter if x])})
+    headers = {"Accept": "application/json"}
+
+    try:
+        response = httpx.get(
+            url,
+            params=params,
+            headers=headers,
+            timeout=10,
+            follow_redirects=True,
+        )
+        response.raise_for_status()
+        result_data = response.json()
+        docs = result_data.get("response", {}).get("docs", [])
+        if docs:
+            # return docs[0].get("iri", None)
+            return OntologyTerm(
+                term=docs[0].get("label", ""),
+                term_source_ref=docs[0].get("ontology_prefix", "") or "",
+                term_accession_number=docs[0].get("iri", "") or "",
+            )
+        return None
+
+    except Exception as ex:
+        print(
+            f"Ontology search error for [{keyword}, {','.join(ontology_filter)}]: {ex}"
+        )
+
+
+if __name__ == "__main__":
+    search_ols_term("Mus musculus", ontology_filter=["NCBITaxon"])

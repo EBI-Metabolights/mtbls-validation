@@ -8357,7 +8357,7 @@
                         "termSourceRef": "CHMO"
                     },
                     {
-                        "term": "data transform",
+                        "term": "data transformation",
                         "termAccessionNumber": "http://purl.obolibrary.org/obo/OBI_0200000",
                         "termSourceRef": "OBI"
                     },

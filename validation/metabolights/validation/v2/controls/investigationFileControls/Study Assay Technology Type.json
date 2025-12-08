@@ -182,7 +182,7 @@
             "allowedPlaceholders": [],
             "terms": [
                 {
-                    "term": "other",
+                    "term": "Other",
                     "termAccessionNumber": "http://purl.obolibrary.org/obo/NCIT_C17649",
                     "termSourceRef": "NCIT"
                 },

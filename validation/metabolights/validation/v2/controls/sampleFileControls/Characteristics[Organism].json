@@ -46,37 +46,37 @@
                 {
                     "term": "Homo sapiens",
                     "termAccessionNumber": "http://purl.obolibrary.org/obo/NCBITaxon_9606",
-                    "termSourceRef": "NCBITAXON"
+                    "termSourceRef": "NCBITaxon"
                 },
                 {
                     "term": "Mus musculus",
                     "termAccessionNumber": "http://purl.obolibrary.org/obo/NCBITaxon_10090",
-                    "termSourceRef": "NCBITAXON"
+                    "termSourceRef": "NCBITaxon"
                 },
                 {
                     "term": "Rattus norvegicus",
                     "termAccessionNumber": "http://purl.obolibrary.org/obo/NCBITaxon_10116",
-                    "termSourceRef": "NCBITAXON"
+                    "termSourceRef": "NCBITaxon"
                 },
                 {
                     "term": "Arabidopsis thaliana",
                     "termAccessionNumber": "http://purl.obolibrary.org/obo/NCBITaxon_3702",
-                    "termSourceRef": "NCBITAXON"
+                    "termSourceRef": "NCBITaxon"
                 },
                 {
                     "term": "Vitis vinifera",
                     "termAccessionNumber": "http://purl.obolibrary.org/obo/NCBITaxon_29760",
-                    "termSourceRef": "NCBITAXON"
+                    "termSourceRef": "NCBITaxon"
                 },
                 {
                     "term": "Escherichia coli",
                     "termAccessionNumber": "http://purl.obolibrary.org/obo/NCBITaxon_562",
-                    "termSourceRef": "NCBITAXON"
+                    "termSourceRef": "NCBITaxon"
                 },
                 {
                     "term": "Trypanosoma brucei",
                     "termAccessionNumber": "http://purl.obolibrary.org/obo/NCBITaxon_5691",
-                    "termSourceRef": "NCBITAXON"
+                    "termSourceRef": "NCBITaxon"
                 },
                 {
                     "term": "sea water",
@@ -162,37 +162,37 @@
                 {
                     "term": "Homo sapiens",
                     "termAccessionNumber": "http://purl.obolibrary.org/obo/NCBITaxon_9606",
-                    "termSourceRef": "NCBITAXON"
+                    "termSourceRef": "NCBITaxon"
                 },
                 {
                     "term": "Mus musculus",
                     "termAccessionNumber": "http://purl.obolibrary.org/obo/NCBITaxon_10090",
-                    "termSourceRef": "NCBITAXON"
+                    "termSourceRef": "NCBITaxon"
                 },
                 {
                     "term": "Rattus norvegicus",
                     "termAccessionNumber": "http://purl.obolibrary.org/obo/NCBITaxon_10116",
-                    "termSourceRef": "NCBITAXON"
+                    "termSourceRef": "NCBITaxon"
                 },
                 {
                     "term": "Arabidopsis thaliana",
                     "termAccessionNumber": "http://purl.obolibrary.org/obo/NCBITaxon_3702",
-                    "termSourceRef": "NCBITAXON"
+                    "termSourceRef": "NCBITaxon"
                 },
                 {
                     "term": "Vitis vinifera",
                     "termAccessionNumber": "http://purl.obolibrary.org/obo/NCBITaxon_29760",
-                    "termSourceRef": "NCBITAXON"
+                    "termSourceRef": "NCBITaxon"
                 },
                 {
                     "term": "Escherichia coli",
                     "termAccessionNumber": "http://purl.obolibrary.org/obo/NCBITaxon_562",
-                    "termSourceRef": "NCBITAXON"
+                    "termSourceRef": "NCBITaxon"
                 },
                 {
                     "term": "Trypanosoma brucei",
                     "termAccessionNumber": "http://purl.obolibrary.org/obo/NCBITaxon_5691",
-                    "termSourceRef": "NCBITAXON"
+                    "termSourceRef": "NCBITaxon"
                 },
                 {
                     "term": "sea water",
