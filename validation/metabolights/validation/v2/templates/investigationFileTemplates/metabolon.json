@@ -563,7 +563,7 @@
                     "defaultComments": [
                         "Study Person ORCID",
                         "Study Person Additional Email",
-                        "Study Person Affiliation ROR Id"
+                        "Study Person Affiliation ROR ID"
                     ],
                     "defaultFieldValues": {},
                     "defaultCommentValues": {}
@@ -1133,7 +1133,7 @@
                     "defaultComments": [
                         "Study Person ORCID",
                         "Study Person Additional Email",
-                        "Study Person Affiliation ROR Id"
+                        "Study Person Affiliation ROR ID"
                     ],
                     "defaultFieldValues": {},
                     "defaultCommentValues": {}

@@ -1634,7 +1634,7 @@
         "SLSO": {
             "sourceName": "SLSO",
             "sourceFile": "http://purl.obolibrary.org/obo/slso.owl",
-            "sourceVersion": "2025-09-16",
+            "sourceVersion": "2025-12-05",
             "sourceDescription": "Space Life Sciences Ontology",
             "sourceDetails": "The Space Life Sciences Ontology is an application ontology and is intended to support the operation of NASA's Life Sciences Data Archive and other systems that contain space life science research data."
         },

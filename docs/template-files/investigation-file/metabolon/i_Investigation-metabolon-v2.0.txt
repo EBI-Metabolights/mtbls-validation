@@ -104,4 +104,4 @@ Study Person Roles Term Accession Number
 Study Person Roles Term Source REF	
 Comment[Study Person ORCID]	
 Comment[Study Person Additional Email]	
-Comment[Study Person Affiliation ROR Id]	
+Comment[Study Person Affiliation ROR ID]	
