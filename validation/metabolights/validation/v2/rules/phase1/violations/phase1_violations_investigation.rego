@@ -2329,7 +2329,7 @@ rule_i_100_360_011_07 contains result if {
 	comments := study.studyContacts.comments
 	ror_id_idx_set := {ror_id_idx |
 		some ror_id_idx, comment in comments
-		comment.name == "Study Person Affiliation ROR ID"
+		lower(comment.name) == "study person affiliation ror id"
 	}
 	some idx, person in study.studyContacts.people
 

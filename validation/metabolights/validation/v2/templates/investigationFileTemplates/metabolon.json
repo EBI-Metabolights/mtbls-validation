@@ -108,7 +108,7 @@
                         "Study Category",
                         "Template Version",
                         "Funder",
-                        "Funder ROR Id",
+                        "Funder ROR ID",
                         "Grant Identifier"
                     ],
                     "defaultFieldValues": {
@@ -563,7 +563,7 @@
                     "defaultComments": [
                         "Study Person ORCID",
                         "Study Person Additional Email",
-                        "Study Person Affiliation ROR Id"
+                        "Study Person Affiliation ROR ID"
                     ],
                     "defaultFieldValues": {},
                     "defaultCommentValues": {}
@@ -678,7 +678,7 @@
                         "Study Category",
                         "Template Version",
                         "Funder",
-                        "Funder ROR Id",
+                        "Funder ROR ID",
                         "Grant Identifier"
                     ],
                     "defaultFieldValues": {
@@ -1133,7 +1133,7 @@
                     "defaultComments": [
                         "Study Person ORCID",
                         "Study Person Additional Email",
-                        "Study Person Affiliation ROR Id"
+                        "Study Person Affiliation ROR ID"
                     ],
                     "defaultFieldValues": {},
                     "defaultCommentValues": {}

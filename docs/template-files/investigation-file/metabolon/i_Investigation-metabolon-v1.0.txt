@@ -43,7 +43,7 @@ Comment[Study Template]	minimum
 Comment[Study Category]	other
 Comment[Template Version]	1.0
 Comment[Funder]	
-Comment[Funder ROR Id]	
+Comment[Funder ROR ID]	
 Comment[Grant Identifier]	
 STUDY DESIGN DESCRIPTORS
 Study Design Type	metabolon	ultra-performance liquid chromatography-mass spectrometry	untargeted metabolite profiling	targeted metabolite profiling
@@ -104,4 +104,4 @@ Study Person Roles Term Accession Number
 Study Person Roles Term Source REF	
 Comment[Study Person ORCID]	
 Comment[Study Person Additional Email]	
-Comment[Study Person Affiliation ROR Id]	
+Comment[Study Person Affiliation ROR ID]	
