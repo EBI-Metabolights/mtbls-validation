@@ -92,6 +92,10 @@ def update_template_json_files():
             for x in input_data:
                 jsonschema.validate(x, schema)
                 data = models.StudyProtocolTemplate.model_validate(x, by_alias=True)
+                protocols_set = set(data.protocols)
+                definitions_set = set(data.protocol_definitions.keys())
+                if len(protocols_set.union(definitions_set)) != len(protocols_set):
+                    raise ValueError(file.name, protocols_set, definitions_set)
                 file_content_data.data[key].append(data)
 
             file_obj = file_content_data.model_dump(by_alias=True)
