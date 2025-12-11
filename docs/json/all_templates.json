@@ -15251,7 +15251,7 @@
                         "parameters": [],
                         "parameterDefinitions": {}
                     },
-                    "Extraction": {
+                    "Preparation": {
                         "name": "Preparation",
                         "description": "",
                         "type": {
@@ -15858,7 +15858,7 @@
                         "parameters": [],
                         "parameterDefinitions": {}
                     },
-                    "Extraction": {
+                    "Preparation": {
                         "name": "Preparation",
                         "description": "",
                         "type": {
@@ -19424,6 +19424,13 @@
             "sourceDescription": "",
             "sourceDetails": ""
         },
+        "EXMO": {
+            "sourceName": "EXMO",
+            "sourceFile": "http://purl.obolibrary.org/obo/exmo.owl",
+            "sourceVersion": "",
+            "sourceDescription": "EXMO",
+            "sourceDetails": "A core reference ontology built upon BFO about exercise medicine. This ontology contains the related terms for healthy people, people with chronic conditions and people living with diability to exercise."
+        },
         "ExO": {
             "sourceName": "ExO",
             "sourceFile": "http://purl.obolibrary.org/obo/exo.owl",
@@ -20526,7 +20533,7 @@
         "SLSO": {
             "sourceName": "SLSO",
             "sourceFile": "http://purl.obolibrary.org/obo/slso.owl",
-            "sourceVersion": "2025-12-05",
+            "sourceVersion": "2025-12-09",
             "sourceDescription": "Space Life Sciences Ontology",
             "sourceDetails": "The Space Life Sciences Ontology is an application ontology and is intended to support the operation of NASA's Life Sciences Data Archive and other systems that contain space life science research data."
         },

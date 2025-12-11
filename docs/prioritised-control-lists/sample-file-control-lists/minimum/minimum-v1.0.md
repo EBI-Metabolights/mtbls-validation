@@ -93,13 +93,13 @@
 
 | # |Term  | Term Source  | Term Accession |
 |---|------|--------------|----------------|
-| 1 | Homo sapiens | NCBITAXON | http://purl\.obolibrary\.org/obo/NCBITaxon\_9606 |
-| 2 | Mus musculus | NCBITAXON | http://purl\.obolibrary\.org/obo/NCBITaxon\_10090 |
-| 3 | Rattus norvegicus | NCBITAXON | http://purl\.obolibrary\.org/obo/NCBITaxon\_10116 |
-| 4 | Arabidopsis thaliana | NCBITAXON | http://purl\.obolibrary\.org/obo/NCBITaxon\_3702 |
-| 5 | Vitis vinifera | NCBITAXON | http://purl\.obolibrary\.org/obo/NCBITaxon\_29760 |
-| 6 | Escherichia coli | NCBITAXON | http://purl\.obolibrary\.org/obo/NCBITaxon\_562 |
-| 7 | Trypanosoma brucei | NCBITAXON | http://purl\.obolibrary\.org/obo/NCBITaxon\_5691 |
+| 1 | Homo sapiens | NCBITaxon | http://purl\.obolibrary\.org/obo/NCBITaxon\_9606 |
+| 2 | Mus musculus | NCBITaxon | http://purl\.obolibrary\.org/obo/NCBITaxon\_10090 |
+| 3 | Rattus norvegicus | NCBITaxon | http://purl\.obolibrary\.org/obo/NCBITaxon\_10116 |
+| 4 | Arabidopsis thaliana | NCBITaxon | http://purl\.obolibrary\.org/obo/NCBITaxon\_3702 |
+| 5 | Vitis vinifera | NCBITaxon | http://purl\.obolibrary\.org/obo/NCBITaxon\_29760 |
+| 6 | Escherichia coli | NCBITaxon | http://purl\.obolibrary\.org/obo/NCBITaxon\_562 |
+| 7 | Trypanosoma brucei | NCBITaxon | http://purl\.obolibrary\.org/obo/NCBITaxon\_5691 |
 | 8 | sea water | ENVO | http://purl\.obolibrary\.org/obo/ENVO\_00002149 |
 
 ## Characteristics\[Organism part\]

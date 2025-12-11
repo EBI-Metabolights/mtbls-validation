@@ -54,7 +54,7 @@
 | 2 | sample preparation | MS | http://purl\.obolibrary\.org/obo/MS\_1000831 |
 | 3 | chromatography | CHMO | http://purl\.obolibrary\.org/obo/CHMO\_0001000 |
 | 4 | mass spectrometry | CHMO | http://purl\.obolibrary\.org/obo/CHMO\_0000470 |
-| 5 | data transform | OBI | http://purl\.obolibrary\.org/obo/OBI\_0200000 |
+| 5 | data transformation | OBI | http://purl\.obolibrary\.org/obo/OBI\_0200000 |
 | 6 | metabolite identification | MI | http://purl\.obolibrary\.org/obo/MI\_2131 |
 | 7 | capillary electrophoresis | CHMO | http://purl\.obolibrary\.org/obo/CHMO\_0001024 |
 | 8 | flow injection analysis | MS | http://purl\.obolibrary\.org/obo/MS\_1000058 |

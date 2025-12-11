@@ -24,7 +24,7 @@
                     "parameters": [],
                     "parameterDefinitions": {}
                 },
-                "Extraction": {
+                "Preparation": {
                     "name": "Preparation",
                     "description": "",
                     "type": {
@@ -631,7 +631,7 @@
                     "parameters": [],
                     "parameterDefinitions": {}
                 },
-                "Extraction": {
+                "Preparation": {
                     "name": "Preparation",
                     "description": "",
                     "type": {
