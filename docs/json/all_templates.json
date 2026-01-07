@@ -18916,7 +18916,7 @@
         "AFO": {
             "sourceName": "AFO",
             "sourceFile": "http://purl.allotrope.org/voc/afo/latest.xml",
-            "sourceVersion": "REC/2025/06",
+            "sourceVersion": "REC/2025/12",
             "sourceDescription": "Allotrope Merged Ontology Suite",
             "sourceDetails": "Allotrope Merged Ontology Suite"
         },
@@ -18944,7 +18944,7 @@
         "APO": {
             "sourceName": "APO",
             "sourceFile": "http://purl.obolibrary.org/obo/apo.owl",
-            "sourceVersion": "2025-11-10",
+            "sourceVersion": "2025-12-19",
             "sourceDescription": "Ascomycete Phenotype Ontology (APO)",
             "sourceDetails": "A structured controlled vocabulary for the phenotypes of Ascomycete fungi."
         },
@@ -19133,7 +19133,7 @@
         "CL": {
             "sourceName": "CL",
             "sourceFile": "http://purl.obolibrary.org/obo/cl.owl",
-            "sourceVersion": "2025-11-25",
+            "sourceVersion": "2025-12-17",
             "sourceDescription": "Cell Ontology",
             "sourceDetails": "An ontology of cell types."
         },
@@ -19175,7 +19175,7 @@
         "COB": {
             "sourceName": "COB",
             "sourceFile": "http://purl.obolibrary.org/obo/cob.owl",
-            "sourceVersion": "2025-06-30",
+            "sourceVersion": "2025-12-12",
             "sourceDescription": "Core Ontology for Biology and Biomedicine",
             "sourceDetails": "COB brings together key terms from a wide range of OBO projects to improve interoperability."
         },
@@ -19294,7 +19294,7 @@
         "DRON": {
             "sourceName": "DRON",
             "sourceFile": "http://purl.obolibrary.org/obo/dron.owl",
-            "sourceVersion": "2025-11-20",
+            "sourceVersion": "2025-12-19",
             "sourceDescription": "The Drug Ontology",
             "sourceDetails": "An ontology to support comparative effectiveness researchers studying claims data."
         },
@@ -19350,9 +19350,9 @@
         "EFO": {
             "sourceName": "EFO",
             "sourceFile": "http://www.ebi.ac.uk/efo/efo.owl",
-            "sourceVersion": "3.84.0",
+            "sourceVersion": "3.85.0",
             "sourceDescription": "Experimental Factor Ontology",
-            "sourceDetails": "The Experimental Factor Ontology (EFO) provides a systematic description of many experimental variables available in EBI databases, and for external projects such as the NHGRI GWAS catalogue. It combines parts of several biological ontologies, such as anatomy, disease and chemical compounds. The scope of EFO is to support the annotation, analysis and visualization of data handled by many groups at the EBI and as the core ontology for OpenTargets.org"
+            "sourceDetails": "The Experimental Factor Ontology (EFO) provides a systematic description of many experimental variables available in EBI databases, and for projects such as the NHGRI-EBI GWAS catalog. It combines parts of several biological ontologies, such as UBERON anatomy, ChEBI chemical compounds, Cell Ontology and the Monarch Disease Ontology (MONDO). The scope of EFO is to support the annotation, analysis and visualization of data handled by many groups at the EBI and as the core ontology for Open Targets."
         },
         "EHDAA2": {
             "sourceName": "EHDAA2",
@@ -19910,7 +19910,7 @@
         "MP": {
             "sourceName": "MP",
             "sourceFile": "http://purl.obolibrary.org/obo/mp/mp-international.owl",
-            "sourceVersion": "2025-11-19",
+            "sourceVersion": "2025-12-18",
             "sourceDescription": "The Mammalian Phenotype Ontology",
             "sourceDetails": "The Mammalian Phenotype Ontology is being developed by Cynthia L. Smith, Susan M. Bello, Anna V. Anagnostopoulos, Carroll W. Goldsmith and Janan T. Eppig, as part of the Mouse Genome Database (MGD) Project, Mouse Genome Informatics (MGI), The Jackson Laboratory, Bar Harbor, ME. This file contains pre-coordinated phenotype terms, definitions and synonyms that can be used to describe mammalian phenotypes. The ontology is represented as a directed acyclic graph (DAG). It organizes phenotype terms into major biological system headers such as nervous system and respiratory system.  This ontology is currently under development. Weekly updates are available at the Mouse Genome Informatics (MGI) ftp site (ftp://ftp.informatics.jax.org/pub/reports/index.html#pheno) as well as the OBO Foundry site (http://obofoundry.org/). Japanese labels of MP were created by the MP Japanese Translation Project (https://github.com/dbcls/MP_Japanese). Questions, comments and suggestions are welcome, and should be directed to pheno@jax.org, Susan.Bello@jax.org or to GitHub tracker (https://github.com/mgijax/mammalian-phenotype-ontology/issues) MGD is funded by NIH/NHGRI grant HG000330."
         },
@@ -19980,7 +19980,7 @@
         "NCBITaxon": {
             "sourceName": "NCBITaxon",
             "sourceFile": "http://purl.obolibrary.org/obo/ncbitaxon.owl",
-            "sourceVersion": "2025-09-11",
+            "sourceVersion": "2025-12-03",
             "sourceDescription": "NCBI organismal classification",
             "sourceDetails": "An ontology representation of the NCBI organismal taxonomy"
         },
@@ -20379,7 +20379,7 @@
         "PSO": {
             "sourceName": "PSO",
             "sourceFile": "http://purl.obolibrary.org/obo/pso.owl",
-            "sourceVersion": "2023-11-14",
+            "sourceVersion": "2025-12-16",
             "sourceDescription": "Plant Stress Ontology",
             "sourceDetails": "The Plant Stress Ontology describes biotic and abiotic stresses that a plant may encounter."
         },
@@ -20400,7 +20400,7 @@
         "RBO": {
             "sourceName": "RBO",
             "sourceFile": "http://purl.obolibrary.org/obo/rbo.owl",
-            "sourceVersion": "2025-11-26",
+            "sourceVersion": "2025-12-11",
             "sourceDescription": "Radiation Biology Ontology",
             "sourceDetails": "RBO is an ontology for the effects of radiation on biota in terrestrial and space environments."
         },
@@ -20533,7 +20533,7 @@
         "SLSO": {
             "sourceName": "SLSO",
             "sourceFile": "http://purl.obolibrary.org/obo/slso.owl",
-            "sourceVersion": "2025-12-09",
+            "sourceVersion": "2025-12-11",
             "sourceDescription": "Space Life Sciences Ontology",
             "sourceDetails": "The Space Life Sciences Ontology is an application ontology and is intended to support the operation of NASA's Life Sciences Data Archive and other systems that contain space life science research data."
         },
