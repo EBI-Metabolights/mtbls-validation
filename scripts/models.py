@@ -456,6 +456,19 @@ class ActiveMhdProfile(StudyBaseModel):
     active_versions: Annotated[list[str], Field(description="active profile versions")]
 
 
+class ActiveStudyCategory(StudyBaseModel):
+    visible: Annotated[bool, Field(description="Visible")] = True
+    order: Annotated[int, Field(description="Category order")]
+
+
+class ActiveDesignDescriptorCategory(StudyBaseModel):
+    visible: Annotated[bool, Field(description="Visible")] = True
+    order: Annotated[int, Field(description="Category order")]
+    min: Annotated[
+        int, Field(description="Number of minimum required design descriptors")
+    ]
+
+
 class TemplateConfiguration(StudyBaseModel):
     active_investigation_file_templates: Annotated[
         list[str], Field(description="active investigation file templates")
@@ -470,7 +483,7 @@ class TemplateConfiguration(StudyBaseModel):
         list[str], Field(description="active assay file templates")
     ]
     active_study_categories: Annotated[
-        list[str], Field(description="active study categories")
+        dict[str, ActiveStudyCategory], Field(description="active study categories")
     ]
     active_dataset_licenses: Annotated[
         list[str], Field(description="active dataset licenses")
@@ -480,11 +493,11 @@ class TemplateConfiguration(StudyBaseModel):
         Field(description="active dataset licenses"),
     ]
     active_study_design_descriptor_categories: Annotated[
-        list[str],
+        dict[str, ActiveDesignDescriptorCategory],
         Field(description="active study design descriptor categories"),
     ]
     active_assay_design_descriptor_categories: Annotated[
-        list[str],
+        dict[str, ActiveDesignDescriptorCategory],
         Field(description="active assay design descriptor categories"),
     ]
     default_sample_file_template: Annotated[
@@ -593,6 +606,7 @@ class DefaultCommentConfiguration(StudyBaseModel):
 class DescriptorCategoryDefinition(StudyBaseModel):
     name: Annotated[str, Field(description="study category name")]
     label: Annotated[str, Field(description="study category label")]
+    isa_file_type: Annotated[MetadataFileType, Field(description="ISA-TAB file type.")]
     control_list_key: Annotated[
         None | str, Field(description="study category description")
     ]

@@ -1,7 +1,5 @@
 {
-  "opa.roots": [
-    "${workspaceFolder}/validation"
-  ],
+  "opa.roots": ["${workspaceFolder}/validation"],
   "opa.bundleMode": false,
   "opa.strictMode": true,
   "opa.schema": "${workspaceFolder}/validation/schemas",
@@ -9,7 +7,7 @@
   "files.exclude": {
     "**/__pycache__": true,
     ".*cache*": true,
-    ".*coverage*": true,
+    ".*coverage*": true
   },
   "cSpell.words": [
     "endswith",
@@ -22,12 +20,19 @@
     "startswith",
     "wiff"
   ],
-  "python-envs.defaultEnvManager": "ms-python.python:poetry",
-  "python-envs.defaultPackageManager": "ms-python.python:poetry",
-  "python-envs.pythonProjects": [],
+  "python-envs.defaultEnvManager": "ms-python.python:uv",
+  "python-envs.defaultPackageManager": "ms-python.python:uv",
   "regoTest.policyTestDir": "validation",
-  "regoTest.testFilePatterns": [
-
-    "**/*_test/*_test.rego"
-  ],
+  "regoTest.testFilePatterns": ["**/*_test/*_test.rego"],
+  "files.autoSave": "afterDelay",
+  "debugpy.showPythonInlineValues": true,
+  "[python]": {
+    "editor.defaultFormatter": "astral-sh.ruff",
+    "editor.codeActionsOnSave": {
+      "source.fixAll": "explicit",
+      "source.organizeImports": "explicit"
+    }
+  },
+  "ruff.enable": true,
+  "ruff.lint.enable": true
 }

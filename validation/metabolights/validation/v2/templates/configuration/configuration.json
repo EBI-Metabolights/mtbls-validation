@@ -24,31 +24,37 @@
             "disease": {
                 "name": "disease",
                 "label": "Disease",
+                "isaFileType": "sample",
                 "controlListKey": "Characteristics[Disease]"
             },
             "measurement-type": {
                 "name": "measurement-type",
                 "label": "Measurement Type",
+                "isaFileType": "investigation",
                 "controlListKey": "Assay Measurement Type"
             },
             "organism": {
                 "name": "organism",
                 "label": "Organism",
+                "isaFileType": "sample",
                 "controlListKey": "Characteristics[Organism]"
             },
             "organism-part": {
                 "name": "organism-part",
                 "label": "Organism part",
+                "isaFileType": "sample",
                 "controlListKey": "Characteristics[Organism part]"
             },
             "omics-type": {
                 "name": "omics-type",
                 "label": "Omics Type",
+                "isaFileType": "investigation",
                 "controlListKey": "Omics Type"
             },
             "cell-type: ": {
                 "name": "cell-type",
                 "label": "Cell Type",
+                "isaFileType": "sample",
                 "controlListKey": "Characteristics[Cell type]"
             }
         },
@@ -474,7 +480,7 @@
         "ms-mhd-legacy": {
             "index": 2,
             "name": "ms-mhd-legacy",
-            "label": "MS ",
+            "label": "MS",
             "description": "MS study shared with MetabolomicsHub legacy profile"
         },
         "ms-other": {
@@ -486,13 +492,13 @@
         "ms-imaging": {
             "index": 10,
             "name": "ms-imaging",
-            "label": "MS Imaging ",
+            "label": "MS Imaging",
             "description": "MS Imaging assays"
         },
         "nmr": {
             "index": 20,
             "name": "nmr",
-            "label": "NMR ",
+            "label": "NMR",
             "description": "NMR assays"
         }
     },
@@ -540,13 +546,28 @@
                 "GC-FID",
                 "LC-DAD"
             ],
-            "activeStudyCategories": [
-                "other",
-                "ms-mhd-enabled",
-                "ms-mhd-legacy",
-                "nmr",
-                "ms-imaging"
-            ],
+            "activeStudyCategories": {
+                "ms-mhd-enabled": {
+                    "visible": true,
+                    "order": 1
+                },
+                "ms-mhd-legacy": {
+                    "visible": false,
+                    "order": 2
+                },
+                "nmr": {
+                    "visible": true,
+                    "order": 3
+                },
+                "ms-imaging": {
+                    "visible": true,
+                    "order": 4
+                },
+                "other": {
+                    "visible": true,
+                    "order": 5
+                }
+            },
             "activeDatasetLicenses": [
                 "CC0 1.0 Universal"
             ],
@@ -566,14 +587,34 @@
                     ]
                 }
             },
-            "activeStudyDesignDescriptorCategories": [
-                "disease",
-                "measurement-type",
-                "omics-type",
-                "organism",
-                "organism-part"
-            ],
-            "activeAssayDesignDescriptorCategories": [],
+            "activeStudyDesignDescriptorCategories": {
+                "disease": {
+                    "visible": true,
+                    "order": 1,
+                    "min": 0
+                },
+                "measurement-type": {
+                    "visible": true,
+                    "order": 2,
+                    "min": 0
+                },
+                "omics-type": {
+                    "visible": true,
+                    "order": 3,
+                    "min": 0
+                },
+                "organism": {
+                    "visible": true,
+                    "order": 4,
+                    "min": 1
+                },
+                "organism-part": {
+                    "visible": true,
+                    "order": 5,
+                    "min": 0
+                }
+            },
+            "activeAssayDesignDescriptorCategories": {},
             "defaultSampleFileTemplate": "minimum",
             "defaultInvestigationFileTemplate": "minimum",
             "defaultStudyCategory": "other",
@@ -669,13 +710,28 @@
                 "GC-FID",
                 "LC-DAD"
             ],
-            "activeStudyCategories": [
-                "other",
-                "ms-mhd-enabled",
-                "ms-mhd-legacy",
-                "nmr",
-                "ms-imaging"
-            ],
+            "activeStudyCategories": {
+                "ms-mhd-enabled": {
+                    "visible": false,
+                    "order": 1
+                },
+                "ms-mhd-legacy": {
+                    "visible": true,
+                    "order": 2
+                },
+                "nmr": {
+                    "visible": true,
+                    "order": 3
+                },
+                "ms-imaging": {
+                    "visible": true,
+                    "order": 4
+                },
+                "other": {
+                    "visible": true,
+                    "order": 5
+                }
+            },
             "activeDatasetLicenses": [
                 "CC0 1.0 Universal"
             ],
@@ -695,14 +751,34 @@
                     ]
                 }
             },
-            "activeStudyDesignDescriptorCategories": [
-                "disease",
-                "measurement-type",
-                "omics-type",
-                "organism",
-                "organism-part"
-            ],
-            "activeAssayDesignDescriptorCategories": [],
+            "activeStudyDesignDescriptorCategories": {
+                "disease": {
+                    "visible": true,
+                    "order": 1,
+                    "min": 0
+                },
+                "measurement-type": {
+                    "visible": true,
+                    "order": 2,
+                    "min": 0
+                },
+                "omics-type": {
+                    "visible": true,
+                    "order": 3,
+                    "min": 0
+                },
+                "organism": {
+                    "visible": true,
+                    "order": 4,
+                    "min": 1
+                },
+                "organism-part": {
+                    "visible": true,
+                    "order": 5,
+                    "min": 0
+                }
+            },
+            "activeAssayDesignDescriptorCategories": {},
             "defaultSampleFileTemplate": "minimum",
             "defaultInvestigationFileTemplate": "minimum",
             "defaultStudyCategory": "other",

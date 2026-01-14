@@ -18978,7 +18978,7 @@
         },
         "BCGO": {
             "sourceName": "BCGO",
-            "sourceFile": "http://purl.obolibrary.org/obo/bcgo/2015-07-08/bcgo.owl",
+            "sourceFile": "http://purl.obolibrary.org/obo/bcgo.owl",
             "sourceVersion": "",
             "sourceDescription": "Beta Cell Genomics Ontology",
             "sourceDetails": "An application ontology built for beta cell genomics studies."
@@ -19048,7 +19048,7 @@
         },
         "CARO": {
             "sourceName": "CARO",
-            "sourceFile": "http://purl.obolibrary.org/obo/caro/releases/2023-03-15/caro.owl",
+            "sourceFile": "http://purl.obolibrary.org/obo/caro.owl",
             "sourceVersion": "2023-03-15",
             "sourceDescription": "Common Anatomy Reference Ontology",
             "sourceDetails": "The Common Anatomy Reference Ontology (CARO) is being developed to facilitate interoperability between existing anatomy ontologies for different species, and will provide a template for building new anatomy ontologies."
@@ -19091,7 +19091,7 @@
         "CHEBI": {
             "sourceName": "CHEBI",
             "sourceFile": "http://purl.obolibrary.org/obo/chebi.owl",
-            "sourceVersion": "247",
+            "sourceVersion": "248",
             "sourceDescription": "Chemical Entities of Biological Interest",
             "sourceDetails": "A structured classification of molecular entities of biological interest focusing on 'small' chemical compounds."
         },
@@ -19287,7 +19287,7 @@
         "DOID": {
             "sourceName": "DOID",
             "sourceFile": "https://purl.obolibrary.org/obo/doid/translations/doid-international.owl",
-            "sourceVersion": "2025-11-25",
+            "sourceVersion": "2025-12-23",
             "sourceDescription": "Human Disease Ontology",
             "sourceDetails": "The Disease Ontology has been developed as a standardized ontology for human disease with the purpose of providing the biomedical community with consistent, reusable and sustainable descriptions of human disease terms, phenotype characteristics and related medical vocabulary disease concepts."
         },
@@ -19511,7 +19511,7 @@
         "FOODON": {
             "sourceName": "FOODON",
             "sourceFile": "http://purl.obolibrary.org/obo/foodon.owl",
-            "sourceVersion": "2025-08-01",
+            "sourceVersion": "2025-12-30",
             "sourceDescription": "Food Ontology",
             "sourceDetails": "A broadly scoped ontology representing entities which bear a “food role”. It encompasses materials in natural ecosystems and agriculture that are consumed by humans and domesticated animals. This includes any generic (unbranded) raw or processed food material found in processing plants, markets, stores or food distribution points. FoodOn also imports nutritional component and dietary pattern terms from other OBO Foundry ontologies to support interoperability in diet and nutrition research"
         },
@@ -19644,7 +19644,7 @@
         "HP": {
             "sourceName": "HP",
             "sourceFile": "http://purl.obolibrary.org/obo/hp/hp-international.owl",
-            "sourceVersion": "2025-11-24",
+            "sourceVersion": "2026-01-08",
             "sourceDescription": "Human Phenotype Ontology",
             "sourceDetails": "The Human Phenotype Ontology (HPO) provides a standardized vocabulary of phenotypic abnormalities and clinical features encountered in human disease."
         },
@@ -19777,7 +19777,7 @@
         "MA": {
             "sourceName": "MA",
             "sourceFile": "http://purl.obolibrary.org/obo/ma.owl",
-            "sourceVersion": "",
+            "sourceVersion": "2026-01-09",
             "sourceDescription": "Mouse adult gross anatomy",
             "sourceDetails": "A structured controlled vocabulary of the adult anatomy of the mouse (Mus)."
         },
@@ -19896,7 +19896,7 @@
         "MONDO": {
             "sourceName": "MONDO",
             "sourceFile": "https://purl.obolibrary.org/obo/mondo/mondo-international.owl",
-            "sourceVersion": "2025-12-02",
+            "sourceVersion": "2026-01-06",
             "sourceDescription": "Mondo Disease Ontology",
             "sourceDetails": "A semi-automatically constructed ontology that merges in multiple disease resources to yield a coherent merged ontology."
         },
@@ -20050,7 +20050,7 @@
         "OBI": {
             "sourceName": "OBI",
             "sourceFile": "http://purl.obolibrary.org/obo/obi.owl",
-            "sourceVersion": "2025-10-14",
+            "sourceVersion": "2025-12-18",
             "sourceDescription": "Ontology for Biomedical Investigations",
             "sourceDetails": "An ontology for representing biomedical investigations, including study designs, the collection and preparation of the targets of investigation, assays, instrumentation and reagents used, as well as the data generated and the types of analysis performed on the data to reach conclusions, and their documentation."
         },
@@ -20099,7 +20099,7 @@
         "OHMI": {
             "sourceName": "OHMI",
             "sourceFile": "http://purl.obolibrary.org/obo/ohmi.owl",
-            "sourceVersion": "2019-09-17",
+            "sourceVersion": "2025-12-28",
             "sourceDescription": "OHMI: Ontology of Host-Microbiome Interactions",
             "sourceDetails": "OHMI is a biomedical ontology that represents the entities and relations in the domain of host-microbiome interactions."
         },
@@ -20126,7 +20126,7 @@
         },
         "OMIABIS": {
             "sourceName": "OMIABIS",
-            "sourceFile": "",
+            "sourceFile": "http://purl.obolibrary.org/obo/omiabis.owl",
             "sourceVersion": " 2014-05-28",
             "sourceDescription": "Ontologized MIABIS",
             "sourceDetails": "An ontological version of MIABIS (Minimum Information About BIobank data Sharing)"
@@ -20155,7 +20155,7 @@
         "OMRSE": {
             "sourceName": "OMRSE",
             "sourceFile": "http://purl.obolibrary.org/obo/omrse.owl",
-            "sourceVersion": "2025-08-13",
+            "sourceVersion": "2026-01-06",
             "sourceDescription": "Ontology for Modeling and Representation of Social Entities",
             "sourceDetails": "The Ontology for Modeling and Representation of Social Entities (OMRSE) is an OBO Foundry ontology that represents the various entities that arise from human social interactions, such as social acts, social roles, social groups, and organizations."
         },
@@ -20379,7 +20379,7 @@
         "PSO": {
             "sourceName": "PSO",
             "sourceFile": "http://purl.obolibrary.org/obo/pso.owl",
-            "sourceVersion": "2025-12-16",
+            "sourceVersion": "2026-01-08",
             "sourceDescription": "Plant Stress Ontology",
             "sourceDetails": "The Plant Stress Ontology describes biotic and abiotic stresses that a plant may encounter."
         },
@@ -20602,7 +20602,7 @@
         },
         "TAO": {
             "sourceName": "TAO",
-            "sourceFile": "http://purl.obolibrary.org/obo/tao/2012-08-10/tao.owl",
+            "sourceFile": "http://purl.obolibrary.org/obo/tao.owl",
             "sourceVersion": "",
             "sourceDescription": "Teleost Anatomy Ontology",
             "sourceDetails": "Multispecies fish anatomy ontology. Originally seeded from ZFA, but intended to cover terms relevant to other taxa"
@@ -20680,7 +20680,7 @@
         "UO": {
             "sourceName": "UO",
             "sourceFile": "http://purl.obolibrary.org/obo/uo.owl",
-            "sourceVersion": "2023-05-25",
+            "sourceVersion": "2026-01-09",
             "sourceDescription": "Units of measurement ontology",
             "sourceDetails": "Metrical units for use in conjunction with PATO"
         },
@@ -20714,7 +20714,7 @@
         },
         "VSAO": {
             "sourceName": "VSAO",
-            "sourceFile": "http://purl.obolibrary.org/obo/vsao/2012-11-06/vsao.owl",
+            "sourceFile": "http://purl.obolibrary.org/obo/vsao.owl",
             "sourceVersion": "",
             "sourceDescription": "Vertebrate Skeletal Anatomy Ontology-",
             "sourceDetails": "Vertebrate skeletal anatomy ontology."
@@ -20722,7 +20722,7 @@
         "VT": {
             "sourceName": "VT",
             "sourceFile": "http://purl.obolibrary.org/obo/vt.owl",
-            "sourceVersion": "2025-12-02",
+            "sourceVersion": "2026-01-08",
             "sourceDescription": "The Vertebrate Trait Ontology",
             "sourceDetails": "The Vertebrate Trait Ontology is a controlled vocabulary for the description of traits (measurable or observable characteristics) pertaining to the morphology, physiology, or development of vertebrate organisms."
         },
@@ -20907,31 +20907,37 @@
                 "disease": {
                     "name": "disease",
                     "label": "Disease",
+                    "isaFileType": "sample",
                     "controlListKey": "Characteristics[Disease]"
                 },
                 "measurement-type": {
                     "name": "measurement-type",
                     "label": "Measurement Type",
+                    "isaFileType": "investigation",
                     "controlListKey": "Assay Measurement Type"
                 },
                 "organism": {
                     "name": "organism",
                     "label": "Organism",
+                    "isaFileType": "sample",
                     "controlListKey": "Characteristics[Organism]"
                 },
                 "organism-part": {
                     "name": "organism-part",
                     "label": "Organism part",
+                    "isaFileType": "sample",
                     "controlListKey": "Characteristics[Organism part]"
                 },
                 "omics-type": {
                     "name": "omics-type",
                     "label": "Omics Type",
+                    "isaFileType": "investigation",
                     "controlListKey": "Omics Type"
                 },
                 "cell-type: ": {
                     "name": "cell-type",
                     "label": "Cell Type",
+                    "isaFileType": "sample",
                     "controlListKey": "Characteristics[Cell type]"
                 }
             },
@@ -21357,7 +21363,7 @@
             "ms-mhd-legacy": {
                 "index": 2,
                 "name": "ms-mhd-legacy",
-                "label": "MS ",
+                "label": "MS",
                 "description": "MS study shared with MetabolomicsHub legacy profile"
             },
             "ms-other": {
@@ -21369,13 +21375,13 @@
             "ms-imaging": {
                 "index": 10,
                 "name": "ms-imaging",
-                "label": "MS Imaging ",
+                "label": "MS Imaging",
                 "description": "MS Imaging assays"
             },
             "nmr": {
                 "index": 20,
                 "name": "nmr",
-                "label": "NMR ",
+                "label": "NMR",
                 "description": "NMR assays"
             }
         },
@@ -21423,13 +21429,28 @@
                     "GC-FID",
                     "LC-DAD"
                 ],
-                "activeStudyCategories": [
-                    "other",
-                    "ms-mhd-enabled",
-                    "ms-mhd-legacy",
-                    "nmr",
-                    "ms-imaging"
-                ],
+                "activeStudyCategories": {
+                    "ms-mhd-enabled": {
+                        "visible": true,
+                        "order": 1
+                    },
+                    "ms-mhd-legacy": {
+                        "visible": false,
+                        "order": 2
+                    },
+                    "nmr": {
+                        "visible": true,
+                        "order": 3
+                    },
+                    "ms-imaging": {
+                        "visible": true,
+                        "order": 4
+                    },
+                    "other": {
+                        "visible": true,
+                        "order": 5
+                    }
+                },
                 "activeDatasetLicenses": [
                     "CC0 1.0 Universal"
                 ],
@@ -21449,14 +21470,34 @@
                         ]
                     }
                 },
-                "activeStudyDesignDescriptorCategories": [
-                    "disease",
-                    "measurement-type",
-                    "omics-type",
-                    "organism",
-                    "organism-part"
-                ],
-                "activeAssayDesignDescriptorCategories": [],
+                "activeStudyDesignDescriptorCategories": {
+                    "disease": {
+                        "visible": true,
+                        "order": 1,
+                        "min": 0
+                    },
+                    "measurement-type": {
+                        "visible": true,
+                        "order": 2,
+                        "min": 0
+                    },
+                    "omics-type": {
+                        "visible": true,
+                        "order": 3,
+                        "min": 0
+                    },
+                    "organism": {
+                        "visible": true,
+                        "order": 4,
+                        "min": 1
+                    },
+                    "organism-part": {
+                        "visible": true,
+                        "order": 5,
+                        "min": 0
+                    }
+                },
+                "activeAssayDesignDescriptorCategories": {},
                 "defaultSampleFileTemplate": "minimum",
                 "defaultInvestigationFileTemplate": "minimum",
                 "defaultStudyCategory": "other",
@@ -21552,13 +21593,28 @@
                     "GC-FID",
                     "LC-DAD"
                 ],
-                "activeStudyCategories": [
-                    "other",
-                    "ms-mhd-enabled",
-                    "ms-mhd-legacy",
-                    "nmr",
-                    "ms-imaging"
-                ],
+                "activeStudyCategories": {
+                    "ms-mhd-enabled": {
+                        "visible": false,
+                        "order": 1
+                    },
+                    "ms-mhd-legacy": {
+                        "visible": true,
+                        "order": 2
+                    },
+                    "nmr": {
+                        "visible": true,
+                        "order": 3
+                    },
+                    "ms-imaging": {
+                        "visible": true,
+                        "order": 4
+                    },
+                    "other": {
+                        "visible": true,
+                        "order": 5
+                    }
+                },
                 "activeDatasetLicenses": [
                     "CC0 1.0 Universal"
                 ],
@@ -21578,14 +21634,34 @@
                         ]
                     }
                 },
-                "activeStudyDesignDescriptorCategories": [
-                    "disease",
-                    "measurement-type",
-                    "omics-type",
-                    "organism",
-                    "organism-part"
-                ],
-                "activeAssayDesignDescriptorCategories": [],
+                "activeStudyDesignDescriptorCategories": {
+                    "disease": {
+                        "visible": true,
+                        "order": 1,
+                        "min": 0
+                    },
+                    "measurement-type": {
+                        "visible": true,
+                        "order": 2,
+                        "min": 0
+                    },
+                    "omics-type": {
+                        "visible": true,
+                        "order": 3,
+                        "min": 0
+                    },
+                    "organism": {
+                        "visible": true,
+                        "order": 4,
+                        "min": 1
+                    },
+                    "organism-part": {
+                        "visible": true,
+                        "order": 5,
+                        "min": 0
+                    }
+                },
+                "activeAssayDesignDescriptorCategories": {},
                 "defaultSampleFileTemplate": "minimum",
                 "defaultInvestigationFileTemplate": "minimum",
                 "defaultStudyCategory": "other",
