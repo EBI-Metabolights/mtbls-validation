@@ -1,4 +1,80 @@
 {
+    "resultFileFormats": {
+        "maf": {
+            "order": 1,
+            "label": "Metabolite Assignment File (MAF)",
+            "description": "Metabolite Assignment File",
+            "ontologyTerm": {
+                "term": "MAF",
+                "termAccessionNumber": "http://edamontology.org/format_3675",
+                "termSourceRef": "EDAM"
+            }
+        },
+        "mzTab-M": {
+            "order": 2,
+            "label": "mzTab-M",
+            "description": "mzTab-M",
+            "ontologyTerm": {
+                "term": "mzTab-M",
+                "termAccessionNumber": "http://edamontology.org/format_4058",
+                "termSourceRef": "EDAM"
+            }
+        }
+    },
+    "omicsTypes": {
+        "metabolomics": {
+            "order": 1,
+            "label": "Metabolomics",
+            "description": "Metabolomics",
+            "ontologyTerm": {
+                "term": "Metabolomics",
+                "termAccessionNumber": "http://edamontology.org/topic_3172",
+                "termSourceRef": "EDAM"
+            }
+        },
+        "lipidomics": {
+            "order": 2,
+            "label": "Lipidomics",
+            "description": "Lipidomics",
+            "ontologyTerm": {
+                "term": "Lipidomics",
+                "termAccessionNumber": "http://edamontology.org/topic_0153",
+                "termSourceRef": "EDAM"
+            }
+        },
+        "fluxomics": {
+            "order": 3,
+            "label": "Fluxomics",
+            "description": "Fluxomics",
+            "ontologyTerm": {
+                "term": "Fluxomics",
+                "termAccessionNumber": "http://edamontology.org/topic_3955",
+                "termSourceRef": "EDAM"
+            }
+        }
+    },
+    "measurementTypes": {
+        "targeted": {
+            "order": 1,
+            "label": "targeted profiling",
+            "description": "targeted profiling",
+            "ontologyTerm": {
+                "term": "targeted metabolite profiling",
+                "termAccessionNumber": "http://purl.obolibrary.org/obo/MSIO_0000100",
+                "termSourceRef": "MSIO"
+            }
+        },
+        "untargeted": {
+            "order": 2,
+            "label": "untargeted profiling",
+            "description": "untargeted profiling",
+            "ontologyTerm": {
+                "term": "untargeted metabolite profiling",
+                "termAccessionNumber": "http://purl.obolibrary.org/obo/MSIO_0000101",
+                "termSourceRef": "MSIO"
+            }
+        }
+    },
     "activeTemplateVersions": [
         "1.0"
     ],
@@ -74,18 +150,6 @@
                 "termAccessionNumber": "http://edamontology.org/topic_0769",
                 "termSourceRef": "EDAM"
             }
-        }
-    },
-    "resultFileFormats": {
-        "maf": {
-            "term": "MAF",
-            "termAccessionNumber": "",
-            "termSourceRef": ""
-        },
-        "mzTab-M": {
-            "term": "mzTab-M",
-            "termAccessionNumber": "http://edamontology.org/format_4058",
-            "termSourceRef": "EDAM"
         }
     },
     "defaultFileControls": {
@@ -520,6 +584,18 @@
     },
     "versions": {
         "2.0": {
+            "activeResultFileFormats": [
+                "maf"
+            ],
+            "activeMeasurementTypes": [
+                "untargeted",
+                "targeted"
+            ],
+            "activeOmicsTypes": [
+                "metabolomics",
+                "lipidomics",
+                "fluxomics"
+            ],
             "activeInvestigationFileTemplates": [
                 "minimum",
                 "metabolon"
@@ -531,21 +607,290 @@
             "activeSampleFileTemplates": [
                 "minimum"
             ],
-            "activeAssayFileTemplates": [
-                "LC-MS",
-                "GC-MS",
-                "GCxGC-MS",
-                "MALDI-MS",
-                "FIA-MS",
-                "DI-MS",
-                "CE-MS",
-                "MS",
-                "NMR",
-                "MRImaging",
-                "MSImaging",
-                "GC-FID",
-                "LC-DAD"
-            ],
+            "activeAssayFileTemplates": {
+                "LC-MS": {
+                    "order": 1,
+                    "label": "LC-MS",
+                    "description": "LC-MS",
+                    "assayFileDefaultValues": {
+                        "Chromatography": [
+                            "Chromatography Instrument",
+                            "Autosampler model",
+                            "Column model",
+                            "Column type",
+                            "Guard column"
+                        ],
+                        "Mass spectrometry": [
+                            "Scan polarity",
+                            "Scan m/z range",
+                            "Instrument",
+                            "Ion source",
+                            "Mass analyzer"
+                        ]
+                    }
+                },
+                "GC-MS": {
+                    "order": 2,
+                    "label": "GC-MS",
+                    "description": "GC-MS",
+                    "assayFileDefaultValues": {
+                        "Chromatography": [
+                            "Chromatography Instrument",
+                            "Autosampler model",
+                            "Column model",
+                            "Column type",
+                            "Guard column"
+                        ],
+                        "Mass spectrometry": [
+                            "Scan polarity",
+                            "Scan m/z range",
+                            "Instrument",
+                            "Ion source",
+                            "Mass analyzer"
+                        ]
+                    }
+                },
+                "GCxGC-MS": {
+                    "order": 3,
+                    "label": "GCxGC-MS",
+                    "description": "GCxGC-MS",
+                    "assayFileDefaultValues": {
+                        "Chromatography": [
+                            "Chromatography Instrument",
+                            "Autosampler model",
+                            "Column model 1",
+                            "Column type 1",
+                            "Column model 2",
+                            "Column type 2",
+                            "Guard column"
+                        ],
+                        "Mass spectrometry": [
+                            "Scan polarity",
+                            "Scan m/z range",
+                            "Instrument",
+                            "Ion source",
+                            "Mass analyzer"
+                        ]
+                    }
+                },
+                "MALDI-MS": {
+                    "order": 4,
+                    "label": "MALDI-MS",
+                    "description": "MALDI-MS",
+                    "assayFileDefaultValues": {
+                        "Mass spectrometry": [
+                            "Scan polarity",
+                            "Scan m/z range",
+                            "Instrument",
+                            "Ion source",
+                            "Mass analyzer"
+                        ]
+                    }
+                },
+                "FIA-MS": {
+                    "order": 5,
+                    "label": "FIA-MS",
+                    "description": "FIA-MS",
+                    "assayFileDefaultValues": {
+                        "Flow Injection Analysis": [
+                            "FIA Instrument"
+                        ],
+                        "Mass spectrometry": [
+                            "Scan polarity",
+                            "Scan m/z range",
+                            "Instrument",
+                            "Ion source",
+                            "Mass analyzer"
+                        ]
+                    }
+                },
+                "DI-MS": {
+                    "order": 6,
+                    "label": "DI-MS",
+                    "description": "DI-MS",
+                    "assayFileDefaultValues": {
+                        "Direct infusion": [
+                            "DI Instrument"
+                        ],
+                        "Mass spectrometry": [
+                            "Scan polarity",
+                            "Scan m/z range",
+                            "Instrument",
+                            "Ion source",
+                            "Mass analyzer"
+                        ]
+                    }
+                },
+                "CE-MS": {
+                    "order": 7,
+                    "label": "CE-MS",
+                    "description": "CE-MS",
+                    "assayFileDefaultValues": {
+                        "Capillary Electrophoresis": [
+                            "CE Instrument",
+                            "Column model",
+                            "Column type"
+                        ],
+                        "Mass spectrometry": [
+                            "Scan polarity",
+                            "Scan m/z range",
+                            "Instrument",
+                            "Ion source",
+                            "Mass analyzer"
+                        ]
+                    }
+                },
+                "MS": {
+                    "order": 8,
+                    "label": "MS",
+                    "description": "MS",
+                    "assayFileDefaultValues": {
+                        "Mass spectrometry": [
+                            "Scan polarity",
+                            "Scan m/z range",
+                            "Instrument",
+                            "Ion source",
+                            "Mass analyzer"
+                        ]
+                    }
+                },
+                "NMR": {
+                    "order": 9,
+                    "label": "NMR",
+                    "description": "NMR",
+                    "assayFileDefaultValues": {
+                        "NMR sample": [
+                            "NMR tube type",
+                            "Solvent",
+                            "Sample pH",
+                            "Temperature"
+                        ],
+                        "NMR spectroscopy": [
+                            "Instrument",
+                            "NMR Probe",
+                            "Number of transients",
+                            "Pulse sequence name",
+                            "Magnetic field strength"
+                        ]
+                    }
+                },
+                "MRImaging": {
+                    "order": 10,
+                    "label": "MRImaging",
+                    "description": "MRImaging",
+                    "assayFileDefaultValues": {
+                        "Magnetic resonance imaging": [
+                            "Instrument",
+                            "Tomography",
+                            "Temperature"
+                        ],
+                        "In vivo magnetic resonance spectroscopy": [
+                            "Spatial resolution",
+                            "Field of view",
+                            "Matrix",
+                            "Magnetic pulse sequence name",
+                            "Voxel size",
+                            "Localisation pulse sequence name",
+                            "Number of transients",
+                            "Water inhibition pulse sequence name",
+                            "Magnetic field strength"
+                        ],
+                        "In vivo magnetic resonance assay": [
+                            "NMR tube type",
+                            "Solvent",
+                            "Sample pH",
+                            "Temperature"
+                        ]
+                    }
+                },
+                "MSImaging": {
+                    "order": 11,
+                    "label": "MSImaging",
+                    "description": "MSImaging",
+                    "assayFileDefaultValues": {
+                        "Preparation": [
+                            "Sample mounting",
+                            "Sample preservation",
+                            "Tissue modification",
+                            "Sectioning instrument",
+                            "Section thickness",
+                            "Matrix",
+                            "Matrix application"
+                        ],
+                        "Mass spectrometry": [
+                            "Scan polarity",
+                            "Scan m/z range",
+                            "Instrument",
+                            "Instrument manufacturer",
+                            "Ion source",
+                            "Mass analyzer",
+                            "Solvent",
+                            "Target material",
+                            "Spatial resolution",
+                            "Pixel size x",
+                            "Pixel size y",
+                            "Max count of pixel x",
+                            "Max count of pixel y",
+                            "Max dimension x",
+                            "Max dimension y",
+                            "Inlet type",
+                            "Detector",
+                            "Detector mode",
+                            "Resolving power",
+                            "Resolving power m/z",
+                            "Native spectrum identifier format",
+                            "Data file content",
+                            "Spectrum representation",
+                            "Raw data file format",
+                            "Instrument software",
+                            "Instrument software version",
+                            "Line scan direction",
+                            "Line scan sequence",
+                            "Scan pattern",
+                            "Scan type",
+                            "Number of scans"
+                        ],
+                        "Histology": [
+                            "Stain",
+                            "High-res image",
+                            "Low-res image"
+                        ]
+                    }
+                },
+                "GC-FID": {
+                    "order": 12,
+                    "label": "GC-FID",
+                    "description": "GC-FID",
+                    "assayFileDefaultValues": {
+                        "Chromatography": [
+                            "Chromatography Instrument",
+                            "Autosampler model",
+                            "Column model",
+                            "Column type",
+                            "Guard column",
+                            "Detector",
+                            "Temperature"
+                        ]
+                    }
+                },
+                "LC-DAD": {
+                    "order": 13,
+                    "label": "LC-DAD",
+                    "description": "LC-DAD",
+                    "assayFileDefaultValues": {
+                        "Chromatography": [
+                            "Chromatography Instrument",
+                            "Autosampler model",
+                            "Column model",
+                            "Column type",
+                            "Guard column",
+                            "Detector",
+                            "Signal range",
+                            "Resolution"
+                        ]
+                    }
+                }
+            },
             "activeStudyCategories": {
                 "ms-mhd-enabled": {
                     "visible": true,
@@ -619,6 +964,9 @@
             "defaultInvestigationFileTemplate": "minimum",
             "defaultStudyCategory": "other",
             "defaultDatasetLicense": "CC0 1.0 Universal",
+            "defaultResultFileFormat": "maf",
+            "defaultMeasurementType": "untargeted",
+            "defaultOmicsType": "metabolomics",
             "investigationFileName": "i_Investigation.txt",
             "derivedFileExtensions": [
                 ".cdf",
@@ -684,6 +1032,18 @@
             }
         },
         "1.0": {
+            "activeResultFileFormats": [
+                "maf"
+            ],
+            "activeMeasurementTypes": [
+                "untargeted",
+                "targeted"
+            ],
+            "activeOmicsTypes": [
+                "metabolomics",
+                "lipidomics",
+                "fluxomics"
+            ],
             "activeInvestigationFileTemplates": [
                 "minimum",
                 "metabolon"
@@ -695,21 +1055,290 @@
             "activeSampleFileTemplates": [
                 "minimum"
             ],
-            "activeAssayFileTemplates": [
-                "LC-MS",
-                "GC-MS",
-                "GCxGC-MS",
-                "MALDI-MS",
-                "FIA-MS",
-                "DI-MS",
-                "CE-MS",
-                "MS",
-                "NMR",
-                "MRImaging",
-                "MSImaging",
-                "GC-FID",
-                "LC-DAD"
-            ],
+            "activeAssayFileTemplates": {
+                "LC-MS": {
+                    "order": 1,
+                    "label": "LC-MS",
+                    "description": "LC-MS",
+                    "assayFileDefaultValues": {
+                        "Chromatography": [
+                            "Chromatography Instrument",
+                            "Autosampler model",
+                            "Column model",
+                            "Column type",
+                            "Guard column"
+                        ],
+                        "Mass spectrometry": [
+                            "Scan polarity",
+                            "Scan m/z range",
+                            "Instrument",
+                            "Ion source",
+                            "Mass analyzer"
+                        ]
+                    }
+                },
+                "GC-MS": {
+                    "order": 2,
+                    "label": "GC-MS",
+                    "description": "GC-MS",
+                    "assayFileDefaultValues": {
+                        "Chromatography": [
+                            "Chromatography Instrument",
+                            "Autosampler model",
+                            "Column model",
+                            "Column type",
+                            "Guard column"
+                        ],
+                        "Mass spectrometry": [
+                            "Scan polarity",
+                            "Scan m/z range",
+                            "Instrument",
+                            "Ion source",
+                            "Mass analyzer"
+                        ]
+                    }
+                },
+                "GCxGC-MS": {
+                    "order": 3,
+                    "label": "GCxGC-MS",
+                    "description": "GCxGC-MS",
+                    "assayFileDefaultValues": {
+                        "Chromatography": [
+                            "Chromatography Instrument",
+                            "Autosampler model",
+                            "Column model 1",
+                            "Column type 1",
+                            "Column model 2",
+                            "Column type 2",
+                            "Guard column"
+                        ],
+                        "Mass spectrometry": [
+                            "Scan polarity",
+                            "Scan m/z range",
+                            "Instrument",
+                            "Ion source",
+                            "Mass analyzer"
+                        ]
+                    }
+                },
+                "MALDI-MS": {
+                    "order": 4,
+                    "label": "MALDI-MS",
+                    "description": "MALDI-MS",
+                    "assayFileDefaultValues": {
+                        "Mass spectrometry": [
+                            "Scan polarity",
+                            "Scan m/z range",
+                            "Instrument",
+                            "Ion source",
+                            "Mass analyzer"
+                        ]
+                    }
+                },
+                "FIA-MS": {
+                    "order": 5,
+                    "label": "FIA-MS",
+                    "description": "FIA-MS",
+                    "assayFileDefaultValues": {
+                        "Flow Injection Analysis": [
+                            "FIA Instrument"
+                        ],
+                        "Mass spectrometry": [
+                            "Scan polarity",
+                            "Scan m/z range",
+                            "Instrument",
+                            "Ion source",
+                            "Mass analyzer"
+                        ]
+                    }
+                },
+                "DI-MS": {
+                    "order": 6,
+                    "label": "DI-MS",
+                    "description": "DI-MS",
+                    "assayFileDefaultValues": {
+                        "Direct infusion": [
+                            "DI Instrument"
+                        ],
+                        "Mass spectrometry": [
+                            "Scan polarity",
+                            "Scan m/z range",
+                            "Instrument",
+                            "Ion source",
+                            "Mass analyzer"
+                        ]
+                    }
+                },
+                "CE-MS": {
+                    "order": 7,
+                    "label": "CE-MS",
+                    "description": "CE-MS",
+                    "assayFileDefaultValues": {
+                        "Capillary Electrophoresis": [
+                            "CE Instrument",
+                            "Column model",
+                            "Column type"
+                        ],
+                        "Mass spectrometry": [
+                            "Scan polarity",
+                            "Scan m/z range",
+                            "Instrument",
+                            "Ion source",
+                            "Mass analyzer"
+                        ]
+                    }
+                },
+                "MS": {
+                    "order": 8,
+                    "label": "MS",
+                    "description": "MS",
+                    "assayFileDefaultValues": {
+                        "Mass spectrometry": [
+                            "Scan polarity",
+                            "Scan m/z range",
+                            "Instrument",
+                            "Ion source",
+                            "Mass analyzer"
+                        ]
+                    }
+                },
+                "NMR": {
+                    "order": 9,
+                    "label": "NMR",
+                    "description": "NMR",
+                    "assayFileDefaultValues": {
+                        "NMR sample": [
+                            "NMR tube type",
+                            "Solvent",
+                            "Sample pH",
+                            "Temperature"
+                        ],
+                        "NMR spectroscopy": [
+                            "Instrument",
+                            "NMR Probe",
+                            "Number of transients",
+                            "Pulse sequence name",
+                            "Magnetic field strength"
+                        ]
+                    }
+                },
+                "MRImaging": {
+                    "order": 10,
+                    "label": "MRImaging",
+                    "description": "MRImaging",
+                    "assayFileDefaultValues": {
+                        "Magnetic resonance imaging": [
+                            "Instrument",
+                            "Tomography",
+                            "Temperature"
+                        ],
+                        "In vivo magnetic resonance spectroscopy": [
+                            "Spatial resolution",
+                            "Field of view",
+                            "Matrix",
+                            "Magnetic pulse sequence name",
+                            "Voxel size",
+                            "Localisation pulse sequence name",
+                            "Number of transients",
+                            "Water inhibition pulse sequence name",
+                            "Magnetic field strength"
+                        ],
+                        "In vivo magnetic resonance assay": [
+                            "NMR tube type",
+                            "Solvent",
+                            "Sample pH",
+                            "Temperature"
+                        ]
+                    }
+                },
+                "MSImaging": {
+                    "order": 11,
+                    "label": "MSImaging",
+                    "description": "MSImaging",
+                    "assayFileDefaultValues": {
+                        "Preparation": [
+                            "Sample mounting",
+                            "Sample preservation",
+                            "Tissue modification",
+                            "Sectioning instrument",
+                            "Section thickness",
+                            "Matrix",
+                            "Matrix application"
+                        ],
+                        "Mass spectrometry": [
+                            "Scan polarity",
+                            "Scan m/z range",
+                            "Instrument",
+                            "Instrument manufacturer",
+                            "Ion source",
+                            "Mass analyzer",
+                            "Solvent",
+                            "Target material",
+                            "Spatial resolution",
+                            "Pixel size x",
+                            "Pixel size y",
+                            "Max count of pixel x",
+                            "Max count of pixel y",
+                            "Max dimension x",
+                            "Max dimension y",
+                            "Inlet type",
+                            "Detector",
+                            "Detector mode",
+                            "Resolving power",
+                            "Resolving power m/z",
+                            "Native spectrum identifier format",
+                            "Data file content",
+                            "Spectrum representation",
+                            "Raw data file format",
+                            "Instrument software",
+                            "Instrument software version",
+                            "Line scan direction",
+                            "Line scan sequence",
+                            "Scan pattern",
+                            "Scan type",
+                            "Number of scans"
+                        ],
+                        "Histology": [
+                            "Stain",
+                            "High-res image",
+                            "Low-res image"
+                        ]
+                    }
+                },
+                "GC-FID": {
+                    "order": 12,
+                    "label": "GC-FID",
+                    "description": "GC-FID",
+                    "assayFileDefaultValues": {
+                        "Chromatography": [
+                            "Chromatography Instrument",
+                            "Autosampler model",
+                            "Column model",
+                            "Column type",
+                            "Guard column",
+                            "Detector",
+                            "Temperature"
+                        ]
+                    }
+                },
+                "LC-DAD": {
+                    "order": 13,
+                    "label": "LC-DAD",
+                    "description": "LC-DAD",
+                    "assayFileDefaultValues": {
+                        "Chromatography": [
+                            "Chromatography Instrument",
+                            "Autosampler model",
+                            "Column model",
+                            "Column type",
+                            "Guard column",
+                            "Detector",
+                            "Signal range",
+                            "Resolution"
+                        ]
+                    }
+                }
+            },
             "activeStudyCategories": {
                 "ms-mhd-enabled": {
                     "visible": false,
@@ -783,6 +1412,9 @@
             "defaultInvestigationFileTemplate": "minimum",
             "defaultStudyCategory": "other",
             "defaultDatasetLicense": "CC0 1.0 Universal",
+            "defaultResultFileFormat": "maf",
+            "defaultMeasurementType": "untargeted",
+            "defaultOmicsType": "metabolomics",
             "investigationFileName": "i_Investigation.txt",
             "derivedFileExtensions": [
                 ".cdf",

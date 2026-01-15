@@ -27,7 +27,7 @@
   "files.autoSave": "afterDelay",
   "debugpy.showPythonInlineValues": true,
   "[python]": {
-    "editor.defaultFormatter": "astral-sh.ruff",
+    "editor.defaultFormatter": "charliermarsh.ruff",
     "editor.codeActionsOnSave": {
       "source.fixAll": "explicit",
       "source.organizeImports": "explicit"

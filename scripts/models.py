@@ -469,7 +469,26 @@ class ActiveDesignDescriptorCategory(StudyBaseModel):
     ]
 
 
+class AssayFileConfiguration(StudyBaseModel):
+    order: Annotated[int, Field(description="order of the predefined value")]
+    label: Annotated[str, Field(description="label for the predefined value")]
+    description: Annotated[
+        str, Field(description="description of the predefined value")
+    ]
+    assay_file_default_values: Annotated[
+        dict[str, list[str]],
+        Field(description="assay groups (protocols, file, etc.) and parameters"),
+    ]
+
 class TemplateConfiguration(StudyBaseModel):
+    active_result_file_formats: Annotated[
+        list[str], Field(description="active result file formats")
+    ]
+    active_measurement_types: Annotated[
+        list[str], Field(description="active measurement types")
+    ]
+    active_omics_types: Annotated[list[str], Field(description="active omics types")]
+
     active_investigation_file_templates: Annotated[
         list[str], Field(description="active investigation file templates")
     ]
@@ -480,7 +499,8 @@ class TemplateConfiguration(StudyBaseModel):
         list[str], Field(description="active sample file templates")
     ]
     active_assay_file_templates: Annotated[
-        list[str], Field(description="active assay file templates")
+        dict[str, AssayFileConfiguration],
+        Field(description="active assay file templates"),
     ]
     active_study_categories: Annotated[
         dict[str, ActiveStudyCategory], Field(description="active study categories")
@@ -510,6 +530,14 @@ class TemplateConfiguration(StudyBaseModel):
     default_dataset_license: Annotated[
         str, Field(description="default dataset license name")
     ]
+    default_result_file_format: Annotated[
+        str, Field(description="default result file format")
+    ]
+    default_measurement_type: Annotated[
+        str, Field(description="default measurement type")
+    ]
+    default_omics_type: Annotated[str, Field(description="default omics type")]
+
     investigation_file_name: Annotated[
         str, Field(description="investigation file name")
     ]
@@ -634,7 +662,30 @@ class DescriptorConfiguration(StudyBaseModel):
     ] = {}
 
 
+class PredefinedValueConfiguration(StudyBaseModel):
+    order: Annotated[int, Field(description="order of the predefined value")]
+    label: Annotated[str, Field(description="label for the predefined value")]
+    description: Annotated[
+        str, Field(description="description of the predefined value")
+    ]
+    ontology_term: Annotated[
+        OntologyTerm, Field(description="ontology term for the predefined value")
+    ]
+
+
 class TemplateSettings(StudyBaseModel):
+    result_file_formats: Annotated[
+        dict[str, PredefinedValueConfiguration],
+        Field(description="result file configurations"),
+    ]
+    omics_types: Annotated[
+        dict[str, PredefinedValueConfiguration],
+        Field(description="omics type configurations"),
+    ]
+    measurement_types: Annotated[
+        dict[str, PredefinedValueConfiguration],
+        Field(description="measurement types configurations"),
+    ]
     active_template_versions: Annotated[
         list[str], Field(description="active template versions")
     ]
@@ -648,9 +699,6 @@ class TemplateSettings(StudyBaseModel):
     descriptor_configuration: Annotated[
         DescriptorConfiguration, Field(description="default comment configuration")
     ] = DescriptorConfiguration()
-    result_file_formats: Annotated[
-        dict[str, OntologyTerm], Field(description="result file formats")
-    ] = {}
     default_file_controls: Annotated[
         dict[MetadataFileType, list[DefaultControl]],
         Field(description="default control lists"),

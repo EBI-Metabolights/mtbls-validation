@@ -74,8 +74,10 @@
                     "parameters": [
                         "Chromatography Instrument",
                         "Autosampler model",
-                        "Column model",
-                        "Column type",
+                        "Column model 1",
+                        "Column type 1",
+                        "Column model 2",
+                        "Column type 2",
                         "Guard column"
                     ],
                     "parameterDefinitions": {
