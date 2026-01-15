@@ -79,6 +79,24 @@ Study Assay Technology Type	mass spectrometry assay	mass spectrometry assay	mass
 Study Assay Technology Type Term Accession Number	http://purl.obolibrary.org/obo/OBI_0000470	http://purl.obolibrary.org/obo/OBI_0000470	http://purl.obolibrary.org/obo/OBI_0000470	http://purl.obolibrary.org/obo/OBI_0000470
 Study Assay Technology Type Term Source REF	OBI	OBI	OBI	OBI
 Study Assay Technology Platform	Q Exactive	Q Exactive	Q Exactive	Q Exactive
+Comment[Assay Identifier]	
+Comment[Assay Result File Format]	
+Comment[Assay Type]	
+Comment[Assay Type Term Source REF]	
+Comment[Assay Type Term Accession Number]	
+Comment[Omics Type]	
+Comment[Omics Type Term Source REF]	
+Comment[Omics Type Term Accession Number]	
+Comment[Assay Descriptor]	
+Comment[Assay Descriptor Term Source REF]	
+Comment[Assay Descriptor Term Accession Number]	
+Comment[Assay Descriptor Category]	
+Comment[Assay Descriptor Source]	
+Comment[Assay Field Name]	
+Comment[Assay Field Default Value]	
+Comment[Assay Field Default Unit]	
+Comment[Assay Field Default Value Source REF]	
+Comment[Assay Field Default Value Accession Number]	
 STUDY PROTOCOLS
 Study Protocol Name	Sample collection	Extraction	Chromatography	Mass spectrometry	Data transformation	Metabolite identification
 Study Protocol Type	sample collection protocol	Extraction	Chromatography	Mass spectrometry	Data transformation	Metabolite identification

@@ -226,7 +226,26 @@
                         "Study Assay Technology Type Term Source REF",
                         "Study Assay Technology Platform"
                     ],
-                    "defaultComments": [],
+                    "defaultComments": [
+                        "Assay Identifier",
+                        "Assay Result File Format",
+                        "Assay Type",
+                        "Assay Type Term Source REF",
+                        "Assay Type Term Accession Number",
+                        "Omics Type",
+                        "Omics Type Term Source REF",
+                        "Omics Type Term Accession Number",
+                        "Assay Descriptor",
+                        "Assay Descriptor Term Source REF",
+                        "Assay Descriptor Term Accession Number",
+                        "Assay Descriptor Category",
+                        "Assay Descriptor Source",
+                        "Assay Field Name",
+                        "Assay Field Default Value",
+                        "Assay Field Default Unit",
+                        "Assay Field Default Value Source REF",
+                        "Assay Field Default Value Accession Number"
+                    ],
                     "defaultFieldValues": {
                         "Study Assay File Name": [
                             "a_MTBLS310_Method1_POS_1_metabolite_profiling_mass_spectrometry"
@@ -801,7 +820,26 @@
                         "Study Assay Technology Type Term Source REF",
                         "Study Assay Technology Platform"
                     ],
-                    "defaultComments": [],
+                    "defaultComments": [
+                        "Assay Identifier",
+                        "Assay Result File Format",
+                        "Assay Type",
+                        "Assay Type Term Source REF",
+                        "Assay Type Term Accession Number",
+                        "Omics Type",
+                        "Omics Type Term Source REF",
+                        "Omics Type Term Accession Number",
+                        "Assay Descriptor",
+                        "Assay Descriptor Term Source REF",
+                        "Assay Descriptor Term Accession Number",
+                        "Assay Descriptor Category",
+                        "Assay Descriptor Source",
+                        "Assay Field Name",
+                        "Assay Field Default Value",
+                        "Assay Field Default Unit",
+                        "Assay Field Default Value Source REF",
+                        "Assay Field Default Value Accession Number"
+                    ],
                     "defaultFieldValues": {
                         "Study Assay File Name": [
                             "a_MTBLS310_Method1_POS_1_metabolite_profiling_mass_spectrometry"
