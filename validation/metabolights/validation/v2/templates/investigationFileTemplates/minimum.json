@@ -111,7 +111,9 @@
                         "Study Category",
                         "Funder",
                         "Funder ROR ID",
-                        "Grant Identifier"
+                        "Grant Identifier",
+                        "Related Data Repository",
+                        "Related Data Accession"
                     ],
                     "defaultFieldValues": {
                         "Study File Name": [
@@ -187,7 +189,10 @@
                         "Study Factor Type Term Source REF"
                     ],
                     "defaultComments": [
-                        "Study Factor Value Format"
+                        "Study Factor Value Format",
+                        "Unit Term",
+                        "Unit Term Source REF",
+                        "Unit Term Accession Number"
                     ],
                     "defaultFieldValues": {},
                     "defaultCommentValues": {}
@@ -368,7 +373,9 @@
                         "Study Category",
                         "Funder",
                         "Funder ROR ID",
-                        "Grant Identifier"
+                        "Grant Identifier",
+                        "Related Data Repository",
+                        "Related Data Accession"
                     ],
                     "defaultFieldValues": {
                         "Study File Name": [
@@ -444,7 +451,10 @@
                         "Study Factor Type Term Source REF"
                     ],
                     "defaultComments": [
-                        "Study Factor Value Format"
+                        "Study Factor Value Format",
+                        "Unit Term",
+                        "Unit Term Source REF",
+                        "Unit Term Accession Number"
                     ],
                     "defaultFieldValues": {},
                     "defaultCommentValues": {}

@@ -32,7 +32,7 @@ test_rule_s_200_090_002_03_no_violation_01 if {
 			{
 				"op": "replace",
 				"path": "/samples/s_REQ2025111188888.txt/table/data/Term Source REF.4/0",
-				"value": "NCBITAXON",
+				"value": "NCBITaxon",
 			},
 			{
 				"op": "replace",

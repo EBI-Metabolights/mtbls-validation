@@ -3,7 +3,7 @@
     "fieldName": "",
     "ontologies": [
         "UO",
-        "NCBITAXON"
+        "NCBITaxon"
     ],
     "allowedParentOntologyTerms": null,
     "description": "",

@@ -632,10 +632,10 @@
             "Homo sapiens"
           ],
           "Term Source REF": [
-            "NCBITAXON",
-            "NCBITAXON",
-            "NCBITAXON",
-            "NCBITAXON"
+            "NCBITaxon",
+            "NCBITaxon",
+            "NCBITaxon",
+            "NCBITaxon"
           ],
           "Term Accession Number": [
             "NCBITaxon:9606",
@@ -765,7 +765,7 @@
       "organisms": [
         {
           "term": "Homo sapiens",
-          "termSourceRef": "NCBITAXON",
+          "termSourceRef": "NCBITaxon",
           "termAccessionNumber": "NCBITaxon:9606"
         }
       ],
@@ -780,7 +780,7 @@
         {
           "organism": {
             "term": "Homo sapiens",
-            "termSourceRef": "NCBITAXON",
+            "termSourceRef": "NCBITaxon",
             "termAccessionNumber": "NCBITaxon:9606"
           },
           "organismPart": {

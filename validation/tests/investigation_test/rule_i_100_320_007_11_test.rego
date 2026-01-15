@@ -197,7 +197,7 @@ test_rule_i_100_320_007_11_no_violation_selected_ontologies_01 if {
 				"value": {
 					"term": "Mus musculus",
 					"termAccessionNumber": "http://purl.obolibrary.org/obo/NCBITaxon_10090",
-					"termSourceRef": "NCBITAXON",
+					"termSourceRef": "NCBITaxon",
 				},
 			},
 			{
@@ -494,7 +494,7 @@ test_rule_i_100_320_007_11_violation_child_ontology_01 if {
 				"value": {
 					"term": "Mus musculus",
 					"termAccessionNumber": "http://purl.obolibrary.org/obo/NCBITaxon_10090",
-					"termSourceRef": "NCBITAXON",
+					"termSourceRef": "NCBITaxon",
 				},
 			},
 		],

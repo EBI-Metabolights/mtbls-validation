@@ -665,7 +665,7 @@
                     ],
                     "Term Source REF": [
                         "NCBITaxon",
-                        "NCBITAXON"
+                        "NCBITaxon"
                     ],
                     "Term Accession Number": [
                         "http://purl.obolibrary.org/obo/NCBITaxon_9606",
@@ -772,7 +772,7 @@
             "organisms": [
                 {
                     "term": "Homo sapiens",
-                    "termSourceRef": "NCBITAXON",
+                    "termSourceRef": "NCBITaxon",
                     "termAccessionNumber": "http://purl.obolibrary.org/obo/NCBITaxon_9606"
                 },
                 {
@@ -797,7 +797,7 @@
                 {
                     "organism": {
                         "term": "Homo sapiens",
-                        "termSourceRef": "NCBITAXON",
+                        "termSourceRef": "NCBITaxon",
                         "termAccessionNumber": "http://purl.obolibrary.org/obo/NCBITaxon_9606"
                     },
                     "organismPart": {
@@ -819,7 +819,7 @@
                 {
                     "organism": {
                         "term": "Mus musculus",
-                        "termSourceRef": "NCBITAXON",
+                        "termSourceRef": "NCBITaxon",
                         "termAccessionNumber": "http://purl.obolibrary.org/obo/NCBITaxon_10090"
                     },
                     "organismPart": {

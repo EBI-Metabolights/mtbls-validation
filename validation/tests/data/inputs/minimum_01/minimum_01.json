@@ -60,10 +60,10 @@
                     "sourceDescription": "MetaboLihgts controlled vocabularies"
                 },
                 {
-                    "sourceName": "NCBITAXON",
+                    "sourceName": "NCBITaxon",
                     "sourceFile": "http://purl.obolibrary.org/obo/ncbitaxon.owl",
                     "sourceVersion": "2024-06-10",
-                    "sourceDescription": "NCBITAXON"
+                    "sourceDescription": "NCBITaxon"
                 },
                 {
                     "sourceName": "BTO",
@@ -647,10 +647,10 @@
                         "Homo sapiens"
                     ],
                     "Term Source REF": [
-                        "NCBITAXON",
-                        "NCBITAXON",
-                        "NCBITAXON",
-                        "NCBITAXON"
+                        "NCBITaxon",
+                        "NCBITaxon",
+                        "NCBITaxon",
+                        "NCBITaxon"
                     ],
                     "Term Accession Number": [
                         "NCBITaxon:9606",

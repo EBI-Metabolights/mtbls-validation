@@ -45,6 +45,8 @@ Comment[Template Version]	1.0
 Comment[Funder]	
 Comment[Funder ROR ID]	
 Comment[Grant Identifier]	
+Comment[Related Data Repository]	
+Comment[Related Data Accession]	
 STUDY DESIGN DESCRIPTORS
 Study Design Type	metabolon	ultra-performance liquid chromatography-mass spectrometry	untargeted metabolite profiling	targeted metabolite profiling
 Study Design Type Term Accession Number		http://purl.obolibrary.org/obo/CHMO_0000715	http://purl.obolibrary.org/obo/MSIO_0000101	http://purl.obolibrary.org/obo/MSIO_0000100
@@ -65,6 +67,9 @@ Study Factor Type
 Study Factor Type Term Accession Number	
 Study Factor Type Term Source REF	
 Comment[Study Factor Value Format]	
+Comment[Unit Term]	
+Comment[Unit Term Source REF]	
+Comment[Unit Term Accession Number]	
 STUDY ASSAYS
 Study Assay File Name	a_MTBLS310_Method1_POS_1_metabolite_profiling_mass_spectrometry
 Study Assay Measurement Type	metabolite profiling assay	metabolite profiling assay	metabolite profiling assay	metabolite profiling assay

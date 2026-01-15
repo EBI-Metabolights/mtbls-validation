@@ -216,4 +216,5 @@ def search_ols_term(
 
 
 if __name__ == "__main__":
-    search_ols_term("Mus musculus", ontology_filter=["NCBITaxon"])
+    result = search_ols_term("Mus musculus", ontology_filter=["NCBITaxon"])
+    print(result)

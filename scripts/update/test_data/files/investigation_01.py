@@ -54,8 +54,8 @@ investigation_file = inv.Investigation(
                 source_version="2024-06-10",
             ),
             inv.OntologySourceReference(
-                source_name="NCBITAXON",
-                source_description="NCBITAXON",
+                source_name="NCBITaxon",
+                source_description="NCBITaxon",
                 source_file="http://purl.obolibrary.org/obo/ncbitaxon.owl",
                 source_version="2024-06-10",
             ),

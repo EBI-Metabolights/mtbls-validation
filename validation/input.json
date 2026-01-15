@@ -60,7 +60,7 @@
                     "sourceDescription": "MetaboLights Controlled Vocabulary"
                 },
                 {
-                    "sourceName": "NCBITAXON",
+                    "sourceName": "NCBITaxon",
                     "sourceFile": "http://purl.obolibrary.org/obo/ncbitaxon.owl",
                     "sourceVersion": "",
                     "sourceDescription": "National Center for Biotechnology Information (NCBI) Organismal Classification"
@@ -727,8 +727,8 @@
                         "Mus musculus"
                     ],
                     "Term Source REF": [
-                        "NCBITAXON",
-                        "NCBITAXON"
+                        "NCBITaxon",
+                        "NCBITaxon"
                     ],
                     "Term Accession Number": [
                         "http://purl.obolibrary.org/obo/NCBITaxon_9606",
@@ -831,12 +831,12 @@
             "organisms": [
                 {
                     "term": "Homo sapiens",
-                    "termSourceRef": "NCBITAXON",
+                    "termSourceRef": "NCBITaxon",
                     "termAccessionNumber": "http://purl.obolibrary.org/obo/NCBITaxon_9606"
                 },
                 {
                     "term": "Mus musculus",
-                    "termSourceRef": "NCBITAXON",
+                    "termSourceRef": "NCBITaxon",
                     "termAccessionNumber": "http://purl.obolibrary.org/obo/NCBITaxon_10090"
                 }
             ],
@@ -856,7 +856,7 @@
                 {
                     "organism": {
                         "term": "Mus musculus",
-                        "termSourceRef": "NCBITAXON",
+                        "termSourceRef": "NCBITaxon",
                         "termAccessionNumber": "http://purl.obolibrary.org/obo/NCBITaxon_10090"
                     },
                     "organismPart": {
@@ -878,7 +878,7 @@
                 {
                     "organism": {
                         "term": "Homo sapiens",
-                        "termSourceRef": "NCBITAXON",
+                        "termSourceRef": "NCBITaxon",
                         "termAccessionNumber": "http://purl.obolibrary.org/obo/NCBITaxon_9606"
                     },
                     "organismPart": {

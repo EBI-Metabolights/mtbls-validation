@@ -45,6 +45,8 @@ Comment[Study Category]	other
 Comment[Funder]	
 Comment[Funder ROR ID]	
 Comment[Grant Identifier]	
+Comment[Related Data Repository]	
+Comment[Related Data Accession]	
 STUDY DESIGN DESCRIPTORS
 Study Design Type	
 Study Design Type Term Accession Number	
@@ -65,6 +67,9 @@ Study Factor Type
 Study Factor Type Term Accession Number	
 Study Factor Type Term Source REF	
 Comment[Study Factor Value Format]	
+Comment[Unit Term]	
+Comment[Unit Term Source REF]	
+Comment[Unit Term Accession Number]	
 STUDY ASSAYS
 Study Assay File Name	
 Study Assay Measurement Type	

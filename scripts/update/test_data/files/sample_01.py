@@ -207,7 +207,7 @@ sample_file = SamplesFile(
                 "Homo sapiens",
                 "Homo sapiens",
             ],
-            "Term Source REF": ["NCBITAXON", "NCBITAXON", "NCBITAXON", "NCBITAXON"],
+            "Term Source REF": ["NCBITaxon", "NCBITaxon", "NCBITaxon", "NCBITaxon"],
             "Term Accession Number": [
                 "NCBITaxon:9606",
                 "NCBITaxon:9606",
