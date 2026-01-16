@@ -190,9 +190,9 @@
                     ],
                     "defaultComments": [
                         "Study Factor Value Format",
-                        "Unit Term",
-                        "Unit Term Source REF",
-                        "Unit Term Accession Number"
+                        "Study Factor Unit",
+                        "Study Factor Unit Term Source REF",
+                        "Study Factor Unit Term Accession Number"
                     ],
                     "defaultFieldValues": {},
                     "defaultCommentValues": {}
@@ -472,9 +472,9 @@
                     ],
                     "defaultComments": [
                         "Study Factor Value Format",
-                        "Unit Term",
-                        "Unit Term Source REF",
-                        "Unit Term Accession Number"
+                        "Study Factor Unit",
+                        "Study Factor Unit Term Source REF",
+                        "Study Factor Unit Term Accession Number"
                     ],
                     "defaultFieldValues": {},
                     "defaultCommentValues": {}

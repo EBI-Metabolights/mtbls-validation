@@ -11145,9 +11145,9 @@
                         ],
                         "defaultComments": [
                             "Study Factor Value Format",
-                            "Unit Term",
-                            "Unit Term Source REF",
-                            "Unit Term Accession Number"
+                            "Study Factor Unit",
+                            "Study Factor Unit Term Source REF",
+                            "Study Factor Unit Term Accession Number"
                         ],
                         "defaultFieldValues": {},
                         "defaultCommentValues": {}
@@ -11427,9 +11427,9 @@
                         ],
                         "defaultComments": [
                             "Study Factor Value Format",
-                            "Unit Term",
-                            "Unit Term Source REF",
-                            "Unit Term Accession Number"
+                            "Study Factor Unit",
+                            "Study Factor Unit Term Source REF",
+                            "Study Factor Unit Term Accession Number"
                         ],
                         "defaultFieldValues": {},
                         "defaultCommentValues": {}
@@ -11728,9 +11728,9 @@
                         ],
                         "defaultComments": [
                             "Study Factor Value Format",
-                            "Unit Term",
-                            "Unit Term Source REF",
-                            "Unit Term Accession Number"
+                            "Study Factor Unit",
+                            "Study Factor Unit Term Source REF",
+                            "Study Factor Unit Term Accession Number"
                         ],
                         "defaultFieldValues": {},
                         "defaultCommentValues": {}
@@ -12323,9 +12323,9 @@
                         ],
                         "defaultComments": [
                             "Study Factor Value Format",
-                            "Unit Term",
-                            "Unit Term Source REF",
-                            "Unit Term Accession Number"
+                            "Study Factor Unit",
+                            "Study Factor Unit Term Source REF",
+                            "Study Factor Unit Term Accession Number"
                         ],
                         "defaultFieldValues": {},
                         "defaultCommentValues": {}
@@ -22016,11 +22016,6 @@
                     "organism-part": {
                         "visible": true,
                         "order": 5,
-                        "min": 0
-                    },
-                    "measurement-type": {
-                        "visible": true,
-                        "order": 6,
                         "min": 0
                     }
                 },
