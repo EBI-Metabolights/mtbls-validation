@@ -81,6 +81,7 @@ Study Assay Technology Type Term Source REF	OBI	OBI	OBI	OBI
 Study Assay Technology Platform	Q Exactive	Q Exactive	Q Exactive	Q Exactive
 Comment[Assay Identifier]	
 Comment[Assay Result File Format]	
+Comment[Assay Type Label]	
 Comment[Assay Type]	
 Comment[Assay Type Term Source REF]	
 Comment[Assay Type Term Accession Number]	

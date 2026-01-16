@@ -229,6 +229,7 @@
                     "defaultComments": [
                         "Assay Identifier",
                         "Assay Result File Format",
+                        "Assay Type Label",
                         "Assay Type",
                         "Assay Type Term Source REF",
                         "Assay Type Term Accession Number",
@@ -823,6 +824,7 @@
                     "defaultComments": [
                         "Assay Identifier",
                         "Assay Result File Format",
+                        "Assay Type Label",
                         "Assay Type",
                         "Assay Type Term Source REF",
                         "Assay Type Term Accession Number",

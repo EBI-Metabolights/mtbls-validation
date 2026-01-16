@@ -11167,6 +11167,7 @@
                         "defaultComments": [
                             "Assay Identifier",
                             "Assay Result File Format",
+                            "Assay Type Label",
                             "Assay Type",
                             "Assay Type Term Source REF",
                             "Assay Type Term Accession Number",
@@ -11448,6 +11449,7 @@
                         "defaultComments": [
                             "Assay Identifier",
                             "Assay Result File Format",
+                            "Assay Type Label",
                             "Assay Type",
                             "Assay Type Term Source REF",
                             "Assay Type Term Accession Number",
@@ -11748,6 +11750,7 @@
                         "defaultComments": [
                             "Assay Identifier",
                             "Assay Result File Format",
+                            "Assay Type Label",
                             "Assay Type",
                             "Assay Type Term Source REF",
                             "Assay Type Term Accession Number",
@@ -12342,6 +12345,7 @@
                         "defaultComments": [
                             "Assay Identifier",
                             "Assay Result File Format",
+                            "Assay Type Label",
                             "Assay Type",
                             "Assay Type Term Source REF",
                             "Assay Type Term Accession Number",
@@ -21334,8 +21338,8 @@
                                 "controlListKey": "Study Assay Type"
                             },
                             {
-                                "name": "Related Omics Type",
-                                "label": "Related Omics Type",
+                                "name": "Primary Omics Type",
+                                "label": "Primary Omics Type",
                                 "isOntology": true,
                                 "controlListKey": "Omics Type"
                             }
@@ -21586,6 +21590,11 @@
                         "order": 1,
                         "label": "LC-MS",
                         "description": "LC-MS",
+                        "ontologyTerm": {
+                            "term": "liquid chromatography mass spectrometry assay",
+                            "termAccessionNumber": "http://purl.obolibrary.org/obo/OBI_0003097",
+                            "termSourceRef": "OBI"
+                        },
                         "assayFileDefaultValues": {
                             "Chromatography": [
                                 "Chromatography Instrument",
@@ -21607,6 +21616,11 @@
                         "order": 2,
                         "label": "GC-MS",
                         "description": "GC-MS",
+                        "ontologyTerm": {
+                            "term": "gas chromatography mass spectrometry assay",
+                            "termAccessionNumber": "http://purl.obolibrary.org/obo/OBI_0003110",
+                            "termSourceRef": "OBI"
+                        },
                         "assayFileDefaultValues": {
                             "Chromatography": [
                                 "Chromatography Instrument",
@@ -21628,6 +21642,11 @@
                         "order": 3,
                         "label": "GCxGC-MS",
                         "description": "GCxGC-MS",
+                        "ontologyTerm": {
+                            "term": "two dimensional gas chromatography mass spectrometry assay",
+                            "termAccessionNumber": "",
+                            "termSourceRef": ""
+                        },
                         "assayFileDefaultValues": {
                             "Chromatography": [
                                 "Chromatography Instrument",
@@ -21651,6 +21670,11 @@
                         "order": 4,
                         "label": "MALDI-MS",
                         "description": "MALDI-MS",
+                        "ontologyTerm": {
+                            "term": "matrix assisted laser desorption ionization mass spectrometry assay",
+                            "termAccessionNumber": "",
+                            "termSourceRef": ""
+                        },
                         "assayFileDefaultValues": {
                             "Mass spectrometry": [
                                 "Scan polarity",
@@ -21665,6 +21689,11 @@
                         "order": 5,
                         "label": "FIA-MS",
                         "description": "FIA-MS",
+                        "ontologyTerm": {
+                            "term": "flow injection analysis mass spectrometry assay",
+                            "termAccessionNumber": "",
+                            "termSourceRef": ""
+                        },
                         "assayFileDefaultValues": {
                             "Flow Injection Analysis": [
                                 "FIA Instrument"
@@ -21682,6 +21711,11 @@
                         "order": 6,
                         "label": "DI-MS",
                         "description": "DI-MS",
+                        "ontologyTerm": {
+                            "term": "direct infusion mass spectrometry assay",
+                            "termAccessionNumber": "",
+                            "termSourceRef": ""
+                        },
                         "assayFileDefaultValues": {
                             "Direct infusion": [
                                 "DI Instrument"
@@ -21699,6 +21733,11 @@
                         "order": 7,
                         "label": "CE-MS",
                         "description": "CE-MS",
+                        "ontologyTerm": {
+                            "term": "capillary electrophoresis mass spectrometry assay",
+                            "termAccessionNumber": "http://purl.obolibrary.org/obo/OBI_0003741",
+                            "termSourceRef": "OBI"
+                        },
                         "assayFileDefaultValues": {
                             "Capillary Electrophoresis": [
                                 "CE Instrument",
@@ -21718,6 +21757,11 @@
                         "order": 8,
                         "label": "MS",
                         "description": "MS",
+                        "ontologyTerm": {
+                            "term": "mass spectrometry assay",
+                            "termAccessionNumber": "http://purl.obolibrary.org/obo/OBI_0000470",
+                            "termSourceRef": "OBI"
+                        },
                         "assayFileDefaultValues": {
                             "Mass spectrometry": [
                                 "Scan polarity",
@@ -21732,6 +21776,11 @@
                         "order": 9,
                         "label": "NMR",
                         "description": "NMR",
+                        "ontologyTerm": {
+                            "term": "NMR spectroscopy assay",
+                            "termAccessionNumber": "http://purl.obolibrary.org/obo/OBI_0000623",
+                            "termSourceRef": "OBI"
+                        },
                         "assayFileDefaultValues": {
                             "NMR sample": [
                                 "NMR tube type",
@@ -21752,6 +21801,11 @@
                         "order": 10,
                         "label": "MRImaging",
                         "description": "MRImaging",
+                        "ontologyTerm": {
+                            "term": "magnetic resonance imaging assay",
+                            "termAccessionNumber": "http://purl.obolibrary.org/obo/OBI_0002985",
+                            "termSourceRef": "OBI"
+                        },
                         "assayFileDefaultValues": {
                             "Magnetic resonance imaging": [
                                 "Instrument",
@@ -21781,6 +21835,11 @@
                         "order": 11,
                         "label": "MSImaging",
                         "description": "MSImaging",
+                        "ontologyTerm": {
+                            "term": "mass spectrometry imaging assay",
+                            "termAccessionNumber": "",
+                            "termSourceRef": ""
+                        },
                         "assayFileDefaultValues": {
                             "Preparation": [
                                 "Sample mounting",
@@ -21835,6 +21894,11 @@
                         "order": 12,
                         "label": "GC-FID",
                         "description": "GC-FID",
+                        "ontologyTerm": {
+                            "term": "gas chromatography-flame ionisation detection assay",
+                            "termAccessionNumber": "",
+                            "termSourceRef": ""
+                        },
                         "assayFileDefaultValues": {
                             "Chromatography": [
                                 "Chromatography Instrument",
@@ -21851,6 +21915,11 @@
                         "order": 13,
                         "label": "LC-DAD",
                         "description": "LC-DAD",
+                        "ontologyTerm": {
+                            "term": "liquid chromatography diode array detection assay",
+                            "termAccessionNumber": "",
+                            "termSourceRef": ""
+                        },
                         "assayFileDefaultValues": {
                             "Chromatography": [
                                 "Chromatography Instrument",
@@ -22034,6 +22103,11 @@
                         "order": 1,
                         "label": "LC-MS",
                         "description": "LC-MS",
+                        "ontologyTerm": {
+                            "term": "liquid chromatography mass spectrometry assay",
+                            "termAccessionNumber": "http://purl.obolibrary.org/obo/OBI_0003097",
+                            "termSourceRef": "OBI"
+                        },
                         "assayFileDefaultValues": {
                             "Chromatography": [
                                 "Chromatography Instrument",
@@ -22055,6 +22129,11 @@
                         "order": 2,
                         "label": "GC-MS",
                         "description": "GC-MS",
+                        "ontologyTerm": {
+                            "term": "gas chromatography mass spectrometry assay",
+                            "termAccessionNumber": "http://purl.obolibrary.org/obo/OBI_0003110",
+                            "termSourceRef": "OBI"
+                        },
                         "assayFileDefaultValues": {
                             "Chromatography": [
                                 "Chromatography Instrument",
@@ -22076,6 +22155,11 @@
                         "order": 3,
                         "label": "GCxGC-MS",
                         "description": "GCxGC-MS",
+                        "ontologyTerm": {
+                            "term": "two dimensional gas chromatography mass spectrometry assay",
+                            "termAccessionNumber": "",
+                            "termSourceRef": ""
+                        },
                         "assayFileDefaultValues": {
                             "Chromatography": [
                                 "Chromatography Instrument",
@@ -22099,6 +22183,11 @@
                         "order": 4,
                         "label": "MALDI-MS",
                         "description": "MALDI-MS",
+                        "ontologyTerm": {
+                            "term": "matrix assisted laser desorption ionization mass spectrometry assay",
+                            "termAccessionNumber": "",
+                            "termSourceRef": ""
+                        },
                         "assayFileDefaultValues": {
                             "Mass spectrometry": [
                                 "Scan polarity",
@@ -22113,6 +22202,11 @@
                         "order": 5,
                         "label": "FIA-MS",
                         "description": "FIA-MS",
+                        "ontologyTerm": {
+                            "term": "flow injection analysis mass spectrometry assay",
+                            "termAccessionNumber": "",
+                            "termSourceRef": ""
+                        },
                         "assayFileDefaultValues": {
                             "Flow Injection Analysis": [
                                 "FIA Instrument"
@@ -22130,6 +22224,11 @@
                         "order": 6,
                         "label": "DI-MS",
                         "description": "DI-MS",
+                        "ontologyTerm": {
+                            "term": "direct infusion mass spectrometry assay",
+                            "termAccessionNumber": "",
+                            "termSourceRef": ""
+                        },
                         "assayFileDefaultValues": {
                             "Direct infusion": [
                                 "DI Instrument"
@@ -22147,6 +22246,11 @@
                         "order": 7,
                         "label": "CE-MS",
                         "description": "CE-MS",
+                        "ontologyTerm": {
+                            "term": "capillary electrophoresis mass spectrometry assay",
+                            "termAccessionNumber": "http://purl.obolibrary.org/obo/OBI_0003741",
+                            "termSourceRef": "OBI"
+                        },
                         "assayFileDefaultValues": {
                             "Capillary Electrophoresis": [
                                 "CE Instrument",
@@ -22166,6 +22270,11 @@
                         "order": 8,
                         "label": "MS",
                         "description": "MS",
+                        "ontologyTerm": {
+                            "term": "mass spectrometry assay",
+                            "termAccessionNumber": "http://purl.obolibrary.org/obo/OBI_0000470",
+                            "termSourceRef": "OBI"
+                        },
                         "assayFileDefaultValues": {
                             "Mass spectrometry": [
                                 "Scan polarity",
@@ -22180,6 +22289,11 @@
                         "order": 9,
                         "label": "NMR",
                         "description": "NMR",
+                        "ontologyTerm": {
+                            "term": "NMR spectroscopy assay",
+                            "termAccessionNumber": "http://purl.obolibrary.org/obo/OBI_0000623",
+                            "termSourceRef": "OBI"
+                        },
                         "assayFileDefaultValues": {
                             "NMR sample": [
                                 "NMR tube type",
@@ -22200,6 +22314,11 @@
                         "order": 10,
                         "label": "MRImaging",
                         "description": "MRImaging",
+                        "ontologyTerm": {
+                            "term": "magnetic resonance imaging assay",
+                            "termAccessionNumber": "http://purl.obolibrary.org/obo/OBI_0002985",
+                            "termSourceRef": "OBI"
+                        },
                         "assayFileDefaultValues": {
                             "Magnetic resonance imaging": [
                                 "Instrument",
@@ -22229,6 +22348,11 @@
                         "order": 11,
                         "label": "MSImaging",
                         "description": "MSImaging",
+                        "ontologyTerm": {
+                            "term": "mass spectrometry imaging assay",
+                            "termAccessionNumber": "",
+                            "termSourceRef": ""
+                        },
                         "assayFileDefaultValues": {
                             "Preparation": [
                                 "Sample mounting",
@@ -22283,6 +22407,11 @@
                         "order": 12,
                         "label": "GC-FID",
                         "description": "GC-FID",
+                        "ontologyTerm": {
+                            "term": "gas chromatography-flame ionisation detection assay",
+                            "termAccessionNumber": "",
+                            "termSourceRef": ""
+                        },
                         "assayFileDefaultValues": {
                             "Chromatography": [
                                 "Chromatography Instrument",
@@ -22299,6 +22428,11 @@
                         "order": 13,
                         "label": "LC-DAD",
                         "description": "LC-DAD",
+                        "ontologyTerm": {
+                            "term": "liquid chromatography diode array detection assay",
+                            "termAccessionNumber": "",
+                            "termSourceRef": ""
+                        },
                         "assayFileDefaultValues": {
                             "Chromatography": [
                                 "Chromatography Instrument",

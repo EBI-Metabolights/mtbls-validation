@@ -475,10 +475,14 @@ class AssayFileConfiguration(StudyBaseModel):
     description: Annotated[
         str, Field(description="description of the predefined value")
     ]
+    ontology_term: Annotated[
+        OntologyTerm, Field(description="ontology term for the assay")
+    ]
     assay_file_default_values: Annotated[
         dict[str, list[str]],
         Field(description="assay groups (protocols, file, etc.) and parameters"),
     ]
+
 
 class TemplateConfiguration(StudyBaseModel):
     active_result_file_formats: Annotated[

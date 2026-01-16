@@ -81,6 +81,7 @@ Study Assay Technology Type Term Source REF
 Study Assay Technology Platform	
 Comment[Assay Identifier]	
 Comment[Assay Result File Format]	
+Comment[Assay Type Label]	
 Comment[Assay Type]	
 Comment[Assay Type Term Source REF]	
 Comment[Assay Type Term Accession Number]	
