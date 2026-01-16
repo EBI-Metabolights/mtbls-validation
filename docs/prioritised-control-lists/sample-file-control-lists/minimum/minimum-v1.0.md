@@ -83,7 +83,7 @@
 | Applicable Template Names | All |
 | Applicable Template Versions | All |
 | Validation Type | ontology-term-in-selected-ontologies |
-| Ontologies [Ordered] | NCBITaxon, ENVO |
+| Ontologies [Ordered] | NCBITaxon, ENVO, CHEBI |
 | Allowed Other Sources | \[wikidata, https://www\.wikidata\.org/wiki/\], \[ILX, http://uri\.interlex\.org/base/ilx\_\] |
 | Unexpected Terms | cat, chicken, plant, sample, dog, mouse, horse, flower, fish, leave, root, mice, steam, bacteria, value, food, matrix, mus, rat, blood, urine, plasma, hair, fur, skin, saliva, fly, human, man, sheep |
 | Unexpected Term Enforcement Level | required |
@@ -112,7 +112,7 @@
 | Applicable Template Names | All |
 | Applicable Template Versions | All |
 | Validation Type | ontology-term-in-selected-ontologies |
-| Ontologies [Ordered] | UBERON, BTO, NCIT, MSIO |
+| Ontologies [Ordered] | UBERON, BTO, NCIT, MSIO, CHEBI |
 | Allowed Other Sources | \[wikidata, https://www\.wikidata\.org/wiki/\], \[ILX, http://uri\.interlex\.org/base/ilx\_\] |
 | Ontology Term Enforcement Level | required |
 

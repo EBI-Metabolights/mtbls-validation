@@ -5,7 +5,8 @@
             "fieldName": "Characteristics[Organism]",
             "ontologies": [
                 "NCBITaxon",
-                "ENVO"
+                "ENVO",
+                "CHEBI"
             ],
             "allowedParentOntologyTerms": null,
             "description": "",
@@ -123,6 +124,7 @@
             "ontologies": [
                 "NCBITaxon",
                 "ENVO",
+                "CHEBI",
                 "MTBLS",
                 "WoRMs",
                 "EFO",

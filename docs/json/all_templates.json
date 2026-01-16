@@ -21020,6 +21020,16 @@
                     "termSourceRef": "EDAM"
                 }
             },
+            "exposomics": {
+                "order": 2,
+                "label": "Exposomics",
+                "description": "Exposomics",
+                "ontologyTerm": {
+                    "term": "Exposomics",
+                    "termAccessionNumber": "",
+                    "termSourceRef": "EDAM"
+                }
+            },
             "fluxomics": {
                 "order": 3,
                 "label": "Fluxomics",
@@ -21081,11 +21091,11 @@
                     "isaFileType": "sample",
                     "controlListKey": "Characteristics[Disease]"
                 },
-                "measurement-type": {
-                    "name": "measurement-type",
-                    "label": "Measurement Type",
-                    "isaFileType": "investigation",
-                    "controlListKey": "Assay Measurement Type"
+                "instrument": {
+                    "name": "instrument",
+                    "label": "Instrument",
+                    "isaFileType": "assay",
+                    "controlListKey": "Parameter Value[Instrument]"
                 },
                 "organism": {
                     "name": "organism",
@@ -21104,6 +21114,12 @@
                     "label": "Omics Type",
                     "isaFileType": "investigation",
                     "controlListKey": "Omics Type"
+                },
+                "measurement-type": {
+                    "name": "measurement-type",
+                    "label": "Measurement Type",
+                    "isaFileType": "investigation",
+                    "controlListKey": "Study Assay Measurement Type"
                 },
                 "cell-type: ": {
                     "name": "cell-type",
@@ -21572,7 +21588,8 @@
                 "activeOmicsTypes": [
                     "metabolomics",
                     "lipidomics",
-                    "fluxomics"
+                    "fluxomics",
+                    "exposomics"
                 ],
                 "activeInvestigationFileTemplates": [
                     "minimum",
@@ -21981,10 +21998,10 @@
                         "order": 1,
                         "min": 0
                     },
-                    "measurement-type": {
+                    "instrument": {
                         "visible": true,
                         "order": 2,
-                        "min": 0
+                        "min": 1
                     },
                     "omics-type": {
                         "visible": true,
@@ -21999,6 +22016,11 @@
                     "organism-part": {
                         "visible": true,
                         "order": 5,
+                        "min": 0
+                    },
+                    "measurement-type": {
+                        "visible": true,
+                        "order": 6,
                         "min": 0
                     }
                 },
@@ -22085,7 +22107,8 @@
                 "activeOmicsTypes": [
                     "metabolomics",
                     "lipidomics",
-                    "fluxomics"
+                    "fluxomics",
+                    "exposomics"
                 ],
                 "activeInvestigationFileTemplates": [
                     "minimum",

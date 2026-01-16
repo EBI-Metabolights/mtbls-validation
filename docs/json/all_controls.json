@@ -7665,7 +7665,8 @@
                     "UBERON",
                     "BTO",
                     "NCIT",
-                    "MSIO"
+                    "MSIO",
+                    "CHEBI"
                 ],
                 "allowedParentOntologyTerms": null,
                 "description": "",
@@ -7918,7 +7919,8 @@
                 "fieldName": "Characteristics[Organism]",
                 "ontologies": [
                     "NCBITaxon",
-                    "ENVO"
+                    "ENVO",
+                    "CHEBI"
                 ],
                 "allowedParentOntologyTerms": null,
                 "description": "",
@@ -8036,6 +8038,7 @@
                 "ontologies": [
                     "NCBITaxon",
                     "ENVO",
+                    "CHEBI",
                     "MTBLS",
                     "WoRMs",
                     "EFO",
