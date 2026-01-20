@@ -68,8 +68,8 @@ Study Factor Type Term Accession Number
 Study Factor Type Term Source REF	
 Comment[Study Factor Value Format]	
 Comment[Study Factor Unit]	
-Comment[Study Factor Unit Term Source REF]	
 Comment[Study Factor Unit Term Accession Number]	
+Comment[Study Factor Unit Term Source REF]	
 STUDY ASSAYS
 Study Assay File Name	a_MTBLS310_Method1_POS_1_metabolite_profiling_mass_spectrometry
 Study Assay Measurement Type	metabolite profiling assay	metabolite profiling assay	metabolite profiling assay	metabolite profiling assay

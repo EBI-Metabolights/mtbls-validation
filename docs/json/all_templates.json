@@ -11729,8 +11729,8 @@
                         "defaultComments": [
                             "Study Factor Value Format",
                             "Study Factor Unit",
-                            "Study Factor Unit Term Source REF",
-                            "Study Factor Unit Term Accession Number"
+                            "Study Factor Unit Term Accession Number",
+                            "Study Factor Unit Term Source REF"
                         ],
                         "defaultFieldValues": {},
                         "defaultCommentValues": {}
@@ -12324,8 +12324,8 @@
                         "defaultComments": [
                             "Study Factor Value Format",
                             "Study Factor Unit",
-                            "Study Factor Unit Term Source REF",
-                            "Study Factor Unit Term Accession Number"
+                            "Study Factor Unit Term Accession Number",
+                            "Study Factor Unit Term Source REF"
                         ],
                         "defaultFieldValues": {},
                         "defaultCommentValues": {}
@@ -19571,7 +19571,7 @@
         "FBcv": {
             "sourceName": "FBcv",
             "sourceFile": "http://purl.obolibrary.org/obo/fbcv.owl",
-            "sourceVersion": "2025-10-17",
+            "sourceVersion": "2026-01-13",
             "sourceDescription": "FlyBase Controlled Vocabulary",
             "sourceDetails": "A structured controlled vocabulary used for various aspects of annotation by FlyBase."
         },
@@ -20033,7 +20033,7 @@
         "MRO": {
             "sourceName": "MRO",
             "sourceFile": "http://purl.obolibrary.org/obo/mro.owl",
-            "sourceVersion": "2025-10-29",
+            "sourceVersion": "2026-01-13",
             "sourceDescription": "MHC Restriction Ontology",
             "sourceDetails": "The MHC Restriction Ontology is an application ontology capturing how Major Histocompatibility Complex (MHC) restriction is defined in experiments, spanning exact protein complexes, individual protein chains, serotypes, haplotypes and mutant molecules, as well as evidence for MHC restrictions."
         },
@@ -20817,7 +20817,7 @@
         "VT": {
             "sourceName": "VT",
             "sourceFile": "http://purl.obolibrary.org/obo/vt.owl",
-            "sourceVersion": "2026-01-08",
+            "sourceVersion": "2026-01-13",
             "sourceDescription": "The Vertebrate Trait Ontology",
             "sourceDetails": "The Vertebrate Trait Ontology is a controlled vocabulary for the description of traits (measurable or observable characteristics) pertaining to the morphology, physiology, or development of vertebrate organisms."
         },
@@ -21565,14 +21565,16 @@
                 "0.1": {
                     "fileSchema": "https://metabolomicshub.github.io/mhd-model/schemas/v0_1/common-data-model-v0.1.schema.json",
                     "mhdFileProfile": "https://metabolomicshub.github.io/mhd-model/schemas/v0_1/common-data-model-v0.1.ms-profile.json",
-                    "announcementFileProfile": "https://metabolomicshub.github.io/mhd-model/schemas/v0_1/common-data-model-v0.1.ms-profile.json"
+                    "announcementFileSchema": "https://metabolomicshub.github.io/mhd-model/schemas/v0_1/announcement-v0.1.schema.json",
+                    "announcementFileProfile": "https://github.com/MetabolomicsHub/mhd-model/blob/main/docs/schemas/v0_1/announcement-v0.1.schema.ms-profile.json"
                 }
             },
             "legacy-profile": {
                 "0.1": {
                     "fileSchema": "https://metabolomicshub.github.io/mhd-model/schemas/v0_1/common-data-model-v0.1.schema.json",
                     "mhdFileProfile": "https://metabolomicshub.github.io/mhd-model/schemas/v0_1/common-data-model-v0.1.legacy-profile.json",
-                    "announcementFileProfile": "https://metabolomicshub.github.io/mhd-model/schemas/v0_1/common-data-model-v0.1.legacy-profile.json"
+                    "announcementFileSchema": "https://metabolomicshub.github.io/mhd-model/schemas/v0_1/announcement-v0.1.schema.json",
+                    "announcementFileProfile": "https://github.com/MetabolomicsHub/mhd-model/blob/main/docs/schemas/v0_1/announcement-v0.1.schema.legacy-profile.json"
                 }
             }
         },

@@ -565,6 +565,9 @@ class LicenseInfo(StudyBaseModel):
 class MhdProfileInfo(StudyBaseModel):
     file_schema: Annotated[str, Field(description="File schema URL")]
     mhd_file_profile: Annotated[str, Field(description="MHD file profile URL")] = ""
+    announcement_file_schema: Annotated[
+        str, Field(description="announcement file schema URL")
+    ] = ""
     announcement_file_profile: Annotated[
         str, Field(description="announcement file profile URL")
     ] = ""
