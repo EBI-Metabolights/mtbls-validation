@@ -588,7 +588,7 @@
                 "fileSchema": "https://metabolomicshub.github.io/mhd-model/schemas/v0_1/common-data-model-v0.1.schema.json",
                 "mhdFileProfile": "https://metabolomicshub.github.io/mhd-model/schemas/v0_1/common-data-model-v0.1.ms-profile.json",
                 "announcementFileSchema": "https://metabolomicshub.github.io/mhd-model/schemas/v0_1/announcement-v0.1.schema.json",
-                "announcementFileProfile": "https://github.com/MetabolomicsHub/mhd-model/blob/main/docs/schemas/v0_1/announcement-v0.1.schema.ms-profile.json"
+                "announcementFileProfile": "https://metabolomicshub.github.io/mhd-model/schemas/v0_1/announcement-v0.1.schema.ms-profile.json"
             }
         },
         "legacy-profile": {
@@ -596,7 +596,7 @@
                 "fileSchema": "https://metabolomicshub.github.io/mhd-model/schemas/v0_1/common-data-model-v0.1.schema.json",
                 "mhdFileProfile": "https://metabolomicshub.github.io/mhd-model/schemas/v0_1/common-data-model-v0.1.legacy-profile.json",
                 "announcementFileSchema": "https://metabolomicshub.github.io/mhd-model/schemas/v0_1/announcement-v0.1.schema.json",
-                "announcementFileProfile": "https://github.com/MetabolomicsHub/mhd-model/blob/main/docs/schemas/v0_1/announcement-v0.1.schema.legacy-profile.json"
+                "announcementFileProfile": "https://metabolomicshub.github.io/mhd-model/schemas/v0_1/announcement-v0.1.schema.legacy-profile.json"
             }
         }
     },
