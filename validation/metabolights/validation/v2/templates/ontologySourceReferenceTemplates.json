@@ -458,7 +458,7 @@
         "EFO": {
             "sourceName": "EFO",
             "sourceFile": "http://www.ebi.ac.uk/efo/efo.owl",
-            "sourceVersion": "3.85.0",
+            "sourceVersion": "3.86.0",
             "sourceDescription": "Experimental Factor Ontology",
             "sourceDetails": "The Experimental Factor Ontology (EFO) provides a systematic description of many experimental variables available in EBI databases, and for projects such as the NHGRI-EBI GWAS catalog. It combines parts of several biological ontologies, such as UBERON anatomy, ChEBI chemical compounds, Cell Ontology and the Monarch Disease Ontology (MONDO). The scope of EFO is to support the annotation, analysis and visualization of data handled by many groups at the EBI and as the core ontology for Open Targets."
         },
@@ -633,7 +633,7 @@
         "FYPO": {
             "sourceName": "FYPO",
             "sourceFile": "http://purl.obolibrary.org/obo/fypo.owl",
-            "sourceVersion": "2025-09-27",
+            "sourceVersion": "2026-01-16",
             "sourceDescription": "Fission Yeast Phenotype Ontology (FYPO)",
             "sourceDetails": "A formal ontology of phenotypes observed in fission yeast."
         },
@@ -899,7 +899,7 @@
         "MAXO": {
             "sourceName": "MAXO",
             "sourceFile": "http://purl.obolibrary.org/obo/maxo.owl",
-            "sourceVersion": "2025-04-24",
+            "sourceVersion": "2026-01-15",
             "sourceDescription": "Medical Action Ontology",
             "sourceDetails": "An ontology to represent medically relevant actions, procedures, therapies, interventions, and recommendations."
         },
@@ -1501,7 +1501,7 @@
         "RBO": {
             "sourceName": "RBO",
             "sourceFile": "http://purl.obolibrary.org/obo/rbo.owl",
-            "sourceVersion": "2025-12-11",
+            "sourceVersion": "2026-01-15",
             "sourceDescription": "Radiation Biology Ontology",
             "sourceDetails": "RBO is an ontology for the effects of radiation on biota in terrestrial and space environments."
         },
@@ -1781,7 +1781,7 @@
         "UO": {
             "sourceName": "UO",
             "sourceFile": "http://purl.obolibrary.org/obo/uo.owl",
-            "sourceVersion": "2026-01-09",
+            "sourceVersion": "2026-01-16",
             "sourceDescription": "Units of measurement ontology",
             "sourceDetails": "Metrical units for use in conjunction with PATO"
         },
