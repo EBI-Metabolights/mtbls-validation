@@ -1,0 +1,114 @@
+{
+    "Study Design Type": [
+        {
+            "ruleName": "Study Design Type-01",
+            "fieldName": "Study Design Type",
+            "ontologies": [
+                "EFO",
+                "MSIO",
+                "NCIT",
+                "MTBLS",
+                "CHEBI",
+                "CHMO",
+                "MONDO",
+                "PRIDE",
+                "GO",
+                "MESH"
+            ],
+            "allowedParentOntologyTerms": null,
+            "description": "",
+            "selectionCriteria": {
+                "isaFileType": "investigation",
+                "studyCreatedAtOrAfter": null,
+                "studyCreatedBefore": null,
+                "studyCategoryFilter": null,
+                "templateVersionFilter": null,
+                "isaFileTemplateNameFilter": null,
+                "linkedFieldAndValueFilter": null
+            },
+            "termEnforcementLevel": "recommended",
+            "unexpectedTermEnforcementLevel": "recommended",
+            "validationType": "any-ontology-term",
+            "constraints": {},
+            "defaultValue": null,
+            "allowedMissingOntologyTerms": [],
+            "allowedOtherSources": [
+                {
+                    "sourceLabel": "MTBLS",
+                    "accessionPrefix": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_"
+                },
+                {
+                    "sourceLabel": "wikidata",
+                    "accessionPrefix": "https://www.wikidata.org/wiki/"
+                },
+                {
+                    "sourceLabel": "ILX",
+                    "accessionPrefix": "http://uri.interlex.org/base/ilx_"
+                }
+            ],
+            "allowedPlaceholders": [
+                {
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/placeholder",
+                    "termSourceRef": "MTBLS"
+                },
+                {
+                    "termAccessionNumber": "",
+                    "termSourceRef": ""
+                }
+            ],
+            "terms": [
+                {
+                    "term": "targeted metabolite profiling",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/MSIO_0000100",
+                    "termSourceRef": "MSIO"
+                },
+                {
+                    "term": "untargeted metabolite profiling",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/MSIO_0000101",
+                    "termSourceRef": "MSIO"
+                },
+                {
+                    "term": "nuclear magnetic resonance spectroscopy",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/CHMO_0000591",
+                    "termSourceRef": "CHMO"
+                },
+                {
+                    "term": "ultra-performance liquid chromatography-mass spectrometry",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/CHMO_0000715",
+                    "termSourceRef": "CHMO"
+                },
+                {
+                    "term": "gas chromatography-mass spectrometry",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/CHMO_0000497",
+                    "termSourceRef": "CHMO"
+                },
+                {
+                    "term": "tandem mass spectrometry",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/CHMO_0000575",
+                    "termSourceRef": "CHMO"
+                },
+                {
+                    "term": "Multi-omics study",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/PRIDE_0000461",
+                    "termSourceRef": "PRIDE"
+                },
+                {
+                    "term": "microbiome",
+                    "termAccessionNumber": "http://www.ebi.ac.uk/efo/EFO_0004982",
+                    "termSourceRef": "EFO"
+                },
+                {
+                    "term": "Aging",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/NCIT_C16269",
+                    "termSourceRef": "NCIT"
+                },
+                {
+                    "term": "cancer",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/MONDO_0004992",
+                    "termSourceRef": "MONDO"
+                }
+            ],
+            "unexpectedTerms": []
+        }
+    ]
+}

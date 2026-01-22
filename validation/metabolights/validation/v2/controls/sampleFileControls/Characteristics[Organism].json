@@ -1,0 +1,247 @@
+{
+    "Characteristics[Organism]": [
+        {
+            "ruleName": "Characteristics[Organism]-01",
+            "fieldName": "Characteristics[Organism]",
+            "ontologies": [
+                "NCBITAXON",
+                "ENVO"
+            ],
+            "allowedParentOntologyTerms": null,
+            "description": "",
+            "selectionCriteria": {
+                "isaFileType": "sample",
+                "studyCreatedAtOrAfter": null,
+                "studyCreatedBefore": null,
+                "studyCategoryFilter": [
+                    "ms-mhd-enabled"
+                ],
+                "templateVersionFilter": null,
+                "isaFileTemplateNameFilter": null,
+                "linkedFieldAndValueFilter": [
+                    {
+                        "name": "Source Name",
+                        "value": null
+                    }
+                ]
+            },
+            "termEnforcementLevel": "required",
+            "unexpectedTermEnforcementLevel": "required",
+            "validationType": "ontology-term-in-selected-ontologies",
+            "constraints": {},
+            "defaultValue": null,
+            "allowedMissingOntologyTerms": [],
+            "allowedOtherSources": [
+                {
+                    "sourceLabel": "wikidata",
+                    "accessionPrefix": "https://www.wikidata.org/wiki/"
+                },
+                {
+                    "sourceLabel": "ILX",
+                    "accessionPrefix": "http://uri.interlex.org/base/ilx_"
+                }
+            ],
+            "allowedPlaceholders": [],
+            "terms": [
+                {
+                    "term": "Homo sapiens",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/NCBITaxon_9606",
+                    "termSourceRef": "NCBITaxon"
+                },
+                {
+                    "term": "Mus musculus",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/NCBITaxon_10090",
+                    "termSourceRef": "NCBITaxon"
+                },
+                {
+                    "term": "Rattus norvegicus",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/NCBITaxon_10116",
+                    "termSourceRef": "NCBITaxon"
+                },
+                {
+                    "term": "Arabidopsis thaliana",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/NCBITaxon_3702",
+                    "termSourceRef": "NCBITaxon"
+                },
+                {
+                    "term": "Vitis vinifera",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/NCBITaxon_29760",
+                    "termSourceRef": "NCBITaxon"
+                },
+                {
+                    "term": "Escherichia coli",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/NCBITaxon_562",
+                    "termSourceRef": "NCBITaxon"
+                },
+                {
+                    "term": "Trypanosoma brucei",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/NCBITaxon_5691",
+                    "termSourceRef": "NCBITaxon"
+                },
+                {
+                    "term": "sea water",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/ENVO_00002149",
+                    "termSourceRef": "ENVO"
+                }
+            ],
+            "unexpectedTerms": [
+                "cat",
+                "chicken",
+                "plant",
+                "sample",
+                "dog",
+                "mouse",
+                "horse",
+                "flower",
+                "fish",
+                "leave",
+                "root",
+                "mice",
+                "steam",
+                "bacteria",
+                "value",
+                "food",
+                "matrix",
+                "mus",
+                "rat",
+                "blood",
+                "urine",
+                "plasma",
+                "hair",
+                "fur",
+                "skin",
+                "saliva",
+                "fly",
+                "human",
+                "man",
+                "sheep"
+            ]
+        },
+        {
+            "ruleName": "Characteristics[Organism]-02",
+            "fieldName": "Characteristics[Organism]",
+            "ontologies": [
+                "NCBITAXON",
+                "ENVO",
+                "MTBLS",
+                "WoRMs",
+                "EFO",
+                "NCIT",
+                "MSIO"
+            ],
+            "allowedParentOntologyTerms": null,
+            "description": "",
+            "selectionCriteria": {
+                "isaFileType": "sample",
+                "studyCreatedAtOrAfter": null,
+                "studyCreatedBefore": null,
+                "studyCategoryFilter": null,
+                "templateVersionFilter": null,
+                "isaFileTemplateNameFilter": null,
+                "linkedFieldAndValueFilter": null
+            },
+            "termEnforcementLevel": "recommended",
+            "unexpectedTermEnforcementLevel": "required",
+            "validationType": "ontology-term-in-selected-ontologies",
+            "constraints": {},
+            "defaultValue": null,
+            "allowedMissingOntologyTerms": [],
+            "allowedOtherSources": [
+                {
+                    "sourceLabel": "MTBLS",
+                    "accessionPrefix": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_"
+                }
+            ],
+            "allowedPlaceholders": [
+                {
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/placeholder",
+                    "termSourceRef": "MTBLS"
+                }
+            ],
+            "terms": [
+                {
+                    "term": "Homo sapiens",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/NCBITaxon_9606",
+                    "termSourceRef": "NCBITaxon"
+                },
+                {
+                    "term": "Mus musculus",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/NCBITaxon_10090",
+                    "termSourceRef": "NCBITaxon"
+                },
+                {
+                    "term": "Rattus norvegicus",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/NCBITaxon_10116",
+                    "termSourceRef": "NCBITaxon"
+                },
+                {
+                    "term": "Arabidopsis thaliana",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/NCBITaxon_3702",
+                    "termSourceRef": "NCBITaxon"
+                },
+                {
+                    "term": "Vitis vinifera",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/NCBITaxon_29760",
+                    "termSourceRef": "NCBITaxon"
+                },
+                {
+                    "term": "Escherichia coli",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/NCBITaxon_562",
+                    "termSourceRef": "NCBITaxon"
+                },
+                {
+                    "term": "Trypanosoma brucei",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/NCBITaxon_5691",
+                    "termSourceRef": "NCBITaxon"
+                },
+                {
+                    "term": "sea water",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/ENVO_00002149",
+                    "termSourceRef": "ENVO"
+                },
+                {
+                    "term": "blank",
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002304",
+                    "termSourceRef": "MTBLS"
+                },
+                {
+                    "term": "reference compound",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/MSIO_0000023",
+                    "termSourceRef": "MSIO"
+                }
+            ],
+            "unexpectedTerms": [
+                "cat",
+                "chicken",
+                "plant",
+                "sample",
+                "dog",
+                "mouse",
+                "horse",
+                "flower",
+                "fish",
+                "leave",
+                "root",
+                "mice",
+                "steam",
+                "bacteria",
+                "value",
+                "food",
+                "matrix",
+                "mus",
+                "rat",
+                "blood",
+                "urine",
+                "plasma",
+                "hair",
+                "fur",
+                "skin",
+                "saliva",
+                "fly",
+                "human",
+                "man",
+                "sheep"
+            ]
+        }
+    ]
+}

@@ -1,0 +1,67 @@
+{
+    "Unit": [
+        {
+            "ruleName": "Unit-01",
+            "fieldName": "Unit",
+            "ontologies": [],
+            "allowedParentOntologyTerms": {
+                "excludeByLabelPattern": [
+                    "^.*unit$",
+                    "^.*Unit of.*$"
+                ],
+                "excludeByAccession": [],
+                "parents": [
+                    {
+                        "term": "unit",
+                        "termAccessionNumber": "http://purl.obolibrary.org/obo/UO_0000000",
+                        "termSourceRef": "UO"
+                    },
+                    {
+                        "term": "unit",
+                        "termAccessionNumber": "http://purl.obolibrary.org/obo/UO_0000000",
+                        "termSourceRef": "EFO"
+                    },
+                    {
+                        "term": "Qualifier",
+                        "termAccessionNumber": "http://purl.obolibrary.org/obo/NCIT_C41009",
+                        "termSourceRef": "NCIT"
+                    },
+                    {
+                        "term": "Unit of Measure",
+                        "termAccessionNumber": "http://purl.obolibrary.org/obo/NCIT_C25709",
+                        "termSourceRef": "NCIT"
+                    }
+                ]
+            },
+            "description": "",
+            "selectionCriteria": {
+                "isaFileType": "sample",
+                "studyCreatedAtOrAfter": null,
+                "studyCreatedBefore": null,
+                "studyCategoryFilter": null,
+                "templateVersionFilter": null,
+                "isaFileTemplateNameFilter": null,
+                "linkedFieldAndValueFilter": null
+            },
+            "termEnforcementLevel": "recommended",
+            "unexpectedTermEnforcementLevel": "recommended",
+            "validationType": "child-ontology-term",
+            "constraints": {},
+            "defaultValue": null,
+            "allowedMissingOntologyTerms": [],
+            "allowedOtherSources": [
+                {
+                    "sourceLabel": "wikidata",
+                    "accessionPrefix": "https://www.wikidata.org/wiki/"
+                },
+                {
+                    "sourceLabel": "ILX",
+                    "accessionPrefix": "http://uri.interlex.org/base/ilx_"
+                }
+            ],
+            "allowedPlaceholders": [],
+            "terms": [],
+            "unexpectedTerms": []
+        }
+    ]
+}

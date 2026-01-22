@@ -1,0 +1,112 @@
+{
+    "Study Protocol Type": [
+        {
+            "ruleName": "Study Protocol Type-01",
+            "fieldName": "Study Protocol Type",
+            "ontologies": [
+                "EFO",
+                "NCIT",
+                "MTBLS",
+                "CHEBI",
+                "CHMO",
+                "MONDO",
+                "PRIDE",
+                "GO",
+                "MESH",
+                "MI",
+                "MS"
+            ],
+            "allowedParentOntologyTerms": null,
+            "description": "",
+            "selectionCriteria": {
+                "isaFileType": "investigation",
+                "studyCreatedAtOrAfter": null,
+                "studyCreatedBefore": null,
+                "studyCategoryFilter": null,
+                "templateVersionFilter": null,
+                "isaFileTemplateNameFilter": null,
+                "linkedFieldAndValueFilter": null
+            },
+            "termEnforcementLevel": "recommended",
+            "unexpectedTermEnforcementLevel": "recommended",
+            "validationType": "ontology-term-in-selected-ontologies",
+            "constraints": {},
+            "defaultValue": null,
+            "allowedMissingOntologyTerms": [],
+            "allowedOtherSources": [
+                {
+                    "sourceLabel": "MTBLS",
+                    "accessionPrefix": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_"
+                }
+            ],
+            "allowedPlaceholders": [
+                {
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/placeholder",
+                    "termSourceRef": "MTBLS"
+                },
+                {
+                    "termAccessionNumber": "",
+                    "termSourceRef": ""
+                }
+            ],
+            "terms": [
+                {
+                    "term": "sample collection protocol",
+                    "termAccessionNumber": "http://www.ebi.ac.uk/efo/EFO_0005518",
+                    "termSourceRef": "EFO"
+                },
+                {
+                    "term": "sample preparation",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/MS_1000831",
+                    "termSourceRef": "MS"
+                },
+                {
+                    "term": "chromatography",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/CHMO_0001000",
+                    "termSourceRef": "CHMO"
+                },
+                {
+                    "term": "mass spectrometry",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/CHMO_0000470",
+                    "termSourceRef": "CHMO"
+                },
+                {
+                    "term": "data transformation",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/OBI_0200000",
+                    "termSourceRef": "OBI"
+                },
+                {
+                    "term": "metabolite identification",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/MI_2131",
+                    "termSourceRef": "MI"
+                },
+                {
+                    "term": "capillary electrophoresis",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/CHMO_0001024",
+                    "termSourceRef": "CHMO"
+                },
+                {
+                    "term": "flow injection analysis",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/MS_1000058",
+                    "termSourceRef": "MS"
+                },
+                {
+                    "term": "NMR sample",
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_001110",
+                    "termSourceRef": "MTBLS"
+                },
+                {
+                    "term": "NMR spectroscopy",
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_001111",
+                    "termSourceRef": "MTBLS"
+                },
+                {
+                    "term": "NMR assay",
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_001112",
+                    "termSourceRef": "MTBLS"
+                }
+            ],
+            "unexpectedTerms": []
+        }
+    ]
+}

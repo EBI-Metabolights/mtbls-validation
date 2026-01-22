@@ -1,0 +1,394 @@
+{
+    "Parameter Value[Guard column]": [
+        {
+            "ruleName": "Parameter Value[Guard column]-01",
+            "fieldName": "Parameter Value[Guard column]",
+            "ontologies": [
+                "MS",
+                "MTBLS"
+            ],
+            "allowedParentOntologyTerms": null,
+            "description": "",
+            "selectionCriteria": {
+                "isaFileType": "assay",
+                "studyCreatedAtOrAfter": null,
+                "studyCreatedBefore": null,
+                "studyCategoryFilter": null,
+                "templateVersionFilter": null,
+                "isaFileTemplateNameFilter": [
+                    "LC-MS"
+                ],
+                "linkedFieldAndValueFilter": [
+                    {
+                        "name": "Protocol REF",
+                        "value": "Chromatography"
+                    }
+                ]
+            },
+            "termEnforcementLevel": "recommended",
+            "unexpectedTermEnforcementLevel": "recommended",
+            "validationType": "any-ontology-term",
+            "constraints": {},
+            "defaultValue": null,
+            "allowedMissingOntologyTerms": [],
+            "allowedOtherSources": [
+                {
+                    "sourceLabel": "MTBLS",
+                    "accessionPrefix": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_"
+                },
+                {
+                    "sourceLabel": "wikidata",
+                    "accessionPrefix": "https://www.wikidata.org/wiki/"
+                },
+                {
+                    "sourceLabel": "ILX",
+                    "accessionPrefix": "http://uri.interlex.org/base/ilx_"
+                }
+            ],
+            "allowedPlaceholders": [
+                {
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/placeholder",
+                    "termSourceRef": "MTBLS"
+                }
+            ],
+            "terms": [
+                {
+                    "term": "2 \u00b5l C4 trap column (Optimize Technologies)",
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000592",
+                    "termSourceRef": "MTBLS"
+                },
+                {
+                    "term": "Acclaim C18 Guard Column (4 mm x 4 mm; Thermo Scientific)",
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000569",
+                    "termSourceRef": "MTBLS"
+                },
+                {
+                    "term": "Acclaim PepMap C18 100 \u00c5 Pre-column (5 \u00b5m; Thermo Scientific)",
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002043",
+                    "termSourceRef": "MTBLS"
+                },
+                {
+                    "term": "Acclaim PepMap C18 100 \u00c5 Trap column (5 \u03bcm, 0.3 mm x 5 mm; Thermo Scientific)",
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002044",
+                    "termSourceRef": "MTBLS"
+                },
+                {
+                    "term": "Accucore 150-C18 Defender Guard Cartridge (2.6 \u00b5m, 2.1 mm x 10 mm; Thermo Scientific)",
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002049",
+                    "termSourceRef": "MTBLS"
+                },
+                {
+                    "term": "ACQUITY Column In-Line Filter (0.2 \u00b5m, 2.1 mm; Waters)",
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002056",
+                    "termSourceRef": "MTBLS"
+                },
+                {
+                    "term": "ACQUITY UPLC BEH Amide VanGuard Pre-column (1.7 \u00b5m, 2.1 mm x 5 mm; Waters)",
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002060",
+                    "termSourceRef": "MTBLS"
+                },
+                {
+                    "term": "ACQUITY UPLC BEH C18 VanGuard Pre-column (1.7 \u00b5m, 2.1 mm x 5 mm; Waters)",
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000570",
+                    "termSourceRef": "MTBLS"
+                },
+                {
+                    "term": "ACQUITY UPLC BEH Phenyl VanGuard Pre-column, 130\u00c5 (1.7 \u00b5m, 2.1 mm x 5 mm; Waters)",
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000571",
+                    "termSourceRef": "MTBLS"
+                },
+                {
+                    "term": "ACQUITY UPLC CSH C18 VanGuard Pre-column (1.7 \u00b5m, 2.1 mm x 5 mm; Waters)",
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002073",
+                    "termSourceRef": "MTBLS"
+                },
+                {
+                    "term": "ACQUITY UPLC HSS Cyano (CN) VanGuard Pre-column (1.8 \u00b5m, 2.1 mm x 5 mm; Waters)",
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000572",
+                    "termSourceRef": "MTBLS"
+                },
+                {
+                    "term": "ACQUITY UPLC HSS PFP VanGuard Pre-column (1.8 \u00b5m, 2.1 mm x 5 mm; Waters)",
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002076",
+                    "termSourceRef": "MTBLS"
+                },
+                {
+                    "term": "ACQUITY UPLC HSS T3 VanGuard Pre-column (1.8 \u00b5m, 2.1 mm x 5 mm; Waters)",
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000573",
+                    "termSourceRef": "MTBLS"
+                },
+                {
+                    "term": "Alltima HP-Guard C18 (2.1 x 7.5 mm; Alltech)",
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000574",
+                    "termSourceRef": "MTBLS"
+                },
+                {
+                    "term": "Ascentis Express C18 Guard Cartridge (2.7 \u00b5m, 2.1 mm x 5 mm; Supelco)",
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002103",
+                    "termSourceRef": "MTBLS"
+                },
+                {
+                    "term": "Ascentis Express F5 (2.7 \u00b5m, 0.5 cm x 2.1 mm; Merck)",
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002104",
+                    "termSourceRef": "MTBLS"
+                },
+                {
+                    "term": "BETASIL Diol Guard Cartridge (5 \u00b5m, 2.1 mm x 10 mm; Thermo Scientific)",
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000575",
+                    "termSourceRef": "MTBLS"
+                },
+                {
+                    "term": "CORTECS C18 VanGuard Pre-column (1.6 \u00b5m, 2.1 mm x 5 mm; Waters)",
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002125",
+                    "termSourceRef": "MTBLS"
+                },
+                {
+                    "term": "CORTECS Solid Core T3 VanGuard Pre-column 120\u00c5 (1.6 \u00b5m, 2.1 mm x 5 mm; Waters)",
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002127",
+                    "termSourceRef": "MTBLS"
+                },
+                {
+                    "term": "Dionex IonPac AG11-HC guard column (4 \u03bcm, 2 mm x 50 mm; Thermo Scientific)",
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002141",
+                    "termSourceRef": "MTBLS"
+                },
+                {
+                    "term": "Discovery HS C18 Supelguard (3 \u00b5m, 2.1 mm x 20 mm; Supelco)",
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000576",
+                    "termSourceRef": "MTBLS"
+                },
+                {
+                    "term": "Discovery HS F5 Supelguard (5 \u00b5m, 2.1 mm x 20 mm; Supelco)",
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002145",
+                    "termSourceRef": "MTBLS"
+                },
+                {
+                    "term": "Guard Cartridge (4.6 mm x 20 mm; YMC)",
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000577",
+                    "termSourceRef": "MTBLS"
+                },
+                {
+                    "term": "Hypersil GOLD C18 Guard (3 \u00b5m, 2.1 mm x 10 mm; Thermo Scientific)",
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000578",
+                    "termSourceRef": "MTBLS"
+                },
+                {
+                    "term": "iHILIC-(P) Classic Guard Column (5 \u00b5m, 2.1 mm x 20 mm; Hilicon)",
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002160",
+                    "termSourceRef": "MTBLS"
+                },
+                {
+                    "term": "KrudKatcher Ultra (Phenomenex)",
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000579",
+                    "termSourceRef": "MTBLS"
+                },
+                {
+                    "term": "Mightysil RP-18GP (5 \u00b5m, 2 mm x 5 mm; Kanto Chemical)",
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002184",
+                    "termSourceRef": "MTBLS"
+                },
+                {
+                    "term": "NUCLEODUR C18 Gravity Guard pre-column (1.8 \u00b5m, 2 mm x 4 mm; Macherey-Nagel)",
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002187",
+                    "termSourceRef": "MTBLS"
+                },
+                {
+                    "term": "NUCLEODUR HILIC Guard pre-column (1.8 \u00b5m, 2 mm x 4 mm; Macherey-Nagel)",
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000580",
+                    "termSourceRef": "MTBLS"
+                },
+                {
+                    "term": "ODP2 HPG-4A (5 \u00b5m, 4.6 mm x 10 mm; Shodex)",
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002191",
+                    "termSourceRef": "MTBLS"
+                },
+                {
+                    "term": "Online prefilter (Interchim)",
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000581",
+                    "termSourceRef": "MTBLS"
+                },
+                {
+                    "term": "Poroshell 120 EC-C18 guard column (2.7 \u00b5m, 2.1 mm x 5 mm; Agilent Technologies)",
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002194",
+                    "termSourceRef": "MTBLS"
+                },
+                {
+                    "term": "SecurityGuard C18 (2 mm x 4 mm; Phenomenex)",
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000582",
+                    "termSourceRef": "MTBLS"
+                },
+                {
+                    "term": "SecurityGuard C18 (3 mm x 4 mm; Phenomenex)",
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000583",
+                    "termSourceRef": "MTBLS"
+                },
+                {
+                    "term": "SecurityGuard NH2 (2 mm x 4 mm; Phenomenex)",
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000584",
+                    "termSourceRef": "MTBLS"
+                },
+                {
+                    "term": "SecurityGuard NX-C18 (2 mm x 4 mm; Phenomenex)",
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000585",
+                    "termSourceRef": "MTBLS"
+                },
+                {
+                    "term": "SecurityGuard ULTRA C18 (2.1 mm x 2 mm; Phenomenex)",
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000586",
+                    "termSourceRef": "MTBLS"
+                },
+                {
+                    "term": "SecurityGuard ULTRA EVO C18 (2.1 mm x 5 mm; Phenomenex)",
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002208",
+                    "termSourceRef": "MTBLS"
+                },
+                {
+                    "term": "SecurityGuard ULTRA EVO C18 (sub-2 \u03bcm, 2.1 mm x 2 mm; Phenomenex)",
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002209",
+                    "termSourceRef": "MTBLS"
+                },
+                {
+                    "term": "Supelco Precolumn Filter (Merck Sequant)",
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000587",
+                    "termSourceRef": "MTBLS"
+                },
+                {
+                    "term": "TSKgel ODS-100V Guard Cartridge (5 \u00b5m, 2 mm x 10 mm; Tosoh Bioscience)",
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000588",
+                    "termSourceRef": "MTBLS"
+                },
+                {
+                    "term": "XBridge BEH Amide VanGuard Cartridge (3.5 \u00b5m, 2.1 mm x 5 mm; Waters)",
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002268",
+                    "termSourceRef": "MTBLS"
+                },
+                {
+                    "term": "XBridge BEH C18 Sentry Guard Cartridge (3.5 \u00b5m, 2.1 mm x 10 mm; Waters)",
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000589",
+                    "termSourceRef": "MTBLS"
+                },
+                {
+                    "term": "ZIC-HILIC Guard (3.5 \u00b5m, 2.1 mm x 20 mm; Merck Sequant)",
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000590",
+                    "termSourceRef": "MTBLS"
+                },
+                {
+                    "term": "ZIC-pHILIC Guard (5 \u00b5m, 2.1 mm x 20 mm; Merck Sequant)",
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000591",
+                    "termSourceRef": "MTBLS"
+                },
+                {
+                    "term": "ZIC-pHILIC Guard (5 \u00b5m, 2.1 mm x 20 mm; Millipore)",
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002284",
+                    "termSourceRef": "MTBLS"
+                },
+                {
+                    "term": "ZORBAX SB-C8 (3.5 \u03bcm, 2.1 mm x 30 mm; Agilent Technologies)",
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002297",
+                    "termSourceRef": "MTBLS"
+                }
+            ],
+            "unexpectedTerms": []
+        },
+        {
+            "ruleName": "Parameter Value[Guard column]-02",
+            "fieldName": "Parameter Value[Guard column]",
+            "ontologies": [
+                "MS",
+                "MTBLS"
+            ],
+            "allowedParentOntologyTerms": null,
+            "description": "",
+            "selectionCriteria": {
+                "isaFileType": "assay",
+                "studyCreatedAtOrAfter": null,
+                "studyCreatedBefore": null,
+                "studyCategoryFilter": null,
+                "templateVersionFilter": null,
+                "isaFileTemplateNameFilter": [
+                    "GC-MS"
+                ],
+                "linkedFieldAndValueFilter": null
+            },
+            "termEnforcementLevel": "recommended",
+            "unexpectedTermEnforcementLevel": "recommended",
+            "validationType": "any-ontology-term",
+            "constraints": {},
+            "defaultValue": null,
+            "allowedMissingOntologyTerms": [],
+            "allowedOtherSources": [
+                {
+                    "sourceLabel": "MTBLS",
+                    "accessionPrefix": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_"
+                },
+                {
+                    "sourceLabel": "wikidata",
+                    "accessionPrefix": "https://www.wikidata.org/wiki/"
+                },
+                {
+                    "sourceLabel": "ILX",
+                    "accessionPrefix": "http://uri.interlex.org/base/ilx_"
+                }
+            ],
+            "allowedPlaceholders": [
+                {
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/placeholder",
+                    "termSourceRef": "MTBLS"
+                }
+            ],
+            "terms": [
+                {
+                    "term": "10 m DuraGuard (Agilent Technologies)",
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_001056",
+                    "termSourceRef": "MTBLS"
+                },
+                {
+                    "term": "10 m EZGuard (Agilent Technologies)",
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_001061",
+                    "termSourceRef": "MTBLS"
+                },
+                {
+                    "term": "10 m EZGuard (Varian)",
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_001057",
+                    "termSourceRef": "MTBLS"
+                },
+                {
+                    "term": "10 m Integra-Guard (Restek)",
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_001060",
+                    "termSourceRef": "MTBLS"
+                },
+                {
+                    "term": "5 m DuraGuard (Agilent Technologies)",
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_001062",
+                    "termSourceRef": "MTBLS"
+                },
+                {
+                    "term": "5 m Integra-Guard (Restek)",
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_001059",
+                    "termSourceRef": "MTBLS"
+                },
+                {
+                    "term": "deactivated fused silica retention gap (0.53 mm x 1.7 m; Agilent Technologies)",
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002139",
+                    "termSourceRef": "MTBLS"
+                },
+                {
+                    "term": "diphenyltetramethyldisilazane deactivated retention gap (0.53 mm x 3 m)",
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_001058",
+                    "termSourceRef": "MTBLS"
+                },
+                {
+                    "term": "methyl deactivated retention gap (0.53 mm x 1.5 m)",
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_001055",
+                    "termSourceRef": "MTBLS"
+                },
+                {
+                    "term": "Z-Guard (0.25 mm x 10 m; Zebron)",
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002275",
+                    "termSourceRef": "MTBLS"
+                }
+            ],
+            "unexpectedTerms": []
+        }
+    ]
+}

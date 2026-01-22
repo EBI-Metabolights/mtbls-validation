@@ -1,0 +1,192 @@
+{
+    "Characteristics[Organism part]": [
+        {
+            "ruleName": "Characteristics[Organism part]-01",
+            "fieldName": "Characteristics[Organism part]",
+            "ontologies": [
+                "UBERON",
+                "BTO",
+                "NCIT",
+                "MSIO"
+            ],
+            "allowedParentOntologyTerms": null,
+            "description": "",
+            "selectionCriteria": {
+                "isaFileType": "sample",
+                "studyCreatedAtOrAfter": null,
+                "studyCreatedBefore": null,
+                "studyCategoryFilter": [
+                    "ms-mhd-enabled"
+                ],
+                "templateVersionFilter": null,
+                "isaFileTemplateNameFilter": null,
+                "linkedFieldAndValueFilter": [
+                    {
+                        "name": "Source Name",
+                        "value": null
+                    }
+                ]
+            },
+            "termEnforcementLevel": "required",
+            "unexpectedTermEnforcementLevel": "required",
+            "validationType": "ontology-term-in-selected-ontologies",
+            "constraints": {},
+            "defaultValue": null,
+            "allowedMissingOntologyTerms": [],
+            "allowedOtherSources": [
+                {
+                    "sourceLabel": "wikidata",
+                    "accessionPrefix": "https://www.wikidata.org/wiki/"
+                },
+                {
+                    "sourceLabel": "ILX",
+                    "accessionPrefix": "http://uri.interlex.org/base/ilx_"
+                }
+            ],
+            "allowedPlaceholders": [],
+            "terms": [
+                {
+                    "term": "blood plasma",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/BTO_0000131",
+                    "termSourceRef": "BTO"
+                },
+                {
+                    "term": "blood serum",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/BTO_0000133",
+                    "termSourceRef": "BTO"
+                },
+                {
+                    "term": "urine",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/BTO_0001419",
+                    "termSourceRef": "BTO"
+                },
+                {
+                    "term": "feces",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/BTO_0000440",
+                    "termSourceRef": "BTO"
+                },
+                {
+                    "term": "leaf",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/BTO_0000713",
+                    "termSourceRef": "BTO"
+                },
+                {
+                    "term": "exocarp",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/BTO_0000733",
+                    "termSourceRef": "BTO"
+                },
+                {
+                    "term": "Whole Organism",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/NCIT_C13413",
+                    "termSourceRef": "NCIT"
+                },
+                {
+                    "term": "exometabolome",
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000131",
+                    "termSourceRef": "MTBLS"
+                },
+                {
+                    "term": "endometabolome",
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000125",
+                    "termSourceRef": "MTBLS"
+                },
+                {
+                    "term": "blank",
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002304",
+                    "termSourceRef": "MTBLS"
+                }
+            ],
+            "unexpectedTerms": []
+        },
+        {
+            "ruleName": "Characteristics[Organism part]-02",
+            "fieldName": "Characteristics[Organism part]",
+            "ontologies": [
+                "BTO",
+                "NCIT",
+                "MTBLS",
+                "EFO",
+                "PO",
+                "ENVO",
+                "CHEBI"
+            ],
+            "allowedParentOntologyTerms": null,
+            "description": "",
+            "selectionCriteria": {
+                "isaFileType": "sample",
+                "studyCreatedAtOrAfter": null,
+                "studyCreatedBefore": null,
+                "studyCategoryFilter": null,
+                "templateVersionFilter": null,
+                "isaFileTemplateNameFilter": null,
+                "linkedFieldAndValueFilter": null
+            },
+            "termEnforcementLevel": "recommended",
+            "unexpectedTermEnforcementLevel": "recommended",
+            "validationType": "ontology-term-in-selected-ontologies",
+            "constraints": {},
+            "defaultValue": null,
+            "allowedMissingOntologyTerms": [],
+            "allowedOtherSources": [],
+            "allowedPlaceholders": [
+                {
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/placeholder",
+                    "termSourceRef": "MTBLS"
+                }
+            ],
+            "terms": [
+                {
+                    "term": "blood plasma",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/BTO_0000131",
+                    "termSourceRef": "BTO"
+                },
+                {
+                    "term": "blood serum",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/BTO_0000133",
+                    "termSourceRef": "BTO"
+                },
+                {
+                    "term": "urine",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/BTO_0001419",
+                    "termSourceRef": "BTO"
+                },
+                {
+                    "term": "feces",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/BTO_0000440",
+                    "termSourceRef": "BTO"
+                },
+                {
+                    "term": "leaf",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/BTO_0000713",
+                    "termSourceRef": "BTO"
+                },
+                {
+                    "term": "exocarp",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/BTO_0000733",
+                    "termSourceRef": "BTO"
+                },
+                {
+                    "term": "Whole Organism",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/NCIT_C13413",
+                    "termSourceRef": "NCIT"
+                },
+                {
+                    "term": "exometabolome",
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000131",
+                    "termSourceRef": "MTBLS"
+                },
+                {
+                    "term": "endometabolome",
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000125",
+                    "termSourceRef": "MTBLS"
+                },
+                {
+                    "term": "blank",
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002304",
+                    "termSourceRef": "MTBLS"
+                }
+            ],
+            "unexpectedTerms": []
+        }
+    ]
+}

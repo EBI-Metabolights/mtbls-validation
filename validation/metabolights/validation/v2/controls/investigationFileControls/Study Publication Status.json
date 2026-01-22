@@ -1,0 +1,116 @@
+{
+    "Study Publication Status": [
+        {
+            "ruleName": "Study Publication Status-01",
+            "fieldName": "Study Publication Status",
+            "ontologies": [],
+            "allowedParentOntologyTerms": null,
+            "description": "",
+            "selectionCriteria": {
+                "isaFileType": "investigation",
+                "studyCreatedAtOrAfter": "2026-01-01T00:00:00",
+                "studyCreatedBefore": null,
+                "studyCategoryFilter": null,
+                "templateVersionFilter": null,
+                "isaFileTemplateNameFilter": null,
+                "linkedFieldAndValueFilter": null
+            },
+            "termEnforcementLevel": "required",
+            "unexpectedTermEnforcementLevel": "required",
+            "validationType": "selected-ontology-term",
+            "constraints": {},
+            "defaultValue": null,
+            "allowedMissingOntologyTerms": [],
+            "allowedOtherSources": [],
+            "allowedPlaceholders": [],
+            "terms": [
+                {
+                    "term": "published",
+                    "termAccessionNumber": "http://www.ebi.ac.uk/efo/EFO_0001796",
+                    "termSourceRef": "EFO"
+                },
+                {
+                    "term": "submitted",
+                    "termAccessionNumber": "http://www.ebi.ac.uk/efo/EFO_0001794",
+                    "termSourceRef": "EFO"
+                },
+                {
+                    "term": "in preparation",
+                    "termAccessionNumber": "http://www.ebi.ac.uk/efo/EFO_0001795",
+                    "termSourceRef": "EFO"
+                },
+                {
+                    "term": "preprint",
+                    "termAccessionNumber": "http://www.ebi.ac.uk/efo/EFO_0010558",
+                    "termSourceRef": "EFO"
+                },
+                {
+                    "term": "Learning material",
+                    "termAccessionNumber": "http://edamontology.org/data_3669",
+                    "termSourceRef": "EDAM"
+                }
+            ],
+            "unexpectedTerms": []
+        },
+        {
+            "ruleName": "Study Publication Status-02",
+            "fieldName": "Study Publication Status",
+            "ontologies": [
+                "EFO",
+                "EDAM"
+            ],
+            "allowedParentOntologyTerms": null,
+            "description": "",
+            "selectionCriteria": {
+                "isaFileType": "investigation",
+                "studyCreatedAtOrAfter": null,
+                "studyCreatedBefore": "2026-01-01T00:00:00",
+                "studyCategoryFilter": null,
+                "templateVersionFilter": null,
+                "isaFileTemplateNameFilter": null,
+                "linkedFieldAndValueFilter": null
+            },
+            "termEnforcementLevel": "required",
+            "unexpectedTermEnforcementLevel": "required",
+            "validationType": "ontology-term-in-selected-ontologies",
+            "constraints": {},
+            "defaultValue": null,
+            "allowedMissingOntologyTerms": [],
+            "allowedOtherSources": [],
+            "allowedPlaceholders": [
+                {
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/placeholder",
+                    "termSourceRef": "MTBLS"
+                }
+            ],
+            "terms": [
+                {
+                    "term": "published",
+                    "termAccessionNumber": "http://www.ebi.ac.uk/efo/EFO_0001796",
+                    "termSourceRef": "EFO"
+                },
+                {
+                    "term": "submitted",
+                    "termAccessionNumber": "http://www.ebi.ac.uk/efo/EFO_0001794",
+                    "termSourceRef": "EFO"
+                },
+                {
+                    "term": "in preparation",
+                    "termAccessionNumber": "http://www.ebi.ac.uk/efo/EFO_0001795",
+                    "termSourceRef": "EFO"
+                },
+                {
+                    "term": "preprint",
+                    "termAccessionNumber": "http://www.ebi.ac.uk/efo/EFO_0010558",
+                    "termSourceRef": "EFO"
+                },
+                {
+                    "term": "Learning material",
+                    "termAccessionNumber": "http://edamontology.org/data_3669",
+                    "termSourceRef": "EDAM"
+                }
+            ],
+            "unexpectedTerms": []
+        }
+    ]
+}

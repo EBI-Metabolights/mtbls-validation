@@ -1,0 +1,111 @@
+{
+    "Parameter Value[Mass analyzer]": [
+        {
+            "ruleName": "Parameter Value[Mass analyzer]-01",
+            "fieldName": "Parameter Value[Mass analyzer]",
+            "ontologies": [
+                "MS"
+            ],
+            "allowedParentOntologyTerms": null,
+            "description": "",
+            "selectionCriteria": {
+                "isaFileType": "assay",
+                "studyCreatedAtOrAfter": null,
+                "studyCreatedBefore": null,
+                "studyCategoryFilter": null,
+                "templateVersionFilter": null,
+                "isaFileTemplateNameFilter": null,
+                "linkedFieldAndValueFilter": [
+                    {
+                        "name": "Protocol REF",
+                        "value": "Mass spectrometry"
+                    }
+                ]
+            },
+            "termEnforcementLevel": "recommended",
+            "unexpectedTermEnforcementLevel": "recommended",
+            "validationType": "any-ontology-term",
+            "constraints": {},
+            "defaultValue": null,
+            "allowedMissingOntologyTerms": [],
+            "allowedOtherSources": [
+                {
+                    "sourceLabel": "MTBLS",
+                    "accessionPrefix": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_"
+                },
+                {
+                    "sourceLabel": "wikidata",
+                    "accessionPrefix": "https://www.wikidata.org/wiki/"
+                },
+                {
+                    "sourceLabel": "ILX",
+                    "accessionPrefix": "http://uri.interlex.org/base/ilx_"
+                }
+            ],
+            "allowedPlaceholders": [
+                {
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/placeholder",
+                    "termSourceRef": "MTBLS"
+                }
+            ],
+            "terms": [
+                {
+                    "term": "orbitrap",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/MS_1000484",
+                    "termSourceRef": "MS"
+                },
+                {
+                    "term": "triple quadrupole",
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000698",
+                    "termSourceRef": "MTBLS"
+                },
+                {
+                    "term": "quadrupole time-of-flight",
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000699",
+                    "termSourceRef": "MTBLS"
+                },
+                {
+                    "term": "time-of-flight",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/MS_1000084",
+                    "termSourceRef": "MS"
+                },
+                {
+                    "term": "hybrid triple quadrupole-linear ion trap",
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000695",
+                    "termSourceRef": "MTBLS"
+                },
+                {
+                    "term": "ion cyclotron resonance cell",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/CHMO_0000964",
+                    "termSourceRef": "CHMO"
+                },
+                {
+                    "term": "ion trap",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/MS_1000264",
+                    "termSourceRef": "MS"
+                },
+                {
+                    "term": "ion trap time-of-flight",
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000700",
+                    "termSourceRef": "MTBLS"
+                },
+                {
+                    "term": "linear quadrupole ion trap mass-to-charge analyser",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/CHMO_0000969",
+                    "termSourceRef": "CHMO"
+                },
+                {
+                    "term": "quadrupole",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/MS_1000081",
+                    "termSourceRef": "MS"
+                },
+                {
+                    "term": "quadrupole ion trap",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/MS_1000082",
+                    "termSourceRef": "MS"
+                }
+            ],
+            "unexpectedTerms": []
+        }
+    ]
+}

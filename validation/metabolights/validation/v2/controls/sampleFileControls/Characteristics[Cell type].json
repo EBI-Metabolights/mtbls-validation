@@ -1,0 +1,111 @@
+{
+    "Characteristics[Cell type]": [
+        {
+            "ruleName": "Characteristics[Cell type]-01",
+            "fieldName": "Characteristics[Cell type]",
+            "ontologies": [
+                "CL",
+                "CLO"
+            ],
+            "allowedParentOntologyTerms": null,
+            "description": "",
+            "selectionCriteria": {
+                "isaFileType": "sample",
+                "studyCreatedAtOrAfter": null,
+                "studyCreatedBefore": null,
+                "studyCategoryFilter": [
+                    "ms-mhd-enabled"
+                ],
+                "templateVersionFilter": null,
+                "isaFileTemplateNameFilter": null,
+                "linkedFieldAndValueFilter": [
+                    {
+                        "name": "Source Name",
+                        "value": null
+                    },
+                    {
+                        "name": "Sample Name",
+                        "value": null
+                    }
+                ]
+            },
+            "termEnforcementLevel": "required",
+            "unexpectedTermEnforcementLevel": "required",
+            "validationType": "ontology-term-in-selected-ontologies",
+            "constraints": {},
+            "defaultValue": {
+                "term": "Not Applicable",
+                "termAccessionNumber": "http://purl.obolibrary.org/obo/NCIT_C48660",
+                "termSourceRef": "NCIT"
+            },
+            "allowedMissingOntologyTerms": [
+                {
+                    "term": "Not Applicable",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/NCIT_C48660",
+                    "termSourceRef": "NCIT"
+                }
+            ],
+            "allowedOtherSources": [
+                {
+                    "sourceLabel": "wikidata",
+                    "accessionPrefix": "https://www.wikidata.org/wiki/"
+                },
+                {
+                    "sourceLabel": "ILX",
+                    "accessionPrefix": "http://uri.interlex.org/base/ilx_"
+                }
+            ],
+            "allowedPlaceholders": [],
+            "terms": [],
+            "unexpectedTerms": []
+        },
+        {
+            "ruleName": "Characteristics[Cell type]-01",
+            "fieldName": "Characteristics[Cell type]",
+            "ontologies": [
+                "CL",
+                "CLO"
+            ],
+            "allowedParentOntologyTerms": null,
+            "description": "",
+            "selectionCriteria": {
+                "isaFileType": "sample",
+                "studyCreatedAtOrAfter": null,
+                "studyCreatedBefore": null,
+                "studyCategoryFilter": null,
+                "templateVersionFilter": null,
+                "isaFileTemplateNameFilter": null,
+                "linkedFieldAndValueFilter": null
+            },
+            "termEnforcementLevel": "recommended",
+            "unexpectedTermEnforcementLevel": "recommended",
+            "validationType": "ontology-term-in-selected-ontologies",
+            "constraints": {},
+            "defaultValue": {
+                "term": "Not Applicable",
+                "termAccessionNumber": "http://purl.obolibrary.org/obo/NCIT_C48660",
+                "termSourceRef": "NCIT"
+            },
+            "allowedMissingOntologyTerms": [
+                {
+                    "term": "Not Applicable",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/NCIT_C48660",
+                    "termSourceRef": "NCIT"
+                }
+            ],
+            "allowedOtherSources": [
+                {
+                    "sourceLabel": "wikidata",
+                    "accessionPrefix": "https://www.wikidata.org/wiki/"
+                },
+                {
+                    "sourceLabel": "ILX",
+                    "accessionPrefix": "http://uri.interlex.org/base/ilx_"
+                }
+            ],
+            "allowedPlaceholders": [],
+            "terms": [],
+            "unexpectedTerms": []
+        }
+    ]
+}

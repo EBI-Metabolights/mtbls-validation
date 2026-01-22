@@ -1,0 +1,128 @@
+{
+    "version": "v1.1",
+    "investigationFilePath": "",
+    "investigation": {
+        "comments": [],
+        "identifier": "",
+        "title": "",
+        "description": "",
+        "submissionDate": "",
+        "publicReleaseDate": "",
+        "ontologySourceReferences": {
+            "comments": [],
+            "references": []
+        },
+        "investigationPublications": {
+            "comments": [],
+            "publications": []
+        },
+        "investigationContacts": {
+            "comments": [],
+            "people": []
+        },
+        "studies": [
+            {
+                "comments": [],
+                "identifier": "",
+                "title": "",
+                "description": "",
+                "submissionDate": "",
+                "publicReleaseDate": "",
+                "fileName": "",
+                "studyCategory": "",
+                "templateVersion": "",
+                "sampleTemplate": "",
+                "mhdAccession": "",
+                "mhdModelVersion": "",
+                "createdAt": "",
+                "revisionNumber": "",
+                "revisionDate": "",
+                "revisionComment": "",
+                "datasetLicense": "",
+                "funders": [],
+                "characteristicTypes": [],
+                "studyDesignDescriptors": {
+                    "comments": [],
+                    "designTypes": []
+                },
+                "studyPublications": {
+                    "comments": [],
+                    "publications": []
+                },
+                "studyFactors": {
+                    "comments": [],
+                    "factors": []
+                },
+                "studyAssays": {
+                    "comments": [],
+                    "assays": []
+                },
+                "studyProtocols": {
+                    "comments": [],
+                    "protocols": []
+                },
+                "studyContacts": {
+                    "comments": [],
+                    "people": []
+                }
+            }
+        ]
+    },
+    "samples": {},
+    "assays": {},
+    "parserMessages": {},
+    "referencedAssignmentFiles": [],
+    "referencedRawFiles": [],
+    "referencedDerivedFiles": [],
+    "foldersInHierarchy": [],
+    "metaboliteAssignments": {},
+    "tags": [],
+    "studyDbMetadata": {
+        "dbId": -1,
+        "studyId": "",
+        "numericStudyId": -1,
+        "obfuscationCode": "",
+        "studySize": -1,
+        "submissionDate": "",
+        "releaseDate": "",
+        "updateDate": "",
+        "statusDate": "",
+        "studyTypes": [],
+        "status": "DORMANT",
+        "curationRequest": "MANUAL_CURATION",
+        "overrides": {},
+        "submitters": [],
+        "reservedAccession": "",
+        "reservedSubmissionId": "",
+        "revisionDate": "",
+        "revisionNumber": 0,
+        "revisionComment": "",
+        "firstPrivateDate": "",
+        "firstPublicDate": "",
+        "datasetLicense": "",
+        "datasetLicenseVersion": "",
+        "datasetLicenseUrl": "",
+        "sampleTemplate": "",
+        "studyCategory": 0,
+        "templateVersion": "",
+        "reservedMhdAccession": "",
+        "mhdModelVersion": "",
+        "createdAt": ""
+    },
+    "studyFolderMetadata": {
+        "dataFolderSizeCalculated": false,
+        "metadataFolderSizeCalculated": false,
+        "folderSizeInBytes": -1,
+        "folderSizeInStr": "",
+        "folders": {},
+        "files": {}
+    },
+    "folderReaderMessages": [],
+    "dbReaderMessages": [],
+    "hasDbMetadata": false,
+    "hasSampleTableData": false,
+    "hasAssayTableData": false,
+    "hasAssignmentTableData": false,
+    "hasFolderMetadata": false,
+    "hasInvestigationData": false
+}

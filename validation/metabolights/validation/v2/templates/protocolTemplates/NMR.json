@@ -1,0 +1,428 @@
+{
+    "NMR": [
+        {
+            "version": "1.0",
+            "description": "Nuclear Magnetic Resonance (NMR)",
+            "protocols": [
+                "Sample collection",
+                "Extraction",
+                "NMR sample",
+                "NMR spectroscopy",
+                "Data transformation",
+                "Metabolite identification"
+            ],
+            "protocolDefinitions": {
+                "Sample collection": {
+                    "name": "Sample collection",
+                    "description": "A procedure whereby biological samples for an experiment are sourced.",
+                    "type": {
+                        "term": "sample collection protocol",
+                        "termAccessionNumber": "http://www.ebi.ac.uk/efo/EFO_0005518",
+                        "termSourceRef": "EFO"
+                    },
+                    "typeCurie": "EFO:0005518",
+                    "parameters": [],
+                    "parameterDefinitions": {}
+                },
+                "Extraction": {
+                    "name": "Extraction",
+                    "description": "Properties of the preparation steps which took place before the measurement was performed.",
+                    "type": {
+                        "term": "Extraction",
+                        "termAccessionNumber": "",
+                        "termSourceRef": ""
+                    },
+                    "typeCurie": "",
+                    "parameters": [
+                        "Extraction Method"
+                    ],
+                    "parameterDefinitions": {
+                        "Post Extraction": {
+                            "definition": "Extraction Method",
+                            "type": {
+                                "term": "Extraction Method",
+                                "termAccessionNumber": "",
+                                "termSourceRef": ""
+                            },
+                            "typeCurie": "",
+                            "format": "Text",
+                            "examples": []
+                        }
+                    }
+                },
+                "NMR sample": {
+                    "name": "NMR sample",
+                    "description": "",
+                    "type": {
+                        "term": "NMR sample",
+                        "termAccessionNumber": "",
+                        "termSourceRef": ""
+                    },
+                    "typeCurie": "",
+                    "parameters": [
+                        "NMR tube type",
+                        "Solvent",
+                        "Sample pH",
+                        "Temperature"
+                    ],
+                    "parameterDefinitions": {
+                        "NMR tube type": {
+                            "definition": "NMR tube type",
+                            "type": {
+                                "term": "NMR tube type",
+                                "termAccessionNumber": "",
+                                "termSourceRef": ""
+                            },
+                            "typeCurie": "",
+                            "format": "Ontology",
+                            "examples": []
+                        },
+                        "Solvent": {
+                            "definition": "",
+                            "type": {
+                                "term": "Solvent",
+                                "termAccessionNumber": "",
+                                "termSourceRef": ""
+                            },
+                            "typeCurie": "",
+                            "format": "Ontology",
+                            "examples": []
+                        },
+                        "Sample pH": {
+                            "definition": "Sample pH",
+                            "type": {
+                                "term": "Sample pH",
+                                "termAccessionNumber": "",
+                                "termSourceRef": ""
+                            },
+                            "typeCurie": "",
+                            "format": "Text",
+                            "examples": []
+                        },
+                        "Temperature": {
+                            "definition": "Temperature",
+                            "type": {
+                                "term": "Temperature",
+                                "termAccessionNumber": "",
+                                "termSourceRef": ""
+                            },
+                            "typeCurie": "",
+                            "format": "Numeric",
+                            "examples": []
+                        }
+                    }
+                },
+                "NMR spectroscopy": {
+                    "name": "NMR spectroscopy",
+                    "description": "",
+                    "type": {
+                        "term": "NMR spectroscopy",
+                        "termAccessionNumber": "",
+                        "termSourceRef": ""
+                    },
+                    "typeCurie": "",
+                    "parameters": [
+                        "Instrument",
+                        "NMR Probe",
+                        "Number of transients",
+                        "Pulse sequence name",
+                        "Magnetic field strength"
+                    ],
+                    "parameterDefinitions": {
+                        "Instrument": {
+                            "definition": "",
+                            "type": {
+                                "term": "Instrument",
+                                "termAccessionNumber": "",
+                                "termSourceRef": ""
+                            },
+                            "typeCurie": "",
+                            "format": "Ontology",
+                            "examples": []
+                        },
+                        "NMR Probe": {
+                            "definition": "",
+                            "type": {
+                                "term": "NMR Probe",
+                                "termAccessionNumber": "",
+                                "termSourceRef": ""
+                            },
+                            "typeCurie": "",
+                            "format": "Ontology",
+                            "examples": []
+                        },
+                        "Number of transients": {
+                            "definition": "",
+                            "type": {
+                                "term": "Number of transients",
+                                "termAccessionNumber": "",
+                                "termSourceRef": ""
+                            },
+                            "typeCurie": "",
+                            "format": "Text",
+                            "examples": []
+                        },
+                        "Pulse sequence name": {
+                            "definition": "",
+                            "type": {
+                                "term": "Pulse sequence name",
+                                "termAccessionNumber": "",
+                                "termSourceRef": ""
+                            },
+                            "typeCurie": "",
+                            "format": "Text",
+                            "examples": []
+                        },
+                        "Magnetic field strength": {
+                            "definition": "",
+                            "type": {
+                                "term": "Pulse sequence name",
+                                "termAccessionNumber": "",
+                                "termSourceRef": ""
+                            },
+                            "typeCurie": "",
+                            "format": "Text",
+                            "examples": []
+                        }
+                    }
+                },
+                "Data transformation": {
+                    "name": "Data transformation",
+                    "description": "A planned process that produces output data from raw data.",
+                    "type": {
+                        "term": "data transformation",
+                        "termAccessionNumber": "",
+                        "termSourceRef": ""
+                    },
+                    "typeCurie": "",
+                    "parameters": [],
+                    "parameterDefinitions": {}
+                },
+                "Metabolite identification": {
+                    "name": "Metabolite identification",
+                    "description": "Identification of the breakdown products of a substance, either through chemical instability or the actions of enzymes within the body.",
+                    "type": {
+                        "term": "metabolite identification",
+                        "termAccessionNumber": "",
+                        "termSourceRef": ""
+                    },
+                    "typeCurie": "",
+                    "parameters": [],
+                    "parameterDefinitions": {}
+                }
+            }
+        },
+        {
+            "version": "2.0",
+            "description": "Nuclear Magnetic Resonance (NMR)",
+            "protocols": [
+                "Sample collection",
+                "Extraction",
+                "NMR sample",
+                "NMR spectroscopy",
+                "Data transformation",
+                "Metabolite identification"
+            ],
+            "protocolDefinitions": {
+                "Sample collection": {
+                    "name": "Sample collection",
+                    "description": "A procedure whereby biological samples for an experiment are sourced.",
+                    "type": {
+                        "term": "sample collection protocol",
+                        "termAccessionNumber": "http://www.ebi.ac.uk/efo/EFO_0005518",
+                        "termSourceRef": "EFO"
+                    },
+                    "typeCurie": "EFO:0005518",
+                    "parameters": [],
+                    "parameterDefinitions": {}
+                },
+                "Extraction": {
+                    "name": "Extraction",
+                    "description": "Properties of the preparation steps which took place before the measurement was performed.",
+                    "type": {
+                        "term": "Extraction",
+                        "termAccessionNumber": "",
+                        "termSourceRef": ""
+                    },
+                    "typeCurie": "",
+                    "parameters": [
+                        "Extraction Method"
+                    ],
+                    "parameterDefinitions": {
+                        "Post Extraction": {
+                            "definition": "Extraction Method",
+                            "type": {
+                                "term": "Extraction Method",
+                                "termAccessionNumber": "",
+                                "termSourceRef": ""
+                            },
+                            "typeCurie": "",
+                            "format": "Text",
+                            "examples": []
+                        }
+                    }
+                },
+                "NMR sample": {
+                    "name": "NMR sample",
+                    "description": "",
+                    "type": {
+                        "term": "NMR sample",
+                        "termAccessionNumber": "",
+                        "termSourceRef": ""
+                    },
+                    "typeCurie": "",
+                    "parameters": [
+                        "NMR tube type",
+                        "Solvent",
+                        "Sample pH",
+                        "Temperature"
+                    ],
+                    "parameterDefinitions": {
+                        "NMR tube type": {
+                            "definition": "NMR tube type",
+                            "type": {
+                                "term": "NMR tube type",
+                                "termAccessionNumber": "",
+                                "termSourceRef": ""
+                            },
+                            "typeCurie": "",
+                            "format": "Ontology",
+                            "examples": []
+                        },
+                        "Solvent": {
+                            "definition": "",
+                            "type": {
+                                "term": "Solvent",
+                                "termAccessionNumber": "",
+                                "termSourceRef": ""
+                            },
+                            "typeCurie": "",
+                            "format": "Ontology",
+                            "examples": []
+                        },
+                        "Sample pH": {
+                            "definition": "Sample pH",
+                            "type": {
+                                "term": "Sample pH",
+                                "termAccessionNumber": "",
+                                "termSourceRef": ""
+                            },
+                            "typeCurie": "",
+                            "format": "Text",
+                            "examples": []
+                        },
+                        "Temperature": {
+                            "definition": "Temperature",
+                            "type": {
+                                "term": "Temperature",
+                                "termAccessionNumber": "",
+                                "termSourceRef": ""
+                            },
+                            "typeCurie": "",
+                            "format": "Numeric",
+                            "examples": []
+                        }
+                    }
+                },
+                "NMR spectroscopy": {
+                    "name": "NMR spectroscopy",
+                    "description": "",
+                    "type": {
+                        "term": "NMR spectroscopy",
+                        "termAccessionNumber": "",
+                        "termSourceRef": ""
+                    },
+                    "typeCurie": "",
+                    "parameters": [
+                        "Instrument",
+                        "NMR Probe",
+                        "Number of transients",
+                        "Pulse sequence name",
+                        "Magnetic field strength"
+                    ],
+                    "parameterDefinitions": {
+                        "Instrument": {
+                            "definition": "",
+                            "type": {
+                                "term": "Instrument",
+                                "termAccessionNumber": "",
+                                "termSourceRef": ""
+                            },
+                            "typeCurie": "",
+                            "format": "Ontology",
+                            "examples": []
+                        },
+                        "NMR Probe": {
+                            "definition": "",
+                            "type": {
+                                "term": "NMR Probe",
+                                "termAccessionNumber": "",
+                                "termSourceRef": ""
+                            },
+                            "typeCurie": "",
+                            "format": "Ontology",
+                            "examples": []
+                        },
+                        "Number of transients": {
+                            "definition": "",
+                            "type": {
+                                "term": "Number of transients",
+                                "termAccessionNumber": "",
+                                "termSourceRef": ""
+                            },
+                            "typeCurie": "",
+                            "format": "Text",
+                            "examples": []
+                        },
+                        "Pulse sequence name": {
+                            "definition": "",
+                            "type": {
+                                "term": "Pulse sequence name",
+                                "termAccessionNumber": "",
+                                "termSourceRef": ""
+                            },
+                            "typeCurie": "",
+                            "format": "Text",
+                            "examples": []
+                        },
+                        "Magnetic field strength": {
+                            "definition": "",
+                            "type": {
+                                "term": "Pulse sequence name",
+                                "termAccessionNumber": "",
+                                "termSourceRef": ""
+                            },
+                            "typeCurie": "",
+                            "format": "Text",
+                            "examples": []
+                        }
+                    }
+                },
+                "Data transformation": {
+                    "name": "Data transformation",
+                    "description": "A planned process that produces output data from raw data.",
+                    "type": {
+                        "term": "data transformation",
+                        "termAccessionNumber": "",
+                        "termSourceRef": ""
+                    },
+                    "typeCurie": "",
+                    "parameters": [],
+                    "parameterDefinitions": {}
+                },
+                "Metabolite identification": {
+                    "name": "Metabolite identification",
+                    "description": "Identification of the breakdown products of a substance, either through chemical instability or the actions of enzymes within the body.",
+                    "type": {
+                        "term": "metabolite identification",
+                        "termAccessionNumber": "",
+                        "termSourceRef": ""
+                    },
+                    "typeCurie": "",
+                    "parameters": [],
+                    "parameterDefinitions": {}
+                }
+            }
+        }
+    ]
+}

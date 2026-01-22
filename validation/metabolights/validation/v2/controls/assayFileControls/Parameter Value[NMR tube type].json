@@ -1,0 +1,176 @@
+{
+    "Parameter Value[NMR tube type]": [
+        {
+            "ruleName": "Parameter Value[NMR tube type]-01",
+            "fieldName": "Parameter Value[NMR tube type]",
+            "ontologies": [],
+            "allowedParentOntologyTerms": null,
+            "description": "",
+            "selectionCriteria": {
+                "isaFileType": "assay",
+                "studyCreatedAtOrAfter": null,
+                "studyCreatedBefore": null,
+                "studyCategoryFilter": null,
+                "templateVersionFilter": null,
+                "isaFileTemplateNameFilter": [
+                    "NMR"
+                ],
+                "linkedFieldAndValueFilter": [
+                    {
+                        "name": "Protocol REF",
+                        "value": "NMR sample"
+                    }
+                ]
+            },
+            "termEnforcementLevel": "recommended",
+            "unexpectedTermEnforcementLevel": "recommended",
+            "validationType": "any-ontology-term",
+            "constraints": {},
+            "defaultValue": null,
+            "allowedMissingOntologyTerms": [],
+            "allowedOtherSources": [
+                {
+                    "sourceLabel": "MTBLS",
+                    "accessionPrefix": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_"
+                },
+                {
+                    "sourceLabel": "wikidata",
+                    "accessionPrefix": "https://www.wikidata.org/wiki/"
+                },
+                {
+                    "sourceLabel": "ILX",
+                    "accessionPrefix": "http://uri.interlex.org/base/ilx_"
+                }
+            ],
+            "allowedPlaceholders": [
+                {
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/placeholder",
+                    "termSourceRef": "MTBLS"
+                }
+            ],
+            "terms": [
+                {
+                    "term": "1.7 mm (Norell)",
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000374",
+                    "termSourceRef": "MTBLS"
+                },
+                {
+                    "term": "1.7 mm SampleJet",
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000372",
+                    "termSourceRef": "MTBLS"
+                },
+                {
+                    "term": "1.7 mm standard",
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000373",
+                    "termSourceRef": "MTBLS"
+                },
+                {
+                    "term": "10 mm standard",
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000394",
+                    "termSourceRef": "MTBLS"
+                },
+                {
+                    "term": "2.5 mm standard",
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000375",
+                    "termSourceRef": "MTBLS"
+                },
+                {
+                    "term": "3 mm (Norell)",
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000377",
+                    "termSourceRef": "MTBLS"
+                },
+                {
+                    "term": "3 mm SampleJet",
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000378",
+                    "termSourceRef": "MTBLS"
+                },
+                {
+                    "term": "3 mm standard",
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000376",
+                    "termSourceRef": "MTBLS"
+                },
+                {
+                    "term": "4 mm standard MAS rotor",
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000379",
+                    "termSourceRef": "MTBLS"
+                },
+                {
+                    "term": "4 mm Zirconia MAS rotor",
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000380",
+                    "termSourceRef": "MTBLS"
+                },
+                {
+                    "term": "4.25 mm (Bruker BioSpin)",
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000381",
+                    "termSourceRef": "MTBLS"
+                },
+                {
+                    "term": "4.25 mm standard",
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000382",
+                    "termSourceRef": "MTBLS"
+                },
+                {
+                    "term": "5 mm (Bruker BioSpin)",
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002027",
+                    "termSourceRef": "MTBLS"
+                },
+                {
+                    "term": "5 mm (New Era)",
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000383",
+                    "termSourceRef": "MTBLS"
+                },
+                {
+                    "term": "5 mm (Norell Inc.)",
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000384",
+                    "termSourceRef": "MTBLS"
+                },
+                {
+                    "term": "5 mm (Wilmad-LabGlass)",
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000385",
+                    "termSourceRef": "MTBLS"
+                },
+                {
+                    "term": "5 mm 541-pp",
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000386",
+                    "termSourceRef": "MTBLS"
+                },
+                {
+                    "term": "5 mm 7 in (Wilmad-LabGlass)",
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000387",
+                    "termSourceRef": "MTBLS"
+                },
+                {
+                    "term": "5 mm 7 in 507-grade",
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000388",
+                    "termSourceRef": "MTBLS"
+                },
+                {
+                    "term": "5 mm SampleJet",
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000389",
+                    "termSourceRef": "MTBLS"
+                },
+                {
+                    "term": "5 mm Shigemi D2O matched",
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000390",
+                    "termSourceRef": "MTBLS"
+                },
+                {
+                    "term": "5 mm short",
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000391",
+                    "termSourceRef": "MTBLS"
+                },
+                {
+                    "term": "5 mm ST500-7 (Norell)",
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000392",
+                    "termSourceRef": "MTBLS"
+                },
+                {
+                    "term": "5 mm standard",
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000393",
+                    "termSourceRef": "MTBLS"
+                }
+            ],
+            "unexpectedTerms": []
+        }
+    ]
+}

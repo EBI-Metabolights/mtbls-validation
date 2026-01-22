@@ -1,0 +1,93 @@
+{
+    "__default__": [
+        {
+            "ruleName": "default-assay-file-rule-01",
+            "fieldName": "",
+            "ontologies": [
+                "OBI",
+                "EFO",
+                "CHMO",
+                "NCIT",
+                "NCBITAXON",
+                "MS",
+                "BTO",
+                "CHEBI",
+                "UO",
+                "MESH",
+                "BAO",
+                "OMIT",
+                "GO",
+                "ENVO",
+                "MSIO",
+                "PO",
+                "MONDO",
+                "UBERON",
+                "SNOMED",
+                "CL",
+                "CLO",
+                "MI",
+                "EDAM",
+                "HP",
+                "MP"
+            ],
+            "allowedParentOntologyTerms": null,
+            "description": "default",
+            "selectionCriteria": {
+                "isaFileType": "assay",
+                "studyCreatedAtOrAfter": null,
+                "studyCreatedBefore": null,
+                "studyCategoryFilter": null,
+                "templateVersionFilter": null,
+                "isaFileTemplateNameFilter": null,
+                "linkedFieldAndValueFilter": null
+            },
+            "termEnforcementLevel": "optional",
+            "unexpectedTermEnforcementLevel": "required",
+            "validationType": "any-ontology-term",
+            "constraints": {},
+            "defaultValue": null,
+            "allowedMissingOntologyTerms": [],
+            "allowedOtherSources": [
+                {
+                    "sourceLabel": "MTBLS",
+                    "accessionPrefix": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_"
+                },
+                {
+                    "sourceLabel": "wikidata",
+                    "accessionPrefix": "https://www.wikidata.org/wiki/"
+                },
+                {
+                    "sourceLabel": "ILX",
+                    "accessionPrefix": "http://uri.interlex.org/base/ilx_"
+                }
+            ],
+            "allowedPlaceholders": [
+                {
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/placeholder",
+                    "termSourceRef": "MTBLS"
+                },
+                {
+                    "termAccessionNumber": "",
+                    "termSourceRef": ""
+                }
+            ],
+            "terms": [],
+            "unexpectedTerms": [
+                "unknown",
+                "undefined",
+                "n/a",
+                "na",
+                "not applicable",
+                "not available",
+                "none",
+                "null",
+                "nill",
+                "not specified",
+                "not provided",
+                "-",
+                "--",
+                "---"
+            ]
+        }
+    ]
+}

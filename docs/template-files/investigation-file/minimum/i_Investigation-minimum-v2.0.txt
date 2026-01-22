@@ -1,0 +1,107 @@
+ONTOLOGY SOURCE REFERENCE
+Term Source Name	CHMO	EFO	MTBLS	NCIT	OBI
+Term Source File	http://purl.obolibrary.org/obo/chmo.owl	http://www.ebi.ac.uk/efo/efo.owl	https://www.ebi.ac.uk/metabolights/	https://github.com/EBI-Metabolights/MtblsWS-Py/blob/main/resources/Metabolights.owl	http://purl.obolibrary.org/obo/obi.owl
+Term Source Version					
+Term Source Description	Chemical Methods Ontology	Experimental Factor Ontology	MetaboLights Controlled Vocabulary	National Cancer Institute Thesaurus	Ontology for Biomedical Investigations
+INVESTIGATION
+Investigation Identifier	
+Investigation Title	
+Investigation Description	
+Investigation Submission Date	
+Investigation Public Release Date	
+INVESTIGATION PUBLICATIONS
+Investigation PubMed ID	
+Investigation Publication DOI	
+Investigation Publication Author List	
+Investigation Publication Title	
+Investigation Publication Status	
+Investigation Publication Status Term Accession Number	
+Investigation Publication Status Term Source REF	
+INVESTIGATION CONTACTS
+Investigation Person Last Name	
+Investigation Person First Name	
+Investigation Person Mid Initials	
+Investigation Person Email	
+Investigation Person Phone	
+Investigation Person Fax	
+Investigation Person Address	
+Investigation Person Affiliation	
+Investigation Person Roles	
+Investigation Person Roles Term Accession Number	
+Investigation Person Roles Term Source REF	
+STUDY
+Study Identifier	MTBLS
+Study Title	Please update the study title
+Study Description	Please update the study abstract/description
+Study Submission Date	
+Study Public Release Date	
+Study File Name	s_Sample.txt
+Comment[Created At]	
+Comment[License]	CC0 1.0 Universal
+Comment[Sample Template]	minimum
+Comment[Study Template]	minimum
+Comment[Template Version]	2.0
+Comment[Study Category]	other
+Comment[Funder]	
+Comment[Funder ROR ID]	
+Comment[Grant Identifier]	
+STUDY DESIGN DESCRIPTORS
+Study Design Type	
+Study Design Type Term Accession Number	
+Study Design Type Term Source REF	
+Comment[Study Design Category]	
+Comment[Study Design Source]	
+STUDY PUBLICATIONS
+Study PubMed ID	
+Study Publication DOI	
+Study Publication Author List	
+Study Publication Title	Please update the publication title
+Study Publication Status	
+Study Publication Status Term Accession Number	
+Study Publication Status Term Source REF	
+STUDY FACTORS
+Study Factor Name	
+Study Factor Type	
+Study Factor Type Term Accession Number	
+Study Factor Type Term Source REF	
+Comment[Study Factor Value Format]	
+STUDY ASSAYS
+Study Assay File Name	
+Study Assay Measurement Type	
+Study Assay Measurement Type Term Accession Number	
+Study Assay Measurement Type Term Source REF	
+Study Assay Technology Type	
+Study Assay Technology Type Term Accession Number	
+Study Assay Technology Type Term Source REF	
+Study Assay Technology Platform	
+STUDY PROTOCOLS
+Study Protocol Name	
+Study Protocol Type	
+Study Protocol Type Term Accession Number	
+Study Protocol Type Term Source REF	
+Study Protocol Description	
+Study Protocol URI	
+Study Protocol Version	
+Study Protocol Parameters Name	
+Study Protocol Parameters Name Term Accession Number	
+Study Protocol Parameters Name Term Source REF	
+Study Protocol Components Name	
+Study Protocol Components Type	
+Study Protocol Components Type Term Accession Number	
+Study Protocol Components Type Term Source REF	
+Comment[Study Protocol Parameters Value Format]	
+STUDY CONTACTS
+Study Person Last Name	
+Study Person First Name	
+Study Person Mid Initials	
+Study Person Email	
+Study Person Phone	
+Study Person Fax	
+Study Person Address	
+Study Person Affiliation	
+Study Person Roles	
+Study Person Roles Term Accession Number	
+Study Person Roles Term Source REF	
+Comment[Study Person ORCID]	
+Comment[Study Person Additional Email]	
+Comment[Study Person Affiliation ROR ID]	

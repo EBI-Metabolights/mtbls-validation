@@ -1,0 +1,62 @@
+{
+    "Study Person Roles": [
+        {
+            "ruleName": "Study Person Roles-01",
+            "fieldName": "Study Person Roles",
+            "ontologies": [
+                "NCIT"
+            ],
+            "allowedParentOntologyTerms": {
+                "excludeByLabelPattern": [],
+                "excludeByAccession": [],
+                "parents": [
+                    {
+                        "term": "Personnel",
+                        "termAccessionNumber": "http://purl.obolibrary.org/obo/NCIT_C60758",
+                        "termSourceRef": "NCIT"
+                    }
+                ]
+            },
+            "description": "",
+            "selectionCriteria": {
+                "isaFileType": "investigation",
+                "studyCreatedAtOrAfter": null,
+                "studyCreatedBefore": null,
+                "studyCategoryFilter": null,
+                "templateVersionFilter": null,
+                "isaFileTemplateNameFilter": null,
+                "linkedFieldAndValueFilter": null
+            },
+            "termEnforcementLevel": "recommended",
+            "unexpectedTermEnforcementLevel": "recommended",
+            "validationType": "child-ontology-term",
+            "constraints": {},
+            "defaultValue": {
+                "term": "Investigator",
+                "termAccessionNumber": "http://purl.obolibrary.org/obo/NCIT_C25936",
+                "termSourceRef": "NCIT"
+            },
+            "allowedMissingOntologyTerms": [],
+            "allowedOtherSources": [],
+            "allowedPlaceholders": [],
+            "terms": [
+                {
+                    "term": "Principal Investigator",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/NCIT_C19924",
+                    "termSourceRef": "NCIT"
+                },
+                {
+                    "term": "Investigator",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/NCIT_C25936",
+                    "termSourceRef": "NCIT"
+                },
+                {
+                    "term": "Author",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/NCIT_C42781",
+                    "termSourceRef": "NCIT"
+                }
+            ],
+            "unexpectedTerms": []
+        }
+    ]
+}

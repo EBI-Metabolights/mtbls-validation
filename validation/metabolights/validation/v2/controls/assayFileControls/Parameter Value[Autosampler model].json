@@ -1,0 +1,419 @@
+{
+    "Parameter Value[Autosampler model]": [
+        {
+            "ruleName": "Parameter Value[Autosampler model]-01",
+            "fieldName": "Parameter Value[Autosampler model]",
+            "ontologies": [
+                "MS",
+                "MTBLS"
+            ],
+            "allowedParentOntologyTerms": null,
+            "description": "",
+            "selectionCriteria": {
+                "isaFileType": "assay",
+                "studyCreatedAtOrAfter": null,
+                "studyCreatedBefore": null,
+                "studyCategoryFilter": null,
+                "templateVersionFilter": null,
+                "isaFileTemplateNameFilter": [
+                    "LC-MS"
+                ],
+                "linkedFieldAndValueFilter": null
+            },
+            "termEnforcementLevel": "recommended",
+            "unexpectedTermEnforcementLevel": "recommended",
+            "validationType": "any-ontology-term",
+            "constraints": {},
+            "defaultValue": null,
+            "allowedMissingOntologyTerms": [],
+            "allowedOtherSources": [
+                {
+                    "sourceLabel": "MTBLS",
+                    "accessionPrefix": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_"
+                },
+                {
+                    "sourceLabel": "wikidata",
+                    "accessionPrefix": "https://www.wikidata.org/wiki/"
+                },
+                {
+                    "sourceLabel": "ILX",
+                    "accessionPrefix": "http://uri.interlex.org/base/ilx_"
+                }
+            ],
+            "allowedPlaceholders": [
+                {
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/placeholder",
+                    "termSourceRef": "MTBLS"
+                }
+            ],
+            "terms": [
+                {
+                    "term": "Agilent 1100 Autosampler",
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002084",
+                    "termSourceRef": "MTBLS"
+                },
+                {
+                    "term": "Agilent 1260 Infinity Autosampler",
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000552",
+                    "termSourceRef": "MTBLS"
+                },
+                {
+                    "term": "Agilent 1290 Infinity Autosampler",
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002087",
+                    "termSourceRef": "MTBLS"
+                },
+                {
+                    "term": "Agilent 1290 Infinity Autosampler G4226A",
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002088",
+                    "termSourceRef": "MTBLS"
+                },
+                {
+                    "term": "Agilent 1290 Infinity II Bio Multisampler G7137A",
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002090",
+                    "termSourceRef": "MTBLS"
+                },
+                {
+                    "term": "Agilent 1290 Infinity II Multisampler",
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002091",
+                    "termSourceRef": "MTBLS"
+                },
+                {
+                    "term": "Beckman Coulter System Gold HPLC 508 autosampler",
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000553",
+                    "termSourceRef": "MTBLS"
+                },
+                {
+                    "term": "CTC Analytics HTC PAL Autosampler",
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000554",
+                    "termSourceRef": "MTBLS"
+                },
+                {
+                    "term": "CTC Analytics HTC PAL Autosampler with DLW",
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000555",
+                    "termSourceRef": "MTBLS"
+                },
+                {
+                    "term": "FAMOS autosampler",
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000556",
+                    "termSourceRef": "MTBLS"
+                },
+                {
+                    "term": "GERSTEL MPS 2 autosampler",
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000557",
+                    "termSourceRef": "MTBLS"
+                },
+                {
+                    "term": "Hitachi L-7200 Autosampler",
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002154",
+                    "termSourceRef": "MTBLS"
+                },
+                {
+                    "term": "Shimadzu SIL-20AC autosampler",
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002220",
+                    "termSourceRef": "MTBLS"
+                },
+                {
+                    "term": "Shimadzu SIL-30AC autosampler",
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000558",
+                    "termSourceRef": "MTBLS"
+                },
+                {
+                    "term": "Thermo Scientific Accela Autosampler",
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000559",
+                    "termSourceRef": "MTBLS"
+                },
+                {
+                    "term": "Thermo Scientific Accela Open Autosampler",
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000560",
+                    "termSourceRef": "MTBLS"
+                },
+                {
+                    "term": "Thermo Scientific Dionex AS-AP Autosampler",
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002236",
+                    "termSourceRef": "MTBLS"
+                },
+                {
+                    "term": "Thermo Scientific Micro AS Autosampler",
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000561",
+                    "termSourceRef": "MTBLS"
+                },
+                {
+                    "term": "Thermo Scientific UltiMate WPS-3000 PL RS Autosampler",
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000562",
+                    "termSourceRef": "MTBLS"
+                },
+                {
+                    "term": "Thermo Scientific UltiMate WPS-3000 RS Autosampler",
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000563",
+                    "termSourceRef": "MTBLS"
+                },
+                {
+                    "term": "Thermo Scientific UltiMate WPS-3000 TFC Autosampler",
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002250",
+                    "termSourceRef": "MTBLS"
+                },
+                {
+                    "term": "Thermo Scientific UltiMate WPS-3000 TLS A Autosampler",
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002251",
+                    "termSourceRef": "MTBLS"
+                },
+                {
+                    "term": "Thermo Scientific UltiMate WPS-3000 TPL RS Autosampler",
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000564",
+                    "termSourceRef": "MTBLS"
+                },
+                {
+                    "term": "Thermo Scientific UltiMate WPS-3000 TRS Autosampler",
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000565",
+                    "termSourceRef": "MTBLS"
+                },
+                {
+                    "term": "Thermo Scientific Vanquish Split Sampler HT",
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002253",
+                    "termSourceRef": "MTBLS"
+                },
+                {
+                    "term": "Waters 2777 Sample Manager",
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000566",
+                    "termSourceRef": "MTBLS"
+                },
+                {
+                    "term": "Waters 2777C Sample Manager",
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000567",
+                    "termSourceRef": "MTBLS"
+                },
+                {
+                    "term": "Waters ACQUITY H-Class Sample Manager FTN",
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002255",
+                    "termSourceRef": "MTBLS"
+                },
+                {
+                    "term": "Waters ACQUITY I-Class Sample Manager",
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002256",
+                    "termSourceRef": "MTBLS"
+                },
+                {
+                    "term": "Waters ACQUITY I-Class Sample Manager-FL",
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002257",
+                    "termSourceRef": "MTBLS"
+                },
+                {
+                    "term": "Waters ACQUITY I-Class Sample Manager-FTN",
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002258",
+                    "termSourceRef": "MTBLS"
+                },
+                {
+                    "term": "Waters ACQUITY UPLC Sample Organizer",
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000568",
+                    "termSourceRef": "MTBLS"
+                }
+            ],
+            "unexpectedTerms": []
+        },
+        {
+            "ruleName": "Parameter Value[Autosampler model]-02",
+            "fieldName": "Parameter Value[Autosampler model]",
+            "ontologies": [
+                "MS",
+                "MTBLS"
+            ],
+            "allowedParentOntologyTerms": null,
+            "description": "",
+            "selectionCriteria": {
+                "isaFileType": "assay",
+                "studyCreatedAtOrAfter": null,
+                "studyCreatedBefore": null,
+                "studyCategoryFilter": null,
+                "templateVersionFilter": null,
+                "isaFileTemplateNameFilter": [
+                    "GC-MS"
+                ],
+                "linkedFieldAndValueFilter": null
+            },
+            "termEnforcementLevel": "recommended",
+            "unexpectedTermEnforcementLevel": "recommended",
+            "validationType": "any-ontology-term",
+            "constraints": {},
+            "defaultValue": null,
+            "allowedMissingOntologyTerms": [],
+            "allowedOtherSources": [
+                {
+                    "sourceLabel": "MTBLS",
+                    "accessionPrefix": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_"
+                },
+                {
+                    "sourceLabel": "wikidata",
+                    "accessionPrefix": "https://www.wikidata.org/wiki/"
+                },
+                {
+                    "sourceLabel": "ILX",
+                    "accessionPrefix": "http://uri.interlex.org/base/ilx_"
+                }
+            ],
+            "allowedPlaceholders": [
+                {
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/placeholder",
+                    "termSourceRef": "MTBLS"
+                }
+            ],
+            "terms": [
+                {
+                    "term": "Agilent 7683 Series Automatic Liquid Sampler",
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_001052",
+                    "termSourceRef": "MTBLS"
+                },
+                {
+                    "term": "Agilent 7683B Automatic Liquid Sampler",
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_001041",
+                    "termSourceRef": "MTBLS"
+                },
+                {
+                    "term": "Agilent 7693 Automatic Liquid Sampler",
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_001048",
+                    "termSourceRef": "MTBLS"
+                },
+                {
+                    "term": "Agilent 7693A Automatic Liquid Sampler",
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_001035",
+                    "termSourceRef": "MTBLS"
+                },
+                {
+                    "term": "Agilent CTC Analytics Combi PAL autosampler",
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_001047",
+                    "termSourceRef": "MTBLS"
+                },
+                {
+                    "term": "CTC Analytics HTS PAL Autosampler",
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_001045",
+                    "termSourceRef": "MTBLS"
+                },
+                {
+                    "term": "CTC Analytics L-PAL3 Autosampler",
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_001049",
+                    "termSourceRef": "MTBLS"
+                },
+                {
+                    "term": "CTC Analytics PAL COMBI autosampler",
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_001044",
+                    "termSourceRef": "MTBLS"
+                },
+                {
+                    "term": "CTC Analytics PAL COMBI-xt autosampler",
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_001050",
+                    "termSourceRef": "MTBLS"
+                },
+                {
+                    "term": "CTC Analytics PAL LHX-xt autosampler",
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_001042",
+                    "termSourceRef": "MTBLS"
+                },
+                {
+                    "term": "CTC Analytics PAL RSI 85 Autosampler",
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_001034",
+                    "termSourceRef": "MTBLS"
+                },
+                {
+                    "term": "CTC Analytics PAL RTC Autosampler",
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002130",
+                    "termSourceRef": "MTBLS"
+                },
+                {
+                    "term": "GERSTEL MultiPurpose Sampler (MPS 2)",
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_001054",
+                    "termSourceRef": "MTBLS"
+                },
+                {
+                    "term": "GERSTEL MultiPurpose Sampler (MPS 2XL)",
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_001046",
+                    "termSourceRef": "MTBLS"
+                },
+                {
+                    "term": "GERSTEL MultiPurpose Sampler (MPS)",
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_001039",
+                    "termSourceRef": "MTBLS"
+                },
+                {
+                    "term": "GERSTEL MultiPurpose Sampler (MPS) Dual Head",
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_001038",
+                    "termSourceRef": "MTBLS"
+                },
+                {
+                    "term": "GERSTEL TDS A Autosampler (TDS-A)",
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_001031",
+                    "termSourceRef": "MTBLS"
+                },
+                {
+                    "term": "JASCO PAL GC-xt autosampler",
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_001053",
+                    "termSourceRef": "MTBLS"
+                },
+                {
+                    "term": "Markes International UltrA 2",
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_001037",
+                    "termSourceRef": "MTBLS"
+                },
+                {
+                    "term": "Shimadzu AOC-20i/s autoinjector/autosampler",
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_001036",
+                    "termSourceRef": "MTBLS"
+                },
+                {
+                    "term": "Shimadzu AOC-20s autosampler",
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_001051",
+                    "termSourceRef": "MTBLS"
+                },
+                {
+                    "term": "Shimadzu AOC-5000 CTC PAL GC autosampler",
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002210",
+                    "termSourceRef": "MTBLS"
+                },
+                {
+                    "term": "Thermo Electron AS 2000 autosampler",
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002232",
+                    "termSourceRef": "MTBLS"
+                },
+                {
+                    "term": "Thermo Electron AS2000 autosampler",
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_001030",
+                    "termSourceRef": "MTBLS"
+                },
+                {
+                    "term": "Thermo Electron TriPlus Autosampler",
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002233",
+                    "termSourceRef": "MTBLS"
+                },
+                {
+                    "term": "Thermo Scientific AS 1310 Autosampler",
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_001040",
+                    "termSourceRef": "MTBLS"
+                },
+                {
+                    "term": "Thermo Scientific AS 3000 autosampler",
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002234",
+                    "termSourceRef": "MTBLS"
+                },
+                {
+                    "term": "Thermo Scientific AS 3000 II autosampler",
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002235",
+                    "termSourceRef": "MTBLS"
+                },
+                {
+                    "term": "Thermo Scientific AS3000 autosampler",
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_001033",
+                    "termSourceRef": "MTBLS"
+                },
+                {
+                    "term": "Thermo Scientific TriPlus RSH Autosampler",
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_001043",
+                    "termSourceRef": "MTBLS"
+                },
+                {
+                    "term": "ThermoQuest AS 2000 Liquid Autosampler",
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_001032",
+                    "termSourceRef": "MTBLS"
+                }
+            ],
+            "unexpectedTerms": []
+        }
+    ]
+}
