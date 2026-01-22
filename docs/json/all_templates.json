@@ -20436,6 +20436,13 @@
             "sourceDescription": "PRotein Ontology (PRO)",
             "sourceDetails": "An ontological representation of protein-related entities"
         },
+        "PREFER": {
+            "sourceName": "PREFER",
+            "sourceFile": "https://github.com/Multiomics-Analytics-Group/prefer_ontology/releases/latest/download/prefer.owl",
+            "sourceVersion": "2026-01-08",
+            "sourceDescription": "PREFER Ontology",
+            "sourceDetails": "An ontology for PREcision FERmentation."
+        },
         "PRIDE": {
             "sourceName": "PRIDE",
             "sourceFile": "https://raw.githubusercontent.com/PRIDE-Utilities/pride-ontology/master/pride_cv.owl",
@@ -21566,7 +21573,7 @@
                     "fileSchema": "https://metabolomicshub.github.io/mhd-model/schemas/v0_1/common-data-model-v0.1.schema.json",
                     "mhdFileProfile": "https://metabolomicshub.github.io/mhd-model/schemas/v0_1/common-data-model-v0.1.ms-profile.json",
                     "announcementFileSchema": "https://metabolomicshub.github.io/mhd-model/schemas/v0_1/announcement-v0.1.schema.json",
-                    "announcementFileProfile": "https://metabolomicshub.github.io/mhd-model/schemas/v0_1/announcement-v0.1.schema.ms-profile.json"
+                    "announcementFileProfile": "https://metabolomicshub.github.io/mhd-model/schemas/v0_1/announcement-v0.1.ms-profile.json"
                 }
             },
             "legacy-profile": {
@@ -21574,7 +21581,7 @@
                     "fileSchema": "https://metabolomicshub.github.io/mhd-model/schemas/v0_1/common-data-model-v0.1.schema.json",
                     "mhdFileProfile": "https://metabolomicshub.github.io/mhd-model/schemas/v0_1/common-data-model-v0.1.legacy-profile.json",
                     "announcementFileSchema": "https://metabolomicshub.github.io/mhd-model/schemas/v0_1/announcement-v0.1.schema.json",
-                    "announcementFileProfile": "https://metabolomicshub.github.io/mhd-model/schemas/v0_1/announcement-v0.1.schema.legacy-profile.json"
+                    "announcementFileProfile": "https://metabolomicshub.github.io/mhd-model/schemas/v0_1/announcement-v0.1.legacy-profile.json"
                 }
             }
         },

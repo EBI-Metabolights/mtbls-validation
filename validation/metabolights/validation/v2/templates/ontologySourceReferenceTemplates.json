@@ -1442,6 +1442,13 @@
             "sourceDescription": "PRotein Ontology (PRO)",
             "sourceDetails": "An ontological representation of protein-related entities"
         },
+        "PREFER": {
+            "sourceName": "PREFER",
+            "sourceFile": "https://github.com/Multiomics-Analytics-Group/prefer_ontology/releases/latest/download/prefer.owl",
+            "sourceVersion": "2026-01-08",
+            "sourceDescription": "PREFER Ontology",
+            "sourceDetails": "An ontology for PREcision FERmentation."
+        },
         "PRIDE": {
             "sourceName": "PRIDE",
             "sourceFile": "https://raw.githubusercontent.com/PRIDE-Utilities/pride-ontology/master/pride_cv.owl",
