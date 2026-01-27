@@ -2144,24 +2144,25 @@ rule_i_100_360_011_02 contains result if {
 
 	valid_pi_set := {idx: person |
 		some idx, person in pi_set
-		orcid_set := [orcid |
-			some orcid_idx in orcid_idx_set
-			count(comments[orcid_idx].value) >= idx
-			orcid := comments[orcid_idx].value[idx]
-			count(orcid) > 0
-		]
-		affiliation_ror_id_set := {ror_id |
-			some ror_id_idx in affiliation_ror_id_idx_set
-			count(comments[ror_id_idx].value) >= idx
-			ror_id := comments[ror_id_idx].value[idx]
-			count(ror_id) > 0
-		}
-		count(orcid_set) == count(orcid_idx_set)
+
+		# orcid_set := [orcid |
+		# 	some orcid_idx in orcid_idx_set
+		# 	count(comments[orcid_idx].value) >= idx
+		# 	orcid := comments[orcid_idx].value[idx]
+		# 	count(orcid) > 0
+		# ]
+		# affiliation_ror_id_set := {ror_id |
+		# 	some ror_id_idx in affiliation_ror_id_idx_set
+		# 	count(comments[ror_id_idx].value) >= idx
+		# 	ror_id := comments[ror_id_idx].value[idx]
+		# 	count(ror_id) > 0
+		# }
+		# count(orcid_set) == count(orcid_idx_set)
 		count(person.email) > 0
 		count(person.firstName) > 0
 		count(person.lastName) > 0
 		count(person.affiliation) > 0
-		count(affiliation_ror_id_set) == count(affiliation_ror_id_idx_set)
+		# count(affiliation_ror_id_set) == count(affiliation_ror_id_idx_set)
 	}
 	invalid_pi_set := {idx: person |
 		some idx, person in pi_set
@@ -2169,7 +2170,7 @@ rule_i_100_360_011_02 contains result if {
 	}
 	count(invalid_pi_set) > 0
 	some idx, person in invalid_pi_set
-	msg := sprintf("%v. contact [%v %v %v] has Principal Investigator role. This contact's first name, last name, ORCID, affiliation, affiliation ROR ID and email fields must be defined.", [idx + 1, person.email, person.firstName, person.lastName])
+	msg := sprintf("%v. contact [%v %v %v] has Principal Investigator role. This contact's first name, last name, affiliation, and email fields must be defined.", [idx + 1, person.email, person.firstName, person.lastName])
 
 	source := input.investigationFilePath
 	result := f.format(rego.metadata.rule(), msg, source)
