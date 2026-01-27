@@ -4,7 +4,7 @@
             "ruleName": "Characteristics[Organism]-01",
             "fieldName": "Characteristics[Organism]",
             "ontologies": [
-                "NCBITAXON",
+                "NCBITaxon",
                 "ENVO"
             ],
             "allowedParentOntologyTerms": null,
@@ -121,7 +121,7 @@
             "ruleName": "Characteristics[Organism]-02",
             "fieldName": "Characteristics[Organism]",
             "ontologies": [
-                "NCBITAXON",
+                "NCBITaxon",
                 "ENVO",
                 "MTBLS",
                 "WoRMs",
