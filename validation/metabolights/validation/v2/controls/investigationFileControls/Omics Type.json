@@ -1,0 +1,100 @@
+{
+    "Omics Type": [
+        {
+            "ruleName": "Omics Type-01",
+            "fieldName": "Omics Type",
+            "ontologies": [],
+            "allowedParentOntologyTerms": null,
+            "description": "",
+            "selectionCriteria": {
+                "isaFileType": "investigation",
+                "studyCreatedAtOrAfter": null,
+                "studyCreatedBefore": null,
+                "studyCategoryFilter": [
+                    "ms-mhd-enabled"
+                ],
+                "templateVersionFilter": null,
+                "isaFileTemplateNameFilter": null,
+                "linkedFieldAndValueFilter": null
+            },
+            "termEnforcementLevel": "required",
+            "unexpectedTermEnforcementLevel": "required",
+            "validationType": "selected-ontology-term",
+            "constraints": {},
+            "defaultValue": null,
+            "allowedMissingOntologyTerms": [],
+            "allowedOtherSources": [],
+            "allowedPlaceholders": [],
+            "terms": [
+                {
+                    "term": "Metabolomics",
+                    "termAccessionNumber": "http://edamontology.org/topic_3172",
+                    "termSourceRef": "EDAM"
+                },
+                {
+                    "term": "Lipidomics",
+                    "termAccessionNumber": "http://edamontology.org/topic_0153",
+                    "termSourceRef": "EDAM"
+                },
+                {
+                    "term": "Exposomics",
+                    "termAccessionNumber": "",
+                    "termSourceRef": ""
+                },
+                {
+                    "term": "Fluxomics",
+                    "termAccessionNumber": "http://edamontology.org/topic_3955",
+                    "termSourceRef": "EDAM"
+                }
+            ],
+            "unexpectedTerms": []
+        },
+        {
+            "ruleName": "Omics Type-02",
+            "fieldName": "Omics Type",
+            "ontologies": [],
+            "allowedParentOntologyTerms": null,
+            "description": "",
+            "selectionCriteria": {
+                "isaFileType": "investigation",
+                "studyCreatedAtOrAfter": null,
+                "studyCreatedBefore": null,
+                "studyCategoryFilter": null,
+                "templateVersionFilter": null,
+                "isaFileTemplateNameFilter": null,
+                "linkedFieldAndValueFilter": null
+            },
+            "termEnforcementLevel": "recommended",
+            "unexpectedTermEnforcementLevel": "required",
+            "validationType": "selected-ontology-term",
+            "constraints": {},
+            "defaultValue": null,
+            "allowedMissingOntologyTerms": [],
+            "allowedOtherSources": [],
+            "allowedPlaceholders": [],
+            "terms": [
+                {
+                    "term": "Metabolomics",
+                    "termAccessionNumber": "http://edamontology.org/topic_3172",
+                    "termSourceRef": "EDAM"
+                },
+                {
+                    "term": "Lipidomics",
+                    "termAccessionNumber": "http://edamontology.org/topic_0153",
+                    "termSourceRef": "EDAM"
+                },
+                {
+                    "term": "Exposomics",
+                    "termAccessionNumber": "",
+                    "termSourceRef": ""
+                },
+                {
+                    "term": "Fluxomics",
+                    "termAccessionNumber": "http://edamontology.org/topic_3955",
+                    "termSourceRef": "EDAM"
+                }
+            ],
+            "unexpectedTerms": []
+        }
+    ]
+}

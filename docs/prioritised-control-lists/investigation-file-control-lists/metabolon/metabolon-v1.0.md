@@ -291,6 +291,27 @@
 | 10 | technical replicate | EFO | http://www\.ebi\.ac\.uk/efo/EFO\_0002090 |
 | 11 | Collection Date | NCIT | http://purl\.obolibrary\.org/obo/NCIT\_C81286 |
 
+## Omics Type
+
+| Attribute | Value |
+|---|------|
+| Rule Name | Omics Type\-01 |
+| Rule Description |  |
+| Applicable Study Categories | ms\-mhd\-enabled |
+| Applicable Template Names | All |
+| Applicable Template Versions | All |
+| Validation Type | selected-ontology-term |
+| Ontology Term Enforcement Level | required |
+
+### Terms
+
+| # |Term  | Term Source  | Term Accession |
+|---|------|--------------|----------------|
+| 1 | Metabolomics | EDAM | http://edamontology\.org/topic\_3172 |
+| 2 | Lipidomics | EDAM | http://edamontology\.org/topic\_0153 |
+| 3 | Exposomics |  |  |
+| 4 | Fluxomics | EDAM | http://edamontology\.org/topic\_3955 |
+
 ## Study Publication Status
 
 | Attribute | Value |

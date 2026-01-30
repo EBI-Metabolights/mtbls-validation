@@ -1,4 +1,23 @@
 {
+    "investigationFileTemplates": {
+        "minimum": {
+            "order": 1,
+            "label": "default",
+            "description": "default"
+        },
+        "metabolon": {
+            "order": 2,
+            "label": "Metabolon Template",
+            "description": "Metabolon Template"
+        }
+    },
+    "sampleFileTemplates": {
+        "minimum": {
+            "order": 1,
+            "label": "default",
+            "description": "default"
+        }
+    },
     "resultFileFormats": {
         "maf": {
             "order": 1,
@@ -209,6 +228,7 @@
                 "revision",
                 "mhd",
                 "funding",
+                "related-datasets",
                 "characteristic-categories"
             ],
             "groupDefinitions": {
@@ -301,15 +321,39 @@
                     "joinOperator": ";",
                     "comments": [
                         {
-                            "name": "Funder Organization",
-                            "label": "Funder Organization",
+                            "name": "Funder",
+                            "label": "Funder",
                             "isOntology": true,
-                            "controlListKey": "Funder"
+                            "controlListKey": null
+                        },
+                        {
+                            "name": "Funder ROR ID",
+                            "label": "Funder ROR ID",
+                            "isOntology": true,
+                            "controlListKey": null
                         },
                         {
                             "name": "Grant Identifier",
                             "label": "Grant Identifier",
                             "isOntology": false,
+                            "controlListKey": null
+                        }
+                    ]
+                },
+                "related-datasets": {
+                    "allowMultiple": true,
+                    "joinOperator": ";",
+                    "comments": [
+                        {
+                            "name": "Related Data Accession",
+                            "label": "Related Data Accession",
+                            "isOntology": true,
+                            "controlListKey": null
+                        },
+                        {
+                            "name": "Related Data Repository",
+                            "label": "Related Data Repository",
+                            "isOntology": true,
                             "controlListKey": null
                         }
                     ]
@@ -376,7 +420,7 @@
                             "controlListKey": "Study Assay Type"
                         },
                         {
-                            "name": "Primary Omics Type",
+                            "name": "Omics Type",
                             "label": "Primary Omics Type",
                             "isOntology": true,
                             "controlListKey": "Omics Type"
@@ -637,20 +681,28 @@
                         "termSourceRef": "OBI"
                     },
                     "assayFileDefaultValues": {
-                        "Chromatography": [
-                            "Chromatography Instrument",
-                            "Autosampler model",
-                            "Column model",
-                            "Column type",
-                            "Guard column"
-                        ],
-                        "Mass spectrometry": [
-                            "Scan polarity",
-                            "Scan m/z range",
-                            "Instrument",
-                            "Ion source",
-                            "Mass analyzer"
-                        ]
+                        "Chromatography": {
+                            "order": 1,
+                            "label": "Chromatography Protocol",
+                            "fields": [
+                                "Chromatography Instrument",
+                                "Autosampler model",
+                                "Column model",
+                                "Column type",
+                                "Guard column"
+                            ]
+                        },
+                        "Mass spectrometry": {
+                            "order": 2,
+                            "label": "Mass Spectrometry Protocol",
+                            "fields": [
+                                "Scan polarity",
+                                "Scan m/z range",
+                                "Instrument",
+                                "Ion source",
+                                "Mass analyzer"
+                            ]
+                        }
                     }
                 },
                 "GC-MS": {
@@ -663,20 +715,17 @@
                         "termSourceRef": "OBI"
                     },
                     "assayFileDefaultValues": {
-                        "Chromatography": [
-                            "Chromatography Instrument",
-                            "Autosampler model",
-                            "Column model",
-                            "Column type",
-                            "Guard column"
-                        ],
-                        "Mass spectrometry": [
-                            "Scan polarity",
-                            "Scan m/z range",
-                            "Instrument",
-                            "Ion source",
-                            "Mass analyzer"
-                        ]
+                        "Chromatography": {
+                            "order": 1,
+                            "label": "Chromatography Protocol",
+                            "fields": [
+                                "Chromatography Instrument",
+                                "Autosampler model",
+                                "Column model",
+                                "Column type",
+                                "Guard column"
+                            ]
+                        }
                     }
                 },
                 "GCxGC-MS": {
@@ -689,22 +738,19 @@
                         "termSourceRef": ""
                     },
                     "assayFileDefaultValues": {
-                        "Chromatography": [
-                            "Chromatography Instrument",
-                            "Autosampler model",
-                            "Column model 1",
-                            "Column type 1",
-                            "Column model 2",
-                            "Column type 2",
-                            "Guard column"
-                        ],
-                        "Mass spectrometry": [
-                            "Scan polarity",
-                            "Scan m/z range",
-                            "Instrument",
-                            "Ion source",
-                            "Mass analyzer"
-                        ]
+                        "Chromatography": {
+                            "order": 1,
+                            "label": "Chromatography Protocol",
+                            "fields": [
+                                "Chromatography Instrument",
+                                "Autosampler model",
+                                "Column model 1",
+                                "Column type 1",
+                                "Column model 2",
+                                "Column type 2",
+                                "Guard column"
+                            ]
+                        }
                     }
                 },
                 "MALDI-MS": {
@@ -717,13 +763,17 @@
                         "termSourceRef": ""
                     },
                     "assayFileDefaultValues": {
-                        "Mass spectrometry": [
-                            "Scan polarity",
-                            "Scan m/z range",
-                            "Instrument",
-                            "Ion source",
-                            "Mass analyzer"
-                        ]
+                        "Mass spectrometry": {
+                            "order": 1,
+                            "label": "Mass Spectrometry Protocol",
+                            "fields": [
+                                "Scan polarity",
+                                "Scan m/z range",
+                                "Instrument",
+                                "Ion source",
+                                "Mass analyzer"
+                            ]
+                        }
                     }
                 },
                 "FIA-MS": {
@@ -736,16 +786,24 @@
                         "termSourceRef": ""
                     },
                     "assayFileDefaultValues": {
-                        "Flow Injection Analysis": [
-                            "FIA Instrument"
-                        ],
-                        "Mass spectrometry": [
-                            "Scan polarity",
-                            "Scan m/z range",
-                            "Instrument",
-                            "Ion source",
-                            "Mass analyzer"
-                        ]
+                        "Flow Injection Analysis": {
+                            "order": 1,
+                            "label": "Flow Injection Analysis Protocol",
+                            "fields": [
+                                "FIA Instrument"
+                            ]
+                        },
+                        "Mass spectrometry": {
+                            "order": 2,
+                            "label": "Mass Spectrometry Protocol",
+                            "fields": [
+                                "Scan polarity",
+                                "Scan m/z range",
+                                "Instrument",
+                                "Ion source",
+                                "Mass analyzer"
+                            ]
+                        }
                     }
                 },
                 "DI-MS": {
@@ -758,16 +816,24 @@
                         "termSourceRef": ""
                     },
                     "assayFileDefaultValues": {
-                        "Direct infusion": [
-                            "DI Instrument"
-                        ],
-                        "Mass spectrometry": [
-                            "Scan polarity",
-                            "Scan m/z range",
-                            "Instrument",
-                            "Ion source",
-                            "Mass analyzer"
-                        ]
+                        "Direct infusion": {
+                            "order": 1,
+                            "label": "Direct infusion Protocol",
+                            "fields": [
+                                "DI Instrument"
+                            ]
+                        },
+                        "Mass spectrometry": {
+                            "order": 2,
+                            "label": "Mass Spectrometry Protocol",
+                            "fields": [
+                                "Scan polarity",
+                                "Scan m/z range",
+                                "Instrument",
+                                "Ion source",
+                                "Mass analyzer"
+                            ]
+                        }
                     }
                 },
                 "CE-MS": {
@@ -780,18 +846,26 @@
                         "termSourceRef": "OBI"
                     },
                     "assayFileDefaultValues": {
-                        "Capillary Electrophoresis": [
-                            "CE Instrument",
-                            "Column model",
-                            "Column type"
-                        ],
-                        "Mass spectrometry": [
-                            "Scan polarity",
-                            "Scan m/z range",
-                            "Instrument",
-                            "Ion source",
-                            "Mass analyzer"
-                        ]
+                        "Capillary Electrophoresis": {
+                            "order": 1,
+                            "label": "Capillary Electrophoresis Protocol",
+                            "fields": [
+                                "CE Instrument",
+                                "Column model",
+                                "Column type"
+                            ]
+                        },
+                        "Mass spectrometry": {
+                            "order": 2,
+                            "label": "Mass Spectrometry Protocol",
+                            "fields": [
+                                "Scan polarity",
+                                "Scan m/z range",
+                                "Instrument",
+                                "Ion source",
+                                "Mass analyzer"
+                            ]
+                        }
                     }
                 },
                 "MS": {
@@ -804,13 +878,17 @@
                         "termSourceRef": "OBI"
                     },
                     "assayFileDefaultValues": {
-                        "Mass spectrometry": [
-                            "Scan polarity",
-                            "Scan m/z range",
-                            "Instrument",
-                            "Ion source",
-                            "Mass analyzer"
-                        ]
+                        "Mass spectrometry": {
+                            "order": 1,
+                            "label": "Mass Spectrometry Protocol",
+                            "fields": [
+                                "Scan polarity",
+                                "Scan m/z range",
+                                "Instrument",
+                                "Ion source",
+                                "Mass analyzer"
+                            ]
+                        }
                     }
                 },
                 "NMR": {
@@ -823,19 +901,27 @@
                         "termSourceRef": "OBI"
                     },
                     "assayFileDefaultValues": {
-                        "NMR sample": [
-                            "NMR tube type",
-                            "Solvent",
-                            "Sample pH",
-                            "Temperature"
-                        ],
-                        "NMR spectroscopy": [
-                            "Instrument",
-                            "NMR Probe",
-                            "Number of transients",
-                            "Pulse sequence name",
-                            "Magnetic field strength"
-                        ]
+                        "NMR sample": {
+                            "order": 1,
+                            "label": "NMR sample Protocol",
+                            "fields": [
+                                "NMR tube type",
+                                "Solvent",
+                                "Sample pH",
+                                "Temperature"
+                            ]
+                        },
+                        "NMR spectroscopy": {
+                            "order": 2,
+                            "label": "NMR spectroscopy Protocol",
+                            "fields": [
+                                "Instrument",
+                                "NMR Probe",
+                                "Number of transients",
+                                "Pulse sequence name",
+                                "Magnetic field strength"
+                            ]
+                        }
                     }
                 },
                 "MRImaging": {
@@ -848,28 +934,40 @@
                         "termSourceRef": "OBI"
                     },
                     "assayFileDefaultValues": {
-                        "Magnetic resonance imaging": [
-                            "Instrument",
-                            "Tomography",
-                            "Temperature"
-                        ],
-                        "In vivo magnetic resonance spectroscopy": [
-                            "Spatial resolution",
-                            "Field of view",
-                            "Matrix",
-                            "Magnetic pulse sequence name",
-                            "Voxel size",
-                            "Localisation pulse sequence name",
-                            "Number of transients",
-                            "Water inhibition pulse sequence name",
-                            "Magnetic field strength"
-                        ],
-                        "In vivo magnetic resonance assay": [
-                            "NMR tube type",
-                            "Solvent",
-                            "Sample pH",
-                            "Temperature"
-                        ]
+                        "Magnetic resonance imaging": {
+                            "order": 1,
+                            "label": "Magnetic resonance imaging Protocol",
+                            "fields": [
+                                "Instrument",
+                                "Tomography",
+                                "Temperature"
+                            ]
+                        },
+                        "In vivo magnetic resonance spectroscopy": {
+                            "order": 2,
+                            "label": "In vivo magnetic resonance spectroscopy Protocol",
+                            "fields": [
+                                "Spatial resolution",
+                                "Field of view",
+                                "Matrix",
+                                "Magnetic pulse sequence name",
+                                "Voxel size",
+                                "Localisation pulse sequence name",
+                                "Number of transients",
+                                "Water inhibition pulse sequence name",
+                                "Magnetic field strength"
+                            ]
+                        },
+                        "In vivo magnetic resonance assay": {
+                            "order": 3,
+                            "label": "In vivo magnetic resonance assay Protocol",
+                            "fields": [
+                                "NMR tube type",
+                                "Solvent",
+                                "Sample pH",
+                                "Temperature"
+                            ]
+                        }
                     }
                 },
                 "MSImaging": {
@@ -882,96 +980,56 @@
                         "termSourceRef": ""
                     },
                     "assayFileDefaultValues": {
-                        "Preparation": [
-                            "Sample mounting",
-                            "Sample preservation",
-                            "Tissue modification",
-                            "Sectioning instrument",
-                            "Section thickness",
-                            "Matrix",
-                            "Matrix application"
-                        ],
-                        "Mass spectrometry": [
-                            "Scan polarity",
-                            "Scan m/z range",
-                            "Instrument",
-                            "Instrument manufacturer",
-                            "Ion source",
-                            "Mass analyzer",
-                            "Solvent",
-                            "Target material",
-                            "Spatial resolution",
-                            "Pixel size x",
-                            "Pixel size y",
-                            "Max count of pixel x",
-                            "Max count of pixel y",
-                            "Max dimension x",
-                            "Max dimension y",
-                            "Inlet type",
-                            "Detector",
-                            "Detector mode",
-                            "Resolving power",
-                            "Resolving power m/z",
-                            "Native spectrum identifier format",
-                            "Data file content",
-                            "Spectrum representation",
-                            "Raw data file format",
-                            "Instrument software",
-                            "Instrument software version",
-                            "Line scan direction",
-                            "Line scan sequence",
-                            "Scan pattern",
-                            "Scan type",
-                            "Number of scans"
-                        ],
-                        "Histology": [
-                            "Stain",
-                            "High-res image",
-                            "Low-res image"
-                        ]
-                    }
-                },
-                "GC-FID": {
-                    "order": 12,
-                    "label": "GC-FID",
-                    "description": "GC-FID",
-                    "ontologyTerm": {
-                        "term": "gas chromatography-flame ionisation detection assay",
-                        "termAccessionNumber": "",
-                        "termSourceRef": ""
-                    },
-                    "assayFileDefaultValues": {
-                        "Chromatography": [
-                            "Chromatography Instrument",
-                            "Autosampler model",
-                            "Column model",
-                            "Column type",
-                            "Guard column",
-                            "Detector",
-                            "Temperature"
-                        ]
-                    }
-                },
-                "LC-DAD": {
-                    "order": 13,
-                    "label": "LC-DAD",
-                    "description": "LC-DAD",
-                    "ontologyTerm": {
-                        "term": "liquid chromatography diode array detection assay",
-                        "termAccessionNumber": "",
-                        "termSourceRef": ""
-                    },
-                    "assayFileDefaultValues": {
-                        "Chromatography": [
-                            "Chromatography Instrument",
-                            "Autosampler model",
-                            "Column model",
-                            "Column type",
-                            "Guard column",
-                            "Detector",
-                            "Signal range",
-                            "Resolution"
-                        ]
+                        "Preparation": {
+                            "order": 1,
+                            "label": "Preparation Protocol",
+                            "fields": [
+                                "Sample mounting",
+                                "Sample preservation",
+                                "Tissue modification",
+                                "Sectioning instrument",
+                                "Section thickness",
+                                "Matrix",
+                                "Matrix application"
+                            ]
+                        },
+                        "Mass spectrometry": {
+                            "order": 2,
+                            "label": "Mass Spectrometry Protocol",
+                            "fields": [
+                                "Scan polarity",
+                                "Scan m/z range",
+                                "Instrument",
+                                "Instrument manufacturer",
+                                "Ion source",
+                                "Mass analyzer",
+                                "Solvent",
+                                "Target material",
+                                "Spatial resolution",
+                                "Pixel size x",
+                                "Pixel size y",
+                                "Max count of pixel x",
+                                "Max count of pixel y",
+                                "Max dimension x",
+                                "Max dimension y",
+                                "Inlet type",
+                                "Detector",
+                                "Detector mode",
+                                "Resolving power",
+                                "Resolving power m/z",
+                                "Native spectrum identifier format",
+                                "Data file content",
+                                "Spectrum representation",
+                                "Raw data file format",
+                                "Instrument software",
+                                "Instrument software version",
+                                "Line scan direction",
+                                "Line scan sequence",
+                                "Scan pattern",
+                                "Scan type",
+                                "Number of scans"
+                            ]
+                        }
                     }
                 }
             },
@@ -1151,20 +1209,28 @@
                         "termSourceRef": "OBI"
                     },
                     "assayFileDefaultValues": {
-                        "Chromatography": [
-                            "Chromatography Instrument",
-                            "Autosampler model",
-                            "Column model",
-                            "Column type",
-                            "Guard column"
-                        ],
-                        "Mass spectrometry": [
-                            "Scan polarity",
-                            "Scan m/z range",
-                            "Instrument",
-                            "Ion source",
-                            "Mass analyzer"
-                        ]
+                        "Chromatography": {
+                            "order": 1,
+                            "label": "Chromatography Protocol",
+                            "fields": [
+                                "Chromatography Instrument",
+                                "Autosampler model",
+                                "Column model",
+                                "Column type",
+                                "Guard column"
+                            ]
+                        },
+                        "Mass spectrometry": {
+                            "order": 2,
+                            "label": "Mass Spectrometry Protocol",
+                            "fields": [
+                                "Scan polarity",
+                                "Scan m/z range",
+                                "Instrument",
+                                "Ion source",
+                                "Mass analyzer"
+                            ]
+                        }
                     }
                 },
                 "GC-MS": {
@@ -1177,20 +1243,17 @@
                         "termSourceRef": "OBI"
                     },
                     "assayFileDefaultValues": {
-                        "Chromatography": [
-                            "Chromatography Instrument",
-                            "Autosampler model",
-                            "Column model",
-                            "Column type",
-                            "Guard column"
-                        ],
-                        "Mass spectrometry": [
-                            "Scan polarity",
-                            "Scan m/z range",
-                            "Instrument",
-                            "Ion source",
-                            "Mass analyzer"
-                        ]
+                        "Chromatography": {
+                            "order": 1,
+                            "label": "Chromatography Protocol",
+                            "fields": [
+                                "Chromatography Instrument",
+                                "Autosampler model",
+                                "Column model",
+                                "Column type",
+                                "Guard column"
+                            ]
+                        }
                     }
                 },
                 "GCxGC-MS": {
@@ -1203,22 +1266,19 @@
                         "termSourceRef": ""
                     },
                     "assayFileDefaultValues": {
-                        "Chromatography": [
-                            "Chromatography Instrument",
-                            "Autosampler model",
-                            "Column model 1",
-                            "Column type 1",
-                            "Column model 2",
-                            "Column type 2",
-                            "Guard column"
-                        ],
-                        "Mass spectrometry": [
-                            "Scan polarity",
-                            "Scan m/z range",
-                            "Instrument",
-                            "Ion source",
-                            "Mass analyzer"
-                        ]
+                        "Chromatography": {
+                            "order": 1,
+                            "label": "Chromatography Protocol",
+                            "fields": [
+                                "Chromatography Instrument",
+                                "Autosampler model",
+                                "Column model 1",
+                                "Column type 1",
+                                "Column model 2",
+                                "Column type 2",
+                                "Guard column"
+                            ]
+                        }
                     }
                 },
                 "MALDI-MS": {
@@ -1231,13 +1291,17 @@
                         "termSourceRef": ""
                     },
                     "assayFileDefaultValues": {
-                        "Mass spectrometry": [
-                            "Scan polarity",
-                            "Scan m/z range",
-                            "Instrument",
-                            "Ion source",
-                            "Mass analyzer"
-                        ]
+                        "Mass spectrometry": {
+                            "order": 1,
+                            "label": "Mass Spectrometry Protocol",
+                            "fields": [
+                                "Scan polarity",
+                                "Scan m/z range",
+                                "Instrument",
+                                "Ion source",
+                                "Mass analyzer"
+                            ]
+                        }
                     }
                 },
                 "FIA-MS": {
@@ -1250,16 +1314,24 @@
                         "termSourceRef": ""
                     },
                     "assayFileDefaultValues": {
-                        "Flow Injection Analysis": [
-                            "FIA Instrument"
-                        ],
-                        "Mass spectrometry": [
-                            "Scan polarity",
-                            "Scan m/z range",
-                            "Instrument",
-                            "Ion source",
-                            "Mass analyzer"
-                        ]
+                        "Flow Injection Analysis": {
+                            "order": 1,
+                            "label": "Flow Injection Analysis Protocol",
+                            "fields": [
+                                "FIA Instrument"
+                            ]
+                        },
+                        "Mass spectrometry": {
+                            "order": 2,
+                            "label": "Mass Spectrometry Protocol",
+                            "fields": [
+                                "Scan polarity",
+                                "Scan m/z range",
+                                "Instrument",
+                                "Ion source",
+                                "Mass analyzer"
+                            ]
+                        }
                     }
                 },
                 "DI-MS": {
@@ -1272,16 +1344,24 @@
                         "termSourceRef": ""
                     },
                     "assayFileDefaultValues": {
-                        "Direct infusion": [
-                            "DI Instrument"
-                        ],
-                        "Mass spectrometry": [
-                            "Scan polarity",
-                            "Scan m/z range",
-                            "Instrument",
-                            "Ion source",
-                            "Mass analyzer"
-                        ]
+                        "Direct infusion": {
+                            "order": 1,
+                            "label": "Direct infusion Protocol",
+                            "fields": [
+                                "DI Instrument"
+                            ]
+                        },
+                        "Mass spectrometry": {
+                            "order": 2,
+                            "label": "Mass Spectrometry Protocol",
+                            "fields": [
+                                "Scan polarity",
+                                "Scan m/z range",
+                                "Instrument",
+                                "Ion source",
+                                "Mass analyzer"
+                            ]
+                        }
                     }
                 },
                 "CE-MS": {
@@ -1294,18 +1374,26 @@
                         "termSourceRef": "OBI"
                     },
                     "assayFileDefaultValues": {
-                        "Capillary Electrophoresis": [
-                            "CE Instrument",
-                            "Column model",
-                            "Column type"
-                        ],
-                        "Mass spectrometry": [
-                            "Scan polarity",
-                            "Scan m/z range",
-                            "Instrument",
-                            "Ion source",
-                            "Mass analyzer"
-                        ]
+                        "Capillary Electrophoresis": {
+                            "order": 1,
+                            "label": "Capillary Electrophoresis Protocol",
+                            "fields": [
+                                "CE Instrument",
+                                "Column model",
+                                "Column type"
+                            ]
+                        },
+                        "Mass spectrometry": {
+                            "order": 2,
+                            "label": "Mass Spectrometry Protocol",
+                            "fields": [
+                                "Scan polarity",
+                                "Scan m/z range",
+                                "Instrument",
+                                "Ion source",
+                                "Mass analyzer"
+                            ]
+                        }
                     }
                 },
                 "MS": {
@@ -1318,13 +1406,17 @@
                         "termSourceRef": "OBI"
                     },
                     "assayFileDefaultValues": {
-                        "Mass spectrometry": [
-                            "Scan polarity",
-                            "Scan m/z range",
-                            "Instrument",
-                            "Ion source",
-                            "Mass analyzer"
-                        ]
+                        "Mass spectrometry": {
+                            "order": 1,
+                            "label": "Mass Spectrometry Protocol",
+                            "fields": [
+                                "Scan polarity",
+                                "Scan m/z range",
+                                "Instrument",
+                                "Ion source",
+                                "Mass analyzer"
+                            ]
+                        }
                     }
                 },
                 "NMR": {
@@ -1337,19 +1429,27 @@
                         "termSourceRef": "OBI"
                     },
                     "assayFileDefaultValues": {
-                        "NMR sample": [
-                            "NMR tube type",
-                            "Solvent",
-                            "Sample pH",
-                            "Temperature"
-                        ],
-                        "NMR spectroscopy": [
-                            "Instrument",
-                            "NMR Probe",
-                            "Number of transients",
-                            "Pulse sequence name",
-                            "Magnetic field strength"
-                        ]
+                        "NMR sample": {
+                            "order": 1,
+                            "label": "NMR sample Protocol",
+                            "fields": [
+                                "NMR tube type",
+                                "Solvent",
+                                "Sample pH",
+                                "Temperature"
+                            ]
+                        },
+                        "NMR spectroscopy": {
+                            "order": 2,
+                            "label": "NMR spectroscopy Protocol",
+                            "fields": [
+                                "Instrument",
+                                "NMR Probe",
+                                "Number of transients",
+                                "Pulse sequence name",
+                                "Magnetic field strength"
+                            ]
+                        }
                     }
                 },
                 "MRImaging": {
@@ -1362,28 +1462,40 @@
                         "termSourceRef": "OBI"
                     },
                     "assayFileDefaultValues": {
-                        "Magnetic resonance imaging": [
-                            "Instrument",
-                            "Tomography",
-                            "Temperature"
-                        ],
-                        "In vivo magnetic resonance spectroscopy": [
-                            "Spatial resolution",
-                            "Field of view",
-                            "Matrix",
-                            "Magnetic pulse sequence name",
-                            "Voxel size",
-                            "Localisation pulse sequence name",
-                            "Number of transients",
-                            "Water inhibition pulse sequence name",
-                            "Magnetic field strength"
-                        ],
-                        "In vivo magnetic resonance assay": [
-                            "NMR tube type",
-                            "Solvent",
-                            "Sample pH",
-                            "Temperature"
-                        ]
+                        "Magnetic resonance imaging": {
+                            "order": 1,
+                            "label": "Magnetic resonance imaging Protocol",
+                            "fields": [
+                                "Instrument",
+                                "Tomography",
+                                "Temperature"
+                            ]
+                        },
+                        "In vivo magnetic resonance spectroscopy": {
+                            "order": 2,
+                            "label": "In vivo magnetic resonance spectroscopy Protocol",
+                            "fields": [
+                                "Spatial resolution",
+                                "Field of view",
+                                "Matrix",
+                                "Magnetic pulse sequence name",
+                                "Voxel size",
+                                "Localisation pulse sequence name",
+                                "Number of transients",
+                                "Water inhibition pulse sequence name",
+                                "Magnetic field strength"
+                            ]
+                        },
+                        "In vivo magnetic resonance assay": {
+                            "order": 3,
+                            "label": "In vivo magnetic resonance assay Protocol",
+                            "fields": [
+                                "NMR tube type",
+                                "Solvent",
+                                "Sample pH",
+                                "Temperature"
+                            ]
+                        }
                     }
                 },
                 "MSImaging": {
@@ -1396,96 +1508,56 @@
                         "termSourceRef": ""
                     },
                     "assayFileDefaultValues": {
-                        "Preparation": [
-                            "Sample mounting",
-                            "Sample preservation",
-                            "Tissue modification",
-                            "Sectioning instrument",
-                            "Section thickness",
-                            "Matrix",
-                            "Matrix application"
-                        ],
-                        "Mass spectrometry": [
-                            "Scan polarity",
-                            "Scan m/z range",
-                            "Instrument",
-                            "Instrument manufacturer",
-                            "Ion source",
-                            "Mass analyzer",
-                            "Solvent",
-                            "Target material",
-                            "Spatial resolution",
-                            "Pixel size x",
-                            "Pixel size y",
-                            "Max count of pixel x",
-                            "Max count of pixel y",
-                            "Max dimension x",
-                            "Max dimension y",
-                            "Inlet type",
-                            "Detector",
-                            "Detector mode",
-                            "Resolving power",
-                            "Resolving power m/z",
-                            "Native spectrum identifier format",
-                            "Data file content",
-                            "Spectrum representation",
-                            "Raw data file format",
-                            "Instrument software",
-                            "Instrument software version",
-                            "Line scan direction",
-                            "Line scan sequence",
-                            "Scan pattern",
-                            "Scan type",
-                            "Number of scans"
-                        ],
-                        "Histology": [
-                            "Stain",
-                            "High-res image",
-                            "Low-res image"
-                        ]
-                    }
-                },
-                "GC-FID": {
-                    "order": 12,
-                    "label": "GC-FID",
-                    "description": "GC-FID",
-                    "ontologyTerm": {
-                        "term": "gas chromatography-flame ionisation detection assay",
-                        "termAccessionNumber": "",
-                        "termSourceRef": ""
-                    },
-                    "assayFileDefaultValues": {
-                        "Chromatography": [
-                            "Chromatography Instrument",
-                            "Autosampler model",
-                            "Column model",
-                            "Column type",
-                            "Guard column",
-                            "Detector",
-                            "Temperature"
-                        ]
-                    }
-                },
-                "LC-DAD": {
-                    "order": 13,
-                    "label": "LC-DAD",
-                    "description": "LC-DAD",
-                    "ontologyTerm": {
-                        "term": "liquid chromatography diode array detection assay",
-                        "termAccessionNumber": "",
-                        "termSourceRef": ""
-                    },
-                    "assayFileDefaultValues": {
-                        "Chromatography": [
-                            "Chromatography Instrument",
-                            "Autosampler model",
-                            "Column model",
-                            "Column type",
-                            "Guard column",
-                            "Detector",
-                            "Signal range",
-                            "Resolution"
-                        ]
+                        "Preparation": {
+                            "order": 1,
+                            "label": "Preparation Protocol",
+                            "fields": [
+                                "Sample mounting",
+                                "Sample preservation",
+                                "Tissue modification",
+                                "Sectioning instrument",
+                                "Section thickness",
+                                "Matrix",
+                                "Matrix application"
+                            ]
+                        },
+                        "Mass spectrometry": {
+                            "order": 2,
+                            "label": "Mass Spectrometry Protocol",
+                            "fields": [
+                                "Scan polarity",
+                                "Scan m/z range",
+                                "Instrument",
+                                "Instrument manufacturer",
+                                "Ion source",
+                                "Mass analyzer",
+                                "Solvent",
+                                "Target material",
+                                "Spatial resolution",
+                                "Pixel size x",
+                                "Pixel size y",
+                                "Max count of pixel x",
+                                "Max count of pixel y",
+                                "Max dimension x",
+                                "Max dimension y",
+                                "Inlet type",
+                                "Detector",
+                                "Detector mode",
+                                "Resolving power",
+                                "Resolving power m/z",
+                                "Native spectrum identifier format",
+                                "Data file content",
+                                "Spectrum representation",
+                                "Raw data file format",
+                                "Instrument software",
+                                "Instrument software version",
+                                "Line scan direction",
+                                "Line scan sequence",
+                                "Scan pattern",
+                                "Scan type",
+                                "Number of scans"
+                            ]
+                        }
                     }
                 }
             },

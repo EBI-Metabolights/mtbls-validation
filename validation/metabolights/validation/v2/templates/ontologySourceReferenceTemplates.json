@@ -563,7 +563,7 @@
         "FBbi": {
             "sourceName": "FBbi",
             "sourceFile": "http://purl.obolibrary.org/obo/fbbi.owl",
-            "sourceVersion": "",
+            "sourceVersion": "2026-01-23",
             "sourceDescription": "Biological Imaging Methods Ontology",
             "sourceDetails": "A structured controlled vocabulary of sample preparation, visualization and imaging methods used in biomedical research."
         },
@@ -1396,7 +1396,7 @@
         "PHIPO": {
             "sourceName": "PHIPO",
             "sourceFile": "http://purl.obolibrary.org/obo/phipo.owl",
-            "sourceVersion": "2025-10-29",
+            "sourceVersion": "2026-01-26",
             "sourceDescription": "Pathogen Host Interactions Phenotype Ontology",
             "sourceDetails": "Ontology of species-neutral phenotypes observed in pathogen-host interactions."
         },
@@ -1536,7 +1536,7 @@
         "RO": {
             "sourceName": "RO",
             "sourceFile": "http://purl.obolibrary.org/obo/ro.owl",
-            "sourceVersion": "2025-06-24",
+            "sourceVersion": "2025-12-17",
             "sourceDescription": "Relation Ontology",
             "sourceDetails": "Relationship types shared across multiple ontologies"
         },
@@ -1816,7 +1816,7 @@
         "VO": {
             "sourceName": "VO",
             "sourceFile": "http://purl.obolibrary.org/obo/vo.owl",
-            "sourceVersion": "2025-12-03",
+            "sourceVersion": "2026-01-23",
             "sourceDescription": "Vaccine Ontology",
             "sourceDetails": "The Vaccine Ontology (VO) is a community-based biomedical ontology in the domain of vaccine and vaccination. VO aims to standardize vaccine types and annotations, integrate various vaccine data, and support computer-assisted reasoning. The VO supports basic vaccine R&D and clinical vaccine usage. VO is being developed as a community-based ontology with support and collaborations from the vaccine and bio-ontology communities."
         },
@@ -1830,7 +1830,7 @@
         "VT": {
             "sourceName": "VT",
             "sourceFile": "http://purl.obolibrary.org/obo/vt.owl",
-            "sourceVersion": "2026-01-13",
+            "sourceVersion": "2026-01-21",
             "sourceDescription": "The Vertebrate Trait Ontology",
             "sourceDetails": "The Vertebrate Trait Ontology is a controlled vocabulary for the description of traits (measurable or observable characteristics) pertaining to the morphology, physiology, or development of vertebrate organisms."
         },
