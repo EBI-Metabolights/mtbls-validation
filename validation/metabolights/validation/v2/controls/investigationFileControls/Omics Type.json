@@ -21,7 +21,11 @@
             "unexpectedTermEnforcementLevel": "required",
             "validationType": "selected-ontology-term",
             "constraints": {},
-            "defaultValue": null,
+            "defaultValue": {
+                "term": "Metabolomics",
+                "termAccessionNumber": "http://edamontology.org/topic_3172",
+                "termSourceRef": "EDAM"
+            },
             "allowedMissingOntologyTerms": [],
             "allowedOtherSources": [],
             "allowedPlaceholders": [],
@@ -68,7 +72,11 @@
             "unexpectedTermEnforcementLevel": "required",
             "validationType": "selected-ontology-term",
             "constraints": {},
-            "defaultValue": null,
+            "defaultValue": {
+                "term": "Metabolomics",
+                "termAccessionNumber": "http://edamontology.org/topic_3172",
+                "termSourceRef": "EDAM"
+            },
             "allowedMissingOntologyTerms": [],
             "allowedOtherSources": [],
             "allowedPlaceholders": [],

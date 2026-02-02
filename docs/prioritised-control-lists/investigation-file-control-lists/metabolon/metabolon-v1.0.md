@@ -329,9 +329,9 @@
 
 | # |Term  | Term Source  | Term Accession |
 |---|------|--------------|----------------|
-| 1 | published | EFO | http://www\.ebi\.ac\.uk/efo/EFO\_0001796 |
+| 1 | in preparation | EFO | http://www\.ebi\.ac\.uk/efo/EFO\_0001795 |
 | 2 | submitted | EFO | http://www\.ebi\.ac\.uk/efo/EFO\_0001794 |
-| 3 | in preparation | EFO | http://www\.ebi\.ac\.uk/efo/EFO\_0001795 |
-| 4 | preprint | EFO | http://www\.ebi\.ac\.uk/efo/EFO\_0010558 |
+| 3 | preprint | EFO | http://www\.ebi\.ac\.uk/efo/EFO\_0010558 |
+| 4 | published | EFO | http://www\.ebi\.ac\.uk/efo/EFO\_0001796 |
 | 5 | Learning material | EDAM | http://edamontology\.org/data\_3669 |
 
