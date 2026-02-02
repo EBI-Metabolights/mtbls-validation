@@ -1,7 +1,7 @@
 {
     "rules": {
         "validation_version": "2.2.0",
-        "created_at": "2026-02-02T12:01:50.244367+00:00",
+        "created_at": "2026-02-02T18:51:27.877794+00:00",
         "violations": [
             {
                 "rule_id": "rule___100_100_001_01",
@@ -903,6 +903,14 @@
                 "rule_id": "rule_i_100_300_004_02",
                 "title": "Study abstract/description contains only template message.",
                 "description": "Study abstract/description should be updated. Do not use template message 'Please update the study abstract/description'.",
+                "type": "ERROR",
+                "section": "investigation",
+                "priority": "HIGH"
+            },
+            {
+                "rule_id": "rule_i_100_300_004_03",
+                "title": "Unexpected characters in Study Description.",
+                "description": "Study title should contain only printable characters.",
                 "type": "ERROR",
                 "section": "investigation",
                 "priority": "HIGH"

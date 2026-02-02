@@ -130,8 +130,8 @@
 
 | # |Term  | Term Source  | Term Accession |
 |---|------|--------------|----------------|
-| 1 | targeted metabolite profiling | MSIO | http://purl\.obolibrary\.org/obo/MSIO\_0000100 |
-| 2 | untargeted metabolite profiling | MSIO | http://purl\.obolibrary\.org/obo/MSIO\_0000101 |
+| 1 | untargeted metabolite profiling | MSIO | http://purl\.obolibrary\.org/obo/MSIO\_0000101 |
+| 2 | targeted metabolite profiling | MSIO | http://purl\.obolibrary\.org/obo/MSIO\_0000100 |
 
 ## Study Protocol Components Type
 

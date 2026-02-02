@@ -306,16 +306,16 @@ rule_f_400_100_001_02 contains result if {
 #  section: files.general
 rule_f_400_100_001_03 contains result if {
 	referenced_files := {referenced_file |
-		some filename, table_file in assays
+		some assay_file, table_file in input.assays
 		some j, study in input.investigation.studies
 
 		some assay in study.studyAssays.assays
-		assay.fileName == filename
+		assay.fileName == assay_file
 
 		some header in table_file.table.headers
 		endswith(header.columnHeader, " File")
-		column_name = header.columnName
-		some row_value in table_file.table[column_name]
+		column_name := header.columnName
+		some row_value in table_file.table.data[column_name]
 		referenced_file := row_value
 		count(referenced_file) > 0
 	}

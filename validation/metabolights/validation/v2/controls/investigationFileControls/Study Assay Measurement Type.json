@@ -27,13 +27,13 @@
             "allowedPlaceholders": [],
             "terms": [
                 {
-                    "term": "targeted metabolite profiling",
-                    "termAccessionNumber": "http://purl.obolibrary.org/obo/MSIO_0000100",
+                    "term": "untargeted metabolite profiling",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/MSIO_0000101",
                     "termSourceRef": "MSIO"
                 },
                 {
-                    "term": "untargeted metabolite profiling",
-                    "termAccessionNumber": "http://purl.obolibrary.org/obo/MSIO_0000101",
+                    "term": "targeted metabolite profiling",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/MSIO_0000100",
                     "termSourceRef": "MSIO"
                 }
             ],
@@ -67,9 +67,9 @@
             "allowedPlaceholders": [],
             "terms": [
                 {
-                    "term": "metabolite profiling assay",
-                    "termAccessionNumber": "http://purl.obolibrary.org/obo/OBI_0000366",
-                    "termSourceRef": "OBI"
+                    "term": "untargeted metabolite profiling",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/MSIO_0000101",
+                    "termSourceRef": "MSIO"
                 },
                 {
                     "term": "targeted metabolite profiling",
@@ -77,9 +77,9 @@
                     "termSourceRef": "MSIO"
                 },
                 {
-                    "term": "untargeted metabolite profiling",
-                    "termAccessionNumber": "http://purl.obolibrary.org/obo/MSIO_0000101",
-                    "termSourceRef": "MSIO"
+                    "term": "metabolite profiling assay",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/OBI_0000366",
+                    "termSourceRef": "OBI"
                 }
             ],
             "unexpectedTerms": []
