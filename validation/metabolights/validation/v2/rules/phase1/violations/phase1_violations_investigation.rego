@@ -294,7 +294,7 @@ rule_i_100_300_003_02 contains result if {
 	matches_set := {x | x := matches[_]}
 	count(matches_set) > 0
 	matches_set_str = ""
-	msg := sprintf("Non printible characters in study title '%v' of study %v: Non accepted char list: '%v'", [study.title, study.identifier, matches_set_str])
+	msg := sprintf("Non printable characters in study title '%v' of study %v: Non accepted char list: '%v'", [study.title, study.identifier, matches_set_str])
 	source := input.investigationFilePath
 	result := f.format(rego.metadata.rule(), msg, source)
 }
@@ -343,6 +343,27 @@ rule_i_100_300_004_02 contains result if {
 	some idx, study in input.investigation.studies
 	startswith(lower(study.description), "please update")
 	msg := sprintf("Study (index %v) abstract/description starts with template message. value: '%v'", [idx, study.description])
+	source := input.investigationFilePath
+	result := f.format(rego.metadata.rule(), msg, source)
+}
+
+# METADATA
+# title: Unexpected characters in Study Description.
+# description: Study title should contain only printable characters.
+# custom:
+#  rule_id: rule_i_100_300_004_03
+#  type: ERROR
+#  priority: HIGH
+#  section: investigation.studies
+rule_i_100_300_004_03 contains result if {
+	pattern := sprintf("[^%v]", [def1._ALLOWED_CHARS_PATTERN])
+	study := input.investigation.studies[i]
+	count(study.description) > 0
+	matches = regex.find_n(pattern, study.description, -1)
+	matches_set := {x | x := matches[_]}
+	count(matches_set) > 0
+	matches_set_str = ""
+	msg := sprintf("Non printable characters in study description '%v' of study %v: Non accepted char list: '%v'", [study.description, study.identifier, matches_set_str])
 	source := input.investigationFilePath
 	result := f.format(rego.metadata.rule(), msg, source)
 }
