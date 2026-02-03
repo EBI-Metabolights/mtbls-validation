@@ -22060,29 +22060,34 @@
                     }
                 },
                 "activeStudyDesignDescriptorCategories": {
-                    "disease": {
-                        "visible": true,
-                        "order": 1,
-                        "min": 0
-                    },
-                    "instrument": {
-                        "visible": true,
-                        "order": 2,
-                        "min": 1
-                    },
-                    "omics-type": {
-                        "visible": true,
-                        "order": 3,
-                        "min": 0
-                    },
                     "organism": {
                         "visible": true,
-                        "order": 4,
+                        "order": 1,
                         "min": 1
                     },
                     "organism-part": {
                         "visible": true,
+                        "order": 2,
+                        "min": 0
+                    },
+                    "disease": {
+                        "visible": true,
+                        "order": 3,
+                        "min": 0
+                    },
+                    "instrument": {
+                        "visible": true,
+                        "order": 4,
+                        "min": 1
+                    },
+                    "cell-type": {
+                        "visible": true,
                         "order": 5,
+                        "min": 1
+                    },
+                    "omics-type": {
+                        "visible": true,
+                        "order": 6,
                         "min": 0
                     }
                 },
@@ -22588,29 +22593,34 @@
                     }
                 },
                 "activeStudyDesignDescriptorCategories": {
-                    "disease": {
-                        "visible": true,
-                        "order": 1,
-                        "min": 0
-                    },
-                    "measurement-type": {
-                        "visible": true,
-                        "order": 2,
-                        "min": 0
-                    },
-                    "omics-type": {
-                        "visible": true,
-                        "order": 3,
-                        "min": 0
-                    },
                     "organism": {
                         "visible": true,
-                        "order": 4,
+                        "order": 1,
                         "min": 1
                     },
                     "organism-part": {
                         "visible": true,
+                        "order": 2,
+                        "min": 0
+                    },
+                    "disease": {
+                        "visible": true,
+                        "order": 3,
+                        "min": 0
+                    },
+                    "instrument": {
+                        "visible": true,
+                        "order": 4,
+                        "min": 1
+                    },
+                    "cell-type": {
+                        "visible": true,
                         "order": 5,
+                        "min": 1
+                    },
+                    "omics-type": {
+                        "visible": true,
+                        "order": 6,
                         "min": 0
                     }
                 },
