@@ -21162,14 +21162,7 @@
                     "label": "Cell Type",
                     "isaFileType": "sample",
                     "controlListKey": "Characteristics[Cell type]"
-                },
-                "core-facility: ": {
-                    "name": "core-facility",
-                    "label": "Core Facility or Laboratory",
-                    "isaFileType": "investigation",
-                    "controlListKey": "Organization"
                 }
-                
             },
             "defaultDescriptorSources": {
                 "submitter": {
@@ -22111,16 +22104,6 @@
                     "omics-type": {
                         "visible": true,
                         "order": 6,
-                        "min": 0
-                    },
-                    "measurement-type": {
-                        "visible": true,
-                        "order": 7,
-                        "min": 0
-                    },
-                    "core-facility": {
-                        "visible": true,
-                        "order": 8,
                         "min": 0
                     }
                 },

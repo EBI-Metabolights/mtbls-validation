@@ -339,6 +339,20 @@
 | 3 | Exposomics |  |  |
 | 4 | Fluxomics | EDAM | http://edamontology\.org/topic\_3955 |
 
+## Organization
+
+| Attribute | Value |
+|---|------|
+| Rule Name | Organization\-01 |
+| Rule Description |  |
+| Applicable Study Categories | All |
+| Applicable Template Names | All |
+| Applicable Template Versions | All |
+| Validation Type | ontology-term-in-selected-ontologies |
+| Ontologies [Ordered] | ROR |
+| Allowed Placeholders | \[MTBLS, http://www\.ebi\.ac\.uk/metabolights/ontology/placeholder\], \[, \] |
+| Allowed Other Sources | \[MTBLS, http://www\.ebi\.ac\.uk/metabolights/ontology/MTBLS\_\], \[wikidata, https://www\.wikidata\.org/wiki/\], \[ILX, http://uri\.interlex\.org/base/ilx\_\] |
+
 ## Study Publication Status
 
 | Attribute | Value |
