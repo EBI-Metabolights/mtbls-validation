@@ -83,24 +83,34 @@
         }
     },
     "measurementTypes": {
-        "targeted": {
+        "untargeted": {
             "order": 1,
-            "label": "targeted profiling",
-            "description": "targeted profiling",
+            "label": "untargeted analysis",
+            "description": "targeted analysis",
             "ontologyTerm": {
-                "term": "targeted metabolite profiling",
-                "termAccessionNumber": "http://purl.obolibrary.org/obo/MSIO_0000100",
-                "termSourceRef": "MSIO"
+                "term": "untargeted analysis",
+                "termAccessionNumber": "http://purl.obolibrary.org/obo/MS_1003904",
+                "termSourceRef": "MS"
             }
         },
-        "untargeted": {
+        "targeted": {
             "order": 2,
-            "label": "untargeted profiling",
-            "description": "untargeted profiling",
+            "label": "targeted analysis",
+            "description": "targeted analysis",
             "ontologyTerm": {
-                "term": "untargeted metabolite profiling",
-                "termAccessionNumber": "http://purl.obolibrary.org/obo/MSIO_0000101",
-                "termSourceRef": "MSIO"
+                "term": "targeted analysis",
+                "termAccessionNumber": "http://purl.obolibrary.org/obo/MS_1003905",
+                "termSourceRef": "MS"
+            }
+        },
+        "semi-targeted": {
+            "order": 3,
+            "label": "semi-targeted analysis",
+            "description": "semi-targeted analysis",
+            "ontologyTerm": {
+                "term": "semi-targeted analysis",
+                "termAccessionNumber": "http://purl.obolibrary.org/obo/MS_1003906",
+                "termSourceRef": "MS"
             }
         }
     },
@@ -181,6 +191,11 @@
                 "termSourceRef": "EDAM"
             },
             "workflows": {
+                "term": "Workflows",
+                "termAccessionNumber": "http://edamontology.org/topic_0769",
+                "termSourceRef": "EDAM"
+            },
+            "workflow-status-update": {
                 "term": "Workflows",
                 "termAccessionNumber": "http://edamontology.org/topic_0769",
                 "termSourceRef": "EDAM"
@@ -651,7 +666,8 @@
             ],
             "activeMeasurementTypes": [
                 "untargeted",
-                "targeted"
+                "targeted",
+                "semi-targeted"
             ],
             "activeOmicsTypes": [
                 "metabolomics",
@@ -1184,7 +1200,8 @@
             ],
             "activeMeasurementTypes": [
                 "untargeted",
-                "targeted"
+                "targeted",
+                "semi-targeted"
             ],
             "activeOmicsTypes": [
                 "metabolomics",

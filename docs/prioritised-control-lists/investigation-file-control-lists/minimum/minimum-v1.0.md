@@ -92,6 +92,33 @@
 | 9 | Aging | NCIT | http://purl\.obolibrary\.org/obo/NCIT\_C16269 |
 | 10 | cancer | MONDO | http://purl\.obolibrary\.org/obo/MONDO\_0004992 |
 
+## Assay Descriptor
+
+| Attribute | Value |
+|---|------|
+| Rule Name | Assay Design Descriptor\-01 |
+| Rule Description |  |
+| Applicable Study Categories | ms\-mhd\-enabled, ms\-mhd\-legacy, other |
+| Applicable Template Names | All |
+| Applicable Template Versions | All |
+| Validation Type | any-ontology-term |
+| Recommended Ontologies [Ordered] | MS, EFO, MSIO, NCIT, MTBLS, CHEBI, CHMO, MONDO, GO, MESH |
+| Allowed Placeholders | \[MTBLS, http://www\.ebi\.ac\.uk/metabolights/ontology/placeholder\], \[, \] |
+| Allowed Other Sources | \[MTBLS, http://www\.ebi\.ac\.uk/metabolights/ontology/MTBLS\_\], \[wikidata, https://www\.wikidata\.org/wiki/\], \[ILX, http://uri\.interlex\.org/base/ilx\_\] |
+| Ontology Term Enforcement Level | recommended |
+
+### Recommended Terms
+
+| # |Term  | Term Source  | Term Accession |
+|---|------|--------------|----------------|
+| 1 | data\-independent acquisition | MS | http://purl\.obolibrary\.org/obo/MS\_1003215 |
+| 2 | data\-dependent acquisition | MS | http://purl\.obolibrary\.org/obo/MS\_1003221 |
+| 3 | tandem mass spectrometry | CHMO | http://purl\.obolibrary\.org/obo/CHMO\_0000575 |
+| 4 | mzML format | MS | http://purl\.obolibrary\.org/obo/MS\_1000584 |
+| 5 | Thermo RAW format | MS | http://purl\.obolibrary\.org/obo/MS\_1000563 |
+| 6 | Waters raw format | MS | http://purl\.obolibrary\.org/obo/MS\_1000526 |
+| 7 | ABI WIFF format | MS | http://purl\.obolibrary\.org/obo/MS\_1000562 |
+
 ## Study Person Roles
 
 | Attribute | Value |

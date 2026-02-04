@@ -1,0 +1,103 @@
+{
+    "Assay Descriptor": [
+        {
+            "ruleName": "Assay Design Descriptor-01",
+            "fieldName": "Assay Design Descriptor",
+            "ontologies": [
+                "MS",
+                "EFO",
+                "MSIO",
+                "NCIT",
+                "MTBLS",
+                "CHEBI",
+                "CHMO",
+                "MONDO",
+                "GO",
+                "MESH"
+            ],
+            "allowedParentOntologyTerms": null,
+            "description": "",
+            "selectionCriteria": {
+                "isaFileType": "investigation",
+                "studyCreatedAtOrAfter": null,
+                "studyCreatedBefore": null,
+                "studyCategoryFilter": [
+                    "ms-mhd-enabled",
+                    "ms-mhd-legacy",
+                    "other"
+                ],
+                "templateVersionFilter": null,
+                "isaFileTemplateNameFilter": null,
+                "linkedFieldAndValueFilter": null
+            },
+            "termEnforcementLevel": "recommended",
+            "unexpectedTermEnforcementLevel": "recommended",
+            "validationType": "any-ontology-term",
+            "constraints": {},
+            "defaultValue": null,
+            "allowedMissingOntologyTerms": [],
+            "allowedOtherSources": [
+                {
+                    "sourceLabel": "MTBLS",
+                    "accessionPrefix": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_"
+                },
+                {
+                    "sourceLabel": "wikidata",
+                    "accessionPrefix": "https://www.wikidata.org/wiki/"
+                },
+                {
+                    "sourceLabel": "ILX",
+                    "accessionPrefix": "http://uri.interlex.org/base/ilx_"
+                }
+            ],
+            "allowedPlaceholders": [
+                {
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/placeholder",
+                    "termSourceRef": "MTBLS"
+                },
+                {
+                    "termAccessionNumber": "",
+                    "termSourceRef": ""
+                }
+            ],
+            "terms": [
+                {
+                    "term": "data-independent acquisition",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/MS_1003215",
+                    "termSourceRef": "MS"
+                },
+                {
+                    "term": "data-dependent acquisition",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/MS_1003221",
+                    "termSourceRef": "MS"
+                },
+                {
+                    "term": "tandem mass spectrometry",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/CHMO_0000575",
+                    "termSourceRef": "CHMO"
+                },
+                {
+                    "term": "mzML format",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/MS_1000584",
+                    "termSourceRef": "MS"
+                },
+                {
+                    "term": "Thermo RAW format",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/MS_1000563",
+                    "termSourceRef": "MS"
+                },
+                {
+                    "term": "Waters raw format",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/MS_1000526",
+                    "termSourceRef": "MS"
+                },
+                {
+                    "term": "ABI WIFF format",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/MS_1000562",
+                    "termSourceRef": "MS"
+                }
+            ],
+            "unexpectedTerms": []
+        }
+    ]
+}
