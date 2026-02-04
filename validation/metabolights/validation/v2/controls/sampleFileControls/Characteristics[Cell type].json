@@ -56,7 +56,28 @@
                 }
             ],
             "allowedPlaceholders": [],
-            "terms": [],
+            "terms": [
+                {
+                    "term": "macrophage",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/CL_0000235",
+                    "termSourceRef": "CL"
+                },
+                {
+                    "term": "hepatocyte",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/CL_0000182",
+                    "termSourceRef": "CL"
+                },
+                {
+                    "term": "T cell",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/CL_0000084",
+                    "termSourceRef": "CL"
+                },
+                {
+                    "term": "kidney cell",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/CL_1000497",
+                    "termSourceRef": "CL"
+                }
+            ],
             "unexpectedTerms": []
         },
         {
@@ -104,7 +125,28 @@
                 }
             ],
             "allowedPlaceholders": [],
-            "terms": [],
+            "terms": [
+                {
+                    "term": "macrophage",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/CL_0000235",
+                    "termSourceRef": "CL"
+                },
+                {
+                    "term": "hepatocyte",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/CL_0000182",
+                    "termSourceRef": "CL"
+                },
+                {
+                    "term": "T cell",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/CL_0000084",
+                    "termSourceRef": "CL"
+                },
+                {
+                    "term": "kidney cell",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/CL_1000497",
+                    "termSourceRef": "CL"
+                }
+            ],
             "unexpectedTerms": []
         }
     ]

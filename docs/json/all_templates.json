@@ -22094,12 +22094,12 @@
                     "instrument": {
                         "visible": true,
                         "order": 4,
-                        "min": 1
+                        "min": 0
                     },
                     "cell-type": {
                         "visible": true,
                         "order": 5,
-                        "min": 1
+                        "min": 0
                     },
                     "omics-type": {
                         "visible": true,
@@ -22628,12 +22628,12 @@
                     "instrument": {
                         "visible": true,
                         "order": 4,
-                        "min": 1
+                        "min": 0
                     },
                     "cell-type": {
                         "visible": true,
                         "order": 5,
-                        "min": 1
+                        "min": 0
                     },
                     "omics-type": {
                         "visible": true,
