@@ -32,6 +32,7 @@
                 "studyCategory": "",
                 "templateVersion": "",
                 "sampleTemplate": "",
+                "studyTemplate": "",
                 "mhdAccession": "",
                 "mhdModelVersion": "",
                 "createdAt": "",
@@ -40,6 +41,7 @@
                 "revisionComment": "",
                 "datasetLicense": "",
                 "funders": [],
+                "relatedDatasets": [],
                 "characteristicTypes": [],
                 "studyDesignDescriptors": {
                     "comments": [],
@@ -103,6 +105,7 @@
         "datasetLicenseVersion": "",
         "datasetLicenseUrl": "",
         "sampleTemplate": "",
+        "studyTemplate": "",
         "studyCategory": 0,
         "templateVersion": "",
         "reservedMhdAccession": "",
