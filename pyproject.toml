@@ -8,16 +8,16 @@ readme = "README.md"
 license = "Apache-2.0"
 dependencies = [
     "pydantic>=2.10.2",
-    "pandas>=2.2.3",
+    "pandas>=3.0.0",
     "openpyxl>=3.1.5",
-    "metabolights-utils>=1.4.0,<2",
+    "metabolights-utils>=1.4.18,<2",
     "pydantic2-to-typescript>=0.0.1",
     "jsonschema>=4.25.1",
     "pybreaker>=1.4.1",
     "redis>=7.0.1",
     "keyring>=25.7.0",
-    "mkdocs-material>=9.7.0",
-    "ruff>=0.14.6",
+    "mkdocs-material>=9.7.1",
+    "ruff>=0.15.0",
 ]
 
 [tool.hatch.build.targets.sdist]
