@@ -21149,6 +21149,13 @@
                     "isaFileType": "sample",
                     "controlListKey": "Characteristics[Organism part]"
                 },
+                "cell-type": {
+                    "name": "cell-type",
+                    "label": "Cell Type",
+                    "description": "",
+                    "isaFileType": "sample",
+                    "controlListKey": "Characteristics[Cell type]"
+                },
                 "omics-type": {
                     "name": "omics-type",
                     "label": "Omics Type",
@@ -21162,13 +21169,6 @@
                     "description": "",
                     "isaFileType": "investigation",
                     "controlListKey": "Study Assay Measurement Type"
-                },
-                "cell-type": {
-                    "name": "cell-type",
-                    "label": "Cell Type",
-                    "description": "",
-                    "isaFileType": "sample",
-                    "controlListKey": "Characteristics[Cell type]"
                 },
                 "facility": {
                     "name": "facility",
@@ -21631,8 +21631,8 @@
             "ms-other": {
                 "index": 3,
                 "name": "ms-other",
-                "label": "MS Other ",
-                "description": "MS study not shared with MetabolomicsHub legacy profile"
+                "label": "Other",
+                "description": "Study not shared with MetabolomicsHub legacy profile"
             },
             "ms-imaging": {
                 "index": 10,
@@ -22072,9 +22072,13 @@
                         "visible": true,
                         "order": 4
                     },
-                    "other": {
+                    "ms-other": {
                         "visible": true,
                         "order": 5
+                    },
+                    "other": {
+                        "visible": false,
+                        "order": 6
                     }
                 },
                 "activeDatasetLicenses": [
@@ -22107,6 +22111,11 @@
                         "order": 2,
                         "min": 0
                     },
+                    "cell-type": {
+                        "visible": true,
+                        "order": 5,
+                        "min": 0
+                    },
                     "disease": {
                         "visible": true,
                         "order": 3,
@@ -22115,11 +22124,6 @@
                     "instrument": {
                         "visible": true,
                         "order": 4,
-                        "min": 0
-                    },
-                    "cell-type": {
-                        "visible": true,
-                        "order": 5,
                         "min": 0
                     },
                     "omics-type": {
@@ -22209,8 +22213,21 @@
                     "nmr": [
                         "NMR"
                     ],
+                    "ms-other": [
+                        "GC-FID",
+                        "LC-DAD"
+                    ],
                     "other": [
-                        "MRImaging",
+                        "LC-MS",
+                        "GC-MS",
+                        "GCxGC-MS",
+                        "MALDI-MS",
+                        "FIA-MS",
+                        "DI-MS",
+                        "CE-MS",
+                        "MS",
+                        "MSImaging",
+                        "NMR",
                         "GC-FID",
                         "LC-DAD"
                     ]
@@ -22622,9 +22639,13 @@
                         "visible": true,
                         "order": 4
                     },
-                    "other": {
+                    "ms-other": {
                         "visible": true,
                         "order": 5
+                    },
+                    "other": {
+                        "visible": false,
+                        "order": 6
                     }
                 },
                 "activeDatasetLicenses": [
@@ -22657,6 +22678,11 @@
                         "order": 2,
                         "min": 0
                     },
+                    "cell-type": {
+                        "visible": true,
+                        "order": 5,
+                        "min": 0
+                    },
                     "disease": {
                         "visible": true,
                         "order": 3,
@@ -22665,11 +22691,6 @@
                     "instrument": {
                         "visible": true,
                         "order": 4,
-                        "min": 0
-                    },
-                    "cell-type": {
-                        "visible": true,
-                        "order": 5,
                         "min": 0
                     },
                     "omics-type": {
@@ -22759,8 +22780,21 @@
                     "nmr": [
                         "NMR"
                     ],
+                    "ms-other": [
+                        "GC-FID",
+                        "LC-DAD"
+                    ],
                     "other": [
-                        "MRImaging",
+                        "LC-MS",
+                        "GC-MS",
+                        "GCxGC-MS",
+                        "MALDI-MS",
+                        "FIA-MS",
+                        "DI-MS",
+                        "CE-MS",
+                        "MS",
+                        "MSImaging",
+                        "NMR",
                         "GC-FID",
                         "LC-DAD"
                     ]
