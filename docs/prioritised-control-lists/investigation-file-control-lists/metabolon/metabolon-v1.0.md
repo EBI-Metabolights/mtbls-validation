@@ -151,14 +151,16 @@
 | Applicable Template Names | All |
 | Applicable Template Versions | All |
 | Validation Type | selected-ontology-term |
+| Ontologies [Ordered] | MS |
 | Ontology Term Enforcement Level | required |
 
 ### Terms
 
 | # |Term  | Term Source  | Term Accession |
 |---|------|--------------|----------------|
-| 1 | untargeted metabolite profiling | MSIO | http://purl\.obolibrary\.org/obo/MSIO\_0000101 |
-| 2 | targeted metabolite profiling | MSIO | http://purl\.obolibrary\.org/obo/MSIO\_0000100 |
+| 1 | untargeted analysis | MS | http://purl\.obolibrary\.org/obo/MS\_1003904 |
+| 2 | targeted analysis | MS | http://purl\.obolibrary\.org/obo/MS\_1003905 |
+| 3 | semi\-targeted analysis | MS | http://purl\.obolibrary\.org/obo/MS\_1003906 |
 
 ## Study Protocol Components Type
 

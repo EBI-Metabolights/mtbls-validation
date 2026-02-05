@@ -3,7 +3,9 @@
         {
             "ruleName": "Study Assay Measurement Type-01",
             "fieldName": "Study Assay Measurement Type",
-            "ontologies": ["MS"],
+            "ontologies": [
+                "MS"
+            ],
             "allowedParentOntologyTerms": null,
             "description": "",
             "selectionCriteria": {
@@ -22,10 +24,10 @@
             "validationType": "selected-ontology-term",
             "constraints": {},
             "defaultValue": {
-                    "term": "untargeted analysis",
-                    "termAccessionNumber": "http://purl.obolibrary.org/obo/MS_1003904",
-                    "termSourceRef": "MS"
-                },
+                "term": "untargeted analysis",
+                "termAccessionNumber": "http://purl.obolibrary.org/obo/MS_1003904",
+                "termSourceRef": "MS"
+            },
             "allowedMissingOntologyTerms": [],
             "allowedOtherSources": [],
             "allowedPlaceholders": [],
@@ -74,7 +76,7 @@
             "allowedOtherSources": [],
             "allowedPlaceholders": [],
             "terms": [
-                 {
+                {
                     "term": "untargeted analysis",
                     "termAccessionNumber": "http://purl.obolibrary.org/obo/MS_1003904",
                     "termSourceRef": "MS"
