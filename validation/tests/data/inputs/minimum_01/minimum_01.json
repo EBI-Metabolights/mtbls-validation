@@ -99,6 +99,7 @@
                 "studyCategory": "other",
                 "templateVersion": "",
                 "sampleTemplate": "minimum",
+                "studyTemplate": "",
                 "mhdAccession": "",
                 "mhdModelVersion": "0.1",
                 "createdAt": "",
@@ -115,6 +116,7 @@
                         ]
                     }
                 ],
+                "relatedDatasets": [],
                 "characteristicTypes": [],
                 "studyDesignDescriptors": {
                     "comments": [],
@@ -1636,6 +1638,7 @@
         "datasetLicenseVersion": "",
         "datasetLicenseUrl": "",
         "sampleTemplate": "minimum",
+        "studyTemplate": "",
         "studyCategory": 0,
         "templateVersion": "1.0",
         "reservedMhdAccession": "",
