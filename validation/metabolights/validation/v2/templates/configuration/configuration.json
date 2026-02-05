@@ -178,23 +178,23 @@
                 "isaFileType": "investigation",
                 "controlListKey": "Study Assay Measurement Type"
             },
-            "cell-type: ": {
+            "cell-type": {
                 "name": "cell-type",
                 "label": "Cell Type",
                 "description": "",
                 "isaFileType": "sample",
                 "controlListKey": "Characteristics[Cell type]"
             },
-            "facility: ": {
+            "facility": {
                 "name": "facility",
                 "label": "Facility",
                 "description": "",
                 "isaFileType": "investigation",
                 "controlListKey": "Organization"
             },
-            "acquisition-method: ": {
+            "acquisition-method": {
                 "name": "acquisition-method",
-                "label": "acquisition method",
+                "label": "Acquisition method",
                 "description": "",
                 "isaFileType": "investigation",
                 "controlListKey": "Assay Acquisition Method"
