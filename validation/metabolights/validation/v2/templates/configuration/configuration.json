@@ -191,6 +191,13 @@
                 "description": "",
                 "isaFileType": "investigation",
                 "controlListKey": "Organization"
+            },
+            "acquisition-method: ": {
+                "name": "acquisition-method",
+                "label": "acquisition method",
+                "description": "",
+                "isaFileType": "investigation",
+                "controlListKey": "Assay Acquisition Method"
             }
         },
         "defaultDescriptorSources": {
@@ -1146,7 +1153,13 @@
                     "min": 0
                 }
             },
-            "activeAssayDesignDescriptorCategories": {},
+            "activeAssayDesignDescriptorCategories": {
+                "acquisition-method": {
+                    "visible": true,
+                    "order": 1,
+                    "min": 0
+                }
+            },
             "defaultSampleFileTemplate": "minimum",
             "defaultInvestigationFileTemplate": "minimum",
             "defaultStudyCategory": "other",
@@ -1690,7 +1703,13 @@
                     "min": 0
                 }
             },
-            "activeAssayDesignDescriptorCategories": {},
+            "activeAssayDesignDescriptorCategories": {
+                "acquisition-method": {
+                    "visible": true,
+                    "order": 1,
+                    "min": 0
+                }
+            },
             "defaultSampleFileTemplate": "minimum",
             "defaultInvestigationFileTemplate": "minimum",
             "defaultStudyCategory": "other",
