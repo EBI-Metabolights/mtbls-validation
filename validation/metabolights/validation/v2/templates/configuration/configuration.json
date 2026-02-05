@@ -139,44 +139,58 @@
             "disease": {
                 "name": "disease",
                 "label": "Disease",
+                "description": "",
                 "isaFileType": "sample",
                 "controlListKey": "Characteristics[Disease]"
             },
             "instrument": {
                 "name": "instrument",
                 "label": "Instrument",
+                "description": "",
                 "isaFileType": "assay",
                 "controlListKey": "Parameter Value[Instrument]"
             },
             "organism": {
                 "name": "organism",
                 "label": "Organism",
+                "description": "",
                 "isaFileType": "sample",
                 "controlListKey": "Characteristics[Organism]"
             },
             "organism-part": {
                 "name": "organism-part",
                 "label": "Organism part",
+                "description": "",
                 "isaFileType": "sample",
                 "controlListKey": "Characteristics[Organism part]"
             },
             "omics-type": {
                 "name": "omics-type",
                 "label": "Omics Type",
+                "description": "",
                 "isaFileType": "investigation",
                 "controlListKey": "Omics Type"
             },
             "measurement-type": {
                 "name": "measurement-type",
                 "label": "Measurement Type",
+                "description": "",
                 "isaFileType": "investigation",
                 "controlListKey": "Study Assay Measurement Type"
             },
             "cell-type: ": {
                 "name": "cell-type",
                 "label": "Cell Type",
+                "description": "",
                 "isaFileType": "sample",
                 "controlListKey": "Characteristics[Cell type]"
+            },
+            "facility: ": {
+                "name": "facility",
+                "label": "Facility",
+                "description": "",
+                "isaFileType": "investigation",
+                "controlListKey": "Organization"
             }
         },
         "defaultDescriptorSources": {
@@ -1120,6 +1134,16 @@
                     "visible": true,
                     "order": 6,
                     "min": 0
+                },
+                "measurement-type": {
+                    "visible": true,
+                    "order": 7,
+                    "min": 0
+                },
+                "facility": {
+                    "visible": true,
+                    "order": 8,
+                    "min": 0
                 }
             },
             "activeAssayDesignDescriptorCategories": {},
@@ -1653,6 +1677,16 @@
                 "omics-type": {
                     "visible": true,
                     "order": 6,
+                    "min": 0
+                },
+                "measurement-type": {
+                    "visible": true,
+                    "order": 7,
+                    "min": 0
+                },
+                "facility": {
+                    "visible": true,
+                    "order": 8,
                     "min": 0
                 }
             },

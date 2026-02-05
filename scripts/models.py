@@ -647,6 +647,7 @@ class DefaultCommentConfiguration(StudyBaseModel):
 class DescriptorCategoryDefinition(StudyBaseModel):
     name: Annotated[str, Field(description="study category name")]
     label: Annotated[str, Field(description="study category label")]
+    description: Annotated[str, Field(description="study category description")] = ""
     isa_file_type: Annotated[MetadataFileType, Field(description="ISA-TAB file type.")]
     control_list_key: Annotated[
         None | str, Field(description="study category description")
