@@ -1068,6 +1068,57 @@
                             ]
                         }
                     }
+                },
+                "LC-DAD": {
+                    "order": 12,
+                    "label": "LC-DAD",
+                    "description": "LC-DAD",
+                    "ontologyTerm": {
+                        "term": "mass spectrometry assay",
+                        "termAccessionNumber": "http://purl.obolibrary.org/obo/OBI_0000470",
+                        "termSourceRef": "OBI"
+                    },
+                    "assayFileDefaultValues": {
+                        "Chromatography": {
+                            "order": 1,
+                            "label": "Chromatography Protocol",
+                            "fields": [
+                                "Chromatography Instrument",
+                                "Autosampler model",
+                                "Column model",
+                                "Column type",
+                                "Guard column",
+                                "Detector",
+                                "Signal range",
+                                "Resolution"
+                            ]
+                        }
+                    }
+                },
+                "GC-FID": {
+                    "order": 12,
+                    "label": "GC-FID",
+                    "description": "GC-FID",
+                    "ontologyTerm": {
+                        "term": "mass spectrometry assay",
+                        "termAccessionNumber": "http://purl.obolibrary.org/obo/OBI_0000470",
+                        "termSourceRef": "OBI"
+                    },
+                    "assayFileDefaultValues": {
+                        "Chromatography": {
+                            "order": 1,
+                            "label": "Chromatography Protocol",
+                            "fields": [
+                                "Chromatography Instrument",
+                                "Autosampler model",
+                                "Column model",
+                                "Column type",
+                                "Guard column",
+                                "Detector",
+                                "Temperature"
+                            ]
+                        }
+                    }
                 }
             },
             "activeStudyCategories": {
@@ -1632,6 +1683,57 @@
                                 "Scan pattern",
                                 "Scan type",
                                 "Number of scans"
+                            ]
+                        }
+                    }
+                },
+                "LC-DAD": {
+                    "order": 12,
+                    "label": "LC-DAD",
+                    "description": "LC-DAD",
+                    "ontologyTerm": {
+                        "term": "mass spectrometry assay",
+                        "termAccessionNumber": "http://purl.obolibrary.org/obo/OBI_0000470",
+                        "termSourceRef": "OBI"
+                    },
+                    "assayFileDefaultValues": {
+                        "Chromatography": {
+                            "order": 1,
+                            "label": "Chromatography Protocol",
+                            "fields": [
+                                "Chromatography Instrument",
+                                "Autosampler model",
+                                "Column model",
+                                "Column type",
+                                "Guard column",
+                                "Detector",
+                                "Signal range",
+                                "Resolution"
+                            ]
+                        }
+                    }
+                },
+                "GC-FID": {
+                    "order": 12,
+                    "label": "GC-FID",
+                    "description": "GC-FID",
+                    "ontologyTerm": {
+                        "term": "mass spectrometry assay",
+                        "termAccessionNumber": "http://purl.obolibrary.org/obo/OBI_0000470",
+                        "termSourceRef": "OBI"
+                    },
+                    "assayFileDefaultValues": {
+                        "Chromatography": {
+                            "order": 1,
+                            "label": "Chromatography Protocol",
+                            "fields": [
+                                "Chromatography Instrument",
+                                "Autosampler model",
+                                "Column model",
+                                "Column type",
+                                "Guard column",
+                                "Detector",
+                                "Temperature"
                             ]
                         }
                     }
