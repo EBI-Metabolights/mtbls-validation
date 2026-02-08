@@ -43,6 +43,11 @@
                     "term": "Not Applicable",
                     "termAccessionNumber": "http://purl.obolibrary.org/obo/NCIT_C48660",
                     "termSourceRef": "NCIT"
+                },
+                {
+                    "term": "",
+                    "termAccessionNumber": "",
+                    "termSourceRef": ""
                 }
             ],
             "allowedOtherSources": [

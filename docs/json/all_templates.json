@@ -21156,6 +21156,13 @@
                     "isaFileType": "sample",
                     "controlListKey": "Characteristics[Cell type]"
                 },
+                "sample-type": {
+                    "name": "sample-type",
+                    "label": "Sample type",
+                    "description": "",
+                    "isaFileType": "sample",
+                    "controlListKey": "Characteristics[Sample type]"
+                },
                 "omics-type": {
                     "name": "omics-type",
                     "label": "Omics Type",

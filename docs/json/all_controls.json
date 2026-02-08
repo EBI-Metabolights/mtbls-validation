@@ -130,7 +130,7 @@
                 "ruleName": "Parameter Value[Scan polarity]-01",
                 "fieldName": "Parameter Value[Scan polarity]",
                 "ontologies": [
-                    "AFO"
+                    "MS"
                 ],
                 "allowedParentOntologyTerms": null,
                 "description": "",
@@ -157,22 +157,44 @@
                 "defaultValue": null,
                 "allowedMissingOntologyTerms": [],
                 "allowedOtherSources": [],
-                "allowedPlaceholders": [],
+                "allowedPlaceholders": [
+                    {
+                        "termAccessionNumber": "http://purl.obolibrary.org/obo/MS_1000076",
+                        "termSourceRef": "MS"
+                    },
+                    {
+                        "termAccessionNumber": "http://purl.obolibrary.org/obo/MS_1000077",
+                        "termSourceRef": "MS"
+                    },
+                    {
+                        "termAccessionNumber": "http://purl.obolibrary.org/obo/MS_1002833",
+                        "termSourceRef": "MS"
+                    },
+                    {
+                        "termAccessionNumber": "http://purl.obolibrary.org/obo/MS_1003774",
+                        "termSourceRef": "MS"
+                    }
+                ],
                 "terms": [
                     {
-                        "term": "negative ionization polarity",
-                        "termAccessionNumber": "http://purl.allotrope.org/ontologies/quality#AFQ_0000150",
-                        "termSourceRef": "AFO"
+                        "term": "negative polarity acquisition",
+                        "termAccessionNumber": "http://purl.obolibrary.org/obo/MS_1000076",
+                        "termSourceRef": "MS"
                     },
                     {
-                        "term": "positive ionization polarity",
-                        "termAccessionNumber": "http://purl.allotrope.org/ontologies/quality#AFQ_0000151",
-                        "termSourceRef": "AFO"
+                        "term": "positive polarity acquisition",
+                        "termAccessionNumber": "http://purl.obolibrary.org/obo/MS_1000077",
+                        "termSourceRef": "MS"
                     },
                     {
-                        "term": "alternating ionization polarity",
-                        "termAccessionNumber": "http://purl.allotrope.org/ontologies/quality#AFQ_0000152",
-                        "termSourceRef": "AFO"
+                        "term": "alternating polarity acquisition",
+                        "termAccessionNumber": "http://purl.obolibrary.org/obo/MS_1002833",
+                        "termSourceRef": "MS"
+                    },
+                    {
+                        "term": "mixed polarity acquisition",
+                        "termAccessionNumber": "http://purl.obolibrary.org/obo/MS_1003774",
+                        "termSourceRef": "MS"
                     }
                 ],
                 "unexpectedTerms": []
@@ -181,7 +203,6 @@
                 "ruleName": "Parameter Value[Scan polarity]-02",
                 "fieldName": "Parameter Value[Scan polarity]",
                 "ontologies": [
-                    "AFO",
                     "MS"
                 ],
                 "allowedParentOntologyTerms": null,
@@ -7438,6 +7459,11 @@
                         "term": "Not Applicable",
                         "termAccessionNumber": "http://purl.obolibrary.org/obo/NCIT_C48660",
                         "termSourceRef": "NCIT"
+                    },
+                    {
+                        "term": "",
+                        "termAccessionNumber": "",
+                        "termSourceRef": ""
                     }
                 ],
                 "allowedOtherSources": [
@@ -7536,6 +7562,40 @@
                 "unexpectedTerms": []
             }
         ],
+        "Characteristics[Collection date]": [
+            {
+                "ruleName": "Characteristics[Collection date]-01",
+                "fieldName": "Characteristics[Collection date]",
+                "ontologies": [],
+                "allowedParentOntologyTerms": null,
+                "description": "",
+                "selectionCriteria": {
+                    "isaFileType": "sample",
+                    "studyCreatedAtOrAfter": null,
+                    "studyCreatedBefore": null,
+                    "studyCategoryFilter": null,
+                    "templateVersionFilter": null,
+                    "isaFileTemplateNameFilter": null,
+                    "linkedFieldAndValueFilter": null
+                },
+                "termEnforcementLevel": "not-applicable",
+                "unexpectedTermEnforcementLevel": "required",
+                "validationType": "check-only-constraints",
+                "constraints": {
+                    "pattern": {
+                        "constraint": "^[0-9]{4}[0-9]{4}-$",
+                        "errorMessage": "Value must be YYYY-mm-dd format",
+                        "enforcementLevel": "recommended"
+                    }
+                },
+                "defaultValue": null,
+                "allowedMissingOntologyTerms": [],
+                "allowedOtherSources": [],
+                "allowedPlaceholders": [],
+                "terms": [],
+                "unexpectedTerms": []
+            }
+        ],
         "Characteristics[Cell type]": [
             {
                 "ruleName": "Characteristics[Cell type]-01",
@@ -7580,6 +7640,11 @@
                         "term": "Not Applicable",
                         "termAccessionNumber": "http://purl.obolibrary.org/obo/NCIT_C48660",
                         "termSourceRef": "NCIT"
+                    },
+                    {
+                        "term": "",
+                        "termAccessionNumber": "",
+                        "termSourceRef": ""
                     }
                 ],
                 "allowedOtherSources": [
@@ -10082,6 +10147,72 @@
                         "term": "Learning material",
                         "termAccessionNumber": "http://edamontology.org/data_3669",
                         "termSourceRef": "EDAM"
+                    }
+                ],
+                "unexpectedTerms": []
+            }
+        ],
+        "Acquisition Method": [
+            {
+                "ruleName": "Acquisition Method-01",
+                "fieldName": "Acquisition Method",
+                "ontologies": [
+                    "MS"
+                ],
+                "allowedParentOntologyTerms": null,
+                "description": "",
+                "selectionCriteria": {
+                    "isaFileType": "investigation",
+                    "studyCreatedAtOrAfter": null,
+                    "studyCreatedBefore": null,
+                    "studyCategoryFilter": [
+                        "ms-mhd-enabled",
+                        "ms-mhd-legacy"
+                    ],
+                    "templateVersionFilter": null,
+                    "isaFileTemplateNameFilter": null,
+                    "linkedFieldAndValueFilter": null
+                },
+                "termEnforcementLevel": "recommended",
+                "unexpectedTermEnforcementLevel": "recommended",
+                "validationType": "any-ontology-term",
+                "constraints": {},
+                "defaultValue": null,
+                "allowedMissingOntologyTerms": [],
+                "allowedOtherSources": [
+                    {
+                        "sourceLabel": "MTBLS",
+                        "accessionPrefix": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_"
+                    },
+                    {
+                        "sourceLabel": "wikidata",
+                        "accessionPrefix": "https://www.wikidata.org/wiki/"
+                    },
+                    {
+                        "sourceLabel": "ILX",
+                        "accessionPrefix": "http://uri.interlex.org/base/ilx_"
+                    }
+                ],
+                "allowedPlaceholders": [
+                    {
+                        "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/placeholder",
+                        "termSourceRef": "MTBLS"
+                    },
+                    {
+                        "termAccessionNumber": "",
+                        "termSourceRef": ""
+                    }
+                ],
+                "terms": [
+                    {
+                        "term": "data-independent acquisition",
+                        "termAccessionNumber": "http://purl.obolibrary.org/obo/MS_1003215",
+                        "termSourceRef": "MS"
+                    },
+                    {
+                        "term": "data-dependent acquisition",
+                        "termAccessionNumber": "http://purl.obolibrary.org/obo/MS_1003221",
+                        "termSourceRef": "MS"
                     }
                 ],
                 "unexpectedTerms": []

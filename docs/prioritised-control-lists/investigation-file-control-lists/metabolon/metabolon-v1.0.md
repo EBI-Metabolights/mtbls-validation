@@ -378,6 +378,28 @@
 | 4 | published | EFO | http://www\.ebi\.ac\.uk/efo/EFO\_0001796 |
 | 5 | Learning material | EDAM | http://edamontology\.org/data\_3669 |
 
+## Acquisition Method
+
+| Attribute | Value |
+|---|------|
+| Rule Name | Acquisition Method\-01 |
+| Rule Description |  |
+| Applicable Study Categories | ms\-mhd\-enabled, ms\-mhd\-legacy |
+| Applicable Template Names | All |
+| Applicable Template Versions | All |
+| Validation Type | any-ontology-term |
+| Recommended Ontologies [Ordered] | MS |
+| Allowed Placeholders | \[MTBLS, http://www\.ebi\.ac\.uk/metabolights/ontology/placeholder\], \[, \] |
+| Allowed Other Sources | \[MTBLS, http://www\.ebi\.ac\.uk/metabolights/ontology/MTBLS\_\], \[wikidata, https://www\.wikidata\.org/wiki/\], \[ILX, http://uri\.interlex\.org/base/ilx\_\] |
+| Ontology Term Enforcement Level | recommended |
+
+### Recommended Terms
+
+| # |Term  | Term Source  | Term Accession |
+|---|------|--------------|----------------|
+| 1 | data\-independent acquisition | MS | http://purl\.obolibrary\.org/obo/MS\_1003215 |
+| 2 | data\-dependent acquisition | MS | http://purl\.obolibrary\.org/obo/MS\_1003221 |
+
 ## Assay Acquisition Method
 
 | Attribute | Value |

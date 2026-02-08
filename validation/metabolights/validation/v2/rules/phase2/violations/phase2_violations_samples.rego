@@ -378,6 +378,11 @@ rule_s_200_090_004_01 contains result if {
 		some sample_header in input.samples[file_name].table.headers
 		rule := def1.get_sample_field_validation(def1.__SAMPLE_RULES__, sample_header.columnHeader)
 		rule.termEnforcementLevel == "required"
+		empty_term := {x |
+			some x in rule.allowedMissingOntologyTerms
+			count(x.term) == 0
+		}
+		count(empty_term) == 0
 		header := sample_header.columnHeader
 	}
 	required_headers := required_template_headers | required_enforcement_headers

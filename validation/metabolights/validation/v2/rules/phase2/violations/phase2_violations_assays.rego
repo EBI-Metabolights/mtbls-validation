@@ -495,14 +495,33 @@ rule_a_200_090_004_01 contains result if {
 
 	some template in template_list
 	template.version == data.metabolights.validation.v2.rules.phase1.definitions.STUDY_TEMPLATE_VERSION
-	some template_header in template.headers
-	template_header.required == true
+	required_template_headers := {x |
+		some header in template.headers
+		header.required == true
+		header.minLength > 0
+		x := header.columnHeader
+	}
 
-	header.columnHeader == template_header.columnHeader
-	column_name := sheet.table.columns[header.columnIndex]
+	required_enforcement_headers = {header |
+		some assay_header in input.assays[file_name].table.headers
+		rule := def1.get_assay_field_validation(def1.__ASSAY_RULES__, assay_header.columnHeader)
+		rule.termEnforcementLevel == "required"
+		empty_term := {x |
+			some x in rule.allowedMissingOntologyTerms
+			count(x.term) == 0
+		}
+		count(empty_term) == 0
+		header := assay_header.columnHeader
+	}
+	required_headers := required_template_headers | required_enforcement_headers
+	some assay_header in input.assays[file_name].table.headers
+	column_header := assay_header.columnHeader
+	assay_header.columnHeader in required_headers
+
+	column_name := sheet.table.columns[assay_header.columnIndex]
 	violated_values := f.empty_value_check(assays, file_name, column_name, row_offset)
 
-	result := f.format_with_values(rego.metadata.rule(), file_name, header.columnIndex + 1, header.columnHeader, violated_values)
+	result := f.format_with_values(rego.metadata.rule(), file_name, assay_header.columnIndex + 1, assay_header.columnHeader, violated_values)
 }
 
 # METADATA

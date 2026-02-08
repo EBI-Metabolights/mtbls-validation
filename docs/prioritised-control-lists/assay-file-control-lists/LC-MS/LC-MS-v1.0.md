@@ -55,16 +55,18 @@
 | Applicable Template Names | All |
 | Applicable Template Versions | All |
 | Validation Type | selected-ontology-term |
-| Ontologies [Ordered] | AFO |
+| Ontologies [Ordered] | MS |
+| Allowed Placeholders | \[MS, http://purl\.obolibrary\.org/obo/MS\_1000076\], \[MS, http://purl\.obolibrary\.org/obo/MS\_1000077\], \[MS, http://purl\.obolibrary\.org/obo/MS\_1002833\], \[MS, http://purl\.obolibrary\.org/obo/MS\_1003774\] |
 | Ontology Term Enforcement Level | required |
 
 ### Terms
 
 | # |Term  | Term Source  | Term Accession |
 |---|------|--------------|----------------|
-| 1 | negative ionization polarity | AFO | http://purl\.allotrope\.org/ontologies/quality\#AFQ\_0000150 |
-| 2 | positive ionization polarity | AFO | http://purl\.allotrope\.org/ontologies/quality\#AFQ\_0000151 |
-| 3 | alternating ionization polarity | AFO | http://purl\.allotrope\.org/ontologies/quality\#AFQ\_0000152 |
+| 1 | negative polarity acquisition | MS | http://purl\.obolibrary\.org/obo/MS\_1000076 |
+| 2 | positive polarity acquisition | MS | http://purl\.obolibrary\.org/obo/MS\_1000077 |
+| 3 | alternating polarity acquisition | MS | http://purl\.obolibrary\.org/obo/MS\_1002833 |
+| 4 | mixed polarity acquisition | MS | http://purl\.obolibrary\.org/obo/MS\_1003774 |
 
 ## Parameter Value\[Mass analyzer\]
 

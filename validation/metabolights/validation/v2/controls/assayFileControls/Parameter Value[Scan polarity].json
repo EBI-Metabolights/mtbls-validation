@@ -4,7 +4,7 @@
             "ruleName": "Parameter Value[Scan polarity]-01",
             "fieldName": "Parameter Value[Scan polarity]",
             "ontologies": [
-                "AFO"
+                "MS"
             ],
             "allowedParentOntologyTerms": null,
             "description": "",
@@ -31,22 +31,44 @@
             "defaultValue": null,
             "allowedMissingOntologyTerms": [],
             "allowedOtherSources": [],
-            "allowedPlaceholders": [],
+            "allowedPlaceholders": [
+                {
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/MS_1000076",
+                    "termSourceRef": "MS"
+                },
+                {
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/MS_1000077",
+                    "termSourceRef": "MS"
+                },
+                {
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/MS_1002833",
+                    "termSourceRef": "MS"
+                },
+                {
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/MS_1003774",
+                    "termSourceRef": "MS"
+                }
+            ],
             "terms": [
                 {
-                    "term": "negative ionization polarity",
-                    "termAccessionNumber": "http://purl.allotrope.org/ontologies/quality#AFQ_0000150",
-                    "termSourceRef": "AFO"
+                    "term": "negative polarity acquisition",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/MS_1000076",
+                    "termSourceRef": "MS"
                 },
                 {
-                    "term": "positive ionization polarity",
-                    "termAccessionNumber": "http://purl.allotrope.org/ontologies/quality#AFQ_0000151",
-                    "termSourceRef": "AFO"
+                    "term": "positive polarity acquisition",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/MS_1000077",
+                    "termSourceRef": "MS"
                 },
                 {
-                    "term": "alternating ionization polarity",
-                    "termAccessionNumber": "http://purl.allotrope.org/ontologies/quality#AFQ_0000152",
-                    "termSourceRef": "AFO"
+                    "term": "alternating polarity acquisition",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/MS_1002833",
+                    "termSourceRef": "MS"
+                },
+                {
+                    "term": "mixed polarity acquisition",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/MS_1003774",
+                    "termSourceRef": "MS"
                 }
             ],
             "unexpectedTerms": []
@@ -55,7 +77,6 @@
             "ruleName": "Parameter Value[Scan polarity]-02",
             "fieldName": "Parameter Value[Scan polarity]",
             "ontologies": [
-                "AFO",
                 "MS"
             ],
             "allowedParentOntologyTerms": null,

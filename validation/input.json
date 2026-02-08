@@ -3,25 +3,25 @@
     "investigationFilePath": "i_Investigation.txt",
     "investigation": {
         "comments": [],
-        "identifier": "REQ202512083000120",
-        "title": "Test: A title for the Study. Please use the same title as the first publication",
+        "identifier": "REQ202602083000317",
+        "title": "Test MS Enabled study with new template",
         "description": "",
-        "submissionDate": "2025-12-08",
-        "publicReleaseDate": "2026-12-08",
+        "submissionDate": "2026-02-08",
+        "publicReleaseDate": "2027-02-08",
         "ontologySourceReferences": {
             "comments": [],
             "references": [
+                {
+                    "sourceName": "AFO",
+                    "sourceFile": "http://purl.allotrope.org/voc/afo/latest.xml",
+                    "sourceVersion": "REC/2025/12",
+                    "sourceDescription": "Allotrope Merged Ontology Suite"
+                },
                 {
                     "sourceName": "BTO",
                     "sourceFile": "http://purl.obolibrary.org/obo/bto.owl",
                     "sourceVersion": "",
                     "sourceDescription": "The BRENDA Tissue Ontology (BTO)"
-                },
-                {
-                    "sourceName": "CHEBI",
-                    "sourceFile": "http://purl.obolibrary.org/obo/chebi.owl",
-                    "sourceVersion": "247",
-                    "sourceDescription": "Chemical Entities of Biological Interest"
                 },
                 {
                     "sourceName": "CHMO",
@@ -30,9 +30,21 @@
                     "sourceDescription": "Chemical Methods Ontology"
                 },
                 {
+                    "sourceName": "CL",
+                    "sourceFile": "http://purl.obolibrary.org/obo/cl.owl",
+                    "sourceVersion": "2025-12-17",
+                    "sourceDescription": "Cell Ontology"
+                },
+                {
+                    "sourceName": "EDAM",
+                    "sourceFile": "https://raw.githubusercontent.com/edamontology/edamontology/master/releases/EDAM.owl",
+                    "sourceVersion": "1.25-20251112T1620Z-unstable(1.26)",
+                    "sourceDescription": "EDAM - The ontology of data analysis and management"
+                },
+                {
                     "sourceName": "EFO",
                     "sourceFile": "http://www.ebi.ac.uk/efo/efo.owl",
-                    "sourceVersion": "3.84.0",
+                    "sourceVersion": "3.86.0",
                     "sourceDescription": "Experimental Factor Ontology"
                 },
                 {
@@ -42,16 +54,16 @@
                     "sourceDescription": "Molecular Interactions Controlled Vocabulary"
                 },
                 {
+                    "sourceName": "MONDO",
+                    "sourceFile": "https://purl.obolibrary.org/obo/mondo/mondo-international.owl",
+                    "sourceVersion": "2026-01-06",
+                    "sourceDescription": "Mondo Disease Ontology"
+                },
+                {
                     "sourceName": "MS",
                     "sourceFile": "http://purl.obolibrary.org/obo/ms.owl",
                     "sourceVersion": "",
                     "sourceDescription": "Mass spectrometry ontology"
-                },
-                {
-                    "sourceName": "MSIO",
-                    "sourceFile": "https://raw.githubusercontent.com/MSI-Metabolomics-Standards-Initiative/MSIO/master/releases/latest_release/MSIO-merged-reasoned.owl",
-                    "sourceVersion": "1.0.1",
-                    "sourceDescription": "Metabolomics Standards Initiative Ontology (MSIO)"
                 },
                 {
                     "sourceName": "MTBLS",
@@ -62,8 +74,8 @@
                 {
                     "sourceName": "NCBITaxon",
                     "sourceFile": "http://purl.obolibrary.org/obo/ncbitaxon.owl",
-                    "sourceVersion": "",
-                    "sourceDescription": "National Center for Biotechnology Information (NCBI) Organismal Classification"
+                    "sourceVersion": "2025-12-03",
+                    "sourceDescription": "NCBI organismal classification"
                 },
                 {
                     "sourceName": "NCIT",
@@ -74,8 +86,20 @@
                 {
                     "sourceName": "OBI",
                     "sourceFile": "http://purl.obolibrary.org/obo/obi.owl",
-                    "sourceVersion": "2025-10-14",
+                    "sourceVersion": "2025-12-18",
                     "sourceDescription": "Ontology for Biomedical Investigations"
+                },
+                {
+                    "sourceName": "hgnc",
+                    "sourceFile": "https://w3id.org/biopragmatics/resources/hgnc/hgnc.owl.gz",
+                    "sourceVersion": "2026-01-06",
+                    "sourceDescription": "HUGO Gene Nomenclature Committee"
+                },
+                {
+                    "sourceName": "ror",
+                    "sourceFile": "https://w3id.org/biopragmatics/resources/ror/ror.owl.gz",
+                    "sourceVersion": "2.0",
+                    "sourceDescription": "Research Organization Registry"
                 }
             ]
         },
@@ -91,33 +115,27 @@
             {
                 "comments": [
                     {
-                        "name": "Created At",
-                        "value": [
-                            ""
-                        ]
-                    },
-                    {
-                        "name": "Funder",
-                        "value": [
-                            ""
-                        ]
-                    },
-                    {
-                        "name": "Funder ROR ID",
-                        "value": [
-                            ""
-                        ]
-                    },
-                    {
-                        "name": "Grant Identifier",
-                        "value": [
-                            ""
-                        ]
-                    },
-                    {
                         "name": "License",
                         "value": [
                             "CC0 1.0 Universal"
+                        ]
+                    },
+                    {
+                        "name": "MHD Model Version",
+                        "value": [
+                            "0.1"
+                        ]
+                    },
+                    {
+                        "name": "Study Category",
+                        "value": [
+                            "ms-mhd-enabled"
+                        ]
+                    },
+                    {
+                        "name": "Template Version",
+                        "value": [
+                            "2.0"
                         ]
                     },
                     {
@@ -127,65 +145,177 @@
                         ]
                     },
                     {
-                        "name": "Study Category",
+                        "name": "Created At",
                         "value": [
-                            "other"
+                            "2026-02-08"
                         ]
                     },
                     {
-                        "name": "Study Template",
+                        "name": "Funder",
+                        "value": [
+                            "NHS England;European Molecular Biology Laboratory"
+                        ]
+                    },
+                    {
+                        "name": "Funder ROR ID",
+                        "value": [
+                            "https://ror.org/00xm3h672;https://ror.org/03mstc592"
+                        ]
+                    },
+                    {
+                        "name": "Grant Identifier",
+                        "value": [
+                            ";EMBL12345"
+                        ]
+                    },
+                    {
+                        "name": "Linked Study Accession",
                         "value": [
                             ""
                         ]
                     },
                     {
-                        "name": "Template Version",
+                        "name": "Related Data Accession",
                         "value": [
-                            "1.0"
+                            "ST000002"
+                        ]
+                    },
+                    {
+                        "name": "Related Data Repository",
+                        "value": [
+                            "Metabolomics Workbench Study"
+                        ]
+                    },
+                    {
+                        "name": "Study Template",
+                        "value": [
+                            "minimum"
                         ]
                     }
                 ],
-                "identifier": "REQ202512083000120",
-                "title": "Test: A title for the Study. Please use the same title as the first publication",
-                "description": "<p>A brief description of the study aims. Please use the abstract of the publication. A brief description of the study aims. Please use the abstract of the publication. A brief description of the study aims. Please use the abstract of the publication</p>",
-                "submissionDate": "2025-12-08",
-                "publicReleaseDate": "2026-12-08",
-                "fileName": "s_REQ202512083000120.txt",
-                "studyCategory": "other",
-                "templateVersion": "1.0",
+                "identifier": "REQ202602083000317",
+                "title": "Test MS Enabled study with new template",
+                "description": "Test MS Enabled study with new templateTest MS Enabled study with new templateTest MS Enabled study with new templateTest MS Enabled study with new templateTest MS Enabled study with new templateTest MS Enabled study with new templateTest MS Enabled study with new template",
+                "submissionDate": "2026-02-08",
+                "publicReleaseDate": "2027-02-08",
+                "fileName": "s_REQ202602083000317.txt",
+                "studyCategory": "ms-mhd-enabled",
+                "templateVersion": "2.0",
                 "sampleTemplate": "minimum",
+                "studyTemplate": "",
                 "mhdAccession": "",
-                "mhdModelVersion": "",
-                "createdAt": "",
+                "mhdModelVersion": "0.1",
+                "createdAt": "2026-02-08",
                 "revisionNumber": "",
                 "revisionDate": "",
                 "revisionComment": "",
                 "datasetLicense": "CC0 1.0 Universal",
-                "funders": [],
+                "funders": [
+                    {
+                        "funderName": "NHS England;European Molecular Biology Laboratory",
+                        "funderId": "https://ror.org/00xm3h672;https://ror.org/03mstc592",
+                        "grantIds": [
+                            "",
+                            "EMBL12345"
+                        ]
+                    }
+                ],
+                "relatedDatasets": [],
                 "characteristicTypes": [],
                 "studyDesignDescriptors": {
-                    "comments": [],
+                    "comments": [
+                        {
+                            "name": "Study Design Category",
+                            "value": [
+                                "default",
+                                "default",
+                                "default",
+                                "default",
+                                "default",
+                                "default",
+                                "default",
+                                "default",
+                                "default"
+                            ]
+                        },
+                        {
+                            "name": "Study Design Source",
+                            "value": [
+                                "submitter",
+                                "submitter",
+                                "submitter",
+                                "submitter",
+                                "submitter",
+                                "submitter",
+                                "submitter",
+                                "submitter",
+                                "submitter"
+                            ]
+                        }
+                    ],
                     "designTypes": [
                         {
-                            "term": "targeted metabolite profiling",
-                            "termAccessionNumber": "http://purl.obolibrary.org/obo/MSIO_0000100",
-                            "termSourceRef": "MSIO",
-                            "category": "",
-                            "source": ""
+                            "term": "Mus musculus",
+                            "termAccessionNumber": "http://purl.obolibrary.org/obo/NCBITaxon_10090",
+                            "termSourceRef": "NCBITaxon",
+                            "category": "default",
+                            "source": "submitter"
                         },
                         {
-                            "term": "untargeted metabolite profiling",
-                            "termAccessionNumber": "http://purl.obolibrary.org/obo/MSIO_0000101",
-                            "termSourceRef": "MSIO",
-                            "category": "",
-                            "source": ""
+                            "term": "blood serum",
+                            "termAccessionNumber": "http://purl.obolibrary.org/obo/BTO_0000133",
+                            "termSourceRef": "BTO",
+                            "category": "default",
+                            "source": "submitter"
                         },
                         {
-                            "term": "Aging",
-                            "termAccessionNumber": "http://purl.obolibrary.org/obo/NCIT_C16269",
-                            "termSourceRef": "NCIT",
-                            "category": "",
-                            "source": ""
+                            "term": "Alzheimer disease",
+                            "termAccessionNumber": "http://purl.obolibrary.org/obo/MONDO_0004975",
+                            "termSourceRef": "MONDO",
+                            "category": "default",
+                            "source": "submitter"
+                        },
+                        {
+                            "term": "2500 QTRAP",
+                            "termAccessionNumber": "http://purl.obolibrary.org/obo/MS_1002578",
+                            "termSourceRef": "MS",
+                            "category": "default",
+                            "source": "submitter"
+                        },
+                        {
+                            "term": "T cell",
+                            "termAccessionNumber": "http://purl.obolibrary.org/obo/CL_0000084",
+                            "termSourceRef": "CL",
+                            "category": "default",
+                            "source": "submitter"
+                        },
+                        {
+                            "term": "Lipidomics",
+                            "termAccessionNumber": "http://edamontology.org/topic_0153",
+                            "termSourceRef": "EDAM",
+                            "category": "default",
+                            "source": "submitter"
+                        },
+                        {
+                            "term": "untargeted analysis",
+                            "termAccessionNumber": "",
+                            "termSourceRef": "",
+                            "category": "default",
+                            "source": "submitter"
+                        },
+                        {
+                            "term": "Wellcome Trust",
+                            "termAccessionNumber": "https://ror.org/029chgv08",
+                            "termSourceRef": "ror",
+                            "category": "default",
+                            "source": "submitter"
+                        },
+                        {
+                            "term": "tandem mass spectrometry",
+                            "termAccessionNumber": "http://purl.obolibrary.org/obo/CHMO_0000575",
+                            "termSourceRef": "CHMO",
+                            "category": "default",
+                            "source": "submitter"
                         }
                     ]
                 },
@@ -193,10 +323,10 @@
                     "comments": [],
                     "publications": [
                         {
-                            "pubMedId": "",
-                            "doi": "",
-                            "authorList": "A brief description of the study aims. Please use the abstract of the publication. A brief description of the study aims. Please use the abstract of the publication. A brief description of the study aims. Please use the abstract of the publication",
-                            "title": "A brief description of the study aims. Please use the abstract of the publication. A brief description of the study aims. Please use the abstract of the publication. A brief description of the study aims. Please use the abstract of the publication",
+                            "pubMedId": "23456",
+                            "doi": "10.1111/111122",
+                            "authorList": "Yurekten Ozgur",
+                            "title": "Test MS Enabled study with new template",
                             "status": {
                                 "term": "in preparation",
                                 "termAccessionNumber": "http://www.ebi.ac.uk/efo/EFO_0001795",
@@ -206,7 +336,14 @@
                     ]
                 },
                 "studyFactors": {
-                    "comments": [],
+                    "comments": [
+                        {
+                            "name": "Study Factor Value Format",
+                            "value": [
+                                "ontology"
+                            ]
+                        }
+                    ],
                     "factors": [
                         {
                             "name": "Dose",
@@ -215,12 +352,48 @@
                                 "termAccessionNumber": "http://www.ebi.ac.uk/efo/EFO_0000428",
                                 "termSourceRef": "EFO"
                             },
-                            "valueFormat": ""
+                            "valueFormat": "ontology"
                         }
                     ]
                 },
                 "studyAssays": {
                     "comments": [
+                        {
+                            "name": "Assay Type",
+                            "value": [
+                                "liquid chromatography mass spectrometry assay"
+                            ]
+                        },
+                        {
+                            "name": "Assay Type Term Accession Number",
+                            "value": [
+                                "http://purl.obolibrary.org/obo/OBI_0003097"
+                            ]
+                        },
+                        {
+                            "name": "Assay Type Term Source REF",
+                            "value": [
+                                "OBI"
+                            ]
+                        },
+                        {
+                            "name": "Omics Type",
+                            "value": [
+                                "Metabolomics"
+                            ]
+                        },
+                        {
+                            "name": "Omics Type Term Accession Number",
+                            "value": [
+                                "http://edamontology.org/topic_3172"
+                            ]
+                        },
+                        {
+                            "name": "Omics Type Term Source REF",
+                            "value": [
+                                "EDAM"
+                            ]
+                        },
                         {
                             "name": "Assay Identifier",
                             "value": [
@@ -234,19 +407,61 @@
                             ]
                         },
                         {
-                            "name": "Assay Type",
+                            "name": "Assay Field Name",
                             "value": [
-                                "LC-MS"
+                                "Parameter Value[Chromatography Instrument];Parameter Value[Autosampler model];Parameter Value[Column model];Parameter Value[Column type];Parameter Value[Scan polarity];Parameter Value[Scan m/z range];Parameter Value[Instrument];Parameter Value[Ion source];Parameter Value[Mass analyzer]"
                             ]
                         },
                         {
-                            "name": "Assay Type Term Accession Number",
+                            "name": "Assay Field Default Value",
+                            "value": [
+                                "2500 QTRAP;1100;ACQUITY UPLC H-Class;reverse phase;negative ionization polarity;10-1000;2500 QTRAP;electrospray ionization;orbitrap"
+                            ]
+                        },
+                        {
+                            "name": "Assay Field Default Unit",
+                            "value": [
+                                ";;;;;;;;"
+                            ]
+                        },
+                        {
+                            "name": "Assay Field Default Value Accession Number",
+                            "value": [
+                                "http://purl.obolibrary.org/obo/MS_1002578;https://www.genenames.org/data/genegroup/#!/group/1100;http://purl.obolibrary.org/obo/MS_1001762;http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000853;http://purl.allotrope.org/ontologies/quality#AFQ_0000150;;http://purl.obolibrary.org/obo/MS_1002578;http://purl.obolibrary.org/obo/MS_1000073;http://purl.obolibrary.org/obo/MS_1000484"
+                            ]
+                        },
+                        {
+                            "name": "Assay Field Default Value Source REF",
+                            "value": [
+                                "MS;hgnc;MS;MTBLS;AFO;;MS;MS;MS"
+                            ]
+                        },
+                        {
+                            "name": "Assay Descriptor",
                             "value": [
                                 ""
                             ]
                         },
                         {
-                            "name": "Assay Type Term Source REF",
+                            "name": "Assay Descriptor Term Accession Number",
+                            "value": [
+                                ""
+                            ]
+                        },
+                        {
+                            "name": "Assay Descriptor Term Source REF",
+                            "value": [
+                                ""
+                            ]
+                        },
+                        {
+                            "name": "Assay Descriptor Category",
+                            "value": [
+                                ""
+                            ]
+                        },
+                        {
+                            "name": "Assay Descriptor Source",
                             "value": [
                                 ""
                             ]
@@ -254,28 +469,28 @@
                     ],
                     "assays": [
                         {
-                            "fileName": "a_REQ202512083000120_LC-MS_positive_hilic_metabolite_profiling.txt",
+                            "fileName": "a_REQ202602083000317_LC-MS_negative_reverse-phase.txt",
                             "measurementType": {
-                                "term": "metabolite profiling assay",
-                                "termAccessionNumber": "http://purl.obolibrary.org/obo/OBI_0000366",
-                                "termSourceRef": "OBI"
+                                "term": "untargeted analysis",
+                                "termAccessionNumber": "http://purl.obolibrary.org/obo/MS_1003904",
+                                "termSourceRef": "MS"
                             },
                             "technologyType": {
                                 "term": "mass spectrometry assay",
                                 "termAccessionNumber": "http://purl.obolibrary.org/obo/OBI_0000470",
                                 "termSourceRef": "OBI"
                             },
-                            "technologyPlatform": "Liquid Chromatography MS - positive - hilic",
+                            "technologyPlatform": "Liquid Chromatography MS - negative - reverse-phase",
                             "assayIdentifier": "",
                             "assayType": {
-                                "term": "LC-MS",
-                                "termAccessionNumber": "",
-                                "termSourceRef": ""
+                                "term": "liquid chromatography mass spectrometry assay",
+                                "termAccessionNumber": "http://purl.obolibrary.org/obo/OBI_0003097",
+                                "termSourceRef": "OBI"
                             },
                             "omicsType": {
-                                "term": "",
-                                "termAccessionNumber": "",
-                                "termSourceRef": ""
+                                "term": "Metabolomics",
+                                "termAccessionNumber": "http://edamontology.org/topic_3172",
+                                "termSourceRef": "EDAM"
                             },
                             "assayDescriptors": [
                                 {
@@ -300,7 +515,7 @@
                                 "termAccessionNumber": "http://purl.obolibrary.org/obo/CHMO_0001000",
                                 "termSourceRef": "CHMO"
                             },
-                            "description": "<p>A brief description of the study aims. Please use the abstract of the publication. A brief description of the study aims. Please use the abstract of the publication. A brief description of the study aims. Please use the abstract of the publication</p>",
+                            "description": "<p>Describe the origin of samples, any relevant treatment, time points etc. and the collection and storage procedure. Describe the origin of samples, any relevant treatment, time points etc. and the collection and storage procedureDescribe the origin of samples, any relevant treatment, time points etc. and the collection and storage procedure Describe the origin of samples, any relevant treatment, time points etc. and the collection and storage procedure Describe the origin of samples, any relevant treatment, time points etc. and the collection and storage procedure</p>",
                             "uri": "",
                             "version": "",
                             "parameters": [
@@ -340,11 +555,11 @@
                         {
                             "name": "Data transformation",
                             "protocolType": {
-                                "term": "Data transformation",
-                                "termAccessionNumber": "",
-                                "termSourceRef": "CHMO"
+                                "term": "data transformation",
+                                "termAccessionNumber": "http://purl.obolibrary.org/obo/OBI_0200000",
+                                "termSourceRef": "OBI"
                             },
-                            "description": "<p>A brief description of the study aims. Please use the abstract of the publication. A brief description of the study aims. Please use the abstract of the publication. A brief description of the study aims. Please use the abstract of the publication</p>",
+                            "description": "<p>Describe the origin of samples, any relevant treatment, time points etc. and the collection and storage procedure. Describe the origin of samples, any relevant treatment, time points etc. and the collection and storage procedureDescribe the origin of samples, any relevant treatment, time points etc. and the collection and storage procedure Describe the origin of samples, any relevant treatment, time points etc. and the collection and storage procedure Describe the origin of samples, any relevant treatment, time points etc. and the collection and storage procedure</p>",
                             "uri": "",
                             "version": "",
                             "parameters": [],
@@ -355,9 +570,9 @@
                             "protocolType": {
                                 "term": "Extraction",
                                 "termAccessionNumber": "",
-                                "termSourceRef": "CHMO"
+                                "termSourceRef": ""
                             },
-                            "description": "<p>A brief description of the study aims. Please use the abstract of the publication. A brief description of the study aims. Please use the abstract of the publication. A brief description of the study aims. Please use the abstract of the publication</p>",
+                            "description": "<p>Describe the origin of samples, any relevant treatment, time points etc. and the collection and storage procedure. Describe the origin of samples, any relevant treatment, time points etc. and the collection and storage procedureDescribe the origin of samples, any relevant treatment, time points etc. and the collection and storage procedure Describe the origin of samples, any relevant treatment, time points etc. and the collection and storage procedure Describe the origin of samples, any relevant treatment, time points etc. and the collection and storage procedure</p>",
                             "uri": "",
                             "version": "",
                             "parameters": [
@@ -383,7 +598,7 @@
                                 "termAccessionNumber": "http://purl.obolibrary.org/obo/CHMO_0000470",
                                 "termSourceRef": "CHMO"
                             },
-                            "description": "<p>A brief description of the study aims. Please use the abstract of the publication. A brief description of the study aims. Please use the abstract of the publication. A brief description of the study aims. Please use the abstract of the publication</p>",
+                            "description": "<p>Describe the origin of samples, any relevant treatment, time points etc. and the collection and storage procedure. Describe the origin of samples, any relevant treatment, time points etc. and the collection and storage procedureDescribe the origin of samples, any relevant treatment, time points etc. and the collection and storage procedure Describe the origin of samples, any relevant treatment, time points etc. and the collection and storage procedure Describe the origin of samples, any relevant treatment, time points etc. and the collection and storage procedure</p>",
                             "uri": "",
                             "version": "",
                             "parameters": [
@@ -427,7 +642,7 @@
                                 "termAccessionNumber": "http://purl.obolibrary.org/obo/MI_2131",
                                 "termSourceRef": "MI"
                             },
-                            "description": "<p>A brief description of the study aims. Please use the abstract of the publication. A brief description of the study aims. Please use the abstract of the publication. A brief description of the study aims. Please use the abstract of the publication</p>",
+                            "description": "<p>Describe the origin of samples, any relevant treatment, time points etc. and the collection and storage procedure. Describe the origin of samples, any relevant treatment, time points etc. and the collection and storage procedureDescribe the origin of samples, any relevant treatment, time points etc. and the collection and storage procedure Describe the origin of samples, any relevant treatment, time points etc. and the collection and storage procedure Describe the origin of samples, any relevant treatment, time points etc. and the collection and storage procedure</p>",
                             "uri": "",
                             "version": "",
                             "parameters": [],
@@ -438,9 +653,9 @@
                             "protocolType": {
                                 "term": "Sample collection",
                                 "termAccessionNumber": "",
-                                "termSourceRef": "MI"
+                                "termSourceRef": ""
                             },
-                            "description": "<p>A brief description of the study aims. Please use the abstract of the publication. A brief description of the study aims. Please use the abstract of the publication. A brief description of the study aims. Please use the abstract of the publication</p>",
+                            "description": "<p>Describe the origin of samples, any relevant treatment, time points etc. and the collection and storage procedure. Describe the origin of samples, any relevant treatment, time points etc. and the collection and storage procedureDescribe the origin of samples, any relevant treatment, time points etc. and the collection and storage procedure Describe the origin of samples, any relevant treatment, time points etc. and the collection and storage procedure Describe the origin of samples, any relevant treatment, time points etc. and the collection and storage procedure</p>",
                             "uri": "",
                             "version": "",
                             "parameters": [],
@@ -453,19 +668,22 @@
                         {
                             "name": "Study Person ORCID",
                             "value": [
-                                "0000-0001-8604-1732"
+                                "0000-0001-8604-1732",
+                                ""
                             ]
                         },
                         {
-                            "name": "Study Person Affiliation ROR Id",
+                            "name": "Study Person Affiliation ROR ID",
                             "value": [
-                                "https://ror.org/02catss52"
+                                "https://ror.org/02catss52",
+                                "https://ror.org/029chgv08"
                             ]
                         },
                         {
                             "name": "Study Person Alternative Email",
                             "value": [
-                                "ozgur.yurekten@gmail.com"
+                                "ozgury@ebi.ac.uk",
+                                "ozgury@ebi.ac.uk"
                             ]
                         }
                     ],
@@ -489,6 +707,26 @@
                             "orcid": "0000-0001-8604-1732",
                             "additionalEmails": [],
                             "affiliationRorId": "https://ror.org/02catss52"
+                        },
+                        {
+                            "lastName": "Test",
+                            "firstName": "User",
+                            "midInitials": "",
+                            "email": "ozgury@ebi.ac.uk",
+                            "phone": "",
+                            "fax": "",
+                            "address": "Wellcome Genome Campus, Hinxton",
+                            "affiliation": "Wellcome Trust",
+                            "roles": [
+                                {
+                                    "term": "Investigator",
+                                    "termAccessionNumber": "http://purl.obolibrary.org/obo/NCIT_C25936",
+                                    "termSourceRef": "NCIT"
+                                }
+                            ],
+                            "orcid": "",
+                            "additionalEmails": [],
+                            "affiliationRorId": "https://ror.org/029chgv08"
                         }
                     ]
                 }
@@ -496,9 +734,9 @@
         ]
     },
     "samples": {
-        "s_REQ202512083000120.txt": {
-            "filePath": "s_REQ202512083000120.txt",
-            "sha256Hash": "58b6564c84c5679247a590c75a05de7d73b04efe8d9c14a3af8be914c54b513c",
+        "s_REQ202602083000317.txt": {
+            "filePath": "s_REQ202602083000317.txt",
+            "sha256Hash": "c1f91434128004572a5098ee3ed58684ffda579f4844bd7a29bd6fb2f140480a",
             "table": {
                 "columns": [
                     "Source Name",
@@ -514,11 +752,17 @@
                     "Characteristics[Sample type]",
                     "Term Source REF.3",
                     "Term Accession Number.3",
+                    "Characteristics[Cell type]",
+                    "Term Source REF.4",
+                    "Term Accession Number.4",
+                    "Characteristics[Disease]",
+                    "Term Source REF.5",
+                    "Term Accession Number.5",
                     "Protocol REF",
                     "Sample Name",
                     "Factor Value[Dose]",
-                    "Term Source REF.4",
-                    "Term Accession Number.4"
+                    "Term Source REF.6",
+                    "Term Accession Number.6"
                 ],
                 "headers": [
                     {
@@ -665,6 +909,72 @@
                     },
                     {
                         "columnIndex": 13,
+                        "columnName": "Characteristics[Cell type]",
+                        "columnHeader": "Characteristics[Cell type]",
+                        "additionalColumns": [
+                            "Term Source REF",
+                            "Term Accession Number"
+                        ],
+                        "columnCategory": "Characteristics",
+                        "columnStructure": "ONTOLOGY_COLUMN",
+                        "columnPrefix": "Characteristics",
+                        "columnSearchPattern": "^Characteristics\\[(\\w[ -~]*)\\](\\.\\d+)?$"
+                    },
+                    {
+                        "columnIndex": 14,
+                        "columnName": "Term Source REF.4",
+                        "columnHeader": "Term Source REF",
+                        "additionalColumns": [],
+                        "columnCategory": "Linked Column",
+                        "columnStructure": "LINKED_COLUMN",
+                        "columnPrefix": "",
+                        "columnSearchPattern": ""
+                    },
+                    {
+                        "columnIndex": 15,
+                        "columnName": "Term Accession Number.4",
+                        "columnHeader": "Term Accession Number",
+                        "additionalColumns": [],
+                        "columnCategory": "Linked Column",
+                        "columnStructure": "LINKED_COLUMN",
+                        "columnPrefix": "",
+                        "columnSearchPattern": ""
+                    },
+                    {
+                        "columnIndex": 16,
+                        "columnName": "Characteristics[Disease]",
+                        "columnHeader": "Characteristics[Disease]",
+                        "additionalColumns": [
+                            "Term Source REF",
+                            "Term Accession Number"
+                        ],
+                        "columnCategory": "Characteristics",
+                        "columnStructure": "ONTOLOGY_COLUMN",
+                        "columnPrefix": "Characteristics",
+                        "columnSearchPattern": "^Characteristics\\[(\\w[ -~]*)\\](\\.\\d+)?$"
+                    },
+                    {
+                        "columnIndex": 17,
+                        "columnName": "Term Source REF.5",
+                        "columnHeader": "Term Source REF",
+                        "additionalColumns": [],
+                        "columnCategory": "Linked Column",
+                        "columnStructure": "LINKED_COLUMN",
+                        "columnPrefix": "",
+                        "columnSearchPattern": ""
+                    },
+                    {
+                        "columnIndex": 18,
+                        "columnName": "Term Accession Number.5",
+                        "columnHeader": "Term Accession Number",
+                        "additionalColumns": [],
+                        "columnCategory": "Linked Column",
+                        "columnStructure": "LINKED_COLUMN",
+                        "columnPrefix": "",
+                        "columnSearchPattern": ""
+                    },
+                    {
+                        "columnIndex": 19,
                         "columnName": "Protocol REF",
                         "columnHeader": "Protocol REF",
                         "additionalColumns": [],
@@ -674,7 +984,7 @@
                         "columnSearchPattern": "^(Protocol REF)(\\.\\d+)?$"
                     },
                     {
-                        "columnIndex": 14,
+                        "columnIndex": 20,
                         "columnName": "Sample Name",
                         "columnHeader": "Sample Name",
                         "additionalColumns": [],
@@ -684,7 +994,7 @@
                         "columnSearchPattern": "^(Sample Name)$"
                     },
                     {
-                        "columnIndex": 15,
+                        "columnIndex": 21,
                         "columnName": "Factor Value[Dose]",
                         "columnHeader": "Factor Value[Dose]",
                         "additionalColumns": [
@@ -697,8 +1007,8 @@
                         "columnSearchPattern": "^Factor Value\\[(\\w[ -~]*)\\](\\.\\d+)?$"
                     },
                     {
-                        "columnIndex": 16,
-                        "columnName": "Term Source REF.4",
+                        "columnIndex": 22,
+                        "columnName": "Term Source REF.6",
                         "columnHeader": "Term Source REF",
                         "additionalColumns": [],
                         "columnCategory": "Linked Column",
@@ -707,8 +1017,8 @@
                         "columnSearchPattern": ""
                     },
                     {
-                        "columnIndex": 17,
-                        "columnName": "Term Accession Number.4",
+                        "columnIndex": 23,
+                        "columnName": "Term Accession Number.6",
                         "columnHeader": "Term Accession Number",
                         "additionalColumns": [],
                         "columnCategory": "Linked Column",
@@ -723,7 +1033,7 @@
                         "Sample2"
                     ],
                     "Characteristics[Organism]": [
-                        "Homo sapiens",
+                        "Mus musculus",
                         "Mus musculus"
                     ],
                     "Term Source REF": [
@@ -731,42 +1041,66 @@
                         "NCBITaxon"
                     ],
                     "Term Accession Number": [
-                        "http://purl.obolibrary.org/obo/NCBITaxon_9606",
+                        "http://purl.obolibrary.org/obo/NCBITaxon_10090",
                         "http://purl.obolibrary.org/obo/NCBITaxon_10090"
                     ],
                     "Characteristics[Organism part]": [
-                        "blood plasma",
-                        "urine"
+                        "blood serum",
+                        "blood serum"
                     ],
                     "Term Source REF.1": [
                         "BTO",
                         "BTO"
                     ],
                     "Term Accession Number.1": [
-                        "http://purl.obolibrary.org/obo/BTO_0000131",
-                        "http://purl.obolibrary.org/obo/BTO_0001419"
+                        "http://purl.obolibrary.org/obo/BTO_0000133",
+                        "http://purl.obolibrary.org/obo/BTO_0000133"
                     ],
                     "Characteristics[Variant]": [
-                        "water",
-                        "L-valine"
+                        "",
+                        ""
                     ],
                     "Term Source REF.2": [
-                        "OBI",
-                        "CHEBI"
+                        "",
+                        ""
                     ],
                     "Term Accession Number.2": [
-                        "http://purl.obolibrary.org/obo/CHEBI_15377",
-                        "http://purl.obolibrary.org/obo/CHEBI_16414"
+                        "",
+                        ""
                     ],
                     "Characteristics[Sample type]": [
-                        "",
-                        ""
+                        "experimental sample",
+                        "experimental sample"
                     ],
                     "Term Source REF.3": [
+                        "CHMO",
+                        "CHMO"
+                    ],
+                    "Term Accession Number.3": [
+                        "http://purl.obolibrary.org/obo/CHMO_0002746",
+                        "http://purl.obolibrary.org/obo/CHMO_0002746"
+                    ],
+                    "Characteristics[Cell type]": [
                         "",
                         ""
                     ],
-                    "Term Accession Number.3": [
+                    "Term Source REF.4": [
+                        "",
+                        ""
+                    ],
+                    "Term Accession Number.4": [
+                        "",
+                        ""
+                    ],
+                    "Characteristics[Disease]": [
+                        "",
+                        ""
+                    ],
+                    "Term Source REF.5": [
+                        "",
+                        ""
+                    ],
+                    "Term Accession Number.5": [
                         "",
                         ""
                     ],
@@ -779,16 +1113,16 @@
                         "Sample2"
                     ],
                     "Factor Value[Dose]": [
-                        "liter",
-                        "Diffuse Alveolar Damage"
+                        "1",
+                        "2"
                     ],
-                    "Term Source REF.4": [
-                        "OBI",
-                        "NCIT"
+                    "Term Source REF.6": [
+                        "",
+                        ""
                     ],
-                    "Term Accession Number.4": [
-                        "http://purl.obolibrary.org/obo/UO_0000099",
-                        "http://purl.obolibrary.org/obo/NCIT_C189012"
+                    "Term Accession Number.6": [
+                        "",
+                        ""
                     ]
                 },
                 "rowIndices": [
@@ -813,27 +1147,28 @@
                     14,
                     15,
                     16,
-                    17
+                    17,
+                    18,
+                    19,
+                    20,
+                    21,
+                    22,
+                    23
                 ],
                 "filteredTotalRowCount": 2,
                 "rowOffset": 0,
                 "rowCount": 2,
                 "totalRowCount": 2,
                 "selectedColumnCount": 0,
-                "totalColumnCount": 18,
+                "totalColumnCount": 24,
                 "filterOptions": [],
                 "sortOptions": []
             },
             "sampleNames": [
-                "Sample2",
-                "Sample1"
+                "Sample1",
+                "Sample2"
             ],
             "organisms": [
-                {
-                    "term": "Homo sapiens",
-                    "termSourceRef": "NCBITaxon",
-                    "termAccessionNumber": "http://purl.obolibrary.org/obo/NCBITaxon_9606"
-                },
                 {
                     "term": "Mus musculus",
                     "termSourceRef": "NCBITaxon",
@@ -842,14 +1177,9 @@
             ],
             "organismParts": [
                 {
-                    "term": "blood plasma",
+                    "term": "blood serum",
                     "termSourceRef": "BTO",
-                    "termAccessionNumber": "http://purl.obolibrary.org/obo/BTO_0000131"
-                },
-                {
-                    "term": "urine",
-                    "termSourceRef": "BTO",
-                    "termAccessionNumber": "http://purl.obolibrary.org/obo/BTO_0001419"
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/BTO_0000133"
                 }
             ],
             "organismAndOrganismPartPairs": [
@@ -860,94 +1190,84 @@
                         "termAccessionNumber": "http://purl.obolibrary.org/obo/NCBITaxon_10090"
                     },
                     "organismPart": {
-                        "term": "urine",
+                        "term": "blood serum",
                         "termSourceRef": "BTO",
-                        "termAccessionNumber": "http://purl.obolibrary.org/obo/BTO_0001419"
+                        "termAccessionNumber": "http://purl.obolibrary.org/obo/BTO_0000133"
                     },
                     "variant": {
-                        "term": "L-valine",
-                        "termSourceRef": "CHEBI",
-                        "termAccessionNumber": "http://purl.obolibrary.org/obo/CHEBI_16414"
-                    },
-                    "sampleType": {
                         "term": "",
                         "termSourceRef": "",
                         "termAccessionNumber": ""
-                    }
-                },
-                {
-                    "organism": {
-                        "term": "Homo sapiens",
-                        "termSourceRef": "NCBITaxon",
-                        "termAccessionNumber": "http://purl.obolibrary.org/obo/NCBITaxon_9606"
-                    },
-                    "organismPart": {
-                        "term": "blood plasma",
-                        "termSourceRef": "BTO",
-                        "termAccessionNumber": "http://purl.obolibrary.org/obo/BTO_0000131"
-                    },
-                    "variant": {
-                        "term": "water",
-                        "termSourceRef": "OBI",
-                        "termAccessionNumber": "http://purl.obolibrary.org/obo/CHEBI_15377"
                     },
                     "sampleType": {
-                        "term": "",
-                        "termSourceRef": "",
-                        "termAccessionNumber": ""
+                        "term": "experimental sample",
+                        "termSourceRef": "CHMO",
+                        "termAccessionNumber": "http://purl.obolibrary.org/obo/CHMO_0002746"
                     }
                 }
             ],
-            "variants": [
+            "variants": [],
+            "sampleTypes": [
                 {
-                    "term": "water",
-                    "termSourceRef": "OBI",
-                    "termAccessionNumber": "http://purl.obolibrary.org/obo/CHEBI_15377"
-                },
-                {
-                    "term": "L-valine",
-                    "termSourceRef": "CHEBI",
-                    "termAccessionNumber": "http://purl.obolibrary.org/obo/CHEBI_16414"
+                    "term": "experimental sample",
+                    "termSourceRef": "CHMO",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/CHMO_0002746"
                 }
-            ],
-            "sampleTypes": []
+            ]
         }
     },
     "assays": {
-        "a_REQ202512083000120_LC-MS_positive_hilic_metabolite_profiling.txt": {
-            "filePath": "a_REQ202512083000120_LC-MS_positive_hilic_metabolite_profiling.txt",
-            "sha256Hash": "bcb3493da071df294ae21c9fd082ab8d9cf45bf713fe9407c95181eac94cdbdf",
+        "a_REQ202602083000317_LC-MS_negative_reverse-phase.txt": {
+            "filePath": "a_REQ202602083000317_LC-MS_negative_reverse-phase.txt",
+            "sha256Hash": "97da55950ab0c1e2eb31fab0f6bbe6ff467d253e4b6355a92c60b66c869a5c8c",
             "table": {
                 "columns": [
                     "Sample Name",
                     "Protocol REF",
                     "Parameter Value[Post Extraction]",
+                    "Term Source REF",
+                    "Term Accession Number",
                     "Parameter Value[Derivatization]",
+                    "Term Source REF.1",
+                    "Term Accession Number.1",
                     "Extract Name",
                     "Protocol REF.1",
                     "Parameter Value[Chromatography Instrument]",
-                    "Term Source REF",
-                    "Term Accession Number",
-                    "Parameter Value[Autosampler model]",
-                    "Parameter Value[Column model]",
-                    "Parameter Value[Column type]",
-                    "Parameter Value[Guard column]",
-                    "Labeled Extract Name",
-                    "Label",
-                    "Term Source REF.1",
-                    "Term Accession Number.1",
-                    "Protocol REF.2",
-                    "Parameter Value[Scan polarity]",
-                    "Parameter Value[Scan m/z range]",
-                    "Parameter Value[Instrument]",
                     "Term Source REF.2",
                     "Term Accession Number.2",
-                    "Parameter Value[Ion source]",
+                    "Parameter Value[Autosampler model]",
                     "Term Source REF.3",
                     "Term Accession Number.3",
-                    "Parameter Value[Mass analyzer]",
+                    "Parameter Value[Column model]",
                     "Term Source REF.4",
                     "Term Accession Number.4",
+                    "Parameter Value[Column type]",
+                    "Term Source REF.5",
+                    "Term Accession Number.5",
+                    "Parameter Value[Guard column]",
+                    "Term Source REF.6",
+                    "Term Accession Number.6",
+                    "Labeled Extract Name",
+                    "Label",
+                    "Term Source REF.7",
+                    "Term Accession Number.7",
+                    "Protocol REF.2",
+                    "Parameter Value[Scan polarity]",
+                    "Term Source REF.8",
+                    "Term Accession Number.8",
+                    "Parameter Value[Scan m/z range]",
+                    "Unit",
+                    "Term Source REF.9",
+                    "Term Accession Number.9",
+                    "Parameter Value[Instrument]",
+                    "Term Source REF.10",
+                    "Term Accession Number.10",
+                    "Parameter Value[Ion source]",
+                    "Term Source REF.11",
+                    "Term Accession Number.11",
+                    "Parameter Value[Mass analyzer]",
+                    "Term Source REF.12",
+                    "Term Accession Number.12",
                     "MS Assay Name",
                     "Raw Spectral Data File",
                     "Protocol REF.3",
@@ -982,24 +1302,70 @@
                         "columnIndex": 2,
                         "columnName": "Parameter Value[Post Extraction]",
                         "columnHeader": "Parameter Value[Post Extraction]",
-                        "additionalColumns": [],
+                        "additionalColumns": [
+                            "Term Source REF",
+                            "Term Accession Number"
+                        ],
                         "columnCategory": "Parameter Value",
-                        "columnStructure": "SINGLE_COLUMN",
+                        "columnStructure": "ONTOLOGY_COLUMN",
                         "columnPrefix": "Parameter Value",
                         "columnSearchPattern": "^[ ]*Parameter[ ]+Value[ ]*\\[[ ]*(\\w[ -~]*)[ ]*\\](\\.\\d+)?$"
                     },
                     {
                         "columnIndex": 3,
+                        "columnName": "Term Source REF",
+                        "columnHeader": "Term Source REF",
+                        "additionalColumns": [],
+                        "columnCategory": "Linked Column",
+                        "columnStructure": "LINKED_COLUMN",
+                        "columnPrefix": "",
+                        "columnSearchPattern": ""
+                    },
+                    {
+                        "columnIndex": 4,
+                        "columnName": "Term Accession Number",
+                        "columnHeader": "Term Accession Number",
+                        "additionalColumns": [],
+                        "columnCategory": "Linked Column",
+                        "columnStructure": "LINKED_COLUMN",
+                        "columnPrefix": "",
+                        "columnSearchPattern": ""
+                    },
+                    {
+                        "columnIndex": 5,
                         "columnName": "Parameter Value[Derivatization]",
                         "columnHeader": "Parameter Value[Derivatization]",
-                        "additionalColumns": [],
+                        "additionalColumns": [
+                            "Term Source REF",
+                            "Term Accession Number"
+                        ],
                         "columnCategory": "Parameter Value",
-                        "columnStructure": "SINGLE_COLUMN",
+                        "columnStructure": "ONTOLOGY_COLUMN",
                         "columnPrefix": "Parameter Value",
                         "columnSearchPattern": "^[ ]*Parameter[ ]+Value[ ]*\\[[ ]*(\\w[ -~]*)[ ]*\\](\\.\\d+)?$"
                     },
                     {
-                        "columnIndex": 4,
+                        "columnIndex": 6,
+                        "columnName": "Term Source REF.1",
+                        "columnHeader": "Term Source REF",
+                        "additionalColumns": [],
+                        "columnCategory": "Linked Column",
+                        "columnStructure": "LINKED_COLUMN",
+                        "columnPrefix": "",
+                        "columnSearchPattern": ""
+                    },
+                    {
+                        "columnIndex": 7,
+                        "columnName": "Term Accession Number.1",
+                        "columnHeader": "Term Accession Number",
+                        "additionalColumns": [],
+                        "columnCategory": "Linked Column",
+                        "columnStructure": "LINKED_COLUMN",
+                        "columnPrefix": "",
+                        "columnSearchPattern": ""
+                    },
+                    {
+                        "columnIndex": 8,
                         "columnName": "Extract Name",
                         "columnHeader": "Extract Name",
                         "additionalColumns": [],
@@ -1009,7 +1375,7 @@
                         "columnSearchPattern": "^(Extract Name)$"
                     },
                     {
-                        "columnIndex": 5,
+                        "columnIndex": 9,
                         "columnName": "Protocol REF.1",
                         "columnHeader": "Protocol REF",
                         "additionalColumns": [],
@@ -1019,7 +1385,7 @@
                         "columnSearchPattern": "^(Protocol REF)(\\.\\d+)?$"
                     },
                     {
-                        "columnIndex": 6,
+                        "columnIndex": 10,
                         "columnName": "Parameter Value[Chromatography Instrument]",
                         "columnHeader": "Parameter Value[Chromatography Instrument]",
                         "additionalColumns": [
@@ -1032,8 +1398,8 @@
                         "columnSearchPattern": "^[ ]*Parameter[ ]+Value[ ]*\\[[ ]*(\\w[ -~]*)[ ]*\\](\\.\\d+)?$"
                     },
                     {
-                        "columnIndex": 7,
-                        "columnName": "Term Source REF",
+                        "columnIndex": 11,
+                        "columnName": "Term Source REF.2",
                         "columnHeader": "Term Source REF",
                         "additionalColumns": [],
                         "columnCategory": "Linked Column",
@@ -1042,8 +1408,8 @@
                         "columnSearchPattern": ""
                     },
                     {
-                        "columnIndex": 8,
-                        "columnName": "Term Accession Number",
+                        "columnIndex": 12,
+                        "columnName": "Term Accession Number.2",
                         "columnHeader": "Term Accession Number",
                         "additionalColumns": [],
                         "columnCategory": "Linked Column",
@@ -1052,47 +1418,139 @@
                         "columnSearchPattern": ""
                     },
                     {
-                        "columnIndex": 9,
+                        "columnIndex": 13,
                         "columnName": "Parameter Value[Autosampler model]",
                         "columnHeader": "Parameter Value[Autosampler model]",
-                        "additionalColumns": [],
+                        "additionalColumns": [
+                            "Term Source REF",
+                            "Term Accession Number"
+                        ],
                         "columnCategory": "Parameter Value",
-                        "columnStructure": "SINGLE_COLUMN",
+                        "columnStructure": "ONTOLOGY_COLUMN",
                         "columnPrefix": "Parameter Value",
                         "columnSearchPattern": "^[ ]*Parameter[ ]+Value[ ]*\\[[ ]*(\\w[ -~]*)[ ]*\\](\\.\\d+)?$"
                     },
                     {
-                        "columnIndex": 10,
+                        "columnIndex": 14,
+                        "columnName": "Term Source REF.3",
+                        "columnHeader": "Term Source REF",
+                        "additionalColumns": [],
+                        "columnCategory": "Linked Column",
+                        "columnStructure": "LINKED_COLUMN",
+                        "columnPrefix": "",
+                        "columnSearchPattern": ""
+                    },
+                    {
+                        "columnIndex": 15,
+                        "columnName": "Term Accession Number.3",
+                        "columnHeader": "Term Accession Number",
+                        "additionalColumns": [],
+                        "columnCategory": "Linked Column",
+                        "columnStructure": "LINKED_COLUMN",
+                        "columnPrefix": "",
+                        "columnSearchPattern": ""
+                    },
+                    {
+                        "columnIndex": 16,
                         "columnName": "Parameter Value[Column model]",
                         "columnHeader": "Parameter Value[Column model]",
-                        "additionalColumns": [],
+                        "additionalColumns": [
+                            "Term Source REF",
+                            "Term Accession Number"
+                        ],
                         "columnCategory": "Parameter Value",
-                        "columnStructure": "SINGLE_COLUMN",
+                        "columnStructure": "ONTOLOGY_COLUMN",
                         "columnPrefix": "Parameter Value",
                         "columnSearchPattern": "^[ ]*Parameter[ ]+Value[ ]*\\[[ ]*(\\w[ -~]*)[ ]*\\](\\.\\d+)?$"
                     },
                     {
-                        "columnIndex": 11,
+                        "columnIndex": 17,
+                        "columnName": "Term Source REF.4",
+                        "columnHeader": "Term Source REF",
+                        "additionalColumns": [],
+                        "columnCategory": "Linked Column",
+                        "columnStructure": "LINKED_COLUMN",
+                        "columnPrefix": "",
+                        "columnSearchPattern": ""
+                    },
+                    {
+                        "columnIndex": 18,
+                        "columnName": "Term Accession Number.4",
+                        "columnHeader": "Term Accession Number",
+                        "additionalColumns": [],
+                        "columnCategory": "Linked Column",
+                        "columnStructure": "LINKED_COLUMN",
+                        "columnPrefix": "",
+                        "columnSearchPattern": ""
+                    },
+                    {
+                        "columnIndex": 19,
                         "columnName": "Parameter Value[Column type]",
                         "columnHeader": "Parameter Value[Column type]",
-                        "additionalColumns": [],
+                        "additionalColumns": [
+                            "Term Source REF",
+                            "Term Accession Number"
+                        ],
                         "columnCategory": "Parameter Value",
-                        "columnStructure": "SINGLE_COLUMN",
+                        "columnStructure": "ONTOLOGY_COLUMN",
                         "columnPrefix": "Parameter Value",
                         "columnSearchPattern": "^[ ]*Parameter[ ]+Value[ ]*\\[[ ]*(\\w[ -~]*)[ ]*\\](\\.\\d+)?$"
                     },
                     {
-                        "columnIndex": 12,
+                        "columnIndex": 20,
+                        "columnName": "Term Source REF.5",
+                        "columnHeader": "Term Source REF",
+                        "additionalColumns": [],
+                        "columnCategory": "Linked Column",
+                        "columnStructure": "LINKED_COLUMN",
+                        "columnPrefix": "",
+                        "columnSearchPattern": ""
+                    },
+                    {
+                        "columnIndex": 21,
+                        "columnName": "Term Accession Number.5",
+                        "columnHeader": "Term Accession Number",
+                        "additionalColumns": [],
+                        "columnCategory": "Linked Column",
+                        "columnStructure": "LINKED_COLUMN",
+                        "columnPrefix": "",
+                        "columnSearchPattern": ""
+                    },
+                    {
+                        "columnIndex": 22,
                         "columnName": "Parameter Value[Guard column]",
                         "columnHeader": "Parameter Value[Guard column]",
-                        "additionalColumns": [],
+                        "additionalColumns": [
+                            "Term Source REF",
+                            "Term Accession Number"
+                        ],
                         "columnCategory": "Parameter Value",
-                        "columnStructure": "SINGLE_COLUMN",
+                        "columnStructure": "ONTOLOGY_COLUMN",
                         "columnPrefix": "Parameter Value",
                         "columnSearchPattern": "^[ ]*Parameter[ ]+Value[ ]*\\[[ ]*(\\w[ -~]*)[ ]*\\](\\.\\d+)?$"
                     },
                     {
-                        "columnIndex": 13,
+                        "columnIndex": 23,
+                        "columnName": "Term Source REF.6",
+                        "columnHeader": "Term Source REF",
+                        "additionalColumns": [],
+                        "columnCategory": "Linked Column",
+                        "columnStructure": "LINKED_COLUMN",
+                        "columnPrefix": "",
+                        "columnSearchPattern": ""
+                    },
+                    {
+                        "columnIndex": 24,
+                        "columnName": "Term Accession Number.6",
+                        "columnHeader": "Term Accession Number",
+                        "additionalColumns": [],
+                        "columnCategory": "Linked Column",
+                        "columnStructure": "LINKED_COLUMN",
+                        "columnPrefix": "",
+                        "columnSearchPattern": ""
+                    },
+                    {
+                        "columnIndex": 25,
                         "columnName": "Labeled Extract Name",
                         "columnHeader": "Labeled Extract Name",
                         "additionalColumns": [],
@@ -1102,7 +1560,7 @@
                         "columnSearchPattern": "^(Labeled Extract Name)$"
                     },
                     {
-                        "columnIndex": 14,
+                        "columnIndex": 26,
                         "columnName": "Label",
                         "columnHeader": "Label",
                         "additionalColumns": [
@@ -1115,8 +1573,8 @@
                         "columnSearchPattern": "^(Label)$"
                     },
                     {
-                        "columnIndex": 15,
-                        "columnName": "Term Source REF.1",
+                        "columnIndex": 27,
+                        "columnName": "Term Source REF.7",
                         "columnHeader": "Term Source REF",
                         "additionalColumns": [],
                         "columnCategory": "Linked Column",
@@ -1125,8 +1583,8 @@
                         "columnSearchPattern": ""
                     },
                     {
-                        "columnIndex": 16,
-                        "columnName": "Term Accession Number.1",
+                        "columnIndex": 28,
+                        "columnName": "Term Accession Number.7",
                         "columnHeader": "Term Accession Number",
                         "additionalColumns": [],
                         "columnCategory": "Linked Column",
@@ -1135,7 +1593,7 @@
                         "columnSearchPattern": ""
                     },
                     {
-                        "columnIndex": 17,
+                        "columnIndex": 29,
                         "columnName": "Protocol REF.2",
                         "columnHeader": "Protocol REF",
                         "additionalColumns": [],
@@ -1145,27 +1603,84 @@
                         "columnSearchPattern": "^(Protocol REF)(\\.\\d+)?$"
                     },
                     {
-                        "columnIndex": 18,
+                        "columnIndex": 30,
                         "columnName": "Parameter Value[Scan polarity]",
                         "columnHeader": "Parameter Value[Scan polarity]",
-                        "additionalColumns": [],
+                        "additionalColumns": [
+                            "Term Source REF",
+                            "Term Accession Number"
+                        ],
                         "columnCategory": "Parameter Value",
-                        "columnStructure": "SINGLE_COLUMN",
+                        "columnStructure": "ONTOLOGY_COLUMN",
                         "columnPrefix": "Parameter Value",
                         "columnSearchPattern": "^[ ]*Parameter[ ]+Value[ ]*\\[[ ]*(\\w[ -~]*)[ ]*\\](\\.\\d+)?$"
                     },
                     {
-                        "columnIndex": 19,
+                        "columnIndex": 31,
+                        "columnName": "Term Source REF.8",
+                        "columnHeader": "Term Source REF",
+                        "additionalColumns": [],
+                        "columnCategory": "Linked Column",
+                        "columnStructure": "LINKED_COLUMN",
+                        "columnPrefix": "",
+                        "columnSearchPattern": ""
+                    },
+                    {
+                        "columnIndex": 32,
+                        "columnName": "Term Accession Number.8",
+                        "columnHeader": "Term Accession Number",
+                        "additionalColumns": [],
+                        "columnCategory": "Linked Column",
+                        "columnStructure": "LINKED_COLUMN",
+                        "columnPrefix": "",
+                        "columnSearchPattern": ""
+                    },
+                    {
+                        "columnIndex": 33,
                         "columnName": "Parameter Value[Scan m/z range]",
                         "columnHeader": "Parameter Value[Scan m/z range]",
-                        "additionalColumns": [],
+                        "additionalColumns": [
+                            "Unit",
+                            "Term Source REF",
+                            "Term Accession Number"
+                        ],
                         "columnCategory": "Parameter Value",
-                        "columnStructure": "SINGLE_COLUMN",
+                        "columnStructure": "SINGLE_COLUMN_AND_UNIT_ONTOLOGY",
                         "columnPrefix": "Parameter Value",
                         "columnSearchPattern": "^[ ]*Parameter[ ]+Value[ ]*\\[[ ]*(\\w[ -~]*)[ ]*\\](\\.\\d+)?$"
                     },
                     {
-                        "columnIndex": 20,
+                        "columnIndex": 34,
+                        "columnName": "Unit",
+                        "columnHeader": "Unit",
+                        "additionalColumns": [],
+                        "columnCategory": "Linked Column",
+                        "columnStructure": "LINKED_COLUMN",
+                        "columnPrefix": "",
+                        "columnSearchPattern": ""
+                    },
+                    {
+                        "columnIndex": 35,
+                        "columnName": "Term Source REF.9",
+                        "columnHeader": "Term Source REF",
+                        "additionalColumns": [],
+                        "columnCategory": "Linked Column",
+                        "columnStructure": "LINKED_COLUMN",
+                        "columnPrefix": "",
+                        "columnSearchPattern": ""
+                    },
+                    {
+                        "columnIndex": 36,
+                        "columnName": "Term Accession Number.9",
+                        "columnHeader": "Term Accession Number",
+                        "additionalColumns": [],
+                        "columnCategory": "Linked Column",
+                        "columnStructure": "LINKED_COLUMN",
+                        "columnPrefix": "",
+                        "columnSearchPattern": ""
+                    },
+                    {
+                        "columnIndex": 37,
                         "columnName": "Parameter Value[Instrument]",
                         "columnHeader": "Parameter Value[Instrument]",
                         "additionalColumns": [
@@ -1178,8 +1693,8 @@
                         "columnSearchPattern": "^[ ]*Parameter[ ]+Value[ ]*\\[[ ]*(\\w[ -~]*)[ ]*\\](\\.\\d+)?$"
                     },
                     {
-                        "columnIndex": 21,
-                        "columnName": "Term Source REF.2",
+                        "columnIndex": 38,
+                        "columnName": "Term Source REF.10",
                         "columnHeader": "Term Source REF",
                         "additionalColumns": [],
                         "columnCategory": "Linked Column",
@@ -1188,8 +1703,8 @@
                         "columnSearchPattern": ""
                     },
                     {
-                        "columnIndex": 22,
-                        "columnName": "Term Accession Number.2",
+                        "columnIndex": 39,
+                        "columnName": "Term Accession Number.10",
                         "columnHeader": "Term Accession Number",
                         "additionalColumns": [],
                         "columnCategory": "Linked Column",
@@ -1198,7 +1713,7 @@
                         "columnSearchPattern": ""
                     },
                     {
-                        "columnIndex": 23,
+                        "columnIndex": 40,
                         "columnName": "Parameter Value[Ion source]",
                         "columnHeader": "Parameter Value[Ion source]",
                         "additionalColumns": [
@@ -1211,8 +1726,8 @@
                         "columnSearchPattern": "^[ ]*Parameter[ ]+Value[ ]*\\[[ ]*(\\w[ -~]*)[ ]*\\](\\.\\d+)?$"
                     },
                     {
-                        "columnIndex": 24,
-                        "columnName": "Term Source REF.3",
+                        "columnIndex": 41,
+                        "columnName": "Term Source REF.11",
                         "columnHeader": "Term Source REF",
                         "additionalColumns": [],
                         "columnCategory": "Linked Column",
@@ -1221,8 +1736,8 @@
                         "columnSearchPattern": ""
                     },
                     {
-                        "columnIndex": 25,
-                        "columnName": "Term Accession Number.3",
+                        "columnIndex": 42,
+                        "columnName": "Term Accession Number.11",
                         "columnHeader": "Term Accession Number",
                         "additionalColumns": [],
                         "columnCategory": "Linked Column",
@@ -1231,7 +1746,7 @@
                         "columnSearchPattern": ""
                     },
                     {
-                        "columnIndex": 26,
+                        "columnIndex": 43,
                         "columnName": "Parameter Value[Mass analyzer]",
                         "columnHeader": "Parameter Value[Mass analyzer]",
                         "additionalColumns": [
@@ -1244,8 +1759,8 @@
                         "columnSearchPattern": "^[ ]*Parameter[ ]+Value[ ]*\\[[ ]*(\\w[ -~]*)[ ]*\\](\\.\\d+)?$"
                     },
                     {
-                        "columnIndex": 27,
-                        "columnName": "Term Source REF.4",
+                        "columnIndex": 44,
+                        "columnName": "Term Source REF.12",
                         "columnHeader": "Term Source REF",
                         "additionalColumns": [],
                         "columnCategory": "Linked Column",
@@ -1254,8 +1769,8 @@
                         "columnSearchPattern": ""
                     },
                     {
-                        "columnIndex": 28,
-                        "columnName": "Term Accession Number.4",
+                        "columnIndex": 45,
+                        "columnName": "Term Accession Number.12",
                         "columnHeader": "Term Accession Number",
                         "additionalColumns": [],
                         "columnCategory": "Linked Column",
@@ -1264,7 +1779,7 @@
                         "columnSearchPattern": ""
                     },
                     {
-                        "columnIndex": 29,
+                        "columnIndex": 46,
                         "columnName": "MS Assay Name",
                         "columnHeader": "MS Assay Name",
                         "additionalColumns": [],
@@ -1274,7 +1789,7 @@
                         "columnSearchPattern": ""
                     },
                     {
-                        "columnIndex": 30,
+                        "columnIndex": 47,
                         "columnName": "Raw Spectral Data File",
                         "columnHeader": "Raw Spectral Data File",
                         "additionalColumns": [],
@@ -1284,7 +1799,7 @@
                         "columnSearchPattern": ""
                     },
                     {
-                        "columnIndex": 31,
+                        "columnIndex": 48,
                         "columnName": "Protocol REF.3",
                         "columnHeader": "Protocol REF",
                         "additionalColumns": [],
@@ -1294,7 +1809,7 @@
                         "columnSearchPattern": "^(Protocol REF)(\\.\\d+)?$"
                     },
                     {
-                        "columnIndex": 32,
+                        "columnIndex": 49,
                         "columnName": "Normalization Name",
                         "columnHeader": "Normalization Name",
                         "additionalColumns": [],
@@ -1304,7 +1819,7 @@
                         "columnSearchPattern": ""
                     },
                     {
-                        "columnIndex": 33,
+                        "columnIndex": 50,
                         "columnName": "Derived Spectral Data File",
                         "columnHeader": "Derived Spectral Data File",
                         "additionalColumns": [],
@@ -1314,7 +1829,7 @@
                         "columnSearchPattern": ""
                     },
                     {
-                        "columnIndex": 34,
+                        "columnIndex": 51,
                         "columnName": "Protocol REF.4",
                         "columnHeader": "Protocol REF",
                         "additionalColumns": [],
@@ -1324,7 +1839,7 @@
                         "columnSearchPattern": "^(Protocol REF)(\\.\\d+)?$"
                     },
                     {
-                        "columnIndex": 35,
+                        "columnIndex": 52,
                         "columnName": "Data Transformation Name",
                         "columnHeader": "Data Transformation Name",
                         "additionalColumns": [],
@@ -1334,7 +1849,7 @@
                         "columnSearchPattern": ""
                     },
                     {
-                        "columnIndex": 36,
+                        "columnIndex": 53,
                         "columnName": "Metabolite Assignment File",
                         "columnHeader": "Metabolite Assignment File",
                         "additionalColumns": [],
@@ -1357,7 +1872,23 @@
                         "",
                         ""
                     ],
+                    "Term Source REF": [
+                        "",
+                        ""
+                    ],
+                    "Term Accession Number": [
+                        "",
+                        ""
+                    ],
                     "Parameter Value[Derivatization]": [
+                        "",
+                        ""
+                    ],
+                    "Term Source REF.1": [
+                        "",
+                        ""
+                    ],
+                    "Term Accession Number.1": [
                         "",
                         ""
                     ],
@@ -1370,32 +1901,64 @@
                         "Chromatography"
                     ],
                     "Parameter Value[Chromatography Instrument]": [
-                        "Agilent 1100 Series LC",
-                        "Agilent 1100 Series LC"
+                        "2500 QTRAP",
+                        "2500 QTRAP"
                     ],
-                    "Term Source REF": [
+                    "Term Source REF.2": [
+                        "MS",
+                        "MS"
+                    ],
+                    "Term Accession Number.2": [
+                        "http://purl.obolibrary.org/obo/MS_1002578",
+                        "http://purl.obolibrary.org/obo/MS_1002578"
+                    ],
+                    "Parameter Value[Autosampler model]": [
+                        "1100",
+                        "1100"
+                    ],
+                    "Term Source REF.3": [
+                        "hgnc",
+                        "hgnc"
+                    ],
+                    "Term Accession Number.3": [
+                        "https://www.genenames.org/data/genegroup/#!/group/1100",
+                        "https://www.genenames.org/data/genegroup/#!/group/1100"
+                    ],
+                    "Parameter Value[Column model]": [
+                        "ACQUITY UPLC H-Class",
+                        "ACQUITY UPLC H-Class"
+                    ],
+                    "Term Source REF.4": [
+                        "MS",
+                        "MS"
+                    ],
+                    "Term Accession Number.4": [
+                        "http://purl.obolibrary.org/obo/MS_1001762",
+                        "http://purl.obolibrary.org/obo/MS_1001762"
+                    ],
+                    "Parameter Value[Column type]": [
+                        "reverse phase",
+                        "reverse phase"
+                    ],
+                    "Term Source REF.5": [
                         "MTBLS",
                         "MTBLS"
                     ],
-                    "Term Accession Number": [
-                        "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000893",
-                        "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000893"
-                    ],
-                    "Parameter Value[Autosampler model]": [
-                        "Agilent 1260 Infinity Autosampler",
-                        "Agilent 1290 Infinity Autosampler"
-                    ],
-                    "Parameter Value[Column model]": [
-                        "Acclaim C30 (3 \u00b5m, 2.1 mm x 150 mm, Thermo Scientific)",
-                        "Acclaim Polar Advantage II (3 \u00b5m, 3 mm x 150 mm; Thermo Scientific)"
-                    ],
-                    "Parameter Value[Column type]": [
-                        "HILIC",
-                        "HILIC"
+                    "Term Accession Number.5": [
+                        "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000853",
+                        "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000853"
                     ],
                     "Parameter Value[Guard column]": [
-                        "Acclaim C18 Guard Column (4 mm x 4 mm; Thermo Scientific)",
-                        "Acclaim PepMap C18 100 \u00c5 Pre-column (5 \u00b5m; Thermo Scientific)"
+                        "",
+                        ""
+                    ],
+                    "Term Source REF.6": [
+                        "",
+                        ""
+                    ],
+                    "Term Accession Number.6": [
+                        "",
+                        ""
                     ],
                     "Labeled Extract Name": [
                         "",
@@ -1405,11 +1968,11 @@
                         "",
                         ""
                     ],
-                    "Term Source REF.1": [
+                    "Term Source REF.7": [
                         "",
                         ""
                     ],
-                    "Term Accession Number.1": [
+                    "Term Accession Number.7": [
                         "",
                         ""
                     ],
@@ -1418,48 +1981,68 @@
                         "Mass spectrometry"
                     ],
                     "Parameter Value[Scan polarity]": [
-                        "positive",
-                        "positive"
+                        "negative polarity acquisition",
+                        "negative polarity acquisition"
                     ],
-                    "Parameter Value[Scan m/z range]": [
-                        "100-1000",
-                        "100-1000"
-                    ],
-                    "Parameter Value[Instrument]": [
-                        "AB SCIEX API 2000",
-                        "AB SCIEX API 4000"
-                    ],
-                    "Term Source REF.2": [
-                        "MTBLS",
-                        "MTBLS"
-                    ],
-                    "Term Accession Number.2": [
-                        "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002035",
-                        "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000593"
-                    ],
-                    "Parameter Value[Ion source]": [
-                        "nanoelectrospray",
-                        "nanoelectrospray"
-                    ],
-                    "Term Source REF.3": [
+                    "Term Source REF.8": [
                         "MS",
                         "MS"
                     ],
-                    "Term Accession Number.3": [
-                        "http://purl.obolibrary.org/obo/MS_1000398",
-                        "http://purl.obolibrary.org/obo/MS_1000398"
+                    "Term Accession Number.8": [
+                        "http://purl.obolibrary.org/obo/MS_1000076",
+                        "http://purl.obolibrary.org/obo/MS_1000076"
+                    ],
+                    "Parameter Value[Scan m/z range]": [
+                        "10-1000",
+                        "10-1000"
+                    ],
+                    "Unit": [
+                        "",
+                        ""
+                    ],
+                    "Term Source REF.9": [
+                        "",
+                        ""
+                    ],
+                    "Term Accession Number.9": [
+                        "",
+                        ""
+                    ],
+                    "Parameter Value[Instrument]": [
+                        "2500 QTRAP",
+                        "2500 QTRAP"
+                    ],
+                    "Term Source REF.10": [
+                        "MS",
+                        "MS"
+                    ],
+                    "Term Accession Number.10": [
+                        "http://purl.obolibrary.org/obo/MS_1002578",
+                        "http://purl.obolibrary.org/obo/MS_1002578"
+                    ],
+                    "Parameter Value[Ion source]": [
+                        "electrospray ionization",
+                        "electrospray ionization"
+                    ],
+                    "Term Source REF.11": [
+                        "MS",
+                        "MS"
+                    ],
+                    "Term Accession Number.11": [
+                        "http://purl.obolibrary.org/obo/MS_1000073",
+                        "http://purl.obolibrary.org/obo/MS_1000073"
                     ],
                     "Parameter Value[Mass analyzer]": [
                         "orbitrap",
-                        "triple quadrupole"
+                        "orbitrap"
                     ],
-                    "Term Source REF.4": [
+                    "Term Source REF.12": [
                         "MS",
-                        "MTBLS"
+                        "MS"
                     ],
-                    "Term Accession Number.4": [
+                    "Term Accession Number.12": [
                         "http://purl.obolibrary.org/obo/MS_1000484",
-                        "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000698"
+                        "http://purl.obolibrary.org/obo/MS_1000484"
                     ],
                     "MS Assay Name": [
                         "Sample1",
@@ -1490,8 +2073,8 @@
                         "Sample2"
                     ],
                     "Metabolite Assignment File": [
-                        "m_REQ202512083000120_LC-MS_positive_hilic_metabolite_profiling_v2_maf.tsv",
-                        "m_REQ202512083000120_LC-MS_positive_hilic_metabolite_profiling_v2_maf.tsv"
+                        "m_REQ202602083000317_LC-MS_negative_reverse-phase_v2_maf.tsv",
+                        "m_REQ202602083000317_LC-MS_negative_reverse-phase_v2_maf.tsv"
                     ]
                 },
                 "rowIndices": [
@@ -1535,27 +2118,44 @@
                     33,
                     34,
                     35,
-                    36
+                    36,
+                    37,
+                    38,
+                    39,
+                    40,
+                    41,
+                    42,
+                    43,
+                    44,
+                    45,
+                    46,
+                    47,
+                    48,
+                    49,
+                    50,
+                    51,
+                    52,
+                    53
                 ],
                 "filteredTotalRowCount": 2,
                 "rowOffset": 0,
                 "rowCount": 2,
                 "totalRowCount": 2,
                 "selectedColumnCount": 0,
-                "totalColumnCount": 37,
+                "totalColumnCount": 54,
                 "filterOptions": [],
                 "sortOptions": []
             },
             "sampleNames": [
-                "Sample2",
-                "Sample1"
+                "Sample1",
+                "Sample2"
             ],
             "assayNames": [
-                "Sample2",
-                "Sample1"
+                "Sample1",
+                "Sample2"
             ],
             "referencedAssignmentFiles": [
-                "m_REQ202512083000120_LC-MS_positive_hilic_metabolite_profiling_v2_maf.tsv"
+                "m_REQ202602083000317_LC-MS_negative_reverse-phase_v2_maf.tsv"
             ],
             "referencedRawFiles": [
                 "FILES/RAW_FILES/Test2.raw",
@@ -1577,12 +2177,12 @@
     },
     "parserMessages": {
         "i_Investigation.txt": [],
-        "s_REQ202512083000120.txt": [],
-        "a_REQ202512083000120_LC-MS_positive_hilic_metabolite_profiling.txt": [],
-        "m_REQ202512083000120_LC-MS_positive_hilic_metabolite_profiling_v2_maf.tsv": []
+        "s_REQ202602083000317.txt": [],
+        "a_REQ202602083000317_LC-MS_negative_reverse-phase.txt": [],
+        "m_REQ202602083000317_LC-MS_negative_reverse-phase_v2_maf.tsv": []
     },
     "referencedAssignmentFiles": [
-        "m_REQ202512083000120_LC-MS_positive_hilic_metabolite_profiling_v2_maf.tsv"
+        "m_REQ202602083000317_LC-MS_negative_reverse-phase_v2_maf.tsv"
     ],
     "referencedRawFiles": [
         "FILES/RAW_FILES/Test2.raw",
@@ -1590,12 +2190,12 @@
     ],
     "referencedDerivedFiles": [],
     "foldersInHierarchy": [
-        "RAW_FILES"
+        "FILES/RAW_FILES"
     ],
     "metaboliteAssignments": {
-        "m_REQ202512083000120_LC-MS_positive_hilic_metabolite_profiling_v2_maf.tsv": {
-            "filePath": "m_REQ202512083000120_LC-MS_positive_hilic_metabolite_profiling_v2_maf.tsv",
-            "sha256Hash": "ca9587b34aa43b4204a485e94561ede8c3a8d2771de0483ce30246ccda202c66",
+        "m_REQ202602083000317_LC-MS_negative_reverse-phase_v2_maf.tsv": {
+            "filePath": "m_REQ202602083000317_LC-MS_negative_reverse-phase_v2_maf.tsv",
+            "sha256Hash": "269f875d5323ba7d84b6b095552771ddd5f584a01d049533a471aff87ec9f297",
             "table": {
                 "columns": [
                     "database_identifier",
@@ -1856,101 +2456,125 @@
                 ],
                 "data": {
                     "database_identifier": [
-                        "",
-                        ""
+                        "CHEBI:27732",
+                        "CHEBI:31318",
+                        "CHEBI:15377"
                     ],
                     "chemical_formula": [
-                        "",
-                        ""
+                        "C8H10N4O2",
+                        "Al.C2H4NO2.C9H8O4.CO3.2HO.Mg",
+                        "H2O"
                     ],
                     "smiles": [
-                        "",
-                        ""
+                        "Cn1c(=O)c2c(ncn2C)n(C)c1=O",
+                        "CC(=O)Oc1ccccc1C(=O)O.NCC(=O)[O-].O=C([O-])[O-].[Al+3].[Mg+2].[OH-].[OH-]",
+                        "[H]O[H]"
                     ],
                     "inchi": [
-                        "",
-                        ""
+                        "InChI=1S/C8H10N4O2/c1-10-4-9-6-5(10)7(13)12(3)8(14)11(6)2/h4H,1-3H3",
+                        "InChI=1S/C9H8O4.C2H5NO2.CH2O3.Al.Mg.2H2O/c1-6(10)13-8-5-3-2-4-7(8)9(11)12;3-1-2(4)5;2-1(3)4;;;;/h2-5H,1H3,(H,11,12);1,3H2,(H,4,5);(H2,2,3,4);;;2*1H2/q;;;+3;+2;;/p-5",
+                        "InChI=1S/H2O/h1H2"
                     ],
                     "metabolite_identification": [
-                        "water",
-                        "aspirin"
+                        "caffeine",
+                        "Bufferin",
+                        "water"
                     ],
                     "mass_to_charge": [
-                        "1",
-                        "3"
+                        "194.194",
+                        "399.527",
+                        "18.015"
                     ],
                     "fragmentation": [
+                        "",
                         "",
                         ""
                     ],
                     "modifications": [
                         "",
+                        "",
                         ""
                     ],
                     "charge": [
                         "",
+                        "",
                         ""
                     ],
                     "retention_time": [
-                        "4",
-                        "4"
+                        "21",
+                        "23",
+                        "33"
                     ],
                     "taxid": [
+                        "",
                         "",
                         ""
                     ],
                     "species": [
                         "",
+                        "",
                         ""
                     ],
                     "database": [
+                        "",
                         "",
                         ""
                     ],
                     "database_version": [
                         "",
+                        "",
                         ""
                     ],
                     "reliability": [
+                        "",
                         "",
                         ""
                     ],
                     "uri": [
                         "",
+                        "",
                         ""
                     ],
                     "search_engine": [
+                        "",
                         "",
                         ""
                     ],
                     "search_engine_score": [
                         "",
+                        "",
                         ""
                     ],
                     "smallmolecule_abundance_sub": [
+                        "",
                         "",
                         ""
                     ],
                     "smallmolecule_abundance_stdev_sub": [
                         "",
+                        "",
                         ""
                     ],
                     "smallmolecule_abundance_std_error_sub": [
+                        "",
                         "",
                         ""
                     ],
                     "Sample1": [
                         "",
+                        "",
                         ""
                     ],
                     "Sample2": [
+                        "",
                         "",
                         ""
                     ]
                 },
                 "rowIndices": [
                     0,
-                    1
+                    1,
+                    2
                 ],
                 "columnIndices": [
                     0,
@@ -1977,90 +2601,217 @@
                     21,
                     22
                 ],
-                "filteredTotalRowCount": 2,
+                "filteredTotalRowCount": 3,
                 "rowOffset": 0,
-                "rowCount": 2,
-                "totalRowCount": 2,
+                "rowCount": 3,
+                "totalRowCount": 3,
                 "selectedColumnCount": 0,
                 "totalColumnCount": 23,
                 "filterOptions": [],
                 "sortOptions": []
             },
             "identifiedMetaboliteNames": [
+                "Bufferin",
                 "water",
-                "aspirin"
+                "caffeine"
             ],
-            "metaboliteAssignments": {},
+            "metaboliteAssignments": {
+                "caffeine": "CHEBI:27732",
+                "Bufferin": "CHEBI:31318",
+                "water": "CHEBI:15377"
+            },
             "assayTechnique": {
                 "name": "LC-MS",
                 "mainTechnique": "MS",
                 "technique": "LC-MS",
                 "subTechnique": "LC"
             },
-            "numberOfRows": 2,
-            "numberOfAssignedRows": 0,
-            "numberOfUnassignedRows": 2
+            "numberOfRows": 3,
+            "numberOfAssignedRows": 3,
+            "numberOfUnassignedRows": 0
         }
     },
     "tags": [],
     "studyDbMetadata": {
-        "dbId": -1,
-        "studyId": "",
-        "numericStudyId": -1,
-        "obfuscationCode": "",
-        "studySize": -1,
-        "submissionDate": "",
-        "releaseDate": "",
-        "updateDate": "",
+        "dbId": 3000317,
+        "studyId": "REQ202602083000317",
+        "numericStudyId": 202602083000317,
+        "obfuscationCode": "62de8092-9af8-4064-bae3-4e2bbb87e0a2",
+        "studySize": 0,
+        "submissionDate": "2026-02-08",
+        "releaseDate": "2027-02-08",
+        "updateDate": "2026-02-08T10:11:09.026832",
         "statusDate": "",
         "studyTypes": [],
-        "status": "DORMANT",
-        "curationRequest": "MANUAL_CURATION",
+        "status": "SUBMITTED",
+        "curationRequest": "NO_CURATION",
         "overrides": {},
-        "submitters": [],
+        "submitters": [
+            {
+                "dbId": 36339,
+                "orcid": "",
+                "address": "TR",
+                "joinDate": "2025-10-12T21:43:18.895000",
+                "userName": "ozgur.yurekten@gmail.com",
+                "firstName": "Ozgur",
+                "lastName": "Yurekten",
+                "affiliation": "EMBL-EBI",
+                "affiliationUrl": "https://www.ebi.ac.uk",
+                "status": "ACTIVE",
+                "role": "ANONYMOUS"
+            }
+        ],
         "reservedAccession": "",
-        "reservedSubmissionId": "",
+        "reservedSubmissionId": "REQ202602083000317",
         "revisionDate": "",
         "revisionNumber": 0,
         "revisionComment": "",
         "firstPrivateDate": "",
         "firstPublicDate": "",
-        "datasetLicense": "",
-        "datasetLicenseVersion": "",
+        "datasetLicense": "CC0 1.0 Universal",
+        "datasetLicenseVersion": "1.0",
         "datasetLicenseUrl": "",
-        "sampleTemplate": "",
-        "studyCategory": 0,
-        "templateVersion": "",
+        "sampleTemplate": "minimum",
+        "studyTemplate": "",
+        "studyCategory": 1,
+        "templateVersion": "2.0",
         "reservedMhdAccession": "",
-        "mhdModelVersion": "",
-        "createdAt": ""
+        "mhdModelVersion": "0.1",
+        "createdAt": "2026-02-08T10:11:09.033291"
     },
     "studyFolderMetadata": {
         "dataFolderSizeCalculated": false,
         "metadataFolderSizeCalculated": false,
-        "folderSizeInBytes": -1,
+        "folderSizeInBytes": 890,
         "folderSizeInStr": "",
-        "folders": {},
-        "files": {}
+        "folders": {
+            "FILES/DERIVED_FILES": {
+                "filePath": "FILES/DERIVED_FILES",
+                "baseName": "DERIVED_FILES",
+                "parentDirectory": "FILES",
+                "extension": "",
+                "sizeInBytes": 0,
+                "isDirectory": true,
+                "isLink": false,
+                "modifiedAt": 1770545469,
+                "createdAt": 0,
+                "mode": "",
+                "tags": []
+            },
+            "FILES/RAW_FILES": {
+                "filePath": "FILES/RAW_FILES",
+                "baseName": "RAW_FILES",
+                "parentDirectory": "FILES",
+                "extension": "",
+                "sizeInBytes": 0,
+                "isDirectory": true,
+                "isLink": false,
+                "modifiedAt": 1770547021,
+                "createdAt": 0,
+                "mode": "",
+                "tags": []
+            },
+            "FILES/SUPPLEMENTARY_FILES": {
+                "filePath": "FILES/SUPPLEMENTARY_FILES",
+                "baseName": "SUPPLEMENTARY_FILES",
+                "parentDirectory": "FILES",
+                "extension": "",
+                "sizeInBytes": 0,
+                "isDirectory": true,
+                "isLink": false,
+                "modifiedAt": 1770545469,
+                "createdAt": 0,
+                "mode": "",
+                "tags": []
+            }
+        },
+        "files": {
+            "FILES/RAW_FILES/Test1.raw": {
+                "filePath": "FILES/RAW_FILES/Test1.raw",
+                "baseName": "Test1.raw",
+                "parentDirectory": "FILES/RAW_FILES",
+                "extension": ".raw",
+                "sizeInBytes": 11913,
+                "isDirectory": false,
+                "isLink": false,
+                "modifiedAt": 1770547021,
+                "createdAt": 0,
+                "mode": "",
+                "tags": []
+            },
+            "FILES/RAW_FILES/Test2.raw": {
+                "filePath": "FILES/RAW_FILES/Test2.raw",
+                "baseName": "Test2.raw",
+                "parentDirectory": "FILES/RAW_FILES",
+                "extension": ".raw",
+                "sizeInBytes": 11913,
+                "isDirectory": false,
+                "isLink": false,
+                "modifiedAt": 1770547021,
+                "createdAt": 0,
+                "mode": "",
+                "tags": []
+            },
+            "i_Investigation.txt": {
+                "filePath": "i_Investigation.txt",
+                "baseName": "i_Investigation.txt",
+                "parentDirectory": "",
+                "extension": ".txt",
+                "sizeInBytes": 12513,
+                "isDirectory": false,
+                "isLink": false,
+                "modifiedAt": 1770547415,
+                "createdAt": 0,
+                "mode": "",
+                "tags": []
+            },
+            "a_REQ202602083000317_LC-MS_negative_reverse-phase.txt": {
+                "filePath": "a_REQ202602083000317_LC-MS_negative_reverse-phase.txt",
+                "baseName": "a_REQ202602083000317_LC-MS_negative_reverse-phase.txt",
+                "parentDirectory": "",
+                "extension": ".txt",
+                "sizeInBytes": 2681,
+                "isDirectory": false,
+                "isLink": false,
+                "modifiedAt": 1770547416,
+                "createdAt": 0,
+                "mode": "",
+                "tags": []
+            },
+            "s_REQ202602083000317.txt": {
+                "filePath": "s_REQ202602083000317.txt",
+                "baseName": "s_REQ202602083000317.txt",
+                "parentDirectory": "",
+                "extension": ".txt",
+                "sizeInBytes": 975,
+                "isDirectory": false,
+                "isLink": false,
+                "modifiedAt": 1770547416,
+                "createdAt": 0,
+                "mode": "",
+                "tags": []
+            },
+            "m_REQ202602083000317_LC-MS_negative_reverse-phase_v2_maf.tsv": {
+                "filePath": "m_REQ202602083000317_LC-MS_negative_reverse-phase_v2_maf.tsv",
+                "baseName": "m_REQ202602083000317_LC-MS_negative_reverse-phase_v2_maf.tsv",
+                "parentDirectory": "",
+                "extension": ".tsv",
+                "sizeInBytes": 890,
+                "isDirectory": false,
+                "isLink": false,
+                "modifiedAt": 1770547416,
+                "createdAt": 0,
+                "mode": "",
+                "tags": []
+            }
+        }
     },
-    "folderReaderMessages": [
-        {
-            "type": "ERROR",
-            "short": "Error while reading folder metadata: 'NoneType' object has no attribute 'get_folder_metadata'",
-            "detail": "Error while reading folder metadata: 'NoneType' object has no attribute 'get_folder_metadata'"
-        }
-    ],
-    "dbReaderMessages": [
-        {
-            "type": "WARNING",
-            "short": "Database metadata collection is skipped for REQ202512083000120",
-            "detail": "Database metadata collection is skipped for REQ202512083000120"
-        }
-    ],
-    "hasDbMetadata": false,
+    "folderReaderMessages": [],
+    "dbReaderMessages": [],
+    "hasDbMetadata": true,
     "hasSampleTableData": true,
     "hasAssayTableData": true,
     "hasAssignmentTableData": true,
-    "hasFolderMetadata": false,
+    "hasFolderMetadata": true,
     "hasInvestigationData": true
 }
