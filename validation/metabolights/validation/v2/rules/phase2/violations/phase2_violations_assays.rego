@@ -884,7 +884,7 @@ rule_a_200_300_003_01 contains result if {
 	matches := {x |
 		some x in {"positive", "negative", "alternating"}
 		startswith(scan_polarity, x)
-		contains(file_name, scan_polarity)
+		contains(file_name, x)
 	}
 	count(matches) == 0
 	desc := sprintf("Assay scan polarity values are '%v' but it does not match with assay filename", [scan_polarity])

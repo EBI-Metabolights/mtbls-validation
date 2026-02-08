@@ -367,13 +367,13 @@
                         {
                             "name": "Assay Type Term Accession Number",
                             "value": [
-                                "http://purl.obolibrary.org/obo/OBI_0003097"
+                                ""
                             ]
                         },
                         {
                             "name": "Assay Type Term Source REF",
                             "value": [
-                                "OBI"
+                                ""
                             ]
                         },
                         {
@@ -385,13 +385,13 @@
                         {
                             "name": "Omics Type Term Accession Number",
                             "value": [
-                                "http://edamontology.org/topic_3172"
+                                ""
                             ]
                         },
                         {
                             "name": "Omics Type Term Source REF",
                             "value": [
-                                "EDAM"
+                                ""
                             ]
                         },
                         {
@@ -465,6 +465,12 @@
                             "value": [
                                 ""
                             ]
+                        },
+                        {
+                            "name": "Measurement Type",
+                            "value": [
+                                "untargeted analysis"
+                            ]
                         }
                     ],
                     "assays": [
@@ -484,13 +490,13 @@
                             "assayIdentifier": "",
                             "assayType": {
                                 "term": "liquid chromatography mass spectrometry assay",
-                                "termAccessionNumber": "http://purl.obolibrary.org/obo/OBI_0003097",
-                                "termSourceRef": "OBI"
+                                "termAccessionNumber": "",
+                                "termSourceRef": ""
                             },
                             "omicsType": {
                                 "term": "Metabolomics",
-                                "termAccessionNumber": "http://edamontology.org/topic_3172",
-                                "termSourceRef": "EDAM"
+                                "termAccessionNumber": "",
+                                "termSourceRef": ""
                             },
                             "assayDescriptors": [
                                 {
@@ -570,7 +576,7 @@
                             "protocolType": {
                                 "term": "Extraction",
                                 "termAccessionNumber": "",
-                                "termSourceRef": ""
+                                "termSourceRef": "OBI"
                             },
                             "description": "<p>Describe the origin of samples, any relevant treatment, time points etc. and the collection and storage procedure. Describe the origin of samples, any relevant treatment, time points etc. and the collection and storage procedureDescribe the origin of samples, any relevant treatment, time points etc. and the collection and storage procedure Describe the origin of samples, any relevant treatment, time points etc. and the collection and storage procedure Describe the origin of samples, any relevant treatment, time points etc. and the collection and storage procedure</p>",
                             "uri": "",
@@ -653,7 +659,7 @@
                             "protocolType": {
                                 "term": "Sample collection",
                                 "termAccessionNumber": "",
-                                "termSourceRef": ""
+                                "termSourceRef": "MI"
                             },
                             "description": "<p>Describe the origin of samples, any relevant treatment, time points etc. and the collection and storage procedure. Describe the origin of samples, any relevant treatment, time points etc. and the collection and storage procedureDescribe the origin of samples, any relevant treatment, time points etc. and the collection and storage procedure Describe the origin of samples, any relevant treatment, time points etc. and the collection and storage procedure Describe the origin of samples, any relevant treatment, time points etc. and the collection and storage procedure</p>",
                             "uri": "",
@@ -1981,16 +1987,16 @@
                         "Mass spectrometry"
                     ],
                     "Parameter Value[Scan polarity]": [
-                        "negative polarity acquisition",
-                        "negative polarity acquisition"
+                        "negative ionization polarity",
+                        "negative ionization polarity"
                     ],
                     "Term Source REF.8": [
-                        "MS",
-                        "MS"
+                        "AFO",
+                        "AFO"
                     ],
                     "Term Accession Number.8": [
-                        "http://purl.obolibrary.org/obo/MS_1000076",
-                        "http://purl.obolibrary.org/obo/MS_1000076"
+                        "http://purl.allotrope.org/ontologies/quality#AFQ_0000150",
+                        "http://purl.allotrope.org/ontologies/quality#AFQ_0000150"
                     ],
                     "Parameter Value[Scan m/z range]": [
                         "10-1000",
@@ -2612,8 +2618,8 @@
             },
             "identifiedMetaboliteNames": [
                 "Bufferin",
-                "water",
-                "caffeine"
+                "caffeine",
+                "water"
             ],
             "metaboliteAssignments": {
                 "caffeine": "CHEBI:27732",
@@ -2757,10 +2763,10 @@
                 "baseName": "i_Investigation.txt",
                 "parentDirectory": "",
                 "extension": ".txt",
-                "sizeInBytes": 12513,
+                "sizeInBytes": 12472,
                 "isDirectory": false,
                 "isLink": false,
-                "modifiedAt": 1770547415,
+                "modifiedAt": 1770556843,
                 "createdAt": 0,
                 "mode": "",
                 "tags": []
@@ -2773,7 +2779,7 @@
                 "sizeInBytes": 2681,
                 "isDirectory": false,
                 "isLink": false,
-                "modifiedAt": 1770547416,
+                "modifiedAt": 1770556843,
                 "createdAt": 0,
                 "mode": "",
                 "tags": []
@@ -2786,7 +2792,7 @@
                 "sizeInBytes": 975,
                 "isDirectory": false,
                 "isLink": false,
-                "modifiedAt": 1770547416,
+                "modifiedAt": 1770556843,
                 "createdAt": 0,
                 "mode": "",
                 "tags": []
@@ -2799,7 +2805,7 @@
                 "sizeInBytes": 890,
                 "isDirectory": false,
                 "isLink": false,
-                "modifiedAt": 1770547416,
+                "modifiedAt": 1770556843,
                 "createdAt": 0,
                 "mode": "",
                 "tags": []

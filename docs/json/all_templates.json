@@ -21626,7 +21626,7 @@
             "ms-mhd-enabled": {
                 "index": 1,
                 "name": "ms-mhd-enabled",
-                "label": "MS",
+                "label": "MS (MetabolomicsHub)",
                 "description": "MS study shared with MetabolomicsHub MS profile"
             },
             "ms-mhd-legacy": {
