@@ -21754,6 +21754,17 @@
                                     "Column type",
                                     "Guard column"
                                 ]
+                            },
+                            "Mass spectrometry": {
+                                "order": 2,
+                                "label": "Mass Spectrometry Protocol",
+                                "fields": [
+                                    "Scan polarity",
+                                    "Scan m/z range",
+                                    "Instrument",
+                                    "Ion source",
+                                    "Mass analyzer"
+                                ]
                             }
                         }
                     },
@@ -21778,6 +21789,17 @@
                                     "Column model 2",
                                     "Column type 2",
                                     "Guard column"
+                                ]
+                            },
+                            "Mass spectrometry": {
+                                "order": 2,
+                                "label": "Mass Spectrometry Protocol",
+                                "fields": [
+                                    "Scan polarity",
+                                    "Scan m/z range",
+                                    "Instrument",
+                                    "Ion source",
+                                    "Mass analyzer"
                                 ]
                             }
                         }
@@ -22372,6 +22394,17 @@
                                     "Column type",
                                     "Guard column"
                                 ]
+                            },
+                            "Mass spectrometry": {
+                                "order": 2,
+                                "label": "Mass Spectrometry Protocol",
+                                "fields": [
+                                    "Scan polarity",
+                                    "Scan m/z range",
+                                    "Instrument",
+                                    "Ion source",
+                                    "Mass analyzer"
+                                ]
                             }
                         }
                     },
@@ -22396,6 +22429,17 @@
                                     "Column model 2",
                                     "Column type 2",
                                     "Guard column"
+                                ]
+                            },
+                            "Mass spectrometry": {
+                                "order": 2,
+                                "label": "Mass Spectrometry Protocol",
+                                "fields": [
+                                    "Scan polarity",
+                                    "Scan m/z range",
+                                    "Instrument",
+                                    "Ion source",
+                                    "Mass analyzer"
                                 ]
                             }
                         }

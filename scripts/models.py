@@ -26,6 +26,10 @@ class ConstraintType(enum.StrEnum):
     MINIMUM = "minimum"
     MAXIMUM = "maximum"
     REQUIRED = "required"
+    DATETIME = "date-time"
+    NUMERIC_RANGE = "numeric-range"
+    INTEGER_RANGE = "integer-range"
+    LAT_LONG = "lat-long"
 
 
 class EnforcementLevel(enum.StrEnum):
