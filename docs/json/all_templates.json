@@ -22836,7 +22836,7 @@
                     "organism": {
                         "visible": true,
                         "order": 1,
-                        "min": 1
+                        "min": 0
                     },
                     "organism-part": {
                         "visible": true,
