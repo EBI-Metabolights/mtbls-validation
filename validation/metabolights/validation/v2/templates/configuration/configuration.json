@@ -199,6 +199,13 @@
                 "isaFileType": "investigation",
                 "controlListKey": "Organization"
             },
+            "software": {
+                "name": "software",
+                "label": "Software",
+                "description": "",
+                "isaFileType": "investigation",
+                "controlListKey": "Software"
+            },
             "acquisition-method": {
                 "name": "acquisition-method",
                 "label": "Acquisition method",
@@ -1199,7 +1206,7 @@
                 "organism": {
                     "visible": true,
                     "order": 1,
-                    "min": 1
+                    "min": 0
                 },
                 "organism-part": {
                     "visible": true,
@@ -1231,9 +1238,14 @@
                     "order": 7,
                     "min": 0
                 },
-                "facility": {
+                "software": {
                     "visible": true,
                     "order": 8,
+                    "min": 0
+                },
+                "facility": {
+                    "visible": true,
+                    "order": 9,
                     "min": 0
                 }
             },
@@ -1871,9 +1883,14 @@
                     "order": 7,
                     "min": 0
                 },
-                "facility": {
+                "software": {
                     "visible": true,
                     "order": 8,
+                    "min": 0
+                },
+                "facility": {
+                    "visible": true,
+                    "order": 9,
                     "min": 0
                 }
             },

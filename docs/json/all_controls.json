@@ -10801,6 +10801,89 @@
                 ],
                 "unexpectedTerms": []
             }
+        ],
+        "Software": [
+            {
+                "ruleName": "Software-01",
+                "fieldName": "Software",
+                "ontologies": [
+                    "MS"
+                ],
+                "allowedParentOntologyTerms": {
+                    "excludeByLabelPattern": [],
+                    "excludeByAccession": [],
+                    "parents": [
+                        {
+                            "term": "software",
+                            "termAccessionNumber": "http://purl.obolibrary.org/obo/MS_1000531",
+                            "termSourceRef": "MS"
+                        }
+                    ]
+                },
+                "description": "",
+                "selectionCriteria": {
+                    "isaFileType": "investigation",
+                    "studyCreatedAtOrAfter": null,
+                    "studyCreatedBefore": null,
+                    "studyCategoryFilter": null,
+                    "templateVersionFilter": null,
+                    "isaFileTemplateNameFilter": null,
+                    "linkedFieldAndValueFilter": null
+                },
+                "termEnforcementLevel": "recommended",
+                "unexpectedTermEnforcementLevel": "recommended",
+                "validationType": "ontology-term-in-selected-ontologies",
+                "constraints": {},
+                "defaultValue": null,
+                "allowedMissingOntologyTerms": [],
+                "allowedOtherSources": [
+                    {
+                        "sourceLabel": "MTBLS",
+                        "accessionPrefix": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_"
+                    },
+                    {
+                        "sourceLabel": "wikidata",
+                        "accessionPrefix": "https://www.wikidata.org/wiki/"
+                    },
+                    {
+                        "sourceLabel": "ILX",
+                        "accessionPrefix": "http://uri.interlex.org/base/ilx_"
+                    }
+                ],
+                "allowedPlaceholders": [
+                    {
+                        "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/placeholder",
+                        "termSourceRef": "MTBLS"
+                    },
+                    {
+                        "termAccessionNumber": "",
+                        "termSourceRef": ""
+                    }
+                ],
+                "terms": [
+                    {
+                        "term": "ProteoWizard msconvert",
+                        "termAccessionNumber": "http://purl.obolibrary.org/obo/MS_1002205",
+                        "termSourceRef": "MS"
+                    },
+                    {
+                        "term": "ProteoWizard msaccess",
+                        "termAccessionNumber": "http://purl.obolibrary.org/obo/MS_1002208",
+                        "termSourceRef": "MS"
+                    },
+                    {
+                        "term": "mzmine",
+                        "termAccessionNumber": "http://purl.obolibrary.org/obo/MS_1002342",
+                        "termSourceRef": "MS"
+                    },
+                    {
+                        "term": "OpenMS",
+                        "termAccessionNumber": "http://purl.obolibrary.org/obo/MS_1003430",
+                        "termSourceRef": "MS"
+                    }
+                ],
+                "unexpectedTerms": []
+            }
         ]
     }
 }

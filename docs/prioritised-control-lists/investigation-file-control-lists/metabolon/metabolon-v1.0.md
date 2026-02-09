@@ -388,3 +388,28 @@
 | 1 | data\-independent acquisition | MS | http://purl\.obolibrary\.org/obo/MS\_1003215 |
 | 2 | data\-dependent acquisition | MS | http://purl\.obolibrary\.org/obo/MS\_1003221 |
 
+## Software
+
+| Attribute | Value |
+|---|------|
+| Rule Name | Software\-01 |
+| Rule Description |  |
+| Applicable Study Categories | All |
+| Applicable Template Names | All |
+| Applicable Template Versions | All |
+| Validation Type | ontology-term-in-selected-ontologies |
+| Ontologies [Ordered] | MS |
+| Allowed Parent Ontology Terms | \[software, MS, http://purl\.obolibrary\.org/obo/MS\_1000531\] |
+| Allowed Placeholders | \[MTBLS, http://www\.ebi\.ac\.uk/metabolights/ontology/placeholder\], \[, \] |
+| Allowed Other Sources | \[MTBLS, http://www\.ebi\.ac\.uk/metabolights/ontology/MTBLS\_\], \[wikidata, https://www\.wikidata\.org/wiki/\], \[ILX, http://uri\.interlex\.org/base/ilx\_\] |
+| Ontology Term Enforcement Level | recommended |
+
+### Recommended Terms
+
+| # |Term  | Term Source  | Term Accession |
+|---|------|--------------|----------------|
+| 1 | ProteoWizard msconvert | MS | http://purl\.obolibrary\.org/obo/MS\_1002205 |
+| 2 | ProteoWizard msaccess | MS | http://purl\.obolibrary\.org/obo/MS\_1002208 |
+| 3 | mzmine | MS | http://purl\.obolibrary\.org/obo/MS\_1002342 |
+| 4 | OpenMS | MS | http://purl\.obolibrary\.org/obo/MS\_1003430 |
+
