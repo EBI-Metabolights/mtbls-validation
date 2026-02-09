@@ -5192,7 +5192,58 @@
                     }
                 ],
                 "allowedPlaceholders": [],
-                "terms": [],
+                "terms": [
+                    {
+                        "term": "kelvin",
+                        "termAccessionNumber": "http://purl.obolibrary.org/obo/UO_0000012",
+                        "termSourceRef": "UO"
+                    },
+                    {
+                        "term": "tesla",
+                        "termAccessionNumber": "http://purl.obolibrary.org/obo/UO_0000228",
+                        "termSourceRef": "UO"
+                    },
+                    {
+                        "term": "micrometer",
+                        "termAccessionNumber": "http://purl.obolibrary.org/obo/UO_0000017",
+                        "termSourceRef": "UO"
+                    },
+                    {
+                        "term": "millimolar",
+                        "termAccessionNumber": "http://purl.obolibrary.org/obo/UO_0000063",
+                        "termSourceRef": "UO"
+                    },
+                    {
+                        "term": "kilogram",
+                        "termAccessionNumber": "http://purl.obolibrary.org/obo/UO_0000009",
+                        "termSourceRef": "UO"
+                    },
+                    {
+                        "term": "milligram per day",
+                        "termAccessionNumber": "http://www.ebi.ac.uk/efo/EFO_0004419",
+                        "termSourceRef": "EFO"
+                    },
+                    {
+                        "term": "day",
+                        "termAccessionNumber": "http://purl.obolibrary.org/obo/UO_0000033",
+                        "termSourceRef": "UO"
+                    },
+                    {
+                        "term": "hour",
+                        "termAccessionNumber": "http://purl.obolibrary.org/obo/UO_0000032",
+                        "termSourceRef": "UO"
+                    },
+                    {
+                        "term": "degree Fahrenheit",
+                        "termAccessionNumber": "http://purl.obolibrary.org/obo/UO_0000195",
+                        "termSourceRef": "UO"
+                    },
+                    {
+                        "term": "degree Celsius",
+                        "termAccessionNumber": "http://purl.obolibrary.org/obo/UO_0000027",
+                        "termSourceRef": "UO"
+                    }
+                ],
                 "unexpectedTerms": []
             }
         ],
@@ -7388,6 +7439,11 @@
                         "term": "reference compound mix",
                         "termAccessionNumber": "http://purl.obolibrary.org/obo/MSIO_0000024",
                         "termSourceRef": "MSIO"
+                    },
+                    {
+                        "term": "long term reference",
+                        "termAccessionNumber": "http://purl.obolibrary.org/obo/MSIO_0000019",
+                        "termSourceRef": "MSIO"
                     }
                 ],
                 "unexpectedTerms": []
@@ -8280,7 +8336,58 @@
                     }
                 ],
                 "allowedPlaceholders": [],
-                "terms": [],
+                "terms": [
+                    {
+                        "term": "kelvin",
+                        "termAccessionNumber": "http://purl.obolibrary.org/obo/UO_0000012",
+                        "termSourceRef": "UO"
+                    },
+                    {
+                        "term": "tesla",
+                        "termAccessionNumber": "http://purl.obolibrary.org/obo/UO_0000228",
+                        "termSourceRef": "UO"
+                    },
+                    {
+                        "term": "micrometer",
+                        "termAccessionNumber": "http://purl.obolibrary.org/obo/UO_0000017",
+                        "termSourceRef": "UO"
+                    },
+                    {
+                        "term": "millimolar",
+                        "termAccessionNumber": "http://purl.obolibrary.org/obo/UO_0000063",
+                        "termSourceRef": "UO"
+                    },
+                    {
+                        "term": "kilogram",
+                        "termAccessionNumber": "http://purl.obolibrary.org/obo/UO_0000009",
+                        "termSourceRef": "UO"
+                    },
+                    {
+                        "term": "milligram per day",
+                        "termAccessionNumber": "http://www.ebi.ac.uk/efo/EFO_0004419",
+                        "termSourceRef": "EFO"
+                    },
+                    {
+                        "term": "day",
+                        "termAccessionNumber": "http://purl.obolibrary.org/obo/UO_0000033",
+                        "termSourceRef": "UO"
+                    },
+                    {
+                        "term": "hour",
+                        "termAccessionNumber": "http://purl.obolibrary.org/obo/UO_0000032",
+                        "termSourceRef": "UO"
+                    },
+                    {
+                        "term": "degree Fahrenheit",
+                        "termAccessionNumber": "http://purl.obolibrary.org/obo/UO_0000195",
+                        "termSourceRef": "UO"
+                    },
+                    {
+                        "term": "degree Celsius",
+                        "termAccessionNumber": "http://purl.obolibrary.org/obo/UO_0000027",
+                        "termSourceRef": "UO"
+                    }
+                ],
                 "unexpectedTerms": []
             }
         ],
@@ -8697,7 +8804,58 @@
                     }
                 ],
                 "allowedPlaceholders": [],
-                "terms": [],
+                "terms": [
+                    {
+                        "term": "kelvin",
+                        "termAccessionNumber": "http://purl.obolibrary.org/obo/UO_0000012",
+                        "termSourceRef": "UO"
+                    },
+                    {
+                        "term": "tesla",
+                        "termAccessionNumber": "http://purl.obolibrary.org/obo/UO_0000228",
+                        "termSourceRef": "UO"
+                    },
+                    {
+                        "term": "micrometer",
+                        "termAccessionNumber": "http://purl.obolibrary.org/obo/UO_0000017",
+                        "termSourceRef": "UO"
+                    },
+                    {
+                        "term": "millimolar",
+                        "termAccessionNumber": "http://purl.obolibrary.org/obo/UO_0000063",
+                        "termSourceRef": "UO"
+                    },
+                    {
+                        "term": "kilogram",
+                        "termAccessionNumber": "http://purl.obolibrary.org/obo/UO_0000009",
+                        "termSourceRef": "UO"
+                    },
+                    {
+                        "term": "milligram per day",
+                        "termAccessionNumber": "http://www.ebi.ac.uk/efo/EFO_0004419",
+                        "termSourceRef": "EFO"
+                    },
+                    {
+                        "term": "day",
+                        "termAccessionNumber": "http://purl.obolibrary.org/obo/UO_0000033",
+                        "termSourceRef": "UO"
+                    },
+                    {
+                        "term": "hour",
+                        "termAccessionNumber": "http://purl.obolibrary.org/obo/UO_0000032",
+                        "termSourceRef": "UO"
+                    },
+                    {
+                        "term": "degree Fahrenheit",
+                        "termAccessionNumber": "http://purl.obolibrary.org/obo/UO_0000195",
+                        "termSourceRef": "UO"
+                    },
+                    {
+                        "term": "degree Celsius",
+                        "termAccessionNumber": "http://purl.obolibrary.org/obo/UO_0000027",
+                        "termSourceRef": "UO"
+                    }
+                ],
                 "unexpectedTerms": []
             }
         ]
@@ -9022,10 +9180,10 @@
                     "MS",
                     "EFO",
                     "MSIO",
+                    "CHMO",
                     "NCIT",
                     "MTBLS",
                     "CHEBI",
-                    "CHMO",
                     "MONDO",
                     "GO",
                     "MESH",
@@ -9037,13 +9195,18 @@
                     "isaFileType": "investigation",
                     "studyCreatedAtOrAfter": null,
                     "studyCreatedBefore": null,
-                    "studyCategoryFilter": [
-                        "ms-mhd-enabled",
-                        "ms-mhd-legacy",
-                        "other"
-                    ],
+                    "studyCategoryFilter": null,
                     "templateVersionFilter": null,
-                    "isaFileTemplateNameFilter": null,
+                    "isaFileTemplateNameFilter": [
+                        "MS",
+                        "GC-MS",
+                        "GCxGC-MS",
+                        "MALDI-MS",
+                        "FIA-MS",
+                        "DI-MS",
+                        "CE-MS",
+                        "MS"
+                    ],
                     "linkedFieldAndValueFilter": null
                 },
                 "termEnforcementLevel": "recommended",
@@ -9121,6 +9284,94 @@
                         "term": "mzML format",
                         "termAccessionNumber": "http://purl.obolibrary.org/obo/MS_1000584",
                         "termSourceRef": "MS"
+                    }
+                ],
+                "unexpectedTerms": []
+            },
+            {
+                "ruleName": "Assay Design Descriptor-02",
+                "fieldName": "Assay Design Descriptor",
+                "ontologies": [
+                    "CHMO",
+                    "MSIO",
+                    "MS",
+                    "EFO",
+                    "NCIT",
+                    "MTBLS",
+                    "CHEBI",
+                    "MONDO",
+                    "GO",
+                    "MESH",
+                    "EDAM"
+                ],
+                "allowedParentOntologyTerms": null,
+                "description": "",
+                "selectionCriteria": {
+                    "isaFileType": "investigation",
+                    "studyCreatedAtOrAfter": null,
+                    "studyCreatedBefore": null,
+                    "studyCategoryFilter": null,
+                    "templateVersionFilter": null,
+                    "isaFileTemplateNameFilter": [
+                        "NMR"
+                    ],
+                    "linkedFieldAndValueFilter": null
+                },
+                "termEnforcementLevel": "recommended",
+                "unexpectedTermEnforcementLevel": "recommended",
+                "validationType": "any-ontology-term",
+                "constraints": {},
+                "defaultValue": null,
+                "allowedMissingOntologyTerms": [],
+                "allowedOtherSources": [
+                    {
+                        "sourceLabel": "MTBLS",
+                        "accessionPrefix": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_"
+                    },
+                    {
+                        "sourceLabel": "wikidata",
+                        "accessionPrefix": "https://www.wikidata.org/wiki/"
+                    },
+                    {
+                        "sourceLabel": "ILX",
+                        "accessionPrefix": "http://uri.interlex.org/base/ilx_"
+                    }
+                ],
+                "allowedPlaceholders": [
+                    {
+                        "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/placeholder",
+                        "termSourceRef": "MTBLS"
+                    },
+                    {
+                        "termAccessionNumber": "",
+                        "termSourceRef": ""
+                    }
+                ],
+                "terms": [
+                    {
+                        "term": "1H nuclear magnetic resonance spectroscopy",
+                        "termAccessionNumber": "http://purl.obolibrary.org/obo/CHMO_0000593",
+                        "termSourceRef": "CHMO"
+                    },
+                    {
+                        "term": "13C nuclear magnetic resonance spectroscopy",
+                        "termAccessionNumber": "http://purl.obolibrary.org/obo/CHMO_0000595",
+                        "termSourceRef": "CHMO"
+                    },
+                    {
+                        "term": "1H–1H correlation spectroscopy",
+                        "termAccessionNumber": "http://purl.obolibrary.org/obo/CHMO_0001150",
+                        "termSourceRef": "CHMO"
+                    },
+                    {
+                        "term": "13C–13C correlation spectroscopy",
+                        "termAccessionNumber": "http://purl.obolibrary.org/obo/CHMO_0002301",
+                        "termSourceRef": "CHMO"
+                    },
+                    {
+                        "term": "correlation spectroscopy",
+                        "termAccessionNumber": "http://purl.obolibrary.org/obo/CHMO_0000599",
+                        "termSourceRef": "CHMO"
                     }
                 ],
                 "unexpectedTerms": []
@@ -10430,7 +10681,58 @@
                     }
                 ],
                 "allowedPlaceholders": [],
-                "terms": [],
+                "terms": [
+                    {
+                        "term": "kelvin",
+                        "termAccessionNumber": "http://purl.obolibrary.org/obo/UO_0000012",
+                        "termSourceRef": "UO"
+                    },
+                    {
+                        "term": "tesla",
+                        "termAccessionNumber": "http://purl.obolibrary.org/obo/UO_0000228",
+                        "termSourceRef": "UO"
+                    },
+                    {
+                        "term": "micrometer",
+                        "termAccessionNumber": "http://purl.obolibrary.org/obo/UO_0000017",
+                        "termSourceRef": "UO"
+                    },
+                    {
+                        "term": "millimolar",
+                        "termAccessionNumber": "http://purl.obolibrary.org/obo/UO_0000063",
+                        "termSourceRef": "UO"
+                    },
+                    {
+                        "term": "kilogram",
+                        "termAccessionNumber": "http://purl.obolibrary.org/obo/UO_0000009",
+                        "termSourceRef": "UO"
+                    },
+                    {
+                        "term": "milligram per day",
+                        "termAccessionNumber": "http://www.ebi.ac.uk/efo/EFO_0004419",
+                        "termSourceRef": "EFO"
+                    },
+                    {
+                        "term": "day",
+                        "termAccessionNumber": "http://purl.obolibrary.org/obo/UO_0000033",
+                        "termSourceRef": "UO"
+                    },
+                    {
+                        "term": "hour",
+                        "termAccessionNumber": "http://purl.obolibrary.org/obo/UO_0000032",
+                        "termSourceRef": "UO"
+                    },
+                    {
+                        "term": "degree Fahrenheit",
+                        "termAccessionNumber": "http://purl.obolibrary.org/obo/UO_0000195",
+                        "termSourceRef": "UO"
+                    },
+                    {
+                        "term": "degree Celsius",
+                        "termAccessionNumber": "http://purl.obolibrary.org/obo/UO_0000027",
+                        "termSourceRef": "UO"
+                    }
+                ],
                 "unexpectedTerms": []
             }
         ],

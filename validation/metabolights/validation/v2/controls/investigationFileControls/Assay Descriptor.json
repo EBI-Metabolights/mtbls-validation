@@ -7,10 +7,10 @@
                 "MS",
                 "EFO",
                 "MSIO",
+                "CHMO",
                 "NCIT",
                 "MTBLS",
                 "CHEBI",
-                "CHMO",
                 "MONDO",
                 "GO",
                 "MESH",
@@ -22,13 +22,18 @@
                 "isaFileType": "investigation",
                 "studyCreatedAtOrAfter": null,
                 "studyCreatedBefore": null,
-                "studyCategoryFilter": [
-                    "ms-mhd-enabled",
-                    "ms-mhd-legacy",
-                    "other"
-                ],
+                "studyCategoryFilter": null,
                 "templateVersionFilter": null,
-                "isaFileTemplateNameFilter": null,
+                "isaFileTemplateNameFilter": [
+                    "MS",
+                    "GC-MS",
+                    "GCxGC-MS",
+                    "MALDI-MS",
+                    "FIA-MS",
+                    "DI-MS",
+                    "CE-MS",
+                    "MS"
+                ],
                 "linkedFieldAndValueFilter": null
             },
             "termEnforcementLevel": "recommended",
@@ -106,6 +111,94 @@
                     "term": "mzML format",
                     "termAccessionNumber": "http://purl.obolibrary.org/obo/MS_1000584",
                     "termSourceRef": "MS"
+                }
+            ],
+            "unexpectedTerms": []
+        },
+        {
+            "ruleName": "Assay Design Descriptor-02",
+            "fieldName": "Assay Design Descriptor",
+            "ontologies": [
+                "CHMO",
+                "MSIO",
+                "MS",
+                "EFO",
+                "NCIT",
+                "MTBLS",
+                "CHEBI",
+                "MONDO",
+                "GO",
+                "MESH",
+                "EDAM"
+            ],
+            "allowedParentOntologyTerms": null,
+            "description": "",
+            "selectionCriteria": {
+                "isaFileType": "investigation",
+                "studyCreatedAtOrAfter": null,
+                "studyCreatedBefore": null,
+                "studyCategoryFilter": null,
+                "templateVersionFilter": null,
+                "isaFileTemplateNameFilter": [
+                    "NMR"
+                ],
+                "linkedFieldAndValueFilter": null
+            },
+            "termEnforcementLevel": "recommended",
+            "unexpectedTermEnforcementLevel": "recommended",
+            "validationType": "any-ontology-term",
+            "constraints": {},
+            "defaultValue": null,
+            "allowedMissingOntologyTerms": [],
+            "allowedOtherSources": [
+                {
+                    "sourceLabel": "MTBLS",
+                    "accessionPrefix": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_"
+                },
+                {
+                    "sourceLabel": "wikidata",
+                    "accessionPrefix": "https://www.wikidata.org/wiki/"
+                },
+                {
+                    "sourceLabel": "ILX",
+                    "accessionPrefix": "http://uri.interlex.org/base/ilx_"
+                }
+            ],
+            "allowedPlaceholders": [
+                {
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/placeholder",
+                    "termSourceRef": "MTBLS"
+                },
+                {
+                    "termAccessionNumber": "",
+                    "termSourceRef": ""
+                }
+            ],
+            "terms": [
+                {
+                    "term": "1H nuclear magnetic resonance spectroscopy",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/CHMO_0000593",
+                    "termSourceRef": "CHMO"
+                },
+                {
+                    "term": "13C nuclear magnetic resonance spectroscopy",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/CHMO_0000595",
+                    "termSourceRef": "CHMO"
+                },
+                {
+                    "term": "1H\u20131H correlation spectroscopy",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/CHMO_0001150",
+                    "termSourceRef": "CHMO"
+                },
+                {
+                    "term": "13C\u201313C correlation spectroscopy",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/CHMO_0002301",
+                    "termSourceRef": "CHMO"
+                },
+                {
+                    "term": "correlation spectroscopy",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/CHMO_0000599",
+                    "termSourceRef": "CHMO"
                 }
             ],
             "unexpectedTerms": []

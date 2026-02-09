@@ -31,6 +31,21 @@
 | Allowed Other Sources | \[wikidata, https://www\.wikidata\.org/wiki/\], \[ILX, http://uri\.interlex\.org/base/ilx\_\] |
 | Ontology Term Enforcement Level | recommended |
 
+### Recommended Terms
+
+| # |Term  | Term Source  | Term Accession |
+|---|------|--------------|----------------|
+| 1 | kelvin | UO | http://purl\.obolibrary\.org/obo/UO\_0000012 |
+| 2 | tesla | UO | http://purl\.obolibrary\.org/obo/UO\_0000228 |
+| 3 | micrometer | UO | http://purl\.obolibrary\.org/obo/UO\_0000017 |
+| 4 | millimolar | UO | http://purl\.obolibrary\.org/obo/UO\_0000063 |
+| 5 | kilogram | UO | http://purl\.obolibrary\.org/obo/UO\_0000009 |
+| 6 | milligram per day | EFO | http://www\.ebi\.ac\.uk/efo/EFO\_0004419 |
+| 7 | day | UO | http://purl\.obolibrary\.org/obo/UO\_0000033 |
+| 8 | hour | UO | http://purl\.obolibrary\.org/obo/UO\_0000032 |
+| 9 | degree Fahrenheit | UO | http://purl\.obolibrary\.org/obo/UO\_0000195 |
+| 10 | degree Celsius | UO | http://purl\.obolibrary\.org/obo/UO\_0000027 |
+
 ## Study Protocol Type
 
 | Attribute | Value |
@@ -91,35 +106,6 @@
 | 8 | microbiome | EFO | http://www\.ebi\.ac\.uk/efo/EFO\_0004982 |
 | 9 | Aging | NCIT | http://purl\.obolibrary\.org/obo/NCIT\_C16269 |
 | 10 | cancer | MONDO | http://purl\.obolibrary\.org/obo/MONDO\_0004992 |
-
-## Assay Descriptor
-
-| Attribute | Value |
-|---|------|
-| Rule Name | Assay Design Descriptor\-01 |
-| Rule Description |  |
-| Applicable Study Categories | ms\-mhd\-enabled, ms\-mhd\-legacy, other |
-| Applicable Template Names | All |
-| Applicable Template Versions | All |
-| Validation Type | any-ontology-term |
-| Recommended Ontologies [Ordered] | MS, EFO, MSIO, NCIT, MTBLS, CHEBI, CHMO, MONDO, GO, MESH, EDAM |
-| Allowed Placeholders | \[MTBLS, http://www\.ebi\.ac\.uk/metabolights/ontology/placeholder\], \[, \] |
-| Allowed Other Sources | \[MTBLS, http://www\.ebi\.ac\.uk/metabolights/ontology/MTBLS\_\], \[wikidata, https://www\.wikidata\.org/wiki/\], \[ILX, http://uri\.interlex\.org/base/ilx\_\] |
-| Ontology Term Enforcement Level | recommended |
-
-### Recommended Terms
-
-| # |Term  | Term Source  | Term Accession |
-|---|------|--------------|----------------|
-| 1 | data\-independent acquisition | MS | http://purl\.obolibrary\.org/obo/MS\_1003215 |
-| 2 | data\-dependent acquisition | MS | http://purl\.obolibrary\.org/obo/MS\_1003221 |
-| 3 | ion mobility separation | MS | http://purl\.obolibrary\.org/obo/MS\_1003219 |
-| 4 | collision\-induced dissociation | MS | http://purl\.obolibrary\.org/obo/MS\_1000133 |
-| 5 | electron activated dissociation | MS | http://purl\.obolibrary\.org/obo/MS\_1003294 |
-| 6 | matrix\-assisted laser desorption ionization | MS | http://purl\.obolibrary\.org/obo/MS\_1000075 |
-| 7 | infusion | MS | http://purl\.obolibrary\.org/obo/MS\_1000060 |
-| 8 | flow injection analysis | MS | http://purl\.obolibrary\.org/obo/MS\_1000058 |
-| 9 | mzML format | MS | http://purl\.obolibrary\.org/obo/MS\_1000584 |
 
 ## Study Person Roles
 

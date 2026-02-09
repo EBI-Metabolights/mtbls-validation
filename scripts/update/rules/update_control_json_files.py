@@ -30,7 +30,11 @@ def update_control_list_json_files():
         for key, input_data in file_content.items():
             file_content_data.data[key] = []
             for x in input_data:
-                jsonschema.validate(x, control_schema)
+                try:
+                    jsonschema.validate(x, control_schema)
+                except Exception as ex:
+                    print(file, ex)
+                    raise ex
                 data = models.FieldValueValidation.model_validate(x, by_alias=True)
                 parents = data.allowed_parent_ontology_terms
                 if parents:

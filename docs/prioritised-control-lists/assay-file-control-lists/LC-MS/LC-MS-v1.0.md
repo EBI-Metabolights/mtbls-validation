@@ -31,6 +31,21 @@
 | Allowed Other Sources | \[wikidata, https://www\.wikidata\.org/wiki/\], \[ILX, http://uri\.interlex\.org/base/ilx\_\] |
 | Ontology Term Enforcement Level | recommended |
 
+### Recommended Terms
+
+| # |Term  | Term Source  | Term Accession |
+|---|------|--------------|----------------|
+| 1 | kelvin | UO | http://purl\.obolibrary\.org/obo/UO\_0000012 |
+| 2 | tesla | UO | http://purl\.obolibrary\.org/obo/UO\_0000228 |
+| 3 | micrometer | UO | http://purl\.obolibrary\.org/obo/UO\_0000017 |
+| 4 | millimolar | UO | http://purl\.obolibrary\.org/obo/UO\_0000063 |
+| 5 | kilogram | UO | http://purl\.obolibrary\.org/obo/UO\_0000009 |
+| 6 | milligram per day | EFO | http://www\.ebi\.ac\.uk/efo/EFO\_0004419 |
+| 7 | day | UO | http://purl\.obolibrary\.org/obo/UO\_0000033 |
+| 8 | hour | UO | http://purl\.obolibrary\.org/obo/UO\_0000032 |
+| 9 | degree Fahrenheit | UO | http://purl\.obolibrary\.org/obo/UO\_0000195 |
+| 10 | degree Celsius | UO | http://purl\.obolibrary\.org/obo/UO\_0000027 |
+
 ## Sample Name
 
 | Attribute | Value |

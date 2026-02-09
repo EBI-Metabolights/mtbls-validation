@@ -59,6 +59,21 @@
 | Allowed Other Sources | \[wikidata, https://www\.wikidata\.org/wiki/\], \[ILX, http://uri\.interlex\.org/base/ilx\_\] |
 | Ontology Term Enforcement Level | recommended |
 
+### Recommended Terms
+
+| # |Term  | Term Source  | Term Accession |
+|---|------|--------------|----------------|
+| 1 | kelvin | UO | http://purl\.obolibrary\.org/obo/UO\_0000012 |
+| 2 | tesla | UO | http://purl\.obolibrary\.org/obo/UO\_0000228 |
+| 3 | micrometer | UO | http://purl\.obolibrary\.org/obo/UO\_0000017 |
+| 4 | millimolar | UO | http://purl\.obolibrary\.org/obo/UO\_0000063 |
+| 5 | kilogram | UO | http://purl\.obolibrary\.org/obo/UO\_0000009 |
+| 6 | milligram per day | EFO | http://www\.ebi\.ac\.uk/efo/EFO\_0004419 |
+| 7 | day | UO | http://purl\.obolibrary\.org/obo/UO\_0000033 |
+| 8 | hour | UO | http://purl\.obolibrary\.org/obo/UO\_0000032 |
+| 9 | degree Fahrenheit | UO | http://purl\.obolibrary\.org/obo/UO\_0000195 |
+| 10 | degree Celsius | UO | http://purl\.obolibrary\.org/obo/UO\_0000027 |
+
 ## Source Name
 
 | Attribute | Value |
@@ -154,6 +169,7 @@
 | 4 | solvent blank | MSIO | http://purl\.obolibrary\.org/obo/MSIO\_0000026 |
 | 5 | sample preparation blank | MSIO | http://purl\.obolibrary\.org/obo/MSIO\_0000025 |
 | 6 | reference compound mix | MSIO | http://purl\.obolibrary\.org/obo/MSIO\_0000024 |
+| 7 | long term reference | MSIO | http://purl\.obolibrary\.org/obo/MSIO\_0000019 |
 
 ## Sample Name
 
