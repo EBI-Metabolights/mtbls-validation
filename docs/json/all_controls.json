@@ -7131,7 +7131,8 @@
                 "ontologies": [
                     "MONDO",
                     "MP",
-                    "SNOMED"
+                    "SNOMED",
+                    "PATO"
                 ],
                 "allowedParentOntologyTerms": null,
                 "description": "",
@@ -7175,6 +7176,16 @@
                 "allowedPlaceholders": [],
                 "terms": [
                     {
+                        "term": "breast cancer",
+                        "termAccessionNumber": "http://purl.obolibrary.org/obo/MONDO_0007254",
+                        "termSourceRef": "MONDO"
+                    },
+                    {
+                        "term": "colorectal cancer",
+                        "termAccessionNumber": "http://purl.obolibrary.org/obo/MONDO_0005575",
+                        "termSourceRef": "MONDO"
+                    },
+                    {
                         "term": "Alzheimer disease",
                         "termAccessionNumber": "http://purl.obolibrary.org/obo/MONDO_0004975",
                         "termSourceRef": "MONDO"
@@ -7185,9 +7196,34 @@
                         "termSourceRef": "MONDO"
                     },
                     {
-                        "term": "diabetic kidney disease",
-                        "termAccessionNumber": "http://purl.obolibrary.org/obo/MONDO_0005016",
+                        "term": "COVID-19",
+                        "termAccessionNumber": "http://purl.obolibrary.org/obo/MONDO_0100096",
                         "termSourceRef": "MONDO"
+                    },
+                    {
+                        "term": "type 2 diabetes mellitus",
+                        "termAccessionNumber": "http://purl.obolibrary.org/obo/MONDO_0005148",
+                        "termSourceRef": "MONDO"
+                    },
+                    {
+                        "term": "ischemia reperfusion injury",
+                        "termAccessionNumber": "http://purl.obolibrary.org/obo/MONDO_0005203",
+                        "termSourceRef": "MONDO"
+                    },
+                    {
+                        "term": "chronic kidney disease",
+                        "termAccessionNumber": "http://purl.obolibrary.org/obo/MONDO_0005300",
+                        "termSourceRef": "MONDO"
+                    },
+                    {
+                        "term": "metabolic dysfunction-associated steatotic liver disease",
+                        "termAccessionNumber": "http://purl.obolibrary.org/obo/MONDO_0013209",
+                        "termSourceRef": "MONDO"
+                    },
+                    {
+                        "term": "normal",
+                        "termAccessionNumber": "http://purl.obolibrary.org/obo/PATO_0000461",
+                        "termSourceRef": "PATO"
                     }
                 ],
                 "unexpectedTerms": []
@@ -7198,7 +7234,8 @@
                 "ontologies": [
                     "MONDO",
                     "MP",
-                    "SNOMED"
+                    "SNOMED",
+                    "PATO"
                 ],
                 "allowedParentOntologyTerms": null,
                 "description": "",
@@ -7240,6 +7277,16 @@
                 "allowedPlaceholders": [],
                 "terms": [
                     {
+                        "term": "breast cancer",
+                        "termAccessionNumber": "http://purl.obolibrary.org/obo/MONDO_0007254",
+                        "termSourceRef": "MONDO"
+                    },
+                    {
+                        "term": "colorectal cancer",
+                        "termAccessionNumber": "http://purl.obolibrary.org/obo/MONDO_0005575",
+                        "termSourceRef": "MONDO"
+                    },
+                    {
                         "term": "Alzheimer disease",
                         "termAccessionNumber": "http://purl.obolibrary.org/obo/MONDO_0004975",
                         "termSourceRef": "MONDO"
@@ -7250,9 +7297,34 @@
                         "termSourceRef": "MONDO"
                     },
                     {
-                        "term": "diabetic kidney disease",
-                        "termAccessionNumber": "http://purl.obolibrary.org/obo/MONDO_0005016",
+                        "term": "COVID-19",
+                        "termAccessionNumber": "http://purl.obolibrary.org/obo/MONDO_0100096",
                         "termSourceRef": "MONDO"
+                    },
+                    {
+                        "term": "type 2 diabetes mellitus",
+                        "termAccessionNumber": "http://purl.obolibrary.org/obo/MONDO_0005148",
+                        "termSourceRef": "MONDO"
+                    },
+                    {
+                        "term": "ischemia reperfusion injury",
+                        "termAccessionNumber": "http://purl.obolibrary.org/obo/MONDO_0005203",
+                        "termSourceRef": "MONDO"
+                    },
+                    {
+                        "term": "chronic kidney disease",
+                        "termAccessionNumber": "http://purl.obolibrary.org/obo/MONDO_0005300",
+                        "termSourceRef": "MONDO"
+                    },
+                    {
+                        "term": "metabolic dysfunction-associated steatotic liver disease",
+                        "termAccessionNumber": "http://purl.obolibrary.org/obo/MONDO_0013209",
+                        "termSourceRef": "MONDO"
+                    },
+                    {
+                        "term": "normal",
+                        "termAccessionNumber": "http://purl.obolibrary.org/obo/PATO_0000461",
+                        "termSourceRef": "PATO"
                     }
                 ],
                 "unexpectedTerms": []
@@ -7430,7 +7502,8 @@
                 "ontologies": [
                     "MONDO",
                     "MP",
-                    "SNOMED"
+                    "SNOMED",
+                    "PATO"
                 ],
                 "allowedParentOntologyTerms": null,
                 "description": "",
@@ -7479,6 +7552,16 @@
                 "allowedPlaceholders": [],
                 "terms": [
                     {
+                        "term": "breast cancer",
+                        "termAccessionNumber": "http://purl.obolibrary.org/obo/MONDO_0007254",
+                        "termSourceRef": "MONDO"
+                    },
+                    {
+                        "term": "colorectal cancer",
+                        "termAccessionNumber": "http://purl.obolibrary.org/obo/MONDO_0005575",
+                        "termSourceRef": "MONDO"
+                    },
+                    {
                         "term": "Alzheimer disease",
                         "termAccessionNumber": "http://purl.obolibrary.org/obo/MONDO_0004975",
                         "termSourceRef": "MONDO"
@@ -7489,9 +7572,34 @@
                         "termSourceRef": "MONDO"
                     },
                     {
-                        "term": "diabetic kidney disease",
-                        "termAccessionNumber": "http://purl.obolibrary.org/obo/MONDO_0005016",
+                        "term": "COVID-19",
+                        "termAccessionNumber": "http://purl.obolibrary.org/obo/MONDO_0100096",
                         "termSourceRef": "MONDO"
+                    },
+                    {
+                        "term": "type 2 diabetes mellitus",
+                        "termAccessionNumber": "http://purl.obolibrary.org/obo/MONDO_0005148",
+                        "termSourceRef": "MONDO"
+                    },
+                    {
+                        "term": "ischemia reperfusion injury",
+                        "termAccessionNumber": "http://purl.obolibrary.org/obo/MONDO_0005203",
+                        "termSourceRef": "MONDO"
+                    },
+                    {
+                        "term": "chronic kidney disease",
+                        "termAccessionNumber": "http://purl.obolibrary.org/obo/MONDO_0005300",
+                        "termSourceRef": "MONDO"
+                    },
+                    {
+                        "term": "metabolic dysfunction-associated steatotic liver disease",
+                        "termAccessionNumber": "http://purl.obolibrary.org/obo/MONDO_0013209",
+                        "termSourceRef": "MONDO"
+                    },
+                    {
+                        "term": "normal",
+                        "termAccessionNumber": "http://purl.obolibrary.org/obo/PATO_0000461",
+                        "termSourceRef": "PATO"
                     }
                 ],
                 "unexpectedTerms": []
@@ -7502,7 +7610,8 @@
                 "ontologies": [
                     "MONDO",
                     "MP",
-                    "SNOMED"
+                    "SNOMED",
+                    "PATO"
                 ],
                 "allowedParentOntologyTerms": null,
                 "description": "",
@@ -7544,6 +7653,16 @@
                 "allowedPlaceholders": [],
                 "terms": [
                     {
+                        "term": "breast cancer",
+                        "termAccessionNumber": "http://purl.obolibrary.org/obo/MONDO_0007254",
+                        "termSourceRef": "MONDO"
+                    },
+                    {
+                        "term": "colorectal cancer",
+                        "termAccessionNumber": "http://purl.obolibrary.org/obo/MONDO_0005575",
+                        "termSourceRef": "MONDO"
+                    },
+                    {
                         "term": "Alzheimer disease",
                         "termAccessionNumber": "http://purl.obolibrary.org/obo/MONDO_0004975",
                         "termSourceRef": "MONDO"
@@ -7554,9 +7673,34 @@
                         "termSourceRef": "MONDO"
                     },
                     {
-                        "term": "diabetic kidney disease",
-                        "termAccessionNumber": "http://purl.obolibrary.org/obo/MONDO_0005016",
+                        "term": "COVID-19",
+                        "termAccessionNumber": "http://purl.obolibrary.org/obo/MONDO_0100096",
                         "termSourceRef": "MONDO"
+                    },
+                    {
+                        "term": "type 2 diabetes mellitus",
+                        "termAccessionNumber": "http://purl.obolibrary.org/obo/MONDO_0005148",
+                        "termSourceRef": "MONDO"
+                    },
+                    {
+                        "term": "ischemia reperfusion injury",
+                        "termAccessionNumber": "http://purl.obolibrary.org/obo/MONDO_0005203",
+                        "termSourceRef": "MONDO"
+                    },
+                    {
+                        "term": "chronic kidney disease",
+                        "termAccessionNumber": "http://purl.obolibrary.org/obo/MONDO_0005300",
+                        "termSourceRef": "MONDO"
+                    },
+                    {
+                        "term": "metabolic dysfunction-associated steatotic liver disease",
+                        "termAccessionNumber": "http://purl.obolibrary.org/obo/MONDO_0013209",
+                        "termSourceRef": "MONDO"
+                    },
+                    {
+                        "term": "normal",
+                        "termAccessionNumber": "http://purl.obolibrary.org/obo/PATO_0000461",
+                        "termSourceRef": "PATO"
                     }
                 ],
                 "unexpectedTerms": []
@@ -7660,8 +7804,38 @@
                 "allowedPlaceholders": [],
                 "terms": [
                     {
-                        "term": "macrophage",
-                        "termAccessionNumber": "http://purl.obolibrary.org/obo/CL_0000235",
+                        "term": "regulatory T cell",
+                        "termAccessionNumber": "http://purl.obolibrary.org/obo/CL_0000815",
+                        "termSourceRef": "CL"
+                    },
+                    {
+                        "term": "plasma cell",
+                        "termAccessionNumber": "http://purl.obolibrary.org/obo/CL_0000786",
+                        "termSourceRef": "CL"
+                    },
+                    {
+                        "term": "endothelial cell",
+                        "termAccessionNumber": "http://purl.obolibrary.org/obo/CL_0000115",
+                        "termSourceRef": "CL"
+                    },
+                    {
+                        "term": "smooth muscle cell",
+                        "termAccessionNumber": "http://purl.obolibrary.org/obo/CL_0000192",
+                        "termSourceRef": "CL"
+                    },
+                    {
+                        "term": "fibroblast",
+                        "termAccessionNumber": "http://purl.obolibrary.org/obo/CL_0000057",
+                        "termSourceRef": "CL"
+                    },
+                    {
+                        "term": "erythrocyte",
+                        "termAccessionNumber": "http://purl.obolibrary.org/obo/CL_0000232",
+                        "termSourceRef": "CL"
+                    },
+                    {
+                        "term": "microglial cell",
+                        "termAccessionNumber": "http://purl.obolibrary.org/obo/CL_0000129",
                         "termSourceRef": "CL"
                     },
                     {
@@ -7670,13 +7844,13 @@
                         "termSourceRef": "CL"
                     },
                     {
-                        "term": "T cell",
-                        "termAccessionNumber": "http://purl.obolibrary.org/obo/CL_0000084",
+                        "term": "alveolar macrophage",
+                        "termAccessionNumber": "http://purl.obolibrary.org/obo/CL_0000583",
                         "termSourceRef": "CL"
                     },
                     {
-                        "term": "kidney cell",
-                        "termAccessionNumber": "http://purl.obolibrary.org/obo/CL_1000497",
+                        "term": "hematopoietic stem cell",
+                        "termAccessionNumber": "http://purl.obolibrary.org/obo/CL_0000037",
                         "termSourceRef": "CL"
                     }
                 ],
@@ -7729,8 +7903,38 @@
                 "allowedPlaceholders": [],
                 "terms": [
                     {
-                        "term": "macrophage",
-                        "termAccessionNumber": "http://purl.obolibrary.org/obo/CL_0000235",
+                        "term": "regulatory T cell",
+                        "termAccessionNumber": "http://purl.obolibrary.org/obo/CL_0000815",
+                        "termSourceRef": "CL"
+                    },
+                    {
+                        "term": "plasma cell",
+                        "termAccessionNumber": "http://purl.obolibrary.org/obo/CL_0000786",
+                        "termSourceRef": "CL"
+                    },
+                    {
+                        "term": "endothelial cell",
+                        "termAccessionNumber": "http://purl.obolibrary.org/obo/CL_0000115",
+                        "termSourceRef": "CL"
+                    },
+                    {
+                        "term": "smooth muscle cell",
+                        "termAccessionNumber": "http://purl.obolibrary.org/obo/CL_0000192",
+                        "termSourceRef": "CL"
+                    },
+                    {
+                        "term": "fibroblast",
+                        "termAccessionNumber": "http://purl.obolibrary.org/obo/CL_0000057",
+                        "termSourceRef": "CL"
+                    },
+                    {
+                        "term": "erythrocyte",
+                        "termAccessionNumber": "http://purl.obolibrary.org/obo/CL_0000232",
+                        "termSourceRef": "CL"
+                    },
+                    {
+                        "term": "microglial cell",
+                        "termAccessionNumber": "http://purl.obolibrary.org/obo/CL_0000129",
                         "termSourceRef": "CL"
                     },
                     {
@@ -7739,13 +7943,13 @@
                         "termSourceRef": "CL"
                     },
                     {
-                        "term": "T cell",
-                        "termAccessionNumber": "http://purl.obolibrary.org/obo/CL_0000084",
+                        "term": "alveolar macrophage",
+                        "termAccessionNumber": "http://purl.obolibrary.org/obo/CL_0000583",
                         "termSourceRef": "CL"
                     },
                     {
-                        "term": "kidney cell",
-                        "termAccessionNumber": "http://purl.obolibrary.org/obo/CL_1000497",
+                        "term": "hematopoietic stem cell",
+                        "termAccessionNumber": "http://purl.obolibrary.org/obo/CL_0000037",
                         "termSourceRef": "CL"
                     }
                 ],
@@ -8824,7 +9028,8 @@
                     "CHMO",
                     "MONDO",
                     "GO",
-                    "MESH"
+                    "MESH",
+                    "EDAM"
                 ],
                 "allowedParentOntologyTerms": null,
                 "description": "",
@@ -8883,28 +9088,38 @@
                         "termSourceRef": "MS"
                     },
                     {
-                        "term": "tandem mass spectrometry",
-                        "termAccessionNumber": "http://purl.obolibrary.org/obo/CHMO_0000575",
-                        "termSourceRef": "CHMO"
+                        "term": "ion mobility separation",
+                        "termAccessionNumber": "http://purl.obolibrary.org/obo/MS_1003219",
+                        "termSourceRef": "MS"
+                    },
+                    {
+                        "term": "collision-induced dissociation",
+                        "termAccessionNumber": "http://purl.obolibrary.org/obo/MS_1000133",
+                        "termSourceRef": "MS"
+                    },
+                    {
+                        "term": "electron activated dissociation",
+                        "termAccessionNumber": "http://purl.obolibrary.org/obo/MS_1003294",
+                        "termSourceRef": "MS"
+                    },
+                    {
+                        "term": "matrix-assisted laser desorption ionization",
+                        "termAccessionNumber": "http://purl.obolibrary.org/obo/MS_1000075",
+                        "termSourceRef": "MS"
+                    },
+                    {
+                        "term": "infusion",
+                        "termAccessionNumber": "http://purl.obolibrary.org/obo/MS_1000060",
+                        "termSourceRef": "MS"
+                    },
+                    {
+                        "term": "flow injection analysis",
+                        "termAccessionNumber": "http://purl.obolibrary.org/obo/MS_1000058",
+                        "termSourceRef": "MS"
                     },
                     {
                         "term": "mzML format",
                         "termAccessionNumber": "http://purl.obolibrary.org/obo/MS_1000584",
-                        "termSourceRef": "MS"
-                    },
-                    {
-                        "term": "Thermo RAW format",
-                        "termAccessionNumber": "http://purl.obolibrary.org/obo/MS_1000563",
-                        "termSourceRef": "MS"
-                    },
-                    {
-                        "term": "Waters raw format",
-                        "termAccessionNumber": "http://purl.obolibrary.org/obo/MS_1000526",
-                        "termSourceRef": "MS"
-                    },
-                    {
-                        "term": "ABI WIFF format",
-                        "termAccessionNumber": "http://purl.obolibrary.org/obo/MS_1000562",
                         "termSourceRef": "MS"
                     }
                 ],
@@ -10147,72 +10362,6 @@
                         "term": "Learning material",
                         "termAccessionNumber": "http://edamontology.org/data_3669",
                         "termSourceRef": "EDAM"
-                    }
-                ],
-                "unexpectedTerms": []
-            }
-        ],
-        "Acquisition Method": [
-            {
-                "ruleName": "Acquisition Method-01",
-                "fieldName": "Acquisition Method",
-                "ontologies": [
-                    "MS"
-                ],
-                "allowedParentOntologyTerms": null,
-                "description": "",
-                "selectionCriteria": {
-                    "isaFileType": "investigation",
-                    "studyCreatedAtOrAfter": null,
-                    "studyCreatedBefore": null,
-                    "studyCategoryFilter": [
-                        "ms-mhd-enabled",
-                        "ms-mhd-legacy"
-                    ],
-                    "templateVersionFilter": null,
-                    "isaFileTemplateNameFilter": null,
-                    "linkedFieldAndValueFilter": null
-                },
-                "termEnforcementLevel": "recommended",
-                "unexpectedTermEnforcementLevel": "recommended",
-                "validationType": "any-ontology-term",
-                "constraints": {},
-                "defaultValue": null,
-                "allowedMissingOntologyTerms": [],
-                "allowedOtherSources": [
-                    {
-                        "sourceLabel": "MTBLS",
-                        "accessionPrefix": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_"
-                    },
-                    {
-                        "sourceLabel": "wikidata",
-                        "accessionPrefix": "https://www.wikidata.org/wiki/"
-                    },
-                    {
-                        "sourceLabel": "ILX",
-                        "accessionPrefix": "http://uri.interlex.org/base/ilx_"
-                    }
-                ],
-                "allowedPlaceholders": [
-                    {
-                        "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/placeholder",
-                        "termSourceRef": "MTBLS"
-                    },
-                    {
-                        "termAccessionNumber": "",
-                        "termSourceRef": ""
-                    }
-                ],
-                "terms": [
-                    {
-                        "term": "data-independent acquisition",
-                        "termAccessionNumber": "http://purl.obolibrary.org/obo/MS_1003215",
-                        "termSourceRef": "MS"
-                    },
-                    {
-                        "term": "data-dependent acquisition",
-                        "termAccessionNumber": "http://purl.obolibrary.org/obo/MS_1003221",
-                        "termSourceRef": "MS"
                     }
                 ],
                 "unexpectedTerms": []

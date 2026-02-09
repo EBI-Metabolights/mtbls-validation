@@ -63,8 +63,38 @@
             "allowedPlaceholders": [],
             "terms": [
                 {
-                    "term": "macrophage",
-                    "termAccessionNumber": "http://purl.obolibrary.org/obo/CL_0000235",
+                    "term": "regulatory T cell",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/CL_0000815",
+                    "termSourceRef": "CL"
+                },
+                {
+                    "term": "plasma cell",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/CL_0000786",
+                    "termSourceRef": "CL"
+                },
+                {
+                    "term": "endothelial cell",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/CL_0000115",
+                    "termSourceRef": "CL"
+                },
+                {
+                    "term": "smooth muscle cell",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/CL_0000192",
+                    "termSourceRef": "CL"
+                },
+                {
+                    "term": "fibroblast",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/CL_0000057",
+                    "termSourceRef": "CL"
+                },
+                {
+                    "term": "erythrocyte",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/CL_0000232",
+                    "termSourceRef": "CL"
+                },
+                {
+                    "term": "microglial cell",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/CL_0000129",
                     "termSourceRef": "CL"
                 },
                 {
@@ -73,13 +103,13 @@
                     "termSourceRef": "CL"
                 },
                 {
-                    "term": "T cell",
-                    "termAccessionNumber": "http://purl.obolibrary.org/obo/CL_0000084",
+                    "term": "alveolar macrophage",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/CL_0000583",
                     "termSourceRef": "CL"
                 },
                 {
-                    "term": "kidney cell",
-                    "termAccessionNumber": "http://purl.obolibrary.org/obo/CL_1000497",
+                    "term": "hematopoietic stem cell",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/CL_0000037",
                     "termSourceRef": "CL"
                 }
             ],
@@ -132,8 +162,38 @@
             "allowedPlaceholders": [],
             "terms": [
                 {
-                    "term": "macrophage",
-                    "termAccessionNumber": "http://purl.obolibrary.org/obo/CL_0000235",
+                    "term": "regulatory T cell",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/CL_0000815",
+                    "termSourceRef": "CL"
+                },
+                {
+                    "term": "plasma cell",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/CL_0000786",
+                    "termSourceRef": "CL"
+                },
+                {
+                    "term": "endothelial cell",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/CL_0000115",
+                    "termSourceRef": "CL"
+                },
+                {
+                    "term": "smooth muscle cell",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/CL_0000192",
+                    "termSourceRef": "CL"
+                },
+                {
+                    "term": "fibroblast",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/CL_0000057",
+                    "termSourceRef": "CL"
+                },
+                {
+                    "term": "erythrocyte",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/CL_0000232",
+                    "termSourceRef": "CL"
+                },
+                {
+                    "term": "microglial cell",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/CL_0000129",
                     "termSourceRef": "CL"
                 },
                 {
@@ -142,13 +202,13 @@
                     "termSourceRef": "CL"
                 },
                 {
-                    "term": "T cell",
-                    "termAccessionNumber": "http://purl.obolibrary.org/obo/CL_0000084",
+                    "term": "alveolar macrophage",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/CL_0000583",
                     "termSourceRef": "CL"
                 },
                 {
-                    "term": "kidney cell",
-                    "termAccessionNumber": "http://purl.obolibrary.org/obo/CL_1000497",
+                    "term": "hematopoietic stem cell",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/CL_0000037",
                     "termSourceRef": "CL"
                 }
             ],

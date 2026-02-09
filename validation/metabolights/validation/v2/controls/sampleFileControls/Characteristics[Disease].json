@@ -6,7 +6,8 @@
             "ontologies": [
                 "MONDO",
                 "MP",
-                "SNOMED"
+                "SNOMED",
+                "PATO"
             ],
             "allowedParentOntologyTerms": null,
             "description": "",
@@ -55,6 +56,16 @@
             "allowedPlaceholders": [],
             "terms": [
                 {
+                    "term": "breast cancer",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/MONDO_0007254",
+                    "termSourceRef": "MONDO"
+                },
+                {
+                    "term": "colorectal cancer",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/MONDO_0005575",
+                    "termSourceRef": "MONDO"
+                },
+                {
                     "term": "Alzheimer disease",
                     "termAccessionNumber": "http://purl.obolibrary.org/obo/MONDO_0004975",
                     "termSourceRef": "MONDO"
@@ -65,9 +76,34 @@
                     "termSourceRef": "MONDO"
                 },
                 {
-                    "term": "diabetic kidney disease",
-                    "termAccessionNumber": "http://purl.obolibrary.org/obo/MONDO_0005016",
+                    "term": "COVID-19",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/MONDO_0100096",
                     "termSourceRef": "MONDO"
+                },
+                {
+                    "term": "type 2 diabetes mellitus",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/MONDO_0005148",
+                    "termSourceRef": "MONDO"
+                },
+                {
+                    "term": "ischemia reperfusion injury",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/MONDO_0005203",
+                    "termSourceRef": "MONDO"
+                },
+                {
+                    "term": "chronic kidney disease",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/MONDO_0005300",
+                    "termSourceRef": "MONDO"
+                },
+                {
+                    "term": "metabolic dysfunction-associated steatotic liver disease",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/MONDO_0013209",
+                    "termSourceRef": "MONDO"
+                },
+                {
+                    "term": "normal",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/PATO_0000461",
+                    "termSourceRef": "PATO"
                 }
             ],
             "unexpectedTerms": []
@@ -78,7 +114,8 @@
             "ontologies": [
                 "MONDO",
                 "MP",
-                "SNOMED"
+                "SNOMED",
+                "PATO"
             ],
             "allowedParentOntologyTerms": null,
             "description": "",
@@ -120,6 +157,16 @@
             "allowedPlaceholders": [],
             "terms": [
                 {
+                    "term": "breast cancer",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/MONDO_0007254",
+                    "termSourceRef": "MONDO"
+                },
+                {
+                    "term": "colorectal cancer",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/MONDO_0005575",
+                    "termSourceRef": "MONDO"
+                },
+                {
                     "term": "Alzheimer disease",
                     "termAccessionNumber": "http://purl.obolibrary.org/obo/MONDO_0004975",
                     "termSourceRef": "MONDO"
@@ -130,9 +177,34 @@
                     "termSourceRef": "MONDO"
                 },
                 {
-                    "term": "diabetic kidney disease",
-                    "termAccessionNumber": "http://purl.obolibrary.org/obo/MONDO_0005016",
+                    "term": "COVID-19",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/MONDO_0100096",
                     "termSourceRef": "MONDO"
+                },
+                {
+                    "term": "type 2 diabetes mellitus",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/MONDO_0005148",
+                    "termSourceRef": "MONDO"
+                },
+                {
+                    "term": "ischemia reperfusion injury",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/MONDO_0005203",
+                    "termSourceRef": "MONDO"
+                },
+                {
+                    "term": "chronic kidney disease",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/MONDO_0005300",
+                    "termSourceRef": "MONDO"
+                },
+                {
+                    "term": "metabolic dysfunction-associated steatotic liver disease",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/MONDO_0013209",
+                    "termSourceRef": "MONDO"
+                },
+                {
+                    "term": "normal",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/PATO_0000461",
+                    "termSourceRef": "PATO"
                 }
             ],
             "unexpectedTerms": []
