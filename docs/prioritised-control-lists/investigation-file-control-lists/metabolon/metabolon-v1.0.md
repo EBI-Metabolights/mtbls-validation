@@ -397,7 +397,7 @@
 | Applicable Study Categories | All |
 | Applicable Template Names | All |
 | Applicable Template Versions | All |
-| Validation Type | ontology-term-in-selected-ontologies |
+| Validation Type | child-ontology-term |
 | Ontologies [Ordered] | MS |
 | Allowed Parent Ontology Terms | \[software, MS, http://purl\.obolibrary\.org/obo/MS\_1000531\] |
 | Allowed Placeholders | \[MTBLS, http://www\.ebi\.ac\.uk/metabolights/ontology/placeholder\], \[, \] |

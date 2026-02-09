@@ -10832,7 +10832,7 @@
                 },
                 "termEnforcementLevel": "recommended",
                 "unexpectedTermEnforcementLevel": "recommended",
-                "validationType": "ontology-term-in-selected-ontologies",
+                "validationType": "child-ontology-term",
                 "constraints": {},
                 "defaultValue": null,
                 "allowedMissingOntologyTerms": [],
