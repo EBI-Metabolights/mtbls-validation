@@ -78,8 +78,23 @@
                     "termSourceRef": "MS"
                 },
                 {
+                    "term": "selected reaction monitoring",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/MS_1000206",
+                    "termSourceRef": "MS"
+                },
+                {
                     "term": "ion mobility separation",
                     "termAccessionNumber": "http://purl.obolibrary.org/obo/MS_1003219",
+                    "termSourceRef": "MS"
+                },
+                {
+                    "term": "profile spectrum",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/MS_1000128",
+                    "termSourceRef": "MS"
+                },
+                {
+                    "term": "centroid spectrum",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/MS_1000127",
                     "termSourceRef": "MS"
                 },
                 {
@@ -91,6 +106,11 @@
                     "term": "electron activated dissociation",
                     "termAccessionNumber": "http://purl.obolibrary.org/obo/MS_1003294",
                     "termSourceRef": "MS"
+                },
+                {
+                    "term": "ultra-performance liquid chromatography-mass spectrometry",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/CHMO_0000715",
+                    "termSourceRef": "CHMO"
                 },
                 {
                     "term": "matrix-assisted laser desorption ionization",

@@ -176,7 +176,7 @@
                         "Magnetic field strength": {
                             "definition": "",
                             "type": {
-                                "term": "Pulse sequence name",
+                                "term": "Magnetic field strength",
                                 "termAccessionNumber": "",
                                 "termSourceRef": ""
                             },

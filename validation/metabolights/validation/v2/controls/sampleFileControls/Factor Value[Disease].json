@@ -104,8 +104,8 @@
             "unexpectedTerms": []
         },
         {
-            "ruleName": "Characteristics[Disease]-01",
-            "fieldName": "Characteristics[Disease]",
+            "ruleName": "Factor Value[Disease]-01",
+            "fieldName": "Factor Value[Disease]",
             "ontologies": [
                 "MONDO",
                 "MP",
@@ -119,7 +119,9 @@
                 "studyCreatedAtOrAfter": null,
                 "studyCreatedBefore": null,
                 "studyCategoryFilter": null,
-                "templateVersionFilter": null,
+                "templateVersionFilter": [
+                    "1.0"
+                ],
                 "isaFileTemplateNameFilter": null,
                 "linkedFieldAndValueFilter": null
             },

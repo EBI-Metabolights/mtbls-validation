@@ -251,9 +251,9 @@
                     "minLength": 1,
                     "maxLength": null,
                     "required": true,
-                    "description": "In Tesla (T). Unit will be defined in the next column.",
+                    "description": "Unit will be defined in the next column.",
                     "examples": [
-                        "11.7 Tesla"
+                        "11.7 numeric value with tesla unit"
                     ]
                 },
                 {
@@ -659,9 +659,9 @@
                     "minLength": 1,
                     "maxLength": null,
                     "required": true,
-                    "description": "In Tesla (T). Unit will be defined in the next column.",
+                    "description": "Unit will be defined in the next column.",
                     "examples": [
-                        "11.7 Tesla"
+                        "11.7 numeric value with tesla unit"
                     ]
                 },
                 {

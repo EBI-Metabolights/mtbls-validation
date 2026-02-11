@@ -3538,9 +3538,9 @@
                         "minLength": 1,
                         "maxLength": null,
                         "required": true,
-                        "description": "In Tesla (T). Unit will be defined in the next column.",
+                        "description": "Unit will be defined in the next column.",
                         "examples": [
-                            "11.7 Tesla"
+                            "11.7 numeric value with tesla unit"
                         ]
                     },
                     {
@@ -3946,9 +3946,9 @@
                         "minLength": 1,
                         "maxLength": null,
                         "required": true,
-                        "description": "In Tesla (T). Unit will be defined in the next column.",
+                        "description": "Unit will be defined in the next column.",
                         "examples": [
-                            "11.7 Tesla"
+                            "11.7 numeric value with tesla unit"
                         ]
                     },
                     {
@@ -15079,7 +15079,7 @@
                             "Magnetic field strength": {
                                 "definition": "",
                                 "type": {
-                                    "term": "Pulse sequence name",
+                                    "term": "Magnetic field strength",
                                     "termAccessionNumber": "",
                                     "termSourceRef": ""
                                 },
@@ -19032,7 +19032,7 @@
         "AISM": {
             "sourceName": "AISM",
             "sourceFile": "http://purl.obolibrary.org/obo/aism.owl",
-            "sourceVersion": "2025-03-18",
+            "sourceVersion": "2026-01-28",
             "sourceDescription": "Ontology for the Anatomy of the Insect SkeletoMuscular system",
             "sourceDetails": "The ontology for the Anatomy of the Insect SkeletoMuscular system (AISM) contains terms used to describe the cuticle - as a single anatomical structure - and the skeletal muscle system, to be used in insect biodiversity research."
         },
@@ -19389,7 +19389,7 @@
         "DOID": {
             "sourceName": "DOID",
             "sourceFile": "https://purl.obolibrary.org/obo/doid/translations/doid-international.owl",
-            "sourceVersion": "2025-12-23",
+            "sourceVersion": "2026-02-02",
             "sourceDescription": "Human Disease Ontology",
             "sourceDetails": "The Disease Ontology has been developed as a standardized ontology for human disease with the purpose of providing the biomedical community with consistent, reusable and sustainable descriptions of human disease terms, phenotype characteristics and related medical vocabulary disease concepts."
         },
@@ -19662,7 +19662,7 @@
         "GENO": {
             "sourceName": "GENO",
             "sourceFile": "http://purl.obolibrary.org/obo/geno.owl",
-            "sourceVersion": "2025-07-25",
+            "sourceVersion": "2026-02-02",
             "sourceDescription": "GENO ontology",
             "sourceDetails": "GENO is an OWL model of genotypes, their more fundamental sequence components, and links to related biological and experimental entities.  At present many parts of the model are exploratory and set to undergo refactoring.  In addition, many classes and properties have GENO URIs but are place holders for classes that will be imported from an external ontology (e.g. SO, ChEBI, OBI, etc).  Furthermore, ongoing work will implement a model of genotype-to-phenotype associations. This will support description of asserted and inferred relationships between a genotypes, phenotypes, and environments, and the evidence/provenance behind these associations. \n\nDocumentation is under development as well, and for now a slidedeck is available at http://www.slideshare.net/mhb120/brush-icbo-2013"
         },
@@ -19683,7 +19683,7 @@
         "GO": {
             "sourceName": "GO",
             "sourceFile": "http://purl.obolibrary.org/obo/go/extensions/go-plus.owl",
-            "sourceVersion": "2025-10-10",
+            "sourceVersion": "2026-01-23",
             "sourceDescription": "Gene Ontology",
             "sourceDetails": "The Gene Ontology (GO) provides a framework and set of concepts for describing the functions of gene products from all organisms."
         },
@@ -19879,7 +19879,7 @@
         "MA": {
             "sourceName": "MA",
             "sourceFile": "http://purl.obolibrary.org/obo/ma.owl",
-            "sourceVersion": "2026-01-09",
+            "sourceVersion": "2026-01-30",
             "sourceDescription": "Mouse adult gross anatomy",
             "sourceDetails": "A structured controlled vocabulary of the adult anatomy of the mouse (Mus)."
         },
@@ -19998,7 +19998,7 @@
         "MONDO": {
             "sourceName": "MONDO",
             "sourceFile": "https://purl.obolibrary.org/obo/mondo/mondo-international.owl",
-            "sourceVersion": "2026-01-06",
+            "sourceVersion": "2026-02-03",
             "sourceDescription": "Mondo Disease Ontology",
             "sourceDetails": "A semi-automatically constructed ontology that merges in multiple disease resources to yield a coherent merged ontology."
         },
@@ -20012,7 +20012,7 @@
         "MP": {
             "sourceName": "MP",
             "sourceFile": "http://purl.obolibrary.org/obo/mp/mp-international.owl",
-            "sourceVersion": "2025-12-18",
+            "sourceVersion": "2026-01-27",
             "sourceDescription": "The Mammalian Phenotype Ontology",
             "sourceDetails": "The Mammalian Phenotype Ontology is being developed by Cynthia L. Smith, Susan M. Bello, Anna V. Anagnostopoulos, Carroll W. Goldsmith and Janan T. Eppig, as part of the Mouse Genome Database (MGD) Project, Mouse Genome Informatics (MGI), The Jackson Laboratory, Bar Harbor, ME. This file contains pre-coordinated phenotype terms, definitions and synonyms that can be used to describe mammalian phenotypes. The ontology is represented as a directed acyclic graph (DAG). It organizes phenotype terms into major biological system headers such as nervous system and respiratory system.  This ontology is currently under development. Weekly updates are available at the Mouse Genome Informatics (MGI) ftp site (ftp://ftp.informatics.jax.org/pub/reports/index.html#pheno) as well as the OBO Foundry site (http://obofoundry.org/). Japanese labels of MP were created by the MP Japanese Translation Project (https://github.com/dbcls/MP_Japanese). Questions, comments and suggestions are welcome, and should be directed to pheno@jax.org, Susan.Bello@jax.org or to GitHub tracker (https://github.com/mgijax/mammalian-phenotype-ontology/issues) MGD is funded by NIH/NHGRI grant HG000330."
         },
@@ -20033,7 +20033,7 @@
         "MRO": {
             "sourceName": "MRO",
             "sourceFile": "http://purl.obolibrary.org/obo/mro.owl",
-            "sourceVersion": "2026-01-13",
+            "sourceVersion": "2026-01-30",
             "sourceDescription": "MHC Restriction Ontology",
             "sourceDetails": "The MHC Restriction Ontology is an application ontology capturing how Major Histocompatibility Complex (MHC) restriction is defined in experiments, spanning exact protein complexes, individual protein chains, serotypes, haplotypes and mutant molecules, as well as evidence for MHC restrictions."
         },
@@ -20775,7 +20775,7 @@
         "UNIPROTRDFS": {
             "sourceName": "UNIPROTRDFS",
             "sourceFile": "https://ftp.uniprot.org/pub/databases/uniprot/current_release/rdf/core.owl",
-            "sourceVersion": "2025_03",
+            "sourceVersion": "2026_01",
             "sourceDescription": "",
             "sourceDetails": ""
         },
@@ -20824,7 +20824,7 @@
         "VT": {
             "sourceName": "VT",
             "sourceFile": "http://purl.obolibrary.org/obo/vt.owl",
-            "sourceVersion": "2026-01-21",
+            "sourceVersion": "2026-02-03",
             "sourceDescription": "The Vertebrate Trait Ontology",
             "sourceDetails": "The Vertebrate Trait Ontology is a controlled vocabulary for the description of traits (measurable or observable characteristics) pertaining to the morphology, physiology, or development of vertebrate organisms."
         },
