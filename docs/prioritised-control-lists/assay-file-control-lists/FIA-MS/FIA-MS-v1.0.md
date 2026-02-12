@@ -20,7 +20,7 @@
 
 | Attribute | Value |
 |---|------|
-| Rule Name | Unit\-01 |
+| Rule Name | Assay\-Unit\-01 |
 | Rule Description |  |
 | Applicable Study Categories | All |
 | Applicable Template Names | All |
@@ -50,7 +50,7 @@
 
 | Attribute | Value |
 |---|------|
-| Rule Name | Sample Name\-01 |
+| Rule Name | Assay\-Sample Name\-01 |
 | Rule Description |  |
 | Applicable Study Categories | All |
 | Applicable Template Names | All |

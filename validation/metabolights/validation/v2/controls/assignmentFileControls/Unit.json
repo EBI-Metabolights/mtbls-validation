@@ -1,7 +1,7 @@
 {
     "Unit": [
         {
-            "ruleName": "Unit-01",
+            "ruleName": "MAF-Unit-01",
             "fieldName": "Unit",
             "ontologies": [],
             "allowedParentOntologyTerms": {

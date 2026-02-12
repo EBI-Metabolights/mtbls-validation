@@ -104,7 +104,7 @@
             "unexpectedTerms": []
         },
         {
-            "ruleName": "Factor Value[Disease]-01",
+            "ruleName": "Factor Value[Disease]-02",
             "fieldName": "Factor Value[Disease]",
             "ontologies": [
                 "MONDO",

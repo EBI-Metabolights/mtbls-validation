@@ -116,7 +116,7 @@
             "unexpectedTerms": []
         },
         {
-            "ruleName": "Characteristics[Cell type]-01",
+            "ruleName": "Characteristics[Cell type]-02",
             "fieldName": "Characteristics[Cell type]",
             "ontologies": [
                 "CL",

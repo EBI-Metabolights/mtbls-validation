@@ -66,8 +66,8 @@
             "unexpectedTerms": []
         },
         {
-            "ruleName": "Parameter Value[Column model]-02",
-            "fieldName": "Parameter Value[Column model]",
+            "ruleName": "Parameter Value[Column type]-02",
+            "fieldName": "Parameter Value[Column type]",
             "ontologies": [
                 "MS",
                 "MTBLS"

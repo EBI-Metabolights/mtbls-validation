@@ -20,7 +20,7 @@
 
 | Attribute | Value |
 |---|------|
-| Rule Name | Unit\-01 |
+| Rule Name | Investigation\-Unit\-01 |
 | Rule Description |  |
 | Applicable Study Categories | All |
 | Applicable Template Names | All |

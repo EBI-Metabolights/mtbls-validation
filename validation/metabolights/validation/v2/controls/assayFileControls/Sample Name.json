@@ -1,7 +1,7 @@
 {
     "Sample Name": [
         {
-            "ruleName": "Sample Name-01",
+            "ruleName": "Assay-Sample Name-01",
             "fieldName": "Sample Name",
             "ontologies": [],
             "allowedParentOntologyTerms": null,
