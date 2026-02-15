@@ -36,7 +36,8 @@ def create_all_controls_json():
         if len(files) > 1:
             error = True
             print(f"Duplicate rule name {rule_name} in files: {files}")
-    raise ValueError("Duplicate rule names found") if error else None
+    if error:
+        raise ValueError("Duplicate rule names found") if error else None
     controls_json = controls.model_dump_json(by_alias=True, indent=4)
 
     Path("docs/json").mkdir(exist_ok=True, parents=True)

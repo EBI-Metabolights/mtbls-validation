@@ -19193,7 +19193,7 @@
         "CHEBI": {
             "sourceName": "CHEBI",
             "sourceFile": "http://purl.obolibrary.org/obo/chebi.owl",
-            "sourceVersion": "248",
+            "sourceVersion": "249",
             "sourceDescription": "Chemical Entities of Biological Interest",
             "sourceDetails": "A structured classification of molecular entities of biological interest focusing on 'small' chemical compounds."
         },
@@ -19879,7 +19879,7 @@
         "MA": {
             "sourceName": "MA",
             "sourceFile": "http://purl.obolibrary.org/obo/ma.owl",
-            "sourceVersion": "2026-01-30",
+            "sourceVersion": "2026-02-11",
             "sourceDescription": "Mouse adult gross anatomy",
             "sourceDetails": "A structured controlled vocabulary of the adult anatomy of the mouse (Mus)."
         },
@@ -20033,7 +20033,7 @@
         "MRO": {
             "sourceName": "MRO",
             "sourceFile": "http://purl.obolibrary.org/obo/mro.owl",
-            "sourceVersion": "2026-01-30",
+            "sourceVersion": "2026-02-10",
             "sourceDescription": "MHC Restriction Ontology",
             "sourceDetails": "The MHC Restriction Ontology is an application ontology capturing how Major Histocompatibility Complex (MHC) restriction is defined in experiments, spanning exact protein complexes, individual protein chains, serotypes, haplotypes and mutant molecules, as well as evidence for MHC restrictions."
         },
