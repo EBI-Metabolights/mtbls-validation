@@ -54,6 +54,32 @@ def update_template_json_files():
                 for x in input_data:
                     jsonschema.validate(x, schema)
                     data = models.IsaTableFileTemplate.model_validate(x, by_alias=True)
+                    counter = 0
+                    for header in data.headers:
+                        if header.default_column_index != counter:
+                            logger.warning(
+                                "Default column index %s"
+                                " is not equal to expected %s in file %s "
+                                "for header %s. It will be updated to %s.",
+                                header.default_column_index,
+                                counter,
+                                file,
+                                header.column_header,
+                                counter,
+                            )
+                        header.default_column_index = counter
+
+                        if header.column_structure == "SINGLE_COLUMN_AND_UNIT_ONTOLOGY":
+                            counter += 4
+                        elif header.column_structure == "ONTOLOGY_COLUMN":
+                            counter += 3
+                        elif header.column_structure == "SINGLE_COLUMN":
+                            counter += 1
+                        else:
+                            raise ValueError(
+                                f"Unknown column structure {header.column_structure} in file {file}"
+                            )
+
                     file_content_data.data[key].append(data)
 
                 file_obj = file_content_data.model_dump(by_alias=True)

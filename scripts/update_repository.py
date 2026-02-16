@@ -57,13 +57,6 @@ if __name__ == "__main__":
 
     excel_rules = read_rules_from_excel()
     implemented_rules = get_implemented_rules()
-    try:
-        result = subprocess.run(["uv", "run", "ruff", "check", "--fix"], check=True)
-        print(result)
-        result = subprocess.run(["uv", "run", "ruff", "format"], check=True)
-        print(result)
-    except Exception as ex:
-        print(ex)
 
     check_uniqueness(excel_rules)
 
@@ -95,5 +88,13 @@ if __name__ == "__main__":
     create_index_md_file(template_settings)
     try:
         result = subprocess.run(["/bin/bash", "./build_bundle.sh"], check=True)
+    except Exception as ex:
+        print(ex)
+
+    try:
+        result = subprocess.run(["uv", "run", "ruff", "check", "--fix"], check=True)
+        print(result)
+        result = subprocess.run(["uv", "run", "ruff", "format"], check=True)
+        print(result)
     except Exception as ex:
         print(ex)

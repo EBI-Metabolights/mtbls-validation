@@ -213,7 +213,7 @@
                     "columnHeader": "Sample Name",
                     "columnPrefix": "",
                     "defaultValue": null,
-                    "defaultColumnIndex": 120,
+                    "defaultColumnIndex": 20,
                     "minLength": 3,
                     "maxLength": 128,
                     "required": true,
