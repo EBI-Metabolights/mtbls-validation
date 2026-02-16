@@ -4,6 +4,184 @@
             "ruleName": "Parameter Value[Column type]-01",
             "fieldName": "Parameter Value[Column type]",
             "ontologies": [
+                "MS"
+            ],
+            "allowedParentOntologyTerms": {
+                "excludeByLabelPattern": [],
+                "excludeByAccession": [],
+                "parents": [
+                    {
+                        "term": "liquid chromatography separation",
+                        "termAccessionNumber": "http://purl.obolibrary.org/obo/MS_1002271",
+                        "termSourceRef": "MS"
+                    }
+                ]
+            },
+            "description": "",
+            "selectionCriteria": {
+                "isaFileType": "assay",
+                "studyCreatedAtOrAfter": null,
+                "studyCreatedBefore": null,
+                "studyCategoryFilter": [
+                    "ms-mhd-enabled"
+                ],
+                "templateVersionFilter": null,
+                "isaFileTemplateNameFilter": [
+                    "LC-MS"
+                ],
+                "linkedFieldAndValueFilter": []
+            },
+            "termEnforcementLevel": "required",
+            "unexpectedTermEnforcementLevel": "recommended",
+            "validationType": "ontology-term-in-selected-ontologies",
+            "constraints": {},
+            "defaultValue": null,
+            "allowedMissingOntologyTerms": [],
+            "allowedOtherSources": [
+                {
+                    "sourceLabel": "MTBLS",
+                    "accessionPrefix": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_"
+                },
+                {
+                    "sourceLabel": "wikidata",
+                    "accessionPrefix": "https://www.wikidata.org/wiki/"
+                },
+                {
+                    "sourceLabel": "ILX",
+                    "accessionPrefix": "http://uri.interlex.org/base/ilx_"
+                }
+            ],
+            "allowedPlaceholders": [
+                {
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/placeholder",
+                    "termSourceRef": "MTBLS"
+                }
+            ],
+            "terms": [
+                {
+                    "term": "reversed phase chromatography",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/MS_1003582",
+                    "termSourceRef": "MS"
+                },
+                {
+                    "term": "normal phase chromatography",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/MS_1003583",
+                    "termSourceRef": "MS"
+                },
+                {
+                    "term": "hydrophilic interaction liquid chromatography",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/MS_1003584",
+                    "termSourceRef": "MS"
+                },
+                {
+                    "term": "hydrophobic interaction chromatography",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/MS_1003587",
+                    "termSourceRef": "MS"
+                },
+                {
+                    "term": "chiral separation liquid chromatography",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/MS_1003585",
+                    "termSourceRef": "MS"
+                },
+                {
+                    "term": "affinity chromatography",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/MS_1003581",
+                    "termSourceRef": "MS"
+                }
+            ],
+            "unexpectedTerms": []
+        },
+        {
+            "ruleName": "Parameter Value[Column type]-02",
+            "fieldName": "Parameter Value[Column type]",
+            "ontologies": [
+                "MS"
+            ],
+            "allowedParentOntologyTerms": {
+                "excludeByLabelPattern": [],
+                "excludeByAccession": [],
+                "parents": [
+                    {
+                        "term": "gas chromatography separation",
+                        "termAccessionNumber": "http://purl.obolibrary.org/obo/MS_1002272",
+                        "termSourceRef": "MS"
+                    }
+                ]
+            },
+            "description": "",
+            "selectionCriteria": {
+                "isaFileType": "assay",
+                "studyCreatedAtOrAfter": null,
+                "studyCreatedBefore": null,
+                "studyCategoryFilter": [
+                    "ms-mhd-enabled"
+                ],
+                "templateVersionFilter": null,
+                "isaFileTemplateNameFilter": [
+                    "GC-MS",
+                    "GCxGC-MS"
+                ],
+                "linkedFieldAndValueFilter": []
+            },
+            "termEnforcementLevel": "required",
+            "unexpectedTermEnforcementLevel": "recommended",
+            "validationType": "ontology-term-in-selected-ontologies",
+            "constraints": {},
+            "defaultValue": null,
+            "allowedMissingOntologyTerms": [],
+            "allowedOtherSources": [
+                {
+                    "sourceLabel": "MTBLS",
+                    "accessionPrefix": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_"
+                },
+                {
+                    "sourceLabel": "wikidata",
+                    "accessionPrefix": "https://www.wikidata.org/wiki/"
+                },
+                {
+                    "sourceLabel": "ILX",
+                    "accessionPrefix": "http://uri.interlex.org/base/ilx_"
+                }
+            ],
+            "allowedPlaceholders": [
+                {
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/placeholder",
+                    "termSourceRef": "MTBLS"
+                }
+            ],
+            "terms": [
+                {
+                    "term": "capillary column gas chromatography",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/MS_1003714",
+                    "termSourceRef": "MS"
+                },
+                {
+                    "term": "fast gas chromatography",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/MS_1003712",
+                    "termSourceRef": "MS"
+                },
+                {
+                    "term": "high-resolution gas chromatography",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/MS_1003715",
+                    "termSourceRef": "MS"
+                },
+                {
+                    "term": "packed column gas chromatography",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/MS_1003713",
+                    "termSourceRef": "MS"
+                },
+                {
+                    "term": "pyrolysis-gas chromatography",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/MS_1003716",
+                    "termSourceRef": "MS"
+                }
+            ],
+            "unexpectedTerms": []
+        },
+        {
+            "ruleName": "Parameter Value[Column type]-03",
+            "fieldName": "Parameter Value[Column type]",
+            "ontologies": [
                 "MS",
                 "MTBLS"
             ],
@@ -66,7 +244,7 @@
             "unexpectedTerms": []
         },
         {
-            "ruleName": "Parameter Value[Column type]-02",
+            "ruleName": "Parameter Value[Column type]-04",
             "fieldName": "Parameter Value[Column type]",
             "ontologies": [
                 "MS",
