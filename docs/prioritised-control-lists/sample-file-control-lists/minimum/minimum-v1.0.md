@@ -171,6 +171,26 @@
 | 6 | reference compound mix | MSIO | http://purl\.obolibrary\.org/obo/MSIO\_0000024 |
 | 7 | long term reference | MSIO | http://purl\.obolibrary\.org/obo/MSIO\_0000019 |
 
+## Protocol REF
+
+| Attribute | Value |
+|---|------|
+| Rule Name | Sample Protocol REF\-01 |
+| Rule Description |  |
+| Applicable Study Categories | All |
+| Applicable Template Names | All |
+| Applicable Template Versions | All |
+| Validation Type | selected-ontology-term |
+| Allowed Placeholders | \[MTBLS, http://www\.ebi\.ac\.uk/metabolights/ontology/placeholder\] |
+| Allowed Other Sources | \[MTBLS, http://www\.ebi\.ac\.uk/metabolights/ontology/MTBLS\_\] |
+| Ontology Term Enforcement Level | required |
+
+### Terms
+
+| # |Term  | Term Source  | Term Accession |
+|---|------|--------------|----------------|
+| 1 | Sample collection |  |  |
+
 ## Sample Name
 
 | Attribute | Value |

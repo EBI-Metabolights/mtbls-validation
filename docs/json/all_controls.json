@@ -91,6 +91,326 @@
                 ]
             }
         ],
+        "Protocol REF": [
+            {
+                "ruleName": "Assay Protocol REF-01",
+                "fieldName": "Assay Protocol REF",
+                "ontologies": [],
+                "allowedParentOntologyTerms": null,
+                "description": "",
+                "selectionCriteria": {
+                    "isaFileType": "assay",
+                    "studyCreatedAtOrAfter": null,
+                    "studyCreatedBefore": null,
+                    "studyCategoryFilter": null,
+                    "templateVersionFilter": null,
+                    "isaFileTemplateNameFilter": [
+                        "LC-MS",
+                        "GC-MS",
+                        "GCxGC-MS"
+                    ],
+                    "linkedFieldAndValueFilter": null
+                },
+                "termEnforcementLevel": "required",
+                "unexpectedTermEnforcementLevel": "required",
+                "validationType": "selected-ontology-term",
+                "constraints": {},
+                "defaultValue": null,
+                "allowedMissingOntologyTerms": [],
+                "allowedOtherSources": [
+                    {
+                        "sourceLabel": "MTBLS",
+                        "accessionPrefix": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_"
+                    }
+                ],
+                "allowedPlaceholders": [
+                    {
+                        "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/placeholder",
+                        "termSourceRef": "MTBLS"
+                    }
+                ],
+                "terms": [
+                    {
+                        "term": "Extraction",
+                        "termAccessionNumber": "",
+                        "termSourceRef": ""
+                    },
+                    {
+                        "term": "Chromatography",
+                        "termAccessionNumber": "",
+                        "termSourceRef": ""
+                    },
+                    {
+                        "term": "Mass spectrometry",
+                        "termAccessionNumber": "",
+                        "termSourceRef": ""
+                    },
+                    {
+                        "term": "Data transformation",
+                        "termAccessionNumber": "",
+                        "termSourceRef": ""
+                    },
+                    {
+                        "term": "Metabolite identification",
+                        "termAccessionNumber": "",
+                        "termSourceRef": ""
+                    }
+                ],
+                "unexpectedTerms": []
+            },
+            {
+                "ruleName": "Assay Protocol REF-02",
+                "fieldName": "Assay Protocol REF",
+                "ontologies": [],
+                "allowedParentOntologyTerms": null,
+                "description": "",
+                "selectionCriteria": {
+                    "isaFileType": "assay",
+                    "studyCreatedAtOrAfter": null,
+                    "studyCreatedBefore": null,
+                    "studyCategoryFilter": null,
+                    "templateVersionFilter": null,
+                    "isaFileTemplateNameFilter": [
+                        "DI-MS"
+                    ],
+                    "linkedFieldAndValueFilter": null
+                },
+                "termEnforcementLevel": "required",
+                "unexpectedTermEnforcementLevel": "required",
+                "validationType": "selected-ontology-term",
+                "constraints": {},
+                "defaultValue": null,
+                "allowedMissingOntologyTerms": [],
+                "allowedOtherSources": [
+                    {
+                        "sourceLabel": "MTBLS",
+                        "accessionPrefix": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_"
+                    }
+                ],
+                "allowedPlaceholders": [
+                    {
+                        "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/placeholder",
+                        "termSourceRef": "MTBLS"
+                    }
+                ],
+                "terms": [
+                    {
+                        "term": "Extraction",
+                        "termAccessionNumber": "",
+                        "termSourceRef": ""
+                    },
+                    {
+                        "term": "Direct infusion",
+                        "termAccessionNumber": "",
+                        "termSourceRef": ""
+                    },
+                    {
+                        "term": "Mass spectrometry",
+                        "termAccessionNumber": "",
+                        "termSourceRef": ""
+                    },
+                    {
+                        "term": "Data transformation",
+                        "termAccessionNumber": "",
+                        "termSourceRef": ""
+                    },
+                    {
+                        "term": "Metabolite identification",
+                        "termAccessionNumber": "",
+                        "termSourceRef": ""
+                    }
+                ],
+                "unexpectedTerms": []
+            },
+            {
+                "ruleName": "Assay Protocol REF-03",
+                "fieldName": "Assay Protocol REF",
+                "ontologies": [],
+                "allowedParentOntologyTerms": null,
+                "description": "",
+                "selectionCriteria": {
+                    "isaFileType": "assay",
+                    "studyCreatedAtOrAfter": null,
+                    "studyCreatedBefore": null,
+                    "studyCategoryFilter": null,
+                    "templateVersionFilter": null,
+                    "isaFileTemplateNameFilter": [
+                        "CE-MS"
+                    ],
+                    "linkedFieldAndValueFilter": null
+                },
+                "termEnforcementLevel": "required",
+                "unexpectedTermEnforcementLevel": "required",
+                "validationType": "selected-ontology-term",
+                "constraints": {},
+                "defaultValue": null,
+                "allowedMissingOntologyTerms": [],
+                "allowedOtherSources": [
+                    {
+                        "sourceLabel": "MTBLS",
+                        "accessionPrefix": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_"
+                    }
+                ],
+                "allowedPlaceholders": [
+                    {
+                        "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/placeholder",
+                        "termSourceRef": "MTBLS"
+                    }
+                ],
+                "terms": [
+                    {
+                        "term": "Extraction",
+                        "termAccessionNumber": "",
+                        "termSourceRef": ""
+                    },
+                    {
+                        "term": "Capillary Electrophoresis",
+                        "termAccessionNumber": "",
+                        "termSourceRef": ""
+                    },
+                    {
+                        "term": "Mass spectrometry",
+                        "termAccessionNumber": "",
+                        "termSourceRef": ""
+                    },
+                    {
+                        "term": "Data transformation",
+                        "termAccessionNumber": "",
+                        "termSourceRef": ""
+                    },
+                    {
+                        "term": "Metabolite identification",
+                        "termAccessionNumber": "",
+                        "termSourceRef": ""
+                    }
+                ],
+                "unexpectedTerms": []
+            },
+            {
+                "ruleName": "Assay Protocol REF-04",
+                "fieldName": "Assay Protocol REF",
+                "ontologies": [],
+                "allowedParentOntologyTerms": null,
+                "description": "",
+                "selectionCriteria": {
+                    "isaFileType": "assay",
+                    "studyCreatedAtOrAfter": null,
+                    "studyCreatedBefore": null,
+                    "studyCategoryFilter": null,
+                    "templateVersionFilter": null,
+                    "isaFileTemplateNameFilter": [
+                        "FIA-MS"
+                    ],
+                    "linkedFieldAndValueFilter": null
+                },
+                "termEnforcementLevel": "required",
+                "unexpectedTermEnforcementLevel": "required",
+                "validationType": "selected-ontology-term",
+                "constraints": {},
+                "defaultValue": null,
+                "allowedMissingOntologyTerms": [],
+                "allowedOtherSources": [
+                    {
+                        "sourceLabel": "MTBLS",
+                        "accessionPrefix": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_"
+                    }
+                ],
+                "allowedPlaceholders": [
+                    {
+                        "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/placeholder",
+                        "termSourceRef": "MTBLS"
+                    }
+                ],
+                "terms": [
+                    {
+                        "term": "Extraction",
+                        "termAccessionNumber": "",
+                        "termSourceRef": ""
+                    },
+                    {
+                        "term": "Flow Injection Analysis",
+                        "termAccessionNumber": "",
+                        "termSourceRef": ""
+                    },
+                    {
+                        "term": "Mass spectrometry",
+                        "termAccessionNumber": "",
+                        "termSourceRef": ""
+                    },
+                    {
+                        "term": "Data transformation",
+                        "termAccessionNumber": "",
+                        "termSourceRef": ""
+                    },
+                    {
+                        "term": "Metabolite identification",
+                        "termAccessionNumber": "",
+                        "termSourceRef": ""
+                    }
+                ],
+                "unexpectedTerms": []
+            },
+            {
+                "ruleName": "Assay Protocol REF-05",
+                "fieldName": "Assay Protocol REF",
+                "ontologies": [],
+                "allowedParentOntologyTerms": null,
+                "description": "",
+                "selectionCriteria": {
+                    "isaFileType": "assay",
+                    "studyCreatedAtOrAfter": null,
+                    "studyCreatedBefore": null,
+                    "studyCategoryFilter": null,
+                    "templateVersionFilter": null,
+                    "isaFileTemplateNameFilter": [
+                        "MALDI-MS",
+                        "MS"
+                    ],
+                    "linkedFieldAndValueFilter": null
+                },
+                "termEnforcementLevel": "required",
+                "unexpectedTermEnforcementLevel": "required",
+                "validationType": "selected-ontology-term",
+                "constraints": {},
+                "defaultValue": null,
+                "allowedMissingOntologyTerms": [],
+                "allowedOtherSources": [
+                    {
+                        "sourceLabel": "MTBLS",
+                        "accessionPrefix": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_"
+                    }
+                ],
+                "allowedPlaceholders": [
+                    {
+                        "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/placeholder",
+                        "termSourceRef": "MTBLS"
+                    }
+                ],
+                "terms": [
+                    {
+                        "term": "Extraction",
+                        "termAccessionNumber": "",
+                        "termSourceRef": ""
+                    },
+                    {
+                        "term": "Mass spectrometry",
+                        "termAccessionNumber": "",
+                        "termSourceRef": ""
+                    },
+                    {
+                        "term": "Data transformation",
+                        "termAccessionNumber": "",
+                        "termSourceRef": ""
+                    },
+                    {
+                        "term": "Metabolite identification",
+                        "termAccessionNumber": "",
+                        "termSourceRef": ""
+                    }
+                ],
+                "unexpectedTerms": []
+            }
+        ],
         "Sample Name": [
             {
                 "ruleName": "Assay-Sample Name-01",
@@ -7351,6 +7671,54 @@
                     "_",
                     "."
                 ]
+            }
+        ],
+        "Protocol REF": [
+            {
+                "ruleName": "Sample Protocol REF-01",
+                "fieldName": "Sample Protocol REF",
+                "ontologies": [],
+                "allowedParentOntologyTerms": null,
+                "description": "",
+                "selectionCriteria": {
+                    "isaFileType": "sample",
+                    "studyCreatedAtOrAfter": null,
+                    "studyCreatedBefore": null,
+                    "studyCategoryFilter": null,
+                    "templateVersionFilter": null,
+                    "isaFileTemplateNameFilter": null,
+                    "linkedFieldAndValueFilter": null
+                },
+                "termEnforcementLevel": "required",
+                "unexpectedTermEnforcementLevel": "required",
+                "validationType": "selected-ontology-term",
+                "constraints": {},
+                "defaultValue": {
+                    "term": "Sample collection",
+                    "termAccessionNumber": "",
+                    "termSourceRef": ""
+                },
+                "allowedMissingOntologyTerms": [],
+                "allowedOtherSources": [
+                    {
+                        "sourceLabel": "MTBLS",
+                        "accessionPrefix": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_"
+                    }
+                ],
+                "allowedPlaceholders": [
+                    {
+                        "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/placeholder",
+                        "termSourceRef": "MTBLS"
+                    }
+                ],
+                "terms": [
+                    {
+                        "term": "Sample collection",
+                        "termAccessionNumber": "",
+                        "termSourceRef": ""
+                    }
+                ],
+                "unexpectedTerms": []
             }
         ],
         "Factor Value[Disease]": [

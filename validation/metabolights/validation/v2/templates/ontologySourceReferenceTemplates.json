@@ -38,7 +38,7 @@
         "AISM": {
             "sourceName": "AISM",
             "sourceFile": "http://purl.obolibrary.org/obo/aism.owl",
-            "sourceVersion": "2026-01-28",
+            "sourceVersion": "2026-02-14",
             "sourceDescription": "Ontology for the Anatomy of the Insect SkeletoMuscular system",
             "sourceDetails": "The ontology for the Anatomy of the Insect SkeletoMuscular system (AISM) contains terms used to describe the cuticle - as a single anatomical structure - and the skeletal muscle system, to be used in insect biodiversity research."
         },
@@ -458,7 +458,7 @@
         "EFO": {
             "sourceName": "EFO",
             "sourceFile": "http://www.ebi.ac.uk/efo/efo.owl",
-            "sourceVersion": "3.86.0",
+            "sourceVersion": "3.87.0",
             "sourceDescription": "Experimental Factor Ontology",
             "sourceDetails": "The Experimental Factor Ontology (EFO) provides a systematic description of many experimental variables available in EBI databases, and for projects such as the NHGRI-EBI GWAS catalog. It combines parts of several biological ontologies, such as UBERON anatomy, ChEBI chemical compounds, Cell Ontology and the Monarch Disease Ontology (MONDO). The scope of EFO is to support the annotation, analysis and visualization of data handled by many groups at the EBI and as the core ontology for Open Targets."
         },
@@ -752,7 +752,7 @@
         "HP": {
             "sourceName": "HP",
             "sourceFile": "http://purl.obolibrary.org/obo/hp/hp-international.owl",
-            "sourceVersion": "2026-01-08",
+            "sourceVersion": "2026-02-16",
             "sourceDescription": "Human Phenotype Ontology",
             "sourceDetails": "The Human Phenotype Ontology (HPO) provides a standardized vocabulary of phenotypic abnormalities and clinical features encountered in human disease."
         },

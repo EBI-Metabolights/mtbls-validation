@@ -9,5 +9,5 @@ Download file template as [zip file](../../../template-files/sample-file/minimum
 | Characteristics[Organism part] | ontology column | *Required*<br/>MinLength: 3<br/><br/>[Controls](../../../prioritised-control-lists/sample-file-control-lists/minimum/minimum-v1.0.md#characteristicsorganism-part){:target="_blank"} |  |  |
 | Characteristics[Variant] | ontology column |  |  |  |
 | Characteristics[Sample type] | ontology column | [Controls](../../../prioritised-control-lists/sample-file-control-lists/minimum/minimum-v1.0.md#characteristicssample-type){:target="_blank"} |  |  |
-| Protocol REF | single column | *Required*<br/>MinLength: 1<br/>Default: Sample collection |  |  |
+| Protocol REF | single column | *Required*<br/>MinLength: 1<br/>Default: Sample collection<br/><br/>[Controls](../../../prioritised-control-lists/sample-file-control-lists/minimum/minimum-v1.0.md#protocol-ref){:target="_blank"} |  |  |
 | Sample Name | single column | *Required*<br/>MinLength: 3<br/>MaxLength: 128<br/><br/>[Controls](../../../prioritised-control-lists/sample-file-control-lists/minimum/minimum-v1.0.md#sample-name){:target="_blank"} |  |  |
