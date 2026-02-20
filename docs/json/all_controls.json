@@ -10068,7 +10068,9 @@
                     "isaFileType": "investigation",
                     "studyCreatedAtOrAfter": null,
                     "studyCreatedBefore": null,
-                    "studyCategoryFilter": null,
+                    "studyCategoryFilter": [
+                        "other"
+                    ],
                     "templateVersionFilter": null,
                     "isaFileTemplateNameFilter": null,
                     "linkedFieldAndValueFilter": null
@@ -10101,6 +10103,50 @@
                         "term": "metabolite profiling assay",
                         "termAccessionNumber": "http://purl.obolibrary.org/obo/OBI_0000366",
                         "termSourceRef": "OBI"
+                    }
+                ],
+                "unexpectedTerms": []
+            },
+            {
+                "ruleName": "Study Assay Measurement Type-03",
+                "fieldName": "Study Assay Measurement Type",
+                "ontologies": [
+                    "MS"
+                ],
+                "allowedParentOntologyTerms": null,
+                "description": "",
+                "selectionCriteria": {
+                    "isaFileType": "investigation",
+                    "studyCreatedAtOrAfter": null,
+                    "studyCreatedBefore": null,
+                    "studyCategoryFilter": null,
+                    "templateVersionFilter": null,
+                    "isaFileTemplateNameFilter": null,
+                    "linkedFieldAndValueFilter": null
+                },
+                "termEnforcementLevel": "required",
+                "unexpectedTermEnforcementLevel": "not-applicable",
+                "validationType": "selected-ontology-term",
+                "constraints": {},
+                "defaultValue": null,
+                "allowedMissingOntologyTerms": [],
+                "allowedOtherSources": [],
+                "allowedPlaceholders": [],
+                "terms": [
+                    {
+                        "term": "untargeted analysis",
+                        "termAccessionNumber": "http://purl.obolibrary.org/obo/MS_1003904",
+                        "termSourceRef": "MS"
+                    },
+                    {
+                        "term": "targeted analysis",
+                        "termAccessionNumber": "http://purl.obolibrary.org/obo/MS_1003905",
+                        "termSourceRef": "MS"
+                    },
+                    {
+                        "term": "semi-targeted analysis",
+                        "termAccessionNumber": "http://purl.obolibrary.org/obo/MS_1003906",
+                        "termSourceRef": "MS"
                     }
                 ],
                 "unexpectedTerms": []
