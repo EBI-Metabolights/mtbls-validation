@@ -9746,7 +9746,7 @@
                     "studyCategoryFilter": null,
                     "templateVersionFilter": null,
                     "isaFileTemplateNameFilter": [
-                        "MS",
+                        "LC-MS",
                         "GC-MS",
                         "GCxGC-MS",
                         "MALDI-MS",
