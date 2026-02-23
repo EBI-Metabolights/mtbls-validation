@@ -7476,6 +7476,40 @@
                 "unexpectedTerms": []
             }
         ],
+        "Characteristics[Collection date]": [
+            {
+                "ruleName": "Characteristics[Collection date]-01",
+                "fieldName": "Characteristics[Collection date]",
+                "ontologies": [],
+                "allowedParentOntologyTerms": null,
+                "description": "",
+                "selectionCriteria": {
+                    "isaFileType": "sample",
+                    "studyCreatedAtOrAfter": null,
+                    "studyCreatedBefore": null,
+                    "studyCategoryFilter": null,
+                    "templateVersionFilter": null,
+                    "isaFileTemplateNameFilter": null,
+                    "linkedFieldAndValueFilter": null
+                },
+                "termEnforcementLevel": "not-applicable",
+                "unexpectedTermEnforcementLevel": "required",
+                "validationType": "check-only-constraints",
+                "constraints": {
+                    "pattern": {
+                        "constraint": "^[0-9]{4}[0-9]{4}-$",
+                        "errorMessage": "Value must be YYYY-mm-dd format",
+                        "enforcementLevel": "recommended"
+                    }
+                },
+                "defaultValue": null,
+                "allowedMissingOntologyTerms": [],
+                "allowedOtherSources": [],
+                "allowedPlaceholders": [],
+                "terms": [],
+                "unexpectedTerms": []
+            }
+        ],
         "Characteristics[Cell type]": [
             {
                 "ruleName": "Characteristics[Cell type]-01",

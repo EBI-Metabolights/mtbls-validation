@@ -1,7 +1,7 @@
 {
     "rules": {
         "validation_version": "2.2.0",
-        "created_at": "2026-02-05T08:37:27.785718+00:00",
+        "created_at": "2026-02-23T14:37:00.528836+00:00",
         "violations": [
             {
                 "rule_id": "rule___100_100_001_01",
@@ -910,7 +910,7 @@
             {
                 "rule_id": "rule_i_100_300_004_03",
                 "title": "Unexpected characters in Study Description.",
-                "description": "Study title should contain only printable characters.",
+                "description": "Study description should contain only printable characters.",
                 "type": "ERROR",
                 "section": "investigation",
                 "priority": "HIGH"
@@ -1271,6 +1271,14 @@
                 "rule_id": "rule_i_100_350_002_01",
                 "title": "Study Protocol Name length less than 3 characters.",
                 "description": "Study Protocol Name should be defined with length equal or greater than 3 characters.",
+                "type": "ERROR",
+                "section": "investigation",
+                "priority": "HIGH"
+            },
+            {
+                "rule_id": "rule_i_100_350_002_02",
+                "title": "Study Protocol Name must be unique.",
+                "description": "Study Protocol Name must be unique for each study in i_Investigation.txt.",
                 "type": "ERROR",
                 "section": "investigation",
                 "priority": "HIGH"

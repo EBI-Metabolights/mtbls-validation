@@ -18,7 +18,7 @@
 | 14 | rule\_i\_100\_300\_003\_03 | ERROR | Study Title contains only template message\. | Study title should be updated\. Do not use template message 'Please update the study title'\. |
 | 15 | rule\_i\_100\_300\_004\_01 | ERROR | Study Description length less than 60 characters\. | Study Description should be defined with length equal or greater than 60 characters\. Please use abstract of first publication\. |
 | 16 | rule\_i\_100\_300\_004\_02 | ERROR | Study abstract/description contains only template message\. | Study abstract/description should be updated\. Do not use template message 'Please update the study abstract/description'\. |
-| 17 | rule\_i\_100\_300\_004\_03 | ERROR | Unexpected characters in Study Description\. | Study title should contain only printable characters\. |
+| 17 | rule\_i\_100\_300\_004\_03 | ERROR | Unexpected characters in Study Description\. | Study description should contain only printable characters\. |
 | 18 | rule\_i\_100\_300\_005\_01 | WARNING | Study Submission Date not valid\. | Study Submission Date should be valid date and ISO8601 format \(e\.g\., 2023\-01\-01\)\. |
 | 19 | rule\_i\_100\_300\_006\_01 | WARNING | Study Public Release Date not valid\. | Study Public Release Date should be valid date and ISO8601 format \(e\.g\., 2023\-01\-01\)\. |
 | 20 | rule\_i\_100\_310\_001\_01 | ERROR | There are less than 3 Study Design Descriptors in the Study Design Descriptors section of investigation file\. | At least 3 study design descriptors should be defined\. |
@@ -64,30 +64,31 @@
 | 60 | rule\_i\_100\_350\_001\_01 | ERROR | No study protocols referenced in investigation file\. | At least one study protocols should be defined in i\_Investigation\.txt\. |
 | 61 | rule\_i\_100\_350\_001\_02 | ERROR | A study protocol is missing in investigation file\. | All study protocols should be defined considering assay technologies used in study\. |
 | 62 | rule\_i\_100\_350\_002\_01 | ERROR | Study Protocol Name length less than 3 characters\. | Study Protocol Name should be defined with length equal or greater than 3 characters\. |
-| 63 | rule\_i\_100\_350\_003\_01 | ERROR | Study Protocol Description length less than 40 characters\. | Study Protocol Description should be defined with length equal or greater than 40 characters\. |
-| 64 | rule\_i\_100\_350\_003\_02 | ERROR | Non\-printable characters in Study Protocol Description\. | Study Protocol Description should contain only printable characters\. |
-| 65 | rule\_i\_100\_350\_003\_03 | ERROR | Study Protocol Description contains only template message\. | Study Protocol Description should be updated\. Do not use template message\. |
-| 66 | rule\_i\_100\_350\_004\_01 | WARNING | Study Protocol Type length less than 3 characters\. | Study Protocol Type should be defined with length equal or greater than 3 characters\. |
-| 67 | rule\_i\_100\_350\_007\_01 | ERROR | Study protocol parameter is missing for a study protocol\. | All default study protocol parameters should be defined for study protocol\. |
-| 68 | rule\_i\_100\_350\_008\_01 | ERROR | Study Protocol Parameters Name length less than 3 characters\. | Study protocol parameters name should be defined with length equal or greater than 3 characters\. |
-| 69 | rule\_i\_100\_360\_001\_01 | ERROR | No study contacts referenced in investigation file\. | At least one study contacts should be defined in i\_Investigation\.txt\. |
-| 70 | rule\_i\_100\_360\_002\_01 | ERROR | Study Person First Name length less than 2 characters\. | Study Person First Name should be defined with length equal or greater than 2 characters\. |
-| 71 | rule\_i\_100\_360\_003\_01 | ERROR | Study Person Last Name length less than 2 characters\. | Study Person Last Name should be defined with length equal or greater than 2 characters\. |
-| 72 | rule\_i\_100\_360\_004\_01 | ERROR | Study contacts have no email address\. | At least one study contact must have an email address\. |
-| 73 | rule\_i\_100\_360\_004\_02 | ERROR | Study Person Email not valid\. | Study Person Email must have valid format\. |
-| 74 | rule\_i\_100\_360\_006\_01 | ERROR | Study Person affiliation length is less than 10 characters\. | Define full name of contact's primary affiliation\. e\.g\. European Bioinformatics Institute |
-| 75 | rule\_i\_100\_360\_007\_01 | ERROR | Study Person Roles is empty\. | At least one role should be defined for a study contact\. |
-| 76 | rule\_i\_100\_360\_008\_01 | WARNING | Study Person Role value is empty\. | Study Person Role should be defined\. |
-| 77 | rule\_i\_100\_360\_008\_11 | ERROR | Value is not in the required ontologies or controlled lists associated with this field\. | A term MUST be selected from the required ontologies or controlled lists associated with this field\. |
-| 78 | rule\_i\_100\_360\_008\_12 | WARNING | Value is not in the predefined ontologies or controlled lists associated with this field\. | A term SHOULD be selected from the predefined ontologies or controlled lists associated with this field\. |
-| 79 | rule\_i\_100\_360\_008\_13 | WARNING | Value is not in the default ontologies or controlled lists | A term SHOULD be selected from the default ontologies or controlled lists\. |
-| 80 | rule\_i\_100\_360\_008\_14 | WARNING | Study Person Roles Term Source REF not referenced in investigation file\. | Study Person Roles Term Source REFs should be referenced in the ONTOLOGY SOURCE REFERENCE section in i\_Investigation\.txt\. |
-| 81 | rule\_i\_100\_360\_010\_03 | WARNING | Study Person Roles Term Source REF is empty\. | Study Person Roles Term Source REF should be defined\. |
-| 82 | rule\_i\_100\_360\_011\_01 | ERROR | There is no study contact with Principal Investigator role\. | At least one study contact must have Principal Investigator role\. |
-| 83 | rule\_i\_100\_360\_011\_02 | ERROR | Principal Investigator contact details not defined\. | Principal Investigator first name, last name, affiliation, and email must be defined\. |
-| 84 | rule\_i\_100\_360\_011\_03 | ERROR | Study Person Affiliation ROR ID is not valid\. | Study Person ROR ID must have valid format\. e\.g\., https://ror\.org/02catss52 \. If your affiliation ROR ID is not defined, you may provide wikidata URL of your primary affiliation\. e\.g\., https://www\.wikidata\.org/wiki/Q1341845 |
-| 85 | rule\_i\_100\_360\_011\_04 | ERROR | Study Person ORCID is not valid\. | Study Person ORCID must have valid format\. |
-| 86 | rule\_i\_100\_360\_011\_05 | ERROR | Study Person Additional Email Address is not valid\. | Study Person Additional Email Address must have valid format\. |
-| 87 | rule\_i\_100\_360\_011\_06 | WARNING | Study Person ORCID is not defined for principal investigator\. | Study Person ORCID is not defined for principal investigator\. |
-| 88 | rule\_i\_100\_360\_011\_07 | WARNING | Study Person Affiliation ROR ID is not defined for principal investigator\. | Study Person Affiliation ROR ID is not defined for principal investigator\. |
-| 89 | rule\_i\_200\_900\_001\_01 | WARNING | Ontology terms are not validated on ontology search service \(e\.g\. OLS\)\. | Ensure ontology terms are valid and accessible on ontology search service\. |
+| 63 | rule\_i\_100\_350\_002\_02 | ERROR | Study Protocol Name must be unique\. | Study Protocol Name must be unique for each study in i\_Investigation\.txt\. |
+| 64 | rule\_i\_100\_350\_003\_01 | ERROR | Study Protocol Description length less than 40 characters\. | Study Protocol Description should be defined with length equal or greater than 40 characters\. |
+| 65 | rule\_i\_100\_350\_003\_02 | ERROR | Non\-printable characters in Study Protocol Description\. | Study Protocol Description should contain only printable characters\. |
+| 66 | rule\_i\_100\_350\_003\_03 | ERROR | Study Protocol Description contains only template message\. | Study Protocol Description should be updated\. Do not use template message\. |
+| 67 | rule\_i\_100\_350\_004\_01 | WARNING | Study Protocol Type length less than 3 characters\. | Study Protocol Type should be defined with length equal or greater than 3 characters\. |
+| 68 | rule\_i\_100\_350\_007\_01 | ERROR | Study protocol parameter is missing for a study protocol\. | All default study protocol parameters should be defined for study protocol\. |
+| 69 | rule\_i\_100\_350\_008\_01 | ERROR | Study Protocol Parameters Name length less than 3 characters\. | Study protocol parameters name should be defined with length equal or greater than 3 characters\. |
+| 70 | rule\_i\_100\_360\_001\_01 | ERROR | No study contacts referenced in investigation file\. | At least one study contacts should be defined in i\_Investigation\.txt\. |
+| 71 | rule\_i\_100\_360\_002\_01 | ERROR | Study Person First Name length less than 2 characters\. | Study Person First Name should be defined with length equal or greater than 2 characters\. |
+| 72 | rule\_i\_100\_360\_003\_01 | ERROR | Study Person Last Name length less than 2 characters\. | Study Person Last Name should be defined with length equal or greater than 2 characters\. |
+| 73 | rule\_i\_100\_360\_004\_01 | ERROR | Study contacts have no email address\. | At least one study contact must have an email address\. |
+| 74 | rule\_i\_100\_360\_004\_02 | ERROR | Study Person Email not valid\. | Study Person Email must have valid format\. |
+| 75 | rule\_i\_100\_360\_006\_01 | ERROR | Study Person affiliation length is less than 10 characters\. | Define full name of contact's primary affiliation\. e\.g\. European Bioinformatics Institute |
+| 76 | rule\_i\_100\_360\_007\_01 | ERROR | Study Person Roles is empty\. | At least one role should be defined for a study contact\. |
+| 77 | rule\_i\_100\_360\_008\_01 | WARNING | Study Person Role value is empty\. | Study Person Role should be defined\. |
+| 78 | rule\_i\_100\_360\_008\_11 | ERROR | Value is not in the required ontologies or controlled lists associated with this field\. | A term MUST be selected from the required ontologies or controlled lists associated with this field\. |
+| 79 | rule\_i\_100\_360\_008\_12 | WARNING | Value is not in the predefined ontologies or controlled lists associated with this field\. | A term SHOULD be selected from the predefined ontologies or controlled lists associated with this field\. |
+| 80 | rule\_i\_100\_360\_008\_13 | WARNING | Value is not in the default ontologies or controlled lists | A term SHOULD be selected from the default ontologies or controlled lists\. |
+| 81 | rule\_i\_100\_360\_008\_14 | WARNING | Study Person Roles Term Source REF not referenced in investigation file\. | Study Person Roles Term Source REFs should be referenced in the ONTOLOGY SOURCE REFERENCE section in i\_Investigation\.txt\. |
+| 82 | rule\_i\_100\_360\_010\_03 | WARNING | Study Person Roles Term Source REF is empty\. | Study Person Roles Term Source REF should be defined\. |
+| 83 | rule\_i\_100\_360\_011\_01 | ERROR | There is no study contact with Principal Investigator role\. | At least one study contact must have Principal Investigator role\. |
+| 84 | rule\_i\_100\_360\_011\_02 | ERROR | Principal Investigator contact details not defined\. | Principal Investigator first name, last name, affiliation, and email must be defined\. |
+| 85 | rule\_i\_100\_360\_011\_03 | ERROR | Study Person Affiliation ROR ID is not valid\. | Study Person ROR ID must have valid format\. e\.g\., https://ror\.org/02catss52 \. If your affiliation ROR ID is not defined, you may provide wikidata URL of your primary affiliation\. e\.g\., https://www\.wikidata\.org/wiki/Q1341845 |
+| 86 | rule\_i\_100\_360\_011\_04 | ERROR | Study Person ORCID is not valid\. | Study Person ORCID must have valid format\. |
+| 87 | rule\_i\_100\_360\_011\_05 | ERROR | Study Person Additional Email Address is not valid\. | Study Person Additional Email Address must have valid format\. |
+| 88 | rule\_i\_100\_360\_011\_06 | WARNING | Study Person ORCID is not defined for principal investigator\. | Study Person ORCID is not defined for principal investigator\. |
+| 89 | rule\_i\_100\_360\_011\_07 | WARNING | Study Person Affiliation ROR ID is not defined for principal investigator\. | Study Person Affiliation ROR ID is not defined for principal investigator\. |
+| 90 | rule\_i\_200\_900\_001\_01 | WARNING | Ontology terms are not validated on ontology search service \(e\.g\. OLS\)\. | Ensure ontology terms are valid and accessible on ontology search service\. |
