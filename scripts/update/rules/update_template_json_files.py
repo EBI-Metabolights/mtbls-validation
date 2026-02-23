@@ -148,9 +148,11 @@ def update_template_json_files():
     schema = OntologySourceReferences.model_json_schema(by_alias=True)
     json_file = "validation/metabolights/validation/v2/templates/ontologySourceReferenceTemplates.json"
     file = Path(json_file)
-    file_content: dict[str, Any] = json.loads(file.read_text())
-    jsonschema.validate(file_content, schema)
-
+    try:
+        file_content: dict[str, Any] = json.loads(file.read_text())
+        jsonschema.validate(file_content, schema)
+    except Exception as ex:
+        raise Exception(f"{file} is not valid") from ex
     refs = OntologySourceReferences.model_validate(file_content, by_alias=True)
     ols_ontologies = fetch_ols_ontologies()
     if ols_ontologies:

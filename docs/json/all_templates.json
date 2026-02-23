@@ -19438,7 +19438,7 @@
         "ECTO": {
             "sourceName": "ECTO",
             "sourceFile": "http://purl.obolibrary.org/obo/ecto.owl",
-            "sourceVersion": "2023-02-14",
+            "sourceVersion": "2026-02-17",
             "sourceDescription": "Environment Exposure Ontology",
             "sourceDetails": "ECTO describes exposures to experimental treatments of plants and model organisms (e.g. exposures to modification of diet, lighting levels, temperature); exposures of humans or any other organisms to stressors through a variety of routes, for purposes of public health, environmental monitoring etc, stimuli, natural and experimental, any kind of environmental condition or change in condition that can be experienced by an organism or population of organisms on earth. The scope is very general and can include for example plant treatment regimens, as well as human clinical exposures (although these may better be handled by a more specialized ontology)."
         },
@@ -20012,7 +20012,7 @@
         "MP": {
             "sourceName": "MP",
             "sourceFile": "http://purl.obolibrary.org/obo/mp/mp-international.owl",
-            "sourceVersion": "2026-01-27",
+            "sourceVersion": "2026-02-17",
             "sourceDescription": "The Mammalian Phenotype Ontology",
             "sourceDetails": "The Mammalian Phenotype Ontology is being developed by Cynthia L. Smith, Susan M. Bello, Anna V. Anagnostopoulos, Carroll W. Goldsmith and Janan T. Eppig, as part of the Mouse Genome Database (MGD) Project, Mouse Genome Informatics (MGI), The Jackson Laboratory, Bar Harbor, ME. This file contains pre-coordinated phenotype terms, definitions and synonyms that can be used to describe mammalian phenotypes. The ontology is represented as a directed acyclic graph (DAG). It organizes phenotype terms into major biological system headers such as nervous system and respiratory system.  This ontology is currently under development. Weekly updates are available at the Mouse Genome Informatics (MGI) ftp site (ftp://ftp.informatics.jax.org/pub/reports/index.html#pheno) as well as the OBO Foundry site (http://obofoundry.org/). Japanese labels of MP were created by the MP Japanese Translation Project (https://github.com/dbcls/MP_Japanese). Questions, comments and suggestions are welcome, and should be directed to pheno@jax.org, Susan.Bello@jax.org or to GitHub tracker (https://github.com/mgijax/mammalian-phenotype-ontology/issues) MGD is funded by NIH/NHGRI grant HG000330."
         },
@@ -20264,7 +20264,7 @@
         "ONS": {
             "sourceName": "ONS",
             "sourceFile": "http://purl.obolibrary.org/obo/ons.owl",
-            "sourceVersion": "2024-07-03",
+            "sourceVersion": "2026-02-06",
             "sourceDescription": "Ontology for Nutritional Studies",
             "sourceDetails": "An ontology for description of concepts in the nutritional studies domain."
         },
@@ -20351,6 +20351,13 @@
             "sourceVersion": "2025-05-14",
             "sourceDescription": "PATO - the Phenotype And Trait Ontology",
             "sourceDetails": "An ontology of phenotypic qualities (properties, attributes or characteristics)."
+        },
+        "PBPKO": {
+            "sourceName": "PBPKO",
+            "sourceFile": "http://purl.obolibrary.org/obo/pbpko.owl",
+            "sourceVersion": "1.3.0",
+            "sourceDescription": "Physiologically-Based Pharmacokinetic Ontology",
+            "sourceDetails": "An ontology for modeling and understanding of pharmacokinetics in biological systems."
         },
         "PCL": {
             "sourceName": "PCL",
@@ -20824,7 +20831,7 @@
         "VT": {
             "sourceName": "VT",
             "sourceFile": "http://purl.obolibrary.org/obo/vt.owl",
-            "sourceVersion": "2026-02-03",
+            "sourceVersion": "2026-02-17",
             "sourceDescription": "The Vertebrate Trait Ontology",
             "sourceDetails": "The Vertebrate Trait Ontology is a controlled vocabulary for the description of traits (measurable or observable characteristics) pertaining to the morphology, physiology, or development of vertebrate organisms."
         },
@@ -20936,7 +20943,7 @@
         "hgnc": {
             "sourceName": "hgnc",
             "sourceFile": "https://w3id.org/biopragmatics/resources/hgnc/hgnc.owl.gz",
-            "sourceVersion": "2026-01-06",
+            "sourceVersion": "2026-02-06",
             "sourceDescription": "HUGO Gene Nomenclature Committee",
             "sourceDetails": "The HGNC (HUGO Gene Nomenclature Committee) provides an approved gene name and symbol (short-form abbreviation) for each known human gene.  All approved symbols are stored in the HGNC database, and each symbol is unique. HGNC identifiers refer to records in the HGNC symbol database."
         },

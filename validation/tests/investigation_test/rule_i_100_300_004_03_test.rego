@@ -9,7 +9,7 @@ import rego.v1
 
 # METADATA
 # title: Unexpected characters in Study Description.
-# description: Study title should contain only printable characters.
+# description: Study description should contain only printable characters.
 # custom:
 #  rule_id: rule_i_100_300_004_03
 #  type: ERROR

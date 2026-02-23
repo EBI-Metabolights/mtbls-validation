@@ -349,7 +349,7 @@ rule_i_100_300_004_02 contains result if {
 
 # METADATA
 # title: Unexpected characters in Study Description.
-# description: Study title should contain only printable characters.
+# description: Study description should contain only printable characters.
 # custom:
 #  rule_id: rule_i_100_300_004_03
 #  type: ERROR
@@ -1551,6 +1551,44 @@ rule_i_100_350_002_01 contains result if {
 	some i, j
 	count(input.investigation.studies[i].studyProtocols.protocols[j].name) < min_count
 	msg := sprintf("Study protocol name is too short for the study %v. Min length: %v, Index: %v Current value: '%v'", [input.investigation.studies[i].identifier, min_count, j + 1, input.investigation.studies[i].studyProtocols.protocols[j].name])
+	source := input.investigationFilePath
+	result := f.format(rego.metadata.rule(), msg, source)
+}
+
+# METADATA
+# title: Study Protocol Name must be unique.
+# description: Study Protocol Name must be unique for each study in i_Investigation.txt.
+# custom:
+#  rule_id: rule_i_100_350_002_02
+#  type: ERROR
+#  priority: HIGH
+#  section: investigation.studyProtocols
+rule_i_100_350_002_02 contains result if {
+	some i
+	study := input.investigation.studies[i]
+	protocol_names := [protocol.name |
+		some protocol in study.studyProtocols.protocols
+	]
+	unique_values := {protocol.name |
+		some protocol in study.studyProtocols.protocols
+	}
+	count(protocol_names) > count(unique_values)
+
+	duplicates := {p |
+		some idx, p in protocol_names
+		uniques := {x |
+			some j, x in protocol_names
+			idx != j
+			x == p
+		}
+		count(uniques) > 0
+	}
+	count(duplicates) > 0
+
+	msg := sprintf(
+		"Study Protocol Name must be unique for study: %v. Found duplicates: %v",
+		[study.identifier, duplicates],
+	)
 	source := input.investigationFilePath
 	result := f.format(rego.metadata.rule(), msg, source)
 }
