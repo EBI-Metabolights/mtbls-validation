@@ -4,8 +4,7 @@
             "ruleName": "Parameter Value[Column model]-01",
             "fieldName": "Parameter Value[Column model]",
             "ontologies": [
-                "MS",
-                "MTBLS"
+                "MS"
             ],
             "allowedParentOntologyTerms": null,
             "description": "",
@@ -1414,8 +1413,7 @@
             "ruleName": "Parameter Value[Column model]-02",
             "fieldName": "Parameter Value[Column model]",
             "ontologies": [
-                "MS",
-                "MTBLS"
+                "MS"
             ],
             "allowedParentOntologyTerms": null,
             "description": "",

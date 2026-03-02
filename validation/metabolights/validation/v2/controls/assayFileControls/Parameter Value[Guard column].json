@@ -4,8 +4,7 @@
             "ruleName": "Parameter Value[Guard column]-01",
             "fieldName": "Parameter Value[Guard column]",
             "ontologies": [
-                "MS",
-                "MTBLS"
+                "MS"
             ],
             "allowedParentOntologyTerms": null,
             "description": "",
@@ -294,8 +293,7 @@
             "ruleName": "Parameter Value[Guard column]-02",
             "fieldName": "Parameter Value[Guard column]",
             "ontologies": [
-                "MS",
-                "MTBLS"
+                "MS"
             ],
             "allowedParentOntologyTerms": null,
             "description": "",

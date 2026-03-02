@@ -4,8 +4,7 @@
             "ruleName": "Parameter Value[Chromatography Instrument]-01",
             "fieldName": "Parameter Value[Chromatography Instrument]",
             "ontologies": [
-                "MS",
-                "MTBLS"
+                "MS"
             ],
             "allowedParentOntologyTerms": null,
             "description": "",
@@ -449,8 +448,7 @@
             "ruleName": "Parameter Value[Chromatography Instrument]-02",
             "fieldName": "Parameter Value[Chromatography Instrument]",
             "ontologies": [
-                "MS",
-                "MTBLS"
+                "MS"
             ],
             "allowedParentOntologyTerms": null,
             "description": "",
