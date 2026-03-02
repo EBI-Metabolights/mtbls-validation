@@ -1,6 +1,6 @@
 {
     "validation_version": "2.2.0",
-    "created_at": "2026-03-02T13:41:26.630514+00:00",
+    "created_at": "2026-03-02T14:33:25.354731+00:00",
     "violations": [
         {
             "rule_id": "rule___100_100_001_01",
@@ -673,14 +673,6 @@
             "type": "ERROR",
             "section": "assays",
             "priority": "HIGH"
-        },
-        {
-            "rule_id": "rule_a_200_600_001_01",
-            "title": "Column Type column values are not same as assay file name.",
-            "description": "if all values in Column Type are in a control list, technique name defined in control list should be in assay file name.",
-            "type": "WARNING",
-            "section": "assays",
-            "priority": "CRITICAL"
         },
         {
             "rule_id": "rule_a_200_900_001_01",
