@@ -1010,36 +1010,36 @@ rule_a_200_500_001_01 contains result if {
 	result := f.format_with_desc(rego.metadata.rule(), file_name, column_index + 1, header.columnHeader, values, "Expected extensions", def.CL_DERIVED_FILE_EXTENSIONS_STR)
 }
 
-# METADATA
-# title: Column Type column values are not same as assay file name.
-# description: if all values in Column Type are in a control list, technique name defined in control list should be in assay file name.
-# custom:
-#  rule_id: rule_a_200_600_001_01
-#  type: WARNING
-#  priority: CRITICAL
-#  section: assays.chromatography
-rule_a_200_600_001_01 contains result if {
-	some file_name, sheet in input.assays
-	some header_index, header in sheet.table.headers
-	header.columnHeader == "Parameter Value[Column type]"
-	column_name := header.columnName
-	column_types = {x |
-		some x in sheet.table.data[column_name]
-	}
+# # METADATA
+# # title: Column Type column values are not same as assay file name.
+# # description: if all values in Column Type are in a control list, technique name defined in control list should be in assay file name.
+# # custom:
+# #  rule_id: rule_a_200_600_001_01
+# #  type: WARNING
+# #  priority: CRITICAL
+# #  section: assays.chromatography
+# rule_a_200_600_001_01 contains result if {
+# 	some file_name, sheet in input.assays
+# 	some header_index, header in sheet.table.headers
+# 	header.columnHeader == "Parameter Value[Column type]"
+# 	column_name := header.columnName
+# 	column_types = {x |
+# 		some x in sheet.table.data[column_name]
+# 	}
 
-	count(column_types) == 1
-	some column_type_name in column_types
-	count(column_type_name) > 0
-	column_type_label := replace(lower(column_type_name), " ", "-")
-	matches := {x |
-		some x in {"hilic", "reverse-phase", "normal-phase"}
-		column_type_label == x
-		contains(file_name, x)
-	}
-	count(matches) == 0
-	desc := sprintf("column type in filename does not match with the value '%v' in column Parameter Value[Column type]", [column_type_label])
-	result := f.format_with_file_description_and_values(rego.metadata.rule(), file_name, desc, column_types)
-}
+# 	count(column_types) == 1
+# 	some column_type_name in column_types
+# 	count(column_type_name) > 0
+# 	column_type_label := replace(lower(column_type_name), " ", "-")
+# 	matches := {x |
+# 		some x in {"hilic", "reverse-phase", "normal-phase"}
+# 		column_type_label == x
+# 		contains(file_name, x)
+# 	}
+# 	count(matches) == 0
+# 	desc := sprintf("column type in filename does not match with the value '%v' in column Parameter Value[Column type]", [column_type_label])
+# 	result := f.format_with_file_description_and_values(rego.metadata.rule(), file_name, desc, column_types)
+# }
 
 # METADATA
 # title: Ontology terms are not validated on ontology search service (e.g. OLS).
