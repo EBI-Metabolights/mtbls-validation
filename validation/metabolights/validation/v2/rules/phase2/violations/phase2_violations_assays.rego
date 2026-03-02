@@ -862,34 +862,34 @@ rule_a_200_300_002_01 contains result if {
 	result := f.format_with_values(rego.metadata.rule(), file_name, header.columnIndex + 1, header.columnHeader, [msg])
 }
 
-# METADATA
-# title: Scan Polarity column values are not same as assay file name.
-# description: Values for Scan Polarity column is not same as assay file name.
-# custom:
-#  rule_id: rule_a_200_300_003_01
-#  type: WARNING
-#  priority: CRITICAL
-#  section: assays.mass_spectrometry
-rule_a_200_300_003_01 contains result if {
-	some file_name, sheet in input.assays
-	some header_index, header in sheet.table.headers
-	header.columnHeader == "Parameter Value[Scan polarity]"
-	column_name := header.columnName
-	scan_polarities = {x |
-		some x in sheet.table.data[column_name]
-	}
+# # METADATA
+# # title: Scan Polarity column values are not same as assay file name.
+# # description: Values for Scan Polarity column is not same as assay file name.
+# # custom:
+# #  rule_id: rule_a_200_300_003_01
+# #  type: WARNING
+# #  priority: CRITICAL
+# #  section: assays.mass_spectrometry
+# rule_a_200_300_003_01 contains result if {
+# 	some file_name, sheet in input.assays
+# 	some header_index, header in sheet.table.headers
+# 	header.columnHeader == "Parameter Value[Scan polarity]"
+# 	column_name := header.columnName
+# 	scan_polarities = {x |
+# 		some x in sheet.table.data[column_name]
+# 	}
 
-	count(scan_polarities) == 1
-	some scan_polarity in scan_polarities
-	matches := {x |
-		some x in {"positive", "negative", "alternating"}
-		startswith(scan_polarity, x)
-		contains(file_name, x)
-	}
-	count(matches) == 0
-	desc := sprintf("Assay scan polarity values are '%v' but it does not match with assay filename", [scan_polarity])
-	result := f.format_with_file_description_and_values(rego.metadata.rule(), file_name, desc, scan_polarities)
-}
+# 	count(scan_polarities) == 1
+# 	some scan_polarity in scan_polarities
+# 	matches := {x |
+# 		some x in {"positive", "negative", "alternating"}
+# 		startswith(scan_polarity, x)
+# 		contains(file_name, x)
+# 	}
+# 	count(matches) == 0
+# 	desc := sprintf("Assay scan polarity values are '%v' but it does not match with assay filename", [scan_polarity])
+# 	result := f.format_with_file_description_and_values(rego.metadata.rule(), file_name, desc, scan_polarities)
+# }
 
 # METADATA
 # title: Scan Polarity column values are not unique.

@@ -4,8 +4,7 @@
             "ruleName": "Parameter Value[Autosampler model]-01",
             "fieldName": "Parameter Value[Autosampler model]",
             "ontologies": [
-                "MS",
-                "MTBLS"
+                "MS"
             ],
             "allowedParentOntologyTerms": null,
             "description": "",
@@ -214,8 +213,7 @@
             "ruleName": "Parameter Value[Autosampler model]-02",
             "fieldName": "Parameter Value[Autosampler model]",
             "ontologies": [
-                "MS",
-                "MTBLS"
+                "MS"
             ],
             "allowedParentOntologyTerms": null,
             "description": "",
@@ -226,7 +224,8 @@
                 "studyCategoryFilter": null,
                 "templateVersionFilter": null,
                 "isaFileTemplateNameFilter": [
-                    "GC-MS"
+                    "GC-MS",
+                    "GCxGC-MS"
                 ],
                 "linkedFieldAndValueFilter": null
             },

@@ -182,8 +182,7 @@
             "ruleName": "Parameter Value[Column type]-03",
             "fieldName": "Parameter Value[Column type]",
             "ontologies": [
-                "MS",
-                "MTBLS"
+                "MS"
             ],
             "allowedParentOntologyTerms": null,
             "description": "",
@@ -247,8 +246,7 @@
             "ruleName": "Parameter Value[Column type]-04",
             "fieldName": "Parameter Value[Column type]",
             "ontologies": [
-                "MS",
-                "MTBLS"
+                "MS"
             ],
             "allowedParentOntologyTerms": null,
             "description": "",
