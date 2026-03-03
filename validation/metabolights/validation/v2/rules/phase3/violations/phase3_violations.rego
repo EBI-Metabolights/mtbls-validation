@@ -157,7 +157,7 @@ rule_m_300_100_001_02 contains result if {
 	header.columnHeader == "retention_time"
 	assays := {assay |
 		some assay_name, assay in input.assays
-		assay.assayTechnique.name in {"LC-MS", "GC-MS"}
+		assay.assayTechnique.name in {"LC-MS", "GC-MS", "GCxGC-MS"}
 		file_name in assay.referencedAssignmentFiles
 	}
 	count(assays) > 0
