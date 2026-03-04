@@ -21677,7 +21677,7 @@
             "other": {
                 "index": 0,
                 "name": "other",
-                "label": "Other",
+                "label": "MTBLS",
                 "description": "MS study"
             },
             "ms-mhd-enabled": {
@@ -21689,7 +21689,7 @@
             "ms-mhd-legacy": {
                 "index": 2,
                 "name": "ms-mhd-legacy",
-                "label": "MS",
+                "label": "MS (MTBLS)",
                 "description": "MS study shared with MetabolomicsHub legacy profile"
             },
             "ms-other": {
@@ -21772,8 +21772,10 @@
                                 "label": "Chromatography Protocol",
                                 "fields": [
                                     "Chromatography Instrument",
+                                    "Autosampler model",
                                     "Column model",
-                                    "Column type"
+                                    "Column type",
+                                    "Guard column"
                                 ]
                             },
                             "Mass spectrometry": {
@@ -21804,8 +21806,10 @@
                                 "label": "Chromatography Protocol",
                                 "fields": [
                                     "Chromatography Instrument",
+                                    "Autosampler model",
                                     "Column model",
-                                    "Column type"
+                                    "Column type",
+                                    "Guard column"
                                 ]
                             },
                             "Mass spectrometry": {
@@ -21836,10 +21840,12 @@
                                 "label": "Chromatography Protocol",
                                 "fields": [
                                     "Chromatography Instrument",
+                                    "Autosampler model",
                                     "Column model 1",
                                     "Column type 1",
                                     "Column model 2",
-                                    "Column type 2"
+                                    "Column type 2",
+                                    "Guard column"
                                 ]
                             },
                             "Mass spectrometry": {
@@ -22127,8 +22133,10 @@
                                 "label": "Chromatography Protocol",
                                 "fields": [
                                     "Chromatography Instrument",
+                                    "Autosampler model",
                                     "Column model",
                                     "Column type",
+                                    "Guard column",
                                     "Detector",
                                     "Signal range",
                                     "Resolution"
@@ -22151,8 +22159,10 @@
                                 "label": "Chromatography Protocol",
                                 "fields": [
                                     "Chromatography Instrument",
+                                    "Autosampler model",
                                     "Column model",
                                     "Column type",
+                                    "Guard column",
                                     "Detector",
                                     "Temperature"
                                 ]
@@ -22386,7 +22396,8 @@
                                 "fields": [
                                     "Chromatography Instrument",
                                     "Column model",
-                                    "Column type"
+                                    "Column type",
+                                    "Guard column"
                                 ]
                             },
                             "Mass spectrometry": {
@@ -22417,8 +22428,10 @@
                                 "label": "Chromatography Protocol",
                                 "fields": [
                                     "Chromatography Instrument",
+                                    "Autosampler model",
                                     "Column model",
-                                    "Column type"
+                                    "Column type",
+                                    "Guard column"
                                 ]
                             },
                             "Mass spectrometry": {
@@ -22449,10 +22462,12 @@
                                 "label": "Chromatography Protocol",
                                 "fields": [
                                     "Chromatography Instrument",
+                                    "Autosampler model",
                                     "Column model 1",
                                     "Column type 1",
                                     "Column model 2",
-                                    "Column type 2"
+                                    "Column type 2",
+                                    "Guard column"
                                 ]
                             },
                             "Mass spectrometry": {
@@ -22740,8 +22755,10 @@
                                 "label": "Chromatography Protocol",
                                 "fields": [
                                     "Chromatography Instrument",
+                                    "Autosampler model",
                                     "Column model",
                                     "Column type",
+                                    "Guard column",
                                     "Detector",
                                     "Signal range",
                                     "Resolution"
@@ -22764,8 +22781,10 @@
                                 "label": "Chromatography Protocol",
                                 "fields": [
                                     "Chromatography Instrument",
+                                    "Autosampler model",
                                     "Column model",
                                     "Column type",
+                                    "Guard column",
                                     "Detector",
                                     "Temperature"
                                 ]
