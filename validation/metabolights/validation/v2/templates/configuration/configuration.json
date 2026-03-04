@@ -734,7 +734,7 @@
                     "assayFileDefaultValues": {
                         "Chromatography": {
                             "order": 1,
-                            "label": "Chromatography Protocol",
+                            "label": "Chromatography (Protocol)",
                             "fields": [
                                 "Chromatography Instrument",
                                 "Autosampler model",
@@ -745,7 +745,7 @@
                         },
                         "Mass spectrometry": {
                             "order": 2,
-                            "label": "Mass Spectrometry Protocol",
+                            "label": "Mass Spectrometry (Protocol)",
                             "fields": [
                                 "Scan polarity",
                                 "Scan m/z range",
@@ -768,7 +768,7 @@
                     "assayFileDefaultValues": {
                         "Chromatography": {
                             "order": 1,
-                            "label": "Chromatography Protocol",
+                            "label": "Chromatography (Protocol)",
                             "fields": [
                                 "Chromatography Instrument",
                                 "Autosampler model",
@@ -779,7 +779,7 @@
                         },
                         "Mass spectrometry": {
                             "order": 2,
-                            "label": "Mass Spectrometry Protocol",
+                            "label": "Mass Spectrometry (Protocol)",
                             "fields": [
                                 "Scan polarity",
                                 "Scan m/z range",
@@ -802,7 +802,7 @@
                     "assayFileDefaultValues": {
                         "Chromatography": {
                             "order": 1,
-                            "label": "Chromatography Protocol",
+                            "label": "Chromatography (Protocol)",
                             "fields": [
                                 "Chromatography Instrument",
                                 "Autosampler model",
@@ -815,7 +815,7 @@
                         },
                         "Mass spectrometry": {
                             "order": 2,
-                            "label": "Mass Spectrometry Protocol",
+                            "label": "Mass Spectrometry (Protocol)",
                             "fields": [
                                 "Scan polarity",
                                 "Scan m/z range",
@@ -838,7 +838,7 @@
                     "assayFileDefaultValues": {
                         "Mass spectrometry": {
                             "order": 1,
-                            "label": "Mass Spectrometry Protocol",
+                            "label": "Mass Spectrometry (Protocol)",
                             "fields": [
                                 "Scan polarity",
                                 "Scan m/z range",
@@ -861,14 +861,14 @@
                     "assayFileDefaultValues": {
                         "Flow Injection Analysis": {
                             "order": 1,
-                            "label": "Flow Injection Analysis Protocol",
+                            "label": "Flow Injection Analysis (Protocol)",
                             "fields": [
                                 "FIA Instrument"
                             ]
                         },
                         "Mass spectrometry": {
                             "order": 2,
-                            "label": "Mass Spectrometry Protocol",
+                            "label": "Mass Spectrometry (Protocol)",
                             "fields": [
                                 "Scan polarity",
                                 "Scan m/z range",
@@ -891,14 +891,14 @@
                     "assayFileDefaultValues": {
                         "Direct infusion": {
                             "order": 1,
-                            "label": "Direct infusion Protocol",
+                            "label": "Direct infusion (Protocol)",
                             "fields": [
                                 "DI Instrument"
                             ]
                         },
                         "Mass spectrometry": {
                             "order": 2,
-                            "label": "Mass Spectrometry Protocol",
+                            "label": "Mass Spectrometry (Protocol)",
                             "fields": [
                                 "Scan polarity",
                                 "Scan m/z range",
@@ -921,7 +921,7 @@
                     "assayFileDefaultValues": {
                         "Capillary Electrophoresis": {
                             "order": 1,
-                            "label": "Capillary Electrophoresis Protocol",
+                            "label": "Capillary Electrophoresis (Protocol)",
                             "fields": [
                                 "CE Instrument",
                                 "Column model",
@@ -930,7 +930,7 @@
                         },
                         "Mass spectrometry": {
                             "order": 2,
-                            "label": "Mass Spectrometry Protocol",
+                            "label": "Mass Spectrometry (Protocol)",
                             "fields": [
                                 "Scan polarity",
                                 "Scan m/z range",
@@ -953,7 +953,7 @@
                     "assayFileDefaultValues": {
                         "Mass spectrometry": {
                             "order": 1,
-                            "label": "Mass Spectrometry Protocol",
+                            "label": "Mass Spectrometry (Protocol)",
                             "fields": [
                                 "Scan polarity",
                                 "Scan m/z range",
@@ -976,7 +976,7 @@
                     "assayFileDefaultValues": {
                         "NMR sample": {
                             "order": 1,
-                            "label": "NMR sample Protocol",
+                            "label": "NMR sample (Protocol)",
                             "fields": [
                                 "NMR tube type",
                                 "Solvent",
@@ -986,7 +986,7 @@
                         },
                         "NMR spectroscopy": {
                             "order": 2,
-                            "label": "NMR spectroscopy Protocol",
+                            "label": "NMR spectroscopy (Protocol)",
                             "fields": [
                                 "Instrument",
                                 "NMR Probe",
@@ -1009,7 +1009,7 @@
                     "assayFileDefaultValues": {
                         "Magnetic resonance imaging": {
                             "order": 1,
-                            "label": "Magnetic resonance imaging Protocol",
+                            "label": "Magnetic resonance imaging (Protocol)",
                             "fields": [
                                 "Instrument",
                                 "Tomography",
@@ -1018,7 +1018,7 @@
                         },
                         "In vivo magnetic resonance spectroscopy": {
                             "order": 2,
-                            "label": "In vivo magnetic resonance spectroscopy Protocol",
+                            "label": "In vivo magnetic resonance spectroscopy (Protocol)",
                             "fields": [
                                 "Spatial resolution",
                                 "Field of view",
@@ -1033,7 +1033,7 @@
                         },
                         "In vivo magnetic resonance assay": {
                             "order": 3,
-                            "label": "In vivo magnetic resonance assay Protocol",
+                            "label": "In vivo magnetic resonance assay (Protocol)",
                             "fields": [
                                 "NMR tube type",
                                 "Solvent",
@@ -1055,7 +1055,7 @@
                     "assayFileDefaultValues": {
                         "Preparation": {
                             "order": 1,
-                            "label": "Preparation Protocol",
+                            "label": "Preparation (Protocol)",
                             "fields": [
                                 "Sample mounting",
                                 "Sample preservation",
@@ -1064,7 +1064,7 @@
                         },
                         "Mass spectrometry": {
                             "order": 2,
-                            "label": "Mass Spectrometry Protocol",
+                            "label": "Mass Spectrometry (Protocol)",
                             "fields": [
                                 "Scan polarity",
                                 "Scan m/z range",
@@ -1095,7 +1095,7 @@
                     "assayFileDefaultValues": {
                         "Chromatography": {
                             "order": 1,
-                            "label": "Chromatography Protocol",
+                            "label": "Chromatography (Protocol)",
                             "fields": [
                                 "Chromatography Instrument",
                                 "Autosampler model",
@@ -1121,7 +1121,7 @@
                     "assayFileDefaultValues": {
                         "Chromatography": {
                             "order": 1,
-                            "label": "Chromatography Protocol",
+                            "label": "Chromatography (Protocol)",
                             "fields": [
                                 "Chromatography Instrument",
                                 "Autosampler model",
@@ -1357,7 +1357,7 @@
                     "assayFileDefaultValues": {
                         "Chromatography": {
                             "order": 1,
-                            "label": "Chromatography Protocol",
+                            "label": "Chromatography (Protocol)",
                             "fields": [
                                 "Chromatography Instrument",
                                 "Column model",
@@ -1367,7 +1367,7 @@
                         },
                         "Mass spectrometry": {
                             "order": 2,
-                            "label": "Mass Spectrometry Protocol",
+                            "label": "Mass Spectrometry (Protocol)",
                             "fields": [
                                 "Scan polarity",
                                 "Scan m/z range",
@@ -1390,7 +1390,7 @@
                     "assayFileDefaultValues": {
                         "Chromatography": {
                             "order": 1,
-                            "label": "Chromatography Protocol",
+                            "label": "Chromatography (Protocol)",
                             "fields": [
                                 "Chromatography Instrument",
                                 "Autosampler model",
@@ -1401,7 +1401,7 @@
                         },
                         "Mass spectrometry": {
                             "order": 2,
-                            "label": "Mass Spectrometry Protocol",
+                            "label": "Mass Spectrometry (Protocol)",
                             "fields": [
                                 "Scan polarity",
                                 "Scan m/z range",
@@ -1424,7 +1424,7 @@
                     "assayFileDefaultValues": {
                         "Chromatography": {
                             "order": 1,
-                            "label": "Chromatography Protocol",
+                            "label": "Chromatography (Protocol)",
                             "fields": [
                                 "Chromatography Instrument",
                                 "Autosampler model",
@@ -1437,7 +1437,7 @@
                         },
                         "Mass spectrometry": {
                             "order": 2,
-                            "label": "Mass Spectrometry Protocol",
+                            "label": "Mass Spectrometry (Protocol)",
                             "fields": [
                                 "Scan polarity",
                                 "Scan m/z range",
@@ -1460,7 +1460,7 @@
                     "assayFileDefaultValues": {
                         "Mass spectrometry": {
                             "order": 1,
-                            "label": "Mass Spectrometry Protocol",
+                            "label": "Mass Spectrometry (Protocol)",
                             "fields": [
                                 "Scan polarity",
                                 "Scan m/z range",
@@ -1483,14 +1483,14 @@
                     "assayFileDefaultValues": {
                         "Flow Injection Analysis": {
                             "order": 1,
-                            "label": "Flow Injection Analysis Protocol",
+                            "label": "Flow Injection Analysis (Protocol)",
                             "fields": [
                                 "FIA Instrument"
                             ]
                         },
                         "Mass spectrometry": {
                             "order": 2,
-                            "label": "Mass Spectrometry Protocol",
+                            "label": "Mass Spectrometry (Protocol)",
                             "fields": [
                                 "Scan polarity",
                                 "Scan m/z range",
@@ -1513,14 +1513,14 @@
                     "assayFileDefaultValues": {
                         "Direct infusion": {
                             "order": 1,
-                            "label": "Direct infusion Protocol",
+                            "label": "Direct infusion (Protocol)",
                             "fields": [
                                 "DI Instrument"
                             ]
                         },
                         "Mass spectrometry": {
                             "order": 2,
-                            "label": "Mass Spectrometry Protocol",
+                            "label": "Mass Spectrometry (Protocol)",
                             "fields": [
                                 "Scan polarity",
                                 "Scan m/z range",
@@ -1543,7 +1543,7 @@
                     "assayFileDefaultValues": {
                         "Capillary Electrophoresis": {
                             "order": 1,
-                            "label": "Capillary Electrophoresis Protocol",
+                            "label": "Capillary Electrophoresis (Protocol)",
                             "fields": [
                                 "CE Instrument",
                                 "Column model",
@@ -1552,7 +1552,7 @@
                         },
                         "Mass spectrometry": {
                             "order": 2,
-                            "label": "Mass Spectrometry Protocol",
+                            "label": "Mass Spectrometry (Protocol)",
                             "fields": [
                                 "Scan polarity",
                                 "Scan m/z range",
@@ -1575,7 +1575,7 @@
                     "assayFileDefaultValues": {
                         "Mass spectrometry": {
                             "order": 1,
-                            "label": "Mass Spectrometry Protocol",
+                            "label": "Mass Spectrometry (Protocol)",
                             "fields": [
                                 "Scan polarity",
                                 "Scan m/z range",
@@ -1598,7 +1598,7 @@
                     "assayFileDefaultValues": {
                         "NMR sample": {
                             "order": 1,
-                            "label": "NMR sample Protocol",
+                            "label": "NMR sample (Protocol)",
                             "fields": [
                                 "NMR tube type",
                                 "Solvent",
@@ -1608,7 +1608,7 @@
                         },
                         "NMR spectroscopy": {
                             "order": 2,
-                            "label": "NMR spectroscopy Protocol",
+                            "label": "NMR spectroscopy (Protocol)",
                             "fields": [
                                 "Instrument",
                                 "NMR Probe",
@@ -1631,7 +1631,7 @@
                     "assayFileDefaultValues": {
                         "Magnetic resonance imaging": {
                             "order": 1,
-                            "label": "Magnetic resonance imaging Protocol",
+                            "label": "Magnetic resonance imaging (Protocol)",
                             "fields": [
                                 "Instrument",
                                 "Tomography",
@@ -1640,7 +1640,7 @@
                         },
                         "In vivo magnetic resonance spectroscopy": {
                             "order": 2,
-                            "label": "In vivo magnetic resonance spectroscopy Protocol",
+                            "label": "In vivo magnetic resonance spectroscopy (Protocol)",
                             "fields": [
                                 "Spatial resolution",
                                 "Field of view",
@@ -1655,7 +1655,7 @@
                         },
                         "In vivo magnetic resonance assay": {
                             "order": 3,
-                            "label": "In vivo magnetic resonance assay Protocol",
+                            "label": "In vivo magnetic resonance assay (Protocol)",
                             "fields": [
                                 "NMR tube type",
                                 "Solvent",
@@ -1677,7 +1677,7 @@
                     "assayFileDefaultValues": {
                         "Preparation": {
                             "order": 1,
-                            "label": "Preparation Protocol",
+                            "label": "Preparation (Protocol)",
                             "fields": [
                                 "Sample mounting",
                                 "Sample preservation",
@@ -1686,7 +1686,7 @@
                         },
                         "Mass spectrometry": {
                             "order": 2,
-                            "label": "Mass Spectrometry Protocol",
+                            "label": "Mass Spectrometry (Protocol)",
                             "fields": [
                                 "Scan polarity",
                                 "Scan m/z range",
@@ -1717,7 +1717,7 @@
                     "assayFileDefaultValues": {
                         "Chromatography": {
                             "order": 1,
-                            "label": "Chromatography Protocol",
+                            "label": "Chromatography (Protocol)",
                             "fields": [
                                 "Chromatography Instrument",
                                 "Autosampler model",
@@ -1743,7 +1743,7 @@
                     "assayFileDefaultValues": {
                         "Chromatography": {
                             "order": 1,
-                            "label": "Chromatography Protocol",
+                            "label": "Chromatography (Protocol)",
                             "fields": [
                                 "Chromatography Instrument",
                                 "Autosampler model",
