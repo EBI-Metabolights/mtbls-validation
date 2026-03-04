@@ -1193,17 +1193,17 @@
                 },
                 "cell-type": {
                     "visible": true,
-                    "order": 5,
+                    "order": 3,
                     "min": 0
                 },
                 "disease": {
                     "visible": true,
-                    "order": 3,
+                    "order": 4,
                     "min": 0
                 },
                 "instrument": {
                     "visible": true,
-                    "order": 4,
+                    "order": 5,
                     "min": 0
                 },
                 "omics-type": {
@@ -1275,21 +1275,21 @@
                 "ms-mhd-enabled": [
                     "LC-MS",
                     "GC-MS",
-                    "GCxGC-MS",
-                    "MALDI-MS",
+                    "CE-MS",
                     "FIA-MS",
                     "DI-MS",
-                    "CE-MS",
+                    "MALDI-MS",
+                    "GCxGC-MS",
                     "MS"
                 ],
                 "ms-mhd-legacy": [
                     "LC-MS",
                     "GC-MS",
-                    "GCxGC-MS",
-                    "MALDI-MS",
+                    "CE-MS",
                     "FIA-MS",
                     "DI-MS",
-                    "CE-MS",
+                    "MALDI-MS",
+                    "GCxGC-MS",
                     "MS"
                 ],
                 "ms-imaging": [
@@ -1305,11 +1305,11 @@
                 "other": [
                     "LC-MS",
                     "GC-MS",
-                    "GCxGC-MS",
-                    "MALDI-MS",
+                    "CE-MS",
                     "FIA-MS",
                     "DI-MS",
-                    "CE-MS",
+                    "MALDI-MS",
+                    "GCxGC-MS",
                     "MS",
                     "MSImaging",
                     "NMR",
@@ -1815,17 +1815,17 @@
                 },
                 "cell-type": {
                     "visible": true,
-                    "order": 5,
+                    "order": 3,
                     "min": 0
                 },
                 "disease": {
                     "visible": true,
-                    "order": 3,
+                    "order": 4,
                     "min": 0
                 },
                 "instrument": {
                     "visible": true,
-                    "order": 4,
+                    "order": 5,
                     "min": 0
                 },
                 "omics-type": {
@@ -1897,21 +1897,21 @@
                 "ms-mhd-enabled": [
                     "LC-MS",
                     "GC-MS",
-                    "GCxGC-MS",
-                    "MALDI-MS",
+                    "CE-MS",
                     "FIA-MS",
                     "DI-MS",
-                    "CE-MS",
+                    "MALDI-MS",
+                    "GCxGC-MS",
                     "MS"
                 ],
                 "ms-mhd-legacy": [
                     "LC-MS",
                     "GC-MS",
-                    "GCxGC-MS",
-                    "MALDI-MS",
+                    "CE-MS",
                     "FIA-MS",
                     "DI-MS",
-                    "CE-MS",
+                    "MALDI-MS",
+                    "GCxGC-MS",
                     "MS"
                 ],
                 "ms-imaging": [
@@ -1927,11 +1927,11 @@
                 "other": [
                     "LC-MS",
                     "GC-MS",
-                    "GCxGC-MS",
-                    "MALDI-MS",
+                    "CE-MS",
                     "FIA-MS",
                     "DI-MS",
-                    "CE-MS",
+                    "MALDI-MS",
+                    "GCxGC-MS",
                     "MS",
                     "MSImaging",
                     "NMR",
