@@ -1,6 +1,6 @@
 {
     "validation_version": "2.2.0",
-    "created_at": "2026-03-03T15:12:32.406590+00:00",
+    "created_at": "2026-03-04T13:50:51.877942+00:00",
     "violations": [
         {
             "rule_id": "rule___100_100_001_01",
@@ -630,14 +630,6 @@
             "rule_id": "rule_a_200_300_002_01",
             "title": "Values for MS Assay Name column not unique in assay file.",
             "description": "All MS Assay Name column values should be unique.",
-            "type": "WARNING",
-            "section": "assays",
-            "priority": "CRITICAL"
-        },
-        {
-            "rule_id": "rule_a_200_300_003_01",
-            "title": "Scan Polarity column values are not same as assay file name.",
-            "description": "Values for Scan Polarity column is not same as assay file name.",
             "type": "WARNING",
             "section": "assays",
             "priority": "CRITICAL"

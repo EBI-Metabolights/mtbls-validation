@@ -11209,7 +11209,50 @@
                         "defaultComments": [
                             "Study Protocol Parameters Value Format"
                         ],
-                        "defaultFieldValues": {},
+                        "defaultFieldValues": {
+                            "Study Protocol Name": [
+                                "Sample collection"
+                            ],
+                            "Study Protocol Type": [
+                                "sample collection protocol"
+                            ],
+                            "Study Protocol Type Term Accession Number": [
+                                "http://www.ebi.ac.uk/efo/EFO_0005518"
+                            ],
+                            "Study Protocol Type Term Source REF": [
+                                "EFO"
+                            ],
+                            "Study Protocol Description": [
+                                "Please update this protocol description"
+                            ],
+                            "Study Protocol URI": [
+                                ""
+                            ],
+                            "Study Protocol Version": [
+                                ""
+                            ],
+                            "Study Protocol Parameters Name": [
+                                ""
+                            ],
+                            "Study Protocol Parameters Name Term Accession Number": [
+                                ""
+                            ],
+                            "Study Protocol Parameters Name Term Source REF": [
+                                ""
+                            ],
+                            "Study Protocol Components Name": [
+                                ""
+                            ],
+                            "Study Protocol Components Type": [
+                                ""
+                            ],
+                            "Study Protocol Components Type Term Accession Number": [
+                                ""
+                            ],
+                            "Study Protocol Components Type Term Source REF": [
+                                ""
+                            ]
+                        },
                         "defaultCommentValues": {}
                     },
                     {
@@ -22045,11 +22088,7 @@
                                 "fields": [
                                     "Sample mounting",
                                     "Sample preservation",
-                                    "Tissue modification",
-                                    "Sectioning instrument",
-                                    "Section thickness",
-                                    "Matrix",
-                                    "Matrix application"
+                                    "Tissue modification"
                                 ]
                             },
                             "Mass spectrometry": {
@@ -22063,30 +22102,12 @@
                                     "Ion source",
                                     "Mass analyzer",
                                     "Solvent",
-                                    "Target material",
-                                    "Spatial resolution",
-                                    "Pixel size x",
-                                    "Pixel size y",
-                                    "Max count of pixel x",
-                                    "Max count of pixel y",
-                                    "Max dimension x",
-                                    "Max dimension y",
-                                    "Inlet type",
-                                    "Detector",
-                                    "Detector mode",
                                     "Resolving power",
                                     "Resolving power m/z",
-                                    "Native spectrum identifier format",
-                                    "Data file content",
-                                    "Spectrum representation",
-                                    "Raw data file format",
-                                    "Instrument software",
-                                    "Instrument software version",
                                     "Line scan direction",
                                     "Line scan sequence",
                                     "Scan pattern",
-                                    "Scan type",
-                                    "Number of scans"
+                                    "Scan type"
                                 ]
                             }
                         }
@@ -22680,11 +22701,7 @@
                                 "fields": [
                                     "Sample mounting",
                                     "Sample preservation",
-                                    "Tissue modification",
-                                    "Sectioning instrument",
-                                    "Section thickness",
-                                    "Matrix",
-                                    "Matrix application"
+                                    "Tissue modification"
                                 ]
                             },
                             "Mass spectrometry": {
@@ -22698,30 +22715,12 @@
                                     "Ion source",
                                     "Mass analyzer",
                                     "Solvent",
-                                    "Target material",
-                                    "Spatial resolution",
-                                    "Pixel size x",
-                                    "Pixel size y",
-                                    "Max count of pixel x",
-                                    "Max count of pixel y",
-                                    "Max dimension x",
-                                    "Max dimension y",
-                                    "Inlet type",
-                                    "Detector",
-                                    "Detector mode",
                                     "Resolving power",
                                     "Resolving power m/z",
-                                    "Native spectrum identifier format",
-                                    "Data file content",
-                                    "Spectrum representation",
-                                    "Raw data file format",
-                                    "Instrument software",
-                                    "Instrument software version",
                                     "Line scan direction",
                                     "Line scan sequence",
                                     "Scan pattern",
-                                    "Scan type",
-                                    "Number of scans"
+                                    "Scan type"
                                 ]
                             }
                         }

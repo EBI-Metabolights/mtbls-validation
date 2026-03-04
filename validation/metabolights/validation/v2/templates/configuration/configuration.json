@@ -1053,11 +1053,7 @@
                             "fields": [
                                 "Sample mounting",
                                 "Sample preservation",
-                                "Tissue modification",
-                                "Sectioning instrument",
-                                "Section thickness",
-                                "Matrix",
-                                "Matrix application"
+                                "Tissue modification"
                             ]
                         },
                         "Mass spectrometry": {
@@ -1071,30 +1067,12 @@
                                 "Ion source",
                                 "Mass analyzer",
                                 "Solvent",
-                                "Target material",
-                                "Spatial resolution",
-                                "Pixel size x",
-                                "Pixel size y",
-                                "Max count of pixel x",
-                                "Max count of pixel y",
-                                "Max dimension x",
-                                "Max dimension y",
-                                "Inlet type",
-                                "Detector",
-                                "Detector mode",
                                 "Resolving power",
                                 "Resolving power m/z",
-                                "Native spectrum identifier format",
-                                "Data file content",
-                                "Spectrum representation",
-                                "Raw data file format",
-                                "Instrument software",
-                                "Instrument software version",
                                 "Line scan direction",
                                 "Line scan sequence",
                                 "Scan pattern",
-                                "Scan type",
-                                "Number of scans"
+                                "Scan type"
                             ]
                         }
                     }
@@ -1688,11 +1666,7 @@
                             "fields": [
                                 "Sample mounting",
                                 "Sample preservation",
-                                "Tissue modification",
-                                "Sectioning instrument",
-                                "Section thickness",
-                                "Matrix",
-                                "Matrix application"
+                                "Tissue modification"
                             ]
                         },
                         "Mass spectrometry": {
@@ -1706,30 +1680,12 @@
                                 "Ion source",
                                 "Mass analyzer",
                                 "Solvent",
-                                "Target material",
-                                "Spatial resolution",
-                                "Pixel size x",
-                                "Pixel size y",
-                                "Max count of pixel x",
-                                "Max count of pixel y",
-                                "Max dimension x",
-                                "Max dimension y",
-                                "Inlet type",
-                                "Detector",
-                                "Detector mode",
                                 "Resolving power",
                                 "Resolving power m/z",
-                                "Native spectrum identifier format",
-                                "Data file content",
-                                "Spectrum representation",
-                                "Raw data file format",
-                                "Instrument software",
-                                "Instrument software version",
                                 "Line scan direction",
                                 "Line scan sequence",
                                 "Scan pattern",
-                                "Scan type",
-                                "Number of scans"
+                                "Scan type"
                             ]
                         }
                     }

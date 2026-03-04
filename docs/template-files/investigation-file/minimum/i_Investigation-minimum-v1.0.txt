@@ -99,11 +99,11 @@ Comment[Assay Field Default Unit]
 Comment[Assay Field Default Value Source REF]	
 Comment[Assay Field Default Value Accession Number]	
 STUDY PROTOCOLS
-Study Protocol Name	
-Study Protocol Type	
-Study Protocol Type Term Accession Number	
-Study Protocol Type Term Source REF	
-Study Protocol Description	
+Study Protocol Name	Sample collection
+Study Protocol Type	sample collection protocol
+Study Protocol Type Term Accession Number	http://www.ebi.ac.uk/efo/EFO_0005518
+Study Protocol Type Term Source REF	EFO
+Study Protocol Description	Please update this protocol description
 Study Protocol URI	
 Study Protocol Version	
 Study Protocol Parameters Name	
