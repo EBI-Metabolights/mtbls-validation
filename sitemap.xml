@@ -1,147 +1,171 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-         <loc>https://ebi-metabolights.github.io/mtbls-validation/</loc>
-         <lastmod>2025-04-20</lastmod>
+         <loc>https://github.com/EBI-Metabolights/mtbls-validation/</loc>
+         <lastmod>2026-03-04</lastmod>
     </url>
     <url>
-         <loc>https://ebi-metabolights.github.io/mtbls-validation/MetaboLightsRules/</loc>
-         <lastmod>2025-04-20</lastmod>
+         <loc>https://github.com/EBI-Metabolights/mtbls-validation/file-structures/assay-file-structure/CE-MS/assay-file-CE-MS-v1.0/</loc>
+         <lastmod>2026-03-04</lastmod>
     </url>
     <url>
-         <loc>https://ebi-metabolights.github.io/mtbls-validation/file-structures/assay-file-structure/ce-ms/</loc>
-         <lastmod>2025-04-20</lastmod>
+         <loc>https://github.com/EBI-Metabolights/mtbls-validation/file-structures/assay-file-structure/DI-MS/assay-file-DI-MS-v1.0/</loc>
+         <lastmod>2026-03-04</lastmod>
     </url>
     <url>
-         <loc>https://ebi-metabolights.github.io/mtbls-validation/file-structures/assay-file-structure/di-ms/</loc>
-         <lastmod>2025-04-20</lastmod>
+         <loc>https://github.com/EBI-Metabolights/mtbls-validation/file-structures/assay-file-structure/FIA-MS/assay-file-FIA-MS-v1.0/</loc>
+         <lastmod>2026-03-04</lastmod>
     </url>
     <url>
-         <loc>https://ebi-metabolights.github.io/mtbls-validation/file-structures/assay-file-structure/fia-ms/</loc>
-         <lastmod>2025-04-20</lastmod>
+         <loc>https://github.com/EBI-Metabolights/mtbls-validation/file-structures/assay-file-structure/GC-FID/assay-file-GC-FID-v1.0/</loc>
+         <lastmod>2026-03-04</lastmod>
     </url>
     <url>
-         <loc>https://ebi-metabolights.github.io/mtbls-validation/file-structures/assay-file-structure/gc-fid/</loc>
-         <lastmod>2025-04-20</lastmod>
+         <loc>https://github.com/EBI-Metabolights/mtbls-validation/file-structures/assay-file-structure/GC-MS/assay-file-GC-MS-v1.0/</loc>
+         <lastmod>2026-03-04</lastmod>
     </url>
     <url>
-         <loc>https://ebi-metabolights.github.io/mtbls-validation/file-structures/assay-file-structure/gc-ms/</loc>
-         <lastmod>2025-04-20</lastmod>
+         <loc>https://github.com/EBI-Metabolights/mtbls-validation/file-structures/assay-file-structure/GCxGC-MS/assay-file-GCxGC-MS-v1.0/</loc>
+         <lastmod>2026-03-04</lastmod>
     </url>
     <url>
-         <loc>https://ebi-metabolights.github.io/mtbls-validation/file-structures/assay-file-structure/gcxgc-ms/</loc>
-         <lastmod>2025-04-20</lastmod>
+         <loc>https://github.com/EBI-Metabolights/mtbls-validation/file-structures/assay-file-structure/LC-DAD/assay-file-LC-DAD-v1.0/</loc>
+         <lastmod>2026-03-04</lastmod>
     </url>
     <url>
-         <loc>https://ebi-metabolights.github.io/mtbls-validation/file-structures/assay-file-structure/lc-dad/</loc>
-         <lastmod>2025-04-20</lastmod>
+         <loc>https://github.com/EBI-Metabolights/mtbls-validation/file-structures/assay-file-structure/LC-MS/assay-file-LC-MS-v1.0/</loc>
+         <lastmod>2026-03-04</lastmod>
     </url>
     <url>
-         <loc>https://ebi-metabolights.github.io/mtbls-validation/file-structures/assay-file-structure/lc-ms/</loc>
-         <lastmod>2025-04-20</lastmod>
+         <loc>https://github.com/EBI-Metabolights/mtbls-validation/file-structures/assay-file-structure/MALDI-MS/assay-file-MALDI-MS-v1.0/</loc>
+         <lastmod>2026-03-04</lastmod>
     </url>
     <url>
-         <loc>https://ebi-metabolights.github.io/mtbls-validation/file-structures/assay-file-structure/maldi-ms/</loc>
-         <lastmod>2025-04-20</lastmod>
+         <loc>https://github.com/EBI-Metabolights/mtbls-validation/file-structures/assay-file-structure/MRImaging/assay-file-MRImaging-v1.0/</loc>
+         <lastmod>2026-03-04</lastmod>
     </url>
     <url>
-         <loc>https://ebi-metabolights.github.io/mtbls-validation/file-structures/assay-file-structure/mrimaging/</loc>
-         <lastmod>2025-04-20</lastmod>
+         <loc>https://github.com/EBI-Metabolights/mtbls-validation/file-structures/assay-file-structure/MS/assay-file-MS-v1.0/</loc>
+         <lastmod>2026-03-04</lastmod>
     </url>
     <url>
-         <loc>https://ebi-metabolights.github.io/mtbls-validation/file-structures/assay-file-structure/ms/</loc>
-         <lastmod>2025-04-20</lastmod>
+         <loc>https://github.com/EBI-Metabolights/mtbls-validation/file-structures/assay-file-structure/MSImaging/assay-file-MSImaging-v1.0/</loc>
+         <lastmod>2026-03-04</lastmod>
     </url>
     <url>
-         <loc>https://ebi-metabolights.github.io/mtbls-validation/file-structures/assay-file-structure/msimaging/</loc>
-         <lastmod>2025-04-20</lastmod>
+         <loc>https://github.com/EBI-Metabolights/mtbls-validation/file-structures/assay-file-structure/NMR/assay-file-NMR-v1.0/</loc>
+         <lastmod>2026-03-04</lastmod>
     </url>
     <url>
-         <loc>https://ebi-metabolights.github.io/mtbls-validation/file-structures/assay-file-structure/nmr/</loc>
-         <lastmod>2025-04-20</lastmod>
+         <loc>https://github.com/EBI-Metabolights/mtbls-validation/file-structures/maf-file-structure/MS/maf-file-MS-v1.0/</loc>
+         <lastmod>2026-03-04</lastmod>
     </url>
     <url>
-         <loc>https://ebi-metabolights.github.io/mtbls-validation/file-structures/maf-file-structure/ms/</loc>
-         <lastmod>2025-04-20</lastmod>
+         <loc>https://github.com/EBI-Metabolights/mtbls-validation/file-structures/maf-file-structure/NMR/maf-file-NMR-v1.0/</loc>
+         <lastmod>2026-03-04</lastmod>
     </url>
     <url>
-         <loc>https://ebi-metabolights.github.io/mtbls-validation/file-structures/maf-file-structure/nmr/</loc>
-         <lastmod>2025-04-20</lastmod>
+         <loc>https://github.com/EBI-Metabolights/mtbls-validation/file-structures/sample-file-structure/minimum/sample-file-minimum-v1.0/</loc>
+         <lastmod>2026-03-04</lastmod>
     </url>
     <url>
-         <loc>https://ebi-metabolights.github.io/mtbls-validation/file-structures/sample-file-structure/sample-file/</loc>
-         <lastmod>2025-04-20</lastmod>
+         <loc>https://github.com/EBI-Metabolights/mtbls-validation/prioritised-control-lists/assay-file-control-lists/CE-MS/CE-MS-v1.0/</loc>
+         <lastmod>2026-03-04</lastmod>
     </url>
     <url>
-         <loc>https://ebi-metabolights.github.io/mtbls-validation/prioritised-control-lists/assay-file-control-lists/ce-ms/</loc>
-         <lastmod>2025-04-20</lastmod>
+         <loc>https://github.com/EBI-Metabolights/mtbls-validation/prioritised-control-lists/assay-file-control-lists/DI-MS/DI-MS-v1.0/</loc>
+         <lastmod>2026-03-04</lastmod>
     </url>
     <url>
-         <loc>https://ebi-metabolights.github.io/mtbls-validation/prioritised-control-lists/assay-file-control-lists/di-ms/</loc>
-         <lastmod>2025-04-20</lastmod>
+         <loc>https://github.com/EBI-Metabolights/mtbls-validation/prioritised-control-lists/assay-file-control-lists/FIA-MS/FIA-MS-v1.0/</loc>
+         <lastmod>2026-03-04</lastmod>
     </url>
     <url>
-         <loc>https://ebi-metabolights.github.io/mtbls-validation/prioritised-control-lists/assay-file-control-lists/fia-ms/</loc>
-         <lastmod>2025-04-20</lastmod>
+         <loc>https://github.com/EBI-Metabolights/mtbls-validation/prioritised-control-lists/assay-file-control-lists/GC-FID/GC-FID-v1.0/</loc>
+         <lastmod>2026-03-04</lastmod>
     </url>
     <url>
-         <loc>https://ebi-metabolights.github.io/mtbls-validation/prioritised-control-lists/assay-file-control-lists/gc-ms/</loc>
-         <lastmod>2025-04-20</lastmod>
+         <loc>https://github.com/EBI-Metabolights/mtbls-validation/prioritised-control-lists/assay-file-control-lists/GC-MS/GC-MS-v1.0/</loc>
+         <lastmod>2026-03-04</lastmod>
     </url>
     <url>
-         <loc>https://ebi-metabolights.github.io/mtbls-validation/prioritised-control-lists/assay-file-control-lists/gcxgc-ms/</loc>
-         <lastmod>2025-04-20</lastmod>
+         <loc>https://github.com/EBI-Metabolights/mtbls-validation/prioritised-control-lists/assay-file-control-lists/GCxGC-MS/GCxGC-MS-v1.0/</loc>
+         <lastmod>2026-03-04</lastmod>
     </url>
     <url>
-         <loc>https://ebi-metabolights.github.io/mtbls-validation/prioritised-control-lists/assay-file-control-lists/lc-ms/</loc>
-         <lastmod>2025-04-20</lastmod>
+         <loc>https://github.com/EBI-Metabolights/mtbls-validation/prioritised-control-lists/assay-file-control-lists/LC-DAD/LC-DAD-v1.0/</loc>
+         <lastmod>2026-03-04</lastmod>
     </url>
     <url>
-         <loc>https://ebi-metabolights.github.io/mtbls-validation/prioritised-control-lists/assay-file-control-lists/maldi-ms/</loc>
-         <lastmod>2025-04-20</lastmod>
+         <loc>https://github.com/EBI-Metabolights/mtbls-validation/prioritised-control-lists/assay-file-control-lists/LC-MS/LC-MS-v1.0/</loc>
+         <lastmod>2026-03-04</lastmod>
     </url>
     <url>
-         <loc>https://ebi-metabolights.github.io/mtbls-validation/prioritised-control-lists/assay-file-control-lists/msimaging/</loc>
-         <lastmod>2025-04-20</lastmod>
+         <loc>https://github.com/EBI-Metabolights/mtbls-validation/prioritised-control-lists/assay-file-control-lists/MALDI-MS/MALDI-MS-v1.0/</loc>
+         <lastmod>2026-03-04</lastmod>
     </url>
     <url>
-         <loc>https://ebi-metabolights.github.io/mtbls-validation/prioritised-control-lists/assay-file-control-lists/nmr/</loc>
-         <lastmod>2025-04-20</lastmod>
+         <loc>https://github.com/EBI-Metabolights/mtbls-validation/prioritised-control-lists/assay-file-control-lists/MRImaging/MRImaging-v1.0/</loc>
+         <lastmod>2026-03-04</lastmod>
     </url>
     <url>
-         <loc>https://ebi-metabolights.github.io/mtbls-validation/prioritised-control-lists/investigation-file-control-lists/investigation-file/</loc>
-         <lastmod>2025-04-20</lastmod>
+         <loc>https://github.com/EBI-Metabolights/mtbls-validation/prioritised-control-lists/assay-file-control-lists/MS/MS-v1.0/</loc>
+         <lastmod>2026-03-04</lastmod>
     </url>
     <url>
-         <loc>https://ebi-metabolights.github.io/mtbls-validation/prioritised-control-lists/sample-file-control-lists/sample-file/</loc>
-         <lastmod>2025-04-20</lastmod>
+         <loc>https://github.com/EBI-Metabolights/mtbls-validation/prioritised-control-lists/assay-file-control-lists/MSImaging/MSImaging-v1.0/</loc>
+         <lastmod>2026-03-04</lastmod>
     </url>
     <url>
-         <loc>https://ebi-metabolights.github.io/mtbls-validation/prioritised-control-lists/unit-columns-control-lists/unit-columns/</loc>
-         <lastmod>2025-04-20</lastmod>
+         <loc>https://github.com/EBI-Metabolights/mtbls-validation/prioritised-control-lists/assay-file-control-lists/NMR/NMR-v1.0/</loc>
+         <lastmod>2026-03-04</lastmod>
     </url>
     <url>
-         <loc>https://ebi-metabolights.github.io/mtbls-validation/validation-rules/assay-validation-rules/</loc>
-         <lastmod>2025-04-20</lastmod>
+         <loc>https://github.com/EBI-Metabolights/mtbls-validation/prioritised-control-lists/investigation-file-control-lists/metabolon/metabolon-v1.0/</loc>
+         <lastmod>2026-03-04</lastmod>
     </url>
     <url>
-         <loc>https://ebi-metabolights.github.io/mtbls-validation/validation-rules/file-validation-rules/</loc>
-         <lastmod>2025-04-20</lastmod>
+         <loc>https://github.com/EBI-Metabolights/mtbls-validation/prioritised-control-lists/investigation-file-control-lists/minimum/minimum-v1.0/</loc>
+         <lastmod>2026-03-04</lastmod>
     </url>
     <url>
-         <loc>https://ebi-metabolights.github.io/mtbls-validation/validation-rules/input-validation-rules/</loc>
-         <lastmod>2025-04-20</lastmod>
+         <loc>https://github.com/EBI-Metabolights/mtbls-validation/prioritised-control-lists/maf-file-control-lists/MS/MS-v1.0/</loc>
+         <lastmod>2026-03-04</lastmod>
     </url>
     <url>
-         <loc>https://ebi-metabolights.github.io/mtbls-validation/validation-rules/investigation-validation-rules/</loc>
-         <lastmod>2025-04-20</lastmod>
+         <loc>https://github.com/EBI-Metabolights/mtbls-validation/prioritised-control-lists/maf-file-control-lists/NMR/NMR-v1.0/</loc>
+         <lastmod>2026-03-04</lastmod>
     </url>
     <url>
-         <loc>https://ebi-metabolights.github.io/mtbls-validation/validation-rules/metabolite-validation-rules/</loc>
-         <lastmod>2025-04-20</lastmod>
+         <loc>https://github.com/EBI-Metabolights/mtbls-validation/prioritised-control-lists/sample-file-control-lists/minimum/minimum-v1.0/</loc>
+         <lastmod>2026-03-04</lastmod>
     </url>
     <url>
-         <loc>https://ebi-metabolights.github.io/mtbls-validation/validation-rules/sample-validation-rules/</loc>
-         <lastmod>2025-04-20</lastmod>
+         <loc>https://github.com/EBI-Metabolights/mtbls-validation/validation-rules/all-rules/</loc>
+         <lastmod>2026-03-04</lastmod>
+    </url>
+    <url>
+         <loc>https://github.com/EBI-Metabolights/mtbls-validation/validation-rules/assay-validation-rules/</loc>
+         <lastmod>2026-03-04</lastmod>
+    </url>
+    <url>
+         <loc>https://github.com/EBI-Metabolights/mtbls-validation/validation-rules/file-validation-rules/</loc>
+         <lastmod>2026-03-04</lastmod>
+    </url>
+    <url>
+         <loc>https://github.com/EBI-Metabolights/mtbls-validation/validation-rules/input-validation-rules/</loc>
+         <lastmod>2026-03-04</lastmod>
+    </url>
+    <url>
+         <loc>https://github.com/EBI-Metabolights/mtbls-validation/validation-rules/investigation-validation-rules/</loc>
+         <lastmod>2026-03-04</lastmod>
+    </url>
+    <url>
+         <loc>https://github.com/EBI-Metabolights/mtbls-validation/validation-rules/metabolite-validation-rules/</loc>
+         <lastmod>2026-03-04</lastmod>
+    </url>
+    <url>
+         <loc>https://github.com/EBI-Metabolights/mtbls-validation/validation-rules/sample-validation-rules/</loc>
+         <lastmod>2026-03-04</lastmod>
     </url>
 </urlset>
