@@ -11209,7 +11209,50 @@
                         "defaultComments": [
                             "Study Protocol Parameters Value Format"
                         ],
-                        "defaultFieldValues": {},
+                        "defaultFieldValues": {
+                            "Study Protocol Name": [
+                                "Sample collection"
+                            ],
+                            "Study Protocol Type": [
+                                "sample collection protocol"
+                            ],
+                            "Study Protocol Type Term Accession Number": [
+                                "http://www.ebi.ac.uk/efo/EFO_0005518"
+                            ],
+                            "Study Protocol Type Term Source REF": [
+                                "EFO"
+                            ],
+                            "Study Protocol Description": [
+                                "Please update this protocol description"
+                            ],
+                            "Study Protocol URI": [
+                                ""
+                            ],
+                            "Study Protocol Version": [
+                                ""
+                            ],
+                            "Study Protocol Parameters Name": [
+                                ""
+                            ],
+                            "Study Protocol Parameters Name Term Accession Number": [
+                                ""
+                            ],
+                            "Study Protocol Parameters Name Term Source REF": [
+                                ""
+                            ],
+                            "Study Protocol Components Name": [
+                                ""
+                            ],
+                            "Study Protocol Components Type": [
+                                ""
+                            ],
+                            "Study Protocol Components Type Term Accession Number": [
+                                ""
+                            ],
+                            "Study Protocol Components Type Term Source REF": [
+                                ""
+                            ]
+                        },
                         "defaultCommentValues": {}
                     },
                     {
@@ -19389,7 +19432,7 @@
         "DOID": {
             "sourceName": "DOID",
             "sourceFile": "https://purl.obolibrary.org/obo/doid/translations/doid-international.owl",
-            "sourceVersion": "2026-02-02",
+            "sourceVersion": "2026-02-28",
             "sourceDescription": "Human Disease Ontology",
             "sourceDetails": "The Disease Ontology has been developed as a standardized ontology for human disease with the purpose of providing the biomedical community with consistent, reusable and sustainable descriptions of human disease terms, phenotype characteristics and related medical vocabulary disease concepts."
         },
@@ -19795,7 +19838,7 @@
         "ICO": {
             "sourceName": "ICO",
             "sourceFile": "http://purl.obolibrary.org/obo/ico.owl",
-            "sourceVersion": "2025-03-15",
+            "sourceVersion": "2026-02-28",
             "sourceDescription": "Informed Consent Ontology (ICO)",
             "sourceDetails": "The Informed Consent Ontology (ICO) is an ontology for the informed consent and informed consent process in the medical field."
         },
@@ -21634,7 +21677,7 @@
             "other": {
                 "index": 0,
                 "name": "other",
-                "label": "Other",
+                "label": "MTBLS",
                 "description": "MS study"
             },
             "ms-mhd-enabled": {
@@ -21646,7 +21689,7 @@
             "ms-mhd-legacy": {
                 "index": 2,
                 "name": "ms-mhd-legacy",
-                "label": "MS",
+                "label": "MS (MTBLS)",
                 "description": "MS study shared with MetabolomicsHub legacy profile"
             },
             "ms-other": {
@@ -21726,7 +21769,7 @@
                         "assayFileDefaultValues": {
                             "Chromatography": {
                                 "order": 1,
-                                "label": "Chromatography Protocol",
+                                "label": "Chromatography (Protocol)",
                                 "fields": [
                                     "Chromatography Instrument",
                                     "Autosampler model",
@@ -21737,7 +21780,7 @@
                             },
                             "Mass spectrometry": {
                                 "order": 2,
-                                "label": "Mass Spectrometry Protocol",
+                                "label": "Mass Spectrometry (Protocol)",
                                 "fields": [
                                     "Scan polarity",
                                     "Scan m/z range",
@@ -21760,7 +21803,7 @@
                         "assayFileDefaultValues": {
                             "Chromatography": {
                                 "order": 1,
-                                "label": "Chromatography Protocol",
+                                "label": "Chromatography (Protocol)",
                                 "fields": [
                                     "Chromatography Instrument",
                                     "Autosampler model",
@@ -21771,7 +21814,7 @@
                             },
                             "Mass spectrometry": {
                                 "order": 2,
-                                "label": "Mass Spectrometry Protocol",
+                                "label": "Mass Spectrometry (Protocol)",
                                 "fields": [
                                     "Scan polarity",
                                     "Scan m/z range",
@@ -21794,7 +21837,7 @@
                         "assayFileDefaultValues": {
                             "Chromatography": {
                                 "order": 1,
-                                "label": "Chromatography Protocol",
+                                "label": "Chromatography (Protocol)",
                                 "fields": [
                                     "Chromatography Instrument",
                                     "Autosampler model",
@@ -21807,7 +21850,7 @@
                             },
                             "Mass spectrometry": {
                                 "order": 2,
-                                "label": "Mass Spectrometry Protocol",
+                                "label": "Mass Spectrometry (Protocol)",
                                 "fields": [
                                     "Scan polarity",
                                     "Scan m/z range",
@@ -21830,7 +21873,7 @@
                         "assayFileDefaultValues": {
                             "Mass spectrometry": {
                                 "order": 1,
-                                "label": "Mass Spectrometry Protocol",
+                                "label": "Mass Spectrometry (Protocol)",
                                 "fields": [
                                     "Scan polarity",
                                     "Scan m/z range",
@@ -21853,14 +21896,14 @@
                         "assayFileDefaultValues": {
                             "Flow Injection Analysis": {
                                 "order": 1,
-                                "label": "Flow Injection Analysis Protocol",
+                                "label": "Flow Injection Analysis (Protocol)",
                                 "fields": [
                                     "FIA Instrument"
                                 ]
                             },
                             "Mass spectrometry": {
                                 "order": 2,
-                                "label": "Mass Spectrometry Protocol",
+                                "label": "Mass Spectrometry (Protocol)",
                                 "fields": [
                                     "Scan polarity",
                                     "Scan m/z range",
@@ -21883,14 +21926,14 @@
                         "assayFileDefaultValues": {
                             "Direct infusion": {
                                 "order": 1,
-                                "label": "Direct infusion Protocol",
+                                "label": "Direct infusion (Protocol)",
                                 "fields": [
                                     "DI Instrument"
                                 ]
                             },
                             "Mass spectrometry": {
                                 "order": 2,
-                                "label": "Mass Spectrometry Protocol",
+                                "label": "Mass Spectrometry (Protocol)",
                                 "fields": [
                                     "Scan polarity",
                                     "Scan m/z range",
@@ -21913,7 +21956,7 @@
                         "assayFileDefaultValues": {
                             "Capillary Electrophoresis": {
                                 "order": 1,
-                                "label": "Capillary Electrophoresis Protocol",
+                                "label": "Capillary Electrophoresis (Protocol)",
                                 "fields": [
                                     "CE Instrument",
                                     "Column model",
@@ -21922,7 +21965,7 @@
                             },
                             "Mass spectrometry": {
                                 "order": 2,
-                                "label": "Mass Spectrometry Protocol",
+                                "label": "Mass Spectrometry (Protocol)",
                                 "fields": [
                                     "Scan polarity",
                                     "Scan m/z range",
@@ -21945,7 +21988,7 @@
                         "assayFileDefaultValues": {
                             "Mass spectrometry": {
                                 "order": 1,
-                                "label": "Mass Spectrometry Protocol",
+                                "label": "Mass Spectrometry (Protocol)",
                                 "fields": [
                                     "Scan polarity",
                                     "Scan m/z range",
@@ -21968,7 +22011,7 @@
                         "assayFileDefaultValues": {
                             "NMR sample": {
                                 "order": 1,
-                                "label": "NMR sample Protocol",
+                                "label": "NMR sample (Protocol)",
                                 "fields": [
                                     "NMR tube type",
                                     "Solvent",
@@ -21978,7 +22021,7 @@
                             },
                             "NMR spectroscopy": {
                                 "order": 2,
-                                "label": "NMR spectroscopy Protocol",
+                                "label": "NMR spectroscopy (Protocol)",
                                 "fields": [
                                     "Instrument",
                                     "NMR Probe",
@@ -22001,7 +22044,7 @@
                         "assayFileDefaultValues": {
                             "Magnetic resonance imaging": {
                                 "order": 1,
-                                "label": "Magnetic resonance imaging Protocol",
+                                "label": "Magnetic resonance imaging (Protocol)",
                                 "fields": [
                                     "Instrument",
                                     "Tomography",
@@ -22010,7 +22053,7 @@
                             },
                             "In vivo magnetic resonance spectroscopy": {
                                 "order": 2,
-                                "label": "In vivo magnetic resonance spectroscopy Protocol",
+                                "label": "In vivo magnetic resonance spectroscopy (Protocol)",
                                 "fields": [
                                     "Spatial resolution",
                                     "Field of view",
@@ -22025,7 +22068,7 @@
                             },
                             "In vivo magnetic resonance assay": {
                                 "order": 3,
-                                "label": "In vivo magnetic resonance assay Protocol",
+                                "label": "In vivo magnetic resonance assay (Protocol)",
                                 "fields": [
                                     "NMR tube type",
                                     "Solvent",
@@ -22047,20 +22090,16 @@
                         "assayFileDefaultValues": {
                             "Preparation": {
                                 "order": 1,
-                                "label": "Preparation Protocol",
+                                "label": "Preparation (Protocol)",
                                 "fields": [
                                     "Sample mounting",
                                     "Sample preservation",
-                                    "Tissue modification",
-                                    "Sectioning instrument",
-                                    "Section thickness",
-                                    "Matrix",
-                                    "Matrix application"
+                                    "Tissue modification"
                                 ]
                             },
                             "Mass spectrometry": {
                                 "order": 2,
-                                "label": "Mass Spectrometry Protocol",
+                                "label": "Mass Spectrometry (Protocol)",
                                 "fields": [
                                     "Scan polarity",
                                     "Scan m/z range",
@@ -22069,30 +22108,12 @@
                                     "Ion source",
                                     "Mass analyzer",
                                     "Solvent",
-                                    "Target material",
-                                    "Spatial resolution",
-                                    "Pixel size x",
-                                    "Pixel size y",
-                                    "Max count of pixel x",
-                                    "Max count of pixel y",
-                                    "Max dimension x",
-                                    "Max dimension y",
-                                    "Inlet type",
-                                    "Detector",
-                                    "Detector mode",
                                     "Resolving power",
                                     "Resolving power m/z",
-                                    "Native spectrum identifier format",
-                                    "Data file content",
-                                    "Spectrum representation",
-                                    "Raw data file format",
-                                    "Instrument software",
-                                    "Instrument software version",
                                     "Line scan direction",
                                     "Line scan sequence",
                                     "Scan pattern",
-                                    "Scan type",
-                                    "Number of scans"
+                                    "Scan type"
                                 ]
                             }
                         }
@@ -22109,7 +22130,7 @@
                         "assayFileDefaultValues": {
                             "Chromatography": {
                                 "order": 1,
-                                "label": "Chromatography Protocol",
+                                "label": "Chromatography (Protocol)",
                                 "fields": [
                                     "Chromatography Instrument",
                                     "Autosampler model",
@@ -22135,7 +22156,7 @@
                         "assayFileDefaultValues": {
                             "Chromatography": {
                                 "order": 1,
-                                "label": "Chromatography Protocol",
+                                "label": "Chromatography (Protocol)",
                                 "fields": [
                                     "Chromatography Instrument",
                                     "Autosampler model",
@@ -22207,17 +22228,17 @@
                     },
                     "cell-type": {
                         "visible": true,
-                        "order": 5,
+                        "order": 3,
                         "min": 0
                     },
                     "disease": {
                         "visible": true,
-                        "order": 3,
+                        "order": 4,
                         "min": 0
                     },
                     "instrument": {
                         "visible": true,
-                        "order": 4,
+                        "order": 5,
                         "min": 0
                     },
                     "omics-type": {
@@ -22289,21 +22310,21 @@
                     "ms-mhd-enabled": [
                         "LC-MS",
                         "GC-MS",
-                        "GCxGC-MS",
-                        "MALDI-MS",
+                        "CE-MS",
                         "FIA-MS",
                         "DI-MS",
-                        "CE-MS",
+                        "MALDI-MS",
+                        "GCxGC-MS",
                         "MS"
                     ],
                     "ms-mhd-legacy": [
                         "LC-MS",
                         "GC-MS",
-                        "GCxGC-MS",
-                        "MALDI-MS",
+                        "CE-MS",
                         "FIA-MS",
                         "DI-MS",
-                        "CE-MS",
+                        "MALDI-MS",
+                        "GCxGC-MS",
                         "MS"
                     ],
                     "ms-imaging": [
@@ -22319,11 +22340,11 @@
                     "other": [
                         "LC-MS",
                         "GC-MS",
-                        "GCxGC-MS",
-                        "MALDI-MS",
+                        "CE-MS",
                         "FIA-MS",
                         "DI-MS",
-                        "CE-MS",
+                        "MALDI-MS",
+                        "GCxGC-MS",
                         "MS",
                         "MSImaging",
                         "NMR",
@@ -22371,10 +22392,9 @@
                         "assayFileDefaultValues": {
                             "Chromatography": {
                                 "order": 1,
-                                "label": "Chromatography Protocol",
+                                "label": "Chromatography (Protocol)",
                                 "fields": [
                                     "Chromatography Instrument",
-                                    "Autosampler model",
                                     "Column model",
                                     "Column type",
                                     "Guard column"
@@ -22382,7 +22402,7 @@
                             },
                             "Mass spectrometry": {
                                 "order": 2,
-                                "label": "Mass Spectrometry Protocol",
+                                "label": "Mass Spectrometry (Protocol)",
                                 "fields": [
                                     "Scan polarity",
                                     "Scan m/z range",
@@ -22405,7 +22425,7 @@
                         "assayFileDefaultValues": {
                             "Chromatography": {
                                 "order": 1,
-                                "label": "Chromatography Protocol",
+                                "label": "Chromatography (Protocol)",
                                 "fields": [
                                     "Chromatography Instrument",
                                     "Autosampler model",
@@ -22416,7 +22436,7 @@
                             },
                             "Mass spectrometry": {
                                 "order": 2,
-                                "label": "Mass Spectrometry Protocol",
+                                "label": "Mass Spectrometry (Protocol)",
                                 "fields": [
                                     "Scan polarity",
                                     "Scan m/z range",
@@ -22439,7 +22459,7 @@
                         "assayFileDefaultValues": {
                             "Chromatography": {
                                 "order": 1,
-                                "label": "Chromatography Protocol",
+                                "label": "Chromatography (Protocol)",
                                 "fields": [
                                     "Chromatography Instrument",
                                     "Autosampler model",
@@ -22452,7 +22472,7 @@
                             },
                             "Mass spectrometry": {
                                 "order": 2,
-                                "label": "Mass Spectrometry Protocol",
+                                "label": "Mass Spectrometry (Protocol)",
                                 "fields": [
                                     "Scan polarity",
                                     "Scan m/z range",
@@ -22475,7 +22495,7 @@
                         "assayFileDefaultValues": {
                             "Mass spectrometry": {
                                 "order": 1,
-                                "label": "Mass Spectrometry Protocol",
+                                "label": "Mass Spectrometry (Protocol)",
                                 "fields": [
                                     "Scan polarity",
                                     "Scan m/z range",
@@ -22498,14 +22518,14 @@
                         "assayFileDefaultValues": {
                             "Flow Injection Analysis": {
                                 "order": 1,
-                                "label": "Flow Injection Analysis Protocol",
+                                "label": "Flow Injection Analysis (Protocol)",
                                 "fields": [
                                     "FIA Instrument"
                                 ]
                             },
                             "Mass spectrometry": {
                                 "order": 2,
-                                "label": "Mass Spectrometry Protocol",
+                                "label": "Mass Spectrometry (Protocol)",
                                 "fields": [
                                     "Scan polarity",
                                     "Scan m/z range",
@@ -22528,14 +22548,14 @@
                         "assayFileDefaultValues": {
                             "Direct infusion": {
                                 "order": 1,
-                                "label": "Direct infusion Protocol",
+                                "label": "Direct infusion (Protocol)",
                                 "fields": [
                                     "DI Instrument"
                                 ]
                             },
                             "Mass spectrometry": {
                                 "order": 2,
-                                "label": "Mass Spectrometry Protocol",
+                                "label": "Mass Spectrometry (Protocol)",
                                 "fields": [
                                     "Scan polarity",
                                     "Scan m/z range",
@@ -22558,7 +22578,7 @@
                         "assayFileDefaultValues": {
                             "Capillary Electrophoresis": {
                                 "order": 1,
-                                "label": "Capillary Electrophoresis Protocol",
+                                "label": "Capillary Electrophoresis (Protocol)",
                                 "fields": [
                                     "CE Instrument",
                                     "Column model",
@@ -22567,7 +22587,7 @@
                             },
                             "Mass spectrometry": {
                                 "order": 2,
-                                "label": "Mass Spectrometry Protocol",
+                                "label": "Mass Spectrometry (Protocol)",
                                 "fields": [
                                     "Scan polarity",
                                     "Scan m/z range",
@@ -22590,7 +22610,7 @@
                         "assayFileDefaultValues": {
                             "Mass spectrometry": {
                                 "order": 1,
-                                "label": "Mass Spectrometry Protocol",
+                                "label": "Mass Spectrometry (Protocol)",
                                 "fields": [
                                     "Scan polarity",
                                     "Scan m/z range",
@@ -22613,7 +22633,7 @@
                         "assayFileDefaultValues": {
                             "NMR sample": {
                                 "order": 1,
-                                "label": "NMR sample Protocol",
+                                "label": "NMR sample (Protocol)",
                                 "fields": [
                                     "NMR tube type",
                                     "Solvent",
@@ -22623,7 +22643,7 @@
                             },
                             "NMR spectroscopy": {
                                 "order": 2,
-                                "label": "NMR spectroscopy Protocol",
+                                "label": "NMR spectroscopy (Protocol)",
                                 "fields": [
                                     "Instrument",
                                     "NMR Probe",
@@ -22646,7 +22666,7 @@
                         "assayFileDefaultValues": {
                             "Magnetic resonance imaging": {
                                 "order": 1,
-                                "label": "Magnetic resonance imaging Protocol",
+                                "label": "Magnetic resonance imaging (Protocol)",
                                 "fields": [
                                     "Instrument",
                                     "Tomography",
@@ -22655,7 +22675,7 @@
                             },
                             "In vivo magnetic resonance spectroscopy": {
                                 "order": 2,
-                                "label": "In vivo magnetic resonance spectroscopy Protocol",
+                                "label": "In vivo magnetic resonance spectroscopy (Protocol)",
                                 "fields": [
                                     "Spatial resolution",
                                     "Field of view",
@@ -22670,7 +22690,7 @@
                             },
                             "In vivo magnetic resonance assay": {
                                 "order": 3,
-                                "label": "In vivo magnetic resonance assay Protocol",
+                                "label": "In vivo magnetic resonance assay (Protocol)",
                                 "fields": [
                                     "NMR tube type",
                                     "Solvent",
@@ -22692,20 +22712,16 @@
                         "assayFileDefaultValues": {
                             "Preparation": {
                                 "order": 1,
-                                "label": "Preparation Protocol",
+                                "label": "Preparation (Protocol)",
                                 "fields": [
                                     "Sample mounting",
                                     "Sample preservation",
-                                    "Tissue modification",
-                                    "Sectioning instrument",
-                                    "Section thickness",
-                                    "Matrix",
-                                    "Matrix application"
+                                    "Tissue modification"
                                 ]
                             },
                             "Mass spectrometry": {
                                 "order": 2,
-                                "label": "Mass Spectrometry Protocol",
+                                "label": "Mass Spectrometry (Protocol)",
                                 "fields": [
                                     "Scan polarity",
                                     "Scan m/z range",
@@ -22714,30 +22730,12 @@
                                     "Ion source",
                                     "Mass analyzer",
                                     "Solvent",
-                                    "Target material",
-                                    "Spatial resolution",
-                                    "Pixel size x",
-                                    "Pixel size y",
-                                    "Max count of pixel x",
-                                    "Max count of pixel y",
-                                    "Max dimension x",
-                                    "Max dimension y",
-                                    "Inlet type",
-                                    "Detector",
-                                    "Detector mode",
                                     "Resolving power",
                                     "Resolving power m/z",
-                                    "Native spectrum identifier format",
-                                    "Data file content",
-                                    "Spectrum representation",
-                                    "Raw data file format",
-                                    "Instrument software",
-                                    "Instrument software version",
                                     "Line scan direction",
                                     "Line scan sequence",
                                     "Scan pattern",
-                                    "Scan type",
-                                    "Number of scans"
+                                    "Scan type"
                                 ]
                             }
                         }
@@ -22754,7 +22752,7 @@
                         "assayFileDefaultValues": {
                             "Chromatography": {
                                 "order": 1,
-                                "label": "Chromatography Protocol",
+                                "label": "Chromatography (Protocol)",
                                 "fields": [
                                     "Chromatography Instrument",
                                     "Autosampler model",
@@ -22780,7 +22778,7 @@
                         "assayFileDefaultValues": {
                             "Chromatography": {
                                 "order": 1,
-                                "label": "Chromatography Protocol",
+                                "label": "Chromatography (Protocol)",
                                 "fields": [
                                     "Chromatography Instrument",
                                     "Autosampler model",
@@ -22852,17 +22850,17 @@
                     },
                     "cell-type": {
                         "visible": true,
-                        "order": 5,
+                        "order": 3,
                         "min": 0
                     },
                     "disease": {
                         "visible": true,
-                        "order": 3,
+                        "order": 4,
                         "min": 0
                     },
                     "instrument": {
                         "visible": true,
-                        "order": 4,
+                        "order": 5,
                         "min": 0
                     },
                     "omics-type": {
@@ -22934,21 +22932,21 @@
                     "ms-mhd-enabled": [
                         "LC-MS",
                         "GC-MS",
-                        "GCxGC-MS",
-                        "MALDI-MS",
+                        "CE-MS",
                         "FIA-MS",
                         "DI-MS",
-                        "CE-MS",
+                        "MALDI-MS",
+                        "GCxGC-MS",
                         "MS"
                     ],
                     "ms-mhd-legacy": [
                         "LC-MS",
                         "GC-MS",
-                        "GCxGC-MS",
-                        "MALDI-MS",
+                        "CE-MS",
                         "FIA-MS",
                         "DI-MS",
-                        "CE-MS",
+                        "MALDI-MS",
+                        "GCxGC-MS",
                         "MS"
                     ],
                     "ms-imaging": [
@@ -22964,11 +22962,11 @@
                     "other": [
                         "LC-MS",
                         "GC-MS",
-                        "GCxGC-MS",
-                        "MALDI-MS",
+                        "CE-MS",
                         "FIA-MS",
                         "DI-MS",
-                        "CE-MS",
+                        "MALDI-MS",
+                        "GCxGC-MS",
                         "MS",
                         "MSImaging",
                         "NMR",

@@ -395,7 +395,7 @@
         "DOID": {
             "sourceName": "DOID",
             "sourceFile": "https://purl.obolibrary.org/obo/doid/translations/doid-international.owl",
-            "sourceVersion": "2026-02-02",
+            "sourceVersion": "2026-02-28",
             "sourceDescription": "Human Disease Ontology",
             "sourceDetails": "The Disease Ontology has been developed as a standardized ontology for human disease with the purpose of providing the biomedical community with consistent, reusable and sustainable descriptions of human disease terms, phenotype characteristics and related medical vocabulary disease concepts."
         },
@@ -801,7 +801,7 @@
         "ICO": {
             "sourceName": "ICO",
             "sourceFile": "http://purl.obolibrary.org/obo/ico.owl",
-            "sourceVersion": "2025-03-15",
+            "sourceVersion": "2026-02-28",
             "sourceDescription": "Informed Consent Ontology (ICO)",
             "sourceDetails": "The Informed Consent Ontology (ICO) is an ontology for the informed consent and informed consent process in the medical field."
         },

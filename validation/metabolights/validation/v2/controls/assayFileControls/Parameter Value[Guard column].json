@@ -304,7 +304,8 @@
                 "studyCategoryFilter": null,
                 "templateVersionFilter": null,
                 "isaFileTemplateNameFilter": [
-                    "GC-MS"
+                    "GC-MS",
+                    "GCxGC-MS"
                 ],
                 "linkedFieldAndValueFilter": null
             },

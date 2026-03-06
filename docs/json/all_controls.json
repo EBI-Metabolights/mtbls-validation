@@ -1475,7 +1475,11 @@
                     "studyCategoryFilter": null,
                     "templateVersionFilter": null,
                     "isaFileTemplateNameFilter": [
-                        "LC-MS"
+                        "LC-MS",
+                        "MALDI-MS",
+                        "FIA-MS",
+                        "CE-MS",
+                        "MS"
                     ],
                     "linkedFieldAndValueFilter": [
                         {
@@ -2375,12 +2379,13 @@
                 "description": "",
                 "selectionCriteria": {
                     "isaFileType": "assay",
-                    "studyCreatedAtOrAfter": "2025-12-01T00:00:00",
+                    "studyCreatedAtOrAfter": null,
                     "studyCreatedBefore": null,
                     "studyCategoryFilter": null,
                     "templateVersionFilter": null,
                     "isaFileTemplateNameFilter": [
-                        "GC-MS"
+                        "GC-MS",
+                        "GCxGC-MS"
                     ],
                     "linkedFieldAndValueFilter": [
                         {
@@ -3724,6 +3729,428 @@
                 "unexpectedTerms": []
             }
         ],
+        "Parameter Value[Column model 1]": [
+            {
+                "ruleName": "Parameter Value[Column model 1]-01",
+                "fieldName": "Parameter Value[Column model 1]",
+                "ontologies": [
+                    "MS"
+                ],
+                "allowedParentOntologyTerms": null,
+                "description": "",
+                "selectionCriteria": {
+                    "isaFileType": "assay",
+                    "studyCreatedAtOrAfter": null,
+                    "studyCreatedBefore": null,
+                    "studyCategoryFilter": null,
+                    "templateVersionFilter": null,
+                    "isaFileTemplateNameFilter": [
+                        "GC-MS",
+                        "GCxGC-MS"
+                    ],
+                    "linkedFieldAndValueFilter": [
+                        {
+                            "name": "Protocol REF",
+                            "value": "Chromatography"
+                        }
+                    ]
+                },
+                "termEnforcementLevel": "recommended",
+                "unexpectedTermEnforcementLevel": "recommended",
+                "validationType": "any-ontology-term",
+                "constraints": {},
+                "defaultValue": null,
+                "allowedMissingOntologyTerms": [],
+                "allowedOtherSources": [
+                    {
+                        "sourceLabel": "MTBLS",
+                        "accessionPrefix": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_"
+                    },
+                    {
+                        "sourceLabel": "wikidata",
+                        "accessionPrefix": "https://www.wikidata.org/wiki/"
+                    },
+                    {
+                        "sourceLabel": "ILX",
+                        "accessionPrefix": "http://uri.interlex.org/base/ilx_"
+                    }
+                ],
+                "allowedPlaceholders": [
+                    {
+                        "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/placeholder",
+                        "termSourceRef": "MTBLS"
+                    }
+                ],
+                "terms": [
+                    {
+                        "term": "5% phenyldimethyl silicone GC (0.18 µm, 20 m x 0.18 mm)",
+                        "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000955",
+                        "termSourceRef": "MTBLS"
+                    },
+                    {
+                        "term": "BP-20 (0.25 µm, 0.25 mm x 60 m; SGE)",
+                        "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000966",
+                        "termSourceRef": "MTBLS"
+                    },
+                    {
+                        "term": "BPX-50 (0.1 µm, 0.1 mm x 1.5 m; SGE)",
+                        "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000982",
+                        "termSourceRef": "MTBLS"
+                    },
+                    {
+                        "term": "BPX-50 (0.1 µm, 0.1 mm x 2 m; SGE)",
+                        "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000979",
+                        "termSourceRef": "MTBLS"
+                    },
+                    {
+                        "term": "CP-Sil 8 CB Low Bleed/MS (0.25 µm, 0.25 mm x 30 m; Varian)",
+                        "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000946",
+                        "termSourceRef": "MTBLS"
+                    },
+                    {
+                        "term": "DB-23 GC (0.15 µm, 0.25 mm x 60 m; Agilent Technologies)",
+                        "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000936",
+                        "termSourceRef": "MTBLS"
+                    },
+                    {
+                        "term": "DB-35 GC (0.25 µm, 0.32 mm x 30 m; Agilent Technologies)",
+                        "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002133",
+                        "termSourceRef": "MTBLS"
+                    },
+                    {
+                        "term": "DB-35ms GC (0.25 µm, 0.25 mm x 30 m; Agilent Technologies)",
+                        "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000938",
+                        "termSourceRef": "MTBLS"
+                    },
+                    {
+                        "term": "DB-5 GC (1 µm, 0.25 mm x 15 m; Agilent Technologies)",
+                        "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000971",
+                        "termSourceRef": "MTBLS"
+                    },
+                    {
+                        "term": "DB-5 GC (1 µm, 0.25 mm x 30 m; Agilent Technologies)",
+                        "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002134",
+                        "termSourceRef": "MTBLS"
+                    },
+                    {
+                        "term": "DB-50 GC (0.25 µm, 0.25 mm x 30 m; Supelco)",
+                        "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000988",
+                        "termSourceRef": "MTBLS"
+                    },
+                    {
+                        "term": "DB-5ms GC (0.1 µm, 0.25 mm x 30 m; Agilent Technologies)",
+                        "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000986",
+                        "termSourceRef": "MTBLS"
+                    },
+                    {
+                        "term": "DB-5ms GC (0.25 µm, 0.25 mm x 30 m; Agilent Technologies)",
+                        "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000964",
+                        "termSourceRef": "MTBLS"
+                    },
+                    {
+                        "term": "DB-5ms GC (0.25 µm, 0.25 mm x 30 m; J&W Scientific)",
+                        "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002135",
+                        "termSourceRef": "MTBLS"
+                    },
+                    {
+                        "term": "DB-5ms GC (0.5 µm, 0.25 mm x 30 m; Agilent Technologies)",
+                        "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002136",
+                        "termSourceRef": "MTBLS"
+                    },
+                    {
+                        "term": "DB-5ms Ultra Inert GC (0.18 µm, 0.18 mm x 10 m; Agilent Technologies)",
+                        "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000939",
+                        "termSourceRef": "MTBLS"
+                    },
+                    {
+                        "term": "DB-5ms Ultra Inert GC (0.25 µm, 0.25 mm x 30 m; Agilent Technologies)",
+                        "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000950",
+                        "termSourceRef": "MTBLS"
+                    },
+                    {
+                        "term": "DB-WAX (0.25 µm, 0.25 mm x 30 m; Agilent Technologies)",
+                        "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000967",
+                        "termSourceRef": "MTBLS"
+                    },
+                    {
+                        "term": "DB-WAXetr (0.25 µm, 0.25 mm x 30 m; Agilent Technologies)",
+                        "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002137",
+                        "termSourceRef": "MTBLS"
+                    },
+                    {
+                        "term": "DB-WAXms (0.25 µm, 0.25 mm x 30 m; Agilent Technologies)",
+                        "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002138",
+                        "termSourceRef": "MTBLS"
+                    },
+                    {
+                        "term": "HP-5 GC (0.25 µm, 0.25 mm x 30 m; Agilent Technologies)",
+                        "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002155",
+                        "termSourceRef": "MTBLS"
+                    },
+                    {
+                        "term": "HP-5 GC (0.25 µm, 0.32 mm x 28 m; Agilent Technologies)",
+                        "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000968",
+                        "termSourceRef": "MTBLS"
+                    },
+                    {
+                        "term": "HP-5 GC (0.25 µm, 0.32 mm x 30 m; Agilent Technologies)",
+                        "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000969",
+                        "termSourceRef": "MTBLS"
+                    },
+                    {
+                        "term": "HP-5 GC (0.25 µm, 0.32 mm x 60 m; Agilent Technologies)",
+                        "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000985",
+                        "termSourceRef": "MTBLS"
+                    },
+                    {
+                        "term": "HP-5ms GC (0.25 µm, 0.25 mm x 30 m; Agilent Technologies)",
+                        "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000958",
+                        "termSourceRef": "MTBLS"
+                    },
+                    {
+                        "term": "HP-5ms Ultra Inert GC (0.25 µm, 0.25 mm x 30 m; Agilent Technologies)",
+                        "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000944",
+                        "termSourceRef": "MTBLS"
+                    },
+                    {
+                        "term": "HP-FFAP GC (0.25 µm, 0.25 mm x 30 m; Agilent Technologies)",
+                        "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000972",
+                        "termSourceRef": "MTBLS"
+                    },
+                    {
+                        "term": "HP-INNOWax GC (0.25 µm, 0.25 mm x 30 m; Agilent Technologies)",
+                        "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000951",
+                        "termSourceRef": "MTBLS"
+                    },
+                    {
+                        "term": "HP-INNOWax GC (0.25 µm, 0.25 mm x 60 m; J&W Scientific)",
+                        "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000965",
+                        "termSourceRef": "MTBLS"
+                    },
+                    {
+                        "term": "InertCap 5MS/NP (0.25 µm, 0.25 mm x 30 m; GL Sciences)",
+                        "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002163",
+                        "termSourceRef": "MTBLS"
+                    },
+                    {
+                        "term": "J&W DB-5 GC (1 µm, 0.25 mm x 30 m; Agilent Technologies)",
+                        "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002167",
+                        "termSourceRef": "MTBLS"
+                    },
+                    {
+                        "term": "Rtx-200 (0.25 µm, 0.25 mm x 1.75 m; Restek)",
+                        "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000980",
+                        "termSourceRef": "MTBLS"
+                    },
+                    {
+                        "term": "Rtx-200 (0.25 µm, 0.25 mm x 2 m; Restek)",
+                        "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000987",
+                        "termSourceRef": "MTBLS"
+                    },
+                    {
+                        "term": "Rtx-5 (0.20 µm, 0.18 mm x 10 m; Restek)",
+                        "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000970",
+                        "termSourceRef": "MTBLS"
+                    },
+                    {
+                        "term": "Rtx-5MS (0.25 µm, 0.25 mm x 30 m; Restek)",
+                        "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000960",
+                        "termSourceRef": "MTBLS"
+                    },
+                    {
+                        "term": "Rtx-5Sil MS (0.25 µm, 0.25 mm x 30 m; Restek)",
+                        "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000981",
+                        "termSourceRef": "MTBLS"
+                    },
+                    {
+                        "term": "Rxi-17Sil MS (0.15 µm, 0.15 mm x 1.5 m; Restek)",
+                        "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000957",
+                        "termSourceRef": "MTBLS"
+                    },
+                    {
+                        "term": "Rxi-17Sil MS (0.25 µm, 0.25 mm x 2 m; Restek)",
+                        "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002200",
+                        "termSourceRef": "MTBLS"
+                    },
+                    {
+                        "term": "Rxi-1ms (0.25 µm, 0.25 mm x 30 m; Restek)",
+                        "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002201",
+                        "termSourceRef": "MTBLS"
+                    },
+                    {
+                        "term": "Rxi-5ms (0.18 µm, 0.18 mm x 10 m; Restek)",
+                        "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000961",
+                        "termSourceRef": "MTBLS"
+                    },
+                    {
+                        "term": "Rxi-5ms (0.25 µm, 0.25 mm x 30 m; Restek)",
+                        "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002202",
+                        "termSourceRef": "MTBLS"
+                    },
+                    {
+                        "term": "Rxi-5Sil MS (0.18 µm, 0.18 mm x 10 m; Restek)",
+                        "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000977",
+                        "termSourceRef": "MTBLS"
+                    },
+                    {
+                        "term": "Rxi-5Sil MS (0.25 µm, 0.25 mm x 15 m; Restek)",
+                        "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002203",
+                        "termSourceRef": "MTBLS"
+                    },
+                    {
+                        "term": "Rxi-5Sil MS (0.25 µm, 0.25 mm x 30 m; Restek)",
+                        "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000973",
+                        "termSourceRef": "MTBLS"
+                    },
+                    {
+                        "term": "Rxi-5Sil MS w/Integra-Guard (0.25 µm, 0.25 mm x 30 m; Restek)",
+                        "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002204",
+                        "termSourceRef": "MTBLS"
+                    },
+                    {
+                        "term": "Rxi-624Sil MS (1.4 µm, 0.25 mm x 60 m; Restek)",
+                        "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002205",
+                        "termSourceRef": "MTBLS"
+                    },
+                    {
+                        "term": "SH-Rxi-5Sil MS (0.25 µm, 0.25 mm x 30 m; Shimadzu)",
+                        "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000942",
+                        "termSourceRef": "MTBLS"
+                    },
+                    {
+                        "term": "SPB-50 GC (0.25 µm, 0.25 mm x 30 m; Supelco)",
+                        "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000975",
+                        "termSourceRef": "MTBLS"
+                    },
+                    {
+                        "term": "Stabilwax (0.25 µm, 0.25 mm x 30 m; Restek)",
+                        "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002221",
+                        "termSourceRef": "MTBLS"
+                    },
+                    {
+                        "term": "Stabilwax-DA (0.25 µm, 0.32 mm x 30 m; Restek)",
+                        "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000948",
+                        "termSourceRef": "MTBLS"
+                    },
+                    {
+                        "term": "Stabilwax-MS (0.25 µm, 0.32 mm x 30 m; Restek)",
+                        "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000952",
+                        "termSourceRef": "MTBLS"
+                    },
+                    {
+                        "term": "SUPELCOWAX 10 Capillary GC (0.25 µm, 0.25 mm x 30 m; Merck Sequant)",
+                        "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002224",
+                        "termSourceRef": "MTBLS"
+                    },
+                    {
+                        "term": "TRACE TR-5MS GC (0.25 µm, 0.25 mm x 30 m, Thermo Scientific)",
+                        "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000956",
+                        "termSourceRef": "MTBLS"
+                    },
+                    {
+                        "term": "TRACE TR-FAME GC (0.25 µm, 0.25 mm x 30 m, Thermo Scientific)",
+                        "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000983",
+                        "termSourceRef": "MTBLS"
+                    },
+                    {
+                        "term": "TraceGOLD TG-5MS (0.25 µm, 0.25 mm x 30 m; Thermo Scientific)",
+                        "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002254",
+                        "termSourceRef": "MTBLS"
+                    },
+                    {
+                        "term": "TraceGOLD TG-5SilMS (0.25 µm, 0.25 mm x 30 m; Thermo Scientific)",
+                        "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000940",
+                        "termSourceRef": "MTBLS"
+                    },
+                    {
+                        "term": "VF-17ms (0.25 µm, 0.25 mm x 30 m; Varian)",
+                        "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000949",
+                        "termSourceRef": "MTBLS"
+                    },
+                    {
+                        "term": "VF-1ms GC (0.25 µm, 0.25 mm x 30 m; J&W Scientific)",
+                        "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000937",
+                        "termSourceRef": "MTBLS"
+                    },
+                    {
+                        "term": "VF-5ms GC (0.25 µm, 0.25 mm x 30 m; Agilent Technologies)",
+                        "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000943",
+                        "termSourceRef": "MTBLS"
+                    },
+                    {
+                        "term": "VF-5ms GC (0.25 µm, 0.25 mm x 30 m; Supelco)",
+                        "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000974",
+                        "termSourceRef": "MTBLS"
+                    },
+                    {
+                        "term": "VF-5ms GC (0.25 µm, 0.25 mm x 30 m; Varian)",
+                        "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000954",
+                        "termSourceRef": "MTBLS"
+                    },
+                    {
+                        "term": "VF-WAXms GC (0.25 µm, 0.25 mm x 30 m; Agilent Technologies)",
+                        "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000947",
+                        "termSourceRef": "MTBLS"
+                    },
+                    {
+                        "term": "Zebron ZB-1701 w/GUARDIAN GC (0.15 μm, 0.25mm x 30 m + 5 m; Phenomenex)",
+                        "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000984",
+                        "termSourceRef": "MTBLS"
+                    },
+                    {
+                        "term": "Zebron ZB-1ms GC (0.25 µm, 0.25 mm x 30 m; Phenomenex)",
+                        "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000978",
+                        "termSourceRef": "MTBLS"
+                    },
+                    {
+                        "term": "Zebron ZB-5 GC (0.25 µm, 0.25 mm x 15 m; Phenomenex)",
+                        "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000962",
+                        "termSourceRef": "MTBLS"
+                    },
+                    {
+                        "term": "Zebron ZB-5 GC (0.25 µm, 0.25 mm x 30 m; Phenomenex)",
+                        "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000945",
+                        "termSourceRef": "MTBLS"
+                    },
+                    {
+                        "term": "Zebron ZB-5 w/GUARDIAN GC (0.25 µm, 0.25 mm x 30 + 10 m; Phenomenex)",
+                        "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000976",
+                        "termSourceRef": "MTBLS"
+                    },
+                    {
+                        "term": "Zebron ZB-50 GC (0.25 µm, 0.25 mm x 30 m; Phenomenex)",
+                        "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002276",
+                        "termSourceRef": "MTBLS"
+                    },
+                    {
+                        "term": "Zebron ZB-50 GC Cap. (0.25 µm, 0.25 mm x 30 m; Phenomenex)",
+                        "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002277",
+                        "termSourceRef": "MTBLS"
+                    },
+                    {
+                        "term": "Zebron ZB-5ms GC (0.25 µm, 0.25 mm x 30 m; Phenomenex)",
+                        "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000959",
+                        "termSourceRef": "MTBLS"
+                    },
+                    {
+                        "term": "Zebron ZB-AAA GC (0.25 mm x 10 m; Phenomenex)",
+                        "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000963",
+                        "termSourceRef": "MTBLS"
+                    },
+                    {
+                        "term": "Zebron ZB-SemiVolatiles GC (0.25 µm, 0.25 mm x 30 m; Phenomenex)",
+                        "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000941",
+                        "termSourceRef": "MTBLS"
+                    },
+                    {
+                        "term": "Zebron ZB-WAX GC (0.25 µm, 0.25 mm x 30 m; Phenomenex)",
+                        "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000953",
+                        "termSourceRef": "MTBLS"
+                    }
+                ],
+                "unexpectedTerms": []
+            }
+        ],
         "Parameter Value[Ion source]": [
             {
                 "ruleName": "Parameter Value[Ion source]-01",
@@ -3740,7 +4167,11 @@
                     "studyCategoryFilter": null,
                     "templateVersionFilter": null,
                     "isaFileTemplateNameFilter": [
-                        "LC-MS"
+                        "LC-MS",
+                        "MALDI-MS",
+                        "FIA-MS",
+                        "CE-MS",
+                        "MS"
                     ],
                     "linkedFieldAndValueFilter": [
                         {
@@ -3824,7 +4255,8 @@
                     "studyCategoryFilter": null,
                     "templateVersionFilter": null,
                     "isaFileTemplateNameFilter": [
-                        "GC-MS"
+                        "GC-MS",
+                        "GCxGC-MS"
                     ],
                     "linkedFieldAndValueFilter": [
                         {
@@ -4557,7 +4989,8 @@
                     "studyCategoryFilter": null,
                     "templateVersionFilter": null,
                     "isaFileTemplateNameFilter": [
-                        "GC-MS"
+                        "GC-MS",
+                        "GCxGC-MS"
                     ],
                     "linkedFieldAndValueFilter": null
                 },
@@ -4847,6 +5280,428 @@
                 "allowedOtherSources": [],
                 "allowedPlaceholders": [],
                 "terms": [],
+                "unexpectedTerms": []
+            }
+        ],
+        "Parameter Value[Column model 2]": [
+            {
+                "ruleName": "Parameter Value[Column model 2]-01",
+                "fieldName": "Parameter Value[Column model 2]",
+                "ontologies": [
+                    "MS"
+                ],
+                "allowedParentOntologyTerms": null,
+                "description": "",
+                "selectionCriteria": {
+                    "isaFileType": "assay",
+                    "studyCreatedAtOrAfter": null,
+                    "studyCreatedBefore": null,
+                    "studyCategoryFilter": null,
+                    "templateVersionFilter": null,
+                    "isaFileTemplateNameFilter": [
+                        "GC-MS",
+                        "GCxGC-MS"
+                    ],
+                    "linkedFieldAndValueFilter": [
+                        {
+                            "name": "Protocol REF",
+                            "value": "Chromatography"
+                        }
+                    ]
+                },
+                "termEnforcementLevel": "recommended",
+                "unexpectedTermEnforcementLevel": "recommended",
+                "validationType": "any-ontology-term",
+                "constraints": {},
+                "defaultValue": null,
+                "allowedMissingOntologyTerms": [],
+                "allowedOtherSources": [
+                    {
+                        "sourceLabel": "MTBLS",
+                        "accessionPrefix": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_"
+                    },
+                    {
+                        "sourceLabel": "wikidata",
+                        "accessionPrefix": "https://www.wikidata.org/wiki/"
+                    },
+                    {
+                        "sourceLabel": "ILX",
+                        "accessionPrefix": "http://uri.interlex.org/base/ilx_"
+                    }
+                ],
+                "allowedPlaceholders": [
+                    {
+                        "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/placeholder",
+                        "termSourceRef": "MTBLS"
+                    }
+                ],
+                "terms": [
+                    {
+                        "term": "5% phenyldimethyl silicone GC (0.18 µm, 20 m x 0.18 mm)",
+                        "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000955",
+                        "termSourceRef": "MTBLS"
+                    },
+                    {
+                        "term": "BP-20 (0.25 µm, 0.25 mm x 60 m; SGE)",
+                        "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000966",
+                        "termSourceRef": "MTBLS"
+                    },
+                    {
+                        "term": "BPX-50 (0.1 µm, 0.1 mm x 1.5 m; SGE)",
+                        "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000982",
+                        "termSourceRef": "MTBLS"
+                    },
+                    {
+                        "term": "BPX-50 (0.1 µm, 0.1 mm x 2 m; SGE)",
+                        "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000979",
+                        "termSourceRef": "MTBLS"
+                    },
+                    {
+                        "term": "CP-Sil 8 CB Low Bleed/MS (0.25 µm, 0.25 mm x 30 m; Varian)",
+                        "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000946",
+                        "termSourceRef": "MTBLS"
+                    },
+                    {
+                        "term": "DB-23 GC (0.15 µm, 0.25 mm x 60 m; Agilent Technologies)",
+                        "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000936",
+                        "termSourceRef": "MTBLS"
+                    },
+                    {
+                        "term": "DB-35 GC (0.25 µm, 0.32 mm x 30 m; Agilent Technologies)",
+                        "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002133",
+                        "termSourceRef": "MTBLS"
+                    },
+                    {
+                        "term": "DB-35ms GC (0.25 µm, 0.25 mm x 30 m; Agilent Technologies)",
+                        "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000938",
+                        "termSourceRef": "MTBLS"
+                    },
+                    {
+                        "term": "DB-5 GC (1 µm, 0.25 mm x 15 m; Agilent Technologies)",
+                        "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000971",
+                        "termSourceRef": "MTBLS"
+                    },
+                    {
+                        "term": "DB-5 GC (1 µm, 0.25 mm x 30 m; Agilent Technologies)",
+                        "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002134",
+                        "termSourceRef": "MTBLS"
+                    },
+                    {
+                        "term": "DB-50 GC (0.25 µm, 0.25 mm x 30 m; Supelco)",
+                        "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000988",
+                        "termSourceRef": "MTBLS"
+                    },
+                    {
+                        "term": "DB-5ms GC (0.1 µm, 0.25 mm x 30 m; Agilent Technologies)",
+                        "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000986",
+                        "termSourceRef": "MTBLS"
+                    },
+                    {
+                        "term": "DB-5ms GC (0.25 µm, 0.25 mm x 30 m; Agilent Technologies)",
+                        "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000964",
+                        "termSourceRef": "MTBLS"
+                    },
+                    {
+                        "term": "DB-5ms GC (0.25 µm, 0.25 mm x 30 m; J&W Scientific)",
+                        "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002135",
+                        "termSourceRef": "MTBLS"
+                    },
+                    {
+                        "term": "DB-5ms GC (0.5 µm, 0.25 mm x 30 m; Agilent Technologies)",
+                        "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002136",
+                        "termSourceRef": "MTBLS"
+                    },
+                    {
+                        "term": "DB-5ms Ultra Inert GC (0.18 µm, 0.18 mm x 10 m; Agilent Technologies)",
+                        "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000939",
+                        "termSourceRef": "MTBLS"
+                    },
+                    {
+                        "term": "DB-5ms Ultra Inert GC (0.25 µm, 0.25 mm x 30 m; Agilent Technologies)",
+                        "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000950",
+                        "termSourceRef": "MTBLS"
+                    },
+                    {
+                        "term": "DB-WAX (0.25 µm, 0.25 mm x 30 m; Agilent Technologies)",
+                        "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000967",
+                        "termSourceRef": "MTBLS"
+                    },
+                    {
+                        "term": "DB-WAXetr (0.25 µm, 0.25 mm x 30 m; Agilent Technologies)",
+                        "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002137",
+                        "termSourceRef": "MTBLS"
+                    },
+                    {
+                        "term": "DB-WAXms (0.25 µm, 0.25 mm x 30 m; Agilent Technologies)",
+                        "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002138",
+                        "termSourceRef": "MTBLS"
+                    },
+                    {
+                        "term": "HP-5 GC (0.25 µm, 0.25 mm x 30 m; Agilent Technologies)",
+                        "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002155",
+                        "termSourceRef": "MTBLS"
+                    },
+                    {
+                        "term": "HP-5 GC (0.25 µm, 0.32 mm x 28 m; Agilent Technologies)",
+                        "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000968",
+                        "termSourceRef": "MTBLS"
+                    },
+                    {
+                        "term": "HP-5 GC (0.25 µm, 0.32 mm x 30 m; Agilent Technologies)",
+                        "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000969",
+                        "termSourceRef": "MTBLS"
+                    },
+                    {
+                        "term": "HP-5 GC (0.25 µm, 0.32 mm x 60 m; Agilent Technologies)",
+                        "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000985",
+                        "termSourceRef": "MTBLS"
+                    },
+                    {
+                        "term": "HP-5ms GC (0.25 µm, 0.25 mm x 30 m; Agilent Technologies)",
+                        "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000958",
+                        "termSourceRef": "MTBLS"
+                    },
+                    {
+                        "term": "HP-5ms Ultra Inert GC (0.25 µm, 0.25 mm x 30 m; Agilent Technologies)",
+                        "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000944",
+                        "termSourceRef": "MTBLS"
+                    },
+                    {
+                        "term": "HP-FFAP GC (0.25 µm, 0.25 mm x 30 m; Agilent Technologies)",
+                        "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000972",
+                        "termSourceRef": "MTBLS"
+                    },
+                    {
+                        "term": "HP-INNOWax GC (0.25 µm, 0.25 mm x 30 m; Agilent Technologies)",
+                        "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000951",
+                        "termSourceRef": "MTBLS"
+                    },
+                    {
+                        "term": "HP-INNOWax GC (0.25 µm, 0.25 mm x 60 m; J&W Scientific)",
+                        "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000965",
+                        "termSourceRef": "MTBLS"
+                    },
+                    {
+                        "term": "InertCap 5MS/NP (0.25 µm, 0.25 mm x 30 m; GL Sciences)",
+                        "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002163",
+                        "termSourceRef": "MTBLS"
+                    },
+                    {
+                        "term": "J&W DB-5 GC (1 µm, 0.25 mm x 30 m; Agilent Technologies)",
+                        "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002167",
+                        "termSourceRef": "MTBLS"
+                    },
+                    {
+                        "term": "Rtx-200 (0.25 µm, 0.25 mm x 1.75 m; Restek)",
+                        "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000980",
+                        "termSourceRef": "MTBLS"
+                    },
+                    {
+                        "term": "Rtx-200 (0.25 µm, 0.25 mm x 2 m; Restek)",
+                        "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000987",
+                        "termSourceRef": "MTBLS"
+                    },
+                    {
+                        "term": "Rtx-5 (0.20 µm, 0.18 mm x 10 m; Restek)",
+                        "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000970",
+                        "termSourceRef": "MTBLS"
+                    },
+                    {
+                        "term": "Rtx-5MS (0.25 µm, 0.25 mm x 30 m; Restek)",
+                        "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000960",
+                        "termSourceRef": "MTBLS"
+                    },
+                    {
+                        "term": "Rtx-5Sil MS (0.25 µm, 0.25 mm x 30 m; Restek)",
+                        "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000981",
+                        "termSourceRef": "MTBLS"
+                    },
+                    {
+                        "term": "Rxi-17Sil MS (0.15 µm, 0.15 mm x 1.5 m; Restek)",
+                        "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000957",
+                        "termSourceRef": "MTBLS"
+                    },
+                    {
+                        "term": "Rxi-17Sil MS (0.25 µm, 0.25 mm x 2 m; Restek)",
+                        "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002200",
+                        "termSourceRef": "MTBLS"
+                    },
+                    {
+                        "term": "Rxi-1ms (0.25 µm, 0.25 mm x 30 m; Restek)",
+                        "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002201",
+                        "termSourceRef": "MTBLS"
+                    },
+                    {
+                        "term": "Rxi-5ms (0.18 µm, 0.18 mm x 10 m; Restek)",
+                        "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000961",
+                        "termSourceRef": "MTBLS"
+                    },
+                    {
+                        "term": "Rxi-5ms (0.25 µm, 0.25 mm x 30 m; Restek)",
+                        "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002202",
+                        "termSourceRef": "MTBLS"
+                    },
+                    {
+                        "term": "Rxi-5Sil MS (0.18 µm, 0.18 mm x 10 m; Restek)",
+                        "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000977",
+                        "termSourceRef": "MTBLS"
+                    },
+                    {
+                        "term": "Rxi-5Sil MS (0.25 µm, 0.25 mm x 15 m; Restek)",
+                        "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002203",
+                        "termSourceRef": "MTBLS"
+                    },
+                    {
+                        "term": "Rxi-5Sil MS (0.25 µm, 0.25 mm x 30 m; Restek)",
+                        "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000973",
+                        "termSourceRef": "MTBLS"
+                    },
+                    {
+                        "term": "Rxi-5Sil MS w/Integra-Guard (0.25 µm, 0.25 mm x 30 m; Restek)",
+                        "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002204",
+                        "termSourceRef": "MTBLS"
+                    },
+                    {
+                        "term": "Rxi-624Sil MS (1.4 µm, 0.25 mm x 60 m; Restek)",
+                        "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002205",
+                        "termSourceRef": "MTBLS"
+                    },
+                    {
+                        "term": "SH-Rxi-5Sil MS (0.25 µm, 0.25 mm x 30 m; Shimadzu)",
+                        "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000942",
+                        "termSourceRef": "MTBLS"
+                    },
+                    {
+                        "term": "SPB-50 GC (0.25 µm, 0.25 mm x 30 m; Supelco)",
+                        "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000975",
+                        "termSourceRef": "MTBLS"
+                    },
+                    {
+                        "term": "Stabilwax (0.25 µm, 0.25 mm x 30 m; Restek)",
+                        "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002221",
+                        "termSourceRef": "MTBLS"
+                    },
+                    {
+                        "term": "Stabilwax-DA (0.25 µm, 0.32 mm x 30 m; Restek)",
+                        "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000948",
+                        "termSourceRef": "MTBLS"
+                    },
+                    {
+                        "term": "Stabilwax-MS (0.25 µm, 0.32 mm x 30 m; Restek)",
+                        "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000952",
+                        "termSourceRef": "MTBLS"
+                    },
+                    {
+                        "term": "SUPELCOWAX 10 Capillary GC (0.25 µm, 0.25 mm x 30 m; Merck Sequant)",
+                        "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002224",
+                        "termSourceRef": "MTBLS"
+                    },
+                    {
+                        "term": "TRACE TR-5MS GC (0.25 µm, 0.25 mm x 30 m, Thermo Scientific)",
+                        "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000956",
+                        "termSourceRef": "MTBLS"
+                    },
+                    {
+                        "term": "TRACE TR-FAME GC (0.25 µm, 0.25 mm x 30 m, Thermo Scientific)",
+                        "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000983",
+                        "termSourceRef": "MTBLS"
+                    },
+                    {
+                        "term": "TraceGOLD TG-5MS (0.25 µm, 0.25 mm x 30 m; Thermo Scientific)",
+                        "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002254",
+                        "termSourceRef": "MTBLS"
+                    },
+                    {
+                        "term": "TraceGOLD TG-5SilMS (0.25 µm, 0.25 mm x 30 m; Thermo Scientific)",
+                        "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000940",
+                        "termSourceRef": "MTBLS"
+                    },
+                    {
+                        "term": "VF-17ms (0.25 µm, 0.25 mm x 30 m; Varian)",
+                        "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000949",
+                        "termSourceRef": "MTBLS"
+                    },
+                    {
+                        "term": "VF-1ms GC (0.25 µm, 0.25 mm x 30 m; J&W Scientific)",
+                        "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000937",
+                        "termSourceRef": "MTBLS"
+                    },
+                    {
+                        "term": "VF-5ms GC (0.25 µm, 0.25 mm x 30 m; Agilent Technologies)",
+                        "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000943",
+                        "termSourceRef": "MTBLS"
+                    },
+                    {
+                        "term": "VF-5ms GC (0.25 µm, 0.25 mm x 30 m; Supelco)",
+                        "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000974",
+                        "termSourceRef": "MTBLS"
+                    },
+                    {
+                        "term": "VF-5ms GC (0.25 µm, 0.25 mm x 30 m; Varian)",
+                        "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000954",
+                        "termSourceRef": "MTBLS"
+                    },
+                    {
+                        "term": "VF-WAXms GC (0.25 µm, 0.25 mm x 30 m; Agilent Technologies)",
+                        "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000947",
+                        "termSourceRef": "MTBLS"
+                    },
+                    {
+                        "term": "Zebron ZB-1701 w/GUARDIAN GC (0.15 μm, 0.25mm x 30 m + 5 m; Phenomenex)",
+                        "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000984",
+                        "termSourceRef": "MTBLS"
+                    },
+                    {
+                        "term": "Zebron ZB-1ms GC (0.25 µm, 0.25 mm x 30 m; Phenomenex)",
+                        "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000978",
+                        "termSourceRef": "MTBLS"
+                    },
+                    {
+                        "term": "Zebron ZB-5 GC (0.25 µm, 0.25 mm x 15 m; Phenomenex)",
+                        "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000962",
+                        "termSourceRef": "MTBLS"
+                    },
+                    {
+                        "term": "Zebron ZB-5 GC (0.25 µm, 0.25 mm x 30 m; Phenomenex)",
+                        "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000945",
+                        "termSourceRef": "MTBLS"
+                    },
+                    {
+                        "term": "Zebron ZB-5 w/GUARDIAN GC (0.25 µm, 0.25 mm x 30 + 10 m; Phenomenex)",
+                        "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000976",
+                        "termSourceRef": "MTBLS"
+                    },
+                    {
+                        "term": "Zebron ZB-50 GC (0.25 µm, 0.25 mm x 30 m; Phenomenex)",
+                        "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002276",
+                        "termSourceRef": "MTBLS"
+                    },
+                    {
+                        "term": "Zebron ZB-50 GC Cap. (0.25 µm, 0.25 mm x 30 m; Phenomenex)",
+                        "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002277",
+                        "termSourceRef": "MTBLS"
+                    },
+                    {
+                        "term": "Zebron ZB-5ms GC (0.25 µm, 0.25 mm x 30 m; Phenomenex)",
+                        "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000959",
+                        "termSourceRef": "MTBLS"
+                    },
+                    {
+                        "term": "Zebron ZB-AAA GC (0.25 mm x 10 m; Phenomenex)",
+                        "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000963",
+                        "termSourceRef": "MTBLS"
+                    },
+                    {
+                        "term": "Zebron ZB-SemiVolatiles GC (0.25 µm, 0.25 mm x 30 m; Phenomenex)",
+                        "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000941",
+                        "termSourceRef": "MTBLS"
+                    },
+                    {
+                        "term": "Zebron ZB-WAX GC (0.25 µm, 0.25 mm x 30 m; Phenomenex)",
+                        "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000953",
+                        "termSourceRef": "MTBLS"
+                    }
+                ],
                 "unexpectedTerms": []
             }
         ],
@@ -5614,6 +6469,73 @@
                     {
                         "term": "saline D2O",
                         "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000371",
+                        "termSourceRef": "MTBLS"
+                    }
+                ],
+                "unexpectedTerms": []
+            }
+        ],
+        "Parameter Value[Column type 2]": [
+            {
+                "ruleName": "Parameter Value[Column type 2]-01",
+                "fieldName": "Parameter Value[Column type 2]",
+                "ontologies": [
+                    "MS"
+                ],
+                "allowedParentOntologyTerms": null,
+                "description": "",
+                "selectionCriteria": {
+                    "isaFileType": "assay",
+                    "studyCreatedAtOrAfter": null,
+                    "studyCreatedBefore": null,
+                    "studyCategoryFilter": null,
+                    "templateVersionFilter": null,
+                    "isaFileTemplateNameFilter": [
+                        "GC-MS",
+                        "GCxGC-MS"
+                    ],
+                    "linkedFieldAndValueFilter": []
+                },
+                "termEnforcementLevel": "recommended",
+                "unexpectedTermEnforcementLevel": "required",
+                "validationType": "selected-ontology-term",
+                "constraints": {},
+                "defaultValue": null,
+                "allowedMissingOntologyTerms": [],
+                "allowedOtherSources": [
+                    {
+                        "sourceLabel": "MTBLS",
+                        "accessionPrefix": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_"
+                    },
+                    {
+                        "sourceLabel": "wikidata",
+                        "accessionPrefix": "https://www.wikidata.org/wiki/"
+                    },
+                    {
+                        "sourceLabel": "ILX",
+                        "accessionPrefix": "http://uri.interlex.org/base/ilx_"
+                    }
+                ],
+                "allowedPlaceholders": [
+                    {
+                        "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/placeholder",
+                        "termSourceRef": "MTBLS"
+                    }
+                ],
+                "terms": [
+                    {
+                        "term": "high polarity",
+                        "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000991",
+                        "termSourceRef": "MTBLS"
+                    },
+                    {
+                        "term": "medium polarity",
+                        "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000989",
+                        "termSourceRef": "MTBLS"
+                    },
+                    {
+                        "term": "low polarity",
+                        "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000990",
                         "termSourceRef": "MTBLS"
                     }
                 ],
@@ -7563,6 +8485,73 @@
                     {
                         "term": "Zebron ZB-WAX GC (0.25 µm, 0.25 mm x 30 m; Phenomenex)",
                         "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000953",
+                        "termSourceRef": "MTBLS"
+                    }
+                ],
+                "unexpectedTerms": []
+            }
+        ],
+        "Parameter Value[Column type 1]": [
+            {
+                "ruleName": "Parameter Value[Column type 1]-01",
+                "fieldName": "Parameter Value[Column type 1]",
+                "ontologies": [
+                    "MS"
+                ],
+                "allowedParentOntologyTerms": null,
+                "description": "",
+                "selectionCriteria": {
+                    "isaFileType": "assay",
+                    "studyCreatedAtOrAfter": null,
+                    "studyCreatedBefore": null,
+                    "studyCategoryFilter": null,
+                    "templateVersionFilter": null,
+                    "isaFileTemplateNameFilter": [
+                        "GC-MS",
+                        "GCxGC-MS"
+                    ],
+                    "linkedFieldAndValueFilter": []
+                },
+                "termEnforcementLevel": "recommended",
+                "unexpectedTermEnforcementLevel": "required",
+                "validationType": "selected-ontology-term",
+                "constraints": {},
+                "defaultValue": null,
+                "allowedMissingOntologyTerms": [],
+                "allowedOtherSources": [
+                    {
+                        "sourceLabel": "MTBLS",
+                        "accessionPrefix": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_"
+                    },
+                    {
+                        "sourceLabel": "wikidata",
+                        "accessionPrefix": "https://www.wikidata.org/wiki/"
+                    },
+                    {
+                        "sourceLabel": "ILX",
+                        "accessionPrefix": "http://uri.interlex.org/base/ilx_"
+                    }
+                ],
+                "allowedPlaceholders": [
+                    {
+                        "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/placeholder",
+                        "termSourceRef": "MTBLS"
+                    }
+                ],
+                "terms": [
+                    {
+                        "term": "high polarity",
+                        "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000991",
+                        "termSourceRef": "MTBLS"
+                    },
+                    {
+                        "term": "medium polarity",
+                        "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000989",
+                        "termSourceRef": "MTBLS"
+                    },
+                    {
+                        "term": "low polarity",
+                        "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000990",
                         "termSourceRef": "MTBLS"
                     }
                 ],

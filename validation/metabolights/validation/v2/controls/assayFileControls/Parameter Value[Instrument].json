@@ -80,7 +80,11 @@
                 "studyCategoryFilter": null,
                 "templateVersionFilter": null,
                 "isaFileTemplateNameFilter": [
-                    "LC-MS"
+                    "LC-MS",
+                    "MALDI-MS",
+                    "FIA-MS",
+                    "CE-MS",
+                    "MS"
                 ],
                 "linkedFieldAndValueFilter": [
                     {
@@ -980,12 +984,13 @@
             "description": "",
             "selectionCriteria": {
                 "isaFileType": "assay",
-                "studyCreatedAtOrAfter": "2025-12-01T00:00:00",
+                "studyCreatedAtOrAfter": null,
                 "studyCreatedBefore": null,
                 "studyCategoryFilter": null,
                 "templateVersionFilter": null,
                 "isaFileTemplateNameFilter": [
-                    "GC-MS"
+                    "GC-MS",
+                    "GCxGC-MS"
                 ],
                 "linkedFieldAndValueFilter": [
                     {
