@@ -277,11 +277,6 @@
                     "termSourceRef": "MTBLS"
                 },
                 {
-                    "term": "Shimadzu SIL20-A LC system",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000912",
-                    "termSourceRef": "MTBLS"
-                },
-                {
                     "term": "Thermo Scientific Accela 1250 Pump",
                     "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000906",
                     "termSourceRef": "MTBLS"
@@ -512,26 +507,6 @@
                     "termSourceRef": "MTBLS"
                 },
                 {
-                    "term": "Agilent 7683 Series Automatic Liquid Sampler",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_001052",
-                    "termSourceRef": "MTBLS"
-                },
-                {
-                    "term": "Agilent 7683B Automatic Liquid Sampler",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_001041",
-                    "termSourceRef": "MTBLS"
-                },
-                {
-                    "term": "Agilent 7693 Automatic Liquid Sampler",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_001048",
-                    "termSourceRef": "MTBLS"
-                },
-                {
-                    "term": "Agilent 7693A Automatic Liquid Sampler",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_001035",
-                    "termSourceRef": "MTBLS"
-                },
-                {
                     "term": "Agilent 7890 GC",
                     "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000923",
                     "termSourceRef": "MTBLS"
@@ -557,56 +532,6 @@
                     "termSourceRef": "MTBLS"
                 },
                 {
-                    "term": "Agilent CTC Analytics Combi PAL autosampler",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_001047",
-                    "termSourceRef": "MTBLS"
-                },
-                {
-                    "term": "CTC Analytics HTS PAL Autosampler",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_001045",
-                    "termSourceRef": "MTBLS"
-                },
-                {
-                    "term": "CTC Analytics L-PAL3 Autosampler",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_001049",
-                    "termSourceRef": "MTBLS"
-                },
-                {
-                    "term": "CTC Analytics PAL COMBI autosampler",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_001044",
-                    "termSourceRef": "MTBLS"
-                },
-                {
-                    "term": "CTC Analytics PAL COMBI-xt autosampler",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_001050",
-                    "termSourceRef": "MTBLS"
-                },
-                {
-                    "term": "CTC Analytics PAL LHX-xt autosampler",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_001042",
-                    "termSourceRef": "MTBLS"
-                },
-                {
-                    "term": "CTC Analytics PAL RSI 85 Autosampler",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_001034",
-                    "termSourceRef": "MTBLS"
-                },
-                {
-                    "term": "CTC Analytics PAL RTC Autosampler",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002130",
-                    "termSourceRef": "MTBLS"
-                },
-                {
-                    "term": "Gas Chromatography Autoinjector Model",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000343",
-                    "termSourceRef": "MTBLS"
-                },
-                {
-                    "term": "Gas Chromatography Autosampler Model",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000345",
-                    "termSourceRef": "MTBLS"
-                },
-                {
                     "term": "Gas Chromatography Cryogenic Trap",
                     "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000346",
                     "termSourceRef": "MTBLS"
@@ -627,43 +552,13 @@
                     "termSourceRef": "MTBLS"
                 },
                 {
-                    "term": "GERSTEL MultiPurpose Sampler (MPS 2)",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_001054",
-                    "termSourceRef": "MTBLS"
-                },
-                {
-                    "term": "GERSTEL MultiPurpose Sampler (MPS 2XL)",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_001046",
-                    "termSourceRef": "MTBLS"
-                },
-                {
-                    "term": "GERSTEL MultiPurpose Sampler (MPS)",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_001039",
-                    "termSourceRef": "MTBLS"
-                },
-                {
-                    "term": "GERSTEL MultiPurpose Sampler (MPS) Dual Head",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_001038",
-                    "termSourceRef": "MTBLS"
-                },
-                {
                     "term": "GERSTEL TDS",
                     "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_001065",
                     "termSourceRef": "MTBLS"
                 },
                 {
-                    "term": "GERSTEL TDS A Autosampler (TDS-A)",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_001031",
-                    "termSourceRef": "MTBLS"
-                },
-                {
                     "term": "Hewlett Packard 5890 Series GC",
                     "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002153",
-                    "termSourceRef": "MTBLS"
-                },
-                {
-                    "term": "JASCO PAL GC-xt autosampler",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_001053",
                     "termSourceRef": "MTBLS"
                 },
                 {
@@ -682,11 +577,6 @@
                     "termSourceRef": "MTBLS"
                 },
                 {
-                    "term": "Markes International UltrA 2",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_001037",
-                    "termSourceRef": "MTBLS"
-                },
-                {
                     "term": "Markes International UNITY 2",
                     "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_001066",
                     "termSourceRef": "MTBLS"
@@ -694,26 +584,6 @@
                 {
                     "term": "PerkinElmer AutoSystem XL GC",
                     "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000931",
-                    "termSourceRef": "MTBLS"
-                },
-                {
-                    "term": "Shimadzu AOC-20i autoinjector",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_001063",
-                    "termSourceRef": "MTBLS"
-                },
-                {
-                    "term": "Shimadzu AOC-20i/s autoinjector/autosampler",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_001036",
-                    "termSourceRef": "MTBLS"
-                },
-                {
-                    "term": "Shimadzu AOC-20s autosampler",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_001051",
-                    "termSourceRef": "MTBLS"
-                },
-                {
-                    "term": "Shimadzu AOC-5000 CTC PAL GC autosampler",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002210",
                     "termSourceRef": "MTBLS"
                 },
                 {
@@ -747,16 +617,6 @@
                     "termSourceRef": "MTBLS"
                 },
                 {
-                    "term": "Thermo Electron AS 2000 autosampler",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002232",
-                    "termSourceRef": "MTBLS"
-                },
-                {
-                    "term": "Thermo Electron AS2000 autosampler",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_001030",
-                    "termSourceRef": "MTBLS"
-                },
-                {
                     "term": "Thermo Electron FOCUS GC",
                     "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000929",
                     "termSourceRef": "MTBLS"
@@ -772,31 +632,6 @@
                     "termSourceRef": "MTBLS"
                 },
                 {
-                    "term": "Thermo Electron TriPlus Autosampler",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002233",
-                    "termSourceRef": "MTBLS"
-                },
-                {
-                    "term": "Thermo Scientific AS 1310 Autosampler",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_001040",
-                    "termSourceRef": "MTBLS"
-                },
-                {
-                    "term": "Thermo Scientific AS 3000 autosampler",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002234",
-                    "termSourceRef": "MTBLS"
-                },
-                {
-                    "term": "Thermo Scientific AS 3000 II autosampler",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002235",
-                    "termSourceRef": "MTBLS"
-                },
-                {
-                    "term": "Thermo Scientific AS3000 autosampler",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_001033",
-                    "termSourceRef": "MTBLS"
-                },
-                {
                     "term": "Thermo Scientific TRACE 1300 GC",
                     "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002244",
                     "termSourceRef": "MTBLS"
@@ -809,16 +644,6 @@
                 {
                     "term": "Thermo Scientific TRACE GC Ultra",
                     "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000924",
-                    "termSourceRef": "MTBLS"
-                },
-                {
-                    "term": "Thermo Scientific TriPlus RSH Autosampler",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_001043",
-                    "termSourceRef": "MTBLS"
-                },
-                {
-                    "term": "ThermoQuest AS 2000 Liquid Autosampler",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_001032",
                     "termSourceRef": "MTBLS"
                 },
                 {
