@@ -1501,6 +1501,8 @@
       
         
       
+        
+      
     
     
     
@@ -2118,6 +2120,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#parameter-valuederivatization" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Parameter Value[Derivatization]
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2275,6 +2288,126 @@
   
     <li class="md-nav__item">
       <a href="../../NMR/NMR-v1.0/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NMR
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_1_4" id="__nav_4_1_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MAF File v1.0 Controls
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_1_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    MAF File v1.0 Controls
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../maf-file-control-lists/MS/MS-v1.0/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../maf-file-control-lists/NMR/NMR-v1.0/" class="md-nav__link">
         
   
   
@@ -2538,7 +2671,7 @@
 </tr>
 <tr>
 <td>Allowed Parent Ontology Term Exceptions</td>
-<td>^.*unit$, ^.*Unit of.*$</td>
+<td>^.<em>unit$, ^.</em>Unit of.*$</td>
 </tr>
 <tr>
 <td>Allowed Other Sources</td>
@@ -2587,36 +2720,48 @@
 </tr>
 <tr>
 <td>5</td>
+<td>meter</td>
+<td>UO</td>
+<td>http://purl.obolibrary.org/obo/UO_0000008</td>
+</tr>
+<tr>
+<td>6</td>
 <td>kilogram</td>
 <td>UO</td>
 <td>http://purl.obolibrary.org/obo/UO_0000009</td>
 </tr>
 <tr>
-<td>6</td>
+<td>7</td>
 <td>milligram per day</td>
 <td>EFO</td>
 <td>http://www.ebi.ac.uk/efo/EFO_0004419</td>
 </tr>
 <tr>
-<td>7</td>
+<td>8</td>
 <td>day</td>
 <td>UO</td>
 <td>http://purl.obolibrary.org/obo/UO_0000033</td>
 </tr>
 <tr>
-<td>8</td>
+<td>9</td>
 <td>hour</td>
 <td>UO</td>
 <td>http://purl.obolibrary.org/obo/UO_0000032</td>
 </tr>
 <tr>
-<td>9</td>
+<td>10</td>
+<td>minute</td>
+<td>UO</td>
+<td>http://purl.obolibrary.org/obo/UO_0000031</td>
+</tr>
+<tr>
+<td>11</td>
 <td>degree Fahrenheit</td>
 <td>UO</td>
 <td>http://purl.obolibrary.org/obo/UO_0000195</td>
 </tr>
 <tr>
-<td>10</td>
+<td>12</td>
 <td>degree Celsius</td>
 <td>UO</td>
 <td>http://purl.obolibrary.org/obo/UO_0000027</td>
@@ -2667,6 +2812,61 @@
 <tr>
 <td>Pattern Enforcement Level</td>
 <td>recommended</td>
+</tr>
+</tbody>
+</table>
+<h2 id="parameter-valuederivatization">Parameter Value[Derivatization]<a class="headerlink" href="#parameter-valuederivatization" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Rule Name</td>
+<td>Parameter Value[Derivatization]-01</td>
+</tr>
+<tr>
+<td>Rule Description</td>
+<td></td>
+</tr>
+<tr>
+<td>Applicable Study Categories</td>
+<td>All</td>
+</tr>
+<tr>
+<td>Applicable Template Names</td>
+<td>All</td>
+</tr>
+<tr>
+<td>Applicable Template Versions</td>
+<td>All</td>
+</tr>
+<tr>
+<td>Validation Type</td>
+<td>check-only-constraints</td>
+</tr>
+<tr>
+<td>Pattern</td>
+<td><code>^.*$</code></td>
+</tr>
+<tr>
+<td>Pattern Message</td>
+<td>Define any value</td>
+</tr>
+<tr>
+<td>Pattern Enforcement Level</td>
+<td>recommended</td>
+</tr>
+<tr>
+<td>Ontologies [Ordered]</td>
+<td>MTBLS</td>
+</tr>
+<tr>
+<td>Allowed Missing Terms</td>
+<td>[none, , ]</td>
 </tr>
 </tbody>
 </table>

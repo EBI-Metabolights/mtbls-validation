@@ -9720,7 +9720,7 @@
                         "description": "A living entity",
                         "examples": [
                             "[reference compound, BAO, http://www.bioassayontology.org/bao#BAO_0002092]",
-                            "[blank,,]",
+                            "[blank sample, NCBITaxon, http://purl.obolibrary.org/obo/NCBITaxon_2582415]",
                             "[Homo sapiens, NCBITaxon, http://purl.obolibrary.org/obo/NCBITaxon_9606]",
                             "[Mus musculus, NCBITaxon, http://purl.obolibrary.org/obo/NCBITaxon_10090]"
                         ]
@@ -10021,7 +10021,7 @@
                         "defaultColumnIndex": 5,
                         "minLength": null,
                         "maxLength": null,
-                        "required": false,
+                        "required": true,
                         "description": null,
                         "examples": null
                     },
@@ -10073,7 +10073,7 @@
                         "defaultColumnIndex": 9,
                         "minLength": null,
                         "maxLength": null,
-                        "required": false,
+                        "required": true,
                         "description": null,
                         "examples": null
                     },
