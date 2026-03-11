@@ -64,13 +64,13 @@
                     "termSourceRef": "MS"
                 },
                 {
-                    "term": "normal phase chromatography",
-                    "termAccessionNumber": "http://purl.obolibrary.org/obo/MS_1003583",
+                    "term": "hydrophilic interaction liquid chromatography",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/MS_1003584",
                     "termSourceRef": "MS"
                 },
                 {
-                    "term": "hydrophilic interaction liquid chromatography",
-                    "termAccessionNumber": "http://purl.obolibrary.org/obo/MS_1003584",
+                    "term": "normal phase chromatography",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/MS_1003583",
                     "termSourceRef": "MS"
                 },
                 {
@@ -86,6 +86,26 @@
                 {
                     "term": "affinity chromatography",
                     "termAccessionNumber": "http://purl.obolibrary.org/obo/MS_1003581",
+                    "termSourceRef": "MS"
+                },
+                {
+                    "term": "ion-exchange chromatography",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/MS_1003579",
+                    "termSourceRef": "MS"
+                },
+                {
+                    "term": "size-exclusion chromatography",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/MS_1003580",
+                    "termSourceRef": "MS"
+                },
+                {
+                    "term": "mixed mode chromatography",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/MS_1003586",
+                    "termSourceRef": "MS"
+                },
+                {
+                    "term": "electrochromatography",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/MS_1003788",
                     "termSourceRef": "MS"
                 }
             ],
@@ -151,28 +171,48 @@
             ],
             "terms": [
                 {
-                    "term": "capillary column gas chromatography",
-                    "termAccessionNumber": "http://purl.obolibrary.org/obo/MS_1003714",
+                    "term": "non-polar stationary phase gas-liquid chromatography",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/MS_1003718",
                     "termSourceRef": "MS"
                 },
                 {
-                    "term": "fast gas chromatography",
-                    "termAccessionNumber": "http://purl.obolibrary.org/obo/MS_1003712",
+                    "term": "mid-polar stationary phase gas-liquid chromatography",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/MS_1003719",
                     "termSourceRef": "MS"
                 },
                 {
-                    "term": "high-resolution gas chromatography",
-                    "termAccessionNumber": "http://purl.obolibrary.org/obo/MS_1003715",
+                    "term": "polar stationary phase gas-liquid chromatography",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/MS_1003720",
                     "termSourceRef": "MS"
                 },
                 {
-                    "term": "packed column gas chromatography",
-                    "termAccessionNumber": "http://purl.obolibrary.org/obo/MS_1003713",
+                    "term": "chiral stationary phase gas-liquid chromatography",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/MS_1003721",
                     "termSourceRef": "MS"
                 },
                 {
-                    "term": "pyrolysis-gas chromatography",
-                    "termAccessionNumber": "http://purl.obolibrary.org/obo/MS_1003716",
+                    "term": "molecular sieve stationary phase gas-solid chromatography",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/MS_1003723",
+                    "termSourceRef": "MS"
+                },
+                {
+                    "term": "porous polymer stationary phase gas-solid chromatography",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/MS_1003724",
+                    "termSourceRef": "MS"
+                },
+                {
+                    "term": "activated carbon stationary phase gas-solid chromatography",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/MS_1003725",
+                    "termSourceRef": "MS"
+                },
+                {
+                    "term": "inorganic oxides stationary phase gas-solid chromatography",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/MS_1003726",
+                    "termSourceRef": "MS"
+                },
+                {
+                    "term": "graphitized carbon stationary phase gas-solid chromatography",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/MS_1003727",
                     "termSourceRef": "MS"
                 }
             ],

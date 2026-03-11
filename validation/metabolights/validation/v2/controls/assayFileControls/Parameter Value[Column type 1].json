@@ -6,6 +6,113 @@
             "ontologies": [
                 "MS"
             ],
+            "allowedParentOntologyTerms": {
+                "excludeByLabelPattern": [],
+                "excludeByAccession": [],
+                "parents": [
+                    {
+                        "term": "gas chromatography separation",
+                        "termAccessionNumber": "http://purl.obolibrary.org/obo/MS_1002272",
+                        "termSourceRef": "MS"
+                    }
+                ]
+            },
+            "description": "",
+            "selectionCriteria": {
+                "isaFileType": "assay",
+                "studyCreatedAtOrAfter": null,
+                "studyCreatedBefore": null,
+                "studyCategoryFilter": [
+                    "ms-mhd-enabled"
+                ],
+                "templateVersionFilter": null,
+                "isaFileTemplateNameFilter": [
+                    "GC-MS",
+                    "GCxGC-MS"
+                ],
+                "linkedFieldAndValueFilter": []
+            },
+            "termEnforcementLevel": "required",
+            "unexpectedTermEnforcementLevel": "recommended",
+            "validationType": "ontology-term-in-selected-ontologies",
+            "constraints": {},
+            "defaultValue": null,
+            "allowedMissingOntologyTerms": [],
+            "allowedOtherSources": [
+                {
+                    "sourceLabel": "MTBLS",
+                    "accessionPrefix": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_"
+                },
+                {
+                    "sourceLabel": "wikidata",
+                    "accessionPrefix": "https://www.wikidata.org/wiki/"
+                },
+                {
+                    "sourceLabel": "ILX",
+                    "accessionPrefix": "http://uri.interlex.org/base/ilx_"
+                }
+            ],
+            "allowedPlaceholders": [
+                {
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/placeholder",
+                    "termSourceRef": "MTBLS"
+                }
+            ],
+            "terms": [
+                {
+                    "term": "non-polar stationary phase gas-liquid chromatography",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/MS_1003718",
+                    "termSourceRef": "MS"
+                },
+                {
+                    "term": "mid-polar stationary phase gas-liquid chromatography",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/MS_1003719",
+                    "termSourceRef": "MS"
+                },
+                {
+                    "term": "polar stationary phase gas-liquid chromatography",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/MS_1003720",
+                    "termSourceRef": "MS"
+                },
+                {
+                    "term": "chiral stationary phase gas-liquid chromatography",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/MS_1003721",
+                    "termSourceRef": "MS"
+                },
+                {
+                    "term": "molecular sieve stationary phase gas-solid chromatography",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/MS_1003723",
+                    "termSourceRef": "MS"
+                },
+                {
+                    "term": "porous polymer stationary phase gas-solid chromatography",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/MS_1003724",
+                    "termSourceRef": "MS"
+                },
+                {
+                    "term": "activated carbon stationary phase gas-solid chromatography",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/MS_1003725",
+                    "termSourceRef": "MS"
+                },
+                {
+                    "term": "inorganic oxides stationary phase gas-solid chromatography",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/MS_1003726",
+                    "termSourceRef": "MS"
+                },
+                {
+                    "term": "graphitized carbon stationary phase gas-solid chromatography",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/MS_1003727",
+                    "termSourceRef": "MS"
+                }
+            ],
+            "unexpectedTerms": []
+        },
+        {
+            "ruleName": "Parameter Value[Column type 1]-02",
+            "fieldName": "Parameter Value[Column type 1]",
+            "ontologies": [
+                "MS"
+            ],
             "allowedParentOntologyTerms": null,
             "description": "",
             "selectionCriteria": {
