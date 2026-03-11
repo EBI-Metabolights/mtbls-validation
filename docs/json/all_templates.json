@@ -9986,7 +9986,7 @@
                         "defaultColumnIndex": 5,
                         "minLength": null,
                         "maxLength": null,
-                        "required": false,
+                        "required": true,
                         "description": null,
                         "examples": null
                     },
@@ -10038,7 +10038,7 @@
                         "defaultColumnIndex": 9,
                         "minLength": null,
                         "maxLength": null,
-                        "required": false,
+                        "required": true,
                         "description": null,
                         "examples": null
                     },

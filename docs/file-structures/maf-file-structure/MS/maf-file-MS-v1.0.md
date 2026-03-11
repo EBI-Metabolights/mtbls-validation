@@ -9,11 +9,11 @@ Download file template as [zip file](../../../template-files/maf-file/MS/m_templ
 | smiles | single column |  |  |  |
 | inchi | single column |  |  |  |
 | metabolite_identification | single column | *Required*<br/>MinLength: 2 |  |  |
-| mass_to_charge | single column |  |  |  |
+| mass_to_charge | single column | *Required* |  |  |
 | fragmentation | single column |  |  |  |
 | modifications | single column |  |  |  |
 | charge | single column |  |  |  |
-| retention_time | single column |  |  |  |
+| retention_time | single column | *Required* |  |  |
 | taxid | single column |  |  |  |
 | species | single column |  |  |  |
 | database | single column |  |  |  |

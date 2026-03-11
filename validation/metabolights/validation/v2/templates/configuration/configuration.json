@@ -1360,6 +1360,7 @@
                             "label": "Chromatography (Protocol)",
                             "fields": [
                                 "Chromatography Instrument",
+                                "Autosampler model",
                                 "Column model",
                                 "Column type",
                                 "Guard column"
