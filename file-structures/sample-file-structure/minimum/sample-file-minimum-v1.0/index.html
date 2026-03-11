@@ -2373,50 +2373,50 @@
 <td>Source Name</td>
 <td>single column</td>
 <td><em>Required</em><br/>MinLength: 3<br/>MaxLength: 128<br/><br/><a href="../../../../prioritised-control-lists/sample-file-control-lists/minimum/minimum-v1.0/#source-name" target="_blank">Controls</a></td>
-<td></td>
-<td></td>
+<td>Unique source identifier of the Sample or simply repeat 'Sample Name'</td>
+<td>Single standard<br/>Standard mix<br/>Blank<br/>QC1<br/>Sample1<br/>QC2<br/>Sample2</td>
 </tr>
 <tr>
 <td>Characteristics[Organism]</td>
 <td>ontology column</td>
 <td><em>Required</em><br/>MinLength: 5<br/><br/><a href="../../../../prioritised-control-lists/sample-file-control-lists/minimum/minimum-v1.0/#characteristicsorganism" target="_blank">Controls</a></td>
-<td></td>
-<td></td>
+<td>A living entity</td>
+<td>[reference compound, BAO, http://www.bioassayontology.org/bao#BAO_0002092]<br/>[blank,,]<br/>[Homo sapiens, NCBITaxon, http://purl.obolibrary.org/obo/NCBITaxon_9606]<br/>[Mus musculus, NCBITaxon, http://purl.obolibrary.org/obo/NCBITaxon_10090]</td>
 </tr>
 <tr>
 <td>Characteristics[Organism part]</td>
 <td>ontology column</td>
 <td><em>Required</em><br/>MinLength: 3<br/><br/><a href="../../../../prioritised-control-lists/sample-file-control-lists/minimum/minimum-v1.0/#characteristicsorganism-part" target="_blank">Controls</a></td>
-<td></td>
-<td></td>
+<td>A portion of an organism</td>
+<td>[pure substance, CHEBI, http://purl.obolibrary.org/obo/CHEBI_60003]<br/>[mixture, CHEBI, http://purl.obolibrary.org/obo/CHEBI_60004]<br/>[solvent, CHEBI, http://purl.obolibrary.org/obo/CHEBI_46787]<br/>[blood plasma, BTO, http://purl.obolibrary.org/obo/BTO_0000131]</td>
 </tr>
 <tr>
 <td>Characteristics[Variant]</td>
 <td>ontology column</td>
 <td></td>
-<td></td>
-<td></td>
+<td>Selected breed, strain, cultivar, etc (if available)</td>
+<td>C57BL/6J</td>
 </tr>
 <tr>
 <td>Characteristics[Sample type]</td>
 <td>ontology column</td>
 <td><a href="../../../../prioritised-control-lists/sample-file-control-lists/minimum/minimum-v1.0/#characteristicssample-type" target="_blank">Controls</a></td>
-<td></td>
-<td></td>
+<td>Sample role in the experiment</td>
+<td>[reference compound, MSIO, http://purl.obolibrary.org/obo/MSIO_0000023]<br/>[reference compound mix, MSIO, http://purl.obolibrary.org/obo/MSIO_0000024]<br/>[experimental sample, CHMO, http://purl.obolibrary.org/obo/CHMO_0002746]<br/>[pooled quality control sample, MTBLS, http://www.ebi.ac.uk/metabolights/ontology/MTBLS_001090]</td>
 </tr>
 <tr>
 <td>Protocol REF</td>
 <td>single column</td>
 <td><em>Required</em><br/>MinLength: 1<br/>Default: Sample collection<br/><br/><a href="../../../../prioritised-control-lists/sample-file-control-lists/minimum/minimum-v1.0/#protocol-ref" target="_blank">Controls</a></td>
-<td></td>
-<td></td>
+<td>Predetermined value: 'Sample Collection'.</td>
+<td>Sample Collection</td>
 </tr>
 <tr>
 <td>Sample Name</td>
 <td>single column</td>
 <td><em>Required</em><br/>MinLength: 3<br/>MaxLength: 128<br/><br/><a href="../../../../prioritised-control-lists/sample-file-control-lists/minimum/minimum-v1.0/#sample-name" target="_blank">Controls</a></td>
-<td></td>
-<td></td>
+<td>Unique identifier from a particular source. Usually associated with an output spectral data filename.</td>
+<td>Leucin standard<br/>Standard mix<br/>Blank<br/>QC1<br/>Sample1<br/>QC2<br/>Sample2</td>
 </tr>
 </tbody>
 </table>
