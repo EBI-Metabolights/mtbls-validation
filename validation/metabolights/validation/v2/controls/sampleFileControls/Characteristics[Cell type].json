@@ -18,16 +18,7 @@
                 ],
                 "templateVersionFilter": null,
                 "isaFileTemplateNameFilter": null,
-                "linkedFieldAndValueFilter": [
-                    {
-                        "name": "Source Name",
-                        "value": null
-                    },
-                    {
-                        "name": "Sample Name",
-                        "value": null
-                    }
-                ]
+                "linkedFieldAndValueFilter": null
             },
             "termEnforcementLevel": "required",
             "unexpectedTermEnforcementLevel": "required",

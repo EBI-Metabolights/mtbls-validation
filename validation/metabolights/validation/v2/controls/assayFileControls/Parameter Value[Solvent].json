@@ -17,12 +17,7 @@
                 "isaFileTemplateNameFilter": [
                     "NMR"
                 ],
-                "linkedFieldAndValueFilter": [
-                    {
-                        "name": "Protocol REF",
-                        "value": "NMR sample"
-                    }
-                ]
+                "linkedFieldAndValueFilter": null
             },
             "termEnforcementLevel": "recommended",
             "unexpectedTermEnforcementLevel": "recommended",

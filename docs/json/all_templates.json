@@ -10266,7 +10266,7 @@
                         "defaultColumnIndex": 5,
                         "minLength": null,
                         "maxLength": null,
-                        "required": false,
+                        "required": true,
                         "description": null,
                         "examples": null
                     },
@@ -10318,7 +10318,7 @@
                         "defaultColumnIndex": 9,
                         "minLength": null,
                         "maxLength": null,
-                        "required": false,
+                        "required": true,
                         "description": null,
                         "examples": null
                     },
@@ -22395,6 +22395,7 @@
                                 "label": "Chromatography (Protocol)",
                                 "fields": [
                                     "Chromatography Instrument",
+                                    "Autosampler model",
                                     "Column model",
                                     "Column type",
                                     "Guard column"

@@ -321,6 +321,7 @@ class FieldValueValidation(BaseOntologyValidation):
         validation_type = v.get("validationType", None)
         if validation_type == "check-only-constraints":
             v["termEnforcementLevel"] = EnforcementLevel.NOT_APPLICABLE
+            v["unexpectedTermEnforcementLevel"] = EnforcementLevel.NOT_APPLICABLE
 
         return handler(v)
 

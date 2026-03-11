@@ -16,7 +16,7 @@
                 "linkedFieldAndValueFilter": null
             },
             "termEnforcementLevel": "not-applicable",
-            "unexpectedTermEnforcementLevel": "required",
+            "unexpectedTermEnforcementLevel": "not-applicable",
             "validationType": "check-only-constraints",
             "constraints": {
                 "pattern": {
