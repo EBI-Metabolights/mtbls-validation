@@ -185,27 +185,27 @@ def create_md_file(
                 parent_rule = rule.allowed_parent_ontology_terms
                 f.write(
                     "| Allowed Parent Ontology Terms | "
-                    f"{escape(', '.join([str(x) for x in parent_rule.parents]))} |\n",
+                    f"{', '.join([str(x) for x in parent_rule.parents])} |\n",
                 )
                 if parent_rule.exclude_by_label_pattern:
                     f.write(
                         "| Allowed Parent Ontology Term Exceptions | "
-                        f"{escape(', '.join(parent_rule.exclude_by_label_pattern))} |\n",
+                        f"{', '.join(parent_rule.exclude_by_label_pattern)} |\n",
                     )
             if rule.allowed_placeholders:
                 f.write(
                     "| Allowed Placeholders | "
-                    f"{escape(', '.join([str(x) for x in rule.allowed_placeholders]))} |\n",
+                    f"{', '.join([str(x) for x in rule.allowed_placeholders])} |\n",
                 )
             if rule.allowed_other_sources:
                 f.write(
                     f"| Allowed Other Sources | "
-                    f"{escape(', '.join([str(x) for x in rule.allowed_other_sources]))} |\n",
+                    f"{', '.join([str(x) for x in rule.allowed_other_sources])} |\n",
                 )
             if rule.allowed_missing_ontology_terms:
                 f.write(
                     "| Allowed Missing Terms | "
-                    f"{escape(', '.join([str(x) for x in rule.allowed_missing_ontology_terms]))} |\n",
+                    f"{', '.join([str(x) for x in rule.allowed_missing_ontology_terms])} |\n",
                 )
             if rule.unexpected_terms:
                 f.write(

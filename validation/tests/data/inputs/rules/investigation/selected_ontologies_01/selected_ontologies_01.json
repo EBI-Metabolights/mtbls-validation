@@ -17,7 +17,7 @@
         "linkedFieldAndValueFilter": null
     },
     "termEnforcementLevel": "required",
-    "unexpectedTermEnforcementLevel": "required",
+    "unexpectedTermEnforcementLevel": "not-applicable",
     "validationType": "ontology-term-in-selected-ontologies",
     "constraints": {},
     "defaultValue": null,

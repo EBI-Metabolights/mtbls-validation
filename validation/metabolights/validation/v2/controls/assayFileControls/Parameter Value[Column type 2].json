@@ -29,10 +29,10 @@
                 "isaFileTemplateNameFilter": [
                     "GCxGC-MS"
                 ],
-                "linkedFieldAndValueFilter": []
+                "linkedFieldAndValueFilter": null
             },
             "termEnforcementLevel": "required",
-            "unexpectedTermEnforcementLevel": "recommended",
+            "unexpectedTermEnforcementLevel": "not-applicable",
             "validationType": "ontology-term-in-selected-ontologies",
             "constraints": {},
             "defaultValue": null,
@@ -123,10 +123,10 @@
                 "isaFileTemplateNameFilter": [
                     "GCxGC-MS"
                 ],
-                "linkedFieldAndValueFilter": []
+                "linkedFieldAndValueFilter": null
             },
             "termEnforcementLevel": "recommended",
-            "unexpectedTermEnforcementLevel": "required",
+            "unexpectedTermEnforcementLevel": "not-applicable",
             "validationType": "selected-ontology-term",
             "constraints": {},
             "defaultValue": null,

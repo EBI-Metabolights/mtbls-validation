@@ -109,6 +109,9 @@ nav:
       - MS: prioritised-control-lists/assay-file-control-lists/MS/MS-v1.0.md
       - MSImaging: prioritised-control-lists/assay-file-control-lists/MSImaging/MSImaging-v1.0.md
       - NMR: prioritised-control-lists/assay-file-control-lists/NMR/NMR-v1.0.md
+    - MAF File v1.0 Controls:
+      - MS: prioritised-control-lists/maf-file-control-lists/MS/MS-v1.0.md
+      - NMR: prioritised-control-lists/maf-file-control-lists/NMR/NMR-v1.0.md
   # - Controls for Templates v2.0:
   #   - Investigation File v2.0 Controls:
   #     - minimum: prioritised-control-lists/investigation-file-control-lists/minimum/minimum-v2.0.md
@@ -128,6 +131,9 @@ nav:
   #     - MS: prioritised-control-lists/assay-file-control-lists/MS/MS-v2.0.md
   #     - MSImaging: prioritised-control-lists/assay-file-control-lists/MSImaging/MSImaging-v2.0.md
   #     - NMR: prioritised-control-lists/assay-file-control-lists/NMR/NMR-v2.0.md
+  #   - MAF File v1.0 Controls:
+  #     - MS: prioritised-control-lists/maf-file-control-lists/MS/MS-v2.0.md
+  #     - NMR: prioritised-control-lists/maf-file-control-lists/NMR/NMR-v2.0.md
 plugins:
 - search
 

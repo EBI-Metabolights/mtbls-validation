@@ -17,15 +17,10 @@
                 "isaFileTemplateNameFilter": [
                     "LC-MS"
                 ],
-                "linkedFieldAndValueFilter": [
-                    {
-                        "name": "Protocol REF",
-                        "value": "Chromatography"
-                    }
-                ]
+                "linkedFieldAndValueFilter": null
             },
             "termEnforcementLevel": "recommended",
-            "unexpectedTermEnforcementLevel": "recommended",
+            "unexpectedTermEnforcementLevel": "not-applicable",
             "validationType": "any-ontology-term",
             "constraints": {},
             "defaultValue": null,
@@ -1426,15 +1421,10 @@
                 "isaFileTemplateNameFilter": [
                     "GC-MS"
                 ],
-                "linkedFieldAndValueFilter": [
-                    {
-                        "name": "Protocol REF",
-                        "value": "Chromatography"
-                    }
-                ]
+                "linkedFieldAndValueFilter": null
             },
             "termEnforcementLevel": "recommended",
-            "unexpectedTermEnforcementLevel": "recommended",
+            "unexpectedTermEnforcementLevel": "not-applicable",
             "validationType": "any-ontology-term",
             "constraints": {},
             "defaultValue": null,

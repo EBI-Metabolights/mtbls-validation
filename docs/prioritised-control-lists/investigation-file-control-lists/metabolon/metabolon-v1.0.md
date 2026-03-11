@@ -11,8 +11,8 @@
 | Applicable Template Versions | All |
 | Validation Type | any-ontology-term |
 | Recommended Ontologies [Ordered] | OBI, EFO, CHMO, NCIT, NCBITaxon, MS, BTO, CHEBI, UO, MESH, BAO, OMIT, GO, ENVO, MSIO, PO, MONDO, UBERON, SNOMED, CL, CLO, MI, EDAM, HP, MP |
-| Allowed Placeholders | \[MTBLS, http://www\.ebi\.ac\.uk/metabolights/ontology/placeholder\] |
-| Allowed Other Sources | \[MTBLS, http://www\.ebi\.ac\.uk/metabolights/ontology/MTBLS\_\], \[wikidata, https://www\.wikidata\.org/wiki/\], \[ILX, http://uri\.interlex\.org/base/ilx\_\] |
+| Allowed Placeholders | [MTBLS, http://www.ebi.ac.uk/metabolights/ontology/placeholder] |
+| Allowed Other Sources | [MTBLS, http://www.ebi.ac.uk/metabolights/ontology/MTBLS_], [wikidata, https://www.wikidata.org/wiki/], [ILX, http://uri.interlex.org/base/ilx_] |
 | Unexpected Terms | unknown, undefined, n/a, na, not applicable, not available, none, null, nill, not specified, not provided, \-, \-\-, \-\-\-, \_, \. |
 | Unexpected Term Enforcement Level | required |
 
@@ -26,9 +26,9 @@
 | Applicable Template Names | All |
 | Applicable Template Versions | All |
 | Validation Type | child-ontology-term |
-| Allowed Parent Ontology Terms | \[unit, UO, http://purl\.obolibrary\.org/obo/UO\_0000000\], \[unit, EFO, http://purl\.obolibrary\.org/obo/UO\_0000000\], \[Qualifier, NCIT, http://purl\.obolibrary\.org/obo/NCIT\_C41009\], \[Unit of Measure, NCIT, http://purl\.obolibrary\.org/obo/NCIT\_C25709\] |
-| Allowed Parent Ontology Term Exceptions | ^\.\*unit$, ^\.\*Unit of\.\*$ |
-| Allowed Other Sources | \[wikidata, https://www\.wikidata\.org/wiki/\], \[ILX, http://uri\.interlex\.org/base/ilx\_\] |
+| Allowed Parent Ontology Terms | [unit, UO, http://purl.obolibrary.org/obo/UO_0000000], [unit, EFO, http://purl.obolibrary.org/obo/UO_0000000], [Qualifier, NCIT, http://purl.obolibrary.org/obo/NCIT_C41009], [Unit of Measure, NCIT, http://purl.obolibrary.org/obo/NCIT_C25709] |
+| Allowed Parent Ontology Term Exceptions | ^.*unit$, ^.*Unit of.*$ |
+| Allowed Other Sources | [wikidata, https://www.wikidata.org/wiki/], [ILX, http://uri.interlex.org/base/ilx_] |
 | Ontology Term Enforcement Level | recommended |
 
 ### Recommended Terms
@@ -39,12 +39,14 @@
 | 2 | tesla | UO | http://purl\.obolibrary\.org/obo/UO\_0000228 |
 | 3 | micrometer | UO | http://purl\.obolibrary\.org/obo/UO\_0000017 |
 | 4 | millimolar | UO | http://purl\.obolibrary\.org/obo/UO\_0000063 |
-| 5 | kilogram | UO | http://purl\.obolibrary\.org/obo/UO\_0000009 |
-| 6 | milligram per day | EFO | http://www\.ebi\.ac\.uk/efo/EFO\_0004419 |
-| 7 | day | UO | http://purl\.obolibrary\.org/obo/UO\_0000033 |
-| 8 | hour | UO | http://purl\.obolibrary\.org/obo/UO\_0000032 |
-| 9 | degree Fahrenheit | UO | http://purl\.obolibrary\.org/obo/UO\_0000195 |
-| 10 | degree Celsius | UO | http://purl\.obolibrary\.org/obo/UO\_0000027 |
+| 5 | meter | UO | http://purl\.obolibrary\.org/obo/UO\_0000008 |
+| 6 | kilogram | UO | http://purl\.obolibrary\.org/obo/UO\_0000009 |
+| 7 | milligram per day | EFO | http://www\.ebi\.ac\.uk/efo/EFO\_0004419 |
+| 8 | day | UO | http://purl\.obolibrary\.org/obo/UO\_0000033 |
+| 9 | hour | UO | http://purl\.obolibrary\.org/obo/UO\_0000032 |
+| 10 | minute | UO | http://purl\.obolibrary\.org/obo/UO\_0000031 |
+| 11 | degree Fahrenheit | UO | http://purl\.obolibrary\.org/obo/UO\_0000195 |
+| 12 | degree Celsius | UO | http://purl\.obolibrary\.org/obo/UO\_0000027 |
 
 ## Study Protocol Type
 
@@ -57,8 +59,8 @@
 | Applicable Template Versions | All |
 | Validation Type | ontology-term-in-selected-ontologies |
 | Ontologies [Ordered] | EFO, NCIT, MTBLS, CHEBI, CHMO, MONDO, PRIDE, GO, MESH, MI, MS |
-| Allowed Placeholders | \[MTBLS, http://www\.ebi\.ac\.uk/metabolights/ontology/placeholder\], \[, \] |
-| Allowed Other Sources | \[MTBLS, http://www\.ebi\.ac\.uk/metabolights/ontology/MTBLS\_\] |
+| Allowed Placeholders | [MTBLS, http://www.ebi.ac.uk/metabolights/ontology/placeholder], [, ] |
+| Allowed Other Sources | [MTBLS, http://www.ebi.ac.uk/metabolights/ontology/MTBLS_] |
 | Ontology Term Enforcement Level | recommended |
 
 ### Recommended Terms
@@ -88,8 +90,8 @@
 | Applicable Template Versions | All |
 | Validation Type | any-ontology-term |
 | Recommended Ontologies [Ordered] | EFO, MSIO, NCIT, MTBLS, CHEBI, CHMO, MONDO, PRIDE, GO, MESH |
-| Allowed Placeholders | \[MTBLS, http://www\.ebi\.ac\.uk/metabolights/ontology/placeholder\], \[, \] |
-| Allowed Other Sources | \[MTBLS, http://www\.ebi\.ac\.uk/metabolights/ontology/MTBLS\_\], \[wikidata, https://www\.wikidata\.org/wiki/\], \[ILX, http://uri\.interlex\.org/base/ilx\_\] |
+| Allowed Placeholders | [MTBLS, http://www.ebi.ac.uk/metabolights/ontology/placeholder], [, ] |
+| Allowed Other Sources | [MTBLS, http://www.ebi.ac.uk/metabolights/ontology/MTBLS_], [wikidata, https://www.wikidata.org/wiki/], [ILX, http://uri.interlex.org/base/ilx_] |
 | Ontology Term Enforcement Level | recommended |
 
 ### Recommended Terms
@@ -118,7 +120,7 @@
 | Applicable Template Versions | All |
 | Validation Type | child-ontology-term |
 | Ontologies [Ordered] | NCIT |
-| Allowed Parent Ontology Terms | \[Personnel, NCIT, http://purl\.obolibrary\.org/obo/NCIT\_C60758\] |
+| Allowed Parent Ontology Terms | [Personnel, NCIT, http://purl.obolibrary.org/obo/NCIT_C60758] |
 | Ontology Term Enforcement Level | recommended |
 
 ### Recommended Terms
@@ -161,8 +163,8 @@
 | Applicable Template Versions | All |
 | Validation Type | any-ontology-term |
 | Recommended Ontologies [Ordered] | EFO, NCIT, MTBLS, CHEBI, CHMO, MONDO, PRIDE, GO, MESH |
-| Allowed Placeholders | \[MTBLS, http://www\.ebi\.ac\.uk/metabolights/ontology/placeholder\], \[, \] |
-| Allowed Other Sources | \[MTBLS, http://www\.ebi\.ac\.uk/metabolights/ontology/MTBLS\_\], \[wikidata, https://www\.wikidata\.org/wiki/\], \[ILX, http://uri\.interlex\.org/base/ilx\_\] |
+| Allowed Placeholders | [MTBLS, http://www.ebi.ac.uk/metabolights/ontology/placeholder], [, ] |
+| Allowed Other Sources | [MTBLS, http://www.ebi.ac.uk/metabolights/ontology/MTBLS_], [wikidata, https://www.wikidata.org/wiki/], [ILX, http://uri.interlex.org/base/ilx_] |
 
 ## Study Protocol Parameter Name
 
@@ -175,8 +177,8 @@
 | Applicable Template Versions | All |
 | Validation Type | any-ontology-term |
 | Recommended Ontologies [Ordered] | MS, EFO, NCIT, MTBLS, CHMO, MONDO, PRIDE, GO, MESH, MI |
-| Allowed Placeholders | \[MTBLS, http://www\.ebi\.ac\.uk/metabolights/ontology/placeholder\], \[, \] |
-| Allowed Other Sources | \[MTBLS, http://www\.ebi\.ac\.uk/metabolights/ontology/MTBLS\_\] |
+| Allowed Placeholders | [MTBLS, http://www.ebi.ac.uk/metabolights/ontology/placeholder], [, ] |
+| Allowed Other Sources | [MTBLS, http://www.ebi.ac.uk/metabolights/ontology/MTBLS_] |
 | Ontology Term Enforcement Level | recommended |
 
 ### Recommended Terms
@@ -288,8 +290,8 @@
 | Applicable Template Versions | All |
 | Validation Type | any-ontology-term |
 | Recommended Ontologies [Ordered] | EFO, MTBLS, ENVO, MESH, CHEBI, CHMO, NCIT, PO |
-| Allowed Placeholders | \[MTBLS, http://www\.ebi\.ac\.uk/metabolights/ontology/placeholder\], \[, \] |
-| Allowed Other Sources | \[MTBLS, http://www\.ebi\.ac\.uk/metabolights/ontology/MTBLS\_\], \[wikidata, https://www\.wikidata\.org/wiki/\], \[ILX, http://uri\.interlex\.org/base/ilx\_\] |
+| Allowed Placeholders | [MTBLS, http://www.ebi.ac.uk/metabolights/ontology/placeholder], [, ] |
+| Allowed Other Sources | [MTBLS, http://www.ebi.ac.uk/metabolights/ontology/MTBLS_], [wikidata, https://www.wikidata.org/wiki/], [ILX, http://uri.interlex.org/base/ilx_] |
 | Ontology Term Enforcement Level | recommended |
 
 ### Recommended Terms
@@ -340,8 +342,8 @@
 | Applicable Template Versions | All |
 | Validation Type | ontology-term-in-selected-ontologies |
 | Ontologies [Ordered] | ROR |
-| Allowed Placeholders | \[MTBLS, http://www\.ebi\.ac\.uk/metabolights/ontology/placeholder\], \[, \] |
-| Allowed Other Sources | \[MTBLS, http://www\.ebi\.ac\.uk/metabolights/ontology/MTBLS\_\], \[wikidata, https://www\.wikidata\.org/wiki/\], \[ILX, http://uri\.interlex\.org/base/ilx\_\] |
+| Allowed Placeholders | [MTBLS, http://www.ebi.ac.uk/metabolights/ontology/placeholder], [, ] |
+| Allowed Other Sources | [MTBLS, http://www.ebi.ac.uk/metabolights/ontology/MTBLS_], [wikidata, https://www.wikidata.org/wiki/], [ILX, http://uri.interlex.org/base/ilx_] |
 
 ## Study Publication Status
 
@@ -377,8 +379,8 @@
 | Applicable Template Versions | All |
 | Validation Type | any-ontology-term |
 | Recommended Ontologies [Ordered] | MS |
-| Allowed Placeholders | \[MTBLS, http://www\.ebi\.ac\.uk/metabolights/ontology/placeholder\], \[, \] |
-| Allowed Other Sources | \[MTBLS, http://www\.ebi\.ac\.uk/metabolights/ontology/MTBLS\_\], \[wikidata, https://www\.wikidata\.org/wiki/\], \[ILX, http://uri\.interlex\.org/base/ilx\_\] |
+| Allowed Placeholders | [MTBLS, http://www.ebi.ac.uk/metabolights/ontology/placeholder], [, ] |
+| Allowed Other Sources | [MTBLS, http://www.ebi.ac.uk/metabolights/ontology/MTBLS_], [wikidata, https://www.wikidata.org/wiki/], [ILX, http://uri.interlex.org/base/ilx_] |
 | Ontology Term Enforcement Level | recommended |
 
 ### Recommended Terms
@@ -399,9 +401,9 @@
 | Applicable Template Versions | All |
 | Validation Type | child-ontology-term |
 | Ontologies [Ordered] | MS |
-| Allowed Parent Ontology Terms | \[software, MS, http://purl\.obolibrary\.org/obo/MS\_1000531\] |
-| Allowed Placeholders | \[MTBLS, http://www\.ebi\.ac\.uk/metabolights/ontology/placeholder\], \[, \] |
-| Allowed Other Sources | \[MTBLS, http://www\.ebi\.ac\.uk/metabolights/ontology/MTBLS\_\], \[wikidata, https://www\.wikidata\.org/wiki/\], \[ILX, http://uri\.interlex\.org/base/ilx\_\] |
+| Allowed Parent Ontology Terms | [software, MS, http://purl.obolibrary.org/obo/MS_1000531] |
+| Allowed Placeholders | [MTBLS, http://www.ebi.ac.uk/metabolights/ontology/placeholder], [, ] |
+| Allowed Other Sources | [MTBLS, http://www.ebi.ac.uk/metabolights/ontology/MTBLS_], [wikidata, https://www.wikidata.org/wiki/], [ILX, http://uri.interlex.org/base/ilx_] |
 | Ontology Term Enforcement Level | recommended |
 
 ### Recommended Terms

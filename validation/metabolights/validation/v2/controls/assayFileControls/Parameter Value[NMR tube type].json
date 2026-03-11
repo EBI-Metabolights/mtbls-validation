@@ -15,15 +15,10 @@
                 "isaFileTemplateNameFilter": [
                     "NMR"
                 ],
-                "linkedFieldAndValueFilter": [
-                    {
-                        "name": "Protocol REF",
-                        "value": "NMR sample"
-                    }
-                ]
+                "linkedFieldAndValueFilter": null
             },
             "termEnforcementLevel": "recommended",
-            "unexpectedTermEnforcementLevel": "recommended",
+            "unexpectedTermEnforcementLevel": "not-applicable",
             "validationType": "any-ontology-term",
             "constraints": {},
             "defaultValue": null,
