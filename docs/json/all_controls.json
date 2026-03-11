@@ -112,7 +112,7 @@
                     "linkedFieldAndValueFilter": null
                 },
                 "termEnforcementLevel": "required",
-                "unexpectedTermEnforcementLevel": "required",
+                "unexpectedTermEnforcementLevel": "not-applicable",
                 "validationType": "selected-ontology-term",
                 "constraints": {},
                 "defaultValue": null,
@@ -176,7 +176,7 @@
                     "linkedFieldAndValueFilter": null
                 },
                 "termEnforcementLevel": "required",
-                "unexpectedTermEnforcementLevel": "required",
+                "unexpectedTermEnforcementLevel": "not-applicable",
                 "validationType": "selected-ontology-term",
                 "constraints": {},
                 "defaultValue": null,
@@ -240,7 +240,7 @@
                     "linkedFieldAndValueFilter": null
                 },
                 "termEnforcementLevel": "required",
-                "unexpectedTermEnforcementLevel": "required",
+                "unexpectedTermEnforcementLevel": "not-applicable",
                 "validationType": "selected-ontology-term",
                 "constraints": {},
                 "defaultValue": null,
@@ -304,7 +304,7 @@
                     "linkedFieldAndValueFilter": null
                 },
                 "termEnforcementLevel": "required",
-                "unexpectedTermEnforcementLevel": "required",
+                "unexpectedTermEnforcementLevel": "not-applicable",
                 "validationType": "selected-ontology-term",
                 "constraints": {},
                 "defaultValue": null,
@@ -369,7 +369,7 @@
                     "linkedFieldAndValueFilter": null
                 },
                 "termEnforcementLevel": "required",
-                "unexpectedTermEnforcementLevel": "required",
+                "unexpectedTermEnforcementLevel": "not-applicable",
                 "validationType": "selected-ontology-term",
                 "constraints": {},
                 "defaultValue": null,
@@ -466,30 +466,13 @@
                     "linkedFieldAndValueFilter": null
                 },
                 "termEnforcementLevel": "required",
-                "unexpectedTermEnforcementLevel": "required",
+                "unexpectedTermEnforcementLevel": "not-applicable",
                 "validationType": "selected-ontology-term",
                 "constraints": {},
                 "defaultValue": null,
                 "allowedMissingOntologyTerms": [],
                 "allowedOtherSources": [],
-                "allowedPlaceholders": [
-                    {
-                        "termAccessionNumber": "http://purl.obolibrary.org/obo/MS_1000076",
-                        "termSourceRef": "MS"
-                    },
-                    {
-                        "termAccessionNumber": "http://purl.obolibrary.org/obo/MS_1000077",
-                        "termSourceRef": "MS"
-                    },
-                    {
-                        "termAccessionNumber": "http://purl.obolibrary.org/obo/MS_1002833",
-                        "termSourceRef": "MS"
-                    },
-                    {
-                        "termAccessionNumber": "http://purl.obolibrary.org/obo/MS_1003774",
-                        "termSourceRef": "MS"
-                    }
-                ],
+                "allowedPlaceholders": [],
                 "terms": [
                     {
                         "term": "negative polarity acquisition",
@@ -532,7 +515,7 @@
                     "linkedFieldAndValueFilter": null
                 },
                 "termEnforcementLevel": "required",
-                "unexpectedTermEnforcementLevel": "required",
+                "unexpectedTermEnforcementLevel": "not-applicable",
                 "validationType": "selected-ontology-term",
                 "constraints": {},
                 "defaultValue": null,
@@ -578,7 +561,7 @@
                     "linkedFieldAndValueFilter": null
                 },
                 "termEnforcementLevel": "recommended",
-                "unexpectedTermEnforcementLevel": "recommended",
+                "unexpectedTermEnforcementLevel": "not-applicable",
                 "validationType": "any-ontology-term",
                 "constraints": {},
                 "defaultValue": null,
@@ -924,7 +907,7 @@
                     "linkedFieldAndValueFilter": null
                 },
                 "termEnforcementLevel": "recommended",
-                "unexpectedTermEnforcementLevel": "recommended",
+                "unexpectedTermEnforcementLevel": "not-applicable",
                 "validationType": "any-ontology-term",
                 "constraints": {},
                 "defaultValue": null,
@@ -1416,7 +1399,7 @@
                     "linkedFieldAndValueFilter": null
                 },
                 "termEnforcementLevel": "recommended",
-                "unexpectedTermEnforcementLevel": "recommended",
+                "unexpectedTermEnforcementLevel": "not-applicable",
                 "validationType": "ontology-term-in-selected-ontologies",
                 "constraints": {},
                 "defaultValue": null,
@@ -1451,6 +1434,7 @@
                     "templateVersionFilter": null,
                     "isaFileTemplateNameFilter": [
                         "LC-MS",
+                        "DI-MS",
                         "MALDI-MS",
                         "FIA-MS",
                         "CE-MS",
@@ -1459,7 +1443,7 @@
                     "linkedFieldAndValueFilter": null
                 },
                 "termEnforcementLevel": "recommended",
-                "unexpectedTermEnforcementLevel": "recommended",
+                "unexpectedTermEnforcementLevel": "not-applicable",
                 "validationType": "ontology-term-in-selected-ontologies",
                 "constraints": {},
                 "defaultValue": null,
@@ -2360,7 +2344,7 @@
                     "linkedFieldAndValueFilter": null
                 },
                 "termEnforcementLevel": "recommended",
-                "unexpectedTermEnforcementLevel": "recommended",
+                "unexpectedTermEnforcementLevel": "not-applicable",
                 "validationType": "ontology-term-in-selected-ontologies",
                 "constraints": {},
                 "defaultValue": null,
@@ -2626,7 +2610,7 @@
                     "linkedFieldAndValueFilter": null
                 },
                 "termEnforcementLevel": "recommended",
-                "unexpectedTermEnforcementLevel": "recommended",
+                "unexpectedTermEnforcementLevel": "not-applicable",
                 "validationType": "any-ontology-term",
                 "constraints": {},
                 "defaultValue": null,
@@ -2855,6 +2839,131 @@
         ],
         "Parameter Value[Chromatography Instrument]": [
             {
+                "ruleName": "Parameter Value[Chromatography Instrument]-ms-mhd-enabled-lc-ms",
+                "fieldName": "Parameter Value[Chromatography Instrument]",
+                "ontologies": [
+                    "MS"
+                ],
+                "allowedParentOntologyTerms": {
+                    "excludeByLabelPattern": [
+                        "^.*chromatography system$"
+                    ],
+                    "excludeByAccession": [],
+                    "parents": [
+                        {
+                            "term": "liquid chromatography system",
+                            "termAccessionNumber": "http://purl.obolibrary.org/obo/MS_1003589",
+                            "termSourceRef": "MS"
+                        }
+                    ]
+                },
+                "description": "",
+                "selectionCriteria": {
+                    "isaFileType": "assay",
+                    "studyCreatedAtOrAfter": null,
+                    "studyCreatedBefore": null,
+                    "studyCategoryFilter": [
+                        "ms-mhd-enabled"
+                    ],
+                    "templateVersionFilter": null,
+                    "isaFileTemplateNameFilter": [
+                        "LC-MS"
+                    ],
+                    "linkedFieldAndValueFilter": null
+                },
+                "termEnforcementLevel": "recommended",
+                "unexpectedTermEnforcementLevel": "required",
+                "validationType": "ontology-term-in-selected-ontologies",
+                "constraints": {},
+                "defaultValue": null,
+                "allowedMissingOntologyTerms": [],
+                "allowedOtherSources": [
+                    {
+                        "sourceLabel": "wikidata",
+                        "accessionPrefix": "https://www.wikidata.org/wiki/"
+                    },
+                    {
+                        "sourceLabel": "ILX",
+                        "accessionPrefix": "http://uri.interlex.org/base/ilx_"
+                    }
+                ],
+                "allowedPlaceholders": [],
+                "terms": [],
+                "unexpectedTerms": [
+                    "LC instrument",
+                    "chromatography",
+                    "liquid chromatography",
+                    "liquid chromatography system",
+                    "liquid chromatography-mass spectrometry",
+                    "liquid chromatography-tandem mass spectrometry",
+                    "ultra performance liquid chromatography",
+                    "ultra high performance liquid chromatography",
+                    "UPLC",
+                    "UHPLC"
+                ]
+            },
+            {
+                "ruleName": "Parameter Value[Chromatography Instrument]-ms-mhd-enabled-gc-ms",
+                "fieldName": "Parameter Value[Chromatography Instrument]",
+                "ontologies": [
+                    "MS"
+                ],
+                "allowedParentOntologyTerms": {
+                    "excludeByLabelPattern": [
+                        "^.*chromatography system$"
+                    ],
+                    "excludeByAccession": [],
+                    "parents": [
+                        {
+                            "term": "gas chromatography system",
+                            "termAccessionNumber": "http://purl.obolibrary.org/obo/MS_1003728",
+                            "termSourceRef": "MS"
+                        }
+                    ]
+                },
+                "description": "",
+                "selectionCriteria": {
+                    "isaFileType": "assay",
+                    "studyCreatedAtOrAfter": null,
+                    "studyCreatedBefore": null,
+                    "studyCategoryFilter": [
+                        "ms-mhd-enabled"
+                    ],
+                    "templateVersionFilter": null,
+                    "isaFileTemplateNameFilter": [
+                        "GC-MS",
+                        "GCxGC-MS"
+                    ],
+                    "linkedFieldAndValueFilter": null
+                },
+                "termEnforcementLevel": "recommended",
+                "unexpectedTermEnforcementLevel": "required",
+                "validationType": "ontology-term-in-selected-ontologies",
+                "constraints": {},
+                "defaultValue": null,
+                "allowedMissingOntologyTerms": [],
+                "allowedOtherSources": [
+                    {
+                        "sourceLabel": "wikidata",
+                        "accessionPrefix": "https://www.wikidata.org/wiki/"
+                    },
+                    {
+                        "sourceLabel": "ILX",
+                        "accessionPrefix": "http://uri.interlex.org/base/ilx_"
+                    }
+                ],
+                "allowedPlaceholders": [],
+                "terms": [],
+                "unexpectedTerms": [
+                    "GC instrument",
+                    "chromatography",
+                    "gas chromatography",
+                    "gas chromotography system",
+                    "gas chromatography-mass spectrometry",
+                    "gas chromatography-tandem mass spectrometry"
+                ]
+            },
+            {
                 "ruleName": "Parameter Value[Chromatography Instrument]-01",
                 "fieldName": "Parameter Value[Chromatography Instrument]",
                 "ontologies": [
@@ -2874,7 +2983,7 @@
                     "linkedFieldAndValueFilter": null
                 },
                 "termEnforcementLevel": "recommended",
-                "unexpectedTermEnforcementLevel": "recommended",
+                "unexpectedTermEnforcementLevel": "required",
                 "validationType": "any-ontology-term",
                 "constraints": {},
                 "defaultValue": null,
@@ -3286,7 +3395,18 @@
                         "termSourceRef": "MTBLS"
                     }
                 ],
-                "unexpectedTerms": []
+                "unexpectedTerms": [
+                    "LC instrument",
+                    "chromatography",
+                    "liquid chromatography",
+                    "liquid chromatography system",
+                    "liquid chromatography-mass spectrometry",
+                    "liquid chromatography-tandem mass spectrometry",
+                    "ultra performance liquid chromatography",
+                    "ultra high performance liquid chromatography",
+                    "UPLC",
+                    "UHPLC"
+                ]
             },
             {
                 "ruleName": "Parameter Value[Chromatography Instrument]-02",
@@ -3309,7 +3429,7 @@
                     "linkedFieldAndValueFilter": null
                 },
                 "termEnforcementLevel": "recommended",
-                "unexpectedTermEnforcementLevel": "recommended",
+                "unexpectedTermEnforcementLevel": "required",
                 "validationType": "any-ontology-term",
                 "constraints": {},
                 "defaultValue": null,
@@ -3501,7 +3621,14 @@
                         "termSourceRef": "MTBLS"
                     }
                 ],
-                "unexpectedTerms": []
+                "unexpectedTerms": [
+                    "GC instrument",
+                    "chromatography",
+                    "gas chromatography",
+                    "gas chromotography system",
+                    "gas chromatography-mass spectrometry",
+                    "gas chromatography-tandem mass spectrometry"
+                ]
             }
         ],
         "Parameter Value[Column model 1]": [
@@ -3525,7 +3652,7 @@
                     "linkedFieldAndValueFilter": null
                 },
                 "termEnforcementLevel": "recommended",
-                "unexpectedTermEnforcementLevel": "recommended",
+                "unexpectedTermEnforcementLevel": "not-applicable",
                 "validationType": "any-ontology-term",
                 "constraints": {},
                 "defaultValue": null,
@@ -3945,7 +4072,7 @@
                     "linkedFieldAndValueFilter": null
                 },
                 "termEnforcementLevel": "recommended",
-                "unexpectedTermEnforcementLevel": "recommended",
+                "unexpectedTermEnforcementLevel": "not-applicable",
                 "validationType": "ontology-term-in-selected-ontologies",
                 "constraints": {},
                 "defaultValue": null,
@@ -4025,7 +4152,7 @@
                     "linkedFieldAndValueFilter": null
                 },
                 "termEnforcementLevel": "recommended",
-                "unexpectedTermEnforcementLevel": "recommended",
+                "unexpectedTermEnforcementLevel": "not-applicable",
                 "validationType": "ontology-term-in-selected-ontologies",
                 "constraints": {},
                 "defaultValue": null,
@@ -4089,7 +4216,7 @@
                     "linkedFieldAndValueFilter": null
                 },
                 "termEnforcementLevel": "recommended",
-                "unexpectedTermEnforcementLevel": "recommended",
+                "unexpectedTermEnforcementLevel": "not-applicable",
                 "validationType": "ontology-term-in-selected-ontologies",
                 "constraints": {},
                 "defaultValue": null,
@@ -4162,7 +4289,7 @@
                     "linkedFieldAndValueFilter": null
                 },
                 "termEnforcementLevel": "required",
-                "unexpectedTermEnforcementLevel": "recommended",
+                "unexpectedTermEnforcementLevel": "not-applicable",
                 "validationType": "ontology-term-in-selected-ontologies",
                 "constraints": {},
                 "defaultValue": null,
@@ -4273,7 +4400,7 @@
                     "linkedFieldAndValueFilter": null
                 },
                 "termEnforcementLevel": "required",
-                "unexpectedTermEnforcementLevel": "recommended",
+                "unexpectedTermEnforcementLevel": "not-applicable",
                 "validationType": "ontology-term-in-selected-ontologies",
                 "constraints": {},
                 "defaultValue": null,
@@ -4367,7 +4494,7 @@
                     "linkedFieldAndValueFilter": null
                 },
                 "termEnforcementLevel": "required",
-                "unexpectedTermEnforcementLevel": "recommended",
+                "unexpectedTermEnforcementLevel": "not-applicable",
                 "validationType": "selected-ontology-term",
                 "constraints": {},
                 "defaultValue": null,
@@ -4431,7 +4558,7 @@
                     "linkedFieldAndValueFilter": null
                 },
                 "termEnforcementLevel": "recommended",
-                "unexpectedTermEnforcementLevel": "required",
+                "unexpectedTermEnforcementLevel": "not-applicable",
                 "validationType": "selected-ontology-term",
                 "constraints": {},
                 "defaultValue": null,
@@ -4497,7 +4624,7 @@
                     "linkedFieldAndValueFilter": null
                 },
                 "termEnforcementLevel": "recommended",
-                "unexpectedTermEnforcementLevel": "recommended",
+                "unexpectedTermEnforcementLevel": "not-applicable",
                 "validationType": "any-ontology-term",
                 "constraints": {},
                 "defaultValue": null,
@@ -4782,7 +4909,7 @@
                     "linkedFieldAndValueFilter": null
                 },
                 "termEnforcementLevel": "recommended",
-                "unexpectedTermEnforcementLevel": "recommended",
+                "unexpectedTermEnforcementLevel": "not-applicable",
                 "validationType": "any-ontology-term",
                 "constraints": {},
                 "defaultValue": null,
@@ -4881,7 +5008,7 @@
                     "linkedFieldAndValueFilter": null
                 },
                 "termEnforcementLevel": "recommended",
-                "unexpectedTermEnforcementLevel": "recommended",
+                "unexpectedTermEnforcementLevel": "not-applicable",
                 "validationType": "any-ontology-term",
                 "constraints": {},
                 "defaultValue": null,
@@ -5086,7 +5213,7 @@
                     "linkedFieldAndValueFilter": null
                 },
                 "termEnforcementLevel": "recommended",
-                "unexpectedTermEnforcementLevel": "recommended",
+                "unexpectedTermEnforcementLevel": "not-applicable",
                 "validationType": "any-ontology-term",
                 "constraints": {},
                 "defaultValue": null,
@@ -5536,7 +5663,7 @@
                     "linkedFieldAndValueFilter": null
                 },
                 "termEnforcementLevel": "recommended",
-                "unexpectedTermEnforcementLevel": "recommended",
+                "unexpectedTermEnforcementLevel": "not-applicable",
                 "validationType": "any-ontology-term",
                 "constraints": {},
                 "defaultValue": null,
@@ -5746,7 +5873,7 @@
                     "linkedFieldAndValueFilter": null
                 },
                 "termEnforcementLevel": "recommended",
-                "unexpectedTermEnforcementLevel": "recommended",
+                "unexpectedTermEnforcementLevel": "not-applicable",
                 "validationType": "any-ontology-term",
                 "constraints": {},
                 "defaultValue": null,
@@ -5950,7 +6077,7 @@
                     "linkedFieldAndValueFilter": null
                 },
                 "termEnforcementLevel": "recommended",
-                "unexpectedTermEnforcementLevel": "recommended",
+                "unexpectedTermEnforcementLevel": "not-applicable",
                 "validationType": "any-ontology-term",
                 "constraints": {},
                 "defaultValue": null,
@@ -6051,12 +6178,13 @@
                     "studyCategoryFilter": null,
                     "templateVersionFilter": null,
                     "isaFileTemplateNameFilter": [
-                        "NMR"
+                        "NMR",
+                        "MSImaging"
                     ],
                     "linkedFieldAndValueFilter": null
                 },
                 "termEnforcementLevel": "recommended",
-                "unexpectedTermEnforcementLevel": "recommended",
+                "unexpectedTermEnforcementLevel": "not-applicable",
                 "validationType": "any-ontology-term",
                 "constraints": {},
                 "defaultValue": null,
@@ -6241,6 +6369,48 @@
                 "unexpectedTerms": []
             }
         ],
+        "Parameter Value[Derivatization]": [
+            {
+                "ruleName": "Parameter Value[Derivatization]-01",
+                "fieldName": "Parameter Value[Derivatization]",
+                "ontologies": [
+                    "MTBLS"
+                ],
+                "allowedParentOntologyTerms": null,
+                "description": "",
+                "selectionCriteria": {
+                    "isaFileType": "assay",
+                    "studyCreatedAtOrAfter": null,
+                    "studyCreatedBefore": null,
+                    "studyCategoryFilter": null,
+                    "templateVersionFilter": null,
+                    "isaFileTemplateNameFilter": [],
+                    "linkedFieldAndValueFilter": null
+                },
+                "termEnforcementLevel": "not-applicable",
+                "unexpectedTermEnforcementLevel": "not-applicable",
+                "validationType": "check-only-constraints",
+                "constraints": {
+                    "pattern": {
+                        "constraint": "^.*$",
+                        "errorMessage": "Define any value",
+                        "enforcementLevel": "recommended"
+                    }
+                },
+                "defaultValue": null,
+                "allowedMissingOntologyTerms": [
+                    {
+                        "term": "none",
+                        "termAccessionNumber": "",
+                        "termSourceRef": ""
+                    }
+                ],
+                "allowedOtherSources": [],
+                "allowedPlaceholders": [],
+                "terms": [],
+                "unexpectedTerms": []
+            }
+        ],
         "Parameter Value[Column type 2]": [
             {
                 "ruleName": "Parameter Value[Column type 2]-01",
@@ -6274,7 +6444,7 @@
                     "linkedFieldAndValueFilter": null
                 },
                 "termEnforcementLevel": "required",
-                "unexpectedTermEnforcementLevel": "recommended",
+                "unexpectedTermEnforcementLevel": "not-applicable",
                 "validationType": "ontology-term-in-selected-ontologies",
                 "constraints": {},
                 "defaultValue": null,
@@ -6368,7 +6538,7 @@
                     "linkedFieldAndValueFilter": null
                 },
                 "termEnforcementLevel": "recommended",
-                "unexpectedTermEnforcementLevel": "required",
+                "unexpectedTermEnforcementLevel": "not-applicable",
                 "validationType": "selected-ontology-term",
                 "constraints": {},
                 "defaultValue": null,
@@ -6423,9 +6593,7 @@
                         "^.*unit$",
                         "^.*Unit of.*$"
                     ],
-                    "excludeByAccession": [
-                        "http://purl.obolibrary.org/obo/NCIT_C41139"
-                    ],
+                    "excludeByAccession": [],
                     "parents": [
                         {
                             "term": "unit",
@@ -6498,6 +6666,11 @@
                         "termSourceRef": "UO"
                     },
                     {
+                        "term": "meter",
+                        "termAccessionNumber": "http://purl.obolibrary.org/obo/UO_0000008",
+                        "termSourceRef": "UO"
+                    },
+                    {
                         "term": "kilogram",
                         "termAccessionNumber": "http://purl.obolibrary.org/obo/UO_0000009",
                         "termSourceRef": "UO"
@@ -6515,6 +6688,11 @@
                     {
                         "term": "hour",
                         "termAccessionNumber": "http://purl.obolibrary.org/obo/UO_0000032",
+                        "termSourceRef": "UO"
+                    },
+                    {
+                        "term": "minute",
+                        "termAccessionNumber": "http://purl.obolibrary.org/obo/UO_0000031",
                         "termSourceRef": "UO"
                     },
                     {
@@ -6552,7 +6730,7 @@
                     "linkedFieldAndValueFilter": null
                 },
                 "termEnforcementLevel": "recommended",
-                "unexpectedTermEnforcementLevel": "recommended",
+                "unexpectedTermEnforcementLevel": "not-applicable",
                 "validationType": "any-ontology-term",
                 "constraints": {},
                 "defaultValue": null,
@@ -7956,7 +8134,7 @@
                     "linkedFieldAndValueFilter": null
                 },
                 "termEnforcementLevel": "recommended",
-                "unexpectedTermEnforcementLevel": "recommended",
+                "unexpectedTermEnforcementLevel": "not-applicable",
                 "validationType": "any-ontology-term",
                 "constraints": {},
                 "defaultValue": null,
@@ -8384,7 +8562,7 @@
                     "linkedFieldAndValueFilter": null
                 },
                 "termEnforcementLevel": "required",
-                "unexpectedTermEnforcementLevel": "recommended",
+                "unexpectedTermEnforcementLevel": "not-applicable",
                 "validationType": "ontology-term-in-selected-ontologies",
                 "constraints": {},
                 "defaultValue": null,
@@ -8478,7 +8656,7 @@
                     "linkedFieldAndValueFilter": null
                 },
                 "termEnforcementLevel": "recommended",
-                "unexpectedTermEnforcementLevel": "required",
+                "unexpectedTermEnforcementLevel": "not-applicable",
                 "validationType": "selected-ontology-term",
                 "constraints": {},
                 "defaultValue": null,
@@ -8635,7 +8813,7 @@
                     "linkedFieldAndValueFilter": null
                 },
                 "termEnforcementLevel": "required",
-                "unexpectedTermEnforcementLevel": "required",
+                "unexpectedTermEnforcementLevel": "not-applicable",
                 "validationType": "selected-ontology-term",
                 "constraints": {},
                 "defaultValue": {
@@ -8673,8 +8851,7 @@
                 "ontologies": [
                     "MONDO",
                     "MP",
-                    "SNOMED",
-                    "PATO"
+                    "SNOMED"
                 ],
                 "allowedParentOntologyTerms": null,
                 "description": "",
@@ -8690,7 +8867,7 @@
                     "linkedFieldAndValueFilter": null
                 },
                 "termEnforcementLevel": "required",
-                "unexpectedTermEnforcementLevel": "required",
+                "unexpectedTermEnforcementLevel": "not-applicable",
                 "validationType": "ontology-term-in-selected-ontologies",
                 "constraints": {},
                 "defaultValue": {
@@ -8793,7 +8970,7 @@
                     "linkedFieldAndValueFilter": null
                 },
                 "termEnforcementLevel": "recommended",
-                "unexpectedTermEnforcementLevel": "recommended",
+                "unexpectedTermEnforcementLevel": "not-applicable",
                 "validationType": "ontology-term-in-selected-ontologies",
                 "constraints": {},
                 "defaultValue": {
@@ -8895,7 +9072,7 @@
                     "linkedFieldAndValueFilter": null
                 },
                 "termEnforcementLevel": "recommended",
-                "unexpectedTermEnforcementLevel": "recommended",
+                "unexpectedTermEnforcementLevel": "not-applicable",
                 "validationType": "ontology-term-in-selected-ontologies",
                 "constraints": {},
                 "defaultValue": null,
@@ -9019,7 +9196,7 @@
                     "linkedFieldAndValueFilter": null
                 },
                 "termEnforcementLevel": "recommended",
-                "unexpectedTermEnforcementLevel": "recommended",
+                "unexpectedTermEnforcementLevel": "not-applicable",
                 "validationType": "ontology-term-in-selected-ontologies",
                 "constraints": {},
                 "defaultValue": null,
@@ -9051,8 +9228,7 @@
                 "ontologies": [
                     "MONDO",
                     "MP",
-                    "SNOMED",
-                    "PATO"
+                    "SNOMED"
                 ],
                 "allowedParentOntologyTerms": null,
                 "description": "",
@@ -9068,7 +9244,7 @@
                     "linkedFieldAndValueFilter": null
                 },
                 "termEnforcementLevel": "required",
-                "unexpectedTermEnforcementLevel": "required",
+                "unexpectedTermEnforcementLevel": "not-applicable",
                 "validationType": "ontology-term-in-selected-ontologies",
                 "constraints": {},
                 "defaultValue": {
@@ -9174,7 +9350,7 @@
                     "linkedFieldAndValueFilter": null
                 },
                 "termEnforcementLevel": "recommended",
-                "unexpectedTermEnforcementLevel": "recommended",
+                "unexpectedTermEnforcementLevel": "not-applicable",
                 "validationType": "ontology-term-in-selected-ontologies",
                 "constraints": {},
                 "defaultValue": {
@@ -9276,7 +9452,7 @@
                 "validationType": "check-only-constraints",
                 "constraints": {
                     "pattern": {
-                        "constraint": "^[0-9]{4}[0-9]{4}-$",
+                        "constraint": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$",
                         "errorMessage": "Value must be YYYY-mm-dd format",
                         "enforcementLevel": "recommended"
                     }
@@ -9311,7 +9487,7 @@
                     "linkedFieldAndValueFilter": null
                 },
                 "termEnforcementLevel": "required",
-                "unexpectedTermEnforcementLevel": "required",
+                "unexpectedTermEnforcementLevel": "not-applicable",
                 "validationType": "ontology-term-in-selected-ontologies",
                 "constraints": {},
                 "defaultValue": {
@@ -9415,7 +9591,7 @@
                     "linkedFieldAndValueFilter": null
                 },
                 "termEnforcementLevel": "recommended",
-                "unexpectedTermEnforcementLevel": "recommended",
+                "unexpectedTermEnforcementLevel": "not-applicable",
                 "validationType": "ontology-term-in-selected-ontologies",
                 "constraints": {},
                 "defaultValue": {
@@ -9539,7 +9715,7 @@
                     "linkedFieldAndValueFilter": null
                 },
                 "termEnforcementLevel": "recommended",
-                "unexpectedTermEnforcementLevel": "recommended",
+                "unexpectedTermEnforcementLevel": "not-applicable",
                 "validationType": "any-ontology-term",
                 "constraints": {},
                 "defaultValue": null,
@@ -9593,7 +9769,7 @@
                     "linkedFieldAndValueFilter": null
                 },
                 "termEnforcementLevel": "required",
-                "unexpectedTermEnforcementLevel": "required",
+                "unexpectedTermEnforcementLevel": "not-applicable",
                 "validationType": "ontology-term-in-selected-ontologies",
                 "constraints": {},
                 "defaultValue": null,
@@ -9687,7 +9863,7 @@
                     "linkedFieldAndValueFilter": null
                 },
                 "termEnforcementLevel": "recommended",
-                "unexpectedTermEnforcementLevel": "recommended",
+                "unexpectedTermEnforcementLevel": "not-applicable",
                 "validationType": "ontology-term-in-selected-ontologies",
                 "constraints": {},
                 "defaultValue": null,
@@ -9790,7 +9966,7 @@
                 },
                 "description": "",
                 "selectionCriteria": {
-                    "isaFileType": "sample",
+                    "isaFileType": "assay",
                     "studyCreatedAtOrAfter": null,
                     "studyCreatedBefore": null,
                     "studyCategoryFilter": null,
@@ -9799,7 +9975,7 @@
                     "linkedFieldAndValueFilter": null
                 },
                 "termEnforcementLevel": "recommended",
-                "unexpectedTermEnforcementLevel": "recommended",
+                "unexpectedTermEnforcementLevel": "not-applicable",
                 "validationType": "child-ontology-term",
                 "constraints": {},
                 "defaultValue": null,
@@ -9837,6 +10013,11 @@
                         "termSourceRef": "UO"
                     },
                     {
+                        "term": "meter",
+                        "termAccessionNumber": "http://purl.obolibrary.org/obo/UO_0000008",
+                        "termSourceRef": "UO"
+                    },
+                    {
                         "term": "kilogram",
                         "termAccessionNumber": "http://purl.obolibrary.org/obo/UO_0000009",
                         "termSourceRef": "UO"
@@ -9854,6 +10035,11 @@
                     {
                         "term": "hour",
                         "termAccessionNumber": "http://purl.obolibrary.org/obo/UO_0000032",
+                        "termSourceRef": "UO"
+                    },
+                    {
+                        "term": "minute",
+                        "termAccessionNumber": "http://purl.obolibrary.org/obo/UO_0000031",
                         "termSourceRef": "UO"
                     },
                     {
@@ -10225,9 +10411,7 @@
                         "^.*unit$",
                         "^.*Unit of.*$"
                     ],
-                    "excludeByAccession": [
-                        "http://purl.obolibrary.org/obo/NCIT_C41139"
-                    ],
+                    "excludeByAccession": [],
                     "parents": [
                         {
                             "term": "unit",
@@ -10253,7 +10437,7 @@
                 },
                 "description": "",
                 "selectionCriteria": {
-                    "isaFileType": "assignment",
+                    "isaFileType": "assay",
                     "studyCreatedAtOrAfter": null,
                     "studyCreatedBefore": null,
                     "studyCategoryFilter": null,
@@ -10300,6 +10484,11 @@
                         "termSourceRef": "UO"
                     },
                     {
+                        "term": "meter",
+                        "termAccessionNumber": "http://purl.obolibrary.org/obo/UO_0000008",
+                        "termSourceRef": "UO"
+                    },
+                    {
                         "term": "kilogram",
                         "termAccessionNumber": "http://purl.obolibrary.org/obo/UO_0000009",
                         "termSourceRef": "UO"
@@ -10317,6 +10506,11 @@
                     {
                         "term": "hour",
                         "termAccessionNumber": "http://purl.obolibrary.org/obo/UO_0000032",
+                        "termSourceRef": "UO"
+                    },
+                    {
+                        "term": "minute",
+                        "termAccessionNumber": "http://purl.obolibrary.org/obo/UO_0000031",
                         "termSourceRef": "UO"
                     },
                     {
@@ -10453,7 +10647,7 @@
                     "linkedFieldAndValueFilter": null
                 },
                 "termEnforcementLevel": "recommended",
-                "unexpectedTermEnforcementLevel": "recommended",
+                "unexpectedTermEnforcementLevel": "not-applicable",
                 "validationType": "ontology-term-in-selected-ontologies",
                 "constraints": {},
                 "defaultValue": null,
@@ -10562,7 +10756,7 @@
                     "linkedFieldAndValueFilter": null
                 },
                 "termEnforcementLevel": "recommended",
-                "unexpectedTermEnforcementLevel": "recommended",
+                "unexpectedTermEnforcementLevel": "not-applicable",
                 "validationType": "any-ontology-term",
                 "constraints": {},
                 "defaultValue": null,
@@ -10684,7 +10878,7 @@
                     "linkedFieldAndValueFilter": null
                 },
                 "termEnforcementLevel": "recommended",
-                "unexpectedTermEnforcementLevel": "recommended",
+                "unexpectedTermEnforcementLevel": "not-applicable",
                 "validationType": "any-ontology-term",
                 "constraints": {},
                 "defaultValue": null,
@@ -10812,7 +11006,7 @@
                     "linkedFieldAndValueFilter": null
                 },
                 "termEnforcementLevel": "recommended",
-                "unexpectedTermEnforcementLevel": "recommended",
+                "unexpectedTermEnforcementLevel": "not-applicable",
                 "validationType": "any-ontology-term",
                 "constraints": {},
                 "defaultValue": null,
@@ -10900,7 +11094,7 @@
                     "linkedFieldAndValueFilter": null
                 },
                 "termEnforcementLevel": "recommended",
-                "unexpectedTermEnforcementLevel": "recommended",
+                "unexpectedTermEnforcementLevel": "not-applicable",
                 "validationType": "child-ontology-term",
                 "constraints": {},
                 "defaultValue": {
@@ -10952,7 +11146,7 @@
                     "linkedFieldAndValueFilter": null
                 },
                 "termEnforcementLevel": "required",
-                "unexpectedTermEnforcementLevel": "required",
+                "unexpectedTermEnforcementLevel": "not-applicable",
                 "validationType": "selected-ontology-term",
                 "constraints": {},
                 "defaultValue": {
@@ -11105,7 +11299,7 @@
                     "linkedFieldAndValueFilter": null
                 },
                 "termEnforcementLevel": "recommended",
-                "unexpectedTermEnforcementLevel": "recommended",
+                "unexpectedTermEnforcementLevel": "not-applicable",
                 "validationType": "any-ontology-term",
                 "constraints": {},
                 "defaultValue": null,
@@ -11166,7 +11360,7 @@
                     "linkedFieldAndValueFilter": null
                 },
                 "termEnforcementLevel": "recommended",
-                "unexpectedTermEnforcementLevel": "recommended",
+                "unexpectedTermEnforcementLevel": "not-applicable",
                 "validationType": "any-ontology-term",
                 "constraints": {},
                 "defaultValue": null,
@@ -11586,7 +11780,7 @@
                     "linkedFieldAndValueFilter": null
                 },
                 "termEnforcementLevel": "required",
-                "unexpectedTermEnforcementLevel": "required",
+                "unexpectedTermEnforcementLevel": "not-applicable",
                 "validationType": "selected-ontology-term",
                 "constraints": {},
                 "defaultValue": null,
@@ -11627,7 +11821,7 @@
                     "linkedFieldAndValueFilter": null
                 },
                 "termEnforcementLevel": "required",
-                "unexpectedTermEnforcementLevel": "required",
+                "unexpectedTermEnforcementLevel": "not-applicable",
                 "validationType": "selected-ontology-term",
                 "constraints": {},
                 "defaultValue": null,
@@ -11661,7 +11855,7 @@
                     "linkedFieldAndValueFilter": null
                 },
                 "termEnforcementLevel": "required",
-                "unexpectedTermEnforcementLevel": "required",
+                "unexpectedTermEnforcementLevel": "not-applicable",
                 "validationType": "selected-ontology-term",
                 "constraints": {},
                 "defaultValue": null,
@@ -11696,7 +11890,7 @@
                     "linkedFieldAndValueFilter": null
                 },
                 "termEnforcementLevel": "required",
-                "unexpectedTermEnforcementLevel": "required",
+                "unexpectedTermEnforcementLevel": "not-applicable",
                 "validationType": "selected-ontology-term",
                 "constraints": {},
                 "defaultValue": null,
@@ -11741,7 +11935,7 @@
                     "linkedFieldAndValueFilter": null
                 },
                 "termEnforcementLevel": "required",
-                "unexpectedTermEnforcementLevel": "required",
+                "unexpectedTermEnforcementLevel": "not-applicable",
                 "validationType": "selected-ontology-term",
                 "constraints": {},
                 "defaultValue": null,
@@ -11789,7 +11983,7 @@
                     "linkedFieldAndValueFilter": null
                 },
                 "termEnforcementLevel": "recommended",
-                "unexpectedTermEnforcementLevel": "recommended",
+                "unexpectedTermEnforcementLevel": "not-applicable",
                 "validationType": "any-ontology-term",
                 "constraints": {},
                 "defaultValue": null,
@@ -11897,7 +12091,7 @@
                     "linkedFieldAndValueFilter": null
                 },
                 "termEnforcementLevel": "required",
-                "unexpectedTermEnforcementLevel": "required",
+                "unexpectedTermEnforcementLevel": "not-applicable",
                 "validationType": "selected-ontology-term",
                 "constraints": {},
                 "defaultValue": {
@@ -11948,7 +12142,7 @@
                     "linkedFieldAndValueFilter": null
                 },
                 "termEnforcementLevel": "recommended",
-                "unexpectedTermEnforcementLevel": "required",
+                "unexpectedTermEnforcementLevel": "not-applicable",
                 "validationType": "selected-ontology-term",
                 "constraints": {},
                 "defaultValue": {
@@ -12003,7 +12197,7 @@
                     "linkedFieldAndValueFilter": null
                 },
                 "termEnforcementLevel": "recommended",
-                "unexpectedTermEnforcementLevel": "recommended",
+                "unexpectedTermEnforcementLevel": "not-applicable",
                 "validationType": "ontology-term-in-selected-ontologies",
                 "constraints": {},
                 "defaultValue": null,
@@ -12053,7 +12247,7 @@
                     "linkedFieldAndValueFilter": null
                 },
                 "termEnforcementLevel": "required",
-                "unexpectedTermEnforcementLevel": "required",
+                "unexpectedTermEnforcementLevel": "not-applicable",
                 "validationType": "selected-ontology-term",
                 "constraints": {},
                 "defaultValue": {
@@ -12112,7 +12306,7 @@
                     "linkedFieldAndValueFilter": null
                 },
                 "termEnforcementLevel": "required",
-                "unexpectedTermEnforcementLevel": "required",
+                "unexpectedTermEnforcementLevel": "not-applicable",
                 "validationType": "ontology-term-in-selected-ontologies",
                 "constraints": {},
                 "defaultValue": {
@@ -12168,9 +12362,7 @@
                         "^.*unit$",
                         "^.*Unit of.*$"
                     ],
-                    "excludeByAccession": [
-                        "http://purl.obolibrary.org/obo/NCIT_C41139"
-                    ],
+                    "excludeByAccession": [],
                     "parents": [
                         {
                             "term": "unit",
@@ -12196,7 +12388,7 @@
                 },
                 "description": "",
                 "selectionCriteria": {
-                    "isaFileType": "investigation",
+                    "isaFileType": "assay",
                     "studyCreatedAtOrAfter": null,
                     "studyCreatedBefore": null,
                     "studyCategoryFilter": null,
@@ -12205,7 +12397,7 @@
                     "linkedFieldAndValueFilter": null
                 },
                 "termEnforcementLevel": "recommended",
-                "unexpectedTermEnforcementLevel": "recommended",
+                "unexpectedTermEnforcementLevel": "not-applicable",
                 "validationType": "child-ontology-term",
                 "constraints": {},
                 "defaultValue": null,
@@ -12243,6 +12435,11 @@
                         "termSourceRef": "UO"
                     },
                     {
+                        "term": "meter",
+                        "termAccessionNumber": "http://purl.obolibrary.org/obo/UO_0000008",
+                        "termSourceRef": "UO"
+                    },
+                    {
                         "term": "kilogram",
                         "termAccessionNumber": "http://purl.obolibrary.org/obo/UO_0000009",
                         "termSourceRef": "UO"
@@ -12260,6 +12457,11 @@
                     {
                         "term": "hour",
                         "termAccessionNumber": "http://purl.obolibrary.org/obo/UO_0000032",
+                        "termSourceRef": "UO"
+                    },
+                    {
+                        "term": "minute",
+                        "termAccessionNumber": "http://purl.obolibrary.org/obo/UO_0000031",
                         "termSourceRef": "UO"
                     },
                     {
@@ -12298,7 +12500,7 @@
                     "linkedFieldAndValueFilter": null
                 },
                 "termEnforcementLevel": "recommended",
-                "unexpectedTermEnforcementLevel": "recommended",
+                "unexpectedTermEnforcementLevel": "not-applicable",
                 "validationType": "any-ontology-term",
                 "constraints": {},
                 "defaultValue": null,
@@ -12371,7 +12573,7 @@
                     "linkedFieldAndValueFilter": null
                 },
                 "termEnforcementLevel": "recommended",
-                "unexpectedTermEnforcementLevel": "recommended",
+                "unexpectedTermEnforcementLevel": "not-applicable",
                 "validationType": "child-ontology-term",
                 "constraints": {},
                 "defaultValue": null,

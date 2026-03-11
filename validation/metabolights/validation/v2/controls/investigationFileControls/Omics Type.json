@@ -18,7 +18,7 @@
                 "linkedFieldAndValueFilter": null
             },
             "termEnforcementLevel": "required",
-            "unexpectedTermEnforcementLevel": "required",
+            "unexpectedTermEnforcementLevel": "not-applicable",
             "validationType": "selected-ontology-term",
             "constraints": {},
             "defaultValue": {
@@ -69,7 +69,7 @@
                 "linkedFieldAndValueFilter": null
             },
             "termEnforcementLevel": "recommended",
-            "unexpectedTermEnforcementLevel": "required",
+            "unexpectedTermEnforcementLevel": "not-applicable",
             "validationType": "selected-ontology-term",
             "constraints": {},
             "defaultValue": {

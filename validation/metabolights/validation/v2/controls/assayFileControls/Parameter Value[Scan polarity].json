@@ -20,30 +20,13 @@
                 "linkedFieldAndValueFilter": null
             },
             "termEnforcementLevel": "required",
-            "unexpectedTermEnforcementLevel": "required",
+            "unexpectedTermEnforcementLevel": "not-applicable",
             "validationType": "selected-ontology-term",
             "constraints": {},
             "defaultValue": null,
             "allowedMissingOntologyTerms": [],
             "allowedOtherSources": [],
-            "allowedPlaceholders": [
-                {
-                    "termAccessionNumber": "http://purl.obolibrary.org/obo/MS_1000076",
-                    "termSourceRef": "MS"
-                },
-                {
-                    "termAccessionNumber": "http://purl.obolibrary.org/obo/MS_1000077",
-                    "termSourceRef": "MS"
-                },
-                {
-                    "termAccessionNumber": "http://purl.obolibrary.org/obo/MS_1002833",
-                    "termSourceRef": "MS"
-                },
-                {
-                    "termAccessionNumber": "http://purl.obolibrary.org/obo/MS_1003774",
-                    "termSourceRef": "MS"
-                }
-            ],
+            "allowedPlaceholders": [],
             "terms": [
                 {
                     "term": "negative polarity acquisition",
@@ -86,7 +69,7 @@
                 "linkedFieldAndValueFilter": null
             },
             "termEnforcementLevel": "required",
-            "unexpectedTermEnforcementLevel": "required",
+            "unexpectedTermEnforcementLevel": "not-applicable",
             "validationType": "selected-ontology-term",
             "constraints": {},
             "defaultValue": null,

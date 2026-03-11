@@ -15,8 +15,16 @@
                     "minLength": 3,
                     "maxLength": 128,
                     "required": true,
-                    "description": null,
-                    "examples": null
+                    "description": "Unique source identifier of the Sample or simply repeat 'Sample Name'",
+                    "examples": [
+                        "Single standard",
+                        "Standard mix",
+                        "Blank",
+                        "QC1",
+                        "Sample1",
+                        "QC2",
+                        "Sample2"
+                    ]
                 },
                 {
                     "columnStructure": "ONTOLOGY_COLUMN",
@@ -28,8 +36,13 @@
                     "minLength": 5,
                     "maxLength": null,
                     "required": true,
-                    "description": null,
-                    "examples": null
+                    "description": "A living entity",
+                    "examples": [
+                        "[reference compound, BAO, http://www.bioassayontology.org/bao#BAO_0002092]",
+                        "[blank sample, NCBITaxon, http://purl.obolibrary.org/obo/NCBITaxon_2582415]",
+                        "[Homo sapiens, NCBITaxon, http://purl.obolibrary.org/obo/NCBITaxon_9606]",
+                        "[Mus musculus, NCBITaxon, http://purl.obolibrary.org/obo/NCBITaxon_10090]"
+                    ]
                 },
                 {
                     "columnStructure": "ONTOLOGY_COLUMN",
@@ -41,8 +54,13 @@
                     "minLength": 3,
                     "maxLength": null,
                     "required": true,
-                    "description": null,
-                    "examples": null
+                    "description": "A portion of an organism",
+                    "examples": [
+                        "[pure substance, CHEBI, http://purl.obolibrary.org/obo/CHEBI_60003]",
+                        "[mixture, CHEBI, http://purl.obolibrary.org/obo/CHEBI_60004]",
+                        "[solvent, CHEBI, http://purl.obolibrary.org/obo/CHEBI_46787]",
+                        "[blood plasma, BTO, http://purl.obolibrary.org/obo/BTO_0000131]"
+                    ]
                 },
                 {
                     "columnStructure": "ONTOLOGY_COLUMN",
@@ -54,8 +72,10 @@
                     "minLength": null,
                     "maxLength": null,
                     "required": false,
-                    "description": null,
-                    "examples": null
+                    "description": "Selected breed, strain, cultivar, etc (if available)",
+                    "examples": [
+                        "C57BL/6J"
+                    ]
                 },
                 {
                     "columnStructure": "ONTOLOGY_COLUMN",
@@ -67,8 +87,13 @@
                     "minLength": null,
                     "maxLength": null,
                     "required": false,
-                    "description": null,
-                    "examples": null
+                    "description": "Sample role in the experiment",
+                    "examples": [
+                        "[reference compound, MSIO, http://purl.obolibrary.org/obo/MSIO_0000023]",
+                        "[reference compound mix, MSIO, http://purl.obolibrary.org/obo/MSIO_0000024]",
+                        "[experimental sample, CHMO, http://purl.obolibrary.org/obo/CHMO_0002746]",
+                        "[pooled quality control sample, MTBLS, http://www.ebi.ac.uk/metabolights/ontology/MTBLS_001090]"
+                    ]
                 },
                 {
                     "columnStructure": "SINGLE_COLUMN",
@@ -80,8 +105,10 @@
                     "minLength": 1,
                     "maxLength": null,
                     "required": true,
-                    "description": null,
-                    "examples": null
+                    "description": "Predetermined value: 'Sample Collection'.",
+                    "examples": [
+                        "Sample Collection"
+                    ]
                 },
                 {
                     "columnStructure": "SINGLE_COLUMN",
@@ -93,8 +120,16 @@
                     "minLength": 3,
                     "maxLength": 128,
                     "required": true,
-                    "description": null,
-                    "examples": null
+                    "description": "Unique identifier from a particular source. Usually associated with an output spectral data filename.",
+                    "examples": [
+                        "Leucin standard",
+                        "Standard mix",
+                        "Blank",
+                        "QC1",
+                        "Sample1",
+                        "QC2",
+                        "Sample2"
+                    ]
                 }
             ]
         },

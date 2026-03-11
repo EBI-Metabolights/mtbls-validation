@@ -39,12 +39,14 @@
 | 2 | tesla | UO | http://purl\.obolibrary\.org/obo/UO\_0000228 |
 | 3 | micrometer | UO | http://purl\.obolibrary\.org/obo/UO\_0000017 |
 | 4 | millimolar | UO | http://purl\.obolibrary\.org/obo/UO\_0000063 |
-| 5 | kilogram | UO | http://purl\.obolibrary\.org/obo/UO\_0000009 |
-| 6 | milligram per day | EFO | http://www\.ebi\.ac\.uk/efo/EFO\_0004419 |
-| 7 | day | UO | http://purl\.obolibrary\.org/obo/UO\_0000033 |
-| 8 | hour | UO | http://purl\.obolibrary\.org/obo/UO\_0000032 |
-| 9 | degree Fahrenheit | UO | http://purl\.obolibrary\.org/obo/UO\_0000195 |
-| 10 | degree Celsius | UO | http://purl\.obolibrary\.org/obo/UO\_0000027 |
+| 5 | meter | UO | http://purl\.obolibrary\.org/obo/UO\_0000008 |
+| 6 | kilogram | UO | http://purl\.obolibrary\.org/obo/UO\_0000009 |
+| 7 | milligram per day | EFO | http://www\.ebi\.ac\.uk/efo/EFO\_0004419 |
+| 8 | day | UO | http://purl\.obolibrary\.org/obo/UO\_0000033 |
+| 9 | hour | UO | http://purl\.obolibrary\.org/obo/UO\_0000032 |
+| 10 | minute | UO | http://purl\.obolibrary\.org/obo/UO\_0000031 |
+| 11 | degree Fahrenheit | UO | http://purl\.obolibrary\.org/obo/UO\_0000195 |
+| 12 | degree Celsius | UO | http://purl\.obolibrary\.org/obo/UO\_0000027 |
 
 ## Sample Name
 
@@ -71,7 +73,6 @@
 | Applicable Template Versions | All |
 | Validation Type | selected-ontology-term |
 | Ontologies [Ordered] | MS |
-| Allowed Placeholders | \[MS, http://purl\.obolibrary\.org/obo/MS\_1000076\], \[MS, http://purl\.obolibrary\.org/obo/MS\_1000077\], \[MS, http://purl\.obolibrary\.org/obo/MS\_1002833\], \[MS, http://purl\.obolibrary\.org/obo/MS\_1003774\] |
 | Ontology Term Enforcement Level | required |
 
 ### Terms

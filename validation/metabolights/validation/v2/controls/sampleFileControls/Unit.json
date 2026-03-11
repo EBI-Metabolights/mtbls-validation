@@ -35,7 +35,7 @@
             },
             "description": "",
             "selectionCriteria": {
-                "isaFileType": "sample",
+                "isaFileType": "assay",
                 "studyCreatedAtOrAfter": null,
                 "studyCreatedBefore": null,
                 "studyCategoryFilter": null,
@@ -44,7 +44,7 @@
                 "linkedFieldAndValueFilter": null
             },
             "termEnforcementLevel": "recommended",
-            "unexpectedTermEnforcementLevel": "recommended",
+            "unexpectedTermEnforcementLevel": "not-applicable",
             "validationType": "child-ontology-term",
             "constraints": {},
             "defaultValue": null,
@@ -82,6 +82,11 @@
                     "termSourceRef": "UO"
                 },
                 {
+                    "term": "meter",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/UO_0000008",
+                    "termSourceRef": "UO"
+                },
+                {
                     "term": "kilogram",
                     "termAccessionNumber": "http://purl.obolibrary.org/obo/UO_0000009",
                     "termSourceRef": "UO"
@@ -99,6 +104,11 @@
                 {
                     "term": "hour",
                     "termAccessionNumber": "http://purl.obolibrary.org/obo/UO_0000032",
+                    "termSourceRef": "UO"
+                },
+                {
+                    "term": "minute",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/UO_0000031",
                     "termSourceRef": "UO"
                 },
                 {

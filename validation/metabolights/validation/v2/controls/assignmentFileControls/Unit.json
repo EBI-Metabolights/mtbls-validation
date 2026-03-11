@@ -9,9 +9,7 @@
                     "^.*unit$",
                     "^.*Unit of.*$"
                 ],
-                "excludeByAccession": [
-                    "http://purl.obolibrary.org/obo/NCIT_C41139"
-                ],
+                "excludeByAccession": [],
                 "parents": [
                     {
                         "term": "unit",
@@ -37,7 +35,7 @@
             },
             "description": "",
             "selectionCriteria": {
-                "isaFileType": "assignment",
+                "isaFileType": "assay",
                 "studyCreatedAtOrAfter": null,
                 "studyCreatedBefore": null,
                 "studyCategoryFilter": null,
@@ -84,6 +82,11 @@
                     "termSourceRef": "UO"
                 },
                 {
+                    "term": "meter",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/UO_0000008",
+                    "termSourceRef": "UO"
+                },
+                {
                     "term": "kilogram",
                     "termAccessionNumber": "http://purl.obolibrary.org/obo/UO_0000009",
                     "termSourceRef": "UO"
@@ -101,6 +104,11 @@
                 {
                     "term": "hour",
                     "termAccessionNumber": "http://purl.obolibrary.org/obo/UO_0000032",
+                    "termSourceRef": "UO"
+                },
+                {
+                    "term": "minute",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/UO_0000031",
                     "termSourceRef": "UO"
                 },
                 {

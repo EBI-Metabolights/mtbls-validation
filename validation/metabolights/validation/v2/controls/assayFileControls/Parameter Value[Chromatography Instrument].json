@@ -1,6 +1,131 @@
 {
     "Parameter Value[Chromatography Instrument]": [
         {
+            "ruleName": "Parameter Value[Chromatography Instrument]-ms-mhd-enabled-lc-ms",
+            "fieldName": "Parameter Value[Chromatography Instrument]",
+            "ontologies": [
+                "MS"
+            ],
+            "allowedParentOntologyTerms": {
+                "excludeByLabelPattern": [
+                    "^.*chromatography system$"
+                ],
+                "excludeByAccession": [],
+                "parents": [
+                    {
+                        "term": "liquid chromatography system",
+                        "termAccessionNumber": "http://purl.obolibrary.org/obo/MS_1003589",
+                        "termSourceRef": "MS"
+                    }
+                ]
+            },
+            "description": "",
+            "selectionCriteria": {
+                "isaFileType": "assay",
+                "studyCreatedAtOrAfter": null,
+                "studyCreatedBefore": null,
+                "studyCategoryFilter": [
+                    "ms-mhd-enabled"
+                ],
+                "templateVersionFilter": null,
+                "isaFileTemplateNameFilter": [
+                    "LC-MS"
+                ],
+                "linkedFieldAndValueFilter": null
+            },
+            "termEnforcementLevel": "recommended",
+            "unexpectedTermEnforcementLevel": "required",
+            "validationType": "ontology-term-in-selected-ontologies",
+            "constraints": {},
+            "defaultValue": null,
+            "allowedMissingOntologyTerms": [],
+            "allowedOtherSources": [
+                {
+                    "sourceLabel": "wikidata",
+                    "accessionPrefix": "https://www.wikidata.org/wiki/"
+                },
+                {
+                    "sourceLabel": "ILX",
+                    "accessionPrefix": "http://uri.interlex.org/base/ilx_"
+                }
+            ],
+            "allowedPlaceholders": [],
+            "terms": [],
+            "unexpectedTerms": [
+                "LC instrument",
+                "chromatography",
+                "liquid chromatography",
+                "liquid chromatography system",
+                "liquid chromatography-mass spectrometry",
+                "liquid chromatography-tandem mass spectrometry",
+                "ultra performance liquid chromatography",
+                "ultra high performance liquid chromatography",
+                "UPLC",
+                "UHPLC"
+            ]
+        },
+        {
+            "ruleName": "Parameter Value[Chromatography Instrument]-ms-mhd-enabled-gc-ms",
+            "fieldName": "Parameter Value[Chromatography Instrument]",
+            "ontologies": [
+                "MS"
+            ],
+            "allowedParentOntologyTerms": {
+                "excludeByLabelPattern": [
+                    "^.*chromatography system$"
+                ],
+                "excludeByAccession": [],
+                "parents": [
+                    {
+                        "term": "gas chromatography system",
+                        "termAccessionNumber": "http://purl.obolibrary.org/obo/MS_1003728",
+                        "termSourceRef": "MS"
+                    }
+                ]
+            },
+            "description": "",
+            "selectionCriteria": {
+                "isaFileType": "assay",
+                "studyCreatedAtOrAfter": null,
+                "studyCreatedBefore": null,
+                "studyCategoryFilter": [
+                    "ms-mhd-enabled"
+                ],
+                "templateVersionFilter": null,
+                "isaFileTemplateNameFilter": [
+                    "GC-MS",
+                    "GCxGC-MS"
+                ],
+                "linkedFieldAndValueFilter": null
+            },
+            "termEnforcementLevel": "recommended",
+            "unexpectedTermEnforcementLevel": "required",
+            "validationType": "ontology-term-in-selected-ontologies",
+            "constraints": {},
+            "defaultValue": null,
+            "allowedMissingOntologyTerms": [],
+            "allowedOtherSources": [
+                {
+                    "sourceLabel": "wikidata",
+                    "accessionPrefix": "https://www.wikidata.org/wiki/"
+                },
+                {
+                    "sourceLabel": "ILX",
+                    "accessionPrefix": "http://uri.interlex.org/base/ilx_"
+                }
+            ],
+            "allowedPlaceholders": [],
+            "terms": [],
+            "unexpectedTerms": [
+                "GC instrument",
+                "chromatography",
+                "gas chromatography",
+                "gas chromotography system",
+                "gas chromatography-mass spectrometry",
+                "gas chromatography-tandem mass spectrometry"
+            ]
+        },
+        {
             "ruleName": "Parameter Value[Chromatography Instrument]-01",
             "fieldName": "Parameter Value[Chromatography Instrument]",
             "ontologies": [
@@ -20,7 +145,7 @@
                 "linkedFieldAndValueFilter": null
             },
             "termEnforcementLevel": "recommended",
-            "unexpectedTermEnforcementLevel": "recommended",
+            "unexpectedTermEnforcementLevel": "required",
             "validationType": "any-ontology-term",
             "constraints": {},
             "defaultValue": null,
@@ -432,7 +557,18 @@
                     "termSourceRef": "MTBLS"
                 }
             ],
-            "unexpectedTerms": []
+            "unexpectedTerms": [
+                "LC instrument",
+                "chromatography",
+                "liquid chromatography",
+                "liquid chromatography system",
+                "liquid chromatography-mass spectrometry",
+                "liquid chromatography-tandem mass spectrometry",
+                "ultra performance liquid chromatography",
+                "ultra high performance liquid chromatography",
+                "UPLC",
+                "UHPLC"
+            ]
         },
         {
             "ruleName": "Parameter Value[Chromatography Instrument]-02",
@@ -455,7 +591,7 @@
                 "linkedFieldAndValueFilter": null
             },
             "termEnforcementLevel": "recommended",
-            "unexpectedTermEnforcementLevel": "recommended",
+            "unexpectedTermEnforcementLevel": "required",
             "validationType": "any-ontology-term",
             "constraints": {},
             "defaultValue": null,
@@ -647,7 +783,14 @@
                     "termSourceRef": "MTBLS"
                 }
             ],
-            "unexpectedTerms": []
+            "unexpectedTerms": [
+                "GC instrument",
+                "chromatography",
+                "gas chromatography",
+                "gas chromotography system",
+                "gas chromatography-mass spectrometry",
+                "gas chromatography-tandem mass spectrometry"
+            ]
         }
     ]
 }
