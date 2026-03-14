@@ -84,26 +84,37 @@ get_assay_field_validation(controls, field_name) := rule if {
 }
 
 __INVESTIGATION_RULES__ := data.metabolights.validation.v2.controls.investigationFileControls
+
 __SAMPLE_RULES__ := data.metabolights.validation.v2.controls.sampleFileControls
+
 __ASSAY_RULES__ := data.metabolights.validation.v2.controls.assayFileControls
 
 RULE_PUBLICATION_STATUS := get_investigation_field_validation(__INVESTIGATION_RULES__, "Study Publication Status")
+
 RULE_ASSAY_MEASUREMENT_TYPE := get_investigation_field_validation(__INVESTIGATION_RULES__, "Study Assay Measurement Type")
+
 RULE_ASSAY_TECHNOLOGY_TYPE := get_investigation_field_validation(__INVESTIGATION_RULES__, "Study Assay Technology Type")
+
 RULE_STUDY_PERSON_ROLES := get_investigation_field_validation(__INVESTIGATION_RULES__, "Study Person Roles")
+
 RULE_STUDY_DESIGN_TYPE := get_investigation_field_validation(__INVESTIGATION_RULES__, "Study Design Type")
+
 RULE_STUDY_FACTOR_TYPE := get_investigation_field_validation(__INVESTIGATION_RULES__, "Study Factor Type")
 
 RULE_DEFAULT_ONTOLOGIES := get_investigation_field_validation(__INVESTIGATION_RULES__, "__default__")
 
 RULE_SAMPLE_DEFAULT := get_sample_field_validation(__SAMPLE_RULES__, "__default__")
+
 RULE_SAMPLE_DEFAULT_FACTOR_VALUE := get_sample_field_validation(__SAMPLE_RULES__, "__default_factor_value__")
+
 RULE_SAMPLE_DEFAULT_CHARACTERISTIC := get_sample_field_validation(__SAMPLE_RULES__, "__default_characteristic__")
 
 RULE_ASSAY_DEFAULT := get_sample_field_validation(__ASSAY_RULES__, "__default__")
 
 DB_STUDY_CREATED_AT := input.studyDbMetadata.createdAt
+
 METADATA_STUDY_CREATED_AT := input.investigation.studies[0].createdAt
+
 STUDY_CREATED_AT := DB_STUDY_CREATED_AT if {
 	count(DB_STUDY_CREATED_AT) > 0
 }

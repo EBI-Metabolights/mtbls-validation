@@ -33,7 +33,7 @@ test_rule_i_100_300_003_02_no_violation_01 if {
 # description: Study title contains tab and carriage return characters.
 test_rule_i_100_300_003_02_violation_01 if {
 	result := rules.rule_i_100_300_003_02 with input as {
-		"investigation": {"studies": [{"identifier": "MTBLS1", "title": "\u3000\u007f\u0000 \tShort\n\t\n\u205f\u009f\u000e"}]},
+		"investigation": {"studies": [{"identifier": "MTBLS1", "title": "\u3000\x7f\x00 \tShort\n\t\n\u205f\u009f\x0e"}]},
 		"investigationFilePath": "i_Investigation.txt",
 	}
 	count(result) == 1

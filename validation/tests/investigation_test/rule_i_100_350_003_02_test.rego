@@ -68,7 +68,7 @@ test_rule_i_100_350_003_02_violation_01 if {
 					"termAccessionNumber": "",
 					"termSourceRef": "",
 				},
-				"description": "Description ⋿of study protocol\u000e",
+				"description": "Description ⋿of study protocol\x0e",
 				"uri": "",
 				"version": "",
 				"parameters": [],

@@ -5,6 +5,7 @@ import data.metabolights.validation.v2.utils.field_match as field_match
 import rego.v1
 
 __DEBUG__MESSAGE := data.metabolights.validation.v2.configuration.debug
+
 __MAX_VALUE_COUNT := data.metabolights.validation.v2.configuration.violatedValueListMaxLength
 
 debug(message) := result if {
