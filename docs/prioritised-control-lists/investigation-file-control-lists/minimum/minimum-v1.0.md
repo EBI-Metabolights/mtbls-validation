@@ -20,7 +20,7 @@
 
 | Attribute | Value |
 |---|------|
-| Rule Name | Unit\-01 |
+| Rule Name | Investigation\-Unit\-01 |
 | Rule Description |  |
 | Applicable Study Categories | All |
 | Applicable Template Names | All |
@@ -30,6 +30,23 @@
 | Allowed Parent Ontology Term Exceptions | ^\.\*unit$, ^\.\*Unit of\.\*$ |
 | Allowed Other Sources | \[wikidata, https://www\.wikidata\.org/wiki/\], \[ILX, http://uri\.interlex\.org/base/ilx\_\] |
 | Ontology Term Enforcement Level | recommended |
+
+### Recommended Terms
+
+| # |Term  | Term Source  | Term Accession |
+|---|------|--------------|----------------|
+| 1 | kelvin | UO | http://purl\.obolibrary\.org/obo/UO\_0000012 |
+| 2 | tesla | UO | http://purl\.obolibrary\.org/obo/UO\_0000228 |
+| 3 | micrometer | UO | http://purl\.obolibrary\.org/obo/UO\_0000017 |
+| 4 | millimolar | UO | http://purl\.obolibrary\.org/obo/UO\_0000063 |
+| 5 | meter | UO | http://purl\.obolibrary\.org/obo/UO\_0000008 |
+| 6 | kilogram | UO | http://purl\.obolibrary\.org/obo/UO\_0000009 |
+| 7 | milligram per day | EFO | http://www\.ebi\.ac\.uk/efo/EFO\_0004419 |
+| 8 | day | UO | http://purl\.obolibrary\.org/obo/UO\_0000033 |
+| 9 | hour | UO | http://purl\.obolibrary\.org/obo/UO\_0000032 |
+| 10 | minute | UO | http://purl\.obolibrary\.org/obo/UO\_0000031 |
+| 11 | degree Fahrenheit | UO | http://purl\.obolibrary\.org/obo/UO\_0000195 |
+| 12 | degree Celsius | UO | http://purl\.obolibrary\.org/obo/UO\_0000027 |
 
 ## Study Protocol Type
 
@@ -279,7 +296,7 @@
 
 | # |Term  | Term Source  | Term Accession |
 |---|------|--------------|----------------|
-| 1 | disease | EFO | http://www\.ebi\.ac\.uk/efo/EFO\_0000408 |
+| 1 | disease | EFO | http://purl\.obolibrary\.org/obo/MONDO\_0000001 |
 | 2 | timepoint | EFO | http://www\.ebi\.ac\.uk/efo/EFO\_0000724 |
 | 3 | treatment | EFO | http://www\.ebi\.ac\.uk/efo/EFO\_0000727 |
 | 4 | genotype | EFO | http://www\.ebi\.ac\.uk/efo/EFO\_0000513 |
@@ -308,9 +325,9 @@
 
 | # |Term  | Term Source  | Term Accession |
 |---|------|--------------|----------------|
-| 1 | published | EFO | http://www\.ebi\.ac\.uk/efo/EFO\_0001796 |
+| 1 | in preparation | EFO | http://www\.ebi\.ac\.uk/efo/EFO\_0001795 |
 | 2 | submitted | EFO | http://www\.ebi\.ac\.uk/efo/EFO\_0001794 |
-| 3 | in preparation | EFO | http://www\.ebi\.ac\.uk/efo/EFO\_0001795 |
-| 4 | preprint | EFO | http://www\.ebi\.ac\.uk/efo/EFO\_0010558 |
+| 3 | preprint | EFO | http://www\.ebi\.ac\.uk/efo/EFO\_0010558 |
+| 4 | published | EFO | http://www\.ebi\.ac\.uk/efo/EFO\_0001796 |
 | 5 | Learning material | EDAM | http://edamontology\.org/data\_3669 |
 

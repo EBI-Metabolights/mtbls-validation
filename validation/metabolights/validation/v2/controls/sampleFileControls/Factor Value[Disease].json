@@ -12,23 +12,24 @@
             "description": "",
             "selectionCriteria": {
                 "isaFileType": "sample",
-                "studyCreatedAtOrAfter": "2026-01-01T00:00:00",
+                "studyCreatedAtOrAfter": null,
                 "studyCreatedBefore": null,
-                "studyCategoryFilter": null,
+                "studyCategoryFilter": [
+                    "ms-mhd-enabled"
+                ],
                 "templateVersionFilter": null,
                 "isaFileTemplateNameFilter": null,
-                "linkedFieldAndValueFilter": [
-                    {
-                        "name": "Sample Name",
-                        "value": null
-                    }
-                ]
+                "linkedFieldAndValueFilter": null
             },
             "termEnforcementLevel": "required",
-            "unexpectedTermEnforcementLevel": "required",
+            "unexpectedTermEnforcementLevel": "not-applicable",
             "validationType": "ontology-term-in-selected-ontologies",
             "constraints": {},
-            "defaultValue": null,
+            "defaultValue": {
+                "term": "Not Applicable",
+                "termAccessionNumber": "http://purl.obolibrary.org/obo/NCIT_C48660",
+                "termSourceRef": "NCIT"
+            },
             "allowedMissingOntologyTerms": [
                 {
                     "term": "Not Applicable",
@@ -47,7 +48,58 @@
                 }
             ],
             "allowedPlaceholders": [],
-            "terms": [],
+            "terms": [
+                {
+                    "term": "breast cancer",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/MONDO_0007254",
+                    "termSourceRef": "MONDO"
+                },
+                {
+                    "term": "colorectal cancer",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/MONDO_0005575",
+                    "termSourceRef": "MONDO"
+                },
+                {
+                    "term": "Alzheimer disease",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/MONDO_0004975",
+                    "termSourceRef": "MONDO"
+                },
+                {
+                    "term": "Parkinson disease",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/MONDO_0005180",
+                    "termSourceRef": "MONDO"
+                },
+                {
+                    "term": "COVID-19",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/MONDO_0100096",
+                    "termSourceRef": "MONDO"
+                },
+                {
+                    "term": "type 2 diabetes mellitus",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/MONDO_0005148",
+                    "termSourceRef": "MONDO"
+                },
+                {
+                    "term": "ischemia reperfusion injury",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/MONDO_0005203",
+                    "termSourceRef": "MONDO"
+                },
+                {
+                    "term": "chronic kidney disease",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/MONDO_0005300",
+                    "termSourceRef": "MONDO"
+                },
+                {
+                    "term": "metabolic dysfunction-associated steatotic liver disease",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/MONDO_0013209",
+                    "termSourceRef": "MONDO"
+                },
+                {
+                    "term": "normal",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/PATO_0000461",
+                    "termSourceRef": "PATO"
+                }
+            ],
             "unexpectedTerms": []
         },
         {
@@ -56,7 +108,8 @@
             "ontologies": [
                 "MONDO",
                 "MP",
-                "SNOMED"
+                "SNOMED",
+                "PATO"
             ],
             "allowedParentOntologyTerms": null,
             "description": "",
@@ -65,15 +118,21 @@
                 "studyCreatedAtOrAfter": null,
                 "studyCreatedBefore": null,
                 "studyCategoryFilter": null,
-                "templateVersionFilter": null,
+                "templateVersionFilter": [
+                    "1.0"
+                ],
                 "isaFileTemplateNameFilter": null,
                 "linkedFieldAndValueFilter": null
             },
             "termEnforcementLevel": "recommended",
-            "unexpectedTermEnforcementLevel": "required",
+            "unexpectedTermEnforcementLevel": "not-applicable",
             "validationType": "ontology-term-in-selected-ontologies",
             "constraints": {},
-            "defaultValue": null,
+            "defaultValue": {
+                "term": "Not Applicable",
+                "termAccessionNumber": "http://purl.obolibrary.org/obo/NCIT_C48660",
+                "termSourceRef": "NCIT"
+            },
             "allowedMissingOntologyTerms": [
                 {
                     "term": "Not Applicable",
@@ -92,7 +151,58 @@
                 }
             ],
             "allowedPlaceholders": [],
-            "terms": [],
+            "terms": [
+                {
+                    "term": "breast cancer",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/MONDO_0007254",
+                    "termSourceRef": "MONDO"
+                },
+                {
+                    "term": "colorectal cancer",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/MONDO_0005575",
+                    "termSourceRef": "MONDO"
+                },
+                {
+                    "term": "Alzheimer disease",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/MONDO_0004975",
+                    "termSourceRef": "MONDO"
+                },
+                {
+                    "term": "Parkinson disease",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/MONDO_0005180",
+                    "termSourceRef": "MONDO"
+                },
+                {
+                    "term": "COVID-19",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/MONDO_0100096",
+                    "termSourceRef": "MONDO"
+                },
+                {
+                    "term": "type 2 diabetes mellitus",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/MONDO_0005148",
+                    "termSourceRef": "MONDO"
+                },
+                {
+                    "term": "ischemia reperfusion injury",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/MONDO_0005203",
+                    "termSourceRef": "MONDO"
+                },
+                {
+                    "term": "chronic kidney disease",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/MONDO_0005300",
+                    "termSourceRef": "MONDO"
+                },
+                {
+                    "term": "metabolic dysfunction-associated steatotic liver disease",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/MONDO_0013209",
+                    "termSourceRef": "MONDO"
+                },
+                {
+                    "term": "normal",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/PATO_0000461",
+                    "termSourceRef": "PATO"
+                }
+            ],
             "unexpectedTerms": []
         }
     ]

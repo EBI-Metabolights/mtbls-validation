@@ -45,3 +45,19 @@
 | Pattern Message | Value must be at least 3 characters and contain only alphanumeric characters, space, \- and \_ characters |
 | Pattern Enforcement Level | recommended |
 
+## Parameter Value\[Derivatization\]
+
+| Attribute | Value |
+|---|------|
+| Rule Name | Parameter Value\[Derivatization\]\-01 |
+| Rule Description |  |
+| Applicable Study Categories | All |
+| Applicable Template Names | All |
+| Applicable Template Versions | All |
+| Validation Type | check-only-constraints |
+| Pattern | <code>^.*$</code> |
+| Pattern Message | Define any value |
+| Pattern Enforcement Level | recommended |
+| Ontologies [Ordered] | MTBLS |
+| Allowed Missing Terms | \[none, , \] |
+

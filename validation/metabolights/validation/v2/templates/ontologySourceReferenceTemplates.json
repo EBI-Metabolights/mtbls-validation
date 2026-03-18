@@ -52,14 +52,14 @@
         "APO": {
             "sourceName": "APO",
             "sourceFile": "http://purl.obolibrary.org/obo/apo.owl",
-            "sourceVersion": "2026-01-12",
+            "sourceVersion": "2026-03-14",
             "sourceDescription": "Ascomycete Phenotype Ontology (APO)",
             "sourceDetails": "A structured controlled vocabulary for the phenotypes of Ascomycete fungi."
         },
         "APOLLO_SV": {
             "sourceName": "APOLLO_SV",
             "sourceFile": "http://purl.obolibrary.org/obo/apollo_sv.owl",
-            "sourceVersion": "2024-12-24",
+            "sourceVersion": "2026-03-13",
             "sourceDescription": "Apollo Structured Vocabulary",
             "sourceDetails": "An OWL2 ontology of phenomena in infectious disease epidemiology and population biology for use in epidemic simulation."
         },
@@ -199,7 +199,7 @@
         "CHEBI": {
             "sourceName": "CHEBI",
             "sourceFile": "http://purl.obolibrary.org/obo/chebi.owl",
-            "sourceVersion": "249",
+            "sourceVersion": "250",
             "sourceDescription": "Chemical Entities of Biological Interest",
             "sourceDetails": "A structured classification of molecular entities of biological interest focusing on 'small' chemical compounds."
         },
@@ -395,14 +395,14 @@
         "DOID": {
             "sourceName": "DOID",
             "sourceFile": "https://purl.obolibrary.org/obo/doid/translations/doid-international.owl",
-            "sourceVersion": "2026-02-02",
+            "sourceVersion": "2026-02-28",
             "sourceDescription": "Human Disease Ontology",
             "sourceDetails": "The Disease Ontology has been developed as a standardized ontology for human disease with the purpose of providing the biomedical community with consistent, reusable and sustainable descriptions of human disease terms, phenotype characteristics and related medical vocabulary disease concepts."
         },
         "DRON": {
             "sourceName": "DRON",
             "sourceFile": "http://purl.obolibrary.org/obo/dron.owl",
-            "sourceVersion": "2025-12-19",
+            "sourceVersion": "2026-03-04",
             "sourceDescription": "The Drug Ontology",
             "sourceDetails": "An ontology to support comparative effectiveness researchers studying claims data."
         },
@@ -458,7 +458,7 @@
         "EFO": {
             "sourceName": "EFO",
             "sourceFile": "http://www.ebi.ac.uk/efo/efo.owl",
-            "sourceVersion": "3.87.0",
+            "sourceVersion": "3.88.0",
             "sourceDescription": "Experimental Factor Ontology",
             "sourceDetails": "The Experimental Factor Ontology (EFO) provides a systematic description of many experimental variables available in EBI databases, and for projects such as the NHGRI-EBI GWAS catalog. It combines parts of several biological ontologies, such as UBERON anatomy, ChEBI chemical compounds, Cell Ontology and the Monarch Disease Ontology (MONDO). The scope of EFO is to support the annotation, analysis and visualization of data handled by many groups at the EBI and as the core ontology for Open Targets."
         },
@@ -633,7 +633,7 @@
         "FYPO": {
             "sourceName": "FYPO",
             "sourceFile": "http://purl.obolibrary.org/obo/fypo.owl",
-            "sourceVersion": "2026-01-16",
+            "sourceVersion": "2026-02-25",
             "sourceDescription": "Fission Yeast Phenotype Ontology (FYPO)",
             "sourceDetails": "A formal ontology of phenotypes observed in fission yeast."
         },
@@ -801,7 +801,7 @@
         "ICO": {
             "sourceName": "ICO",
             "sourceFile": "http://purl.obolibrary.org/obo/ico.owl",
-            "sourceVersion": "2025-03-15",
+            "sourceVersion": "2026-02-28",
             "sourceDescription": "Informed Consent Ontology (ICO)",
             "sourceDetails": "The Informed Consent Ontology (ICO) is an ontology for the informed consent and informed consent process in the medical field."
         },
@@ -885,7 +885,7 @@
         "MA": {
             "sourceName": "MA",
             "sourceFile": "http://purl.obolibrary.org/obo/ma.owl",
-            "sourceVersion": "2026-02-11",
+            "sourceVersion": "2026-02-24",
             "sourceDescription": "Mouse adult gross anatomy",
             "sourceDetails": "A structured controlled vocabulary of the adult anatomy of the mouse (Mus)."
         },
@@ -1004,7 +1004,7 @@
         "MONDO": {
             "sourceName": "MONDO",
             "sourceFile": "https://purl.obolibrary.org/obo/mondo/mondo-international.owl",
-            "sourceVersion": "2026-02-03",
+            "sourceVersion": "2026-03-03",
             "sourceDescription": "Mondo Disease Ontology",
             "sourceDetails": "A semi-automatically constructed ontology that merges in multiple disease resources to yield a coherent merged ontology."
         },
@@ -1200,14 +1200,14 @@
         "OHD": {
             "sourceName": "OHD",
             "sourceFile": "http://purl.obolibrary.org/obo/ohd.owl",
-            "sourceVersion": "2025-06-28",
+            "sourceVersion": "2026-03-16",
             "sourceDescription": "Oral Health and Disease Ontology",
             "sourceDetails": "The Oral Health and Disease Ontology is used for representing the diagnosis and treatment of dental maladies."
         },
         "OHMI": {
             "sourceName": "OHMI",
             "sourceFile": "http://purl.obolibrary.org/obo/ohmi.owl",
-            "sourceVersion": "2025-12-28",
+            "sourceVersion": "2026-03-15",
             "sourceDescription": "OHMI: Ontology of Host-Microbiome Interactions",
             "sourceDetails": "OHMI is a biomedical ontology that represents the entities and relations in the domain of host-microbiome interactions."
         },
@@ -1263,7 +1263,7 @@
         "OMRSE": {
             "sourceName": "OMRSE",
             "sourceFile": "http://purl.obolibrary.org/obo/omrse.owl",
-            "sourceVersion": "2026-01-06",
+            "sourceVersion": "2026-03-05",
             "sourceDescription": "Ontology for Modeling and Representation of Social Entities",
             "sourceDetails": "The Ontology for Modeling and Representation of Social Entities (OMRSE) is an OBO Foundry ontology that represents the various entities that arise from human social interactions, such as social acts, social roles, social groups, and organizations."
         },
@@ -1410,7 +1410,7 @@
         "PHIPO": {
             "sourceName": "PHIPO",
             "sourceFile": "http://purl.obolibrary.org/obo/phipo.owl",
-            "sourceVersion": "2026-01-26",
+            "sourceVersion": "2026-03-12",
             "sourceDescription": "Pathogen Host Interactions Phenotype Ontology",
             "sourceDetails": "Ontology of species-neutral phenotypes observed in pathogen-host interactions."
         },
@@ -1459,7 +1459,7 @@
         "PREFER": {
             "sourceName": "PREFER",
             "sourceFile": "https://github.com/Multiomics-Analytics-Group/prefer_ontology/releases/latest/download/prefer.owl",
-            "sourceVersion": "2026-01-08",
+            "sourceVersion": "2026-03-10",
             "sourceDescription": "PREFER Ontology",
             "sourceDetails": "An ontology for PREcision FERmentation."
         },
@@ -1522,7 +1522,7 @@
         "RBO": {
             "sourceName": "RBO",
             "sourceFile": "http://purl.obolibrary.org/obo/rbo.owl",
-            "sourceVersion": "2026-01-15",
+            "sourceVersion": "2026-03-05",
             "sourceDescription": "Radiation Biology Ontology",
             "sourceDetails": "RBO is an ontology for the effects of radiation on biota in terrestrial and space environments."
         },
@@ -1760,9 +1760,9 @@
         "TRANS": {
             "sourceName": "TRANS",
             "sourceFile": "http://purl.obolibrary.org/obo/trans.owl",
-            "sourceVersion": "",
+            "sourceVersion": "2026-03-13",
             "sourceDescription": "Pathogen Transmission Ontology",
-            "sourceDetails": "The Pathogen Transmission Ontology describes the tranmission methods of human disease pathogens describing how a pathogen is transmitted from one host, reservoir, or source to another host. The pathogen transmission may occur either directly or indirectly and may involve animate vectors or inanimate vehicles."
+            "sourceDetails": "The Pathogen Transmission Ontology describes the transmission methods of human disease pathogens describing how a pathogen is transmitted from one host, reservoir, or source to another host. The pathogen transmission may occur either directly or indirectly and may involve animate vectors or inanimate vehicles."
         },
         "TTO": {
             "sourceName": "TTO",
@@ -1830,7 +1830,7 @@
         "VO": {
             "sourceName": "VO",
             "sourceFile": "http://purl.obolibrary.org/obo/vo.owl",
-            "sourceVersion": "2026-01-23",
+            "sourceVersion": "2026-03-06",
             "sourceDescription": "Vaccine Ontology",
             "sourceDetails": "The Vaccine Ontology (VO) is a community-based biomedical ontology in the domain of vaccine and vaccination. VO aims to standardize vaccine types and annotations, integrate various vaccine data, and support computer-assisted reasoning. The VO supports basic vaccine R&D and clinical vaccine usage. VO is being developed as a community-based ontology with support and collaborations from the vaccine and bio-ontology communities."
         },
@@ -1844,7 +1844,7 @@
         "VT": {
             "sourceName": "VT",
             "sourceFile": "http://purl.obolibrary.org/obo/vt.owl",
-            "sourceVersion": "2026-02-17",
+            "sourceVersion": "2026-03-03",
             "sourceDescription": "The Vertebrate Trait Ontology",
             "sourceDetails": "The Vertebrate Trait Ontology is a controlled vocabulary for the description of traits (measurable or observable characteristics) pertaining to the morphology, physiology, or development of vertebrate organisms."
         },
@@ -1854,6 +1854,13 @@
             "sourceVersion": "",
             "sourceDescription": "Vertebrate Taxonomy Ontology",
             "sourceDetails": "Comprehensive hierarchy of extinct and extant vertebrate taxa."
+        },
+        "VariO": {
+            "sourceName": "VariO",
+            "sourceFile": "https://variationontology.org/vario_download/VariO109.xml",
+            "sourceVersion": "",
+            "sourceDescription": "Variation Ontology",
+            "sourceDetails": "Variation Ontology, VariO, is an ontology for standardized, systematic description of effects, consequences and mechanisms of variations."
         },
         "WBPhenotype": {
             "sourceName": "WBPhenotype",

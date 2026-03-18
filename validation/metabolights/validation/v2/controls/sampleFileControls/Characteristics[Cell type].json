@@ -18,19 +18,10 @@
                 ],
                 "templateVersionFilter": null,
                 "isaFileTemplateNameFilter": null,
-                "linkedFieldAndValueFilter": [
-                    {
-                        "name": "Source Name",
-                        "value": null
-                    },
-                    {
-                        "name": "Sample Name",
-                        "value": null
-                    }
-                ]
+                "linkedFieldAndValueFilter": null
             },
             "termEnforcementLevel": "required",
-            "unexpectedTermEnforcementLevel": "required",
+            "unexpectedTermEnforcementLevel": "not-applicable",
             "validationType": "ontology-term-in-selected-ontologies",
             "constraints": {},
             "defaultValue": {
@@ -43,6 +34,11 @@
                     "term": "Not Applicable",
                     "termAccessionNumber": "http://purl.obolibrary.org/obo/NCIT_C48660",
                     "termSourceRef": "NCIT"
+                },
+                {
+                    "term": "",
+                    "termAccessionNumber": "",
+                    "termSourceRef": ""
                 }
             ],
             "allowedOtherSources": [
@@ -56,11 +52,62 @@
                 }
             ],
             "allowedPlaceholders": [],
-            "terms": [],
+            "terms": [
+                {
+                    "term": "regulatory T cell",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/CL_0000815",
+                    "termSourceRef": "CL"
+                },
+                {
+                    "term": "plasma cell",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/CL_0000786",
+                    "termSourceRef": "CL"
+                },
+                {
+                    "term": "endothelial cell",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/CL_0000115",
+                    "termSourceRef": "CL"
+                },
+                {
+                    "term": "smooth muscle cell",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/CL_0000192",
+                    "termSourceRef": "CL"
+                },
+                {
+                    "term": "fibroblast",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/CL_0000057",
+                    "termSourceRef": "CL"
+                },
+                {
+                    "term": "erythrocyte",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/CL_0000232",
+                    "termSourceRef": "CL"
+                },
+                {
+                    "term": "microglial cell",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/CL_0000129",
+                    "termSourceRef": "CL"
+                },
+                {
+                    "term": "hepatocyte",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/CL_0000182",
+                    "termSourceRef": "CL"
+                },
+                {
+                    "term": "alveolar macrophage",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/CL_0000583",
+                    "termSourceRef": "CL"
+                },
+                {
+                    "term": "hematopoietic stem cell",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/CL_0000037",
+                    "termSourceRef": "CL"
+                }
+            ],
             "unexpectedTerms": []
         },
         {
-            "ruleName": "Characteristics[Cell type]-01",
+            "ruleName": "Characteristics[Cell type]-02",
             "fieldName": "Characteristics[Cell type]",
             "ontologies": [
                 "CL",
@@ -78,7 +125,7 @@
                 "linkedFieldAndValueFilter": null
             },
             "termEnforcementLevel": "recommended",
-            "unexpectedTermEnforcementLevel": "recommended",
+            "unexpectedTermEnforcementLevel": "not-applicable",
             "validationType": "ontology-term-in-selected-ontologies",
             "constraints": {},
             "defaultValue": {
@@ -104,7 +151,58 @@
                 }
             ],
             "allowedPlaceholders": [],
-            "terms": [],
+            "terms": [
+                {
+                    "term": "regulatory T cell",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/CL_0000815",
+                    "termSourceRef": "CL"
+                },
+                {
+                    "term": "plasma cell",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/CL_0000786",
+                    "termSourceRef": "CL"
+                },
+                {
+                    "term": "endothelial cell",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/CL_0000115",
+                    "termSourceRef": "CL"
+                },
+                {
+                    "term": "smooth muscle cell",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/CL_0000192",
+                    "termSourceRef": "CL"
+                },
+                {
+                    "term": "fibroblast",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/CL_0000057",
+                    "termSourceRef": "CL"
+                },
+                {
+                    "term": "erythrocyte",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/CL_0000232",
+                    "termSourceRef": "CL"
+                },
+                {
+                    "term": "microglial cell",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/CL_0000129",
+                    "termSourceRef": "CL"
+                },
+                {
+                    "term": "hepatocyte",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/CL_0000182",
+                    "termSourceRef": "CL"
+                },
+                {
+                    "term": "alveolar macrophage",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/CL_0000583",
+                    "termSourceRef": "CL"
+                },
+                {
+                    "term": "hematopoietic stem cell",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/CL_0000037",
+                    "termSourceRef": "CL"
+                }
+            ],
             "unexpectedTerms": []
         }
     ]

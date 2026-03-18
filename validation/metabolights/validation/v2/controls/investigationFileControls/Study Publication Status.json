@@ -16,17 +16,21 @@
                 "linkedFieldAndValueFilter": null
             },
             "termEnforcementLevel": "required",
-            "unexpectedTermEnforcementLevel": "required",
+            "unexpectedTermEnforcementLevel": "not-applicable",
             "validationType": "selected-ontology-term",
             "constraints": {},
-            "defaultValue": null,
+            "defaultValue": {
+                "term": "in preparation",
+                "termAccessionNumber": "http://www.ebi.ac.uk/efo/EFO_0001795",
+                "termSourceRef": "EFO"
+            },
             "allowedMissingOntologyTerms": [],
             "allowedOtherSources": [],
             "allowedPlaceholders": [],
             "terms": [
                 {
-                    "term": "published",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/efo/EFO_0001796",
+                    "term": "in preparation",
+                    "termAccessionNumber": "http://www.ebi.ac.uk/efo/EFO_0001795",
                     "termSourceRef": "EFO"
                 },
                 {
@@ -35,13 +39,13 @@
                     "termSourceRef": "EFO"
                 },
                 {
-                    "term": "in preparation",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/efo/EFO_0001795",
+                    "term": "preprint",
+                    "termAccessionNumber": "http://www.ebi.ac.uk/efo/EFO_0010558",
                     "termSourceRef": "EFO"
                 },
                 {
-                    "term": "preprint",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/efo/EFO_0010558",
+                    "term": "published",
+                    "termAccessionNumber": "http://www.ebi.ac.uk/efo/EFO_0001796",
                     "termSourceRef": "EFO"
                 },
                 {
@@ -71,10 +75,14 @@
                 "linkedFieldAndValueFilter": null
             },
             "termEnforcementLevel": "required",
-            "unexpectedTermEnforcementLevel": "required",
+            "unexpectedTermEnforcementLevel": "not-applicable",
             "validationType": "ontology-term-in-selected-ontologies",
             "constraints": {},
-            "defaultValue": null,
+            "defaultValue": {
+                "term": "in preparation",
+                "termAccessionNumber": "http://www.ebi.ac.uk/efo/EFO_0001795",
+                "termSourceRef": "EFO"
+            },
             "allowedMissingOntologyTerms": [],
             "allowedOtherSources": [],
             "allowedPlaceholders": [
@@ -85,8 +93,8 @@
             ],
             "terms": [
                 {
-                    "term": "published",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/efo/EFO_0001796",
+                    "term": "in preparation",
+                    "termAccessionNumber": "http://www.ebi.ac.uk/efo/EFO_0001795",
                     "termSourceRef": "EFO"
                 },
                 {
@@ -95,13 +103,13 @@
                     "termSourceRef": "EFO"
                 },
                 {
-                    "term": "in preparation",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/efo/EFO_0001795",
+                    "term": "preprint",
+                    "termAccessionNumber": "http://www.ebi.ac.uk/efo/EFO_0010558",
                     "termSourceRef": "EFO"
                 },
                 {
-                    "term": "preprint",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/efo/EFO_0010558",
+                    "term": "published",
+                    "termAccessionNumber": "http://www.ebi.ac.uk/efo/EFO_0001796",
                     "termSourceRef": "EFO"
                 },
                 {

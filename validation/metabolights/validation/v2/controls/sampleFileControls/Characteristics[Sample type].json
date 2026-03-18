@@ -20,7 +20,7 @@
                 "linkedFieldAndValueFilter": null
             },
             "termEnforcementLevel": "recommended",
-            "unexpectedTermEnforcementLevel": "recommended",
+            "unexpectedTermEnforcementLevel": "not-applicable",
             "validationType": "ontology-term-in-selected-ontologies",
             "constraints": {},
             "defaultValue": null,
@@ -56,6 +56,11 @@
                 {
                     "term": "reference compound mix",
                     "termAccessionNumber": "http://purl.obolibrary.org/obo/MSIO_0000024",
+                    "termSourceRef": "MSIO"
+                },
+                {
+                    "term": "long term reference",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/MSIO_0000019",
                     "termSourceRef": "MSIO"
                 }
             ],

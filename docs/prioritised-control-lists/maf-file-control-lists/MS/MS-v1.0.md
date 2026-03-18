@@ -20,7 +20,7 @@
 
 | Attribute | Value |
 |---|------|
-| Rule Name | Unit\-01 |
+| Rule Name | MAF\-Unit\-01 |
 | Rule Description |  |
 | Applicable Study Categories | All |
 | Applicable Template Names | All |
@@ -30,4 +30,21 @@
 | Allowed Parent Ontology Term Exceptions | ^\.\*unit$, ^\.\*Unit of\.\*$ |
 | Allowed Other Sources | \[wikidata, https://www\.wikidata\.org/wiki/\], \[ILX, http://uri\.interlex\.org/base/ilx\_\] |
 | Ontology Term Enforcement Level | recommended |
+
+### Recommended Terms
+
+| # |Term  | Term Source  | Term Accession |
+|---|------|--------------|----------------|
+| 1 | kelvin | UO | http://purl\.obolibrary\.org/obo/UO\_0000012 |
+| 2 | tesla | UO | http://purl\.obolibrary\.org/obo/UO\_0000228 |
+| 3 | micrometer | UO | http://purl\.obolibrary\.org/obo/UO\_0000017 |
+| 4 | millimolar | UO | http://purl\.obolibrary\.org/obo/UO\_0000063 |
+| 5 | meter | UO | http://purl\.obolibrary\.org/obo/UO\_0000008 |
+| 6 | kilogram | UO | http://purl\.obolibrary\.org/obo/UO\_0000009 |
+| 7 | milligram per day | EFO | http://www\.ebi\.ac\.uk/efo/EFO\_0004419 |
+| 8 | day | UO | http://purl\.obolibrary\.org/obo/UO\_0000033 |
+| 9 | hour | UO | http://purl\.obolibrary\.org/obo/UO\_0000032 |
+| 10 | minute | UO | http://purl\.obolibrary\.org/obo/UO\_0000031 |
+| 11 | degree Fahrenheit | UO | http://purl\.obolibrary\.org/obo/UO\_0000195 |
+| 12 | degree Celsius | UO | http://purl\.obolibrary\.org/obo/UO\_0000027 |
 

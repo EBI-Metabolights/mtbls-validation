@@ -4,8 +4,7 @@
             "ruleName": "Parameter Value[Autosampler model]-01",
             "fieldName": "Parameter Value[Autosampler model]",
             "ontologies": [
-                "MS",
-                "MTBLS"
+                "MS"
             ],
             "allowedParentOntologyTerms": null,
             "description": "",
@@ -21,7 +20,7 @@
                 "linkedFieldAndValueFilter": null
             },
             "termEnforcementLevel": "recommended",
-            "unexpectedTermEnforcementLevel": "recommended",
+            "unexpectedTermEnforcementLevel": "not-applicable",
             "validationType": "any-ontology-term",
             "constraints": {},
             "defaultValue": null,

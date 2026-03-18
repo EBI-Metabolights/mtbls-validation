@@ -5,7 +5,8 @@
             "fieldName": "Characteristics[Organism]",
             "ontologies": [
                 "NCBITaxon",
-                "ENVO"
+                "ENVO",
+                "CHEBI"
             ],
             "allowedParentOntologyTerms": null,
             "description": "",
@@ -18,12 +19,7 @@
                 ],
                 "templateVersionFilter": null,
                 "isaFileTemplateNameFilter": null,
-                "linkedFieldAndValueFilter": [
-                    {
-                        "name": "Source Name",
-                        "value": null
-                    }
-                ]
+                "linkedFieldAndValueFilter": null
             },
             "termEnforcementLevel": "required",
             "unexpectedTermEnforcementLevel": "required",
@@ -123,6 +119,7 @@
             "ontologies": [
                 "NCBITaxon",
                 "ENVO",
+                "CHEBI",
                 "MTBLS",
                 "WoRMs",
                 "EFO",
