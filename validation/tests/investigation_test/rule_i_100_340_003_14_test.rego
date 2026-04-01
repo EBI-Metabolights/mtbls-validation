@@ -29,8 +29,8 @@ test_rule_i_100_340_003_14_no_violation_01 if {
 			"path": "/investigation/studies/0/studyAssays/assays/0/measurementType",
 			"value": {
 				"term": "disease",
-				"termAccessionNumber": "http://www.ebi.ac.uk/efo/EFO_0000408",
-				"termSourceRef": "EFO",
+				"termAccessionNumber": "http://purl.obolibrary.org/obo/MONDO_0000001",
+				"termSourceRef": "MONDO",
 			},
 		}],
 	)

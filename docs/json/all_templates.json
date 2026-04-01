@@ -19124,14 +19124,14 @@
         "APO": {
             "sourceName": "APO",
             "sourceFile": "http://purl.obolibrary.org/obo/apo.owl",
-            "sourceVersion": "2026-01-12",
+            "sourceVersion": "2026-03-14",
             "sourceDescription": "Ascomycete Phenotype Ontology (APO)",
             "sourceDetails": "A structured controlled vocabulary for the phenotypes of Ascomycete fungi."
         },
         "APOLLO_SV": {
             "sourceName": "APOLLO_SV",
             "sourceFile": "http://purl.obolibrary.org/obo/apollo_sv.owl",
-            "sourceVersion": "2024-12-24",
+            "sourceVersion": "2026-03-13",
             "sourceDescription": "Apollo Structured Vocabulary",
             "sourceDetails": "An OWL2 ontology of phenomena in infectious disease epidemiology and population biology for use in epidemic simulation."
         },
@@ -19271,7 +19271,7 @@
         "CHEBI": {
             "sourceName": "CHEBI",
             "sourceFile": "http://purl.obolibrary.org/obo/chebi.owl",
-            "sourceVersion": "249",
+            "sourceVersion": "250",
             "sourceDescription": "Chemical Entities of Biological Interest",
             "sourceDetails": "A structured classification of molecular entities of biological interest focusing on 'small' chemical compounds."
         },
@@ -19313,7 +19313,7 @@
         "CL": {
             "sourceName": "CL",
             "sourceFile": "http://purl.obolibrary.org/obo/cl.owl",
-            "sourceVersion": "2025-12-17",
+            "sourceVersion": "2026-03-26",
             "sourceDescription": "Cell Ontology",
             "sourceDetails": "An ontology of cell types."
         },
@@ -19453,7 +19453,7 @@
         "DISDRIV": {
             "sourceName": "DISDRIV",
             "sourceFile": "http://purl.obolibrary.org/obo/disdriv.owl",
-            "sourceVersion": "2025-03-20",
+            "sourceVersion": "2026-03-27",
             "sourceDescription": "Disease Drivers",
             "sourceDetails": "Drivers of human diseases including environmental, maternal and social exposures."
         },
@@ -19474,7 +19474,7 @@
         "DRON": {
             "sourceName": "DRON",
             "sourceFile": "http://purl.obolibrary.org/obo/dron.owl",
-            "sourceVersion": "2025-12-19",
+            "sourceVersion": "2026-03-04",
             "sourceDescription": "The Drug Ontology",
             "sourceDetails": "An ontology to support comparative effectiveness researchers studying claims data."
         },
@@ -19530,7 +19530,7 @@
         "EFO": {
             "sourceName": "EFO",
             "sourceFile": "http://www.ebi.ac.uk/efo/efo.owl",
-            "sourceVersion": "3.87.0",
+            "sourceVersion": "3.88.0",
             "sourceDescription": "Experimental Factor Ontology",
             "sourceDetails": "The Experimental Factor Ontology (EFO) provides a systematic description of many experimental variables available in EBI databases, and for projects such as the NHGRI-EBI GWAS catalog. It combines parts of several biological ontologies, such as UBERON anatomy, ChEBI chemical compounds, Cell Ontology and the Monarch Disease Ontology (MONDO). The scope of EFO is to support the annotation, analysis and visualization of data handled by many groups at the EBI and as the core ontology for Open Targets."
         },
@@ -19698,9 +19698,9 @@
         "FOVT": {
             "sourceName": "FOVT",
             "sourceFile": "http://purl.obolibrary.org/obo/fovt.owl",
-            "sourceVersion": "2023-05-31",
+            "sourceVersion": "2026-03-19",
             "sourceDescription": "FuTRES Ontology of Vertebrate Traits",
-            "sourceDetails": "These are the terms that are improted for FOVT to describe vertebrate traits."
+            "sourceDetails": "FuTRES Ontology of Vertebrate Traits is an application ontology used to convert vertebrate trait data in spreadsheet to triples. FOVT leverages the BioCollections Ontology (BCO) to link observations of individual specimens to their trait values. Traits are defined in the Ontology of Biological Attributes (OBA)."
         },
         "FYPO": {
             "sourceName": "FYPO",
@@ -19754,7 +19754,7 @@
         "GNO": {
             "sourceName": "GNO",
             "sourceFile": "http://purl.obolibrary.org/obo/gno.owl",
-            "sourceVersion": "V2.5.0",
+            "sourceVersion": "V2.6.1",
             "sourceDescription": "Glycan Naming Ontology",
             "sourceDetails": "An ontology for glycans based on GlyTouCan, but organized by subsumption."
         },
@@ -20076,7 +20076,7 @@
         "MONDO": {
             "sourceName": "MONDO",
             "sourceFile": "https://purl.obolibrary.org/obo/mondo/mondo-international.owl",
-            "sourceVersion": "2026-02-03",
+            "sourceVersion": "2026-03-03",
             "sourceDescription": "Mondo Disease Ontology",
             "sourceDetails": "A semi-automatically constructed ontology that merges in multiple disease resources to yield a coherent merged ontology."
         },
@@ -20090,7 +20090,7 @@
         "MP": {
             "sourceName": "MP",
             "sourceFile": "http://purl.obolibrary.org/obo/mp/mp-international.owl",
-            "sourceVersion": "2026-02-17",
+            "sourceVersion": "2026-03-24",
             "sourceDescription": "The Mammalian Phenotype Ontology",
             "sourceDetails": "The Mammalian Phenotype Ontology is being developed by Cynthia L. Smith, Susan M. Bello, Anna V. Anagnostopoulos, Carroll W. Goldsmith and Janan T. Eppig, as part of the Mouse Genome Database (MGD) Project, Mouse Genome Informatics (MGI), The Jackson Laboratory, Bar Harbor, ME. This file contains pre-coordinated phenotype terms, definitions and synonyms that can be used to describe mammalian phenotypes. The ontology is represented as a directed acyclic graph (DAG). It organizes phenotype terms into major biological system headers such as nervous system and respiratory system.  This ontology is currently under development. Weekly updates are available at the Mouse Genome Informatics (MGI) ftp site (ftp://ftp.informatics.jax.org/pub/reports/index.html#pheno) as well as the OBO Foundry site (http://obofoundry.org/). Japanese labels of MP were created by the MP Japanese Translation Project (https://github.com/dbcls/MP_Japanese). Questions, comments and suggestions are welcome, and should be directed to pheno@jax.org, Susan.Bello@jax.org or to GitHub tracker (https://github.com/mgijax/mammalian-phenotype-ontology/issues) MGD is funded by NIH/NHGRI grant HG000330."
         },
@@ -20160,7 +20160,7 @@
         "NCIT": {
             "sourceName": "NCIT",
             "sourceFile": "http://purl.obolibrary.org/obo/ncit.owl",
-            "sourceVersion": "25.06e",
+            "sourceVersion": "26.02d",
             "sourceDescription": "NCI Thesaurus OBO Edition",
             "sourceDetails": "NCI Thesaurus (NCIt)is a reference terminology that includes broad coverage of the cancer domain, including cancer related diseases, findings and abnormalities. The NCIt OBO Edition aims to increase integration of the NCIt with OBO Library ontologies. NCIt OBO Edition releases should be considered experimental."
         },
@@ -20265,14 +20265,14 @@
         "OHD": {
             "sourceName": "OHD",
             "sourceFile": "http://purl.obolibrary.org/obo/ohd.owl",
-            "sourceVersion": "2025-06-28",
+            "sourceVersion": "2026-03-16",
             "sourceDescription": "Oral Health and Disease Ontology",
             "sourceDetails": "The Oral Health and Disease Ontology is used for representing the diagnosis and treatment of dental maladies."
         },
         "OHMI": {
             "sourceName": "OHMI",
             "sourceFile": "http://purl.obolibrary.org/obo/ohmi.owl",
-            "sourceVersion": "2025-12-28",
+            "sourceVersion": "2026-03-21",
             "sourceDescription": "OHMI: Ontology of Host-Microbiome Interactions",
             "sourceDetails": "OHMI is a biomedical ontology that represents the entities and relations in the domain of host-microbiome interactions."
         },
@@ -20314,7 +20314,7 @@
         "OMO": {
             "sourceName": "OMO",
             "sourceFile": "http://purl.obolibrary.org/obo/omo.owl",
-            "sourceVersion": "2025-06-18",
+            "sourceVersion": "2026-03-16",
             "sourceDescription": "OBO Metadata Ontology",
             "sourceDetails": "An ontology specifies terms that are used to annotate ontology terms for all OBO ontologies. The ontology was developed as part of Information Artifact Ontology (IAO)."
         },
@@ -20328,7 +20328,7 @@
         "OMRSE": {
             "sourceName": "OMRSE",
             "sourceFile": "http://purl.obolibrary.org/obo/omrse.owl",
-            "sourceVersion": "2026-01-06",
+            "sourceVersion": "2026-03-05",
             "sourceDescription": "Ontology for Modeling and Representation of Social Entities",
             "sourceDetails": "The Ontology for Modeling and Representation of Social Entities (OMRSE) is an OBO Foundry ontology that represents the various entities that arise from human social interactions, such as social acts, social roles, social groups, and organizations."
         },
@@ -20475,7 +20475,7 @@
         "PHIPO": {
             "sourceName": "PHIPO",
             "sourceFile": "http://purl.obolibrary.org/obo/phipo.owl",
-            "sourceVersion": "2026-01-26",
+            "sourceVersion": "2026-03-12",
             "sourceDescription": "Pathogen Host Interactions Phenotype Ontology",
             "sourceDetails": "Ontology of species-neutral phenotypes observed in pathogen-host interactions."
         },
@@ -20524,7 +20524,7 @@
         "PREFER": {
             "sourceName": "PREFER",
             "sourceFile": "https://github.com/Multiomics-Analytics-Group/prefer_ontology/releases/latest/download/prefer.owl",
-            "sourceVersion": "2026-01-08",
+            "sourceVersion": "2026-03-10",
             "sourceDescription": "PREFER Ontology",
             "sourceDetails": "An ontology for PREcision FERmentation."
         },
@@ -20587,7 +20587,7 @@
         "RBO": {
             "sourceName": "RBO",
             "sourceFile": "http://purl.obolibrary.org/obo/rbo.owl",
-            "sourceVersion": "2026-01-15",
+            "sourceVersion": "2026-03-05",
             "sourceDescription": "Radiation Biology Ontology",
             "sourceDetails": "RBO is an ontology for the effects of radiation on biota in terrestrial and space environments."
         },
@@ -20825,9 +20825,9 @@
         "TRANS": {
             "sourceName": "TRANS",
             "sourceFile": "http://purl.obolibrary.org/obo/trans.owl",
-            "sourceVersion": "",
+            "sourceVersion": "2026-03-13",
             "sourceDescription": "Pathogen Transmission Ontology",
-            "sourceDetails": "The Pathogen Transmission Ontology describes the tranmission methods of human disease pathogens describing how a pathogen is transmitted from one host, reservoir, or source to another host. The pathogen transmission may occur either directly or indirectly and may involve animate vectors or inanimate vehicles."
+            "sourceDetails": "The Pathogen Transmission Ontology describes the transmission methods of human disease pathogens describing how a pathogen is transmitted from one host, reservoir, or source to another host. The pathogen transmission may occur either directly or indirectly and may involve animate vectors or inanimate vehicles."
         },
         "TTO": {
             "sourceName": "TTO",
@@ -20895,7 +20895,7 @@
         "VO": {
             "sourceName": "VO",
             "sourceFile": "http://purl.obolibrary.org/obo/vo.owl",
-            "sourceVersion": "2026-01-23",
+            "sourceVersion": "2026-03-06",
             "sourceDescription": "Vaccine Ontology",
             "sourceDetails": "The Vaccine Ontology (VO) is a community-based biomedical ontology in the domain of vaccine and vaccination. VO aims to standardize vaccine types and annotations, integrate various vaccine data, and support computer-assisted reasoning. The VO supports basic vaccine R&D and clinical vaccine usage. VO is being developed as a community-based ontology with support and collaborations from the vaccine and bio-ontology communities."
         },
@@ -20909,7 +20909,7 @@
         "VT": {
             "sourceName": "VT",
             "sourceFile": "http://purl.obolibrary.org/obo/vt.owl",
-            "sourceVersion": "2026-02-23",
+            "sourceVersion": "2026-03-17",
             "sourceDescription": "The Vertebrate Trait Ontology",
             "sourceDetails": "The Vertebrate Trait Ontology is a controlled vocabulary for the description of traits (measurable or observable characteristics) pertaining to the morphology, physiology, or development of vertebrate organisms."
         },
@@ -20919,6 +20919,13 @@
             "sourceVersion": "",
             "sourceDescription": "Vertebrate Taxonomy Ontology",
             "sourceDetails": "Comprehensive hierarchy of extinct and extant vertebrate taxa."
+        },
+        "VariO": {
+            "sourceName": "VariO",
+            "sourceFile": "https://variationontology.org/vario_download/VariO109.xml",
+            "sourceVersion": "",
+            "sourceDescription": "Variation Ontology",
+            "sourceDetails": "Variation Ontology, VariO, is an ontology for standardized, systematic description of effects, consequences and mechanisms of variations."
         },
         "WBPhenotype": {
             "sourceName": "WBPhenotype",
@@ -20986,9 +20993,9 @@
         "ZFA": {
             "sourceName": "ZFA",
             "sourceFile": "http://purl.obolibrary.org/obo/zfa.owl",
-            "sourceVersion": "2025-09-05",
-            "sourceDescription": "Zebrafish Anatomy Ontology (ZFA)",
-            "sourceDetails": "ZFA description."
+            "sourceVersion": "2026-03-25",
+            "sourceDescription": "Zebrafish anatomy and development ontology",
+            "sourceDetails": "A structured controlled vocabulary of the anatomy and development of the Zebrafish"
         },
         "ZFS": {
             "sourceName": "ZFS",
