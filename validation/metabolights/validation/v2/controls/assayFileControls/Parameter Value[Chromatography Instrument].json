@@ -33,9 +33,9 @@
                 ],
                 "linkedFieldAndValueFilter": null
             },
-            "termEnforcementLevel": "recommended",
+            "termEnforcementLevel": "required",
             "unexpectedTermEnforcementLevel": "required",
-            "validationType": "ontology-term-in-selected-ontologies",
+            "validationType": "child-ontology-term",
             "constraints": {},
             "defaultValue": null,
             "allowedMissingOntologyTerms": [],
@@ -98,9 +98,9 @@
                 ],
                 "linkedFieldAndValueFilter": null
             },
-            "termEnforcementLevel": "recommended",
+            "termEnforcementLevel": "required",
             "unexpectedTermEnforcementLevel": "required",
-            "validationType": "ontology-term-in-selected-ontologies",
+            "validationType": "child-ontology-term",
             "constraints": {},
             "defaultValue": null,
             "allowedMissingOntologyTerms": [],
