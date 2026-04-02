@@ -24,7 +24,7 @@
         "AFO": {
             "sourceName": "AFO",
             "sourceFile": "http://purl.allotrope.org/voc/afo/latest.xml",
-            "sourceVersion": "REC/2025/12",
+            "sourceVersion": "REC/2026/03",
             "sourceDescription": "Allotrope Merged Ontology Suite",
             "sourceDetails": "Allotrope Merged Ontology Suite"
         },
@@ -563,7 +563,7 @@
         "FBbi": {
             "sourceName": "FBbi",
             "sourceFile": "http://purl.obolibrary.org/obo/fbbi.owl",
-            "sourceVersion": "2026-01-23",
+            "sourceVersion": "2026-03-30",
             "sourceDescription": "Biological Imaging Methods Ontology",
             "sourceDetails": "A structured controlled vocabulary of sample preparation, visualization and imaging methods used in biomedical research."
         },
@@ -808,7 +808,7 @@
         "ICTV": {
             "sourceName": "ICTV",
             "sourceFile": "https://github.com/EVORA-project/ictv-ontology/releases/latest/download/ictv_all_versions.owl.ttl.gz",
-            "sourceVersion": "MSL40",
+            "sourceVersion": "MSL41",
             "sourceDescription": "",
             "sourceDetails": ""
         },
@@ -1921,7 +1921,7 @@
         "ZFA": {
             "sourceName": "ZFA",
             "sourceFile": "http://purl.obolibrary.org/obo/zfa.owl",
-            "sourceVersion": "2026-03-25",
+            "sourceVersion": "2026-03-30",
             "sourceDescription": "Zebrafish anatomy and development ontology",
             "sourceDetails": "A structured controlled vocabulary of the anatomy and development of the Zebrafish"
         },

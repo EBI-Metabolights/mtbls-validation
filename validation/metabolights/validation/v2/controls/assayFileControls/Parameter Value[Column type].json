@@ -33,7 +33,7 @@
             },
             "termEnforcementLevel": "required",
             "unexpectedTermEnforcementLevel": "not-applicable",
-            "validationType": "ontology-term-in-selected-ontologies",
+            "validationType": "selected-ontology-term",
             "constraints": {},
             "defaultValue": null,
             "allowedMissingOntologyTerms": [],

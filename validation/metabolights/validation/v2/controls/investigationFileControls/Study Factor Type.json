@@ -58,7 +58,7 @@
                 {
                     "term": "disease",
                     "termAccessionNumber": "http://purl.obolibrary.org/obo/MONDO_0000001",
-                    "termSourceRef": "EFO"
+                    "termSourceRef": "MONDO"
                 },
                 {
                     "term": "timepoint",
