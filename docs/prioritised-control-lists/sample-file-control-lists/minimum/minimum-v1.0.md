@@ -158,7 +158,7 @@
 | Applicable Template Names | All |
 | Applicable Template Versions | All |
 | Validation Type | ontology-term-in-selected-ontologies |
-| Ontologies [Ordered] | CHMO, MSIO, MTBLS |
+| Ontologies [Ordered] | CHMO, MSIO |
 | Ontology Term Enforcement Level | recommended |
 
 ### Recommended Terms
@@ -166,8 +166,8 @@
 | # |Term  | Term Source  | Term Accession |
 |---|------|--------------|----------------|
 | 1 | experimental sample | CHMO | http://purl\.obolibrary\.org/obo/CHMO\_0002746 |
-| 2 | pooled quality control sample | MTBLS | http://www\.ebi\.ac\.uk/metabolights/ontology/MTBLS\_001090 |
-| 3 | experimental blank | MTBLS | http://www\.ebi\.ac\.uk/metabolights/ontology/MTBLS\_000218 |
+| 2 | pooled quality control sample |  |  |
+| 3 | experimental blank |  |  |
 | 4 | solvent blank | MSIO | http://purl\.obolibrary\.org/obo/MSIO\_0000026 |
 | 5 | sample preparation blank | MSIO | http://purl\.obolibrary\.org/obo/MSIO\_0000025 |
 | 6 | reference compound mix | MSIO | http://purl\.obolibrary\.org/obo/MSIO\_0000024 |

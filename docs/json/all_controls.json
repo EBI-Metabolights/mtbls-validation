@@ -8932,8 +8932,7 @@
                 "fieldName": "Characteristics[Sample type]",
                 "ontologies": [
                     "CHMO",
-                    "MSIO",
-                    "MTBLS"
+                    "MSIO"
                 ],
                 "allowedParentOntologyTerms": null,
                 "description": "",
@@ -8962,13 +8961,13 @@
                     },
                     {
                         "term": "pooled quality control sample",
-                        "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_001090",
-                        "termSourceRef": "MTBLS"
+                        "termAccessionNumber": "",
+                        "termSourceRef": ""
                     },
                     {
                         "term": "experimental blank",
-                        "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000218",
-                        "termSourceRef": "MTBLS"
+                        "termAccessionNumber": "",
+                        "termSourceRef": ""
                     },
                     {
                         "term": "solvent blank",
