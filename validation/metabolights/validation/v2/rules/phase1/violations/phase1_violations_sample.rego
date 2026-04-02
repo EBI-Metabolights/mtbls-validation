@@ -85,6 +85,7 @@ rule_s_100_100_001_04 contains result if {
 		not startswith(header.columnHeader, "Protocol REF")
 		not startswith(header.columnHeader, "Comment[")
 		not startswith(header.columnHeader, "Characteristics[")
+		not startswith(header.columnHeader, "Parameter Value[")
 		not startswith(header.columnHeader, "Factor Value[")
 		not startswith(header.columnHeader, "Performer")
 		not startswith(header.columnHeader, "Date")
