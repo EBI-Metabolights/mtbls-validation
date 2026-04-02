@@ -33,7 +33,7 @@
                 ],
                 "linkedFieldAndValueFilter": null
             },
-            "termEnforcementLevel": "required",
+            "termEnforcementLevel": "recommended",
             "unexpectedTermEnforcementLevel": "required",
             "validationType": "child-ontology-term",
             "constraints": {},
@@ -98,7 +98,7 @@
                 ],
                 "linkedFieldAndValueFilter": null
             },
-            "termEnforcementLevel": "required",
+            "termEnforcementLevel": "recommended",
             "unexpectedTermEnforcementLevel": "required",
             "validationType": "child-ontology-term",
             "constraints": {},
