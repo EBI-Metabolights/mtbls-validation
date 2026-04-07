@@ -422,15 +422,22 @@ rule_s_100_100_001_15 contains result if {
 	investigation_factors := {factor.name |
 		some factor in study.studyFactors.factors
 	}
-	factor_values := {param |
+	assay_factors := {param |
+		some assay_filename, assay in input.assays
+		some header in assay.table.headers
+		count(header.columnHeader) > 0
+		startswith(header.columnHeader, "Factor Value[")
+		param1 := replace(header.columnHeader, "Factor Value[", "")
+		param := replace(param1, "]", "")
+	}
+	sample_file_factors := {param |
 		some header in sheet.table.headers
 		count(header.columnHeader) > 0
 		startswith(header.columnHeader, "Factor Value[")
 		param1 := replace(header.columnHeader, "Factor Value[", "")
 		param := replace(param1, "]", "")
 	}
-
-	missing := investigation_factors - factor_values
+	missing := (investigation_factors - assay_factors) - sample_file_factors
 	count(missing) > 0
 	missing_factor_values := {sprintf("Factor Value[%v]", [x]) | some x in missing}
 	missing_factor_values_str = concat(", ", missing_factor_values)
