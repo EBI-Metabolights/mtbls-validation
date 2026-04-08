@@ -19271,7 +19271,7 @@
         "CHEBI": {
             "sourceName": "CHEBI",
             "sourceFile": "http://purl.obolibrary.org/obo/chebi.owl",
-            "sourceVersion": "250",
+            "sourceVersion": "251",
             "sourceDescription": "Chemical Entities of Biological Interest",
             "sourceDetails": "A structured classification of molecular entities of biological interest focusing on 'small' chemical compounds."
         },
@@ -19453,7 +19453,7 @@
         "DISDRIV": {
             "sourceName": "DISDRIV",
             "sourceFile": "http://purl.obolibrary.org/obo/disdriv.owl",
-            "sourceVersion": "2026-03-27",
+            "sourceVersion": "2026-03-31",
             "sourceDescription": "Disease Drivers",
             "sourceDetails": "Drivers of human diseases including environmental, maternal and social exposures."
         },
@@ -19467,7 +19467,7 @@
         "DOID": {
             "sourceName": "DOID",
             "sourceFile": "https://purl.obolibrary.org/obo/doid/translations/doid-international.owl",
-            "sourceVersion": "2026-02-28",
+            "sourceVersion": "2026-03-31",
             "sourceDescription": "Human Disease Ontology",
             "sourceDetails": "The Disease Ontology has been developed as a standardized ontology for human disease with the purpose of providing the biomedical community with consistent, reusable and sustainable descriptions of human disease terms, phenotype characteristics and related medical vocabulary disease concepts."
         },
@@ -19642,21 +19642,21 @@
         "FBbt": {
             "sourceName": "FBbt",
             "sourceFile": "http://purl.obolibrary.org/obo/fbbt.owl",
-            "sourceVersion": "2026-01-13",
+            "sourceVersion": "2026-04-03",
             "sourceDescription": "Drosophila gross anatomy",
             "sourceDetails": "An ontology representing the gross anatomy of Drosophila melanogaster."
         },
         "FBcv": {
             "sourceName": "FBcv",
             "sourceFile": "http://purl.obolibrary.org/obo/fbcv.owl",
-            "sourceVersion": "2026-01-13",
+            "sourceVersion": "2026-04-03",
             "sourceDescription": "FlyBase Controlled Vocabulary",
             "sourceDetails": "A structured controlled vocabulary used for various aspects of annotation by FlyBase."
         },
         "FBdv": {
             "sourceName": "FBdv",
             "sourceFile": "http://purl.obolibrary.org/obo/fbdv.owl",
-            "sourceVersion": "2026-01-13",
+            "sourceVersion": "2026-04-02",
             "sourceDescription": "Drosophila development",
             "sourceDetails": "A structured controlled vocabulary of the development of Drosophila melanogaster."
         },
@@ -19705,7 +19705,7 @@
         "FYPO": {
             "sourceName": "FYPO",
             "sourceFile": "http://purl.obolibrary.org/obo/fypo.owl",
-            "sourceVersion": "2026-02-25",
+            "sourceVersion": "2026-04-02",
             "sourceDescription": "Fission Yeast Phenotype Ontology (FYPO)",
             "sourceDetails": "A formal ontology of phenotypes observed in fission yeast."
         },
@@ -19761,7 +19761,7 @@
         "GO": {
             "sourceName": "GO",
             "sourceFile": "http://purl.obolibrary.org/obo/go/extensions/go-plus.owl",
-            "sourceVersion": "2026-01-23",
+            "sourceVersion": "2026-03-25",
             "sourceDescription": "Gene Ontology",
             "sourceDetails": "The Gene Ontology (GO) provides a framework and set of concepts for describing the functions of gene products from all organisms."
         },
@@ -20223,7 +20223,7 @@
         "OBI": {
             "sourceName": "OBI",
             "sourceFile": "http://purl.obolibrary.org/obo/obi.owl",
-            "sourceVersion": "2025-12-18",
+            "sourceVersion": "2026-03-19",
             "sourceDescription": "Ontology for Biomedical Investigations",
             "sourceDetails": "An ontology for representing biomedical investigations, including study designs, the collection and preparation of the targets of investigation, assays, instrumentation and reagents used, as well as the data generated and the types of analysis performed on the data to reach conclusions, and their documentation."
         },
@@ -20909,7 +20909,7 @@
         "VT": {
             "sourceName": "VT",
             "sourceFile": "http://purl.obolibrary.org/obo/vt.owl",
-            "sourceVersion": "2026-03-17",
+            "sourceVersion": "2026-04-01",
             "sourceDescription": "The Vertebrate Trait Ontology",
             "sourceDetails": "The Vertebrate Trait Ontology is a controlled vocabulary for the description of traits (measurable or observable characteristics) pertaining to the morphology, physiology, or development of vertebrate organisms."
         },
@@ -20993,14 +20993,14 @@
         "ZFA": {
             "sourceName": "ZFA",
             "sourceFile": "http://purl.obolibrary.org/obo/zfa.owl",
-            "sourceVersion": "2026-03-30",
+            "sourceVersion": "2026-03-31",
             "sourceDescription": "Zebrafish anatomy and development ontology",
             "sourceDetails": "A structured controlled vocabulary of the anatomy and development of the Zebrafish"
         },
         "ZFS": {
             "sourceName": "ZFS",
             "sourceFile": "http://purl.obolibrary.org/obo/zfs.owl",
-            "sourceVersion": "",
+            "sourceVersion": "2026-03-31",
             "sourceDescription": "Zebrafish developmental stages ontology",
             "sourceDetails": "Developmental stages of the Zebrafish"
         },
