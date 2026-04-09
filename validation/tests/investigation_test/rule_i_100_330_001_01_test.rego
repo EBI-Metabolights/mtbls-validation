@@ -31,8 +31,8 @@ test_rule_i_100_330_001_01_no_violation_01 if {
 				"name": "Disease",
 				"type": {
 					"term": "disease",
-					"termAccessionNumber": "http://www.ebi.ac.uk/efo/EFO_0000408",
-					"termSourceRef": "EFO",
+					"termAccessionNumber": "http://purl.obolibrary.org/obo/MONDO_0000001",
+					"termSourceRef": "MONDO",
 				},
 			}],
 		}],
@@ -57,8 +57,8 @@ test_rule_i_100_330_001_01_no_violation_02 if {
 					"name": "Disease",
 					"type": {
 						"term": "disease",
-						"termAccessionNumber": "http://www.ebi.ac.uk/efo/EFO_0000408",
-						"termSourceRef": "EFO",
+						"termAccessionNumber": "http://purl.obolibrary.org/obo/MONDO_0000001",
+						"termSourceRef": "MONDO",
 					},
 				},
 				{

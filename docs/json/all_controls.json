@@ -80,7 +80,6 @@
                     "na",
                     "not applicable",
                     "not available",
-                    "none",
                     "null",
                     "nill",
                     "not specified",
@@ -1398,9 +1397,9 @@
                     ],
                     "linkedFieldAndValueFilter": null
                 },
-                "termEnforcementLevel": "recommended",
+                "termEnforcementLevel": "required",
                 "unexpectedTermEnforcementLevel": "not-applicable",
-                "validationType": "ontology-term-in-selected-ontologies",
+                "validationType": "child-ontology-term",
                 "constraints": {},
                 "defaultValue": null,
                 "allowedMissingOntologyTerms": [],
@@ -2873,7 +2872,7 @@
                 },
                 "termEnforcementLevel": "recommended",
                 "unexpectedTermEnforcementLevel": "required",
-                "validationType": "ontology-term-in-selected-ontologies",
+                "validationType": "child-ontology-term",
                 "constraints": {},
                 "defaultValue": null,
                 "allowedMissingOntologyTerms": [],
@@ -2938,7 +2937,7 @@
                 },
                 "termEnforcementLevel": "recommended",
                 "unexpectedTermEnforcementLevel": "required",
-                "validationType": "ontology-term-in-selected-ontologies",
+                "validationType": "child-ontology-term",
                 "constraints": {},
                 "defaultValue": null,
                 "allowedMissingOntologyTerms": [],
@@ -4290,7 +4289,7 @@
                 },
                 "termEnforcementLevel": "required",
                 "unexpectedTermEnforcementLevel": "not-applicable",
-                "validationType": "ontology-term-in-selected-ontologies",
+                "validationType": "selected-ontology-term",
                 "constraints": {},
                 "defaultValue": null,
                 "allowedMissingOntologyTerms": [],
@@ -6060,6 +6059,130 @@
         ],
         "Parameter Value[Mass analyzer]": [
             {
+                "ruleName": "Parameter Value[Mass analyzer]-ms-mhd-enabled-01",
+                "fieldName": "Parameter Value[Mass analyzer]",
+                "ontologies": [
+                    "MS"
+                ],
+                "allowedParentOntologyTerms": {
+                    "excludeByLabelPattern": [],
+                    "excludeByAccession": [],
+                    "parents": [
+                        {
+                            "term": "instrument class",
+                            "termAccessionNumber": "http://purl.obolibrary.org/obo/MS_1003761",
+                            "termSourceRef": "MS"
+                        }
+                    ]
+                },
+                "description": "",
+                "selectionCriteria": {
+                    "isaFileType": "assay",
+                    "studyCreatedAtOrAfter": null,
+                    "studyCreatedBefore": null,
+                    "studyCategoryFilter": [
+                        "ms-mhd-enabled"
+                    ],
+                    "templateVersionFilter": null,
+                    "isaFileTemplateNameFilter": null,
+                    "linkedFieldAndValueFilter": null
+                },
+                "termEnforcementLevel": "required",
+                "unexpectedTermEnforcementLevel": "not-applicable",
+                "validationType": "selected-ontology-term",
+                "constraints": {},
+                "defaultValue": null,
+                "allowedMissingOntologyTerms": [],
+                "allowedOtherSources": [
+                    {
+                        "sourceLabel": "MTBLS",
+                        "accessionPrefix": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_"
+                    },
+                    {
+                        "sourceLabel": "wikidata",
+                        "accessionPrefix": "https://www.wikidata.org/wiki/"
+                    },
+                    {
+                        "sourceLabel": "ILX",
+                        "accessionPrefix": "http://uri.interlex.org/base/ilx_"
+                    }
+                ],
+                "allowedPlaceholders": [
+                    {
+                        "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/placeholder",
+                        "termSourceRef": "MTBLS"
+                    }
+                ],
+                "terms": [
+                    {
+                        "term": "orbitrap instrument",
+                        "termAccessionNumber": "http://purl.obolibrary.org/obo/MS_1003953",
+                        "termSourceRef": "MS"
+                    },
+                    {
+                        "term": "triple quadrupole instrument",
+                        "termAccessionNumber": "http://purl.obolibrary.org/obo/MS_1003762",
+                        "termSourceRef": "MS"
+                    },
+                    {
+                        "term": "quadrupole time-of-flight instrument",
+                        "termAccessionNumber": "http://purl.obolibrary.org/obo/MS_1003763",
+                        "termSourceRef": "MS"
+                    },
+                    {
+                        "term": "tandem time-of-flight instrument",
+                        "termAccessionNumber": "http://purl.obolibrary.org/obo/MS_1003946",
+                        "termSourceRef": "MS"
+                    },
+                    {
+                        "term": "time-of-flight instrument",
+                        "termAccessionNumber": "http://purl.obolibrary.org/obo/MS_1003951",
+                        "termSourceRef": "MS"
+                    },
+                    {
+                        "term": "ion trap orbitrap instrument",
+                        "termAccessionNumber": "http://purl.obolibrary.org/obo/MS_1003768",
+                        "termSourceRef": "MS"
+                    },
+                    {
+                        "term": "ion trap time-of-flight instrument",
+                        "termAccessionNumber": "http://purl.obolibrary.org/obo/MS_1003764",
+                        "termSourceRef": "MS"
+                    },
+                    {
+                        "term": "ion trap instrument",
+                        "termAccessionNumber": "http://purl.obolibrary.org/obo/MS_1003952",
+                        "termSourceRef": "MS"
+                    },
+                    {
+                        "term": "quadrupole ion trap orbitrap instrument",
+                        "termAccessionNumber": "http://purl.obolibrary.org/obo/MS_1003770",
+                        "termSourceRef": "MS"
+                    },
+                    {
+                        "term": "quadrupole time-of-flight instrument",
+                        "termAccessionNumber": "http://purl.obolibrary.org/obo/MS_1003763",
+                        "termSourceRef": "MS"
+                    },
+                    {
+                        "term": "quadrupole orbitrap instrument",
+                        "termAccessionNumber": "http://purl.obolibrary.org/obo/MS_1003769",
+                        "termSourceRef": "MS"
+                    },
+                    {
+                        "term": "quadrupole ion mobility time-of-flight instrument",
+                        "termAccessionNumber": "http://purl.obolibrary.org/obo/MS_1003767",
+                        "termSourceRef": "MS"
+                    },
+                    {
+                        "term": "quadrupole instrument",
+                        "termAccessionNumber": "http://purl.obolibrary.org/obo/MS_1003950",
+                        "termSourceRef": "MS"
+                    }
+                ],
+                "unexpectedTerms": []
+            },
+            {
                 "ruleName": "Parameter Value[Mass analyzer]-01",
                 "fieldName": "Parameter Value[Mass analyzer]",
                 "ontologies": [
@@ -6445,7 +6568,7 @@
                 },
                 "termEnforcementLevel": "required",
                 "unexpectedTermEnforcementLevel": "not-applicable",
-                "validationType": "ontology-term-in-selected-ontologies",
+                "validationType": "selected-ontology-term",
                 "constraints": {},
                 "defaultValue": null,
                 "allowedMissingOntologyTerms": [],
@@ -8563,7 +8686,7 @@
                 },
                 "termEnforcementLevel": "required",
                 "unexpectedTermEnforcementLevel": "not-applicable",
-                "validationType": "ontology-term-in-selected-ontologies",
+                "validationType": "selected-ontology-term",
                 "constraints": {},
                 "defaultValue": null,
                 "allowedMissingOntologyTerms": [],
@@ -8783,7 +8906,6 @@
                     "na",
                     "not applicable",
                     "not available",
-                    "none",
                     "null",
                     "nill",
                     "not specified",
@@ -9057,8 +9179,7 @@
                 "fieldName": "Characteristics[Sample type]",
                 "ontologies": [
                     "CHMO",
-                    "MSIO",
-                    "MTBLS"
+                    "MSIO"
                 ],
                 "allowedParentOntologyTerms": null,
                 "description": "",
@@ -9087,13 +9208,13 @@
                     },
                     {
                         "term": "pooled quality control sample",
-                        "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_001090",
-                        "termSourceRef": "MTBLS"
+                        "termAccessionNumber": "",
+                        "termSourceRef": ""
                     },
                     {
                         "term": "experimental blank",
-                        "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000218",
-                        "termSourceRef": "MTBLS"
+                        "termAccessionNumber": "",
+                        "termSourceRef": ""
                     },
                     {
                         "term": "solvent blank",
@@ -10167,7 +10288,9 @@
                     "fly",
                     "human",
                     "man",
-                    "sheep"
+                    "sheep",
+                    "cell",
+                    "donkey"
                 ]
             },
             {
@@ -10294,7 +10417,9 @@
                     "fly",
                     "human",
                     "man",
-                    "sheep"
+                    "sheep",
+                    "cell",
+                    "donkey"
                 ]
             }
         ],
@@ -10388,7 +10513,6 @@
                     "na",
                     "not applicable",
                     "not available",
-                    "none",
                     "null",
                     "nill",
                     "not specified",
@@ -10605,7 +10729,6 @@
                     "na",
                     "not applicable",
                     "not available",
-                    "none",
                     "null",
                     "nill",
                     "not specified",
@@ -12015,8 +12138,8 @@
                 "terms": [
                     {
                         "term": "disease",
-                        "termAccessionNumber": "http://www.ebi.ac.uk/efo/EFO_0000408",
-                        "termSourceRef": "EFO"
+                        "termAccessionNumber": "http://purl.obolibrary.org/obo/MONDO_0000001",
+                        "termSourceRef": "MONDO"
                     },
                     {
                         "term": "timepoint",
