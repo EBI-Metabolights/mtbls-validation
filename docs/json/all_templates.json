@@ -21272,7 +21272,7 @@
                 "facility": {
                     "name": "facility",
                     "label": "Facility",
-                    "description": "",
+                    "description": "Core facility or service provider.",
                     "isaFileType": "investigation",
                     "controlListKey": "Organization"
                 },
@@ -22258,39 +22258,9 @@
                     }
                 },
                 "activeStudyDesignDescriptorCategories": {
-                    "organism": {
-                        "visible": true,
-                        "order": 1,
-                        "min": 0
-                    },
-                    "organism-part": {
-                        "visible": true,
-                        "order": 2,
-                        "min": 0
-                    },
-                    "cell-type": {
-                        "visible": true,
-                        "order": 3,
-                        "min": 0
-                    },
                     "disease": {
                         "visible": true,
                         "order": 4,
-                        "min": 0
-                    },
-                    "instrument": {
-                        "visible": true,
-                        "order": 5,
-                        "min": 0
-                    },
-                    "omics-type": {
-                        "visible": true,
-                        "order": 6,
-                        "min": 0
-                    },
-                    "measurement-type": {
-                        "visible": true,
-                        "order": 7,
                         "min": 0
                     },
                     "software": {
@@ -22881,39 +22851,9 @@
                     }
                 },
                 "activeStudyDesignDescriptorCategories": {
-                    "organism": {
-                        "visible": true,
-                        "order": 1,
-                        "min": 0
-                    },
-                    "organism-part": {
-                        "visible": true,
-                        "order": 2,
-                        "min": 0
-                    },
-                    "cell-type": {
-                        "visible": true,
-                        "order": 3,
-                        "min": 0
-                    },
                     "disease": {
                         "visible": true,
                         "order": 4,
-                        "min": 0
-                    },
-                    "instrument": {
-                        "visible": true,
-                        "order": 5,
-                        "min": 0
-                    },
-                    "omics-type": {
-                        "visible": true,
-                        "order": 6,
-                        "min": 0
-                    },
-                    "measurement-type": {
-                        "visible": true,
-                        "order": 7,
                         "min": 0
                     },
                     "software": {
