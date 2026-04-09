@@ -13,7 +13,7 @@
 | Recommended Ontologies [Ordered] | CHEBI, EFO, CHMO |
 | Allowed Placeholders | [MTBLS, http://www.ebi.ac.uk/metabolights/ontology/placeholder] |
 | Allowed Other Sources | [MTBLS, http://www.ebi.ac.uk/metabolights/ontology/MTBLS_], [wikidata, https://www.wikidata.org/wiki/], [ILX, http://uri.interlex.org/base/ilx_] |
-| Unexpected Terms | unknown, undefined, n/a, na, not applicable, not available, none, null, nill, not specified, not provided, \-, \-\-, \-\-\-, \_, \. |
+| Unexpected Terms | unknown, undefined, n/a, na, not applicable, not available, null, nill, not specified, not provided, \-, \-\-, \-\-\-, \_, \. |
 | Unexpected Term Enforcement Level | required |
 
 ## Unit

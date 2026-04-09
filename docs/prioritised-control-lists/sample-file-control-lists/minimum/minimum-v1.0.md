@@ -13,7 +13,7 @@
 | Recommended Ontologies [Ordered] | OBI, EFO, CHMO, NCBITaxon, NCIT, MS, BTO, CHEBI, UO, MESH, BAO, OMIT, GO, ENVO, MSIO, PO, MONDO, UBERON, SNOMED, CL, CLO, MI, EDAM, HP, MP |
 | Allowed Placeholders | [MTBLS, http://www.ebi.ac.uk/metabolights/ontology/placeholder], [, ] |
 | Allowed Other Sources | [MTBLS, http://www.ebi.ac.uk/metabolights/ontology/MTBLS_], [wikidata, https://www.wikidata.org/wiki/], [ILX, http://uri.interlex.org/base/ilx_] |
-| Unexpected Terms | unknown, undefined, n/a, na, not applicable, not available, none, null, nill, not specified, not provided, \-, \-\-, \-\-\-, \_, \. |
+| Unexpected Terms | unknown, undefined, n/a, na, not applicable, not available, null, nill, not specified, not provided, \-, \-\-, \-\-\-, \_, \. |
 | Unexpected Term Enforcement Level | required |
 
 ## Factor Value \(Common\)
