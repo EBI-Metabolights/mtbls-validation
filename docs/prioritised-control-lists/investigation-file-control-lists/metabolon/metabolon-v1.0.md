@@ -13,7 +13,7 @@
 | Recommended Ontologies [Ordered] | OBI, EFO, CHMO, NCIT, NCBITaxon, MS, BTO, CHEBI, UO, MESH, BAO, OMIT, GO, ENVO, MSIO, PO, MONDO, UBERON, SNOMED, CL, CLO, MI, EDAM, HP, MP |
 | Allowed Placeholders | [MTBLS, http://www.ebi.ac.uk/metabolights/ontology/placeholder] |
 | Allowed Other Sources | [MTBLS, http://www.ebi.ac.uk/metabolights/ontology/MTBLS_], [wikidata, https://www.wikidata.org/wiki/], [ILX, http://uri.interlex.org/base/ilx_] |
-| Unexpected Terms | unknown, undefined, n/a, na, not applicable, not available, none, null, nill, not specified, not provided, \-, \-\-, \-\-\-, \_, \. |
+| Unexpected Terms | unknown, undefined, n/a, na, not applicable, not available, null, nill, not specified, not provided, \-, \-\-, \-\-\-, \_, \. |
 | Unexpected Term Enforcement Level | required |
 
 ## Unit
@@ -298,7 +298,7 @@
 
 | # |Term  | Term Source  | Term Accession |
 |---|------|--------------|----------------|
-| 1 | disease | EFO | http://www\.ebi\.ac\.uk/efo/EFO\_0000408 |
+| 1 | disease | MONDO | http://purl\.obolibrary\.org/obo/MONDO\_0000001 |
 | 2 | timepoint | EFO | http://www\.ebi\.ac\.uk/efo/EFO\_0000724 |
 | 3 | treatment | EFO | http://www\.ebi\.ac\.uk/efo/EFO\_0000727 |
 | 4 | genotype | EFO | http://www\.ebi\.ac\.uk/efo/EFO\_0000513 |

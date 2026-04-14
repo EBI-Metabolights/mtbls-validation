@@ -13,7 +13,7 @@ Download file template as [zip file](../../../template-files/maf-file/MS/m_templ
 | fragmentation | single column |  |  |  |
 | modifications | single column |  |  |  |
 | charge | single column |  |  |  |
-| retention_time | single column | *Required* |  |  |
+| retention_time | single column |  |  |  |
 | taxid | single column |  |  |  |
 | species | single column |  |  |  |
 | database | single column |  |  |  |

@@ -29,8 +29,8 @@ test_rule_i_100_360_008_14_no_violation_01 if {
 			"path": "/investigation/studies/0/studyContacts/people/0/roles/0",
 			"value": {
 				"term": "disease",
-				"termAccessionNumber": "http://www.ebi.ac.uk/efo/EFO_0000408",
-				"termSourceRef": "EFO",
+				"termAccessionNumber": "http://purl.obolibrary.org/obo/MONDO_0000001",
+				"termSourceRef": "MONDO",
 			},
 		}],
 	)
