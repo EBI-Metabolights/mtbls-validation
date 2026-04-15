@@ -6369,48 +6369,6 @@
                 "unexpectedTerms": []
             }
         ],
-        "Parameter Value[Derivatization]": [
-            {
-                "ruleName": "Parameter Value[Derivatization]-01",
-                "fieldName": "Parameter Value[Derivatization]",
-                "ontologies": [
-                    "MTBLS"
-                ],
-                "allowedParentOntologyTerms": null,
-                "description": "",
-                "selectionCriteria": {
-                    "isaFileType": "assay",
-                    "studyCreatedAtOrAfter": null,
-                    "studyCreatedBefore": null,
-                    "studyCategoryFilter": null,
-                    "templateVersionFilter": null,
-                    "isaFileTemplateNameFilter": [],
-                    "linkedFieldAndValueFilter": null
-                },
-                "termEnforcementLevel": "not-applicable",
-                "unexpectedTermEnforcementLevel": "not-applicable",
-                "validationType": "check-only-constraints",
-                "constraints": {
-                    "pattern": {
-                        "constraint": "^.*$",
-                        "errorMessage": "Define any value",
-                        "enforcementLevel": "recommended"
-                    }
-                },
-                "defaultValue": null,
-                "allowedMissingOntologyTerms": [
-                    {
-                        "term": "none",
-                        "termAccessionNumber": "",
-                        "termSourceRef": ""
-                    }
-                ],
-                "allowedOtherSources": [],
-                "allowedPlaceholders": [],
-                "terms": [],
-                "unexpectedTerms": []
-            }
-        ],
         "Parameter Value[Column type 2]": [
             {
                 "ruleName": "Parameter Value[Column type 2]-01",
@@ -12015,8 +11973,8 @@
                 "terms": [
                     {
                         "term": "disease",
-                        "termAccessionNumber": "http://www.ebi.ac.uk/efo/EFO_0000408",
-                        "termSourceRef": "EFO"
+                        "termAccessionNumber": "http://purl.obolibrary.org/obo/MONDO_0000001",
+                        "termSourceRef": "MONDO"
                     },
                     {
                         "term": "timepoint",

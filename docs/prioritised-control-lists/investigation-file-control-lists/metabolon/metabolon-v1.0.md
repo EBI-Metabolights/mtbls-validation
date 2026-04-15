@@ -298,7 +298,7 @@
 
 | # |Term  | Term Source  | Term Accession |
 |---|------|--------------|----------------|
-| 1 | disease | EFO | http://www\.ebi\.ac\.uk/efo/EFO\_0000408 |
+| 1 | disease | MONDO | http://purl\.obolibrary\.org/obo/MONDO\_0000001 |
 | 2 | timepoint | EFO | http://www\.ebi\.ac\.uk/efo/EFO\_0000724 |
 | 3 | treatment | EFO | http://www\.ebi\.ac\.uk/efo/EFO\_0000727 |
 | 4 | genotype | EFO | http://www\.ebi\.ac\.uk/efo/EFO\_0000513 |

@@ -7,7 +7,7 @@ Download file template as [zip file](../../../template-files/assay-file/MALDI-MS
 | Sample Name | single column | *Required*<br/>MinLength: 1<br/><br/>[Controls](../../../prioritised-control-lists/assay-file-control-lists/MALDI-MS/MALDI-MS-v1.0.md#sample-name){:target="_blank"} |  |  |
 | Protocol REF | single column | *Required*<br/>Default: Extraction |  |  |
 | Parameter Value[Post Extraction] | single column |  |  |  |
-| Parameter Value[Derivatization] | single column | [Controls](../../../prioritised-control-lists/assay-file-control-lists/MALDI-MS/MALDI-MS-v1.0.md#parameter-valuederivatization){:target="_blank"} |  |  |
+| Parameter Value[Derivatization] | single column |  |  |  |
 | Extract Name | single column |  |  |  |
 | Labeled Extract Name | single column |  |  |  |
 | Label | ontology column |  |  |  |
