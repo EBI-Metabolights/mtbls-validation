@@ -13,7 +13,7 @@
 | Recommended Ontologies [Ordered] | OBI, EFO, CHMO, NCBITaxon, NCIT, MS, BTO, CHEBI, UO, MESH, BAO, OMIT, GO, ENVO, MSIO, PO, MONDO, UBERON, SNOMED, CL, CLO, MI, EDAM, HP, MP |
 | Allowed Placeholders | [MTBLS, http://www.ebi.ac.uk/metabolights/ontology/placeholder], [, ] |
 | Allowed Other Sources | [MTBLS, http://www.ebi.ac.uk/metabolights/ontology/MTBLS_], [wikidata, https://www.wikidata.org/wiki/], [ILX, http://uri.interlex.org/base/ilx_] |
-| Unexpected Terms | unknown, undefined, n/a, na, not applicable, not available, none, null, nill, not specified, not provided, \-, \-\-, \-\-\-, \_, \. |
+| Unexpected Terms | unknown, undefined, n/a, na, not applicable, not available, null, nill, not specified, not provided, \-, \-\-, \-\-\-, \_, \. |
 | Unexpected Term Enforcement Level | required |
 
 ## Factor Value \(Common\)
@@ -102,7 +102,7 @@
 | Validation Type | ontology-term-in-selected-ontologies |
 | Ontologies [Ordered] | NCBITaxon, ENVO, CHEBI |
 | Allowed Other Sources | [wikidata, https://www.wikidata.org/wiki/], [ILX, http://uri.interlex.org/base/ilx_] |
-| Unexpected Terms | cat, chicken, plant, sample, dog, mouse, horse, flower, fish, leave, root, mice, steam, bacteria, value, food, matrix, mus, rat, blood, urine, plasma, hair, fur, skin, saliva, fly, human, man, sheep |
+| Unexpected Terms | cat, chicken, plant, sample, dog, mouse, horse, flower, fish, leave, root, mice, steam, bacteria, value, food, matrix, mus, rat, blood, urine, plasma, hair, fur, skin, saliva, fly, human, man, sheep, cell, donkey |
 | Unexpected Term Enforcement Level | required |
 | Ontology Term Enforcement Level | required |
 
@@ -158,7 +158,7 @@
 | Applicable Template Names | All |
 | Applicable Template Versions | All |
 | Validation Type | ontology-term-in-selected-ontologies |
-| Ontologies [Ordered] | CHMO, MSIO, MTBLS |
+| Ontologies [Ordered] | CHMO, MSIO |
 | Ontology Term Enforcement Level | recommended |
 
 ### Recommended Terms
@@ -166,8 +166,8 @@
 | # |Term  | Term Source  | Term Accession |
 |---|------|--------------|----------------|
 | 1 | experimental sample | CHMO | http://purl\.obolibrary\.org/obo/CHMO\_0002746 |
-| 2 | pooled quality control sample | MTBLS | http://www\.ebi\.ac\.uk/metabolights/ontology/MTBLS\_001090 |
-| 3 | experimental blank | MTBLS | http://www\.ebi\.ac\.uk/metabolights/ontology/MTBLS\_000218 |
+| 2 | pooled quality control sample |  |  |
+| 3 | experimental blank |  |  |
 | 4 | solvent blank | MSIO | http://purl\.obolibrary\.org/obo/MSIO\_0000026 |
 | 5 | sample preparation blank | MSIO | http://purl\.obolibrary\.org/obo/MSIO\_0000025 |
 | 6 | reference compound mix | MSIO | http://purl\.obolibrary\.org/obo/MSIO\_0000024 |

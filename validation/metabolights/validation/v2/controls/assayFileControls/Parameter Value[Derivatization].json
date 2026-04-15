@@ -1,0 +1,44 @@
+{
+    "Parameter Value[Derivatization]": [
+        {
+            "ruleName": "Parameter Value[Derivatization]-01",
+            "fieldName": "Parameter Value[Derivatization]",
+            "ontologies": [
+                "MTBLS"
+            ],
+            "allowedParentOntologyTerms": null,
+            "description": "",
+            "selectionCriteria": {
+                "isaFileType": "assay",
+                "studyCreatedAtOrAfter": null,
+                "studyCreatedBefore": null,
+                "studyCategoryFilter": null,
+                "templateVersionFilter": null,
+                "isaFileTemplateNameFilter": [],
+                "linkedFieldAndValueFilter": null
+            },
+            "termEnforcementLevel": "not-applicable",
+            "unexpectedTermEnforcementLevel": "not-applicable",
+            "validationType": "check-only-constraints",
+            "constraints": {
+                "pattern": {
+                    "constraint": "^.*$",
+                    "errorMessage": "Define any value",
+                    "enforcementLevel": "recommended"
+                }
+            },
+            "defaultValue": null,
+            "allowedMissingOntologyTerms": [
+                {
+                    "term": "none",
+                    "termAccessionNumber": "",
+                    "termSourceRef": ""
+                }
+            ],
+            "allowedOtherSources": [],
+            "allowedPlaceholders": [],
+            "terms": [],
+            "unexpectedTerms": []
+        }
+    ]
+}

@@ -7,7 +7,7 @@ Download file template as [zip file](../../../template-files/assay-file/FIA-MS/a
 | Sample Name | single column | *Required*<br/>MinLength: 1<br/><br/>[Controls](../../../prioritised-control-lists/assay-file-control-lists/FIA-MS/FIA-MS-v1.0.md#sample-name){:target="_blank"} |  |  |
 | Protocol REF | single column | *Required*<br/>Default: Extraction |  |  |
 | Parameter Value[Post Extraction] | single column |  |  |  |
-| Parameter Value[Derivatization] | single column |  |  |  |
+| Parameter Value[Derivatization] | single column | [Controls](../../../prioritised-control-lists/assay-file-control-lists/FIA-MS/FIA-MS-v1.0.md#parameter-valuederivatization){:target="_blank"} |  |  |
 | Extract Name | single column |  |  |  |
 | Protocol REF | single column | *Required*<br/>Default: Flow Injection Analysis |  |  |
 | Parameter Value[FIA Instrument] | ontology column | *Required*<br/>MinLength: 5 |  |  |

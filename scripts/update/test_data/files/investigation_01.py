@@ -110,8 +110,8 @@ investigation_file = inv.Investigation(
                         name="Disease",
                         type=inv.OntologyAnnotation(
                             term="disease",
-                            term_source_ref="EFO",
-                            term_accession_number="http://www.ebi.ac.uk/efo/EFO_0000408",
+                            term_source_ref="MONDO",
+                            term_accession_number="http://purl.obolibrary.org/obo/MONDO_0000001",
                         ),
                     ),
                     inv.Factor(name="Dose", type=inv.OntologyAnnotation(term="dose")),

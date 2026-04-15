@@ -84,6 +84,7 @@ rule_a_100_100_001_04 contains result if {
 	values := {sprintf("[column: %v, header: '%v']", [x, y]) |
 		some header in assay_file.table.headers
 		not header.columnHeader in default_headers
+		not startswith(header.columnHeader, "Factor Value[")
 		not startswith(header.columnHeader, "Parameter Value[")
 		not startswith(header.columnHeader, "Protocol REF")
 		not startswith(header.columnHeader, "Comment[")

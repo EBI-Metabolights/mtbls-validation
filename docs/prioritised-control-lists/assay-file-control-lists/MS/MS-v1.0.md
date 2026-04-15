@@ -13,7 +13,7 @@
 | Recommended Ontologies [Ordered] | OBI, EFO, CHMO, NCIT, NCBITaxon, MS, BTO, CHEBI, UO, MESH, BAO, OMIT, GO, ENVO, MSIO, PO, MONDO, UBERON, SNOMED, CL, CLO, MI, EDAM, HP, MP |
 | Allowed Placeholders | [MTBLS, http://www.ebi.ac.uk/metabolights/ontology/placeholder], [, ] |
 | Allowed Other Sources | [MTBLS, http://www.ebi.ac.uk/metabolights/ontology/MTBLS_], [wikidata, https://www.wikidata.org/wiki/], [ILX, http://uri.interlex.org/base/ilx_] |
-| Unexpected Terms | unknown, undefined, n/a, na, not applicable, not available, none, null, nill, not specified, not provided, \-, \-\-, \-\-\- |
+| Unexpected Terms | unknown, undefined, n/a, na, not applicable, not available, null, nill, not specified, not provided, \-, \-\-, \-\-\- |
 | Unexpected Term Enforcement Level | required |
 
 ## Unit
@@ -62,6 +62,22 @@
 | Pattern Message | Value must be at least 3 characters and contain only alphanumeric characters, space, \- and \_ characters |
 | Pattern Enforcement Level | recommended |
 
+## Parameter Value\[Derivatization\]
+
+| Attribute | Value |
+|---|------|
+| Rule Name | Parameter Value\[Derivatization\]\-01 |
+| Rule Description |  |
+| Applicable Study Categories | All |
+| Applicable Template Names | All |
+| Applicable Template Versions | All |
+| Validation Type | check-only-constraints |
+| Pattern | <code>^.*$</code> |
+| Pattern Message | Define any value |
+| Pattern Enforcement Level | recommended |
+| Ontologies [Ordered] | MTBLS |
+| Allowed Missing Terms | [none, , ] |
+
 ## Parameter Value\[Scan polarity\]
 
 | Attribute | Value |
@@ -88,32 +104,35 @@
 
 | Attribute | Value |
 |---|------|
-| Rule Name | Parameter Value\[Mass analyzer\]\-01 |
+| Rule Name | Parameter Value\[Mass analyzer\]\-ms\-mhd\-enabled\-01 |
 | Rule Description |  |
-| Applicable Study Categories | All |
+| Applicable Study Categories | ms\-mhd\-enabled |
 | Applicable Template Names | All |
 | Applicable Template Versions | All |
-| Validation Type | any-ontology-term |
-| Recommended Ontologies [Ordered] | MS |
+| Validation Type | selected-ontology-term |
+| Ontologies [Ordered] | MS |
+| Allowed Parent Ontology Terms | [instrument class, MS, http://purl.obolibrary.org/obo/MS_1003761] |
 | Allowed Placeholders | [MTBLS, http://www.ebi.ac.uk/metabolights/ontology/placeholder] |
 | Allowed Other Sources | [MTBLS, http://www.ebi.ac.uk/metabolights/ontology/MTBLS_], [wikidata, https://www.wikidata.org/wiki/], [ILX, http://uri.interlex.org/base/ilx_] |
-| Ontology Term Enforcement Level | recommended |
+| Ontology Term Enforcement Level | required |
 
-### Recommended Terms
+### Terms
 
 | # |Term  | Term Source  | Term Accession |
 |---|------|--------------|----------------|
-| 1 | orbitrap | MS | http://purl\.obolibrary\.org/obo/MS\_1000484 |
-| 2 | triple quadrupole | MTBLS | http://www\.ebi\.ac\.uk/metabolights/ontology/MTBLS\_000698 |
-| 3 | quadrupole time\-of\-flight | MTBLS | http://www\.ebi\.ac\.uk/metabolights/ontology/MTBLS\_000699 |
-| 4 | time\-of\-flight | MS | http://purl\.obolibrary\.org/obo/MS\_1000084 |
-| 5 | hybrid triple quadrupole\-linear ion trap | MTBLS | http://www\.ebi\.ac\.uk/metabolights/ontology/MTBLS\_000695 |
-| 6 | ion cyclotron resonance cell | CHMO | http://purl\.obolibrary\.org/obo/CHMO\_0000964 |
-| 7 | ion trap | MS | http://purl\.obolibrary\.org/obo/MS\_1000264 |
-| 8 | ion trap time\-of\-flight | MTBLS | http://www\.ebi\.ac\.uk/metabolights/ontology/MTBLS\_000700 |
-| 9 | linear quadrupole ion trap mass\-to\-charge analyser | CHMO | http://purl\.obolibrary\.org/obo/CHMO\_0000969 |
-| 10 | quadrupole | MS | http://purl\.obolibrary\.org/obo/MS\_1000081 |
-| 11 | quadrupole ion trap | MS | http://purl\.obolibrary\.org/obo/MS\_1000082 |
+| 1 | orbitrap instrument | MS | http://purl\.obolibrary\.org/obo/MS\_1003953 |
+| 2 | triple quadrupole instrument | MS | http://purl\.obolibrary\.org/obo/MS\_1003762 |
+| 3 | quadrupole time\-of\-flight instrument | MS | http://purl\.obolibrary\.org/obo/MS\_1003763 |
+| 4 | tandem time\-of\-flight instrument | MS | http://purl\.obolibrary\.org/obo/MS\_1003946 |
+| 5 | time\-of\-flight instrument | MS | http://purl\.obolibrary\.org/obo/MS\_1003951 |
+| 6 | ion trap orbitrap instrument | MS | http://purl\.obolibrary\.org/obo/MS\_1003768 |
+| 7 | ion trap time\-of\-flight instrument | MS | http://purl\.obolibrary\.org/obo/MS\_1003764 |
+| 8 | ion trap instrument | MS | http://purl\.obolibrary\.org/obo/MS\_1003952 |
+| 9 | quadrupole ion trap orbitrap instrument | MS | http://purl\.obolibrary\.org/obo/MS\_1003770 |
+| 10 | quadrupole time\-of\-flight instrument | MS | http://purl\.obolibrary\.org/obo/MS\_1003763 |
+| 11 | quadrupole orbitrap instrument | MS | http://purl\.obolibrary\.org/obo/MS\_1003769 |
+| 12 | quadrupole ion mobility time\-of\-flight instrument | MS | http://purl\.obolibrary\.org/obo/MS\_1003767 |
+| 13 | quadrupole instrument | MS | http://purl\.obolibrary\.org/obo/MS\_1003950 |
 
 ## MS Assay Name
 
