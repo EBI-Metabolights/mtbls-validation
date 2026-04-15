@@ -69,7 +69,7 @@
                         "termAccessionNumber": "",
                         "termSourceRef": ""
                     },
-                    "description": "Assay type.",
+                    "description": "Omics type.",
                     "title": "Omics Type"
                 },
                 "assayDescriptors": {
@@ -1695,6 +1695,12 @@
                     "default": "",
                     "description": "Dataset accession.",
                     "title": "Accession",
+                    "type": "string"
+                },
+                "url": {
+                    "default": "",
+                    "description": "Dataset URL.",
+                    "title": "Url",
                     "type": "string"
                 }
             },
