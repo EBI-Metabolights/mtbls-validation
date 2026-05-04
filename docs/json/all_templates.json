@@ -19124,7 +19124,7 @@
         "APO": {
             "sourceName": "APO",
             "sourceFile": "http://purl.obolibrary.org/obo/apo.owl",
-            "sourceVersion": "2026-03-14",
+            "sourceVersion": "2026-04-20",
             "sourceDescription": "Ascomycete Phenotype Ontology (APO)",
             "sourceDetails": "A structured controlled vocabulary for the phenotypes of Ascomycete fungi."
         },
@@ -19530,7 +19530,7 @@
         "EFO": {
             "sourceName": "EFO",
             "sourceFile": "http://www.ebi.ac.uk/efo/efo.owl",
-            "sourceVersion": "3.88.0",
+            "sourceVersion": "3.89.0",
             "sourceDescription": "Experimental Factor Ontology",
             "sourceDetails": "The Experimental Factor Ontology (EFO) provides a systematic description of many experimental variables available in EBI databases, and for projects such as the NHGRI-EBI GWAS catalog. It combines parts of several biological ontologies, such as UBERON anatomy, ChEBI chemical compounds, Cell Ontology and the Monarch Disease Ontology (MONDO). The scope of EFO is to support the annotation, analysis and visualization of data handled by many groups at the EBI and as the core ontology for Open Targets."
         },
@@ -19677,7 +19677,7 @@
         "FMA": {
             "sourceName": "FMA",
             "sourceFile": "http://purl.org/sig/ont/fma.owl",
-            "sourceVersion": "5.0.0",
+            "sourceVersion": "5.1.0",
             "sourceDescription": "Foundational Model of Anatomy Ontology (subset)",
             "sourceDetails": "This is currently a slimmed down version of FMA"
         },
@@ -20090,7 +20090,7 @@
         "MP": {
             "sourceName": "MP",
             "sourceFile": "http://purl.obolibrary.org/obo/mp/mp-international.owl",
-            "sourceVersion": "2026-03-24",
+            "sourceVersion": "2026-04-22",
             "sourceDescription": "The Mammalian Phenotype Ontology",
             "sourceDetails": "The Mammalian Phenotype Ontology is being developed by Cynthia L. Smith, Susan M. Bello, Anna V. Anagnostopoulos, Carroll W. Goldsmith and Janan T. Eppig, as part of the Mouse Genome Database (MGD) Project, Mouse Genome Informatics (MGI), The Jackson Laboratory, Bar Harbor, ME. This file contains pre-coordinated phenotype terms, definitions and synonyms that can be used to describe mammalian phenotypes. The ontology is represented as a directed acyclic graph (DAG). It organizes phenotype terms into major biological system headers such as nervous system and respiratory system.  This ontology is currently under development. Weekly updates are available at the Mouse Genome Informatics (MGI) ftp site (ftp://ftp.informatics.jax.org/pub/reports/index.html#pheno) as well as the OBO Foundry site (http://obofoundry.org/). Japanese labels of MP were created by the MP Japanese Translation Project (https://github.com/dbcls/MP_Japanese). Questions, comments and suggestions are welcome, and should be directed to pheno@jax.org, Susan.Bello@jax.org or to GitHub tracker (https://github.com/mgijax/mammalian-phenotype-ontology/issues) MGD is funded by NIH/NHGRI grant HG000330."
         },
@@ -20383,8 +20383,8 @@
         },
         "ORDO": {
             "sourceName": "ORDO",
-            "sourceFile": "http://www.orphadata.org/data/ORDO/ordo_orphanet.owl",
-            "sourceVersion": "4.7",
+            "sourceFile": "https://www.orphadata.com/data/ontologies/ordo/last_version/ordo_orphanet.owl",
+            "sourceVersion": "4.8",
             "sourceDescription": "Orphanet Rare Disease Ontology",
             "sourceDetails": "The Orphanet Rare Disease ontology (ORDO) is jointly developed by Orphanet and the EBI to provide a structured vocabulary for rare diseases capturing relationships between diseases, genes and other relevant features which will form a useful resource for the computational analysis of rare diseases. It derived from the Orphanet database (www.orpha.net ) , a multilingual database dedicated to rare diseases populated from literature and validated by international experts. It integrates a nosology (classification of rare diseases), relationships (gene-disease relations, epiemological data) and connections with other terminologies (MeSH, UMLS, MedDRA),databases (OMIM, UniProtKB, HGNC, ensembl, Reactome, IUPHAR, Geantlas) or classifications (ICD10)."
         },
@@ -20524,7 +20524,7 @@
         "PREFER": {
             "sourceName": "PREFER",
             "sourceFile": "https://github.com/Multiomics-Analytics-Group/prefer_ontology/releases/latest/download/prefer.owl",
-            "sourceVersion": "2026-03-10",
+            "sourceVersion": "2026-04-20",
             "sourceDescription": "PREFER Ontology",
             "sourceDetails": "An ontology for PREcision FERmentation."
         },
@@ -20755,7 +20755,7 @@
         "STATO": {
             "sourceName": "STATO",
             "sourceFile": "http://purl.obolibrary.org/obo/stato.owl",
-            "sourceVersion": "2025-02-23",
+            "sourceVersion": "2026-04-20",
             "sourceDescription": "STATO: the statistical methods ontology",
             "sourceDetails": "STATO is the statistical methods ontology. It contains concepts and properties related to statistical methods, probability distributions and other concepts related to statistical analysis, including relationships to study designs and plots."
         },
@@ -20888,7 +20888,7 @@
         "VBO": {
             "sourceName": "VBO",
             "sourceFile": "http://purl.obolibrary.org/obo/vbo.owl",
-            "sourceVersion": "2025-11-07",
+            "sourceVersion": "2026-04-15",
             "sourceDescription": "Vertebrate Breed Ontology",
             "sourceDetails": "Vertebrate Breed Ontology is an ontology created to serve as a single computable resource for vertebrate breed names."
         },
@@ -20909,7 +20909,7 @@
         "VT": {
             "sourceName": "VT",
             "sourceFile": "http://purl.obolibrary.org/obo/vt.owl",
-            "sourceVersion": "2026-04-01",
+            "sourceVersion": "2026-04-22",
             "sourceDescription": "The Vertebrate Trait Ontology",
             "sourceDetails": "The Vertebrate Trait Ontology is a controlled vocabulary for the description of traits (measurable or observable characteristics) pertaining to the morphology, physiology, or development of vertebrate organisms."
         },
@@ -20930,7 +20930,7 @@
         "WBPhenotype": {
             "sourceName": "WBPhenotype",
             "sourceFile": "http://purl.obolibrary.org/obo/wbphenotype.owl",
-            "sourceVersion": "2025-08-12",
+            "sourceVersion": "2026-04-15",
             "sourceDescription": "C elegans Phenotype Ontology",
             "sourceDetails": "Ontology about C. elegans and other nematode phenotypes"
         },
@@ -20944,7 +20944,7 @@
         "WBls": {
             "sourceName": "WBls",
             "sourceFile": "http://purl.obolibrary.org/obo/wbls.owl",
-            "sourceVersion": "2025-08-12",
+            "sourceVersion": "2026-04-16",
             "sourceDescription": "C. elegans Development Ontology",
             "sourceDetails": "Ontology about the development and life stages of the C. elegans"
         },
@@ -21017,6 +21017,13 @@
             "sourceVersion": "2022",
             "sourceDescription": "Contributor Roles Taxonomy",
             "sourceDetails": "CRediT (Contributor Roles Taxonomy) is high-level taxonomy, including 14 roles, that can be used to represent the roles typically played by contributors to scientific scholarly output. The roles describe each contributor’s specific contribution to the scholarly output."
+        },
+        "gmho": {
+            "sourceName": "gmho",
+            "sourceFile": "https://galenos.org.uk/ontologies/gmho.owl",
+            "sourceVersion": "",
+            "sourceDescription": "GALENOS Mental Health Ontology",
+            "sourceDetails": "The GALENOS Mental Health Ontology (GMHO) is being developed to represent the full range of concepts relevant to mental health. It forms a core component of the Global Alliance for Living Evidence on aNxiety, depressiOn and pSychosis (GALENOS) project, which aims to build a living evidence base for anxiety, depression, and psychosis.\nThe GMHO is designed to structure and organise evidence drawn from multiple living systematic reviews, supporting the creation of a structured data repository that enables clearer synthesis, integration, and retrieval of research findings. Its upper-level framework is intentionally designed for reuse, providing a general foundation for organising evidence across the broader mental health domain."
         },
         "gscmixs": {
             "sourceName": "gscmixs",
