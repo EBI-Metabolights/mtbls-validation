@@ -50,6 +50,9 @@ def create_index_md_file(template_settings: models.TemplateSettings):
             "Download the latest [MetaboLights Validation OPA bundle](bundle.tar.gz)\n\n"
         )
         f.write(
+            "Download the latest [MetaboLights Validation OPA WASM](mtbls-validation.wasm)\n\n"
+        )
+        f.write(
             "Download the latest [Validation rules as JSON](json/all_rules.json)\n\n"
         )
         f.write("Download the latest [Controls as JSON](json/all_controls.json)\n\n")
