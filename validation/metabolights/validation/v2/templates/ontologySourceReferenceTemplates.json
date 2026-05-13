@@ -80,7 +80,7 @@
         "BAO": {
             "sourceName": "BAO",
             "sourceFile": "http://www.bioassayontology.org/bao/",
-            "sourceVersion": "2.8.18a",
+            "sourceVersion": "2.8.19",
             "sourceDescription": "BioAssay Ontology",
             "sourceDetails": "The BioAssay Ontology (BAO) describes biological screening assays and their results including high-throughput screening (HTS) data for the purpose of categorizing assays and data analysis. BAO is an extensible, knowledge-based, highly expressive (currently SHOIQ(D)) description of biological assays making use of descriptive logic based features of the Web Ontology Language (OWL). BAO currently has over 700 classes and also makes use of several other ontologies. It describes several concepts related to biological screening, including Perturbagen, Format, Meta Target, Design, Detection Technology, and Endpoint. Perturbagens are perturbing agents that are screened in an assay; they are mostly small molecules. Assay Meta Target describes what is known about the biological system and / or its components interrogated in the assay (and influenced by the Perturbagen). Meta target can be directly described as a molecular entity (e.g. a purified protein or a protein complex), or indirectly by a biological process or event (e.g. phosphorylation). Format describes the biological or chemical features common to each test condition in the assay and includes biochemical, cell-based, organism-based, and variations thereof. The assay Design describes the assay methodology and implementation of how the perturbation of the biological system is translated into a detectable signal. Detection Technology relates to the physical method and technical details to detect and record a signal. Endpoints are the final HTS results as they are usually published (such as IC50, percent inhibition, etc). BAO has been designed to accommodate multiplexed assays. All main BAO components include multiple levels of sub-categories and specification classes, which are linked via object property relationships forming an expressive knowledge-based representation."
         },
@@ -199,7 +199,7 @@
         "CHEBI": {
             "sourceName": "CHEBI",
             "sourceFile": "http://purl.obolibrary.org/obo/chebi.owl",
-            "sourceVersion": "251",
+            "sourceVersion": "252",
             "sourceDescription": "Chemical Entities of Biological Interest",
             "sourceDetails": "A structured classification of molecular entities of biological interest focusing on 'small' chemical compounds."
         },
@@ -283,7 +283,7 @@
         "COB": {
             "sourceName": "COB",
             "sourceFile": "http://purl.obolibrary.org/obo/cob.owl",
-            "sourceVersion": "2025-12-12",
+            "sourceVersion": "2025-12-15",
             "sourceDescription": "Core Ontology for Biology and Biomedicine",
             "sourceDetails": "COB brings together key terms from a wide range of OBO projects to improve interoperability."
         },
@@ -395,7 +395,7 @@
         "DOID": {
             "sourceName": "DOID",
             "sourceFile": "https://purl.obolibrary.org/obo/doid/translations/doid-international.owl",
-            "sourceVersion": "2026-03-31",
+            "sourceVersion": "2026-04-30",
             "sourceDescription": "Human Disease Ontology",
             "sourceDetails": "The Disease Ontology has been developed as a standardized ontology for human disease with the purpose of providing the biomedical community with consistent, reusable and sustainable descriptions of human disease terms, phenotype characteristics and related medical vocabulary disease concepts."
         },
@@ -528,7 +528,7 @@
         "EVORAO": {
             "sourceName": "EVORAO",
             "sourceFile": "https://raw.githubusercontent.com/EVORA-project/evora-ontology/refs/heads/main/models/owl/evora_ontology.owl.ttl",
-            "sourceVersion": "",
+            "sourceVersion": "1.1.68",
             "sourceDescription": "",
             "sourceDetails": ""
         },
@@ -587,6 +587,13 @@
             "sourceVersion": "2026-04-02",
             "sourceDescription": "Drosophila development",
             "sourceDetails": "A structured controlled vocabulary of the development of Drosophila melanogaster."
+        },
+        "FIDEO": {
+            "sourceName": "FIDEO",
+            "sourceFile": "http://purl.obolibrary.org/obo/fideo.owl",
+            "sourceVersion": "2023-12-18",
+            "sourceDescription": "Food Interactions with Drugs Evidence Ontology",
+            "sourceDetails": "Food-Drug interactions automatically extracted from scientific literature"
         },
         "FIX": {
             "sourceName": "FIX",
@@ -1004,7 +1011,7 @@
         "MONDO": {
             "sourceName": "MONDO",
             "sourceFile": "https://purl.obolibrary.org/obo/mondo/mondo-international.owl",
-            "sourceVersion": "2026-04-07",
+            "sourceVersion": "2026-05-05",
             "sourceDescription": "Mondo Disease Ontology",
             "sourceDetails": "A semi-automatically constructed ontology that merges in multiple disease resources to yield a coherent merged ontology."
         },
@@ -1081,7 +1088,7 @@
         "NCBITaxon": {
             "sourceName": "NCBITaxon",
             "sourceFile": "http://purl.obolibrary.org/obo/ncbitaxon.owl",
-            "sourceVersion": "2025-12-03",
+            "sourceVersion": "2026-05-05",
             "sourceDescription": "NCBI organismal classification",
             "sourceDetails": "An ontology representation of the NCBI organismal taxonomy"
         },
@@ -1438,7 +1445,7 @@
         "PPO": {
             "sourceName": "PPO",
             "sourceFile": "http://purl.obolibrary.org/obo/ppo.owl",
-            "sourceVersion": "2025-06-16",
+            "sourceVersion": "2026-05-06",
             "sourceDescription": "Plant Phenology Ontology",
             "sourceDetails": "An ontology for describing the phenology of individual plants and populations of plants, and for integrating plant phenological data across sources and scales."
         },
@@ -1627,7 +1634,7 @@
         "SIO": {
             "sourceName": "SIO",
             "sourceFile": "https://raw.githubusercontent.com/micheldumontier/semanticscience/master/ontology/sio/release/sio-release.owl",
-            "sourceVersion": "1.59",
+            "sourceVersion": "1.61",
             "sourceDescription": "Semanticscience Integrated Ontology",
             "sourceDetails": "The Semanticscience Integrated Ontology (SIO) provides a simple, integrated ontology of types and relations for rich description of objects, processes and their attributes."
         },
@@ -1735,6 +1742,13 @@
             "sourceVersion": "rel-2014-04-24",
             "sourceDescription": "Terminology for Description of Dynamics",
             "sourceDetails": "TEDDY is an ontology for dynamical behaviours, observable dynamical phenomena, and control elements of bio-models and biological systems in Systems and Synthetic Biology."
+        },
+        "TFO": {
+            "sourceName": "TFO",
+            "sourceFile": "http://opendata.inrae.fr/PO2/Ontology/transformON.rdf",
+            "sourceVersion": "27.0",
+            "sourceDescription": "TransformON",
+            "sourceDetails": "A domain ontology on food and bioproduct processing and characterization that is a specialization of the PO2 ontology (Process and Observation Ontology)."
         },
         "TGMA": {
             "sourceName": "TGMA",
