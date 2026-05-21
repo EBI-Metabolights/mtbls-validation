@@ -69,7 +69,7 @@
                         "termAccessionNumber": "",
                         "termSourceRef": ""
                     },
-                    "description": "Assay type.",
+                    "description": "Omics type.",
                     "title": "Omics Type"
                 },
                 "assayDescriptors": {
@@ -1683,7 +1683,7 @@
             "type": "object"
         },
         "RelatedDataset": {
-            "additionalProperties": false,
+            "additionalProperties": true,
             "properties": {
                 "repository": {
                     "default": "",
@@ -1695,6 +1695,12 @@
                     "default": "",
                     "description": "Dataset accession.",
                     "title": "Accession",
+                    "type": "string"
+                },
+                "url": {
+                    "default": "",
+                    "description": "Dataset URL.",
+                    "title": "Url",
                     "type": "string"
                 }
             },
@@ -1821,7 +1827,7 @@
             "type": "string"
         },
         "Study": {
-            "additionalProperties": false,
+            "additionalProperties": true,
             "properties": {
                 "comments": {
                     "default": [],
@@ -1907,6 +1913,16 @@
                     "description": "Study template",
                     "title": "Study Template",
                     "type": "string"
+                },
+                "linkedStudyAccession": {
+                    "auto_fill": false,
+                    "default": [],
+                    "description": "Linked study accession.",
+                    "items": {
+                        "type": "string"
+                    },
+                    "title": "Linked Study Accession",
+                    "type": "array"
                 },
                 "mhdAccession": {
                     "auto_fill": false,

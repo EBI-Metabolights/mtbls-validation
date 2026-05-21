@@ -2,6 +2,8 @@
 
 Download the latest [MetaboLights Validation OPA bundle](bundle.tar.gz)
 
+Download the latest [MetaboLights Validation OPA WASM](mtbls-validation.wasm)
+
 Download the latest [Validation rules as JSON](json/all_rules.json)
 
 Download the latest [Controls as JSON](json/all_controls.json)
