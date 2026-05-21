@@ -91,7 +91,7 @@ name = "cffi"
 version = "2.0.0"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
-    { name = "pycparser", marker = "implementation_name != 'PyPy'" },
+    { name = "pycparser", marker = "implementation_name != 'PyPy' and sys_platform != 'emscripten' and sys_platform != 'win32'" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/eb/56/b1ba7935a17738ae8453301356628e8147c79dbb825bcbc73dc7401f9846/cffi-2.0.0.tar.gz", hash = "sha256:44d1b5909021139fe36001ae048dbdde8214afa20200eda0f64c068cac5d5529", size = 523588, upload-time = "2025-09-08T23:24:04.541Z" }
 wheels = [
@@ -222,7 +222,7 @@ name = "cryptography"
 version = "46.0.6"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
-    { name = "cffi", marker = "platform_python_implementation != 'PyPy'" },
+    { name = "cffi", marker = "platform_python_implementation != 'PyPy' and sys_platform != 'emscripten' and sys_platform != 'win32'" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/a4/ba/04b1bd4218cbc58dc90ce967106d51582371b898690f3ae0402876cc4f34/cryptography-46.0.6.tar.gz", hash = "sha256:27550628a518c5c6c903d84f637fbecf287f6cb9ced3804838a1295dc1fd0759", size = 750542, upload-time = "2026-03-25T23:34:53.396Z" }
 wheels = [
@@ -321,11 +321,11 @@ wheels = [
 
 [[package]]
 name = "idna"
-version = "3.11"
+version = "3.15"
 source = { registry = "https://pypi.org/simple" }
-sdist = { url = "https://files.pythonhosted.org/packages/6f/6d/0703ccc57f3a7233505399edb88de3cbd678da106337b9fcde432b65ed60/idna-3.11.tar.gz", hash = "sha256:795dafcc9c04ed0c1fb032c2aa73654d8e8c5023a7df64a53f39190ada629902", size = 194582, upload-time = "2025-10-12T14:55:20.501Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/82/77/7b3966d0b9d1d31a36ddf1746926a11dface89a83409bf1483f0237aa758/idna-3.15.tar.gz", hash = "sha256:ca962446ea538f7092a95e057da437618e886f4d349216d2b1e294abfdb65fdc", size = 199245, upload-time = "2026-05-12T22:45:57.011Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/0e/61/66938bbb5fc52dbdf84594873d5b51fb1f7c7794e9c0f5bd885f30bc507b/idna-3.11-py3-none-any.whl", hash = "sha256:771a87f49d9defaf64091e6e6fe9c18d4833f140bd19464795bc32d966ca37ea", size = 71008, upload-time = "2025-10-12T14:55:18.883Z" },
+    { url = "https://files.pythonhosted.org/packages/d2/23/408243171aa9aaba178d3e2559159c24c1171a641aa83b67bdd3394ead8e/idna-3.15-py3-none-any.whl", hash = "sha256:048adeaf8c2d788c40fee287673ccaa74c24ffd8dcf09ffa555a2fbb59f10ac8", size = 72340, upload-time = "2026-05-12T22:45:55.733Z" },
 ]
 
 [[package]]
@@ -518,21 +518,22 @@ wheels = [
 
 [[package]]
 name = "metabolights-utils"
-version = "1.4.22"
+version = "1.4.34"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "beautifulsoup4" },
     { name = "click" },
     { name = "httpx" },
+    { name = "idna" },
     { name = "jsonpath-ng" },
     { name = "jsonschema" },
     { name = "pydantic" },
     { name = "pydantic-settings" },
     { name = "unidecode" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/df/b8/d4a8c488fd2c7b6f69e6c4cf494394316e4c5efd785d9cba4c7981ec80e5/metabolights_utils-1.4.22.tar.gz", hash = "sha256:2934877e179e37ccfb8698755992463991655190226048a2861fadefc55a60b0", size = 159313, upload-time = "2026-03-31T17:38:35.42Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/07/2a/220c895da0f668bc1c117b151c4c99c014749c3d52430b61bb404e758d54/metabolights_utils-1.4.34.tar.gz", hash = "sha256:33f4620e4236a0b877ff8c1f14574dd982fb800df9497ae390a1bcd07b98e4c4", size = 163978, upload-time = "2026-05-20T09:18:39.053Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/26/46/109ce8b0e628a5e037adb2f6f65c095265c32267c82a6dbb081e79457033/metabolights_utils-1.4.22-py3-none-any.whl", hash = "sha256:c8823225a20b57ee240d2014ae67a20c95582cffc0082d2aabe43f2a544ab2cc", size = 191136, upload-time = "2026-03-31T17:38:36.823Z" },
+    { url = "https://files.pythonhosted.org/packages/f9/24/ebb4a739de07b301d359f2ff31a1bcd814aebaf8392e3c31a6b4fa961dfa/metabolights_utils-1.4.34-py3-none-any.whl", hash = "sha256:0e44b7978713aac7eedf415e94647c23671ac7d1d4e20c7a09ce69ac8a105bf9", size = 196052, upload-time = "2026-05-20T09:18:37.611Z" },
 ]
 
 [[package]]
@@ -635,12 +636,12 @@ dependencies = [
 requires-dist = [
     { name = "jsonschema", specifier = ">=4.25.1" },
     { name = "keyring", specifier = ">=25.7.0" },
-    { name = "metabolights-utils", specifier = ">=1.4.21,<2" },
+    { name = "metabolights-utils", specifier = ">=1.4.34,<2" },
     { name = "mkdocs-material", specifier = ">=9.7.1" },
     { name = "openpyxl", specifier = ">=3.1.5" },
     { name = "pandas", specifier = ">=3.0.0" },
     { name = "pybreaker", specifier = ">=1.4.1" },
-    { name = "pydantic", specifier = ">=2.10.2" },
+    { name = "pydantic", specifier = ">=2.12.5" },
     { name = "pydantic2-to-typescript", specifier = ">=0.0.1" },
     { name = "redis", specifier = ">=7.0.1" },
     { name = "ruff", specifier = ">=0.15.0" },
@@ -1196,8 +1197,8 @@ name = "secretstorage"
 version = "3.5.0"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
-    { name = "cryptography" },
-    { name = "jeepney" },
+    { name = "cryptography", marker = "sys_platform != 'emscripten' and sys_platform != 'win32'" },
+    { name = "jeepney", marker = "sys_platform != 'emscripten' and sys_platform != 'win32'" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/1c/03/e834bcd866f2f8a49a85eaff47340affa3bfa391ee9912a952a1faa68c7b/secretstorage-3.5.0.tar.gz", hash = "sha256:f04b8e4689cbce351744d5537bf6b1329c6fc68f91fa666f60a380edddcd11be", size = 19884, upload-time = "2025-11-23T19:02:53.191Z" }
 wheels = [
