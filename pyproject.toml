@@ -18,6 +18,8 @@ dependencies = [
     "keyring>=25.7.0",
     "mkdocs-material>=9.7.1",
     "ruff>=0.15.0",
+    # security related dependencues
+    "cryptography>=46.0.7"
 ]
 
 [tool.hatch.build.targets.sdist]
