@@ -110,7 +110,9 @@
                 "fly",
                 "human",
                 "man",
-                "sheep"
+                "sheep",
+                "cell",
+                "donkey"
             ]
         },
         {
@@ -237,7 +239,9 @@
                 "fly",
                 "human",
                 "man",
-                "sheep"
+                "sheep",
+                "cell",
+                "donkey"
             ]
         }
     ]

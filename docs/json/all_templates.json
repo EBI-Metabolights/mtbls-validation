@@ -10073,7 +10073,7 @@
                         "defaultColumnIndex": 9,
                         "minLength": null,
                         "maxLength": null,
-                        "required": true,
+                        "required": false,
                         "description": null,
                         "examples": null
                     },
@@ -19124,7 +19124,7 @@
         "APO": {
             "sourceName": "APO",
             "sourceFile": "http://purl.obolibrary.org/obo/apo.owl",
-            "sourceVersion": "2026-04-20",
+            "sourceVersion": "2026-05-21",
             "sourceDescription": "Ascomycete Phenotype Ontology (APO)",
             "sourceDetails": "A structured controlled vocabulary for the phenotypes of Ascomycete fungi."
         },
@@ -19530,7 +19530,7 @@
         "EFO": {
             "sourceName": "EFO",
             "sourceFile": "http://www.ebi.ac.uk/efo/efo.owl",
-            "sourceVersion": "3.89.0",
+            "sourceVersion": "3.90.0",
             "sourceDescription": "Experimental Factor Ontology",
             "sourceDetails": "The Experimental Factor Ontology (EFO) provides a systematic description of many experimental variables available in EBI databases, and for projects such as the NHGRI-EBI GWAS catalog. It combines parts of several biological ontologies, such as UBERON anatomy, ChEBI chemical compounds, Cell Ontology and the Monarch Disease Ontology (MONDO). The scope of EFO is to support the annotation, analysis and visualization of data handled by many groups at the EBI and as the core ontology for Open Targets."
         },
@@ -19712,7 +19712,7 @@
         "FYPO": {
             "sourceName": "FYPO",
             "sourceFile": "http://purl.obolibrary.org/obo/fypo.owl",
-            "sourceVersion": "2026-04-02",
+            "sourceVersion": "2026-05-21",
             "sourceDescription": "Fission Yeast Phenotype Ontology (FYPO)",
             "sourceDetails": "A formal ontology of phenotypes observed in fission yeast."
         },
@@ -20097,7 +20097,7 @@
         "MP": {
             "sourceName": "MP",
             "sourceFile": "http://purl.obolibrary.org/obo/mp/mp-international.owl",
-            "sourceVersion": "2026-04-22",
+            "sourceVersion": "2026-05-19",
             "sourceDescription": "The Mammalian Phenotype Ontology",
             "sourceDetails": "The Mammalian Phenotype Ontology is being developed by Cynthia L. Smith, Susan M. Bello, Anna V. Anagnostopoulos, Carroll W. Goldsmith and Janan T. Eppig, as part of the Mouse Genome Database (MGD) Project, Mouse Genome Informatics (MGI), The Jackson Laboratory, Bar Harbor, ME. This file contains pre-coordinated phenotype terms, definitions and synonyms that can be used to describe mammalian phenotypes. The ontology is represented as a directed acyclic graph (DAG). It organizes phenotype terms into major biological system headers such as nervous system and respiratory system.  This ontology is currently under development. Weekly updates are available at the Mouse Genome Informatics (MGI) ftp site (ftp://ftp.informatics.jax.org/pub/reports/index.html#pheno) as well as the OBO Foundry site (http://obofoundry.org/). Japanese labels of MP were created by the MP Japanese Translation Project (https://github.com/dbcls/MP_Japanese). Questions, comments and suggestions are welcome, and should be directed to pheno@jax.org, Susan.Bello@jax.org or to GitHub tracker (https://github.com/mgijax/mammalian-phenotype-ontology/issues) MGD is funded by NIH/NHGRI grant HG000330."
         },
@@ -20160,7 +20160,7 @@
         "NCBITaxon": {
             "sourceName": "NCBITaxon",
             "sourceFile": "http://purl.obolibrary.org/obo/ncbitaxon.owl",
-            "sourceVersion": "2026-05-05",
+            "sourceVersion": "2026-05-13",
             "sourceDescription": "NCBI organismal classification",
             "sourceDetails": "An ontology representation of the NCBI organismal taxonomy"
         },
@@ -20216,7 +20216,7 @@
         "OBA": {
             "sourceName": "OBA",
             "sourceFile": "http://purl.obolibrary.org/obo/oba.owl",
-            "sourceVersion": "2025-10-29",
+            "sourceVersion": "2026-05-15",
             "sourceDescription": "Ontology of Biological Attributes (OBA)",
             "sourceDetails": "A collection of biological attributes (traits) covering all kingdoms of life. Interoperable with VT (vertebrate trait ontology) and TO (plant trait ontology). Extends PATO."
         },
@@ -20230,7 +20230,7 @@
         "OBI": {
             "sourceName": "OBI",
             "sourceFile": "http://purl.obolibrary.org/obo/obi.owl",
-            "sourceVersion": "2026-03-19",
+            "sourceVersion": "2026-05-08",
             "sourceDescription": "Ontology for Biomedical Investigations",
             "sourceDetails": "An ontology for representing biomedical investigations, including study designs, the collection and preparation of the targets of investigation, assays, instrumentation and reagents used, as well as the data generated and the types of analysis performed on the data to reach conclusions, and their documentation."
         },
@@ -20279,7 +20279,7 @@
         "OHMI": {
             "sourceName": "OHMI",
             "sourceFile": "http://purl.obolibrary.org/obo/ohmi.owl",
-            "sourceVersion": "2026-03-21",
+            "sourceVersion": "2026-05-14",
             "sourceDescription": "OHMI: Ontology of Host-Microbiome Interactions",
             "sourceDetails": "OHMI is a biomedical ontology that represents the entities and relations in the domain of host-microbiome interactions."
         },
@@ -20531,7 +20531,7 @@
         "PREFER": {
             "sourceName": "PREFER",
             "sourceFile": "https://github.com/Multiomics-Analytics-Group/prefer_ontology/releases/latest/download/prefer.owl",
-            "sourceVersion": "2026-04-20",
+            "sourceVersion": "2026-05-19",
             "sourceDescription": "PREFER Ontology",
             "sourceDetails": "An ontology for PREcision FERmentation."
         },
@@ -20818,7 +20818,7 @@
         "TFO": {
             "sourceName": "TFO",
             "sourceFile": "http://opendata.inrae.fr/PO2/Ontology/transformON.rdf",
-            "sourceVersion": "27.0",
+            "sourceVersion": "28.0",
             "sourceDescription": "TransformON",
             "sourceDetails": "A domain ontology on food and bioproduct processing and characterization that is a specialization of the PO2 ontology (Process and Observation Ontology)."
         },
@@ -20909,9 +20909,9 @@
         "VO": {
             "sourceName": "VO",
             "sourceFile": "http://purl.obolibrary.org/obo/vo.owl",
-            "sourceVersion": "2026-03-06",
+            "sourceVersion": "2026-05-07",
             "sourceDescription": "Vaccine Ontology",
-            "sourceDetails": "The Vaccine Ontology (VO) is a community-based biomedical ontology in the domain of vaccine and vaccination. VO aims to standardize vaccine types and annotations, integrate various vaccine data, and support computer-assisted reasoning. The VO supports basic vaccine R&D and clinical vaccine usage. VO is being developed as a community-based ontology with support and collaborations from the vaccine and bio-ontology communities."
+            "sourceDetails": "The Vaccine Ontology (VO) is a community-based biomedical ontology in the domain of vaccines and vaccination. VO aims to standardize vaccine types and annotations, integrate various vaccine data, and support computer-assisted reasoning. The VO supports basic vaccine R&D and clinical vaccine usage. VO is being developed as a community-based ontology with support and collaborations from the vaccine and bio-ontology communities."
         },
         "VSAO": {
             "sourceName": "VSAO",

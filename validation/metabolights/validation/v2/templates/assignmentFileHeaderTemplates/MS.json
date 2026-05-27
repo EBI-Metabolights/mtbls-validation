@@ -131,7 +131,7 @@
                     "defaultColumnIndex": 9,
                     "minLength": null,
                     "maxLength": null,
-                    "required": true,
+                    "required": false,
                     "description": null,
                     "examples": null
                 },
