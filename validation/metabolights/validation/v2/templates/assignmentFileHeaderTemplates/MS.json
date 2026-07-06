@@ -132,7 +132,7 @@
                     "minLength": null,
                     "maxLength": null,
                     "required": false,
-                    "description": null,
+                    "description": "retention_time column values must be defined for LC-MS or GC-MS studies.",
                     "examples": null
                 },
                 {
