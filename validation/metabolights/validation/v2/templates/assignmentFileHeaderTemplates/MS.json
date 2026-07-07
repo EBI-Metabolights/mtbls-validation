@@ -132,7 +132,7 @@
                     "minLength": null,
                     "maxLength": null,
                     "required": false,
-                    "description": null,
+                    "description": "All 'retention_time' column values must be defined in metabolite assignment file for LC-MS / GC-MS.",
                     "examples": null
                 },
                 {

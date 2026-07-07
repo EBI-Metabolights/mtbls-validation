@@ -52,7 +52,7 @@
         "APO": {
             "sourceName": "APO",
             "sourceFile": "http://purl.obolibrary.org/obo/apo.owl",
-            "sourceVersion": "2026-05-21",
+            "sourceVersion": "2026-06-16",
             "sourceDescription": "Ascomycete Phenotype Ontology (APO)",
             "sourceDetails": "A structured controlled vocabulary for the phenotypes of Ascomycete fungi."
         },
@@ -220,7 +220,7 @@
         "CHMO": {
             "sourceName": "CHMO",
             "sourceFile": "http://purl.obolibrary.org/obo/chmo.owl",
-            "sourceVersion": "2025-10-21",
+            "sourceVersion": "2026-05-28",
             "sourceDescription": "Chemical Methods Ontology",
             "sourceDetails": "CHMO, the chemical methods ontology, describes methods used to"
         },
@@ -241,7 +241,7 @@
         "CL": {
             "sourceName": "CL",
             "sourceFile": "http://purl.obolibrary.org/obo/cl.owl",
-            "sourceVersion": "2026-03-26",
+            "sourceVersion": "2026-06-08",
             "sourceDescription": "Cell Ontology",
             "sourceDetails": "An ontology of cell types."
         },
@@ -255,8 +255,8 @@
         "CLO": {
             "sourceName": "CLO",
             "sourceFile": "http://purl.obolibrary.org/obo/clo.owl",
-            "sourceVersion": "2.1.188",
-            "sourceDescription": "CLO: Cell Line Ontology",
+            "sourceVersion": "2026-06-19",
+            "sourceDescription": "Cell Line Ontology",
             "sourceDetails": "The Cell Line Ontology (CLO) is a community-based ontology of cell lines. The CLO is developed to unify publicly available cell line entry data from multiple sources to a standardized logically defined format based on consensus design patterns."
         },
         "CLYH": {
@@ -286,6 +286,13 @@
             "sourceVersion": "2025-12-15",
             "sourceDescription": "Core Ontology for Biology and Biomedicine",
             "sourceDetails": "COB brings together key terms from a wide range of OBO projects to improve interoperability."
+        },
+        "COHO": {
+            "sourceName": "COHO",
+            "sourceFile": "https://raw.githubusercontent.com/EBISPOT/cohort-ontology/refs/heads/main/coho.owl",
+            "sourceVersion": "2026-05-19",
+            "sourceDescription": "",
+            "sourceDetails": ""
         },
         "COLAO": {
             "sourceName": "COLAO",
@@ -395,14 +402,14 @@
         "DOID": {
             "sourceName": "DOID",
             "sourceFile": "https://purl.obolibrary.org/obo/doid/translations/doid-international.owl",
-            "sourceVersion": "2026-04-30",
+            "sourceVersion": "2026-05-30",
             "sourceDescription": "Human Disease Ontology",
             "sourceDetails": "The Disease Ontology has been developed as a standardized ontology for human disease with the purpose of providing the biomedical community with consistent, reusable and sustainable descriptions of human disease terms, phenotype characteristics and related medical vocabulary disease concepts."
         },
         "DRON": {
             "sourceName": "DRON",
             "sourceFile": "http://purl.obolibrary.org/obo/dron.owl",
-            "sourceVersion": "2026-03-04",
+            "sourceVersion": "2026-06-04",
             "sourceDescription": "The Drug Ontology",
             "sourceDetails": "An ontology to support comparative effectiveness researchers studying claims data."
         },
@@ -458,7 +465,7 @@
         "EFO": {
             "sourceName": "EFO",
             "sourceFile": "http://www.ebi.ac.uk/efo/efo.owl",
-            "sourceVersion": "3.90.0",
+            "sourceVersion": "3.91.0",
             "sourceDescription": "Experimental Factor Ontology",
             "sourceDetails": "The Experimental Factor Ontology (EFO) provides a systematic description of many experimental variables available in EBI databases, and for projects such as the NHGRI-EBI GWAS catalog. It combines parts of several biological ontologies, such as UBERON anatomy, ChEBI chemical compounds, Cell Ontology and the Monarch Disease Ontology (MONDO). The scope of EFO is to support the annotation, analysis and visualization of data handled by many groups at the EBI and as the core ontology for Open Targets."
         },
@@ -563,14 +570,14 @@
         "FBbi": {
             "sourceName": "FBbi",
             "sourceFile": "http://purl.obolibrary.org/obo/fbbi.owl",
-            "sourceVersion": "2026-03-30",
+            "sourceVersion": "2026-06-25",
             "sourceDescription": "Biological Imaging Methods Ontology",
             "sourceDetails": "An ontology for the description of sample preparation, visualization, and imaging methods used in biomedical research."
         },
         "FBbt": {
             "sourceName": "FBbt",
             "sourceFile": "http://purl.obolibrary.org/obo/fbbt.owl",
-            "sourceVersion": "2026-04-03",
+            "sourceVersion": "2026-06-11",
             "sourceDescription": "Drosophila gross anatomy",
             "sourceDetails": "An ontology representing the gross anatomy of Drosophila melanogaster."
         },
@@ -696,7 +703,7 @@
         "GO": {
             "sourceName": "GO",
             "sourceFile": "http://purl.obolibrary.org/obo/go/extensions/go-plus.owl",
-            "sourceVersion": "2026-03-25",
+            "sourceVersion": "2026-05-19",
             "sourceDescription": "Gene Ontology",
             "sourceDetails": "The Gene Ontology (GO) provides a framework and set of concepts for describing the functions of gene products from all organisms."
         },
@@ -759,7 +766,7 @@
         "HP": {
             "sourceName": "HP",
             "sourceFile": "http://purl.obolibrary.org/obo/hp/hp-international.owl",
-            "sourceVersion": "2026-02-16",
+            "sourceVersion": "2026-06-23",
             "sourceDescription": "Human Phenotype Ontology",
             "sourceDetails": "The Human Phenotype Ontology (HPO) provides a standardized vocabulary of phenotypic abnormalities and clinical features encountered in human disease."
         },
@@ -931,6 +938,13 @@
             "sourceDescription": "Model Card Report Ontology",
             "sourceDetails": "An ontology representing the structure of model card reports - reports that describe basic characteristics of machine learning models for the public and consumers."
         },
+        "MEDGEN": {
+            "sourceName": "MEDGEN",
+            "sourceFile": "https://github.com/monarch-initiative/medgen/releases/latest/download/medgen.ttl.gz",
+            "sourceVersion": "",
+            "sourceDescription": "",
+            "sourceDetails": ""
+        },
         "MESH": {
             "sourceName": "MESH",
             "sourceFile": "https://data.bioontology.org/ontologies/MESH",
@@ -994,6 +1008,13 @@
             "sourceDescription": "Mosquito insecticide resistance",
             "sourceDetails": "Application ontology for entities related to insecticide resistance in mosquitos"
         },
+        "MIXS": {
+            "sourceName": "MIXS",
+            "sourceFile": "https://w3id.org/mixs/mixs.owl.ttl",
+            "sourceVersion": "",
+            "sourceDescription": "Minimum Information about any (x) Sequence (MIxS) standard",
+            "sourceDetails": "An OWL representation of the Minimum Information for any (x) Standard (MIxS), managed by the Genomic Standards Consortium. This file is released by the Genomic Standards Consortium (GSC; https://www.gensc.org/) for use by anyone handling data or information about biological sequences."
+        },
         "MMO": {
             "sourceName": "MMO",
             "sourceFile": "http://purl.obolibrary.org/obo/mmo.owl",
@@ -1011,7 +1032,7 @@
         "MONDO": {
             "sourceName": "MONDO",
             "sourceFile": "https://purl.obolibrary.org/obo/mondo/mondo-international.owl",
-            "sourceVersion": "2026-05-05",
+            "sourceVersion": "2026-06-02",
             "sourceDescription": "Mondo Disease Ontology",
             "sourceDetails": "A semi-automatically constructed ontology that merges in multiple disease resources to yield a coherent merged ontology."
         },
@@ -1025,7 +1046,7 @@
         "MP": {
             "sourceName": "MP",
             "sourceFile": "http://purl.obolibrary.org/obo/mp/mp-international.owl",
-            "sourceVersion": "2026-05-19",
+            "sourceVersion": "2026-06-17",
             "sourceDescription": "The Mammalian Phenotype Ontology",
             "sourceDetails": "The Mammalian Phenotype Ontology is being developed by Cynthia L. Smith, Susan M. Bello, Anna V. Anagnostopoulos, Carroll W. Goldsmith and Janan T. Eppig, as part of the Mouse Genome Database (MGD) Project, Mouse Genome Informatics (MGI), The Jackson Laboratory, Bar Harbor, ME. This file contains pre-coordinated phenotype terms, definitions and synonyms that can be used to describe mammalian phenotypes. The ontology is represented as a directed acyclic graph (DAG). It organizes phenotype terms into major biological system headers such as nervous system and respiratory system.  This ontology is currently under development. Weekly updates are available at the Mouse Genome Informatics (MGI) ftp site (ftp://ftp.informatics.jax.org/pub/reports/index.html#pheno) as well as the OBO Foundry site (http://obofoundry.org/). Japanese labels of MP were created by the MP Japanese Translation Project (https://github.com/dbcls/MP_Japanese). Questions, comments and suggestions are welcome, and should be directed to pheno@jax.org, Susan.Bello@jax.org or to GitHub tracker (https://github.com/mgijax/mammalian-phenotype-ontology/issues) MGD is funded by NIH/NHGRI grant HG000330."
         },
@@ -1312,7 +1333,7 @@
         "OPMI": {
             "sourceName": "OPMI",
             "sourceFile": "http://purl.obolibrary.org/obo/opmi.owl",
-            "sourceVersion": "Vision Release: 1.0.166",
+            "sourceVersion": "2026-06-20",
             "sourceDescription": "OPMI: Ontology of Precision Medicine and Investigation",
             "sourceDetails": "OPMI is a biomedical ontology in the area of precision medicine and its related investigations. It is community-driven and developed by following the OBO Foundry ontology development principles."
         },
@@ -1389,7 +1410,7 @@
         "PDRO": {
             "sourceName": "PDRO",
             "sourceFile": "http://purl.obolibrary.org/obo/pdro.owl",
-            "sourceVersion": "2021-06-08",
+            "sourceVersion": "2026-06-09",
             "sourceDescription": "The Prescription of Drugs Ontology",
             "sourceDetails": "An ontology to describe entities related to prescription of drugs"
         },
@@ -1802,7 +1823,7 @@
         "UNIPROTRDFS": {
             "sourceName": "UNIPROTRDFS",
             "sourceFile": "https://ftp.uniprot.org/pub/databases/uniprot/current_release/rdf/core.owl",
-            "sourceVersion": "2026_01",
+            "sourceVersion": "2026_02",
             "sourceDescription": "",
             "sourceDetails": ""
         },
@@ -1837,7 +1858,7 @@
         "VO": {
             "sourceName": "VO",
             "sourceFile": "http://purl.obolibrary.org/obo/vo.owl",
-            "sourceVersion": "2026-05-07",
+            "sourceVersion": "2026-06-12",
             "sourceDescription": "Vaccine Ontology",
             "sourceDetails": "The Vaccine Ontology (VO) is a community-based biomedical ontology in the domain of vaccines and vaccination. VO aims to standardize vaccine types and annotations, integrate various vaccine data, and support computer-assisted reasoning. The VO supports basic vaccine R&D and clinical vaccine usage. VO is being developed as a community-based ontology with support and collaborations from the vaccine and bio-ontology communities."
         },
@@ -1851,7 +1872,7 @@
         "VT": {
             "sourceName": "VT",
             "sourceFile": "http://purl.obolibrary.org/obo/vt.owl",
-            "sourceVersion": "2026-04-22",
+            "sourceVersion": "2026-06-24",
             "sourceDescription": "The Vertebrate Trait Ontology",
             "sourceDetails": "The Vertebrate Trait Ontology is a controlled vocabulary for the description of traits (measurable or observable characteristics) pertaining to the morphology, physiology, or development of vertebrate organisms."
         },
@@ -1935,14 +1956,14 @@
         "ZFA": {
             "sourceName": "ZFA",
             "sourceFile": "http://purl.obolibrary.org/obo/zfa.owl",
-            "sourceVersion": "2026-03-31",
+            "sourceVersion": "2026-06-02",
             "sourceDescription": "Zebrafish anatomy and development ontology",
             "sourceDetails": "A structured controlled vocabulary of the anatomy and development of the Zebrafish"
         },
         "ZFS": {
             "sourceName": "ZFS",
             "sourceFile": "http://purl.obolibrary.org/obo/zfs.owl",
-            "sourceVersion": "2026-03-31",
+            "sourceVersion": "2026-06-02",
             "sourceDescription": "Zebrafish developmental stages ontology",
             "sourceDetails": "Developmental stages of the Zebrafish"
         },
