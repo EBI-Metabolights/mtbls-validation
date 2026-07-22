@@ -58,7 +58,7 @@ rule_a_100_100_001_03 contains result if {
 	def := data.metabolights.validation.v2.rules.phase1.definitions
 	headers := {x | some j; x := assay_file.table.headers[j].columnHeader}
 	values := [sprintf("['%v']", [x]) |
-		some default_header in def._DEFAULT_ASSAY_HEADERS[file_name].headers
+		some default_header in def.SELECTED_ASSAY_FILE_TEMPLATE[file_name].headers
 
 		# defaults[j].required == true
 		not default_header.columnHeader in headers
@@ -189,7 +189,7 @@ rule_a_100_100_001_08 contains result if {
 
 	count(headers) > 0
 
-	default_headers := [header | some header in def._DEFAULT_ASSAY_HEADERS[file_name].headers; not endswith(header.columnHeader, " Data File")]
+	default_headers := [header | some header in def.SELECTED_ASSAY_FILE_TEMPLATE[file_name].headers; not endswith(header.columnHeader, " Data File")]
 
 	matches := [sprintf("[Expected column at '%v': '%v', found '%v']", [x1, x2, x3]) |
 		some j, header in headers
@@ -246,9 +246,7 @@ rule_a_100_100_001_10 contains result if {
 	def := data.metabolights.validation.v2.rules.phase1.definitions
 	some file_name, _ in input.assays
 	header_names := {header.columnHeader: same_headers |
-		some header_set in def._DEFAULT_ASSAY_HEADERS[file_name]
-
-		header_set.version == data.metabolights.validation.v2.rules.phase1.definitions.STUDY_TEMPLATE_VERSION
+		header_set := def.SELECTED_ASSAY_FILE_TEMPLATE[file_name]
 
 		some header in header_set.headers
 		not startswith(header.columnHeader, "Comment[")
@@ -323,8 +321,7 @@ rule_a_100_100_001_12 contains result if {
 		not startswith(header.columnHeader, "Term Source REF")
 		not startswith(header.columnHeader, "Term Accession Number")
 	]
-	some header_set in def._DEFAULT_ASSAY_HEADERS[file_name]
-	header_set.version == def.STUDY_TEMPLATE_VERSION
+	header_set := def.SELECTED_ASSAY_FILE_TEMPLATE[file_name]
 
 	matches := [header.columnHeader |
 		some header in header_set.headers

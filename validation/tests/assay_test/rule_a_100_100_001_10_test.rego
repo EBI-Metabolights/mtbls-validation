@@ -40,11 +40,11 @@ test_rule_a_100_100_001_10_no_violation_01 if {
 		"investigation": {"studies": [{"fileName": "s_MTBLS1.txt"}]},
 		"parserMessages": {"s_MTBLS1.txt": []},
 	}
-		with data.metabolights.validation.v2.rules.phase1.definitions._DEFAULT_ASSAY_HEADERS as {"a_MTBLS1.txt": [{"version": "2.0", "headers": [{
+		with data.metabolights.validation.v2.rules.phase1.definitions.SELECTED_ASSAY_FILE_TEMPLATE as {"a_MTBLS1.txt": {"headers": [{
 			"columnCategory": "Parameter Value",
 			"columnHeader": "Parameter Value[Scan polarity]",
 			"columnIndex": 3,
-		}]}]}
+		}]}}
 	count(result) == 0
 }
 
@@ -72,10 +72,10 @@ test_rule_a_100_100_001_10_violation_01 if {
 		"parserMessages": {"s_MTBLS1.txt": []},
 		"studyDbMetadata": {"studyCategory": "other", "sampleTemplate": "minimum", "templateVersion": "2.0"},
 	}
-		with data.metabolights.validation.v2.rules.phase1.definitions._DEFAULT_ASSAY_HEADERS as {"a_MTBLS1.txt": [{"version": "2.0", "headers": [{
+		with data.metabolights.validation.v2.rules.phase1.definitions.SELECTED_ASSAY_FILE_TEMPLATE as {"a_MTBLS1.txt": {"headers": [{
 			"columnCategory": "Parameter Value",
 			"columnHeader": "Parameter Value[Scan polarity]",
 			"columnIndex": 3,
-		}]}]}
+		}]}}
 	count(result) == 1
 }

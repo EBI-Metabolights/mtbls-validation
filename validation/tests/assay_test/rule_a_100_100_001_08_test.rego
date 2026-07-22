@@ -48,7 +48,7 @@ test_rule_a_100_100_001_08_no_violation_01 if {
 			"Parameter Value[Scan m/z range]",
 			"Sample Name",
 		}}
-		with data.metabolights.validation.v2.rules.phase1.definitions._DEFAULT_ASSAY_HEADERS as {"a_MTBLS1.txt": {"headers": [
+		with data.metabolights.validation.v2.rules.phase1.definitions.SELECTED_ASSAY_FILE_TEMPLATE as {"a_MTBLS1.txt": {"headers": [
 			{"columnHeader": "Protocol REF"},
 			{"columnHeader": "Parameter Value[Scan polarity]"},
 			{"columnHeader": "Normalization Name"},
@@ -93,7 +93,7 @@ test_rule_a_100_100_001_08_no_violation_02 if {
 			"Parameter Value[Scan m/z range]",
 			"Sample Name",
 		}}
-		with data.metabolights.validation.v2.rules.phase1.definitions._DEFAULT_ASSAY_HEADERS as {"a_MTBLS1.txt": {"headers": [
+		with data.metabolights.validation.v2.rules.phase1.definitions.SELECTED_ASSAY_FILE_TEMPLATE as {"a_MTBLS1.txt": {"headers": [
 			{"columnHeader": "Protocol REF"},
 			{"columnHeader": "Parameter Value[Scan polarity]"},
 			{"columnHeader": "Normalization Name"},
@@ -137,7 +137,7 @@ test_rule_a_100_100_001_08_violation_01 if {
 			"Parameter Value[Scan m/z range]",
 			"Sample Name",
 		]}
-		with data.metabolights.validation.v2.rules.phase1.definitions._DEFAULT_ASSAY_HEADERS as {"a_MTBLS1.txt": {"headers": [
+		with data.metabolights.validation.v2.rules.phase1.definitions.SELECTED_ASSAY_FILE_TEMPLATE as {"a_MTBLS1.txt": {"headers": [
 			{"columnHeader": "Sample Name"},
 			{"columnHeader": "Protocol REF"},
 			{"columnHeader": "Parameter Value[Scan polarity]"},
