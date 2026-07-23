@@ -35,7 +35,7 @@ test_rule_a_100_100_001_03_no_violation_01 if {
 		"investigation": {"studies": [{"fileName": "s_MTBLS1.txt"}]},
 		"parserMessages": {"s_MTBLS1.txt": []},
 	}
-		with data.metabolights.validation.v2.rules.phase1.definitions._DEFAULT_ASSAY_HEADERS as {"a_MTBLS1.txt": {"headers": {
+		with data.metabolights.validation.v2.rules.phase1.definitions.SELECTED_ASSAY_FILE_TEMPLATE as {"a_MTBLS1.txt": {"headers": {
 			{"columnHeader": "Sample Name", "required": true},
 			{"columnHeader": "Parameter Value[Scan polarity]", "required": true},
 		}}}
@@ -60,7 +60,7 @@ test_rule_a_100_100_001_03_violation_01 if {
 		"investigation": {"studies": [{"fileName": "s_MTBLS1.txt"}]},
 		"parserMessages": {"s_MTBLS1.txt": []},
 	}
-		with data.metabolights.validation.v2.rules.phase1.definitions._DEFAULT_ASSAY_HEADERS as {"a_MTBLS1.txt": {"headers": {
+		with data.metabolights.validation.v2.rules.phase1.definitions.SELECTED_ASSAY_FILE_TEMPLATE as {"a_MTBLS1.txt": {"headers": {
 			{"columnHeader": "Sample Name", "required": true},
 			{"columnHeader": "Parameter Value[Scan polarity]", "required": true},
 			{"columnHeader": "Parameter Value[Scan m/z range]", "required": true},

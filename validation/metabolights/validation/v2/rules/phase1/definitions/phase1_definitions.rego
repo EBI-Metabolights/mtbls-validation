@@ -193,6 +193,13 @@ _DEFAULT_SAMPLE_FILE_HEADERS := {header.columnHeader: header |
 	some header in template.headers
 }
 
+SELECTED_ASSAY_FILE_TEMPLATE := {assay_file_name: template |
+	some file_name, headers_set in _DEFAULT_ASSAY_HEADERS
+	some template in headers_set
+	template.version == STUDY_TEMPLATE_VERSION
+	assay_file_name := file_name
+}
+
 SELECTED_STUDY_SAMPLE_FILE_TEMPLATE_HEADERS := [header |
 	template := SELECTED_STUDY_SAMPLE_FILE_TEMPLATE
 	some header in template.headers
