@@ -180,24 +180,35 @@ rule_a_100_100_001_07 contains result if {
 rule_a_100_100_001_08 contains result if {
 	some file_name, _ in input.assays
 	def := data.metabolights.validation.v2.rules.phase1.definitions
+	template := def.SELECTED_ASSAY_FILE_TEMPLATE[file_name]
 
-	headers := [header |
-		some header in input.assays[file_name].table.headers
-		header.columnHeader in def._DEFAULT_ASSAY_HEADER_NAMES[file_name]
-		not endswith(header.columnHeader, " Data File")
+	template_header_names := {h.columnHeader |
+		some h in template.headers
+		not endswith(h.columnHeader, " Data File")
+	}
+
+	assay_columns := [regex.replace(c, "\\.[0-9]+$", "") | some c in input.assays[file_name].table.columns]
+
+	filtered_assay_headers := [header |
+		some header in assay_columns
+		header in template_header_names
 	]
 
-	count(headers) > 0
+	assay_header_names := {header | some header in filtered_assay_headers}
 
-	default_headers := [header | some header in def.SELECTED_ASSAY_FILE_TEMPLATE[file_name].headers; not endswith(header.columnHeader, " Data File")]
-
-	matches := [sprintf("[Expected column at '%v': '%v', found '%v']", [x1, x2, x3]) |
-		some j, header in headers
-		header.columnHeader != default_headers[j].columnHeader
-		x1 := header.columnIndex + 1
-		x2 := default_headers[j].columnHeader
-		x3 := header.columnHeader
+	filtered_template_headers := [h.columnHeader |
+		some h in template.headers
+		not endswith(h.columnHeader, " Data File")
+		h.columnHeader in assay_header_names
 	]
+
+	matches := [sprintf("[Expected '%v' at order %v, found '%v']", [filtered_template_headers[idx], idx + 1, filtered_assay_headers[idx]]) |
+		some idx, expected_header in filtered_template_headers
+		count(filtered_assay_headers) > idx
+		expected_header != filtered_assay_headers[idx]
+	]
+
+	count(matches) > 0
 
 	sourceFile := file_name
 	result := f.format_with_file_and_values(rego.metadata.rule(), sourceFile, matches)
