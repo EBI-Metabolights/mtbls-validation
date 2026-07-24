@@ -1736,6 +1736,36 @@ rule_i_100_350_008_01 contains result if {
 	result := f.format(rego.metadata.rule(), msg, source)
 }
 
+# METADATA
+# title: Study Protocol Parameters Name not used in assay files.
+# description: Study Protocol Parameters Name values in i_Investigation.txt must be referenced by at least one assay Parameter Value column.
+# custom:
+#  rule_id: rule_i_100_350_009_01
+#  type: ERROR
+#  priority: CRITICAL
+#  section: investigation.studyProtocols
+rule_i_100_350_009_01 contains result if {
+	input.assays
+	protocol_parameters := {parameter.term |
+		some study in input.investigation.studies
+		some protocol in study.studyProtocols.protocols
+		some parameter in protocol.parameters
+		count(parameter.term) > 0
+	}
+	assay_parameters := {param |
+		some _, assay in input.assays
+		some header in assay.table.headers
+		startswith(header.columnHeader, "Parameter Value[")
+		param1 := replace(header.columnHeader, "Parameter Value[", "")
+		param := replace(param1, "]", "")
+		count(param) > 0
+	}
+	matches := protocol_parameters - assay_parameters
+	count(matches) > 0
+
+	result := f.format_with_file_description_and_values(rego.metadata.rule(), input.investigationFilePath, "Study protocol parameter(s) not referenced by any assay Parameter Value column", matches)
+}
+
 # # METADATA
 # # title: Valid study protocol parameter term accession number
 # # description: study protocol parameter term accession number should be set
