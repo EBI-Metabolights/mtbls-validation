@@ -71,3 +71,24 @@ test_rule_a_100_100_001_11_violation_01 if {
 		with input.investigation.studies as [{"studyProtocols": {"protocols": [{"parameters": [{"term": "Scan polarity"}, {"term": "Age"}, {"term": "Scan m/z range"}]}]}}]
 	count(result) == 1
 }
+
+# METADATA
+# title: Assay Parameter Values names can be defined across investigation studies.
+# description: Assay Parameter Values names can be found in any study protocol parameter in investigation file.
+test_rule_a_100_100_001_11_no_violation_02 if {
+	result := rules.rule_a_100_100_001_11 with input as {
+		"investigationFilePath": "i_Investigation.txt",
+		"assays": {"a_MTBLS1.txt": {"table": {
+			"rowOffset": 0, "totalRowCount": 0,
+			"headers": [
+				{"columnCategory": "", "columnPrefix": "", "columnStructure": "", "columnHeader": "Parameter Value[Scan polarity]", "columnIndex": 1},
+				{"columnCategory": "", "columnPrefix": "", "columnStructure": "", "columnHeader": "Parameter Value[Age]", "columnIndex": 2},
+			],
+		}}},
+		"investigation": {"studies": [
+			{"studyProtocols": {"protocols": [{"parameters": [{"term": "Scan polarity"}]}]}},
+			{"studyProtocols": {"protocols": [{"parameters": [{"term": "Age"}]}]}},
+		]},
+	}
+	count(result) == 0
+}

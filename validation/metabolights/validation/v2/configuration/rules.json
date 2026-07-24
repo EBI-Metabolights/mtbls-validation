@@ -1316,6 +1316,14 @@
                 "priority": "HIGH"
             },
             {
+                "rule_id": "rule_i_100_350_009_01",
+                "title": "Study Protocol Parameters Name not used in assay files.",
+                "description": "Study Protocol Parameters Name values in i_Investigation.txt must be referenced by at least one assay Parameter Value column.",
+                "type": "ERROR",
+                "section": "investigation",
+                "priority": "CRITICAL"
+            },
+            {
                 "rule_id": "rule_i_100_360_001_01",
                 "title": "No study contacts referenced in investigation file.",
                 "description": "At least one study contacts should be defined in i_Investigation.txt.",

@@ -293,11 +293,12 @@ rule_a_100_100_001_10 contains result if {
 #  section: assays.columns
 rule_a_100_100_001_11 contains result if {
 	some file_name, assay in input.assays
-	some study in input.investigation.studies
 	input.investigation.studies
 	parameter_names := {x.term |
+		some study in input.investigation.studies
 		some protocol in study.studyProtocols.protocols
 		some x in protocol.parameters
+		count(x.term) > 0
 	}
 	assay_parameters := {param |
 		some header in assay.table.headers
@@ -305,8 +306,10 @@ rule_a_100_100_001_11 contains result if {
 		startswith(header.columnHeader, "Parameter Value[")
 		param1 := replace(header.columnHeader, "Parameter Value[", "")
 		param := replace(param1, "]", "")
+		count(param) > 0
 	}
 	matches = assay_parameters - parameter_names
+	count(matches) > 0
 
 	result := f.format_with_file_description_and_values(rego.metadata.rule(), file_name, "Assay parameter(s) not referenced in i_Investigation.txt", matches)
 }
