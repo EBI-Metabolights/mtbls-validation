@@ -23,18 +23,32 @@ rule_i_100_350_009_01_test_cases := 1
 test_rule_i_100_350_009_01_no_violation_01 if {
 	result := rules.rule_i_100_350_009_01 with input as {
 		"investigationFilePath": "i_Investigation.txt",
-		"investigation": {"studies": [{"identifier": "MTBLS1", "studyProtocols": {"protocols": [
-			{"name": "Mass spectrometry", "parameters": [
-				{"term": "Scan polarity", "termAccessionNumber": "", "termSourceRef": ""},
-				{"term": "Scan m/z range", "termAccessionNumber": "", "termSourceRef": ""},
-			]},
-			{"name": "Chromatography", "parameters": [{"term": "Column model", "termAccessionNumber": "", "termSourceRef": ""}]},
-		]}}]},
+		"investigation": {
+			"studies": [
+				{
+					"identifier": "MTBLS1", "studyProtocols": {
+						"protocols": [
+							{
+								"name": "Mass spectrometry", "parameters": [
+									{"term": "Scan polarity", "termAccessionNumber": "", "termSourceRef": ""},
+									{"term": "Scan m/z range", "termAccessionNumber": "", "termSourceRef": ""},
+								],
+							},
+							{"name": "Chromatography", "parameters": [{"term": "Column model", "termAccessionNumber": "", "termSourceRef": ""}]},
+						],
+					},
+				},
+			],
+		},
 		"assays": {
-			"a_MTBLS1_ms.txt": {"table": {"headers": [
-				{"columnHeader": "Parameter Value[Scan polarity]", "columnIndex": 1},
-				{"columnHeader": "Parameter Value[Scan m/z range]", "columnIndex": 2},
-			]}},
+			"a_MTBLS1_ms.txt": {
+				"table": {
+					"headers": [
+						{"columnHeader": "Parameter Value[Scan polarity]", "columnIndex": 1},
+						{"columnHeader": "Parameter Value[Scan m/z range]", "columnIndex": 2},
+					],
+				},
+			},
 			"a_MTBLS1_chromatography.txt": {"table": {"headers": [{"columnHeader": "Parameter Value[Column model]", "columnIndex": 1}]}},
 		},
 	}
@@ -47,17 +61,33 @@ test_rule_i_100_350_009_01_no_violation_01 if {
 test_rule_i_100_350_009_01_violation_01 if {
 	result := rules.rule_i_100_350_009_01 with input as {
 		"investigationFilePath": "i_Investigation.txt",
-		"investigation": {"studies": [{"identifier": "MTBLS1", "studyProtocols": {"protocols": [
-			{"name": "Mass spectrometry", "parameters": [
-				{"term": "Scan polarity", "termAccessionNumber": "", "termSourceRef": ""},
-				{"term": "Mass analyzer", "termAccessionNumber": "", "termSourceRef": ""},
-			]},
-			{"name": "Chromatography", "parameters": [{"term": "Column model", "termAccessionNumber": "", "termSourceRef": ""}]},
-		]}}]},
-		"assays": {"a_MTBLS1_ms.txt": {"table": {"headers": [
-			{"columnHeader": "Parameter Value[Scan polarity]", "columnIndex": 1},
-			{"columnHeader": "Parameter Value[Column model]", "columnIndex": 2},
-		]}}},
+		"investigation": {
+			"studies": [
+				{
+					"identifier": "MTBLS1", "studyProtocols": {
+						"protocols": [
+							{
+								"name": "Mass spectrometry", "parameters": [
+									{"term": "Scan polarity", "termAccessionNumber": "", "termSourceRef": ""},
+									{"term": "Mass analyzer", "termAccessionNumber": "", "termSourceRef": ""},
+								],
+							},
+							{"name": "Chromatography", "parameters": [{"term": "Column model", "termAccessionNumber": "", "termSourceRef": ""}]},
+						],
+					},
+				},
+			],
+		},
+		"assays": {
+			"a_MTBLS1_ms.txt": {
+				"table": {
+					"headers": [
+						{"columnHeader": "Parameter Value[Scan polarity]", "columnIndex": 1},
+						{"columnHeader": "Parameter Value[Column model]", "columnIndex": 2},
+					],
+				},
+			},
+		},
 	}
 	count(result) == 1
 	violation := result[_]

@@ -22,38 +22,50 @@ rule_i_100_360_001_01_test_cases := 1
 # description: There are two study contacts in i_Investigation.txt.
 test_rule_i_100_360_001_01_no_violation_02 if {
 	result := rules.rule_i_100_360_001_01 with input as {
-		"investigation": {"studies": [{"identifier": "MTBLS1", "studyContacts": {"people": [
-			{
-				"lastName": "",
-				"firstName": "",
-				"midInitials": "",
-				"email": "",
-				"phone": "",
-				"fax": "",
-				"address": "",
-				"affiliation": "",
-				"roles": [{
-					"term": "",
-					"termAccessionNumber": "",
-					"termSourceRef": "",
-				}],
-			},
-			{
-				"lastName": "",
-				"firstName": "",
-				"midInitials": "",
-				"email": "",
-				"phone": "",
-				"fax": "",
-				"address": "",
-				"affiliation": "",
-				"roles": [{
-					"term": "",
-					"termAccessionNumber": "",
-					"termSourceRef": "",
-				}],
-			},
-		]}}]},
+		"investigation": {
+			"studies": [
+				{
+					"identifier": "MTBLS1", "studyContacts": {
+						"people": [
+							{
+								"lastName": "",
+								"firstName": "",
+								"midInitials": "",
+								"email": "",
+								"phone": "",
+								"fax": "",
+								"address": "",
+								"affiliation": "",
+								"roles": [
+									{
+										"term": "",
+										"termAccessionNumber": "",
+										"termSourceRef": "",
+									},
+								],
+							},
+							{
+								"lastName": "",
+								"firstName": "",
+								"midInitials": "",
+								"email": "",
+								"phone": "",
+								"fax": "",
+								"address": "",
+								"affiliation": "",
+								"roles": [
+									{
+										"term": "",
+										"termAccessionNumber": "",
+										"termSourceRef": "",
+									},
+								],
+							},
+						],
+					},
+				},
+			],
+		},
 		"investigationFilePath": "i_Investigation.txt",
 	}
 	count(result) == 0

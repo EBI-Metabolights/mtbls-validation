@@ -24,15 +24,17 @@ test_rule_i_100_360_008_14_no_violation_01 if {
 	input_01 := data.tests.data.inputs.minimum_01
 	input_data := json.patch(
 		input_01,
-		[{
-			"op": "replace",
-			"path": "/investigation/studies/0/studyContacts/people/0/roles/0",
-			"value": {
-				"term": "disease",
-				"termAccessionNumber": "http://purl.obolibrary.org/obo/MONDO_0000001",
-				"termSourceRef": "MONDO",
+		[
+			{
+				"op": "replace",
+				"path": "/investigation/studies/0/studyContacts/people/0/roles/0",
+				"value": {
+					"term": "disease",
+					"termAccessionNumber": "http://purl.obolibrary.org/obo/MONDO_0000001",
+					"termSourceRef": "MONDO",
+				},
 			},
-		}],
+		],
 	)
 
 	result := rules.rule_i_100_360_008_14 with input as input_data
@@ -46,15 +48,17 @@ test_rule_i_100_360_008_14_violation_01 if {
 	input_01 := data.tests.data.inputs.minimum_01
 	input_data := json.patch(
 		input_01,
-		[{
-			"op": "replace",
-			"path": "/investigation/studies/0/studyContacts/people/0/roles/0",
-			"value": {
-				"term": "kilogram",
-				"termAccessionNumber": "http://purl.obolibrary.org/obo/UO_0000009",
-				"termSourceRef": "UO",
+		[
+			{
+				"op": "replace",
+				"path": "/investigation/studies/0/studyContacts/people/0/roles/0",
+				"value": {
+					"term": "kilogram",
+					"termAccessionNumber": "http://purl.obolibrary.org/obo/UO_0000009",
+					"termSourceRef": "UO",
+				},
 			},
-		}],
+		],
 	)
 	result := rules.rule_i_100_360_008_14 with input as input_data
 	count(result) == 1

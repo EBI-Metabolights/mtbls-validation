@@ -26,11 +26,13 @@ test_rule_i_100_340_002_03_no_violation_01 if {
 	input_01 := data.tests.data.inputs.minimum_01
 	input_data := json.patch(
 		input_01,
-		[{
-			"op": "replace",
-			"path": "/investigation/studies/0/studyAssays/assays/0/fileName",
-			"value": "a_REQ1111_test-data.txt",
-		}],
+		[
+			{
+				"op": "replace",
+				"path": "/investigation/studies/0/studyAssays/assays/0/fileName",
+				"value": "a_REQ1111_test-data.txt",
+			},
+		],
 	)
 	result := rules.rule_i_100_340_002_03 with input as input_data
 
@@ -44,11 +46,13 @@ test_rule_i_100_340_002_03_violation_01 if {
 	input_01 := data.tests.data.inputs.minimum_01
 	input_data := json.patch(
 		input_01,
-		[{
-			"op": "replace",
-			"path": "/investigation/studies/0/studyAssays/assays/0/fileName",
-			"value": "a_MTBLS1111 +sa.tsv",
-		}],
+		[
+			{
+				"op": "replace",
+				"path": "/investigation/studies/0/studyAssays/assays/0/fileName",
+				"value": "a_MTBLS1111 +sa.tsv",
+			},
+		],
 	)
 	result := rules.rule_i_100_340_002_03 with input as input_data
 

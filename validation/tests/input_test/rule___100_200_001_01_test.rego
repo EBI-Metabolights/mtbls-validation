@@ -43,24 +43,26 @@ test_rule___100_200_001_01_no_violation_01 if {
 			{
 				"op": "replace",
 				"path": "/parserMessages",
-				"value": {"s_MTBLS1.txt": [
-					{
-						"column": "",
-						"detail": ".",
-						"line": "",
-						"section": "",
-						"short": "test 1",
-						"type": "ERROR",
-					},
-					{
-						"column": "",
-						"detail": ".",
-						"line": "",
-						"section": "",
-						"short": "test 2",
-						"type": "WARNING",
-					},
-				]},
+				"value": {
+					"s_MTBLS1.txt": [
+						{
+							"column": "",
+							"detail": ".",
+							"line": "",
+							"section": "",
+							"short": "test 1",
+							"type": "ERROR",
+						},
+						{
+							"column": "",
+							"detail": ".",
+							"line": "",
+							"section": "",
+							"short": "test 2",
+							"type": "WARNING",
+						},
+					],
+				},
 			},
 		],
 	)
@@ -129,24 +131,26 @@ test_rule___100_200_001_01_violation_01 if {
 			{
 				"op": "replace",
 				"path": "/parserMessages",
-				"value": {"s_MTBLS1.txt": [
-					{
-						"column": "",
-						"detail": ".",
-						"line": "",
-						"section": "",
-						"short": "test 1",
-						"type": "CRITICAL",
-					},
-					{
-						"column": "",
-						"detail": ".",
-						"line": "",
-						"section": "",
-						"short": "test 2",
-						"type": "ERROR",
-					},
-				]},
+				"value": {
+					"s_MTBLS1.txt": [
+						{
+							"column": "",
+							"detail": ".",
+							"line": "",
+							"section": "",
+							"short": "test 1",
+							"type": "CRITICAL",
+						},
+						{
+							"column": "",
+							"detail": ".",
+							"line": "",
+							"section": "",
+							"short": "test 2",
+							"type": "ERROR",
+						},
+					],
+				},
 			},
 		],
 	)
@@ -183,24 +187,26 @@ test_rule___100_200_001_01_violation_02 if {
 			{
 				"op": "replace",
 				"path": "/parserMessages",
-				"value": {"s_MTBLS1.txt": [
-					{
-						"column": "",
-						"detail": ".",
-						"line": "",
-						"section": "",
-						"short": "test 1",
-						"type": "CRITICAL",
-					},
-					{
-						"column": "",
-						"detail": ".",
-						"line": "",
-						"section": "",
-						"short": "test 2",
-						"type": "CRITICAL",
-					},
-				]},
+				"value": {
+					"s_MTBLS1.txt": [
+						{
+							"column": "",
+							"detail": ".",
+							"line": "",
+							"section": "",
+							"short": "test 1",
+							"type": "CRITICAL",
+						},
+						{
+							"column": "",
+							"detail": ".",
+							"line": "",
+							"section": "",
+							"short": "test 2",
+							"type": "CRITICAL",
+						},
+					],
+				},
 			},
 		],
 	)

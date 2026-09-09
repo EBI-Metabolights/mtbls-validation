@@ -128,6 +128,11 @@
             "name": "EMBL-EBI terms of use",
             "version": "5th February 2024",
             "url": "https://www.ebi.ac.uk/about/terms-of-use/"
+        },
+        "CC BY 4.0": {
+            "name": "CC BY 4.0",
+            "version": "4.0",
+            "url": " https://creativecommons.org/licenses/by/4.0/"
         }
     },
     "descriptorConfiguration": {
@@ -1730,11 +1735,11 @@
             },
             "activeStudyCategories": {
                 "ms-mhd-enabled": {
-                    "visible": false,
+                    "visible": true,
                     "order": 1
                 },
                 "ms-mhd-legacy": {
-                    "visible": true,
+                    "visible": false,
                     "order": 2
                 },
                 "nmr": {
@@ -1755,21 +1760,24 @@
                 }
             },
             "activeDatasetLicenses": [
-                "CC0 1.0 Universal"
+                "CC0 1.0 Universal",
+                "CC BY 4.0"
             ],
             "activeMhdProfiles": {
                 "ms-mhd-enabled": {
                     "profileName": "ms-profile",
-                    "defaultVersion": "0.1",
+                    "defaultVersion": "1.0",
                     "activeVersions": [
-                        "0.1"
+                        "0.1",
+                        "1.0"
                     ]
                 },
                 "ms-mhd-legacy": {
                     "profileName": "legacy-profile",
                     "defaultVersion": "0.1",
                     "activeVersions": [
-                        "0.1"
+                        "0.1",
+                        "1.0"
                     ]
                 }
             },

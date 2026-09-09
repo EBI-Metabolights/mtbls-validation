@@ -26,23 +26,29 @@ test_rule_i_100_310_002_12_no_violation_01 if {
 	input_01 := data.tests.data.inputs.minimum_01
 	input_data := json.patch(
 		input_01,
-		[{
-			"op": "replace",
-			"path": "/investigation/studies/0/studyDesignDescriptors/designTypes",
-			"value": [{
-				"term": "kilogram",
-				"termAccessionNumber": "http://purl.obolibrary.org/obo/UO_0000009",
-				"termSourceRef": "UO",
-			}],
-		}],
+		[
+			{
+				"op": "replace",
+				"path": "/investigation/studies/0/studyDesignDescriptors/designTypes",
+				"value": [
+					{
+						"term": "kilogram",
+						"termAccessionNumber": "http://purl.obolibrary.org/obo/UO_0000009",
+						"termSourceRef": "UO",
+					},
+				],
+			},
+		],
 	)
 	test_rule := json.patch(
 		test_rules.investigation.select_ontology_term_01,
-		[{
-			"op": "replace",
-			"path": "/termEnforcementLevel",
-			"value": "recommended",
-		}],
+		[
+			{
+				"op": "replace",
+				"path": "/termEnforcementLevel",
+				"value": "recommended",
+			},
+		],
 	)
 	result := rules.rule_i_100_310_002_12 with input as input_data
 		with def.RULE_STUDY_DESIGN_TYPE as test_rule
@@ -56,23 +62,29 @@ test_rule_i_100_310_002_12_no_violation_02 if {
 	input_01 := data.tests.data.inputs.minimum_01
 	input_data := json.patch(
 		input_01,
-		[{
-			"op": "replace",
-			"path": "/investigation/studies/0/studyDesignDescriptors/designTypes",
-			"value": [{
-				"term": "kilogram",
-				"termAccessionNumber": "http://purl.obolibrary.org/obo/UO_0000009",
-				"termSourceRef": "UO",
-			}],
-		}],
+		[
+			{
+				"op": "replace",
+				"path": "/investigation/studies/0/studyDesignDescriptors/designTypes",
+				"value": [
+					{
+						"term": "kilogram",
+						"termAccessionNumber": "http://purl.obolibrary.org/obo/UO_0000009",
+						"termSourceRef": "UO",
+					},
+				],
+			},
+		],
 	)
 	test_rule := json.patch(
 		test_rules.investigation.selected_ontologies_01,
-		[{
-			"op": "replace",
-			"path": "/termEnforcementLevel",
-			"value": "recommended",
-		}],
+		[
+			{
+				"op": "replace",
+				"path": "/termEnforcementLevel",
+				"value": "recommended",
+			},
+		],
 	)
 	result := rules.rule_i_100_310_002_12 with input as input_data
 		with def.RULE_STUDY_DESIGN_TYPE as test_rule
@@ -86,23 +98,29 @@ test_rule_i_100_310_002_12_no_violation_03 if {
 	input_01 := data.tests.data.inputs.minimum_01
 	input_data := json.patch(
 		input_01,
-		[{
-			"op": "replace",
-			"path": "/investigation/studies/0/studyDesignDescriptors/designTypes",
-			"value": [{
-				"term": "Not Applicable",
-				"termAccessionNumber": "http://purl.obolibrary.org/obo/NCIT_C48660",
-				"termSourceRef": "NCIT",
-			}],
-		}],
+		[
+			{
+				"op": "replace",
+				"path": "/investigation/studies/0/studyDesignDescriptors/designTypes",
+				"value": [
+					{
+						"term": "Not Applicable",
+						"termAccessionNumber": "http://purl.obolibrary.org/obo/NCIT_C48660",
+						"termSourceRef": "NCIT",
+					},
+				],
+			},
+		],
 	)
 	test_rule := json.patch(
 		test_rules.investigation.child_ontology_term_01,
-		[{
-			"op": "replace",
-			"path": "/termEnforcementLevel",
-			"value": "recommended",
-		}],
+		[
+			{
+				"op": "replace",
+				"path": "/termEnforcementLevel",
+				"value": "recommended",
+			},
+		],
 	)
 	result := rules.rule_i_100_310_002_12 with input as input_data
 		with def.RULE_STUDY_DESIGN_TYPE as test_rule
@@ -116,23 +134,29 @@ test_rule_i_100_310_002_12_no_violation_04 if {
 	input_01 := data.tests.data.inputs.minimum_01
 	input_data := json.patch(
 		input_01,
-		[{
-			"op": "replace",
-			"path": "/investigation/studies/0/studyDesignDescriptors/designTypes",
-			"value": [{
-				"term": "Example",
-				"termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/placeholder",
-				"termSourceRef": "MTBLS",
-			}],
-		}],
+		[
+			{
+				"op": "replace",
+				"path": "/investigation/studies/0/studyDesignDescriptors/designTypes",
+				"value": [
+					{
+						"term": "Example",
+						"termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/placeholder",
+						"termSourceRef": "MTBLS",
+					},
+				],
+			},
+		],
 	)
 	test_rule := json.patch(
 		test_rules.investigation.any_ontology_term_01,
-		[{
-			"op": "replace",
-			"path": "/termEnforcementLevel",
-			"value": "recommended",
-		}],
+		[
+			{
+				"op": "replace",
+				"path": "/termEnforcementLevel",
+				"value": "recommended",
+			},
+		],
 	)
 	result := rules.rule_i_100_310_002_12 with input as input_data
 		with def.RULE_STUDY_DESIGN_TYPE as test_rule
@@ -146,23 +170,29 @@ test_rule_i_100_310_002_12_violation_01 if {
 	input_01 := data.tests.data.inputs.minimum_01
 	input_data := json.patch(
 		input_01,
-		[{
-			"op": "replace",
-			"path": "/investigation/studies/0/studyDesignDescriptors/designTypes",
-			"value": [{
-				"term": "",
-				"termAccessionNumber": "http://purl.obolibrary.org/obo/UO_0000009",
-				"termSourceRef": "UO",
-			}],
-		}],
+		[
+			{
+				"op": "replace",
+				"path": "/investigation/studies/0/studyDesignDescriptors/designTypes",
+				"value": [
+					{
+						"term": "",
+						"termAccessionNumber": "http://purl.obolibrary.org/obo/UO_0000009",
+						"termSourceRef": "UO",
+					},
+				],
+			},
+		],
 	)
 	test_rule := json.patch(
 		test_rules.investigation.select_ontology_term_01,
-		[{
-			"op": "replace",
-			"path": "/termEnforcementLevel",
-			"value": "recommended",
-		}],
+		[
+			{
+				"op": "replace",
+				"path": "/termEnforcementLevel",
+				"value": "recommended",
+			},
+		],
 	)
 	result := rules.rule_i_100_310_002_12 with input as input_data
 		with def.RULE_STUDY_DESIGN_TYPE as test_rule
@@ -176,23 +206,29 @@ test_rule_i_100_310_002_12_violation_02 if {
 	input_01 := data.tests.data.inputs.minimum_01
 	input_data := json.patch(
 		input_01,
-		[{
-			"op": "replace",
-			"path": "/investigation/studies/0/studyDesignDescriptors/designTypes",
-			"value": [{
-				"term": "kilogram",
-				"termAccessionNumber": "http://purl.obolibrary.org/obo/UO_0000009",
-				"termSourceRef": "",
-			}],
-		}],
+		[
+			{
+				"op": "replace",
+				"path": "/investigation/studies/0/studyDesignDescriptors/designTypes",
+				"value": [
+					{
+						"term": "kilogram",
+						"termAccessionNumber": "http://purl.obolibrary.org/obo/UO_0000009",
+						"termSourceRef": "",
+					},
+				],
+			},
+		],
 	)
 	test_rule := json.patch(
 		test_rules.investigation.child_ontology_term_01,
-		[{
-			"op": "replace",
-			"path": "/termEnforcementLevel",
-			"value": "recommended",
-		}],
+		[
+			{
+				"op": "replace",
+				"path": "/termEnforcementLevel",
+				"value": "recommended",
+			},
+		],
 	)
 	result := rules.rule_i_100_310_002_12 with input as input_data
 		with def.RULE_STUDY_DESIGN_TYPE as test_rule
@@ -206,23 +242,29 @@ test_rule_i_100_310_002_12_violation_03 if {
 	input_01 := data.tests.data.inputs.minimum_01
 	input_data := json.patch(
 		input_01,
-		[{
-			"op": "replace",
-			"path": "/investigation/studies/0/studyDesignDescriptors/designTypes",
-			"value": [{
-				"term": "kilogram",
-				"termAccessionNumber": "",
-				"termSourceRef": "UOX",
-			}],
-		}],
+		[
+			{
+				"op": "replace",
+				"path": "/investigation/studies/0/studyDesignDescriptors/designTypes",
+				"value": [
+					{
+						"term": "kilogram",
+						"termAccessionNumber": "",
+						"termSourceRef": "UOX",
+					},
+				],
+			},
+		],
 	)
 	test_rule := json.patch(
 		test_rules.investigation.selected_ontologies_01,
-		[{
-			"op": "replace",
-			"path": "/termEnforcementLevel",
-			"value": "recommended",
-		}],
+		[
+			{
+				"op": "replace",
+				"path": "/termEnforcementLevel",
+				"value": "recommended",
+			},
+		],
 	)
 	result := rules.rule_i_100_310_002_12 with input as input_data
 		with def.RULE_STUDY_DESIGN_TYPE as test_rule
@@ -236,23 +278,29 @@ test_rule_i_100_310_002_12_violation_04 if {
 	input_01 := data.tests.data.inputs.minimum_01
 	input_data := json.patch(
 		input_01,
-		[{
-			"op": "replace",
-			"path": "/investigation/studies/0/studyDesignDescriptors/designTypes",
-			"value": [{
-				"term": "microgram",
-				"termAccessionNumber": "http://purl.obolibrary.org/obo/UO_0000023",
-				"termSourceRef": "",
-			}],
-		}],
+		[
+			{
+				"op": "replace",
+				"path": "/investigation/studies/0/studyDesignDescriptors/designTypes",
+				"value": [
+					{
+						"term": "microgram",
+						"termAccessionNumber": "http://purl.obolibrary.org/obo/UO_0000023",
+						"termSourceRef": "",
+					},
+				],
+			},
+		],
 	)
 	test_rule := json.patch(
 		test_rules.investigation.any_ontology_term_01,
-		[{
-			"op": "replace",
-			"path": "/termEnforcementLevel",
-			"value": "recommended",
-		}],
+		[
+			{
+				"op": "replace",
+				"path": "/termEnforcementLevel",
+				"value": "recommended",
+			},
+		],
 	)
 	result := rules.rule_i_100_310_002_12 with input as input_data
 		with def.RULE_STUDY_DESIGN_TYPE as test_rule

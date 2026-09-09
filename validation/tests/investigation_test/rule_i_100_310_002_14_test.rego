@@ -25,15 +25,19 @@ test_rule_i_100_310_002_14_no_violation_01 if {
 	input_01 := data.tests.data.inputs.minimum_01
 	input_data := json.patch(
 		input_01,
-		[{
-			"op": "replace",
-			"path": "/investigation/studies/0/studyDesignDescriptors/designTypes",
-			"value": [{
-				"term": "tandem mass spectrometry",
-				"termAccessionNumber": "http://www.ebi.ac.uk/efo/EFO_0030056",
-				"termSourceRef": "EFO",
-			}],
-		}],
+		[
+			{
+				"op": "replace",
+				"path": "/investigation/studies/0/studyDesignDescriptors/designTypes",
+				"value": [
+					{
+						"term": "tandem mass spectrometry",
+						"termAccessionNumber": "http://www.ebi.ac.uk/efo/EFO_0030056",
+						"termSourceRef": "EFO",
+					},
+				],
+			},
+		],
 	)
 	result := rules.rule_i_100_310_002_14 with input as input_data
 	count(result) == 0
@@ -46,15 +50,19 @@ test_rule_i_100_310_002_14_violation_01 if {
 	input_01 := data.tests.data.inputs.minimum_01
 	input_data := json.patch(
 		input_01,
-		[{
-			"op": "replace",
-			"path": "/investigation/studies/0/studyDesignDescriptors/designTypes",
-			"value": [{
-				"term": "kilogram",
-				"termAccessionNumber": "http://purl.obolibrary.org/obo/UO_0000009",
-				"termSourceRef": "UO",
-			}],
-		}],
+		[
+			{
+				"op": "replace",
+				"path": "/investigation/studies/0/studyDesignDescriptors/designTypes",
+				"value": [
+					{
+						"term": "kilogram",
+						"termAccessionNumber": "http://purl.obolibrary.org/obo/UO_0000009",
+						"termSourceRef": "UO",
+					},
+				],
+			},
+		],
 	)
 	result := rules.rule_i_100_310_002_14 with input as input_data
 	count(result) == 1

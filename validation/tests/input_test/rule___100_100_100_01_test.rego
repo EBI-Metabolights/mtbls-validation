@@ -52,24 +52,26 @@ test_rule___100_100_100_01_no_violation_2 if {
 			{
 				"op": "replace",
 				"path": "/parserMessages",
-				"value": {"i_Investigation.txt": [
-					{
-						"detail": "Critical message.",
-						"short": "test 1",
-						"column": "",
-						"line": "",
-						"section": "",
-						"type": "WARNING",
-					},
-					{
-						"detail": "Critical message 2.",
-						"short": "test 2",
-						"column": "",
-						"line": "",
-						"section": "",
-						"type": "ERROR",
-					},
-				]},
+				"value": {
+					"i_Investigation.txt": [
+						{
+							"detail": "Critical message.",
+							"short": "test 1",
+							"column": "",
+							"line": "",
+							"section": "",
+							"type": "WARNING",
+						},
+						{
+							"detail": "Critical message 2.",
+							"short": "test 2",
+							"column": "",
+							"line": "",
+							"section": "",
+							"type": "ERROR",
+						},
+					],
+				},
 			},
 			{
 				"op": "replace",
@@ -93,14 +95,18 @@ test_rule___100_100_100_01_violation_01 if {
 			{
 				"op": "replace",
 				"path": "/parserMessages",
-				"value": {"i_Investigation.txt": [{
-					"detail": "Critical message.",
-					"short": "test 1",
-					"column": "",
-					"line": "",
-					"section": "",
-					"type": "CRITICAL",
-				}]},
+				"value": {
+					"i_Investigation.txt": [
+						{
+							"detail": "Critical message.",
+							"short": "test 1",
+							"column": "",
+							"line": "",
+							"section": "",
+							"type": "CRITICAL",
+						},
+					],
+				},
 			},
 			{
 				"op": "replace",
@@ -124,24 +130,26 @@ test_rule___100_100_100_01_violation_02 if {
 			{
 				"op": "replace",
 				"path": "/parserMessages",
-				"value": {"i_Investigation.txt": [
-					{
-						"detail": "Critical message.",
-						"short": "test 1",
-						"column": "",
-						"line": "",
-						"section": "",
-						"type": "CRITICAL",
-					},
-					{
-						"detail": "Critical message 2.",
-						"short": "test 2",
-						"column": "",
-						"line": "",
-						"section": "",
-						"type": "CRITICAL",
-					},
-				]},
+				"value": {
+					"i_Investigation.txt": [
+						{
+							"detail": "Critical message.",
+							"short": "test 1",
+							"column": "",
+							"line": "",
+							"section": "",
+							"type": "CRITICAL",
+						},
+						{
+							"detail": "Critical message 2.",
+							"short": "test 2",
+							"column": "",
+							"line": "",
+							"section": "",
+							"type": "CRITICAL",
+						},
+					],
+				},
 			},
 			{
 				"op": "replace",

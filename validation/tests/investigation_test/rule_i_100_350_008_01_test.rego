@@ -22,49 +22,59 @@ rule_i_100_350_008_01_test_cases := 1
 # description: study protocol type parameter term is valid.
 test_rule_i_100_350_008_01_no_violation_01 if {
 	result := rules.rule_i_100_350_008_01 with input as {
-		"investigation": {"studies": [{"identifier": "MTBLS1", "studyProtocols": {"protocols": [
-			{
-				"name": "",
-				"protocolType": {
-					"term": "Sample collection",
-					"termAccessionNumber": "",
-					"termSourceRef": "",
-				},
-				"description": "Description of study protocol.",
-				"uri": "",
-				"version": "",
-				"parameters": [{
-					"term": "Post Extraction",
-					"termAccessionNumber": "",
-					"termSourceRef": "",
-				}],
-				"components": [],
-			},
-			{
-				"name": "Mass spectrometry",
-				"protocolType": {
-					"term": "Extraction",
-					"termAccessionNumber": "",
-					"termSourceRef": "",
-				},
-				"description": "Description of study protocol. Description of study protocol.",
-				"uri": "",
-				"version": "",
-				"parameters": [
-					{
-						"term": "UO",
-						"termAccessionNumber": "",
-						"termSourceRef": "",
+		"investigation": {
+			"studies": [
+				{
+					"identifier": "MTBLS1", "studyProtocols": {
+						"protocols": [
+							{
+								"name": "",
+								"protocolType": {
+									"term": "Sample collection",
+									"termAccessionNumber": "",
+									"termSourceRef": "",
+								},
+								"description": "Description of study protocol.",
+								"uri": "",
+								"version": "",
+								"parameters": [
+									{
+										"term": "Post Extraction",
+										"termAccessionNumber": "",
+										"termSourceRef": "",
+									},
+								],
+								"components": [],
+							},
+							{
+								"name": "Mass spectrometry",
+								"protocolType": {
+									"term": "Extraction",
+									"termAccessionNumber": "",
+									"termSourceRef": "",
+								},
+								"description": "Description of study protocol. Description of study protocol.",
+								"uri": "",
+								"version": "",
+								"parameters": [
+									{
+										"term": "UO",
+										"termAccessionNumber": "",
+										"termSourceRef": "",
+									},
+									{
+										"term": "Derivatization",
+										"termAccessionNumber": "",
+										"termSourceRef": "",
+									},
+								],
+								"components": [],
+							},
+						],
 					},
-					{
-						"term": "Derivatization",
-						"termAccessionNumber": "",
-						"termSourceRef": "",
-					},
-				],
-				"components": [],
-			},
-		]}}]},
+				},
+			],
+		},
 		"investigationFilePath": "i_Investigation.txt",
 	}
 	count(result) == 0
@@ -75,35 +85,45 @@ test_rule_i_100_350_008_01_no_violation_01 if {
 # description: study protocol type parameter term is not valid.
 test_rule_i_100_350_008_01_violation_01 if {
 	result := rules.rule_i_100_350_008_01 with input as {
-		"investigation": {"studies": [{"identifier": "MTBLS1", "studyProtocols": {"protocols": [{
-			"name": "Sa",
-			"protocolType": {
-				"term": "Sa",
-				"termAccessionNumber": "",
-				"termSourceRef": "",
-			},
-			"description": "Description of study protocol",
-			"uri": "",
-			"version": "",
-			"parameters": [
+		"investigation": {
+			"studies": [
 				{
-					"term": "UFO",
-					"termAccessionNumber": "",
-					"termSourceRef": "",
-				},
-				{
-					"term": "U",
-					"termAccessionNumber": "",
-					"termSourceRef": "",
-				},
-				{
-					"term": "",
-					"termAccessionNumber": "",
-					"termSourceRef": "",
+					"identifier": "MTBLS1", "studyProtocols": {
+						"protocols": [
+							{
+								"name": "Sa",
+								"protocolType": {
+									"term": "Sa",
+									"termAccessionNumber": "",
+									"termSourceRef": "",
+								},
+								"description": "Description of study protocol",
+								"uri": "",
+								"version": "",
+								"parameters": [
+									{
+										"term": "UFO",
+										"termAccessionNumber": "",
+										"termSourceRef": "",
+									},
+									{
+										"term": "U",
+										"termAccessionNumber": "",
+										"termSourceRef": "",
+									},
+									{
+										"term": "",
+										"termAccessionNumber": "",
+										"termSourceRef": "",
+									},
+								],
+								"components": [],
+							},
+						],
+					},
 				},
 			],
-			"components": [],
-		}]}}]},
+		},
 		"investigationFilePath": "i_Investigation.txt",
 	}
 	count(result) == 2

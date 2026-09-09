@@ -41,20 +41,24 @@ test_rule_m_100_100_004_01_no_violation_01 if {
 			},
 		},
 		"investigationFilePath": "i_Investigation.txt",
-		"metaboliteAssignments": {"m_MTBLS1.txt": {"table": {
-			"rowOffset": 0, "totalRowCount": 0,
-			"headers": [
-				{"columnPrefix": "", "columnStructure": "SINGLE_COLUMN", "columnHeader": "database_identifier", "columnIndex": 1},
-				{"columnPrefix": "", "columnStructure": "ONTOLOGY_COLUMN", "columnHeader": "chemical_formula", "columnIndex": 2},
-				{"columnPrefix": "", "columnStructure": "SINGLE_COLUMN_AND_UNIT_ONTOLOGY", "columnHeader": "smiles", "columnIndex": 3},
-				{"columnPrefix": "", "columnStructure": "INVALID_MULTI_COLUMN", "columnHeader": "inchi", "columnIndex": 4},
-				{"columnPrefix": "", "columnStructure": "INVALID_MULTI_COLUMN", "columnHeader": "metabolite_identification", "columnIndex": 4},
-				{"columnPrefix": "", "columnStructure": "INVALID_MULTI_COLUMN", "columnHeader": "Sample1", "columnIndex": 5},
-				{"columnPrefix": "", "columnStructure": "INVALID_MULTI_COLUMN", "columnHeader": "Sample2", "columnIndex": 6},
-				{"columnPrefix": "", "columnStructure": "INVALID_MULTI_COLUMN", "columnHeader": "Sample3", "columnIndex": 7},
-				{"columnPrefix": "", "columnStructure": "INVALID_MULTI_COLUMN", "columnHeader": "Sample4", "columnIndex": 8},
-			],
-		}}},
+		"metaboliteAssignments": {
+			"m_MTBLS1.txt": {
+				"table": {
+					"rowOffset": 0, "totalRowCount": 0,
+					"headers": [
+						{"columnPrefix": "", "columnStructure": "SINGLE_COLUMN", "columnHeader": "database_identifier", "columnIndex": 1},
+						{"columnPrefix": "", "columnStructure": "ONTOLOGY_COLUMN", "columnHeader": "chemical_formula", "columnIndex": 2},
+						{"columnPrefix": "", "columnStructure": "SINGLE_COLUMN_AND_UNIT_ONTOLOGY", "columnHeader": "smiles", "columnIndex": 3},
+						{"columnPrefix": "", "columnStructure": "INVALID_MULTI_COLUMN", "columnHeader": "inchi", "columnIndex": 4},
+						{"columnPrefix": "", "columnStructure": "INVALID_MULTI_COLUMN", "columnHeader": "metabolite_identification", "columnIndex": 4},
+						{"columnPrefix": "", "columnStructure": "INVALID_MULTI_COLUMN", "columnHeader": "Sample1", "columnIndex": 5},
+						{"columnPrefix": "", "columnStructure": "INVALID_MULTI_COLUMN", "columnHeader": "Sample2", "columnIndex": 6},
+						{"columnPrefix": "", "columnStructure": "INVALID_MULTI_COLUMN", "columnHeader": "Sample3", "columnIndex": 7},
+						{"columnPrefix": "", "columnStructure": "INVALID_MULTI_COLUMN", "columnHeader": "Sample4", "columnIndex": 8},
+					],
+				},
+			},
+		},
 		"investigation": {"studies": [{"fileName": "s_MTBLS1.txt"}]},
 		"parserMessages": {"s_MTBLS1.txt": []},
 		"studyDbMetadata": {"studyCategory": "other", "sampleTemplate": "minimum", "templateVersion": "2.0"},
@@ -87,18 +91,22 @@ test_rule_m_100_100_004_01_violation_01 if {
 			},
 		},
 		"investigationFilePath": "i_Investigation.txt",
-		"metaboliteAssignments": {"m_MTBLS3.txt": {"assayTechnique": {"name": "LC-MS", "mainTechnique": "MS"}, "table": {
-			"rowOffset": 0, "totalRowCount": 0,
-			"headers": [
-				{"columnPrefix": "", "columnStructure": "SINGLE_COLUMN", "columnHeader": "database_identifier", "columnIndex": 1},
-				{"columnPrefix": "", "columnStructure": "ONTOLOGY_COLUMN", "columnHeader": "chemical_formula", "columnIndex": 2},
-				{"columnPrefix": "", "columnStructure": "SINGLE_COLUMN_AND_UNIT_ONTOLOGY", "columnHeader": "smiles", "columnIndex": 3},
-				{"columnPrefix": "", "columnStructure": "INVALID_MULTI_COLUMN", "columnHeader": "inchi", "columnIndex": 4},
-				{"columnPrefix": "", "columnStructure": "INVALID_MULTI_COLUMN", "columnHeader": "metabolite_identification", "columnIndex": 4},
-				{"columnPrefix": "", "columnStructure": "INVALID_MULTI_COLUMN", "columnHeader": "Sample1", "columnIndex": 5},
-				{"columnPrefix": "", "columnStructure": "INVALID_MULTI_COLUMN", "columnHeader": "Sample4", "columnIndex": 8},
-			],
-		}}},
+		"metaboliteAssignments": {
+			"m_MTBLS3.txt": {
+				"assayTechnique": {"name": "LC-MS", "mainTechnique": "MS"}, "table": {
+					"rowOffset": 0, "totalRowCount": 0,
+					"headers": [
+						{"columnPrefix": "", "columnStructure": "SINGLE_COLUMN", "columnHeader": "database_identifier", "columnIndex": 1},
+						{"columnPrefix": "", "columnStructure": "ONTOLOGY_COLUMN", "columnHeader": "chemical_formula", "columnIndex": 2},
+						{"columnPrefix": "", "columnStructure": "SINGLE_COLUMN_AND_UNIT_ONTOLOGY", "columnHeader": "smiles", "columnIndex": 3},
+						{"columnPrefix": "", "columnStructure": "INVALID_MULTI_COLUMN", "columnHeader": "inchi", "columnIndex": 4},
+						{"columnPrefix": "", "columnStructure": "INVALID_MULTI_COLUMN", "columnHeader": "metabolite_identification", "columnIndex": 4},
+						{"columnPrefix": "", "columnStructure": "INVALID_MULTI_COLUMN", "columnHeader": "Sample1", "columnIndex": 5},
+						{"columnPrefix": "", "columnStructure": "INVALID_MULTI_COLUMN", "columnHeader": "Sample4", "columnIndex": 8},
+					],
+				},
+			},
+		},
 		"investigation": {"studies": [{"fileName": "s_MTBLS1.txt"}]},
 		"parserMessages": {"s_MTBLS1.txt": []},
 		"studyDbMetadata": {"studyCategory": "other", "sampleTemplate": "minimum", "templateVersion": "2.0"},

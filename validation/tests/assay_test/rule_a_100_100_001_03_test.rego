@@ -23,22 +23,30 @@ rule_a_100_100_001_03_test_cases := 1
 test_rule_a_100_100_001_03_no_violation_01 if {
 	result := rules.rule_a_100_100_001_03 with input as {
 		"investigationFilePath": "i_Investigation.txt",
-		"assays": {"a_MTBLS1.txt": {"table": {
-			"rowOffset": 0, "totalRowCount": 0,
-			"headers": [
-				{"columnPrefix": "", "columnStructure": "ADDITIONAL_COLUMN", "columnHeader": "Sample Name", "columnIndex": 9},
-				{"columnPrefix": "", "columnStructure": "INVALID_MULTI_COLUMN", "columnHeader": "Parameter Value[Scan polarity]", "columnIndex": 3},
-				{"columnPrefix": "", "columnStructure": "SINGLE_COLUMN_AND_UNIT_ONTOLOGY", "columnHeader": "Factorx", "columnIndex": 9},
-				{"columnPrefix": "", "columnStructure": "ADDITIONAL_COLUMN", "columnHeader": "Term Source REF", "columnIndex": 2},
-			],
-		}}},
+		"assays": {
+			"a_MTBLS1.txt": {
+				"table": {
+					"rowOffset": 0, "totalRowCount": 0,
+					"headers": [
+						{"columnPrefix": "", "columnStructure": "ADDITIONAL_COLUMN", "columnHeader": "Sample Name", "columnIndex": 9},
+						{"columnPrefix": "", "columnStructure": "INVALID_MULTI_COLUMN", "columnHeader": "Parameter Value[Scan polarity]", "columnIndex": 3},
+						{"columnPrefix": "", "columnStructure": "SINGLE_COLUMN_AND_UNIT_ONTOLOGY", "columnHeader": "Factorx", "columnIndex": 9},
+						{"columnPrefix": "", "columnStructure": "ADDITIONAL_COLUMN", "columnHeader": "Term Source REF", "columnIndex": 2},
+					],
+				},
+			},
+		},
 		"investigation": {"studies": [{"fileName": "s_MTBLS1.txt"}]},
 		"parserMessages": {"s_MTBLS1.txt": []},
 	}
-		with data.metabolights.validation.v2.rules.phase1.definitions.SELECTED_ASSAY_FILE_TEMPLATE as {"a_MTBLS1.txt": {"headers": {
-			{"columnHeader": "Sample Name", "required": true},
-			{"columnHeader": "Parameter Value[Scan polarity]", "required": true},
-		}}}
+		with data.metabolights.validation.v2.rules.phase1.definitions.SELECTED_ASSAY_FILE_TEMPLATE as {
+			"a_MTBLS1.txt": {
+				"headers": {
+					{"columnHeader": "Sample Name", "required": true},
+					{"columnHeader": "Parameter Value[Scan polarity]", "required": true},
+				},
+			},
+		}
 	count(result) == 0
 }
 
@@ -48,24 +56,32 @@ test_rule_a_100_100_001_03_no_violation_01 if {
 test_rule_a_100_100_001_03_violation_01 if {
 	result := rules.rule_a_100_100_001_03 with input as {
 		"investigationFilePath": "i_Investigation.txt",
-		"assays": {"a_MTBLS1.txt": {"table": {
-			"rowOffset": 0, "totalRowCount": 0,
-			"headers": [
-				{"columnPrefix": "", "columnStructure": "ADDITIONAL_COLUMN", "columnHeader": "Sample Name", "columnIndex": 9},
-				{"columnPrefix": "", "columnStructure": "INVALID_MULTI_COLUMN", "columnHeader": "Parameter Value[Scan polarity]", "columnIndex": 3},
-				{"columnPrefix": "", "columnStructure": "SINGLE_COLUMN_AND_UNIT_ONTOLOGY", "columnHeader": "Factorx", "columnIndex": 9},
-				{"columnPrefix": "", "columnStructure": "ADDITIONAL_COLUMN", "columnHeader": "Term Source REF", "columnIndex": 2},
-			],
-		}}},
+		"assays": {
+			"a_MTBLS1.txt": {
+				"table": {
+					"rowOffset": 0, "totalRowCount": 0,
+					"headers": [
+						{"columnPrefix": "", "columnStructure": "ADDITIONAL_COLUMN", "columnHeader": "Sample Name", "columnIndex": 9},
+						{"columnPrefix": "", "columnStructure": "INVALID_MULTI_COLUMN", "columnHeader": "Parameter Value[Scan polarity]", "columnIndex": 3},
+						{"columnPrefix": "", "columnStructure": "SINGLE_COLUMN_AND_UNIT_ONTOLOGY", "columnHeader": "Factorx", "columnIndex": 9},
+						{"columnPrefix": "", "columnStructure": "ADDITIONAL_COLUMN", "columnHeader": "Term Source REF", "columnIndex": 2},
+					],
+				},
+			},
+		},
 		"investigation": {"studies": [{"fileName": "s_MTBLS1.txt"}]},
 		"parserMessages": {"s_MTBLS1.txt": []},
 	}
-		with data.metabolights.validation.v2.rules.phase1.definitions.SELECTED_ASSAY_FILE_TEMPLATE as {"a_MTBLS1.txt": {"headers": {
-			{"columnHeader": "Sample Name", "required": true},
-			{"columnHeader": "Parameter Value[Scan polarity]", "required": true},
-			{"columnHeader": "Parameter Value[Scan m/z range]", "required": true},
-			{"columnHeader": "Normalization Name", "required": true},
-			{"columnHeader": "Parameter Value[Mass analyzer]", "required": false},
-		}}}
+		with data.metabolights.validation.v2.rules.phase1.definitions.SELECTED_ASSAY_FILE_TEMPLATE as {
+			"a_MTBLS1.txt": {
+				"headers": {
+					{"columnHeader": "Sample Name", "required": true},
+					{"columnHeader": "Parameter Value[Scan polarity]", "required": true},
+					{"columnHeader": "Parameter Value[Scan m/z range]", "required": true},
+					{"columnHeader": "Normalization Name", "required": true},
+					{"columnHeader": "Parameter Value[Mass analyzer]", "required": false},
+				},
+			},
+		}
 	count(result) == 1
 }

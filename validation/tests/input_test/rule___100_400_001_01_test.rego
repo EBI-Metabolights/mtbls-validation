@@ -25,24 +25,26 @@ test_rule___100_400_001_01_no_violation_01 if {
 		"investigationFilePath": "i_Investigation.txt",
 		"metaboliteAssignments": {"m_MTBLS1.tsv": {}},
 		"investigation": {"studies": [{"fileName": "s_MTBLS1.txt", "studyAssays": {"assays": [{"fileName": "a_MTBLS1.txt"}]}}]},
-		"parserMessages": {"m_MTBLS1.tsv": [
-			{
-				"column": "",
-				"detail": ".",
-				"line": "",
-				"section": "",
-				"short": "test 1",
-				"type": "ERROR",
-			},
-			{
-				"column": "",
-				"detail": ".",
-				"line": "",
-				"section": "",
-				"short": "test 2",
-				"type": "WARNING",
-			},
-		]},
+		"parserMessages": {
+			"m_MTBLS1.tsv": [
+				{
+					"column": "",
+					"detail": ".",
+					"line": "",
+					"section": "",
+					"short": "test 1",
+					"type": "ERROR",
+				},
+				{
+					"column": "",
+					"detail": ".",
+					"line": "",
+					"section": "",
+					"short": "test 2",
+					"type": "WARNING",
+				},
+			],
+		},
 	}
 	count(result) == 0
 }
@@ -68,14 +70,18 @@ test_rule___100_400_001_01_violation_01 if {
 		"investigationFilePath": "i_Investigation.txt",
 		"metaboliteAssignments": {"m_MTBLS1.tsv": {}},
 		"investigation": {"studies": [{"fileName": "s_MTBLS1.txt", "studyAssays": {"assays": [{"fileName": "a_MTBLS1.txt"}]}}]},
-		"parserMessages": {"m_MTBLS1.tsv": [{
-			"column": "",
-			"detail": "Critical message.",
-			"line": "",
-			"section": "",
-			"short": "test 1",
-			"type": "CRITICAL",
-		}]},
+		"parserMessages": {
+			"m_MTBLS1.tsv": [
+				{
+					"column": "",
+					"detail": "Critical message.",
+					"line": "",
+					"section": "",
+					"short": "test 1",
+					"type": "CRITICAL",
+				},
+			],
+		},
 	}
 	count(result) == 1
 	some result_object in result
@@ -90,24 +96,26 @@ test_rule___100_400_001_01_violation_02 if {
 		"investigationFilePath": "i_Investigation.txt",
 		"metaboliteAssignments": {"m_MTBLS1.tsv": {}},
 		"investigation": {"studies": [{"fileName": "s_MTBLS1.txt", "studyAssays": {"assays": [{"fileName": "a_MTBLS1.txt"}]}}]},
-		"parserMessages": {"m_MTBLS1.tsv": [
-			{
-				"column": "",
-				"detail": "Critical message.",
-				"line": "",
-				"section": "",
-				"short": "test 1",
-				"type": "CRITICAL",
-			},
-			{
-				"column": "",
-				"detail": "Critical message.",
-				"line": "",
-				"section": "",
-				"short": "test 2",
-				"type": "CRITICAL",
-			},
-		]},
+		"parserMessages": {
+			"m_MTBLS1.tsv": [
+				{
+					"column": "",
+					"detail": "Critical message.",
+					"line": "",
+					"section": "",
+					"short": "test 1",
+					"type": "CRITICAL",
+				},
+				{
+					"column": "",
+					"detail": "Critical message.",
+					"line": "",
+					"section": "",
+					"short": "test 2",
+					"type": "CRITICAL",
+				},
+			],
+		},
 	}
 	count(result) == 1
 	some result_object in result

@@ -24,11 +24,13 @@ test_rule___100_400_001_05_no_violation_01 if {
 	input_01 := data.tests.data.inputs.minimum_01
 	input_data := json.patch(
 		input_01,
-		[{
-			"op": "replace",
-			"path": "/metaboliteAssignments/m_REQ2025111188888-01_MS_metabolite-profiling_v2_maf.tsv",
-			"value": {"assayTechnique": {"name": "MS", "mainTechnique": "MS"}},
-		}],
+		[
+			{
+				"op": "replace",
+				"path": "/metaboliteAssignments/m_REQ2025111188888-01_MS_metabolite-profiling_v2_maf.tsv",
+				"value": {"assayTechnique": {"name": "MS", "mainTechnique": "MS"}},
+			},
+		],
 	)
 
 	result := rules.rule___100_400_001_05 with input as input_data
@@ -42,11 +44,13 @@ test_rule___100_400_001_05_violation_01 if {
 	input_01 := data.tests.data.inputs.minimum_01
 	input_data := json.patch(
 		input_01,
-		[{
-			"op": "replace",
-			"path": "/metaboliteAssignments/m_REQ2025111188888-01_MS_metabolite-profiling_v2_maf.tsv",
-			"value": {"assayTechnique": {"name": "", "mainTechnique": ""}},
-		}],
+		[
+			{
+				"op": "replace",
+				"path": "/metaboliteAssignments/m_REQ2025111188888-01_MS_metabolite-profiling_v2_maf.tsv",
+				"value": {"assayTechnique": {"name": "", "mainTechnique": ""}},
+			},
+		],
 	)
 	result := rules.rule___100_400_001_05 with input as input_data
 	count(result) == 1

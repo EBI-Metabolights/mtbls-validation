@@ -35,11 +35,13 @@ test_rule___100_100_100_05_violation_01 if {
 	input_01 := data.tests.data.inputs.minimum_01
 	input_data := json.patch(
 		input_01,
-		[{
-			"op": "replace",
-			"path": "/parserMessages",
-			"value": [],
-		}],
+		[
+			{
+				"op": "replace",
+				"path": "/parserMessages",
+				"value": [],
+			},
+		],
 	)
 
 	result := rules.rule___100_100_100_05 with input as input_data

@@ -32,11 +32,13 @@ test_rule___100_100_100_04_violation_01 if {
 	input_01 := data.tests.data.inputs.minimum_01
 	input_data := json.patch(
 		input_01,
-		[{
-			"op": "replace",
-			"path": "/investigationFilePath",
-			"value": "i_Investigation.tsv",
-		}],
+		[
+			{
+				"op": "replace",
+				"path": "/investigationFilePath",
+				"value": "i_Investigation.tsv",
+			},
+		],
 	)
 	result := rules.rule___100_100_100_04 with input as input_data
 	count(result) == 1
@@ -49,11 +51,13 @@ test_rule___100_100_100_04_violation_02 if {
 	input_01 := data.tests.data.inputs.minimum_01
 	input_data := json.patch(
 		input_01,
-		[{
-			"op": "replace",
-			"path": "/investigationFilePath",
-			"value": "i_investigation.txt",
-		}],
+		[
+			{
+				"op": "replace",
+				"path": "/investigationFilePath",
+				"value": "i_investigation.txt",
+			},
+		],
 	)
 	result := rules.rule___100_100_100_04 with input as input_data
 	count(result) == 1

@@ -22,38 +22,50 @@ rule_i_100_360_004_02_test_cases := 1
 # description: study contact email is valid.
 test_rule_i_100_360_004_02_no_violation_01 if {
 	result := rules.rule_i_100_360_004_02 with input as {
-		"investigation": {"studies": [{"identifier": "MTBLS1", "studyContacts": {"people": [
-			{
-				"lastName": "",
-				"firstName": "",
-				"midInitials": "",
-				"email": "test@ebi.ac.uk",
-				"phone": "",
-				"fax": "",
-				"address": "",
-				"affiliation": "",
-				"roles": [{
-					"term": "",
-					"termAccessionNumber": "",
-					"termSourceRef": "",
-				}],
-			},
-			{
-				"lastName": "",
-				"firstName": "",
-				"midInitials": "",
-				"email": "test@ebi.embl.ac.uk",
-				"phone": "",
-				"fax": "",
-				"address": "",
-				"affiliation": "",
-				"roles": [{
-					"term": "",
-					"termAccessionNumber": "",
-					"termSourceRef": "",
-				}],
-			},
-		]}}]},
+		"investigation": {
+			"studies": [
+				{
+					"identifier": "MTBLS1", "studyContacts": {
+						"people": [
+							{
+								"lastName": "",
+								"firstName": "",
+								"midInitials": "",
+								"email": "test@ebi.ac.uk",
+								"phone": "",
+								"fax": "",
+								"address": "",
+								"affiliation": "",
+								"roles": [
+									{
+										"term": "",
+										"termAccessionNumber": "",
+										"termSourceRef": "",
+									},
+								],
+							},
+							{
+								"lastName": "",
+								"firstName": "",
+								"midInitials": "",
+								"email": "test@ebi.embl.ac.uk",
+								"phone": "",
+								"fax": "",
+								"address": "",
+								"affiliation": "",
+								"roles": [
+									{
+										"term": "",
+										"termAccessionNumber": "",
+										"termSourceRef": "",
+									},
+								],
+							},
+						],
+					},
+				},
+			],
+		},
 		"investigationFilePath": "i_Investigation.txt",
 	}
 	count(result) == 0
@@ -64,68 +76,84 @@ test_rule_i_100_360_004_02_no_violation_01 if {
 # description: study contact emails are not valid.
 test_rule_i_100_360_004_02_violation_02 if {
 	result := rules.rule_i_100_360_004_02 with input as {
-		"investigation": {"studies": [{"identifier": "MTBLS1", "studyContacts": {"people": [
-			{
-				"lastName": "",
-				"firstName": "",
-				"midInitials": "",
-				"email": "ebi@ac,uk",
-				"phone": "",
-				"fax": "",
-				"address": "",
-				"affiliation": "",
-				"roles": [{
-					"term": "",
-					"termAccessionNumber": "",
-					"termSourceRef": "",
-				}],
-			},
-			{
-				"lastName": "",
-				"firstName": "",
-				"midInitials": "",
-				"email": "@ebi.ac.uk",
-				"phone": "",
-				"fax": "",
-				"address": "",
-				"affiliation": "",
-				"roles": [{
-					"term": "",
-					"termAccessionNumber": "",
-					"termSourceRef": "",
-				}],
-			},
-			{
-				"lastName": "",
-				"firstName": "",
-				"midInitials": "",
-				"email": "test@ebi",
-				"phone": "",
-				"fax": "",
-				"address": "",
-				"affiliation": "",
-				"roles": [{
-					"term": "",
-					"termAccessionNumber": "",
-					"termSourceRef": "",
-				}],
-			},
-			{
-				"lastName": "",
-				"firstName": "",
-				"midInitials": "",
-				"email": "test@ebi-ac.uk",
-				"phone": "",
-				"fax": "",
-				"address": "",
-				"affiliation": "",
-				"roles": [{
-					"term": "",
-					"termAccessionNumber": "",
-					"termSourceRef": "",
-				}],
-			},
-		]}}]},
+		"investigation": {
+			"studies": [
+				{
+					"identifier": "MTBLS1", "studyContacts": {
+						"people": [
+							{
+								"lastName": "",
+								"firstName": "",
+								"midInitials": "",
+								"email": "ebi@ac,uk",
+								"phone": "",
+								"fax": "",
+								"address": "",
+								"affiliation": "",
+								"roles": [
+									{
+										"term": "",
+										"termAccessionNumber": "",
+										"termSourceRef": "",
+									},
+								],
+							},
+							{
+								"lastName": "",
+								"firstName": "",
+								"midInitials": "",
+								"email": "@ebi.ac.uk",
+								"phone": "",
+								"fax": "",
+								"address": "",
+								"affiliation": "",
+								"roles": [
+									{
+										"term": "",
+										"termAccessionNumber": "",
+										"termSourceRef": "",
+									},
+								],
+							},
+							{
+								"lastName": "",
+								"firstName": "",
+								"midInitials": "",
+								"email": "test@ebi",
+								"phone": "",
+								"fax": "",
+								"address": "",
+								"affiliation": "",
+								"roles": [
+									{
+										"term": "",
+										"termAccessionNumber": "",
+										"termSourceRef": "",
+									},
+								],
+							},
+							{
+								"lastName": "",
+								"firstName": "",
+								"midInitials": "",
+								"email": "test@ebi-ac.uk",
+								"phone": "",
+								"fax": "",
+								"address": "",
+								"affiliation": "",
+								"roles": [
+									{
+										"term": "",
+										"termAccessionNumber": "",
+										"termSourceRef": "",
+									},
+								],
+							},
+						],
+					},
+				},
+			],
+		},
 		"investigationFilePath": "i_Investigation.txt",
 	}
 	count(result) == 3

@@ -24,14 +24,18 @@ test_rule_i_100_360_011_03_no_violation_01 if {
 	input_01 := data.tests.data.inputs.minimum_01
 	input_data := json.patch(
 		input_01,
-		[{
-			"op": "replace",
-			"path": "/investigation/studies/0/studyContacts/comments",
-			"value": [{
-				"name": "Study Person Affiliation ROR ID",
-				"value": ["https://ror.org/xyzxyzxyz"],
-			}],
-		}],
+		[
+			{
+				"op": "replace",
+				"path": "/investigation/studies/0/studyContacts/comments",
+				"value": [
+					{
+						"name": "Study Person Affiliation ROR ID",
+						"value": ["https://ror.org/xyzxyzxyz"],
+					},
+				],
+			},
+		],
 	)
 
 	result := rules.rule_i_100_360_011_03 with input as input_data
@@ -46,14 +50,18 @@ test_rule_i_100_360_011_03_no_violation_02 if {
 	input_01 := data.tests.data.inputs.minimum_01
 	input_data := json.patch(
 		input_01,
-		[{
-			"op": "replace",
-			"path": "/investigation/studies/0/studyContacts/comments",
-			"value": [{
-				"name": "Study Person Affiliation ROR ID",
-				"value": ["https://www.wikidata.org/wiki/Q212"],
-			}],
-		}],
+		[
+			{
+				"op": "replace",
+				"path": "/investigation/studies/0/studyContacts/comments",
+				"value": [
+					{
+						"name": "Study Person Affiliation ROR ID",
+						"value": ["https://www.wikidata.org/wiki/Q212"],
+					},
+				],
+			},
+		],
 	)
 
 	result := rules.rule_i_100_360_011_03 with input as input_data
@@ -68,14 +76,18 @@ test_rule_i_100_360_011_03_violation_01 if {
 	input_01 := data.tests.data.inputs.minimum_01
 	input_data := json.patch(
 		input_01,
-		[{
-			"op": "replace",
-			"path": "/investigation/studies/0/studyContacts/comments",
-			"value": [{
-				"name": "Study Person Affiliation ROR ID",
-				"value": ["https://ebi.ac.uk"],
-			}],
-		}],
+		[
+			{
+				"op": "replace",
+				"path": "/investigation/studies/0/studyContacts/comments",
+				"value": [
+					{
+						"name": "Study Person Affiliation ROR ID",
+						"value": ["https://ebi.ac.uk"],
+					},
+				],
+			},
+		],
 	)
 
 	result := rules.rule_i_100_360_011_03 with input as input_data
@@ -90,14 +102,18 @@ test_rule_i_100_360_011_03_violation_02 if {
 	input_01 := data.tests.data.inputs.minimum_01
 	input_data := json.patch(
 		input_01,
-		[{
-			"op": "replace",
-			"path": "/investigation/studies/0/studyContacts/comments",
-			"value": [{
-				"name": "Study Person Affiliation ROR ID",
-				"value": ["https://www.wikidata.org/wiki/212"],
-			}],
-		}],
+		[
+			{
+				"op": "replace",
+				"path": "/investigation/studies/0/studyContacts/comments",
+				"value": [
+					{
+						"name": "Study Person Affiliation ROR ID",
+						"value": ["https://www.wikidata.org/wiki/212"],
+					},
+				],
+			},
+		],
 	)
 
 	result := rules.rule_i_100_360_011_03 with input as input_data

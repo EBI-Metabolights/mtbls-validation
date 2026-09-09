@@ -24,21 +24,25 @@ test_rule_i_100_320_001_01_no_violation_01 if {
 	input_01 := data.tests.data.inputs.minimum_01
 	input_data := json.patch(
 		input_01,
-		[{
-			"op": "replace",
-			"path": "/investigation/studies/0/studyPublications/publications",
-			"value": [{
-				"pubMedId": "",
-				"doi": "",
-				"authorList": "Ehsan Irajizad, Ana Kenney",
-				"title": "Contribution of the microbiome to a metabolomic signature predictive of risk for pancreatic cancer",
-				"status": {
-					"term": "Preprint",
-					"termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000004",
-					"termSourceRef": "MTBLS",
-				},
-			}],
-		}],
+		[
+			{
+				"op": "replace",
+				"path": "/investigation/studies/0/studyPublications/publications",
+				"value": [
+					{
+						"pubMedId": "",
+						"doi": "",
+						"authorList": "Ehsan Irajizad, Ana Kenney",
+						"title": "Contribution of the microbiome to a metabolomic signature predictive of risk for pancreatic cancer",
+						"status": {
+							"term": "Preprint",
+							"termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000004",
+							"termSourceRef": "MTBLS",
+						},
+					},
+				],
+			},
+		],
 	)
 
 	result := rules.rule_i_100_320_001_01 with input as input_data
@@ -52,34 +56,36 @@ test_rule_i_100_320_001_01_no_violation_02 if {
 	input_01 := data.tests.data.inputs.minimum_01
 	input_data := json.patch(
 		input_01,
-		[{
-			"op": "replace",
-			"path": "/investigation/studies/0/studyPublications/publications",
-			"value": [
-				{
-					"pubMedId": "",
-					"doi": "",
-					"authorList": "Ehsan Irajizad, Ana Kenney",
-					"title": "Contribution of the microbiome to a metabolomic signature predictive of risk for pancreatic cancer",
-					"status": {
-						"term": "Preprint",
-						"termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000004",
-						"termSourceRef": "MTBLS",
+		[
+			{
+				"op": "replace",
+				"path": "/investigation/studies/0/studyPublications/publications",
+				"value": [
+					{
+						"pubMedId": "",
+						"doi": "",
+						"authorList": "Ehsan Irajizad, Ana Kenney",
+						"title": "Contribution of the microbiome to a metabolomic signature predictive of risk for pancreatic cancer",
+						"status": {
+							"term": "Preprint",
+							"termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000004",
+							"termSourceRef": "MTBLS",
+						},
 					},
-				},
-				{
-					"pubMedId": "",
-					"doi": "",
-					"authorList": "Ehsan Irajizad, Ana Kenney",
-					"title": "Publication 2 - Contribution of the microbiome to a metabolomic signature predictive of risk for pancreatic cancer",
-					"status": {
-						"term": "Preprint",
-						"termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000004",
-						"termSourceRef": "MTBLS",
+					{
+						"pubMedId": "",
+						"doi": "",
+						"authorList": "Ehsan Irajizad, Ana Kenney",
+						"title": "Publication 2 - Contribution of the microbiome to a metabolomic signature predictive of risk for pancreatic cancer",
+						"status": {
+							"term": "Preprint",
+							"termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000004",
+							"termSourceRef": "MTBLS",
+						},
 					},
-				},
-			],
-		}],
+				],
+			},
+		],
 	)
 
 	result := rules.rule_i_100_320_001_01 with input as input_data
@@ -93,11 +99,13 @@ test_rule_i_100_320_001_01_violation_01 if {
 	input_01 := data.tests.data.inputs.minimum_01
 	input_data := json.patch(
 		input_01,
-		[{
-			"op": "replace",
-			"path": "/investigation/studies/0/studyPublications/publications",
-			"value": [],
-		}],
+		[
+			{
+				"op": "replace",
+				"path": "/investigation/studies/0/studyPublications/publications",
+				"value": [],
+			},
+		],
 	)
 	result := rules.rule_i_100_320_001_01 with input as input_data
 	count(result) == 1

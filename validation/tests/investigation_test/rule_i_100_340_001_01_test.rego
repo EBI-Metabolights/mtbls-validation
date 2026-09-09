@@ -38,10 +38,12 @@ test_rule_i_100_340_001_01_violation_01 if {
 	input_01 := data.tests.data.inputs.minimum_01
 	input_data := json.patch(
 		input_01,
-		[{
-			"op": "remove",
-			"path": "/investigation/studies/0/studyAssays/assays/0",
-		}],
+		[
+			{
+				"op": "remove",
+				"path": "/investigation/studies/0/studyAssays/assays/0",
+			},
+		],
 	)
 	result := rules.rule_i_100_340_001_01 with input as input_data
 		with def.RULE_STUDY_DESIGN_TYPE as test_rules.investigation.select_ontology_term_01

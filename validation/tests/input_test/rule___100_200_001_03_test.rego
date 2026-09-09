@@ -43,24 +43,26 @@ test_rule___100_200_001_03_no_violation_01 if {
 			{
 				"op": "replace",
 				"path": "/parserMessages",
-				"value": {"s_MTBLS1.txt": [
-					{
-						"column": "",
-						"detail": ".",
-						"line": "",
-						"section": "",
-						"short": "test 1",
-						"type": "INFO",
-					},
-					{
-						"column": "",
-						"detail": ".",
-						"line": "",
-						"section": "",
-						"short": "test 2",
-						"type": "INFO",
-					},
-				]},
+				"value": {
+					"s_MTBLS1.txt": [
+						{
+							"column": "",
+							"detail": ".",
+							"line": "",
+							"section": "",
+							"short": "test 1",
+							"type": "INFO",
+						},
+						{
+							"column": "",
+							"detail": ".",
+							"line": "",
+							"section": "",
+							"short": "test 2",
+							"type": "INFO",
+						},
+					],
+				},
 			},
 		],
 	)
@@ -129,24 +131,26 @@ test_rule___100_200_001_03_violation_01 if {
 			{
 				"op": "replace",
 				"path": "/parserMessages",
-				"value": {"s_MTBLS1.txt": [
-					{
-						"column": "",
-						"detail": ".",
-						"line": "",
-						"section": "",
-						"short": "test 1",
-						"type": "WARNING",
-					},
-					{
-						"column": "",
-						"detail": ".",
-						"line": "",
-						"section": "",
-						"short": "test 2",
-						"type": "INFO",
-					},
-				]},
+				"value": {
+					"s_MTBLS1.txt": [
+						{
+							"column": "",
+							"detail": ".",
+							"line": "",
+							"section": "",
+							"short": "test 1",
+							"type": "WARNING",
+						},
+						{
+							"column": "",
+							"detail": ".",
+							"line": "",
+							"section": "",
+							"short": "test 2",
+							"type": "INFO",
+						},
+					],
+				},
 			},
 		],
 	)
@@ -183,24 +187,26 @@ test_rule___100_200_001_03_violation_02 if {
 			{
 				"op": "replace",
 				"path": "/parserMessages",
-				"value": {"s_MTBLS1.txt": [
-					{
-						"column": "",
-						"detail": ".",
-						"line": "",
-						"section": "",
-						"short": "test 1",
-						"type": "WARNING",
-					},
-					{
-						"column": "",
-						"detail": ".",
-						"line": "",
-						"section": "",
-						"short": "test 2",
-						"type": "WARNING",
-					},
-				]},
+				"value": {
+					"s_MTBLS1.txt": [
+						{
+							"column": "",
+							"detail": ".",
+							"line": "",
+							"section": "",
+							"short": "test 1",
+							"type": "WARNING",
+						},
+						{
+							"column": "",
+							"detail": ".",
+							"line": "",
+							"section": "",
+							"short": "test 2",
+							"type": "WARNING",
+						},
+					],
+				},
 			},
 		],
 	)

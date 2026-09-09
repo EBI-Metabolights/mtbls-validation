@@ -23,12 +23,16 @@ rule___100_300_001_07_test_cases := 1
 test_rule___100_300_001_07_no_violation_01 if {
 	result := rules.rule___100_300_001_07 with input as {
 		"investigationFilePath": "i_Investigation.txt",
-		"assays": {"a_MTBLS1.txt": {"filePath": "a_MTBLS1.txt", "table": {"rowOffset": 0, "totalRowCount": 1}, "assayTechnique": {
-			"name": "LC-MS",
-			"mainTechnique": "MS",
-			"technique": "LC-MS",
-			"subTechnique": "LC",
-		}}},
+		"assays": {
+			"a_MTBLS1.txt": {
+				"filePath": "a_MTBLS1.txt", "table": {"rowOffset": 0, "totalRowCount": 1}, "assayTechnique": {
+					"name": "LC-MS",
+					"mainTechnique": "MS",
+					"technique": "LC-MS",
+					"subTechnique": "LC",
+				},
+			},
+		},
 		"investigation": {"studies": [{"fileName": "s_MTBLS1.txt", "studyAssays": {"assays": [{"fileName": "a_MTBLS1.txt"}]}}]},
 		"parserMessages": {"a_MTBLS1.txt": []},
 	}
@@ -46,12 +50,16 @@ test_rule___100_300_001_07_no_violation_01 if {
 test_rule___100_300_001_07_violation_01 if {
 	result := rules.rule___100_300_001_07 with input as {
 		"investigationFilePath": "i_Investigation.txt",
-		"assays": {"a_MTBLS1.txt": {"filePath": "a_MTBLS1.txt", "table": {"rowOffset": 0, "totalRowCount": 1}, "assayTechnique": {
-			"name": "LC-MS",
-			"mainTechnique": "MS",
-			"technique": "LC-MS",
-			"subTechnique": "LC",
-		}}},
+		"assays": {
+			"a_MTBLS1.txt": {
+				"filePath": "a_MTBLS1.txt", "table": {"rowOffset": 0, "totalRowCount": 1}, "assayTechnique": {
+					"name": "LC-MS",
+					"mainTechnique": "MS",
+					"technique": "LC-MS",
+					"subTechnique": "LC",
+				},
+			},
+		},
 		"investigation": {"studies": [{"fileName": "s_MTBLS1.txt", "studyAssays": {"assays": [{"fileName": "a_MTBLS1.txt"}]}}]},
 		"parserMessages": {"a_MTBLS1.txt": []},
 	}

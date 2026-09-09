@@ -29,12 +29,14 @@ test_rule_a_200_900_001_01_no_violation_01 if {
 			{
 				"op": "replace",
 				"path": "/assays/a_REQ2025111188888-01_MS_metabolite_profiling.txt/table/headers",
-				"value": [{
-					"columnHeader": "Parameter Value[Instrument]",
-					"columnName": "Parameter Value[Instrument]",
-					"columnStructure": "ONTOLOGY_COLUMN",
-					"columnIndex": 0,
-				}],
+				"value": [
+					{
+						"columnHeader": "Parameter Value[Instrument]",
+						"columnName": "Parameter Value[Instrument]",
+						"columnStructure": "ONTOLOGY_COLUMN",
+						"columnIndex": 0,
+					},
+				],
 			},
 			{
 				"op": "replace",
@@ -72,12 +74,14 @@ test_rule_a_200_900_001_01_violation_01 if {
 			{
 				"op": "replace",
 				"path": "/assays/a_REQ2025111188888-01_MS_metabolite_profiling.txt/table/headers",
-				"value": [{
-					"columnHeader": "Parameter Value[Instrument]",
-					"columnName": "Parameter Value[Instrument]",
-					"columnStructure": "ONTOLOGY_COLUMN",
-					"columnIndex": 0,
-				}],
+				"value": [
+					{
+						"columnHeader": "Parameter Value[Instrument]",
+						"columnName": "Parameter Value[Instrument]",
+						"columnStructure": "ONTOLOGY_COLUMN",
+						"columnIndex": 0,
+					},
+				],
 			},
 			{
 				"op": "replace",
