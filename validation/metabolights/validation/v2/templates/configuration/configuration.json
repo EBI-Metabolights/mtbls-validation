@@ -688,6 +688,12 @@
                 "mhdFileProfile": "https://metabolomicshub.github.io/mhd-model/schemas/v0_1/common-data-model-v0.1.ms-profile.json",
                 "announcementFileSchema": "https://metabolomicshub.github.io/mhd-model/schemas/v0_1/announcement-v0.1.schema.json",
                 "announcementFileProfile": "https://metabolomicshub.github.io/mhd-model/schemas/v0_1/announcement-v0.1.ms-profile.json"
+            },
+            "1.0": {
+                "fileSchema": "https://metabolomicshub.github.io/mhd-model/schemas/v1_0/common-data-model-v1.0.schema.json",
+                "mhdFileProfile": "https://metabolomicshub.github.io/mhd-model/schemas/v1_0/common-data-model-v1.0.ms-profile.json",
+                "announcementFileSchema": "https://metabolomicshub.github.io/mhd-model/schemas/v1_0/announcement-v1.0.schema.json",
+                "announcementFileProfile": "https://metabolomicshub.github.io/mhd-model/schemas/v1_0/announcement-v1.0.ms-profile.json"
             }
         },
         "legacy-profile": {
@@ -696,6 +702,12 @@
                 "mhdFileProfile": "https://metabolomicshub.github.io/mhd-model/schemas/v0_1/common-data-model-v0.1.legacy-profile.json",
                 "announcementFileSchema": "https://metabolomicshub.github.io/mhd-model/schemas/v0_1/announcement-v0.1.schema.json",
                 "announcementFileProfile": "https://metabolomicshub.github.io/mhd-model/schemas/v0_1/announcement-v0.1.legacy-profile.json"
+            },
+            "1.0": {
+                "fileSchema": "https://metabolomicshub.github.io/mhd-model/schemas/v1_0/common-data-model-v1.0.schema.json",
+                "mhdFileProfile": "https://metabolomicshub.github.io/mhd-model/schemas/v1_0/common-data-model-v1.0.legacy-profile.json",
+                "announcementFileSchema": "https://metabolomicshub.github.io/mhd-model/schemas/v1_0/announcement-v1.0.schema.json",
+                "announcementFileProfile": "https://metabolomicshub.github.io/mhd-model/schemas/v1_0/announcement-v1.0.legacy-profile.json"
             }
         }
     },
