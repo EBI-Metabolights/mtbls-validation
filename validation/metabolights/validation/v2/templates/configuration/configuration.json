@@ -1329,7 +1329,8 @@
                 "NMR"
             ],
             "activeSampleFileTemplates": [
-                "minimum"
+                "minimum",
+                "mhd-enabled"
             ],
             "activeAssayFileTemplates": {
                 "LC-MS": {
@@ -1817,7 +1818,7 @@
                     "min": 0
                 }
             },
-            "defaultSampleFileTemplate": "minimum",
+            "defaultSampleFileTemplate": "mhd-enabled",
             "defaultInvestigationFileTemplate": "minimum",
             "defaultStudyCategory": "other",
             "defaultDatasetLicense": "CC0 1.0 Universal",

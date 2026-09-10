@@ -25,6 +25,7 @@ Sample File Templates & Controls v1.0
 
 | Template Name | File Structure | Template File | Controls |
 |-------------|--------------|--------------|--------------|
+mhd-enabled|[mhd-enabled-v1.0 Structure](file-structures/sample-file-structure/mhd-enabled/sample-file-mhd-enabled-v1.0.md)|[mhd-enabled-v1.0 Template (zip)](template-files/sample-file/mhd-enabled/s_template-mhd-enabled-v1.0.txt.zip){:target="_blank"}<br/>[mhd-enabled-v1.0 Template (txt)](template-files/sample-file/mhd-enabled/s_template-mhd-enabled-v1.0.txt){:target="_blank"}|[mhd-enabled-v1.0 Control](prioritised-control-lists/sample-file-control-lists/mhd-enabled/mhd-enabled-v1.0.md)
 minimum|[minimum-v1.0 Structure](file-structures/sample-file-structure/minimum/sample-file-minimum-v1.0.md)|[minimum-v1.0 Template (zip)](template-files/sample-file/minimum/s_template-minimum-v1.0.txt.zip){:target="_blank"}<br/>[minimum-v1.0 Template (txt)](template-files/sample-file/minimum/s_template-minimum-v1.0.txt){:target="_blank"}|[minimum-v1.0 Control](prioritised-control-lists/sample-file-control-lists/minimum/minimum-v1.0.md)
 
 ## Assay File Templates & Controls 
