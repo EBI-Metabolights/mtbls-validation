@@ -1179,8 +1179,16 @@
                 }
             },
             "activeDatasetLicenses": [
-                "CC0 1.0 Universal"
+                "CC0 1.0 Universal",
+                "CC BY 4.0"
             ],
+            "supportedStudyCategoryClones": {
+                "ms-mhd-enabled": "ms-mhd-enabled",
+                "ms-mhd-legacy": "ms-mhd-enabled",
+                "nmr": "nmr",
+                "ms-imaging": "ms-imaging",
+                "ms-other": "ms-other"
+            },
             "activeMhdProfiles": {
                 "ms-mhd-enabled": {
                     "profileName": "ms-profile",
@@ -1776,6 +1784,13 @@
                 "CC0 1.0 Universal",
                 "CC BY 4.0"
             ],
+            "supportedStudyCategoryClones": {
+                "ms-mhd-enabled": "ms-mhd-enabled",
+                "ms-mhd-legacy": "ms-mhd-enabled",
+                "nmr": "nmr",
+                "ms-imaging": "ms-imaging",
+                "ms-other": "ms-other"
+            },
             "activeMhdProfiles": {
                 "ms-mhd-enabled": {
                     "profileName": "ms-profile",

@@ -524,6 +524,10 @@ class TemplateConfiguration(StudyBaseModel):
     active_dataset_licenses: Annotated[
         list[str], Field(description="active dataset licenses")
     ]
+    supported_study_category_clones: Annotated[
+        dict[str, str],
+        Field(description="Allowed study category mappings to clone from source"),
+    ]
     active_mhd_profiles: Annotated[
         dict[StudyCategoryStr, ActiveMhdProfile],
         Field(description="active dataset licenses"),
