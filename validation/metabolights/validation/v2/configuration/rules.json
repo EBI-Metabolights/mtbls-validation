@@ -1,7 +1,7 @@
 {
     "rules": {
         "validation_version": "2.2.1",
-        "created_at": "2026-09-10T09:32:13.000956+00:00",
+        "created_at": "2026-09-11T11:22:48.841714+00:00",
         "violations": [
             {
                 "rule_id": "rule___100_100_001_01",
@@ -271,6 +271,14 @@
                 "rule_id": "rule___100_400_001_08",
                 "title": "Metabolite assignment file name contains invalid characters.",
                 "description": "Use only .-_A-Za-z0-9 characters for an metabolite assignment file name. e.g. m_REQ2025010211233_LC-MS_negative_reverse-phase_metabolite_profiling_v2_maf.tsv",
+                "type": "ERROR",
+                "section": "metabolites",
+                "priority": "CRITICAL"
+            },
+            {
+                "rule_id": "rule___100_500_001_01",
+                "title": "Submitter affiliation length is too short.",
+                "description": "Submitter affiliation length must be equal or greater than 9. Use full name of the affiliation such as European Bioinformatics Institute (Instead of EBI). Open user profile to update submitter affiliation.",
                 "type": "ERROR",
                 "section": "metabolites",
                 "priority": "CRITICAL"
@@ -1314,6 +1322,14 @@
                 "type": "ERROR",
                 "section": "investigation",
                 "priority": "HIGH"
+            },
+            {
+                "rule_id": "rule_i_100_350_009_01",
+                "title": "Study Protocol Parameters Name not used in assay files",
+                "description": "Study Protocol Parameters Name values in i_Investigation.txt must be referenced by at least one assay Parameter Value column.",
+                "type": "ERROR",
+                "section": "investigation",
+                "priority": "CRITICAL"
             },
             {
                 "rule_id": "rule_i_100_360_001_01",

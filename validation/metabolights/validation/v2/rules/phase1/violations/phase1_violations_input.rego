@@ -661,3 +661,22 @@ rule___100_400_001_08 contains result if {
 	source := file
 	result := f.format(rego.metadata.rule(), msg, source)
 }
+
+# METADATA
+# title: Submitter affiliation length is too short.
+# description: Submitter affiliation length must be equal or greater than 9. Use full name of the affiliation such as European Bioinformatics Institute (Instead of EBI). Open user profile to update submitter affiliation.
+# custom:
+#  rule_id: rule___100_500_001_01
+#  type: ERROR
+#  priority: CRITICAL
+#  section: metabolites.general
+rule___100_500_001_01 contains result if {
+	some submitter in input.studyDbMetadata.submitters
+	affiliation := submitter.affiliation
+	email := submitter.userName
+	count(affiliation) < 9
+	print(affiliation)
+	msg := sprintf("Submitter ('%v') affiliation is too short: %v. Update submitter's profile.", [email, affiliation])
+	source := "Database"
+	result := f.format(rego.metadata.rule(), msg, source)
+}

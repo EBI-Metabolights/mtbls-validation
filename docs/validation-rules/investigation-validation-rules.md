@@ -71,24 +71,25 @@
 | 67 | rule\_i\_100\_350\_004\_01 | WARNING | Study Protocol Type length less than 3 characters\. | Study Protocol Type should be defined with length equal or greater than 3 characters\. |
 | 68 | rule\_i\_100\_350\_007\_01 | ERROR | Study protocol parameter is missing for a study protocol\. | All default study protocol parameters should be defined for study protocol\. |
 | 69 | rule\_i\_100\_350\_008\_01 | ERROR | Study Protocol Parameters Name length less than 3 characters\. | Study protocol parameters name should be defined with length equal or greater than 3 characters\. |
-| 70 | rule\_i\_100\_360\_001\_01 | ERROR | No study contacts referenced in investigation file\. | At least one study contacts should be defined in i\_Investigation\.txt\. |
-| 71 | rule\_i\_100\_360\_002\_01 | ERROR | Study Person First Name length less than 2 characters\. | Study Person First Name should be defined with length equal or greater than 2 characters\. |
-| 72 | rule\_i\_100\_360\_003\_01 | ERROR | Study Person Last Name length less than 2 characters\. | Study Person Last Name should be defined with length equal or greater than 2 characters\. |
-| 73 | rule\_i\_100\_360\_004\_01 | ERROR | Study contacts have no email address\. | At least one study contact must have an email address\. |
-| 74 | rule\_i\_100\_360\_004\_02 | ERROR | Study Person Email not valid\. | Study Person Email must have valid format\. |
-| 75 | rule\_i\_100\_360\_006\_01 | ERROR | Study Person affiliation length is less than 10 characters\. | Define full name of contact's primary affiliation\. e\.g\. European Bioinformatics Institute |
-| 76 | rule\_i\_100\_360\_007\_01 | ERROR | Study Person Roles is empty\. | At least one role should be defined for a study contact\. |
-| 77 | rule\_i\_100\_360\_008\_01 | WARNING | Study Person Role value is empty\. | Study Person Role should be defined\. |
-| 78 | rule\_i\_100\_360\_008\_11 | ERROR | Value is not in the required ontologies or controlled lists associated with this field\. | A term MUST be selected from the required ontologies or controlled lists associated with this field\. |
-| 79 | rule\_i\_100\_360\_008\_12 | WARNING | Value is not in the predefined ontologies or controlled lists associated with this field\. | A term SHOULD be selected from the predefined ontologies or controlled lists associated with this field\. |
-| 80 | rule\_i\_100\_360\_008\_13 | WARNING | Value is not in the default ontologies or controlled lists | A term SHOULD be selected from the default ontologies or controlled lists\. |
-| 81 | rule\_i\_100\_360\_008\_14 | WARNING | Study Person Roles Term Source REF not referenced in investigation file\. | Study Person Roles Term Source REFs should be referenced in the ONTOLOGY SOURCE REFERENCE section in i\_Investigation\.txt\. |
-| 82 | rule\_i\_100\_360\_010\_03 | WARNING | Study Person Roles Term Source REF is empty\. | Study Person Roles Term Source REF should be defined\. |
-| 83 | rule\_i\_100\_360\_011\_01 | ERROR | There is no study contact with Principal Investigator role\. | At least one study contact must have Principal Investigator role\. |
-| 84 | rule\_i\_100\_360\_011\_02 | ERROR | Principal Investigator contact details not defined\. | Principal Investigator first name, last name, affiliation, and email must be defined\. |
-| 85 | rule\_i\_100\_360\_011\_03 | ERROR | Study Person Affiliation ROR ID is not valid\. | Study Person ROR ID must have valid format\. e\.g\., https://ror\.org/02catss52 \. If your affiliation ROR ID is not defined, you may provide wikidata URL of your primary affiliation\. e\.g\., https://www\.wikidata\.org/wiki/Q1341845 |
-| 86 | rule\_i\_100\_360\_011\_04 | ERROR | Study Person ORCID is not valid\. | Study Person ORCID must have valid format\. |
-| 87 | rule\_i\_100\_360\_011\_05 | ERROR | Study Person Additional Email Address is not valid\. | Study Person Additional Email Address must have valid format\. |
-| 88 | rule\_i\_100\_360\_011\_06 | WARNING | Study Person ORCID is not defined for principal investigator\. | Study Person ORCID is not defined for principal investigator\. |
-| 89 | rule\_i\_100\_360\_011\_07 | WARNING | Study Person Affiliation ROR ID is not defined for principal investigator\. | Study Person Affiliation ROR ID is not defined for principal investigator\. |
-| 90 | rule\_i\_200\_900\_001\_01 | WARNING | Ontology terms are not validated on ontology search service \(e\.g\. OLS\)\. | Ensure ontology terms are valid and accessible on ontology search service\. |
+| 70 | rule\_i\_100\_350\_009\_01 | ERROR | Study Protocol Parameters Name not used in assay files | Study Protocol Parameters Name values in i\_Investigation\.txt must be referenced by at least one assay Parameter Value column\. |
+| 71 | rule\_i\_100\_360\_001\_01 | ERROR | No study contacts referenced in investigation file\. | At least one study contacts should be defined in i\_Investigation\.txt\. |
+| 72 | rule\_i\_100\_360\_002\_01 | ERROR | Study Person First Name length less than 2 characters\. | Study Person First Name should be defined with length equal or greater than 2 characters\. |
+| 73 | rule\_i\_100\_360\_003\_01 | ERROR | Study Person Last Name length less than 2 characters\. | Study Person Last Name should be defined with length equal or greater than 2 characters\. |
+| 74 | rule\_i\_100\_360\_004\_01 | ERROR | Study contacts have no email address\. | At least one study contact must have an email address\. |
+| 75 | rule\_i\_100\_360\_004\_02 | ERROR | Study Person Email not valid\. | Study Person Email must have valid format\. |
+| 76 | rule\_i\_100\_360\_006\_01 | ERROR | Study Person affiliation length is less than 10 characters\. | Define full name of contact's primary affiliation\. e\.g\. European Bioinformatics Institute |
+| 77 | rule\_i\_100\_360\_007\_01 | ERROR | Study Person Roles is empty\. | At least one role should be defined for a study contact\. |
+| 78 | rule\_i\_100\_360\_008\_01 | WARNING | Study Person Role value is empty\. | Study Person Role should be defined\. |
+| 79 | rule\_i\_100\_360\_008\_11 | ERROR | Value is not in the required ontologies or controlled lists associated with this field\. | A term MUST be selected from the required ontologies or controlled lists associated with this field\. |
+| 80 | rule\_i\_100\_360\_008\_12 | WARNING | Value is not in the predefined ontologies or controlled lists associated with this field\. | A term SHOULD be selected from the predefined ontologies or controlled lists associated with this field\. |
+| 81 | rule\_i\_100\_360\_008\_13 | WARNING | Value is not in the default ontologies or controlled lists | A term SHOULD be selected from the default ontologies or controlled lists\. |
+| 82 | rule\_i\_100\_360\_008\_14 | WARNING | Study Person Roles Term Source REF not referenced in investigation file\. | Study Person Roles Term Source REFs should be referenced in the ONTOLOGY SOURCE REFERENCE section in i\_Investigation\.txt\. |
+| 83 | rule\_i\_100\_360\_010\_03 | WARNING | Study Person Roles Term Source REF is empty\. | Study Person Roles Term Source REF should be defined\. |
+| 84 | rule\_i\_100\_360\_011\_01 | ERROR | There is no study contact with Principal Investigator role\. | At least one study contact must have Principal Investigator role\. |
+| 85 | rule\_i\_100\_360\_011\_02 | ERROR | Principal Investigator contact details not defined\. | Principal Investigator first name, last name, affiliation, and email must be defined\. |
+| 86 | rule\_i\_100\_360\_011\_03 | ERROR | Study Person Affiliation ROR ID is not valid\. | Study Person ROR ID must have valid format\. e\.g\., https://ror\.org/02catss52 \. If your affiliation ROR ID is not defined, you may provide wikidata URL of your primary affiliation\. e\.g\., https://www\.wikidata\.org/wiki/Q1341845 |
+| 87 | rule\_i\_100\_360\_011\_04 | ERROR | Study Person ORCID is not valid\. | Study Person ORCID must have valid format\. |
+| 88 | rule\_i\_100\_360\_011\_05 | ERROR | Study Person Additional Email Address is not valid\. | Study Person Additional Email Address must have valid format\. |
+| 89 | rule\_i\_100\_360\_011\_06 | WARNING | Study Person ORCID is not defined for principal investigator\. | Study Person ORCID is not defined for principal investigator\. |
+| 90 | rule\_i\_100\_360\_011\_07 | WARNING | Study Person Affiliation ROR ID is not defined for principal investigator\. | Study Person Affiliation ROR ID is not defined for principal investigator\. |
+| 91 | rule\_i\_200\_900\_001\_01 | WARNING | Ontology terms are not validated on ontology search service \(e\.g\. OLS\)\. | Ensure ontology terms are valid and accessible on ontology search service\. |

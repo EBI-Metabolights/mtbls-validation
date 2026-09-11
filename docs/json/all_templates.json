@@ -20501,7 +20501,7 @@
         "MRO": {
             "sourceName": "MRO",
             "sourceFile": "http://purl.obolibrary.org/obo/mro.owl",
-            "sourceVersion": "2026-08-26",
+            "sourceVersion": "2026-09-09",
             "sourceDescription": "MHC Restriction Ontology",
             "sourceDetails": "The MHC Restriction Ontology is an application ontology capturing how Major Histocompatibility Complex (MHC) restriction is defined in experiments, spanning exact protein complexes, individual protein chains, serotypes, haplotypes and mutant molecules, as well as evidence for MHC restrictions."
         },

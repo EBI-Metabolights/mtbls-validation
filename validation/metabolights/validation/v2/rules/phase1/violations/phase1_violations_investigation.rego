@@ -1737,7 +1737,7 @@ rule_i_100_350_008_01 contains result if {
 }
 
 # METADATA
-# title: Study Protocol Parameters Name not used in assay files.
+# title: Study Protocol Parameters Name not used in assay files
 # description: Study Protocol Parameters Name values in i_Investigation.txt must be referenced by at least one assay Parameter Value column.
 # custom:
 #  rule_id: rule_i_100_350_009_01
