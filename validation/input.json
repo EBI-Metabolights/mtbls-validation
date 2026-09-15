@@ -147,13 +147,13 @@
             {
               "name": "Sample Template",
               "value": [
-                "minimum"
+                "mhd-enabled"
               ]
             },
             {
               "name": "Study Template",
               "value": [
-                "mhd-enabled"
+                "minimum"
               ]
             },
             {
@@ -296,8 +296,8 @@
           "fileName": "s_REQ202505303000044.txt",
           "studyCategory": "ms-mhd-enabled",
           "templateVersion": "1.0",
-          "sampleTemplate": "minimum",
-          "studyTemplate": "mhd-enabled",
+          "sampleTemplate": "mhd-enabled",
+          "studyTemplate": "minimum",
           "linkedStudyAccession": [],
           "mhdAccession": "",
           "mhdModelVersion": "1.0",
@@ -29744,7 +29744,7 @@
     "tags": [],
     "studyDbMetadata": {
       "dbId": 3000044,
-      "studyId": "REQ202505303000044",
+      "studyId": "xx",
       "numericStudyId": 202505303000044,
       "obfuscationCode": "611ee63c-738b-4386-bd70-60593b7e92ca",
       "studySize": 0,
@@ -29781,8 +29781,8 @@
       "datasetLicense": "CC0 1.0 Universal",
       "datasetLicenseVersion": "1.0",
       "datasetLicenseUrl": "",
-      "sampleTemplate": "minimum",
-      "studyTemplate": "mhd-enabled",
+      "sampleTemplate": "mhd-enabled",
+      "studyTemplate": "minimum",
       "studyCategory": 1,
       "templateVersion": "1.0",
       "reservedMhdAccession": "",
@@ -30806,7 +30806,7 @@
           "sizeInBytes": 12689,
           "isDirectory": false,
           "isLink": false,
-          "modifiedAt": 1789118109,
+          "modifiedAt": 1789125961,
           "createdAt": 0,
           "mode": "",
           "tags": []
@@ -30819,7 +30819,7 @@
           "sizeInBytes": 19442,
           "isDirectory": false,
           "isLink": false,
-          "modifiedAt": 1789118109,
+          "modifiedAt": 1789125961,
           "createdAt": 0,
           "mode": "",
           "tags": []
@@ -30832,7 +30832,7 @@
           "sizeInBytes": 35606,
           "isDirectory": false,
           "isLink": false,
-          "modifiedAt": 1789118109,
+          "modifiedAt": 1789125961,
           "createdAt": 0,
           "mode": "",
           "tags": []

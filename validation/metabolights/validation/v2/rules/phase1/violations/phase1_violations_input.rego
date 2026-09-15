@@ -673,9 +673,8 @@ rule___100_400_001_08 contains result if {
 rule___100_500_001_01 contains result if {
 	some submitter in input.studyDbMetadata.submitters
 	affiliation := submitter.affiliation
-	email := submitter.userName
 	count(affiliation) < 9
-	print(affiliation)
+	email := submitter.userName
 	msg := sprintf("Submitter ('%v') affiliation is too short: %v. Update submitter's profile.", [email, affiliation])
 	source := "Database"
 	result := f.format(rego.metadata.rule(), msg, source)

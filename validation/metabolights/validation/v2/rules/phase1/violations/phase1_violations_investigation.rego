@@ -262,6 +262,24 @@ rule_i_100_300_002_01 contains result if {
 }
 
 # METADATA
+# title: Study Identifier do not match the database.
+# description: Study Identifier must be same as the registered study id.
+# custom:
+#  rule_id: rule_i_100_300_002_02
+#  type: ERROR
+#  priority: CRITICAL
+#  section: investigation.studies
+rule_i_100_300_002_02 contains result if {
+	some study in input.investigation.studies
+	count(input.studyDbMetadata.studyId) > 0
+	study.identifier != input.studyDbMetadata.studyId
+
+	msg := sprintf("Study identifier '%v' does not match the database study id. Expected: %v", [study.identifier, input.studyDbMetadata.studyId])
+	source := input.investigationFilePath
+	result := f.format(rego.metadata.rule(), msg, source)
+}
+
+# METADATA
 # title: Study Title length less than 25 characters.
 # description: Study Title should be defined with length equal or greater than 25 characters. Please use same title as first publication.
 # custom:

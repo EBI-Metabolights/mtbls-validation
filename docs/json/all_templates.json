@@ -20753,7 +20753,7 @@
         "OOSTT": {
             "sourceName": "OOSTT",
             "sourceFile": "http://purl.obolibrary.org/obo/oostt.owl",
-            "sourceVersion": "release version - 2025-08-28",
+            "sourceVersion": "release version - 2026-09-10",
             "sourceDescription": "Ontology of Organizational Structures of Trauma centers and Trauma Systems",
             "sourceDetails": "The Ontology of Organizational Structures of Trauma centers and Trauma systems (OOSTT) is a representation of the components of trauma centers and trauma systems coded in Web Ontology Language (OWL2)."
         },
@@ -21313,7 +21313,7 @@
         "VT": {
             "sourceName": "VT",
             "sourceFile": "http://purl.obolibrary.org/obo/vt.owl",
-            "sourceVersion": "2026-07-23",
+            "sourceVersion": "",
             "sourceDescription": "The Vertebrate Trait Ontology",
             "sourceDetails": "The Vertebrate Trait Ontology is a controlled vocabulary for the description of traits (measurable or observable characteristics) pertaining to the morphology, physiology, or development of vertebrate organisms."
         },
