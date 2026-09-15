@@ -656,7 +656,6 @@ rule_s_200_100_002_01 contains result if {
 		some t_header in template.headers
 		startswith(t_header.columnHeader, "Characteristics[")
 	}
-	print("TDefault template", default_headers)
 	not header.columnHeader in default_headers
 	column_name := input.samples[fileName].table.columns[header.columnIndex]
 	violated_values := {sprintf("['%v', column index: %v]", [header.columnHeader, header.columnIndex]) |

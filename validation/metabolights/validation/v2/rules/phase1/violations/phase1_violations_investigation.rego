@@ -262,7 +262,7 @@ rule_i_100_300_002_01 contains result if {
 }
 
 # METADATA
-# title: Study Identifier do not match the database.
+# title: Study Identifier do not match the database identifier.
 # description: Study Identifier must be same as the registered study id.
 # custom:
 #  rule_id: rule_i_100_300_002_02

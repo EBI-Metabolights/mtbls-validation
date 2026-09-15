@@ -30,7 +30,7 @@ test_rule_i_100_340_002_02_no_violation_01 if {
 			{
 				"op": "replace",
 				"path": "/investigation/studies/0/studyAssays/assays/0/fileName",
-				"value": "a_REQ11111.txt",
+				"value": "a_REQ11111_sample.txt",
 			},
 		],
 	)
@@ -50,7 +50,7 @@ test_rule_i_100_340_002_02_violation_01 if {
 			{
 				"op": "replace",
 				"path": "/investigation/studies/0/studyAssays/assays/0/fileName",
-				"value": "a_MTBLS1111.tsv",
+				"value": "a_MTBLS1111_data.tsv",
 			},
 		],
 	)

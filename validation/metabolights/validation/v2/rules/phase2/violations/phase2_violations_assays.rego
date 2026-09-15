@@ -829,7 +829,6 @@ rule_a_200_300_001_03 contains result if {
 		count(name) > 0
 		extensions := f.extension(name, def.CL_RAW_FILE_EXTENSIONS)
 
-		# print(name, extensions)
 		count(extensions) == 0
 		row := (i + 1) + row_offset
 	}
@@ -1001,7 +1000,6 @@ rule_a_200_500_001_01 contains result if {
 		count(trim_space(raw_file_name)) == 0
 		count(name) > 0
 
-		# print(name, raw_file_name)
 		extensions := f.extension(name, def.CL_DERIVED_FILE_EXTENSIONS)
 		count(extensions) == 0
 		row := (i + 1) + row_offset
