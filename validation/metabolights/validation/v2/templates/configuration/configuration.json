@@ -1192,16 +1192,18 @@
             "activeMhdProfiles": {
                 "ms-mhd-enabled": {
                     "profileName": "ms-profile",
-                    "defaultVersion": "0.1",
+                    "defaultVersion": "1.0",
                     "activeVersions": [
-                        "0.1"
+                        "0.1",
+                        "1.0"
                     ]
                 },
                 "ms-mhd-legacy": {
                     "profileName": "legacy-profile",
-                    "defaultVersion": "0.1",
+                    "defaultVersion": "1.0",
                     "activeVersions": [
-                        "0.1"
+                        "0.1",
+                        "1.0"
                     ]
                 }
             },
@@ -1802,7 +1804,7 @@
                 },
                 "ms-mhd-legacy": {
                     "profileName": "legacy-profile",
-                    "defaultVersion": "0.1",
+                    "defaultVersion": "1.0",
                     "activeVersions": [
                         "0.1",
                         "1.0"
