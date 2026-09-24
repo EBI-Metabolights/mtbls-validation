@@ -11128,13 +11128,11 @@
                 "unexpectedTerms": []
             }
         ],
-        "Organization": [
+        "Project": [
             {
-                "ruleName": "Design-01",
-                "fieldName": "Design",
-                "ontologies": [
-                    "NCIT"
-                ],
+                "ruleName": "Project-01",
+                "fieldName": "Project",
+                "ontologies": [],
                 "allowedParentOntologyTerms": null,
                 "description": "",
                 "selectionCriteria": {
@@ -11176,23 +11174,7 @@
                         "termSourceRef": ""
                     }
                 ],
-                "terms": [
-                    {
-                        "term": "Case-Control Study",
-                        "termAccessionNumber": "http://purl.obolibrary.org/obo/NCIT_C15197",
-                        "termSourceRef": "NCIT"
-                    },
-                    {
-                        "term": "Longitudinal Study",
-                        "termAccessionNumber": "http://purl.obolibrary.org/obo/NCIT_C15273",
-                        "termSourceRef": "NCIT"
-                    },
-                    {
-                        "term": "Crossover Study",
-                        "termAccessionNumber": "http://purl.obolibrary.org/obo/NCIT_C82637",
-                        "termSourceRef": "NCIT"
-                    }
-                ],
+                "terms": [],
                 "unexpectedTerms": []
             }
         ],
@@ -12249,6 +12231,58 @@
                 "unexpectedTerms": []
             }
         ],
+        "Organization": [
+            {
+                "ruleName": "Organization-01",
+                "fieldName": "Organization",
+                "ontologies": [
+                    "ROR"
+                ],
+                "allowedParentOntologyTerms": null,
+                "description": "",
+                "selectionCriteria": {
+                    "isaFileType": "investigation",
+                    "studyCreatedAtOrAfter": null,
+                    "studyCreatedBefore": null,
+                    "studyCategoryFilter": null,
+                    "templateVersionFilter": null,
+                    "isaFileTemplateNameFilter": null,
+                    "linkedFieldAndValueFilter": null
+                },
+                "termEnforcementLevel": "recommended",
+                "unexpectedTermEnforcementLevel": "not-applicable",
+                "validationType": "ontology-term-in-selected-ontologies",
+                "constraints": {},
+                "defaultValue": null,
+                "allowedMissingOntologyTerms": [],
+                "allowedOtherSources": [
+                    {
+                        "sourceLabel": "MTBLS",
+                        "accessionPrefix": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_"
+                    },
+                    {
+                        "sourceLabel": "wikidata",
+                        "accessionPrefix": "https://www.wikidata.org/wiki/"
+                    },
+                    {
+                        "sourceLabel": "ILX",
+                        "accessionPrefix": "http://uri.interlex.org/base/ilx_"
+                    }
+                ],
+                "allowedPlaceholders": [
+                    {
+                        "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/placeholder",
+                        "termSourceRef": "MTBLS"
+                    },
+                    {
+                        "termAccessionNumber": "",
+                        "termSourceRef": ""
+                    }
+                ],
+                "terms": [],
+                "unexpectedTerms": []
+            }
+        ],
         "Study Publication Status": [
             {
                 "ruleName": "Study Publication Status-01",
@@ -12497,6 +12531,94 @@
                 "unexpectedTerms": []
             }
         ],
+        "Application": [
+            {
+                "ruleName": "Application-01",
+                "fieldName": "Application",
+                "ontologies": [
+                    "EDAM"
+                ],
+                "allowedParentOntologyTerms": null,
+                "description": "",
+                "selectionCriteria": {
+                    "isaFileType": "investigation",
+                    "studyCreatedAtOrAfter": null,
+                    "studyCreatedBefore": null,
+                    "studyCategoryFilter": null,
+                    "templateVersionFilter": null,
+                    "isaFileTemplateNameFilter": null,
+                    "linkedFieldAndValueFilter": null
+                },
+                "termEnforcementLevel": "recommended",
+                "unexpectedTermEnforcementLevel": "not-applicable",
+                "validationType": "any-ontology-term",
+                "constraints": {},
+                "defaultValue": null,
+                "allowedMissingOntologyTerms": [],
+                "allowedOtherSources": [
+                    {
+                        "sourceLabel": "MTBLS",
+                        "accessionPrefix": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_"
+                    },
+                    {
+                        "sourceLabel": "wikidata",
+                        "accessionPrefix": "https://www.wikidata.org/wiki/"
+                    },
+                    {
+                        "sourceLabel": "ILX",
+                        "accessionPrefix": "http://uri.interlex.org/base/ilx_"
+                    }
+                ],
+                "allowedPlaceholders": [
+                    {
+                        "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/placeholder",
+                        "termSourceRef": "MTBLS"
+                    },
+                    {
+                        "termAccessionNumber": "",
+                        "termSourceRef": ""
+                    }
+                ],
+                "terms": [
+                    {
+                        "term": "Toxicology",
+                        "termAccessionNumber": "http://edamontology.org/topic_2840",
+                        "termSourceRef": "EDAM"
+                    },
+                    {
+                        "term": "Human biology",
+                        "termAccessionNumber": "http://edamontology.org/topic_2815",
+                        "termSourceRef": "EDAM"
+                    },
+                    {
+                        "term": "Plant biology",
+                        "termAccessionNumber": "http://edamontology.org/topic_0780",
+                        "termSourceRef": "EDAM"
+                    },
+                    {
+                        "term": "Marine biology",
+                        "termAccessionNumber": "http://edamontology.org/topic_3387",
+                        "termSourceRef": "EDAM"
+                    },
+                    {
+                        "term": "Microbiology",
+                        "termAccessionNumber": "http://edamontology.org/topic_3301",
+                        "termSourceRef": "EDAM"
+                    },
+                    {
+                        "term": "Nutritional science",
+                        "termAccessionNumber": "http://edamontology.org/topic_3390",
+                        "termSourceRef": "EDAM"
+                    },
+                    {
+                        "term": "Agricultural science",
+                        "termAccessionNumber": "http://edamontology.org/topic_3810",
+                        "termSourceRef": "EDAM"
+                    }
+                ],
+                "unexpectedTerms": []
+            }
+        ],
         "Assay Acquisition Method": [
             {
                 "ruleName": "Assay Acquisition Method-01",
@@ -12641,6 +12763,74 @@
                         "term": "OpenMS",
                         "termAccessionNumber": "http://purl.obolibrary.org/obo/MS_1003430",
                         "termSourceRef": "MS"
+                    }
+                ],
+                "unexpectedTerms": []
+            }
+        ],
+        "Design": [
+            {
+                "ruleName": "Design-01",
+                "fieldName": "Design",
+                "ontologies": [
+                    "NCIT"
+                ],
+                "allowedParentOntologyTerms": null,
+                "description": "",
+                "selectionCriteria": {
+                    "isaFileType": "investigation",
+                    "studyCreatedAtOrAfter": null,
+                    "studyCreatedBefore": null,
+                    "studyCategoryFilter": null,
+                    "templateVersionFilter": null,
+                    "isaFileTemplateNameFilter": null,
+                    "linkedFieldAndValueFilter": null
+                },
+                "termEnforcementLevel": "recommended",
+                "unexpectedTermEnforcementLevel": "not-applicable",
+                "validationType": "any-ontology-term",
+                "constraints": {},
+                "defaultValue": null,
+                "allowedMissingOntologyTerms": [],
+                "allowedOtherSources": [
+                    {
+                        "sourceLabel": "MTBLS",
+                        "accessionPrefix": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_"
+                    },
+                    {
+                        "sourceLabel": "wikidata",
+                        "accessionPrefix": "https://www.wikidata.org/wiki/"
+                    },
+                    {
+                        "sourceLabel": "ILX",
+                        "accessionPrefix": "http://uri.interlex.org/base/ilx_"
+                    }
+                ],
+                "allowedPlaceholders": [
+                    {
+                        "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/placeholder",
+                        "termSourceRef": "MTBLS"
+                    },
+                    {
+                        "termAccessionNumber": "",
+                        "termSourceRef": ""
+                    }
+                ],
+                "terms": [
+                    {
+                        "term": "Case-Control Study",
+                        "termAccessionNumber": "http://purl.obolibrary.org/obo/NCIT_C15197",
+                        "termSourceRef": "NCIT"
+                    },
+                    {
+                        "term": "Longitudinal Study",
+                        "termAccessionNumber": "http://purl.obolibrary.org/obo/NCIT_C15273",
+                        "termSourceRef": "NCIT"
+                    },
+                    {
+                        "term": "Crossover Study",
+                        "termAccessionNumber": "http://purl.obolibrary.org/obo/NCIT_C82637",
+                        "termSourceRef": "NCIT"
                     }
                 ],
                 "unexpectedTerms": []

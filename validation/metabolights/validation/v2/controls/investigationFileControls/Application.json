@@ -1,5 +1,5 @@
 {
-    "Organization": [
+    "Application": [
         {
             "ruleName": "Application-01",
             "fieldName": "Application",
