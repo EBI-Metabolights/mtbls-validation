@@ -1,0 +1,52 @@
+{
+    "Organization": [
+        {
+            "ruleName": "Project-01",
+            "fieldName": "Project",
+            "ontologies": [],
+            "allowedParentOntologyTerms": null,
+            "description": "",
+            "selectionCriteria": {
+                "isaFileType": "investigation",
+                "studyCreatedAtOrAfter": null,
+                "studyCreatedBefore": null,
+                "studyCategoryFilter": null,
+                "templateVersionFilter": null,
+                "isaFileTemplateNameFilter": null,
+                "linkedFieldAndValueFilter": null
+            },
+            "termEnforcementLevel": "recommended",
+            "unexpectedTermEnforcementLevel": "not-applicable",
+            "validationType": "any-ontology-term",
+            "constraints": {},
+            "defaultValue": null,
+            "allowedMissingOntologyTerms": [],
+            "allowedOtherSources": [
+                {
+                    "sourceLabel": "MTBLS",
+                    "accessionPrefix": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_"
+                },
+                {
+                    "sourceLabel": "wikidata",
+                    "accessionPrefix": "https://www.wikidata.org/wiki/"
+                },
+                {
+                    "sourceLabel": "ILX",
+                    "accessionPrefix": "http://uri.interlex.org/base/ilx_"
+                }
+            ],
+            "allowedPlaceholders": [
+                {
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/placeholder",
+                    "termSourceRef": "MTBLS"
+                },
+                {
+                    "termAccessionNumber": "",
+                    "termSourceRef": ""
+                }
+            ],
+            "terms": [],
+            "unexpectedTerms": []
+        }
+    ]
+}

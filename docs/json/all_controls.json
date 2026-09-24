@@ -8940,11 +8940,6 @@
                         "term": "metabolic dysfunction-associated steatotic liver disease",
                         "termAccessionNumber": "http://purl.obolibrary.org/obo/MONDO_0013209",
                         "termSourceRef": "MONDO"
-                    },
-                    {
-                        "term": "Not Applicable",
-                        "termAccessionNumber": "http://purl.obolibrary.org/obo/NCIT_C48660",
-                        "termSourceRef": "NCIT"
                     }
                 ],
                 "unexpectedTerms": []
@@ -9048,11 +9043,6 @@
                         "term": "metabolic dysfunction-associated steatotic liver disease",
                         "termAccessionNumber": "http://purl.obolibrary.org/obo/MONDO_0013209",
                         "termSourceRef": "MONDO"
-                    },
-                    {
-                        "term": "Not Applicable",
-                        "termAccessionNumber": "http://purl.obolibrary.org/obo/NCIT_C48660",
-                        "termSourceRef": "NCIT"
                     }
                 ],
                 "unexpectedTerms": []
@@ -9331,11 +9321,6 @@
                         "term": "metabolic dysfunction-associated steatotic liver disease",
                         "termAccessionNumber": "http://purl.obolibrary.org/obo/MONDO_0013209",
                         "termSourceRef": "MONDO"
-                    },
-                    {
-                        "term": "Not Applicable",
-                        "termAccessionNumber": "http://purl.obolibrary.org/obo/NCIT_C48660",
-                        "termSourceRef": "NCIT"
                     }
                 ],
                 "unexpectedTerms": []
@@ -9437,11 +9422,6 @@
                         "term": "metabolic dysfunction-associated steatotic liver disease",
                         "termAccessionNumber": "http://purl.obolibrary.org/obo/MONDO_0013209",
                         "termSourceRef": "MONDO"
-                    },
-                    {
-                        "term": "Not Applicable",
-                        "termAccessionNumber": "http://purl.obolibrary.org/obo/NCIT_C48660",
-                        "termSourceRef": "NCIT"
                     }
                 ],
                 "unexpectedTerms": []
@@ -11148,6 +11128,74 @@
                 "unexpectedTerms": []
             }
         ],
+        "Organization": [
+            {
+                "ruleName": "Design-01",
+                "fieldName": "Design",
+                "ontologies": [
+                    "NCIT"
+                ],
+                "allowedParentOntologyTerms": null,
+                "description": "",
+                "selectionCriteria": {
+                    "isaFileType": "investigation",
+                    "studyCreatedAtOrAfter": null,
+                    "studyCreatedBefore": null,
+                    "studyCategoryFilter": null,
+                    "templateVersionFilter": null,
+                    "isaFileTemplateNameFilter": null,
+                    "linkedFieldAndValueFilter": null
+                },
+                "termEnforcementLevel": "recommended",
+                "unexpectedTermEnforcementLevel": "not-applicable",
+                "validationType": "any-ontology-term",
+                "constraints": {},
+                "defaultValue": null,
+                "allowedMissingOntologyTerms": [],
+                "allowedOtherSources": [
+                    {
+                        "sourceLabel": "MTBLS",
+                        "accessionPrefix": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_"
+                    },
+                    {
+                        "sourceLabel": "wikidata",
+                        "accessionPrefix": "https://www.wikidata.org/wiki/"
+                    },
+                    {
+                        "sourceLabel": "ILX",
+                        "accessionPrefix": "http://uri.interlex.org/base/ilx_"
+                    }
+                ],
+                "allowedPlaceholders": [
+                    {
+                        "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/placeholder",
+                        "termSourceRef": "MTBLS"
+                    },
+                    {
+                        "termAccessionNumber": "",
+                        "termSourceRef": ""
+                    }
+                ],
+                "terms": [
+                    {
+                        "term": "Case-Control Study",
+                        "termAccessionNumber": "http://purl.obolibrary.org/obo/NCIT_C15197",
+                        "termSourceRef": "NCIT"
+                    },
+                    {
+                        "term": "Longitudinal Study",
+                        "termAccessionNumber": "http://purl.obolibrary.org/obo/NCIT_C15273",
+                        "termSourceRef": "NCIT"
+                    },
+                    {
+                        "term": "Crossover Study",
+                        "termAccessionNumber": "http://purl.obolibrary.org/obo/NCIT_C82637",
+                        "termSourceRef": "NCIT"
+                    }
+                ],
+                "unexpectedTerms": []
+            }
+        ],
         "Study Assay Measurement Type": [
             {
                 "ruleName": "Study Assay Measurement Type-01",
@@ -12198,58 +12246,6 @@
                         "termSourceRef": "EDAM"
                     }
                 ],
-                "unexpectedTerms": []
-            }
-        ],
-        "Organization": [
-            {
-                "ruleName": "Organization-01",
-                "fieldName": "Organization",
-                "ontologies": [
-                    "ROR"
-                ],
-                "allowedParentOntologyTerms": null,
-                "description": "",
-                "selectionCriteria": {
-                    "isaFileType": "investigation",
-                    "studyCreatedAtOrAfter": null,
-                    "studyCreatedBefore": null,
-                    "studyCategoryFilter": null,
-                    "templateVersionFilter": null,
-                    "isaFileTemplateNameFilter": null,
-                    "linkedFieldAndValueFilter": null
-                },
-                "termEnforcementLevel": "recommended",
-                "unexpectedTermEnforcementLevel": "not-applicable",
-                "validationType": "ontology-term-in-selected-ontologies",
-                "constraints": {},
-                "defaultValue": null,
-                "allowedMissingOntologyTerms": [],
-                "allowedOtherSources": [
-                    {
-                        "sourceLabel": "MTBLS",
-                        "accessionPrefix": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_"
-                    },
-                    {
-                        "sourceLabel": "wikidata",
-                        "accessionPrefix": "https://www.wikidata.org/wiki/"
-                    },
-                    {
-                        "sourceLabel": "ILX",
-                        "accessionPrefix": "http://uri.interlex.org/base/ilx_"
-                    }
-                ],
-                "allowedPlaceholders": [
-                    {
-                        "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/placeholder",
-                        "termSourceRef": "MTBLS"
-                    },
-                    {
-                        "termAccessionNumber": "",
-                        "termSourceRef": ""
-                    }
-                ],
-                "terms": [],
                 "unexpectedTerms": []
             }
         ],

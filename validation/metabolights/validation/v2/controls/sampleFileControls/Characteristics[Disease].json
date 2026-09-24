@@ -103,11 +103,6 @@
                     "term": "metabolic dysfunction-associated steatotic liver disease",
                     "termAccessionNumber": "http://purl.obolibrary.org/obo/MONDO_0013209",
                     "termSourceRef": "MONDO"
-                },
-                {
-                    "term": "Not Applicable",
-                    "termAccessionNumber": "http://purl.obolibrary.org/obo/NCIT_C48660",
-                    "termSourceRef": "NCIT"
                 }
             ],
             "unexpectedTerms": []
@@ -209,11 +204,6 @@
                     "term": "metabolic dysfunction-associated steatotic liver disease",
                     "termAccessionNumber": "http://purl.obolibrary.org/obo/MONDO_0013209",
                     "termSourceRef": "MONDO"
-                },
-                {
-                    "term": "Not Applicable",
-                    "termAccessionNumber": "http://purl.obolibrary.org/obo/NCIT_C48660",
-                    "termSourceRef": "NCIT"
                 }
             ],
             "unexpectedTerms": []

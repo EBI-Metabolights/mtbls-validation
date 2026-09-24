@@ -131,6 +131,29 @@
 | 2 | Investigator | NCIT | http://purl\.obolibrary\.org/obo/NCIT\_C25936 |
 | 3 | Author | NCIT | http://purl\.obolibrary\.org/obo/NCIT\_C42781 |
 
+## Organization
+
+| Attribute | Value |
+|---|------|
+| Rule Name | Design\-01 |
+| Rule Description |  |
+| Applicable Study Categories | All |
+| Applicable Template Names | All |
+| Applicable Template Versions | All |
+| Validation Type | any-ontology-term |
+| Recommended Ontologies [Ordered] | NCIT |
+| Allowed Placeholders | [MTBLS, http://www.ebi.ac.uk/metabolights/ontology/placeholder], [, ] |
+| Allowed Other Sources | [MTBLS, http://www.ebi.ac.uk/metabolights/ontology/MTBLS_], [wikidata, https://www.wikidata.org/wiki/], [ILX, http://uri.interlex.org/base/ilx_] |
+| Ontology Term Enforcement Level | recommended |
+
+### Recommended Terms
+
+| # |Term  | Term Source  | Term Accession |
+|---|------|--------------|----------------|
+| 1 | Case\-Control Study | NCIT | http://purl\.obolibrary\.org/obo/NCIT\_C15197 |
+| 2 | Longitudinal Study | NCIT | http://purl\.obolibrary\.org/obo/NCIT\_C15273 |
+| 3 | Crossover Study | NCIT | http://purl\.obolibrary\.org/obo/NCIT\_C82637 |
+
 ## Study Assay Measurement Type
 
 | Attribute | Value |
@@ -330,20 +353,6 @@
 | 2 | Lipidomics | EDAM | http://edamontology\.org/topic\_0153 |
 | 3 | Exposomics |  |  |
 | 4 | Fluxomics | EDAM | http://edamontology\.org/topic\_3955 |
-
-## Organization
-
-| Attribute | Value |
-|---|------|
-| Rule Name | Organization\-01 |
-| Rule Description |  |
-| Applicable Study Categories | All |
-| Applicable Template Names | All |
-| Applicable Template Versions | All |
-| Validation Type | ontology-term-in-selected-ontologies |
-| Ontologies [Ordered] | ROR |
-| Allowed Placeholders | [MTBLS, http://www.ebi.ac.uk/metabolights/ontology/placeholder], [, ] |
-| Allowed Other Sources | [MTBLS, http://www.ebi.ac.uk/metabolights/ontology/MTBLS_], [wikidata, https://www.wikidata.org/wiki/], [ILX, http://uri.interlex.org/base/ilx_] |
 
 ## Study Publication Status
 

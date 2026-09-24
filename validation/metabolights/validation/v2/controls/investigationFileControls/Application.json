@@ -1,0 +1,90 @@
+{
+    "Organization": [
+        {
+            "ruleName": "Application-01",
+            "fieldName": "Application",
+            "ontologies": [
+                "EDAM"
+            ],
+            "allowedParentOntologyTerms": null,
+            "description": "",
+            "selectionCriteria": {
+                "isaFileType": "investigation",
+                "studyCreatedAtOrAfter": null,
+                "studyCreatedBefore": null,
+                "studyCategoryFilter": null,
+                "templateVersionFilter": null,
+                "isaFileTemplateNameFilter": null,
+                "linkedFieldAndValueFilter": null
+            },
+            "termEnforcementLevel": "recommended",
+            "unexpectedTermEnforcementLevel": "not-applicable",
+            "validationType": "any-ontology-term",
+            "constraints": {},
+            "defaultValue": null,
+            "allowedMissingOntologyTerms": [],
+            "allowedOtherSources": [
+                {
+                    "sourceLabel": "MTBLS",
+                    "accessionPrefix": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_"
+                },
+                {
+                    "sourceLabel": "wikidata",
+                    "accessionPrefix": "https://www.wikidata.org/wiki/"
+                },
+                {
+                    "sourceLabel": "ILX",
+                    "accessionPrefix": "http://uri.interlex.org/base/ilx_"
+                }
+            ],
+            "allowedPlaceholders": [
+                {
+                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/placeholder",
+                    "termSourceRef": "MTBLS"
+                },
+                {
+                    "termAccessionNumber": "",
+                    "termSourceRef": ""
+                }
+            ],
+            "terms": [
+                {
+                    "term": "Toxicology",
+                    "termAccessionNumber": "http://edamontology.org/topic_2840",
+                    "termSourceRef": "EDAM"
+                },
+                {
+                    "term": "Human biology",
+                    "termAccessionNumber": "http://edamontology.org/topic_2815",
+                    "termSourceRef": "EDAM"
+                },
+                {
+                    "term": "Plant biology",
+                    "termAccessionNumber": "http://edamontology.org/topic_0780",
+                    "termSourceRef": "EDAM"
+                },
+                {
+                    "term": "Marine biology",
+                    "termAccessionNumber": "http://edamontology.org/topic_3387",
+                    "termSourceRef": "EDAM"
+                },
+                {
+                    "term": "Microbiology",
+                    "termAccessionNumber": "http://edamontology.org/topic_3301",
+                    "termSourceRef": "EDAM"
+                },
+                {
+                    "term": "Nutritional science",
+                    "termAccessionNumber": "http://edamontology.org/topic_3390",
+                    "termSourceRef": "EDAM"
+                },
+                {
+                    "term": "Agricultural science",
+                    "termAccessionNumber": "http://edamontology.org/topic_3810",
+                    "termSourceRef": "EDAM"
+                }
+            ],
+            "unexpectedTerms": []
+        }
+    ]
+}

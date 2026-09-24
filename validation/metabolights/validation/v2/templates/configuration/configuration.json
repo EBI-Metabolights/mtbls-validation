@@ -207,7 +207,7 @@
             "software": {
                 "name": "software",
                 "label": "Software",
-                "description": "",
+                "description": "Used software in raw data processing and metabolite identification",
                 "isaFileType": "investigation",
                 "controlListKey": "Software"
             },
@@ -217,6 +217,27 @@
                 "description": "",
                 "isaFileType": "investigation",
                 "controlListKey": "Assay Acquisition Method"
+            },
+            "project": {
+                "name": "project",
+                "label": "Project",
+                "description": "Projects, cohorts, consortia, programmes or initiatives associated with the study.",
+                "isaFileType": "investigation",
+                "controlListKey": "Project"
+            },
+            "application": {
+                "name": "application",
+                "label": "Application",
+                "description": "Research applications or areas addressed by the study. e.g., Toxicology, Food and Nutrition, Plant science",
+                "isaFileType": "investigation",
+                "controlListKey": "Application"
+            },
+            "design": {
+                "name": "design",
+                "label": "Design",
+                "description": "Terms describing the experimental or observational design of the study. e.g., Case-control, Cross-over, Longitudinal",
+                "isaFileType": "investigation",
+                "controlListKey": "Design"
             }
         },
         "defaultDescriptorSources": {
@@ -1210,17 +1231,67 @@
             "activeStudyDesignDescriptorCategories": {
                 "disease": {
                     "visible": true,
-                    "order": 4,
+                    "order": 10,
+                    "min": 0
+                },
+                "project": {
+                    "visible": true,
+                    "order": 20,
+                    "min": 0
+                },
+                "application": {
+                    "visible": true,
+                    "order": 30,
+                    "min": 0
+                },
+                "design": {
+                    "visible": true,
+                    "order": 40,
                     "min": 0
                 },
                 "software": {
-                    "visible": true,
-                    "order": 8,
+                    "visible": false,
+                    "order": 50,
                     "min": 0
                 },
                 "facility": {
                     "visible": true,
-                    "order": 9,
+                    "order": 60,
+                    "min": 0
+                },
+                "instrument": {
+                    "visible": false,
+                    "order": 70,
+                    "min": 0
+                },
+                "organism": {
+                    "visible": false,
+                    "order": 80,
+                    "min": 0
+                },
+                "organism-part": {
+                    "visible": false,
+                    "order": 90,
+                    "min": 0
+                },
+                "cell-type": {
+                    "visible": false,
+                    "order": 100,
+                    "min": 0
+                },
+                "sample-type": {
+                    "visible": false,
+                    "order": 110,
+                    "min": 0
+                },
+                "omics-type": {
+                    "visible": false,
+                    "order": 120,
+                    "min": 0
+                },
+                "measurement-type": {
+                    "visible": false,
+                    "order": 130,
                     "min": 0
                 }
             },
@@ -1814,17 +1885,67 @@
             "activeStudyDesignDescriptorCategories": {
                 "disease": {
                     "visible": true,
-                    "order": 4,
+                    "order": 10,
+                    "min": 0
+                },
+                "project": {
+                    "visible": true,
+                    "order": 20,
+                    "min": 0
+                },
+                "application": {
+                    "visible": true,
+                    "order": 30,
+                    "min": 0
+                },
+                "design": {
+                    "visible": true,
+                    "order": 40,
                     "min": 0
                 },
                 "software": {
-                    "visible": true,
-                    "order": 8,
+                    "visible": false,
+                    "order": 50,
                     "min": 0
                 },
                 "facility": {
                     "visible": true,
-                    "order": 9,
+                    "order": 60,
+                    "min": 0
+                },
+                "instrument": {
+                    "visible": false,
+                    "order": 70,
+                    "min": 0
+                },
+                "organism": {
+                    "visible": false,
+                    "order": 80,
+                    "min": 0
+                },
+                "organism-part": {
+                    "visible": false,
+                    "order": 90,
+                    "min": 0
+                },
+                "cell-type": {
+                    "visible": false,
+                    "order": 100,
+                    "min": 0
+                },
+                "sample-type": {
+                    "visible": false,
+                    "order": 110,
+                    "min": 0
+                },
+                "omics-type": {
+                    "visible": false,
+                    "order": 120,
+                    "min": 0
+                },
+                "measurement-type": {
+                    "visible": false,
+                    "order": 130,
                     "min": 0
                 }
             },
