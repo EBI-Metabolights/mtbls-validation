@@ -297,7 +297,7 @@
         "COHO": {
             "sourceName": "COHO",
             "sourceFile": "https://raw.githubusercontent.com/EBISPOT/cohort-ontology/refs/heads/main/coho.owl",
-            "sourceVersion": "2026-08-26",
+            "sourceVersion": "2026-09-22.2",
             "sourceDescription": "",
             "sourceDetails": ""
         },
@@ -423,7 +423,7 @@
         "DRON": {
             "sourceName": "DRON",
             "sourceFile": "http://purl.obolibrary.org/obo/dron.owl",
-            "sourceVersion": "2026-06-04",
+            "sourceVersion": "2026-09-19",
             "sourceDescription": "The Drug Ontology",
             "sourceDetails": "An ontology to support comparative effectiveness researchers studying claims data."
         },
@@ -479,7 +479,7 @@
         "EFO": {
             "sourceName": "EFO",
             "sourceFile": "http://www.ebi.ac.uk/efo/efo.owl",
-            "sourceVersion": "3.93.0",
+            "sourceVersion": "3.94.0",
             "sourceDescription": "Experimental Factor Ontology",
             "sourceDetails": "The Experimental Factor Ontology (EFO) provides a systematic description of many experimental variables available in EBI databases, and for projects such as the NHGRI-EBI GWAS catalog. It combines parts of several biological ontologies, such as UBERON anatomy, ChEBI chemical compounds, Cell Ontology and the Monarch Disease Ontology (MONDO). The scope of EFO is to support the annotation, analysis and visualization of data handled by many groups at the EBI and as the core ontology for Open Targets."
         },
@@ -654,7 +654,7 @@
         "FOODON": {
             "sourceName": "FOODON",
             "sourceFile": "http://purl.obolibrary.org/obo/foodon.owl",
-            "sourceVersion": "2025-12-30",
+            "sourceVersion": "2026-02-02",
             "sourceDescription": "Food Ontology",
             "sourceDetails": "A broadly scoped ontology representing entities which bear a \u201cfood role\u201d. It encompasses materials in natural ecosystems and agriculture that are consumed by humans and domesticated animals. This includes any generic (unbranded) raw or processed food material found in processing plants, markets, stores or food distribution points. FoodOn also imports nutritional component and dietary pattern terms from other OBO Foundry ontologies to support interoperability in diet and nutrition research"
         },
@@ -1095,7 +1095,7 @@
         "MRO": {
             "sourceName": "MRO",
             "sourceFile": "http://purl.obolibrary.org/obo/mro.owl",
-            "sourceVersion": "2026-09-09",
+            "sourceVersion": "2026-09-15",
             "sourceDescription": "MHC Restriction Ontology",
             "sourceDetails": "The MHC Restriction Ontology is an application ontology capturing how Major Histocompatibility Complex (MHC) restriction is defined in experiments, spanning exact protein complexes, individual protein chains, serotypes, haplotypes and mutant molecules, as well as evidence for MHC restrictions."
         },
@@ -1578,7 +1578,7 @@
         "RBO": {
             "sourceName": "RBO",
             "sourceFile": "http://purl.obolibrary.org/obo/rbo.owl",
-            "sourceVersion": "2026-07-16",
+            "sourceVersion": "2026-09-23",
             "sourceDescription": "Radiation Biology Ontology",
             "sourceDetails": "RBO is an ontology for the effects of radiation on biota in terrestrial and space environments."
         },
@@ -1802,7 +1802,7 @@
         "TFO": {
             "sourceName": "TFO",
             "sourceFile": "http://opendata.inrae.fr/PO2/Ontology/transformON.rdf",
-            "sourceVersion": "29.0",
+            "sourceVersion": "32.0",
             "sourceDescription": "TransformON",
             "sourceDetails": "A domain ontology on food and bioproduct processing and characterization that is a specialization of the PO2 ontology (Process and Observation Ontology)."
         },

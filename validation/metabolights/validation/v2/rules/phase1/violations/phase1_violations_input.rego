@@ -732,7 +732,7 @@ rule___100_600_002_01 contains result if {
 #  section: metabolites.general
 rule___100_600_003_01 contains result if {
 	count(input.studyDbMetadata.studyId) > 0
-	pattern := sprintf(`^s_%v\.txt$`, [input.studyDbMetadata.studyId])
+	pattern := sprintf(`^s_%v\Characteristics[Organism]-02.txt$`, [input.studyDbMetadata.studyId])
 	pattern_str := sprintf("s_%v.txt", [input.studyDbMetadata.studyId])
 
 	count(input.samples) > 0

@@ -12,11 +12,11 @@
 | 8 | rule\_i\_100\_100\_002\_01 | WARNING | Term Source File length less than 2 characters in investigation file\. | Term Source File should be defined with length equal or greater than 2 characters in the ONTOLOGY SOURCE REFERENCE section in i\_Investigation\.txt\. |
 | 9 | rule\_i\_100\_300\_001\_01 | ERROR | No study referenced in investigation file\. | Only one study should be defined in i\_Investigation\.txt\. |
 | 10 | rule\_i\_100\_300\_001\_02 | ERROR | More than one study referenced in investigation file\. | Only one study should be defined in i\_Investigation\.txt\. |
-| 11 | rule\_i\_100\_300\_002\_01 | ERROR | Study Identifier not valid\. | Study Identifier should be valid format \(e\.g\., MTBLS\(positive\_number\) or REQ\(datetime\)\)\. |
+| 11 | rule\_i\_100\_300\_002\_01 | ERROR | Study Identifier does not match the database study id | Study Identifier must match the study id defined in MetaboLights database |
 | 12 | rule\_i\_100\_300\_003\_01 | ERROR | Study Title length less than 25 characters\. | Study Title should be defined with length equal or greater than 25 characters\. Please use same title as first publication\. |
 | 13 | rule\_i\_100\_300\_003\_02 | ERROR | Non\-printable characters in Study Title\. | Study title should contain only printable characters\. |
 | 14 | rule\_i\_100\_300\_003\_03 | ERROR | Study Title contains only template message\. | Study title should be updated\. Do not use template message 'Please update the study title'\. |
-| 15 | rule\_i\_100\_300\_004\_01 | ERROR | Study Description length less than 60 characters\. | Study Description should be defined with length equal or greater than 60 characters\. Please use abstract of first publication\. |
+| 15 | rule\_i\_100\_300\_004\_01 | ERROR | Study Description length less than 150 characters\. | Study Description should be defined with length equal or greater than 150 characters\. Please use abstract of first publication\. |
 | 16 | rule\_i\_100\_300\_004\_02 | ERROR | Study abstract/description contains only template message\. | Study abstract/description should be updated\. Do not use template message 'Please update the study abstract/description'\. |
 | 17 | rule\_i\_100\_300\_004\_03 | ERROR | Unexpected characters in Study Description\. | Study description should contain only printable characters\. |
 | 18 | rule\_i\_100\_300\_005\_01 | WARNING | Study Submission Date not valid\. | Study Submission Date should be valid date and ISO8601 format \(e\.g\., 2023\-01\-01\)\. |

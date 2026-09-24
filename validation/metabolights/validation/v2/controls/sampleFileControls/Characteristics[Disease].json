@@ -55,6 +55,11 @@
             "allowedPlaceholders": [],
             "terms": [
                 {
+                    "term": "normal",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/PATO_0000461",
+                    "termSourceRef": "MONDO"
+                },
+                {
                     "term": "breast cancer",
                     "termAccessionNumber": "http://purl.obolibrary.org/obo/MONDO_0007254",
                     "termSourceRef": "MONDO"
@@ -100,9 +105,9 @@
                     "termSourceRef": "MONDO"
                 },
                 {
-                    "term": "normal",
-                    "termAccessionNumber": "http://purl.obolibrary.org/obo/PATO_0000461",
-                    "termSourceRef": "PATO"
+                    "term": "Not Applicable",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/NCIT_C48660",
+                    "termSourceRef": "NCIT"
                 }
             ],
             "unexpectedTerms": []
@@ -156,6 +161,11 @@
             "allowedPlaceholders": [],
             "terms": [
                 {
+                    "term": "normal",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/PATO_0000461",
+                    "termSourceRef": "MONDO"
+                },
+                {
                     "term": "breast cancer",
                     "termAccessionNumber": "http://purl.obolibrary.org/obo/MONDO_0007254",
                     "termSourceRef": "MONDO"
@@ -201,9 +211,9 @@
                     "termSourceRef": "MONDO"
                 },
                 {
-                    "term": "normal",
-                    "termAccessionNumber": "http://purl.obolibrary.org/obo/PATO_0000461",
-                    "termSourceRef": "PATO"
+                    "term": "Not Applicable",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/NCIT_C48660",
+                    "termSourceRef": "NCIT"
                 }
             ],
             "unexpectedTerms": []

@@ -102,6 +102,11 @@
                     "term": "hematopoietic stem cell",
                     "termAccessionNumber": "http://purl.obolibrary.org/obo/CL_0000037",
                     "termSourceRef": "CL"
+                },
+                {
+                    "term": "Not Applicable",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/NCIT_C48660",
+                    "termSourceRef": "NCIT"
                 }
             ],
             "unexpectedTerms": []
