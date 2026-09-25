@@ -144,9 +144,9 @@
 | 5 | leaf | BTO | http://purl\.obolibrary\.org/obo/BTO\_0000713 |
 | 6 | exocarp | BTO | http://purl\.obolibrary\.org/obo/BTO\_0000733 |
 | 7 | Whole Organism | NCIT | http://purl\.obolibrary\.org/obo/NCIT\_C13413 |
-| 8 | exometabolome | MTBLS | http://www\.ebi\.ac\.uk/metabolights/ontology/MTBLS\_000131 |
-| 9 | endometabolome | MTBLS | http://www\.ebi\.ac\.uk/metabolights/ontology/MTBLS\_000125 |
-| 10 | blank | MTBLS | http://www\.ebi\.ac\.uk/metabolights/ontology/MTBLS\_002304 |
+| 8 | Exometabolome | NCIT | http://purl\.obolibrary\.org/obo/NCIT\_C222306 |
+| 9 | Endometabolome | NCIT | http://purl\.obolibrary\.org/obo/NCIT\_C222304 |
+| 10 | blank sample | NCBITaxon | http://purl\.obolibrary\.org/obo/NCBITaxon\_2582415 |
 
 ## Characteristics\[Sample type\]
 

@@ -45,7 +45,33 @@
                     "termSourceRef": ""
                 }
             ],
-            "terms": [],
+            "terms": [
+                {
+                    "term": "UK Biobank",
+                    "termAccessionNumber": "https://ror.org/02frzq211",
+                    "termSourceRef": "ror"
+                },
+                {
+                    "term": "HoloFood",
+                    "termAccessionNumber": "",
+                    "termSourceRef": ""
+                },
+                {
+                    "term": "PrecisionTox",
+                    "termAccessionNumber": "",
+                    "termSourceRef": ""
+                },
+                {
+                    "term": "TREC",
+                    "termAccessionNumber": "",
+                    "termSourceRef": ""
+                },
+                {
+                    "term": "The Cancer Genome Atlas",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/NCIT_C98269",
+                    "termSourceRef": "NCIT"
+                }
+            ],
             "unexpectedTerms": []
         }
     ]

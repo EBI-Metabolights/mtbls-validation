@@ -1245,7 +1245,7 @@
                     "min": 0
                 },
                 "design": {
-                    "visible": true,
+                    "visible": false,
                     "order": 40,
                     "min": 0
                 },
@@ -1899,7 +1899,7 @@
                     "min": 0
                 },
                 "design": {
-                    "visible": true,
+                    "visible": false,
                     "order": 40,
                     "min": 0
                 },

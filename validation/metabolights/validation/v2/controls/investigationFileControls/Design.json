@@ -54,13 +54,23 @@
                     "termSourceRef": "NCIT"
                 },
                 {
-                    "term": "Longitudinal Study",
-                    "termAccessionNumber": "http://purl.obolibrary.org/obo/NCIT_C15273",
+                    "term": "Cross-Sectional Study",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/NCIT_C53310",
                     "termSourceRef": "NCIT"
                 },
                 {
                     "term": "Crossover Study",
                     "termAccessionNumber": "http://purl.obolibrary.org/obo/NCIT_C82637",
+                    "termSourceRef": "NCIT"
+                },
+                {
+                    "term": "Parallel Study",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/NCIT_C82639",
+                    "termSourceRef": "NCIT"
+                },
+                {
+                    "term": "Longitudinal Study",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/NCIT_C15273",
                     "termSourceRef": "NCIT"
                 }
             ],

@@ -54,8 +54,8 @@
                     "termSourceRef": "EDAM"
                 },
                 {
-                    "term": "Human biology",
-                    "termAccessionNumber": "http://edamontology.org/topic_2815",
+                    "term": "Biomedical science",
+                    "termAccessionNumber": "http://edamontology.org/topic_3344",
                     "termSourceRef": "EDAM"
                 },
                 {
@@ -64,8 +64,8 @@
                     "termSourceRef": "EDAM"
                 },
                 {
-                    "term": "Marine biology",
-                    "termAccessionNumber": "http://edamontology.org/topic_3387",
+                    "term": "Nutritional science",
+                    "termAccessionNumber": "http://edamontology.org/topic_3390",
                     "termSourceRef": "EDAM"
                 },
                 {
@@ -74,13 +74,8 @@
                     "termSourceRef": "EDAM"
                 },
                 {
-                    "term": "Nutritional science",
-                    "termAccessionNumber": "http://edamontology.org/topic_3390",
-                    "termSourceRef": "EDAM"
-                },
-                {
-                    "term": "Agricultural science",
-                    "termAccessionNumber": "http://edamontology.org/topic_3810",
+                    "term": "Marine biology",
+                    "termAccessionNumber": "http://edamontology.org/topic_3387",
                     "termSourceRef": "EDAM"
                 }
             ],

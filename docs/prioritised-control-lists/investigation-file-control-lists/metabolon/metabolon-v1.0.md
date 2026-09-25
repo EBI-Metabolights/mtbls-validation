@@ -143,6 +143,17 @@
 | Validation Type | any-ontology-term |
 | Allowed Placeholders | [MTBLS, http://www.ebi.ac.uk/metabolights/ontology/placeholder], [, ] |
 | Allowed Other Sources | [MTBLS, http://www.ebi.ac.uk/metabolights/ontology/MTBLS_], [wikidata, https://www.wikidata.org/wiki/], [ILX, http://uri.interlex.org/base/ilx_] |
+| Ontology Term Enforcement Level | recommended |
+
+### Recommended Terms
+
+| # |Term  | Term Source  | Term Accession |
+|---|------|--------------|----------------|
+| 1 | UK Biobank | ror | https://ror\.org/02frzq211 |
+| 2 | HoloFood |  |  |
+| 3 | PrecisionTox |  |  |
+| 4 | TREC |  |  |
+| 5 | The Cancer Genome Atlas | NCIT | http://purl\.obolibrary\.org/obo/NCIT\_C98269 |
 
 ## Study Assay Measurement Type
 
@@ -401,12 +412,11 @@
 | # |Term  | Term Source  | Term Accession |
 |---|------|--------------|----------------|
 | 1 | Toxicology | EDAM | http://edamontology\.org/topic\_2840 |
-| 2 | Human biology | EDAM | http://edamontology\.org/topic\_2815 |
+| 2 | Biomedical science | EDAM | http://edamontology\.org/topic\_3344 |
 | 3 | Plant biology | EDAM | http://edamontology\.org/topic\_0780 |
-| 4 | Marine biology | EDAM | http://edamontology\.org/topic\_3387 |
+| 4 | Nutritional science | EDAM | http://edamontology\.org/topic\_3390 |
 | 5 | Microbiology | EDAM | http://edamontology\.org/topic\_3301 |
-| 6 | Nutritional science | EDAM | http://edamontology\.org/topic\_3390 |
-| 7 | Agricultural science | EDAM | http://edamontology\.org/topic\_3810 |
+| 6 | Marine biology | EDAM | http://edamontology\.org/topic\_3387 |
 
 ## Assay Acquisition Method
 
@@ -475,6 +485,8 @@
 | # |Term  | Term Source  | Term Accession |
 |---|------|--------------|----------------|
 | 1 | Case\-Control Study | NCIT | http://purl\.obolibrary\.org/obo/NCIT\_C15197 |
-| 2 | Longitudinal Study | NCIT | http://purl\.obolibrary\.org/obo/NCIT\_C15273 |
+| 2 | Cross\-Sectional Study | NCIT | http://purl\.obolibrary\.org/obo/NCIT\_C53310 |
 | 3 | Crossover Study | NCIT | http://purl\.obolibrary\.org/obo/NCIT\_C82637 |
+| 4 | Parallel Study | NCIT | http://purl\.obolibrary\.org/obo/NCIT\_C82639 |
+| 5 | Longitudinal Study | NCIT | http://purl\.obolibrary\.org/obo/NCIT\_C15273 |
 
