@@ -225,12 +225,12 @@
                 "isaFileType": "investigation",
                 "controlListKey": "Project"
             },
-            "application": {
-                "name": "application",
-                "label": "Application",
-                "description": "Research applications or areas addressed by the study. e.g., Toxicology, Food and Nutrition, Plant science",
+            "domain": {
+                "name": "domain",
+                "label": "Domain",
+                "description": "Research applications or areas addressed by the study. e.g., Toxicology, Nutritional science, Plant biology",
                 "isaFileType": "investigation",
-                "controlListKey": "Application"
+                "controlListKey": "Domain"
             },
             "design": {
                 "name": "design",
@@ -1239,7 +1239,7 @@
                     "order": 20,
                     "min": 0
                 },
-                "application": {
+                "domain": {
                     "visible": true,
                     "order": 30,
                     "min": 0
@@ -1893,7 +1893,7 @@
                     "order": 20,
                     "min": 0
                 },
-                "application": {
+                "domain": {
                     "visible": true,
                     "order": 30,
                     "min": 0

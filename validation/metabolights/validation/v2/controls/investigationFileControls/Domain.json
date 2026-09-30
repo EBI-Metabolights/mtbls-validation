@@ -1,8 +1,8 @@
 {
-    "Application": [
+    "Domain": [
         {
-            "ruleName": "Application-01",
-            "fieldName": "Application",
+            "ruleName": "Domain-01",
+            "fieldName": "Domain",
             "ontologies": [
                 "EDAM"
             ],

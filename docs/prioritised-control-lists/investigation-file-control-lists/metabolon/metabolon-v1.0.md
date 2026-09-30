@@ -48,6 +48,32 @@
 | 11 | degree Fahrenheit | UO | http://purl\.obolibrary\.org/obo/UO\_0000195 |
 | 12 | degree Celsius | UO | http://purl\.obolibrary\.org/obo/UO\_0000027 |
 
+## Domain
+
+| Attribute | Value |
+|---|------|
+| Rule Name | Domain\-01 |
+| Rule Description |  |
+| Applicable Study Categories | All |
+| Applicable Template Names | All |
+| Applicable Template Versions | All |
+| Validation Type | any-ontology-term |
+| Recommended Ontologies [Ordered] | EDAM |
+| Allowed Placeholders | [MTBLS, http://www.ebi.ac.uk/metabolights/ontology/placeholder], [, ] |
+| Allowed Other Sources | [MTBLS, http://www.ebi.ac.uk/metabolights/ontology/MTBLS_], [wikidata, https://www.wikidata.org/wiki/], [ILX, http://uri.interlex.org/base/ilx_] |
+| Ontology Term Enforcement Level | recommended |
+
+### Recommended Terms
+
+| # |Term  | Term Source  | Term Accession |
+|---|------|--------------|----------------|
+| 1 | Toxicology | EDAM | http://edamontology\.org/topic\_2840 |
+| 2 | Biomedical science | EDAM | http://edamontology\.org/topic\_3344 |
+| 3 | Plant biology | EDAM | http://edamontology\.org/topic\_0780 |
+| 4 | Nutritional science | EDAM | http://edamontology\.org/topic\_3390 |
+| 5 | Microbiology | EDAM | http://edamontology\.org/topic\_3301 |
+| 6 | Marine biology | EDAM | http://edamontology\.org/topic\_3387 |
+
 ## Study Protocol Type
 
 | Attribute | Value |
@@ -391,32 +417,6 @@
 | 3 | preprint | EFO | http://www\.ebi\.ac\.uk/efo/EFO\_0010558 |
 | 4 | published | EFO | http://www\.ebi\.ac\.uk/efo/EFO\_0001796 |
 | 5 | Learning material | EDAM | http://edamontology\.org/data\_3669 |
-
-## Application
-
-| Attribute | Value |
-|---|------|
-| Rule Name | Application\-01 |
-| Rule Description |  |
-| Applicable Study Categories | All |
-| Applicable Template Names | All |
-| Applicable Template Versions | All |
-| Validation Type | any-ontology-term |
-| Recommended Ontologies [Ordered] | EDAM |
-| Allowed Placeholders | [MTBLS, http://www.ebi.ac.uk/metabolights/ontology/placeholder], [, ] |
-| Allowed Other Sources | [MTBLS, http://www.ebi.ac.uk/metabolights/ontology/MTBLS_], [wikidata, https://www.wikidata.org/wiki/], [ILX, http://uri.interlex.org/base/ilx_] |
-| Ontology Term Enforcement Level | recommended |
-
-### Recommended Terms
-
-| # |Term  | Term Source  | Term Accession |
-|---|------|--------------|----------------|
-| 1 | Toxicology | EDAM | http://edamontology\.org/topic\_2840 |
-| 2 | Biomedical science | EDAM | http://edamontology\.org/topic\_3344 |
-| 3 | Plant biology | EDAM | http://edamontology\.org/topic\_0780 |
-| 4 | Nutritional science | EDAM | http://edamontology\.org/topic\_3390 |
-| 5 | Microbiology | EDAM | http://edamontology\.org/topic\_3301 |
-| 6 | Marine biology | EDAM | http://edamontology\.org/topic\_3387 |
 
 ## Assay Acquisition Method
 

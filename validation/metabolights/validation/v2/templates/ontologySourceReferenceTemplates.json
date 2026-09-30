@@ -297,7 +297,7 @@
         "COHO": {
             "sourceName": "COHO",
             "sourceFile": "https://raw.githubusercontent.com/EBISPOT/cohort-ontology/refs/heads/main/coho.owl",
-            "sourceVersion": "2026-09-22.2",
+            "sourceVersion": "2026-09-24.1",
             "sourceDescription": "",
             "sourceDetails": ""
         },
@@ -1074,7 +1074,7 @@
         "MP": {
             "sourceName": "MP",
             "sourceFile": "http://purl.obolibrary.org/obo/mp/mp-international.owl",
-            "sourceVersion": "2026-08-25",
+            "sourceVersion": "2026-09-23",
             "sourceDescription": "The Mammalian Phenotype Ontology",
             "sourceDetails": "The Mammalian Phenotype Ontology is being developed by Cynthia L. Smith, Susan M. Bello, Anna V. Anagnostopoulos, Carroll W. Goldsmith and Janan T. Eppig, as part of the Mouse Genome Database (MGD) Project, Mouse Genome Informatics (MGI), The Jackson Laboratory, Bar Harbor, ME. This file contains pre-coordinated phenotype terms, definitions and synonyms that can be used to describe mammalian phenotypes. The ontology is represented as a directed acyclic graph (DAG). It organizes phenotype terms into major biological system headers such as nervous system and respiratory system.  This ontology is currently under development. Weekly updates are available at the Mouse Genome Informatics (MGI) ftp site (ftp://ftp.informatics.jax.org/pub/reports/index.html#pheno) as well as the OBO Foundry site (http://obofoundry.org/). Japanese labels of MP were created by the MP Japanese Translation Project (https://github.com/dbcls/MP_Japanese). Questions, comments and suggestions are welcome, and should be directed to pheno@jax.org, Susan.Bello@jax.org or to GitHub tracker (https://github.com/mgijax/mammalian-phenotype-ontology/issues) MGD is funded by NIH/NHGRI grant HG000330."
         },
@@ -1298,7 +1298,7 @@
         "OMO": {
             "sourceName": "OMO",
             "sourceFile": "http://purl.obolibrary.org/obo/omo.owl",
-            "sourceVersion": "2026-03-16",
+            "sourceVersion": "2026-09-25",
             "sourceDescription": "OBO Metadata Ontology",
             "sourceDetails": "An ontology specifies terms that are used to annotate ontology terms for all OBO ontologies. The ontology was developed as part of Information Artifact Ontology (IAO)."
         },
@@ -1410,7 +1410,7 @@
         "PAIN": {
             "sourceName": "PAIN",
             "sourceFile": "http://purl.obolibrary.org/obo/pain.owl",
-            "sourceVersion": "2026-08-13",
+            "sourceVersion": "2026-09-25",
             "sourceDescription": "The Pain Ontology",
             "sourceDetails": "An ontology that formalizes IASP's definition of pain as both an unpleasant physical and emotional experience, and it provides terms and axioms to represent the multidimensional aspects of pain, such as temporality, quality, extent, biological mechanism, and anatomical location."
         },
