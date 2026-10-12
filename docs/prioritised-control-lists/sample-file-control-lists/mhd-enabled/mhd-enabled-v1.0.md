@@ -1,0 +1,270 @@
+# mhd-enabled - Sample File Field Controls
+
+## Common
+
+| Attribute | Value |
+|---|------|
+| Rule Name | default\-sample\-file\-rule\-01 |
+| Rule Description | default |
+| Applicable Study Categories | All |
+| Applicable Template Names | All |
+| Applicable Template Versions | All |
+| Validation Type | any-ontology-term |
+| Recommended Ontologies [Ordered] | OBI, EFO, CHMO, NCBITaxon, NCIT, MS, BTO, CHEBI, UO, MESH, BAO, OMIT, GO, ENVO, MSIO, PO, MONDO, UBERON, SNOMED, CL, CLO, MI, EDAM, HP, MP |
+| Allowed Placeholders | [MTBLS, http://www.ebi.ac.uk/metabolights/ontology/placeholder], [, ] |
+| Allowed Other Sources | [MTBLS, http://www.ebi.ac.uk/metabolights/ontology/MTBLS_], [wikidata, https://www.wikidata.org/wiki/], [ILX, http://uri.interlex.org/base/ilx_] |
+| Unexpected Terms | unknown, undefined, n/a, na, not applicable, not available, null, nill, not specified, not provided, \-, \-\-, \-\-\-, \_, \. |
+| Unexpected Term Enforcement Level | required |
+
+## Factor Value \(Common\)
+
+| Attribute | Value |
+|---|------|
+| Rule Name | default\-sample\-factor\_value\-rule\-01 |
+| Rule Description | default |
+| Applicable Study Categories | All |
+| Applicable Template Names | All |
+| Applicable Template Versions | All |
+| Validation Type | any-ontology-term |
+| Recommended Ontologies [Ordered] | OBI, EFO, CHMO, NCIT, NCBITaxon, MS, BTO, CHEBI, UO, MESH, BAO, OMIT, GO, ENVO, MSIO, PO, MONDO, UBERON, SNOMED, CL, CLO, MI, EDAM, HP, MP |
+| Allowed Placeholders | [MTBLS, http://www.ebi.ac.uk/metabolights/ontology/placeholder] |
+| Allowed Other Sources | [MTBLS, http://www.ebi.ac.uk/metabolights/ontology/MTBLS_], [wikidata, https://www.wikidata.org/wiki/], [ILX, http://uri.interlex.org/base/ilx_] |
+
+## Characteristic \(Common\)
+
+| Attribute | Value |
+|---|------|
+| Rule Name | default\-sample\-characteristic\-rule\-01 |
+| Rule Description | default |
+| Applicable Study Categories | All |
+| Applicable Template Names | All |
+| Applicable Template Versions | All |
+| Validation Type | ontology-term-in-selected-ontologies |
+| Ontologies [Ordered] | OBI, EFO, CHMO, NCBITaxon, NCIT, MS, BTO, CHEBI, UO, MESH, BAO, OMIT, GO, ENVO, MSIO, PO, MONDO, UBERON, SNOMED, CL, CLO, MI, EDAM, HP, MP |
+| Allowed Placeholders | [MTBLS, http://www.ebi.ac.uk/metabolights/ontology/placeholder] |
+| Allowed Other Sources | [wikidata, https://www.wikidata.org/wiki/], [ILX, http://uri.interlex.org/base/ilx_] |
+
+## Unit
+
+| Attribute | Value |
+|---|------|
+| Rule Name | Sample\-Unit\-01 |
+| Rule Description |  |
+| Applicable Study Categories | All |
+| Applicable Template Names | All |
+| Applicable Template Versions | All |
+| Validation Type | child-ontology-term |
+| Allowed Parent Ontology Terms | [unit, UO, http://purl.obolibrary.org/obo/UO_0000000], [unit, EFO, http://purl.obolibrary.org/obo/UO_0000000], [Qualifier, NCIT, http://purl.obolibrary.org/obo/NCIT_C41009], [Unit of Measure, NCIT, http://purl.obolibrary.org/obo/NCIT_C25709] |
+| Allowed Parent Ontology Term Exceptions | ^.*unit$, ^.*Unit of.*$ |
+| Allowed Other Sources | [wikidata, https://www.wikidata.org/wiki/], [ILX, http://uri.interlex.org/base/ilx_] |
+| Ontology Term Enforcement Level | recommended |
+
+### Recommended Terms
+
+| # |Term  | Term Source  | Term Accession |
+|---|------|--------------|----------------|
+| 1 | kelvin | UO | http://purl\.obolibrary\.org/obo/UO\_0000012 |
+| 2 | tesla | UO | http://purl\.obolibrary\.org/obo/UO\_0000228 |
+| 3 | micrometer | UO | http://purl\.obolibrary\.org/obo/UO\_0000017 |
+| 4 | millimolar | UO | http://purl\.obolibrary\.org/obo/UO\_0000063 |
+| 5 | meter | UO | http://purl\.obolibrary\.org/obo/UO\_0000008 |
+| 6 | kilogram | UO | http://purl\.obolibrary\.org/obo/UO\_0000009 |
+| 7 | milligram per day | EFO | http://www\.ebi\.ac\.uk/efo/EFO\_0004419 |
+| 8 | day | UO | http://purl\.obolibrary\.org/obo/UO\_0000033 |
+| 9 | hour | UO | http://purl\.obolibrary\.org/obo/UO\_0000032 |
+| 10 | minute | UO | http://purl\.obolibrary\.org/obo/UO\_0000031 |
+| 11 | degree Fahrenheit | UO | http://purl\.obolibrary\.org/obo/UO\_0000195 |
+| 12 | degree Celsius | UO | http://purl\.obolibrary\.org/obo/UO\_0000027 |
+
+## Source Name
+
+| Attribute | Value |
+|---|------|
+| Rule Name | Source Name\-01 |
+| Rule Description |  |
+| Applicable Study Categories | All |
+| Applicable Template Names | All |
+| Applicable Template Versions | All |
+| Validation Type | check-only-constraints |
+| Pattern | <code>^[a-zA-Z0-9][a-zA-Z0-9-_ ]+[a-zA-Z0-9]$</code> |
+| Pattern Message | Value must be at least 3 characters and contain only alphanumeric characters, space, \- and \_ characters |
+| Pattern Enforcement Level | recommended |
+
+## Characteristics\[Organism\]
+
+| Attribute | Value |
+|---|------|
+| Rule Name | Characteristics\[Organism\]\-01 |
+| Rule Description |  |
+| Applicable Study Categories | ms\-mhd\-enabled |
+| Applicable Template Names | All |
+| Applicable Template Versions | All |
+| Validation Type | ontology-term-in-selected-ontologies |
+| Ontologies [Ordered] | NCBITaxon, ENVO, CHEBI |
+| Allowed Other Sources | [wikidata, https://www.wikidata.org/wiki/], [ILX, http://uri.interlex.org/base/ilx_] |
+| Unexpected Terms | cat, chicken, plant, sample, dog, mouse, horse, flower, fish, leave, root, mice, steam, bacteria, value, food, matrix, mus, rat, blood, urine, plasma, hair, fur, skin, saliva, fly, human, man, sheep, cell, donkey |
+| Unexpected Term Enforcement Level | required |
+| Ontology Term Enforcement Level | required |
+
+### Recommended Terms
+
+| # |Term  | Term Source  | Term Accession |
+|---|------|--------------|----------------|
+| 1 | Homo sapiens | NCBITaxon | http://purl\.obolibrary\.org/obo/NCBITaxon\_9606 |
+| 2 | Mus musculus | NCBITaxon | http://purl\.obolibrary\.org/obo/NCBITaxon\_10090 |
+| 3 | Rattus norvegicus | NCBITaxon | http://purl\.obolibrary\.org/obo/NCBITaxon\_10116 |
+| 4 | Arabidopsis thaliana | NCBITaxon | http://purl\.obolibrary\.org/obo/NCBITaxon\_3702 |
+| 5 | Vitis vinifera | NCBITaxon | http://purl\.obolibrary\.org/obo/NCBITaxon\_29760 |
+| 6 | Escherichia coli | NCBITaxon | http://purl\.obolibrary\.org/obo/NCBITaxon\_562 |
+| 7 | Trypanosoma brucei | NCBITaxon | http://purl\.obolibrary\.org/obo/NCBITaxon\_5691 |
+| 8 | sea water | ENVO | http://purl\.obolibrary\.org/obo/ENVO\_00002149 |
+
+## Characteristics\[Organism part\]
+
+| Attribute | Value |
+|---|------|
+| Rule Name | Characteristics\[Organism part\]\-01 |
+| Rule Description |  |
+| Applicable Study Categories | ms\-mhd\-enabled |
+| Applicable Template Names | All |
+| Applicable Template Versions | All |
+| Validation Type | ontology-term-in-selected-ontologies |
+| Ontologies [Ordered] | UBERON, BTO, NCIT, MSIO, CHEBI |
+| Allowed Other Sources | [wikidata, https://www.wikidata.org/wiki/], [ILX, http://uri.interlex.org/base/ilx_] |
+| Ontology Term Enforcement Level | required |
+
+### Recommended Terms
+
+| # |Term  | Term Source  | Term Accession |
+|---|------|--------------|----------------|
+| 1 | blood plasma | BTO | http://purl\.obolibrary\.org/obo/BTO\_0000131 |
+| 2 | blood serum | BTO | http://purl\.obolibrary\.org/obo/BTO\_0000133 |
+| 3 | urine | BTO | http://purl\.obolibrary\.org/obo/BTO\_0001419 |
+| 4 | feces | BTO | http://purl\.obolibrary\.org/obo/BTO\_0000440 |
+| 5 | leaf | BTO | http://purl\.obolibrary\.org/obo/BTO\_0000713 |
+| 6 | exocarp | BTO | http://purl\.obolibrary\.org/obo/BTO\_0000733 |
+| 7 | Whole Organism | NCIT | http://purl\.obolibrary\.org/obo/NCIT\_C13413 |
+| 8 | Exometabolome | NCIT | http://purl\.obolibrary\.org/obo/NCIT\_C222306 |
+| 9 | Endometabolome | NCIT | http://purl\.obolibrary\.org/obo/NCIT\_C222304 |
+| 10 | blank sample | NCBITaxon | http://purl\.obolibrary\.org/obo/NCBITaxon\_2582415 |
+
+## Characteristics\[Sample type\]
+
+| Attribute | Value |
+|---|------|
+| Rule Name | Characteristics\[Sample type\]\-01 |
+| Rule Description |  |
+| Applicable Study Categories | All |
+| Applicable Template Names | All |
+| Applicable Template Versions | All |
+| Validation Type | ontology-term-in-selected-ontologies |
+| Ontologies [Ordered] | CHMO, MSIO |
+| Ontology Term Enforcement Level | recommended |
+
+### Recommended Terms
+
+| # |Term  | Term Source  | Term Accession |
+|---|------|--------------|----------------|
+| 1 | experimental sample | CHMO | http://purl\.obolibrary\.org/obo/CHMO\_0002746 |
+| 2 | pooled quality control sample |  |  |
+| 3 | experimental blank |  |  |
+| 4 | solvent blank | MSIO | http://purl\.obolibrary\.org/obo/MSIO\_0000026 |
+| 5 | sample preparation blank | MSIO | http://purl\.obolibrary\.org/obo/MSIO\_0000025 |
+| 6 | reference compound mix | MSIO | http://purl\.obolibrary\.org/obo/MSIO\_0000024 |
+| 7 | long term reference | MSIO | http://purl\.obolibrary\.org/obo/MSIO\_0000019 |
+
+## Characteristics\[Disease\]
+
+| Attribute | Value |
+|---|------|
+| Rule Name | Characteristics\[Disease\]\-01 |
+| Rule Description |  |
+| Applicable Study Categories | ms\-mhd\-enabled |
+| Applicable Template Names | All |
+| Applicable Template Versions | All |
+| Validation Type | ontology-term-in-selected-ontologies |
+| Ontologies [Ordered] | MONDO, MP, SNOMED |
+| Allowed Other Sources | [wikidata, https://www.wikidata.org/wiki/], [ILX, http://uri.interlex.org/base/ilx_] |
+| Allowed Missing Terms | [Not Applicable, NCIT, http://purl.obolibrary.org/obo/NCIT_C48660], [, , ] |
+| Ontology Term Enforcement Level | required |
+
+### Recommended Terms
+
+| # |Term  | Term Source  | Term Accession |
+|---|------|--------------|----------------|
+| 1 | normal | MONDO | http://purl\.obolibrary\.org/obo/PATO\_0000461 |
+| 2 | breast cancer | MONDO | http://purl\.obolibrary\.org/obo/MONDO\_0007254 |
+| 3 | colorectal cancer | MONDO | http://purl\.obolibrary\.org/obo/MONDO\_0005575 |
+| 4 | Alzheimer disease | MONDO | http://purl\.obolibrary\.org/obo/MONDO\_0004975 |
+| 5 | Parkinson disease | MONDO | http://purl\.obolibrary\.org/obo/MONDO\_0005180 |
+| 6 | COVID\-19 | MONDO | http://purl\.obolibrary\.org/obo/MONDO\_0100096 |
+| 7 | type 2 diabetes mellitus | MONDO | http://purl\.obolibrary\.org/obo/MONDO\_0005148 |
+| 8 | ischemia reperfusion injury | MONDO | http://purl\.obolibrary\.org/obo/MONDO\_0005203 |
+| 9 | chronic kidney disease | MONDO | http://purl\.obolibrary\.org/obo/MONDO\_0005300 |
+| 10 | metabolic dysfunction\-associated steatotic liver disease | MONDO | http://purl\.obolibrary\.org/obo/MONDO\_0013209 |
+
+## Characteristics\[Cell type\]
+
+| Attribute | Value |
+|---|------|
+| Rule Name | Characteristics\[Cell type\]\-01 |
+| Rule Description |  |
+| Applicable Study Categories | ms\-mhd\-enabled |
+| Applicable Template Names | All |
+| Applicable Template Versions | All |
+| Validation Type | ontology-term-in-selected-ontologies |
+| Ontologies [Ordered] | CL, CLO |
+| Allowed Other Sources | [wikidata, https://www.wikidata.org/wiki/], [ILX, http://uri.interlex.org/base/ilx_] |
+| Allowed Missing Terms | [Not Applicable, NCIT, http://purl.obolibrary.org/obo/NCIT_C48660], [, , ] |
+| Ontology Term Enforcement Level | required |
+
+### Recommended Terms
+
+| # |Term  | Term Source  | Term Accession |
+|---|------|--------------|----------------|
+| 1 | regulatory T cell | CL | http://purl\.obolibrary\.org/obo/CL\_0000815 |
+| 2 | plasma cell | CL | http://purl\.obolibrary\.org/obo/CL\_0000786 |
+| 3 | endothelial cell | CL | http://purl\.obolibrary\.org/obo/CL\_0000115 |
+| 4 | smooth muscle cell | CL | http://purl\.obolibrary\.org/obo/CL\_0000192 |
+| 5 | fibroblast | CL | http://purl\.obolibrary\.org/obo/CL\_0000057 |
+| 6 | erythrocyte | CL | http://purl\.obolibrary\.org/obo/CL\_0000232 |
+| 7 | microglial cell | CL | http://purl\.obolibrary\.org/obo/CL\_0000129 |
+| 8 | hepatocyte | CL | http://purl\.obolibrary\.org/obo/CL\_0000182 |
+| 9 | alveolar macrophage | CL | http://purl\.obolibrary\.org/obo/CL\_0000583 |
+| 10 | hematopoietic stem cell | CL | http://purl\.obolibrary\.org/obo/CL\_0000037 |
+| 11 | Not Applicable | NCIT | http://purl\.obolibrary\.org/obo/NCIT\_C48660 |
+
+## Protocol REF
+
+| Attribute | Value |
+|---|------|
+| Rule Name | Sample Protocol REF\-01 |
+| Rule Description |  |
+| Applicable Study Categories | All |
+| Applicable Template Names | All |
+| Applicable Template Versions | All |
+| Validation Type | selected-ontology-term |
+| Allowed Placeholders | [MTBLS, http://www.ebi.ac.uk/metabolights/ontology/placeholder] |
+| Allowed Other Sources | [MTBLS, http://www.ebi.ac.uk/metabolights/ontology/MTBLS_] |
+| Ontology Term Enforcement Level | required |
+
+### Terms
+
+| # |Term  | Term Source  | Term Accession |
+|---|------|--------------|----------------|
+| 1 | Sample collection |  |  |
+
+## Sample Name
+
+| Attribute | Value |
+|---|------|
+| Rule Name | Sample Name\-01 |
+| Rule Description |  |
+| Applicable Study Categories | All |
+| Applicable Template Names | All |
+| Applicable Template Versions | All |
+| Validation Type | check-only-constraints |
+| Pattern | <code>^[a-zA-Z0-9][a-zA-Z0-9-_ ]+[a-zA-Z0-9]$</code> |
+| Pattern Message | Value must be at least 3 characters and contain only alphanumeric characters, space, \- and \_ characters |
+| Pattern Enforcement Level | recommended |
+

@@ -19430,7 +19430,7 @@
         "AFO": {
             "sourceName": "AFO",
             "sourceFile": "http://purl.allotrope.org/voc/afo/latest.xml",
-            "sourceVersion": "REC/2026/06",
+            "sourceVersion": "REC/2026/09",
             "sourceDescription": "Allotrope Merged Ontology Suite",
             "sourceDetails": "Allotrope Merged Ontology Suite"
         },
@@ -19465,7 +19465,7 @@
         "APO": {
             "sourceName": "APO",
             "sourceFile": "http://purl.obolibrary.org/obo/apo.owl",
-            "sourceVersion": "2026-06-16",
+            "sourceVersion": "2026-09-30",
             "sourceDescription": "Ascomycete Phenotype Ontology (APO)",
             "sourceDetails": "A structured controlled vocabulary for the phenotypes of Ascomycete fungi."
         },
@@ -19612,7 +19612,7 @@
         "CHEBI": {
             "sourceName": "CHEBI",
             "sourceFile": "http://purl.obolibrary.org/obo/chebi.owl",
-            "sourceVersion": "255",
+            "sourceVersion": "256",
             "sourceDescription": "Chemical Entities of Biological Interest",
             "sourceDetails": "A structured classification of molecular entities of biological interest focusing on 'small' chemical compounds."
         },
@@ -19703,7 +19703,7 @@
         "COHO": {
             "sourceName": "COHO",
             "sourceFile": "https://raw.githubusercontent.com/EBISPOT/cohort-ontology/refs/heads/main/coho.owl",
-            "sourceVersion": "2026-09-24.1",
+            "sourceVersion": "2026-10-07",
             "sourceDescription": "",
             "sourceDetails": ""
         },
@@ -19822,7 +19822,7 @@
         "DOID": {
             "sourceName": "DOID",
             "sourceFile": "https://purl.obolibrary.org/obo/doid/translations/doid-international.owl",
-            "sourceVersion": "2026-08-31",
+            "sourceVersion": "2026-09-30",
             "sourceDescription": "Human Disease Ontology",
             "sourceDetails": "The Disease Ontology has been developed as a standardized ontology for human disease with the purpose of providing the biomedical community with consistent, reusable and sustainable descriptions of human disease terms, phenotype characteristics and related medical vocabulary disease concepts."
         },
@@ -20004,21 +20004,21 @@
         "FBbt": {
             "sourceName": "FBbt",
             "sourceFile": "http://purl.obolibrary.org/obo/fbbt.owl",
-            "sourceVersion": "2026-07-09",
+            "sourceVersion": "2026-10-01",
             "sourceDescription": "Drosophila gross anatomy",
             "sourceDetails": "An ontology representing the gross anatomy of Drosophila melanogaster."
         },
         "FBcv": {
             "sourceName": "FBcv",
             "sourceFile": "http://purl.obolibrary.org/obo/fbcv.owl",
-            "sourceVersion": "2026-07-10",
+            "sourceVersion": "2026-10-01",
             "sourceDescription": "FlyBase Controlled Vocabulary",
             "sourceDetails": "A structured controlled vocabulary used for various aspects of annotation by FlyBase."
         },
         "FBdv": {
             "sourceName": "FBdv",
             "sourceFile": "http://purl.obolibrary.org/obo/fbdv.owl",
-            "sourceVersion": "2026-07-09",
+            "sourceVersion": "2026-09-30",
             "sourceDescription": "Drosophila development",
             "sourceDetails": "A structured controlled vocabulary of the development of Drosophila melanogaster."
         },
@@ -20039,7 +20039,7 @@
         "FLOPO": {
             "sourceName": "FLOPO",
             "sourceFile": "http://purl.obolibrary.org/obo/flopo.owl",
-            "sourceVersion": "2026-07-31",
+            "sourceVersion": "2026-10-05",
             "sourceDescription": "Flora Phenotype Ontology",
             "sourceDetails": "Traits and phenotypes of flowering plants occurring in digitized Floras"
         },
@@ -20466,7 +20466,7 @@
         "MONDO": {
             "sourceName": "MONDO",
             "sourceFile": "https://purl.obolibrary.org/obo/mondo/mondo-international.owl",
-            "sourceVersion": "2026-09-01",
+            "sourceVersion": "2026-10-06",
             "sourceDescription": "Mondo Disease Ontology",
             "sourceDetails": "A semi-automatically constructed ontology that merges in multiple disease resources to yield a coherent merged ontology."
         },
@@ -20655,7 +20655,7 @@
         "OHD": {
             "sourceName": "OHD",
             "sourceFile": "http://purl.obolibrary.org/obo/ohd.owl",
-            "sourceVersion": "2026-03-16",
+            "sourceVersion": "2026-10-01",
             "sourceDescription": "Oral Health and Disease Ontology",
             "sourceDetails": "The Oral Health and Disease Ontology is used for representing the diagnosis and treatment of dental maladies."
         },
@@ -20816,16 +20816,16 @@
         "PAIN": {
             "sourceName": "PAIN",
             "sourceFile": "http://purl.obolibrary.org/obo/pain.owl",
-            "sourceVersion": "2026-09-25",
+            "sourceVersion": "2026-10-01",
             "sourceDescription": "The Pain Ontology",
             "sourceDetails": "An ontology that formalizes IASP's definition of pain as both an unpleasant physical and emotional experience, and it provides terms and axioms to represent the multidimensional aspects of pain, such as temporality, quality, extent, biological mechanism, and anatomical location."
         },
         "PATO": {
             "sourceName": "PATO",
             "sourceFile": "http://purl.obolibrary.org/obo/pato.owl",
-            "sourceVersion": "2025-05-14",
+            "sourceVersion": "2026-10-01",
             "sourceDescription": "PATO - the Phenotype And Trait Ontology",
-            "sourceDetails": "An ontology of phenotypic qualities (properties, attributes or characteristics)."
+            "sourceDetails": "An ontology of characteristics (properties, attributes, or modifiers). These are intended to be used in combination with terms from other ontologies to construct characteristic-entity combinations that describe traits or phenotypes of organisms, chemicals, environments, and other entities."
         },
         "PBPKO": {
             "sourceName": "PBPKO",
@@ -21460,7 +21460,7 @@
         "rehabo": {
             "sourceName": "rehabo",
             "sourceFile": "https://github.com/mcwdsi/rehabo/releases/latest/download/rehabo.owl",
-            "sourceVersion": "2026-04-22",
+            "sourceVersion": "2026-09-29",
             "sourceDescription": "The Rehabilitation Ontology",
             "sourceDetails": ""
         },
@@ -22677,11 +22677,11 @@
                 },
                 "activeStudyCategories": {
                     "ms-mhd-enabled": {
-                        "visible": true,
+                        "visible": false,
                         "order": 1
                     },
                     "ms-mhd-legacy": {
-                        "visible": false,
+                        "visible": true,
                         "order": 2
                     },
                     "nmr": {
@@ -22706,8 +22706,8 @@
                     "CC BY 4.0"
                 ],
                 "supportedStudyCategoryClones": {
-                    "ms-mhd-enabled": "ms-mhd-enabled",
-                    "ms-mhd-legacy": "ms-mhd-enabled",
+                    "ms-mhd-enabled": "ms-mhd-legacy",
+                    "ms-mhd-legacy": "ms-mhd-legacy",
                     "nmr": "nmr",
                     "ms-imaging": "ms-imaging",
                     "ms-other": "ms-other"
@@ -23331,11 +23331,11 @@
                 },
                 "activeStudyCategories": {
                     "ms-mhd-enabled": {
-                        "visible": true,
+                        "visible": false,
                         "order": 1
                     },
                     "ms-mhd-legacy": {
-                        "visible": false,
+                        "visible": true,
                         "order": 2
                     },
                     "nmr": {
@@ -23360,8 +23360,8 @@
                     "CC BY 4.0"
                 ],
                 "supportedStudyCategoryClones": {
-                    "ms-mhd-enabled": "ms-mhd-enabled",
-                    "ms-mhd-legacy": "ms-mhd-enabled",
+                    "ms-mhd-enabled": "ms-mhd-legacy",
+                    "ms-mhd-legacy": "ms-mhd-legacy",
                     "nmr": "nmr",
                     "ms-imaging": "ms-imaging",
                     "ms-other": "ms-other"

@@ -1175,11 +1175,11 @@
             },
             "activeStudyCategories": {
                 "ms-mhd-enabled": {
-                    "visible": true,
+                    "visible": false,
                     "order": 1
                 },
                 "ms-mhd-legacy": {
-                    "visible": false,
+                    "visible": true,
                     "order": 2
                 },
                 "nmr": {
@@ -1204,8 +1204,8 @@
                 "CC BY 4.0"
             ],
             "supportedStudyCategoryClones": {
-                "ms-mhd-enabled": "ms-mhd-enabled",
-                "ms-mhd-legacy": "ms-mhd-enabled",
+                "ms-mhd-enabled": "ms-mhd-legacy",
+                "ms-mhd-legacy": "ms-mhd-legacy",
                 "nmr": "nmr",
                 "ms-imaging": "ms-imaging",
                 "ms-other": "ms-other"
@@ -1829,11 +1829,11 @@
             },
             "activeStudyCategories": {
                 "ms-mhd-enabled": {
-                    "visible": true,
+                    "visible": false,
                     "order": 1
                 },
                 "ms-mhd-legacy": {
-                    "visible": false,
+                    "visible": true,
                     "order": 2
                 },
                 "nmr": {
@@ -1858,8 +1858,8 @@
                 "CC BY 4.0"
             ],
             "supportedStudyCategoryClones": {
-                "ms-mhd-enabled": "ms-mhd-enabled",
-                "ms-mhd-legacy": "ms-mhd-enabled",
+                "ms-mhd-enabled": "ms-mhd-legacy",
+                "ms-mhd-legacy": "ms-mhd-legacy",
                 "nmr": "nmr",
                 "ms-imaging": "ms-imaging",
                 "ms-other": "ms-other"
