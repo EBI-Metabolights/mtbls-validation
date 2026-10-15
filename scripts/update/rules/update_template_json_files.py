@@ -1,14 +1,15 @@
 import json
 import logging
 import re
+from collections import OrderedDict
 from pathlib import Path
-from typing import Any, OrderedDict
+from typing import Any
 
 import httpx
 import jsonschema
 from pydantic import BaseModel
 
-from scripts import models as models
+from scripts import models
 from scripts.utils import DateEncoder
 
 logger = logging.getLogger(__name__)
@@ -159,8 +160,8 @@ def update_template_json_files():
         for key, value in ols_ontologies.ontology_source_reference_templates.items():
             refs.ontology_source_reference_templates[key] = value
     ordered_dict = OrderedDict()
-    ontology_list = [k for k in refs.ontology_source_reference_templates.keys()]
-    ontology_list.extend([k for k in refs.other_source_reference_templates.keys()])
+    ontology_list = list(refs.ontology_source_reference_templates.keys())
+    ontology_list.extend(refs.other_source_reference_templates.keys())
     ontology_list.sort()
     for item in ontology_list:
         if item in refs.ontology_source_reference_templates:
@@ -209,7 +210,7 @@ def fetch_ols_ontologies() -> None | OntologySourceReferences:
             match = re.match(r"[A-Za-z0-9_-]+", source_name)
             if not match:
                 logger.warning(
-                    "OLS ontology source name has an expected name. "
+                    "OLS ontology source name %s has an expected name. "
                     "This ontology source will be ignored.",
                     namespace.upper(),
                 )

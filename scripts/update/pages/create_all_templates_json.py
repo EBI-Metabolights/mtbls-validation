@@ -3,7 +3,7 @@ from pathlib import Path
 
 from pydantic.alias_generators import to_snake
 
-from scripts import models as models
+from scripts import models
 
 
 def create_all_templates_json():
@@ -35,7 +35,7 @@ def create_all_templates_json():
         if not hasattr(templates, camel_case_name):
             continue
 
-        if any([x for x in ["assay", "sample", "assignment"] if name.startswith(x)]):
+        if any(x for x in ["assay", "sample", "assignment"] if name.startswith(x)):
             base_type: type[models.StudyBaseModel] = models.IsaTableFileTemplate
         elif name.startswith("investigation"):
             base_type: type[models.StudyBaseModel] = models.InvestigationFileTemplate

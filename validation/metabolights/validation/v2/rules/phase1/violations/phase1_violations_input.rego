@@ -681,6 +681,24 @@ rule___100_500_001_01 contains result if {
 }
 
 # METADATA
+# title: Submitter's first name or last name is too short
+# description: Submitter's first name and last name must be equal or greater than 2 characters. Submitter must login and update his/her profile.
+# custom:
+#  rule_id: rule___100_500_002_01
+#  type: ERROR
+#  priority: CRITICAL
+#  section: metabolites.general
+rule___100_500_002_01 contains result if {
+	some submitter in input.studyDbMetadata.submitters
+	user_fullname := sprintf("%v %s", [submitter.firstName, submitter.lastName])
+	count(user_fullname) < 5
+	email := submitter.userName
+	msg := sprintf("Submitter ('%v') name is too short: %v. Update submitter's profile.", [email, user_fullname])
+	source := "Database"
+	result := f.format(rego.metadata.rule(), msg, source)
+}
+
+# METADATA
 # title: Metabolite assignment file name not correct pattern.
 # description: Metabolite assignment file name must start with 'm_' and followed by study id, and have extension '.tsv'.
 # custom:

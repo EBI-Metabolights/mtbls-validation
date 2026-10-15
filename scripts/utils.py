@@ -3,7 +3,6 @@ import json
 import re
 import zipfile
 from pathlib import Path
-from typing import Union
 
 import httpx
 import pandas as pd
@@ -55,7 +54,7 @@ def escape(text: str) -> str:
 
 def read_rules_from_excel(
     file_path: str = "MetaboLights-Validations-v2.0.xlsx",
-    sheet_names: Union[None, list[str]] = None,
+    sheet_names: None | list[str] = None,
 ) -> dict[str, pd.Series]:
     if not sheet_names:
         sheet_names = [
@@ -68,7 +67,7 @@ def read_rules_from_excel(
             "Summary",
         ]
 
-    df: Union[pd.DataFrame, None] = None
+    df: pd.DataFrame | None = None
     for sheet in sheet_names:
         selected_rows = read_excel_rows(file_path, sheet_name=sheet)
 
@@ -104,7 +103,7 @@ def read_rules_from_excel(
 
 def get_unit_test_names_methods(
     file_path: str = "MetaboLights-Validations-v2.0.xlsx",
-    sheet_names: Union[None, list[str]] = None,
+    sheet_names: None | list[str] = None,
 ) -> dict[str, pd.Series]:
     if not sheet_names:
         sheet_names = [
@@ -117,7 +116,7 @@ def get_unit_test_names_methods(
             "Summary",
         ]
 
-    df: Union[pd.DataFrame, None] = None
+    df: pd.DataFrame | None = None
     for sheet in sheet_names:
         selected_rows = read_excel_rows(file_path, sheet_name=sheet)
 

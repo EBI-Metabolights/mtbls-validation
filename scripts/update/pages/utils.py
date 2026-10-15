@@ -3,7 +3,7 @@ from pathlib import Path
 
 import jsonschema
 
-from scripts import models as models
+from scripts import models
 
 
 def get_controls(subfolder: str, key_labels: None | dict[str, str] = None):
@@ -91,8 +91,8 @@ def find_rule(
         versions = control.selection_criteria.isa_file_template_name_filter
         in_filter = all(
             [
-                not names or any([True for x in names if x == template_name]),
-                not versions or any([True for x in versions if x == template_version]),
+                not names or any(True for x in names if x == template_name),
+                not versions or any(True for x in versions if x == template_version),
             ]
         )
         return control if in_filter else None

@@ -2,7 +2,7 @@ import shutil
 import subprocess
 from pathlib import Path
 
-from scripts import models as models
+from scripts import models
 from scripts.update.checks.check_unit_tests import (
     check_differences_between_rules_and_tests,
 )

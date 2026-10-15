@@ -19864,7 +19864,7 @@
         "ECOCORE": {
             "sourceName": "ECOCORE",
             "sourceFile": "http://purl.obolibrary.org/obo/ecocore.owl",
-            "sourceVersion": "2026-08-31",
+            "sourceVersion": "2026-10-08",
             "sourceDescription": "An ontology of core ecological entities",
             "sourceDetails": "Ecocore is a community ontology for the concise and controlled description of ecological traits of organisms."
         },
@@ -21411,7 +21411,7 @@
         "ZP": {
             "sourceName": "ZP",
             "sourceFile": "http://purl.obolibrary.org/obo/zp.owl",
-            "sourceVersion": "2024-04-18",
+            "sourceVersion": "2026-10-08",
             "sourceDescription": "Zebrafish Phenotype Ontology (ZP)",
             "sourceDetails": "The Zebrafish Phenotype Ontology formally defines all phenotypes of the Zebrafish model organism."
         },

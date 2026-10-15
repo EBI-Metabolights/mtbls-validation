@@ -1,7 +1,7 @@
 import datetime
 import json
+from collections import OrderedDict
 from pathlib import Path
-from typing import OrderedDict
 
 import pandas as pd
 from pydantic.alias_generators import to_pascal
@@ -22,7 +22,7 @@ metadata_lines = [
 
 
 def create_validation_rule_summary_pages(rules: dict[str, pd.Series]):
-    now = datetime.datetime.now(datetime.timezone.utc).isoformat()
+    now = datetime.datetime.now(datetime.UTC).isoformat()
     version_file = "validation/metabolights/validation/v2/configuration/version.json"
     with open(version_file, "r") as f:
         version_content = json.loads(f.read())

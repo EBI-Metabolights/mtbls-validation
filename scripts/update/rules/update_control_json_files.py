@@ -6,7 +6,7 @@ import jsonschema
 from pydantic import BaseModel
 from pydantic.alias_generators import to_snake
 
-from scripts import models as models
+from scripts import models
 from scripts.utils import DateEncoder, search_ols_term
 
 
