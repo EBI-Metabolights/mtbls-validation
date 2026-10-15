@@ -23,24 +23,28 @@ rule_m_300_200_001_01_test_cases := 1
 test_rule_m_300_200_001_01_no_violation_01 if {
 	result := rules.rule_m_300_200_001_01 with input as {
 		"investigationFilePath": "i_Investigation.txt",
-		"metaboliteAssignments": {"m_MTBLS1.tsv": {"assayTechnique": {"mainTechnique": "NMR"}, "table": {
-			"rowOffset": 0, "totalRowCount": 4,
-			"headers": [
-				{"columnCategory": "", "columnStructure": "SINGLE_COLUMN", "columnHeader": "Sample Name", "columnName": "Sample Name", "columnIndex": 0},
-				{"columnCategory": "", "columnStructure": "SINGLE_COLUMN", "columnHeader": "multiplicity", "columnName": "multiplicity", "columnIndex": 1},
-				{"columnCategory": "", "columnStructure": "SINGLE_COLUMN", "columnHeader": "chemical_shift", "columnName": "chemical_shift", "columnIndex": 2},
-			],
-			"columns": [
-				"Sample Name",
-				"multiplicity",
-				"chemical_shift",
-			],
-			"data": {
-				"Sample Name": ["1", "2 ", "3", "4"],
-				"multiplicity": ["1", "2 ", "3", "1"],
-				"chemical_shift": ["1", "2", "3", "1"],
+		"metaboliteAssignments": {
+			"m_MTBLS1.tsv": {
+				"assayTechnique": {"mainTechnique": "NMR"}, "table": {
+					"rowOffset": 0, "totalRowCount": 4,
+					"headers": [
+						{"columnCategory": "", "columnStructure": "SINGLE_COLUMN", "columnHeader": "Sample Name", "columnName": "Sample Name", "columnIndex": 0},
+						{"columnCategory": "", "columnStructure": "SINGLE_COLUMN", "columnHeader": "multiplicity", "columnName": "multiplicity", "columnIndex": 1},
+						{"columnCategory": "", "columnStructure": "SINGLE_COLUMN", "columnHeader": "chemical_shift", "columnName": "chemical_shift", "columnIndex": 2},
+					],
+					"columns": [
+						"Sample Name",
+						"multiplicity",
+						"chemical_shift",
+					],
+					"data": {
+						"Sample Name": ["1", "2 ", "3", "4"],
+						"multiplicity": ["1", "2 ", "3", "1"],
+						"chemical_shift": ["1", "2", "3", "1"],
+					},
+				},
 			},
-		}}},
+		},
 		"investigation": {"studies": [{"fileName": "s_MTBLS1.txt"}]},
 		"parserMessages": {"s_MTBLS1.txt": []},
 		"studyDbMetadata": {"studyCategory": "other", "sampleTemplate": "minimum", "templateVersion": "2.0"},
@@ -54,24 +58,28 @@ test_rule_m_300_200_001_01_no_violation_01 if {
 test_rule_m_300_200_001_01_violation_01 if {
 	result := rules.rule_m_300_200_001_01 with input as {
 		"investigationFilePath": "i_Investigation.txt",
-		"metaboliteAssignments": {"m_MTBLS1.tsv": {"assayTechnique": {"mainTechnique": "NMR"}, "table": {
-			"rowOffset": 0, "totalRowCount": 4,
-			"headers": [
-				{"columnCategory": "", "columnStructure": "SINGLE_COLUMN", "columnHeader": "Sample Name", "columnName": "Sample Name", "columnIndex": 0},
-				{"columnCategory": "", "columnStructure": "SINGLE_COLUMN", "columnHeader": "multiplicity", "columnName": "multiplicity", "columnIndex": 1},
-				{"columnCategory": "", "columnStructure": "SINGLE_COLUMN", "columnHeader": "chemical_shift", "columnName": "chemical_shift", "columnIndex": 2},
-			],
-			"columns": [
-				"Sample Name",
-				"multiplicity",
-				"chemical_shift",
-			],
-			"data": {
-				"Sample Name": ["1", "2 ", "3", "4"],
-				"multiplicity": ["1", "2 ", "3", "1"],
-				"chemical_shift": ["1", "2 ", "", ""],
+		"metaboliteAssignments": {
+			"m_MTBLS1.tsv": {
+				"assayTechnique": {"mainTechnique": "NMR"}, "table": {
+					"rowOffset": 0, "totalRowCount": 4,
+					"headers": [
+						{"columnCategory": "", "columnStructure": "SINGLE_COLUMN", "columnHeader": "Sample Name", "columnName": "Sample Name", "columnIndex": 0},
+						{"columnCategory": "", "columnStructure": "SINGLE_COLUMN", "columnHeader": "multiplicity", "columnName": "multiplicity", "columnIndex": 1},
+						{"columnCategory": "", "columnStructure": "SINGLE_COLUMN", "columnHeader": "chemical_shift", "columnName": "chemical_shift", "columnIndex": 2},
+					],
+					"columns": [
+						"Sample Name",
+						"multiplicity",
+						"chemical_shift",
+					],
+					"data": {
+						"Sample Name": ["1", "2 ", "3", "4"],
+						"multiplicity": ["1", "2 ", "3", "1"],
+						"chemical_shift": ["1", "2 ", "", ""],
+					},
+				},
 			},
-		}}},
+		},
 		"investigation": {"studies": [{"fileName": "s_MTBLS1.txt"}]},
 		"parserMessages": {"s_MTBLS1.txt": []},
 		"studyDbMetadata": {"studyCategory": "other", "sampleTemplate": "minimum", "templateVersion": "2.0"},

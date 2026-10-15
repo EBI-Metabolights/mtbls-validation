@@ -29,12 +29,14 @@ test_rule_s_200_900_001_01_no_violation_01 if {
 			{
 				"op": "replace",
 				"path": "/samples/s_REQ2025111188888.txt/table/headers",
-				"value": [{
-					"columnHeader": "Characteristics[Organism]",
-					"columnName": "Characteristics[Organism]",
-					"columnStructure": "ONTOLOGY_COLUMN",
-					"columnIndex": 0,
-				}],
+				"value": [
+					{
+						"columnHeader": "Characteristics[Organism]",
+						"columnName": "Characteristics[Organism]",
+						"columnStructure": "ONTOLOGY_COLUMN",
+						"columnIndex": 0,
+					},
+				],
 			},
 			{
 				"op": "replace",
@@ -73,12 +75,14 @@ test_rule_s_200_900_001_01_violation_01 if {
 			{
 				"op": "replace",
 				"path": "/samples/s_REQ2025111188888.txt/table/headers",
-				"value": [{
-					"columnHeader": "Characteristics[Organism]",
-					"columnName": "Characteristics[Organism]",
-					"columnStructure": "ONTOLOGY_COLUMN",
-					"columnIndex": 0,
-				}],
+				"value": [
+					{
+						"columnHeader": "Characteristics[Organism]",
+						"columnName": "Characteristics[Organism]",
+						"columnStructure": "ONTOLOGY_COLUMN",
+						"columnIndex": 0,
+					},
+				],
 			},
 			{
 				"op": "replace",

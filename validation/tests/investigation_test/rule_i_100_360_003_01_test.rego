@@ -22,38 +22,50 @@ rule_i_100_360_003_01_test_cases := 1
 # description: study contacts last name is valid.
 test_rule_i_100_360_003_01_no_violation_01 if {
 	result := rules.rule_i_100_360_003_01 with input as {
-		"investigation": {"studies": [{"identifier": "MTBLS1", "studyContacts": {"people": [
-			{
-				"lastName": "A.",
-				"firstName": "",
-				"midInitials": "",
-				"email": "",
-				"phone": "",
-				"fax": "",
-				"address": "",
-				"affiliation": "",
-				"roles": [{
-					"term": "",
-					"termAccessionNumber": "",
-					"termSourceRef": "",
-				}],
-			},
-			{
-				"lastName": "Sandras",
-				"firstName": "",
-				"midInitials": "",
-				"email": "",
-				"phone": "",
-				"fax": "",
-				"address": "",
-				"affiliation": "",
-				"roles": [{
-					"term": "",
-					"termAccessionNumber": "",
-					"termSourceRef": "",
-				}],
-			},
-		]}}]},
+		"investigation": {
+			"studies": [
+				{
+					"identifier": "MTBLS1", "studyContacts": {
+						"people": [
+							{
+								"lastName": "A.",
+								"firstName": "",
+								"midInitials": "",
+								"email": "",
+								"phone": "",
+								"fax": "",
+								"address": "",
+								"affiliation": "",
+								"roles": [
+									{
+										"term": "",
+										"termAccessionNumber": "",
+										"termSourceRef": "",
+									},
+								],
+							},
+							{
+								"lastName": "Sandras",
+								"firstName": "",
+								"midInitials": "",
+								"email": "",
+								"phone": "",
+								"fax": "",
+								"address": "",
+								"affiliation": "",
+								"roles": [
+									{
+										"term": "",
+										"termAccessionNumber": "",
+										"termSourceRef": "",
+									},
+								],
+							},
+						],
+					},
+				},
+			],
+		},
 		"investigationFilePath": "i_Investigation.txt",
 	}
 	count(result) == 0
@@ -64,38 +76,50 @@ test_rule_i_100_360_003_01_no_violation_01 if {
 # description: study contact last names are not valid.
 test_rule_i_100_360_003_01_violation_01 if {
 	result := rules.rule_i_100_360_003_01 with input as {
-		"investigation": {"studies": [{"identifier": "MTBLS1", "studyContacts": {"people": [
-			{
-				"lastName": "A",
-				"firstName": "",
-				"midInitials": "",
-				"email": "",
-				"phone": "",
-				"fax": "",
-				"address": "",
-				"affiliation": "",
-				"roles": [{
-					"term": "",
-					"termAccessionNumber": "",
-					"termSourceRef": "",
-				}],
-			},
-			{
-				"lastName": "",
-				"firstName": "",
-				"midInitials": "",
-				"email": "",
-				"phone": "",
-				"fax": "",
-				"address": "",
-				"affiliation": "",
-				"roles": [{
-					"term": "",
-					"termAccessionNumber": "",
-					"termSourceRef": "",
-				}],
-			},
-		]}}]},
+		"investigation": {
+			"studies": [
+				{
+					"identifier": "MTBLS1", "studyContacts": {
+						"people": [
+							{
+								"lastName": "A",
+								"firstName": "",
+								"midInitials": "",
+								"email": "",
+								"phone": "",
+								"fax": "",
+								"address": "",
+								"affiliation": "",
+								"roles": [
+									{
+										"term": "",
+										"termAccessionNumber": "",
+										"termSourceRef": "",
+									},
+								],
+							},
+							{
+								"lastName": "",
+								"firstName": "",
+								"midInitials": "",
+								"email": "",
+								"phone": "",
+								"fax": "",
+								"address": "",
+								"affiliation": "",
+								"roles": [
+									{
+										"term": "",
+										"termAccessionNumber": "",
+										"termSourceRef": "",
+									},
+								],
+							},
+						],
+					},
+				},
+			],
+		},
 		"investigationFilePath": "i_Investigation.txt",
 	}
 	count(result) == 2

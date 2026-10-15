@@ -24,14 +24,16 @@ test_rule_i_100_320_006_01_no_violation_01 if {
 	input_01 := data.tests.data.inputs.minimum_01
 	input_data := json.patch(
 		input_01,
-		[{
-			"op": "replace",
-			"path": "/investigation/studies/0/studyPublications/publications",
-			"value": [
-				{"authorList": "Contribution of the micro"},
-				{"authorList": "O.Y."},
-			],
-		}],
+		[
+			{
+				"op": "replace",
+				"path": "/investigation/studies/0/studyPublications/publications",
+				"value": [
+					{"authorList": "Contribution of the micro"},
+					{"authorList": "O.Y."},
+				],
+			},
+		],
 	)
 
 	result := rules.rule_i_100_320_006_01 with input as input_data
@@ -45,14 +47,16 @@ test_rule_i_100_320_006_01_violation_01 if {
 	input_01 := data.tests.data.inputs.minimum_01
 	input_data := json.patch(
 		input_01,
-		[{
-			"op": "replace",
-			"path": "/investigation/studies/0/studyPublications/publications",
-			"value": [
-				{"title": "Publication 1", "authorList": ""},
-				{"title": "Publication 2", "authorList": "A.B"},
-			],
-		}],
+		[
+			{
+				"op": "replace",
+				"path": "/investigation/studies/0/studyPublications/publications",
+				"value": [
+					{"title": "Publication 1", "authorList": ""},
+					{"title": "Publication 2", "authorList": "A.B"},
+				],
+			},
+		],
 	)
 
 	result := rules.rule_i_100_320_006_01 with input as input_data

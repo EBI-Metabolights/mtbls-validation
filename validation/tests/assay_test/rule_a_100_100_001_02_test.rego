@@ -23,15 +23,19 @@ rule_a_100_100_001_02_test_cases := 1
 test_rule_a_100_100_001_02_no_violation_01 if {
 	result := rules.rule_a_100_100_001_02 with input as {
 		"investigationFilePath": "i_Investigation.txt",
-		"assays": {"a_MTBLS1.txt": {"table": {
-			"rowOffset": 0, "totalRowCount": 0,
-			"headers": [
-				{"columnPrefix": "", "columnStructure": "SINGLE_COLUMN", "columnHeader": "Sample Name", "columnIndex": 9},
-				{"columnPrefix": "", "columnStructure": "ONTOLOGY_COLUMN", "columnHeader": "Organism", "columnIndex": 9},
-				{"columnPrefix": "", "columnStructure": "SINGLE_COLUMN_AND_UNIT_ONTOLOGY", "columnHeader": "Factorx", "columnIndex": 9},
-				{"columnPrefix": "", "columnStructure": "INVALID_MULTI_COLUMN", "columnHeader": "Term Source REF", "columnIndex": 9},
-			],
-		}}},
+		"assays": {
+			"a_MTBLS1.txt": {
+				"table": {
+					"rowOffset": 0, "totalRowCount": 0,
+					"headers": [
+						{"columnPrefix": "", "columnStructure": "SINGLE_COLUMN", "columnHeader": "Sample Name", "columnIndex": 9},
+						{"columnPrefix": "", "columnStructure": "ONTOLOGY_COLUMN", "columnHeader": "Organism", "columnIndex": 9},
+						{"columnPrefix": "", "columnStructure": "SINGLE_COLUMN_AND_UNIT_ONTOLOGY", "columnHeader": "Factorx", "columnIndex": 9},
+						{"columnPrefix": "", "columnStructure": "INVALID_MULTI_COLUMN", "columnHeader": "Term Source REF", "columnIndex": 9},
+					],
+				},
+			},
+		},
 		"investigation": {"studies": [{"fileName": "s_MTBLS1.txt"}]},
 		"parserMessages": {"s_MTBLS1.txt": []},
 	}
@@ -44,15 +48,19 @@ test_rule_a_100_100_001_02_no_violation_01 if {
 test_rule_a_100_100_001_02_violation_01 if {
 	result := rules.rule_a_100_100_001_02 with input as {
 		"investigationFilePath": "i_Investigation.txt",
-		"assays": {"a_MTBLS1.txt": {"table": {
-			"rowOffset": 0, "totalRowCount": 0,
-			"headers": [
-				{"columnPrefix": "", "columnStructure": "ADDITIONAL_COLUMN", "columnHeader": "Sample Name", "columnIndex": 9},
-				{"columnPrefix": "", "columnStructure": "INVALID_MULTI_COLUMN", "columnHeader": "Organism", "columnIndex": 3},
-				{"columnPrefix": "", "columnStructure": "SINGLE_COLUMN_AND_UNIT_ONTOLOGY", "columnHeader": "Factorx", "columnIndex": 9},
-				{"columnPrefix": "", "columnStructure": "ADDITIONAL_COLUMN", "columnHeader": "Term Source REF", "columnIndex": 2},
-			],
-		}}},
+		"assays": {
+			"a_MTBLS1.txt": {
+				"table": {
+					"rowOffset": 0, "totalRowCount": 0,
+					"headers": [
+						{"columnPrefix": "", "columnStructure": "ADDITIONAL_COLUMN", "columnHeader": "Sample Name", "columnIndex": 9},
+						{"columnPrefix": "", "columnStructure": "INVALID_MULTI_COLUMN", "columnHeader": "Organism", "columnIndex": 3},
+						{"columnPrefix": "", "columnStructure": "SINGLE_COLUMN_AND_UNIT_ONTOLOGY", "columnHeader": "Factorx", "columnIndex": 9},
+						{"columnPrefix": "", "columnStructure": "ADDITIONAL_COLUMN", "columnHeader": "Term Source REF", "columnIndex": 2},
+					],
+				},
+			},
+		},
 		"investigation": {"studies": [{"fileName": "s_MTBLS1.txt"}]},
 		"parserMessages": {"s_MTBLS1.txt": []},
 	}

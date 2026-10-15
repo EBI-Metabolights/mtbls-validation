@@ -24,27 +24,29 @@ test_rule_i_100_310_001_01_no_violation_01 if {
 	input_01 := data.tests.data.inputs.minimum_01
 	input_data := json.patch(
 		input_01,
-		[{
-			"op": "replace",
-			"path": "/investigation/studies/0/studyDesignDescriptors/designTypes",
-			"value": [
-				{
-					"term": "test",
-					"termAccessionNumber": "http://www.ebi.ac.uk/efo/EFO_0000001",
-					"termSourceRef": "EFO",
-				},
-				{
-					"term": "test 2",
-					"termAccessionNumber": "http://www.ebi.ac.uk/efo/EFO_0000002",
-					"termSourceRef": "EFO",
-				},
-				{
-					"term": "test 3",
-					"termAccessionNumber": "http://www.ebi.ac.uk/efo/EFO_0000003",
-					"termSourceRef": "EFO",
-				},
-			],
-		}],
+		[
+			{
+				"op": "replace",
+				"path": "/investigation/studies/0/studyDesignDescriptors/designTypes",
+				"value": [
+					{
+						"term": "test",
+						"termAccessionNumber": "http://www.ebi.ac.uk/efo/EFO_0000001",
+						"termSourceRef": "EFO",
+					},
+					{
+						"term": "test 2",
+						"termAccessionNumber": "http://www.ebi.ac.uk/efo/EFO_0000002",
+						"termSourceRef": "EFO",
+					},
+					{
+						"term": "test 3",
+						"termAccessionNumber": "http://www.ebi.ac.uk/efo/EFO_0000003",
+						"termSourceRef": "EFO",
+					},
+				],
+			},
+		],
 	)
 	result := rules.rule_i_100_310_001_01 with input as input_data
 	count(result) == 0
@@ -57,32 +59,34 @@ test_rule_i_100_310_001_01_no_violation_02 if {
 	input_01 := data.tests.data.inputs.minimum_01
 	input_data := json.patch(
 		input_01,
-		[{
-			"op": "replace",
-			"path": "/investigation/studies/0/studyDesignDescriptors/designTypes",
-			"value": [
-				{
-					"term": "test",
-					"termAccessionNumber": "http://www.ebi.ac.uk/efo/EFO_0000001",
-					"termSourceRef": "EFO",
-				},
-				{
-					"term": "test 2",
-					"termAccessionNumber": "http://www.ebi.ac.uk/efo/EFO_0000002",
-					"termSourceRef": "EFO",
-				},
-				{
-					"term": "test 3",
-					"termAccessionNumber": "http://www.ebi.ac.uk/efo/EFO_0000003",
-					"termSourceRef": "EFO",
-				},
-				{
-					"term": "test 4",
-					"termAccessionNumber": "http://www.ebi.ac.uk/efo/EFO_0000004",
-					"termSourceRef": "EFO",
-				},
-			],
-		}],
+		[
+			{
+				"op": "replace",
+				"path": "/investigation/studies/0/studyDesignDescriptors/designTypes",
+				"value": [
+					{
+						"term": "test",
+						"termAccessionNumber": "http://www.ebi.ac.uk/efo/EFO_0000001",
+						"termSourceRef": "EFO",
+					},
+					{
+						"term": "test 2",
+						"termAccessionNumber": "http://www.ebi.ac.uk/efo/EFO_0000002",
+						"termSourceRef": "EFO",
+					},
+					{
+						"term": "test 3",
+						"termAccessionNumber": "http://www.ebi.ac.uk/efo/EFO_0000003",
+						"termSourceRef": "EFO",
+					},
+					{
+						"term": "test 4",
+						"termAccessionNumber": "http://www.ebi.ac.uk/efo/EFO_0000004",
+						"termSourceRef": "EFO",
+					},
+				],
+			},
+		],
 	)
 	result := rules.rule_i_100_310_001_01 with input as input_data
 	count(result) == 0
@@ -95,11 +99,13 @@ test_rule_i_100_310_001_01_violation_01 if {
 	input_01 := data.tests.data.inputs.minimum_01
 	input_data := json.patch(
 		input_01,
-		[{
-			"op": "replace",
-			"path": "/investigation/studies/0/studyDesignDescriptors/designTypes",
-			"value": [],
-		}],
+		[
+			{
+				"op": "replace",
+				"path": "/investigation/studies/0/studyDesignDescriptors/designTypes",
+				"value": [],
+			},
+		],
 	)
 	result := rules.rule_i_100_310_001_01 with input as input_data
 	count(result) == 1

@@ -28,19 +28,23 @@ test_rule_i_100_360_011_06_no_violation_01 if {
 			{
 				"op": "replace",
 				"path": "/investigation/studies/0/studyContacts/comments",
-				"value": [{
-					"name": "Study Person ORCID",
-					"value": ["1234-1234-1234-1234"],
-				}],
+				"value": [
+					{
+						"name": "Study Person ORCID",
+						"value": ["1234-1234-1234-1234"],
+					},
+				],
 			},
 			{
 				"op": "replace",
 				"path": "/investigation/studies/0/studyContacts/people/0/roles",
-				"value": [{
-					"term": "Principal Investigator",
-					"termAccessionNumber": "http://purl.obolibrary.org/obo/NCIT_C19924",
-					"termSourceRef": "NCIT",
-				}],
+				"value": [
+					{
+						"term": "Principal Investigator",
+						"termAccessionNumber": "http://purl.obolibrary.org/obo/NCIT_C19924",
+						"termSourceRef": "NCIT",
+					},
+				],
 			},
 		],
 	)
@@ -61,19 +65,23 @@ test_rule_i_100_360_011_06_no_violation_02 if {
 			{
 				"op": "replace",
 				"path": "/investigation/studies/0/studyContacts/comments",
-				"value": [{
-					"name": "Study Person ORCID",
-					"value": ["1234-1234-1234-1234"],
-				}],
+				"value": [
+					{
+						"name": "Study Person ORCID",
+						"value": ["1234-1234-1234-1234"],
+					},
+				],
 			},
 			{
 				"op": "replace",
 				"path": "/investigation/studies/0/studyContacts/people/0/roles",
-				"value": [{
-					"term": "grant principal investigator",
-					"termAccessionNumber": "http://purl.obolibrary.org/obo/NCIT_C19924",
-					"termSourceRef": "NCIT",
-				}],
+				"value": [
+					{
+						"term": "grant principal investigator",
+						"termAccessionNumber": "http://purl.obolibrary.org/obo/NCIT_C19924",
+						"termSourceRef": "NCIT",
+					},
+				],
 			},
 		],
 	)
@@ -99,11 +107,13 @@ test_rule_i_100_360_011_06_no_violation_03 if {
 			{
 				"op": "replace",
 				"path": "/investigation/studies/0/studyContacts/people/0/roles",
-				"value": [{
-					"term": "Investigator",
-					"termAccessionNumber": "http://purl.obolibrary.org/obo/NCIT_C19924",
-					"termSourceRef": "NCIT",
-				}],
+				"value": [
+					{
+						"term": "Investigator",
+						"termAccessionNumber": "http://purl.obolibrary.org/obo/NCIT_C19924",
+						"termSourceRef": "NCIT",
+					},
+				],
 			},
 		],
 	)
@@ -124,19 +134,23 @@ test_rule_i_100_360_011_06_no_violation_04 if {
 			{
 				"op": "replace",
 				"path": "/investigation/studies/0/studyContacts/comments",
-				"value": [{
-					"name": "Study Person ORCID",
-					"value": ["1234-1234-1234-1234"],
-				}],
+				"value": [
+					{
+						"name": "Study Person ORCID",
+						"value": ["1234-1234-1234-1234"],
+					},
+				],
 			},
 			{
 				"op": "replace",
 				"path": "/investigation/studies/0/studyContacts/people/0/roles",
-				"value": [{
-					"term": "investigator",
-					"termAccessionNumber": "http://purl.obolibrary.org/obo/NCIT_C19924",
-					"termSourceRef": "NCIT",
-				}],
+				"value": [
+					{
+						"term": "investigator",
+						"termAccessionNumber": "http://purl.obolibrary.org/obo/NCIT_C19924",
+						"termSourceRef": "NCIT",
+					},
+				],
 			},
 		],
 	)
@@ -162,11 +176,13 @@ test_rule_i_100_360_011_06_violation_01 if {
 			{
 				"op": "replace",
 				"path": "/investigation/studies/0/studyContacts/people/0/roles",
-				"value": [{
-					"term": "Principal Investigator",
-					"termAccessionNumber": "http://purl.obolibrary.org/obo/NCIT_C19924",
-					"termSourceRef": "NCIT",
-				}],
+				"value": [
+					{
+						"term": "Principal Investigator",
+						"termAccessionNumber": "http://purl.obolibrary.org/obo/NCIT_C19924",
+						"termSourceRef": "NCIT",
+					},
+				],
 			},
 		],
 	)

@@ -22,20 +22,30 @@ rule_i_100_340_009_01_test_cases := 1
 # description: Assay technology platform is valid.
 test_rule_i_100_340_009_01_no_violation_01 if {
 	result := rules.rule_i_100_340_009_01 with input as {
-		"investigation": {"studies": [{"identifier": "MTBLS1", "studyAssays": {"assays": [{
-			"fileName": "",
-			"measurementType": {
-				"term": "",
-				"termAccessionNumber": "",
-				"termSourceRef": "",
-			},
-			"technologyType": {
-				"term": "",
-				"termAccessionNumber": "",
-				"termSourceRef": "",
-			},
-			"technologyPlatform": "Not empty",
-		}]}}]},
+		"investigation": {
+			"studies": [
+				{
+					"identifier": "MTBLS1", "studyAssays": {
+						"assays": [
+							{
+								"fileName": "",
+								"measurementType": {
+									"term": "",
+									"termAccessionNumber": "",
+									"termSourceRef": "",
+								},
+								"technologyType": {
+									"term": "",
+									"termAccessionNumber": "",
+									"termSourceRef": "",
+								},
+								"technologyPlatform": "Not empty",
+							},
+						],
+					},
+				},
+			],
+		},
 		"investigationFilePath": "i_Investigation.txt",
 	}
 	count(result) == 0
@@ -46,16 +56,24 @@ test_rule_i_100_340_009_01_no_violation_01 if {
 # description: Assay technology platforms are valid.
 test_rule_i_100_340_009_01_no_violation_02 if {
 	result := rules.rule_i_100_340_009_01 with input as {
-		"investigation": {"studies": [{"identifier": "MTBLS1", "studyAssays": {"assays": [
-			{
-				"fileName": "a_TEST.txt",
-				"technologyPlatform": "Not Empty",
-			},
-			{
-				"fileName": "a_TEST2.txt",
-				"technologyPlatform": "X",
-			},
-		]}}]},
+		"investigation": {
+			"studies": [
+				{
+					"identifier": "MTBLS1", "studyAssays": {
+						"assays": [
+							{
+								"fileName": "a_TEST.txt",
+								"technologyPlatform": "Not Empty",
+							},
+							{
+								"fileName": "a_TEST2.txt",
+								"technologyPlatform": "X",
+							},
+						],
+					},
+				},
+			],
+		},
 		"investigationFilePath": "i_Investigation.txt",
 	}
 	count(result) == 0
@@ -66,16 +84,24 @@ test_rule_i_100_340_009_01_no_violation_02 if {
 # description: Assay platform is invalid
 test_rule_i_100_340_009_01_violation_01 if {
 	result := rules.rule_i_100_340_009_01 with input as {
-		"investigation": {"studies": [{"identifier": "MTBLS1", "studyAssays": {"assays": [
-			{
-				"fileName": "a_TEST.txt",
-				"technologyPlatform": "",
-			},
-			{
-				"fileName": "a_TEST2.txt",
-				"technologyPlatform": "X",
-			},
-		]}}]},
+		"investigation": {
+			"studies": [
+				{
+					"identifier": "MTBLS1", "studyAssays": {
+						"assays": [
+							{
+								"fileName": "a_TEST.txt",
+								"technologyPlatform": "",
+							},
+							{
+								"fileName": "a_TEST2.txt",
+								"technologyPlatform": "X",
+							},
+						],
+					},
+				},
+			],
+		},
 		"investigationFilePath": "i_Investigation.txt",
 	}
 	count(result) == 1

@@ -24,18 +24,22 @@ test_rule_i_100_330_001_01_no_violation_01 if {
 	input_01 := data.tests.data.inputs.minimum_01
 	input_data := json.patch(
 		input_01,
-		[{
-			"op": "replace",
-			"path": "/investigation/studies/0/studyFactors/factors",
-			"value": [{
-				"name": "Disease",
-				"type": {
-					"term": "disease",
-					"termAccessionNumber": "http://purl.obolibrary.org/obo/MONDO_0000001",
-					"termSourceRef": "MONDO",
-				},
-			}],
-		}],
+		[
+			{
+				"op": "replace",
+				"path": "/investigation/studies/0/studyFactors/factors",
+				"value": [
+					{
+						"name": "Disease",
+						"type": {
+							"term": "disease",
+							"termAccessionNumber": "http://purl.obolibrary.org/obo/MONDO_0000001",
+							"termSourceRef": "MONDO",
+						},
+					},
+				],
+			},
+		],
 	)
 
 	result := rules.rule_i_100_330_001_01 with input as input_data
@@ -49,28 +53,30 @@ test_rule_i_100_330_001_01_no_violation_02 if {
 	input_01 := data.tests.data.inputs.minimum_01
 	input_data := json.patch(
 		input_01,
-		[{
-			"op": "replace",
-			"path": "/investigation/studies/0/studyFactors/factors",
-			"value": [
-				{
-					"name": "Disease",
-					"type": {
-						"term": "disease",
-						"termAccessionNumber": "http://purl.obolibrary.org/obo/MONDO_0000001",
-						"termSourceRef": "MONDO",
+		[
+			{
+				"op": "replace",
+				"path": "/investigation/studies/0/studyFactors/factors",
+				"value": [
+					{
+						"name": "Disease",
+						"type": {
+							"term": "disease",
+							"termAccessionNumber": "http://purl.obolibrary.org/obo/MONDO_0000001",
+							"termSourceRef": "MONDO",
+						},
 					},
-				},
-				{
-					"name": "Dose",
-					"type": {
-						"term": "dose",
-						"termAccessionNumber": "",
-						"termSourceRef": "",
+					{
+						"name": "Dose",
+						"type": {
+							"term": "dose",
+							"termAccessionNumber": "",
+							"termSourceRef": "",
+						},
 					},
-				},
-			],
-		}],
+				],
+			},
+		],
 	)
 
 	result := rules.rule_i_100_330_001_01 with input as input_data
@@ -84,11 +90,13 @@ test_rule_i_100_330_001_01_violation_01 if {
 	input_01 := data.tests.data.inputs.minimum_01
 	input_data := json.patch(
 		input_01,
-		[{
-			"op": "replace",
-			"path": "/investigation/studies/0/studyFactors/factors",
-			"value": [],
-		}],
+		[
+			{
+				"op": "replace",
+				"path": "/investigation/studies/0/studyFactors/factors",
+				"value": [],
+			},
+		],
 	)
 
 	result := rules.rule_i_100_330_001_01 with input as input_data

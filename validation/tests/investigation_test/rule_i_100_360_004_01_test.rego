@@ -22,38 +22,50 @@ rule_i_100_360_004_01_test_cases := 1
 # description: study contact email is valid.
 test_rule_i_100_360_004_01_no_violation_01 if {
 	result := rules.rule_i_100_360_004_01 with input as {
-		"investigation": {"studies": [{"identifier": "MTBLS1", "studyContacts": {"people": [
-			{
-				"lastName": "xa",
-				"firstName": "xx",
-				"midInitials": "",
-				"email": "test@ebi.ac.uk",
-				"phone": "",
-				"fax": "",
-				"address": "",
-				"affiliation": "",
-				"roles": [{
-					"term": "",
-					"termAccessionNumber": "",
-					"termSourceRef": "",
-				}],
-			},
-			{
-				"lastName": "",
-				"firstName": "",
-				"midInitials": "",
-				"email": "t",
-				"phone": "",
-				"fax": "",
-				"address": "",
-				"affiliation": "",
-				"roles": [{
-					"term": "",
-					"termAccessionNumber": "",
-					"termSourceRef": "",
-				}],
-			},
-		]}}]},
+		"investigation": {
+			"studies": [
+				{
+					"identifier": "MTBLS1", "studyContacts": {
+						"people": [
+							{
+								"lastName": "xa",
+								"firstName": "xx",
+								"midInitials": "",
+								"email": "test@ebi.ac.uk",
+								"phone": "",
+								"fax": "",
+								"address": "",
+								"affiliation": "",
+								"roles": [
+									{
+										"term": "",
+										"termAccessionNumber": "",
+										"termSourceRef": "",
+									},
+								],
+							},
+							{
+								"lastName": "",
+								"firstName": "",
+								"midInitials": "",
+								"email": "t",
+								"phone": "",
+								"fax": "",
+								"address": "",
+								"affiliation": "",
+								"roles": [
+									{
+										"term": "",
+										"termAccessionNumber": "",
+										"termSourceRef": "",
+									},
+								],
+							},
+						],
+					},
+				},
+			],
+		},
 		"investigationFilePath": "i_Investigation.txt",
 	}
 	count(result) == 0
@@ -64,21 +76,33 @@ test_rule_i_100_360_004_01_no_violation_01 if {
 # description: study contact emails are not valid.
 test_rule_i_100_360_004_01_violation_01 if {
 	result := rules.rule_i_100_360_004_01 with input as {
-		"investigation": {"studies": [{"identifier": "MTBLS1", "studyContacts": {"people": [{
-			"lastName": "",
-			"firstName": "",
-			"midInitials": "",
-			"email": "",
-			"phone": "",
-			"fax": "",
-			"address": "",
-			"affiliation": "",
-			"roles": [{
-				"term": "",
-				"termAccessionNumber": "",
-				"termSourceRef": "",
-			}],
-		}]}}]},
+		"investigation": {
+			"studies": [
+				{
+					"identifier": "MTBLS1", "studyContacts": {
+						"people": [
+							{
+								"lastName": "",
+								"firstName": "",
+								"midInitials": "",
+								"email": "",
+								"phone": "",
+								"fax": "",
+								"address": "",
+								"affiliation": "",
+								"roles": [
+									{
+										"term": "",
+										"termAccessionNumber": "",
+										"termSourceRef": "",
+									},
+								],
+							},
+						],
+					},
+				},
+			],
+		},
 		"investigationFilePath": "i_Investigation.txt",
 	}
 	count(result) == 1

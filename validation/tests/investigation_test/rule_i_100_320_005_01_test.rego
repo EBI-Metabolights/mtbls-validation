@@ -24,14 +24,16 @@ test_rule_i_100_320_005_01_no_violation_01 if {
 	input_01 := data.tests.data.inputs.minimum_01
 	input_data := json.patch(
 		input_01,
-		[{
-			"op": "replace",
-			"path": "/investigation/studies/0/studyPublications/publications",
-			"value": [
-				{"title": "Contribution of the micro"},
-				{"title": "Contribution of the microbiome"},
-			],
-		}],
+		[
+			{
+				"op": "replace",
+				"path": "/investigation/studies/0/studyPublications/publications",
+				"value": [
+					{"title": "Contribution of the micro"},
+					{"title": "Contribution of the microbiome"},
+				],
+			},
+		],
 	)
 
 	result := rules.rule_i_100_320_005_01 with input as input_data
@@ -45,14 +47,16 @@ test_rule_i_100_320_005_01_violation_01 if {
 	input_01 := data.tests.data.inputs.minimum_01
 	input_data := json.patch(
 		input_01,
-		[{
-			"op": "replace",
-			"path": "/investigation/studies/0/studyPublications/publications",
-			"value": [
-				{"title": ""},
-				{"title": "Contribution of"},
-			],
-		}],
+		[
+			{
+				"op": "replace",
+				"path": "/investigation/studies/0/studyPublications/publications",
+				"value": [
+					{"title": ""},
+					{"title": "Contribution of"},
+				],
+			},
+		],
 	)
 
 	result := rules.rule_i_100_320_005_01 with input as input_data

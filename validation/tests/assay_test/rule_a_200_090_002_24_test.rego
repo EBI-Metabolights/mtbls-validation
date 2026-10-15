@@ -25,24 +25,30 @@ test_rule_a_200_090_002_24_no_violation_01 if {
 	input_01 := data.tests.data.inputs.minimum_01
 	input_data := json.patch(
 		input_01,
-		[{
-			"op": "replace",
-			"path": "/assays/a_REQ2025111188888-01_MS_metabolite_profiling.txt/table/data/Sample Name/0",
-			"value": "data",
-		}],
+		[
+			{
+				"op": "replace",
+				"path": "/assays/a_REQ2025111188888-01_MS_metabolite_profiling.txt/table/data/Sample Name/0",
+				"value": "data",
+			},
+		],
 	)
 
 	selected_rule := json.patch(
 		test_rules.assay.any_ontology_term_01,
-		[{
-			"op": "replace",
-			"path": "constraints",
-			"value": {"pattern": {
-				"constraint": ".+",
-				"errorMessage": "Sample error",
-				"enforcementLevel": "required",
-			}},
-		}],
+		[
+			{
+				"op": "replace",
+				"path": "constraints",
+				"value": {
+					"pattern": {
+						"constraint": ".+",
+						"errorMessage": "Sample error",
+						"enforcementLevel": "required",
+					},
+				},
+			},
+		],
 	)
 	result := rules.rule_a_200_090_002_24 with input as input_data
 		with data.metabolights.validation.v2.controls.assayFileControls as {"Sample Name": [selected_rule]}
@@ -56,24 +62,30 @@ test_rule_a_200_090_002_24_violation_01 if {
 	input_01 := data.tests.data.inputs.minimum_01
 	input_data := json.patch(
 		input_01,
-		[{
-			"op": "replace",
-			"path": "/assays/a_REQ2025111188888-01_MS_metabolite_profiling.txt/table/data/Sample Name/0",
-			"value": "data",
-		}],
+		[
+			{
+				"op": "replace",
+				"path": "/assays/a_REQ2025111188888-01_MS_metabolite_profiling.txt/table/data/Sample Name/0",
+				"value": "data",
+			},
+		],
 	)
 
 	selected_rule := json.patch(
 		test_rules.assay.any_ontology_term_01,
-		[{
-			"op": "replace",
-			"path": "constraints",
-			"value": {"pattern": {
-				"constraint": ".+ value",
-				"errorMessage": "Sample error",
-				"enforcementLevel": "required",
-			}},
-		}],
+		[
+			{
+				"op": "replace",
+				"path": "constraints",
+				"value": {
+					"pattern": {
+						"constraint": ".+ value",
+						"errorMessage": "Sample error",
+						"enforcementLevel": "required",
+					},
+				},
+			},
+		],
 	)
 	result := rules.rule_a_200_090_002_24 with input as input_data
 		with data.metabolights.validation.v2.controls.assayFileControls as {"Sample Name": [selected_rule]}

@@ -25,24 +25,26 @@ test_rule___100_300_001_02_no_violation_01 if {
 		"investigationFilePath": "i_Investigation.txt",
 		"assays": {"a_MTBLS1.txt": {}},
 		"investigation": {"studies": [{"fileName": "s_MTBLS1.txt", "studyAssays": {"assays": [{"fileName": "a_MTBLS1.txt"}]}}]},
-		"parserMessages": {"a_MTBLS1.txt": [
-			{
-				"column": "",
-				"detail": ".",
-				"line": "",
-				"section": "",
-				"short": "test 1",
-				"type": "WARNING",
-			},
-			{
-				"column": "",
-				"detail": ".",
-				"line": "",
-				"section": "",
-				"short": "test 2",
-				"type": "WARNING",
-			},
-		]},
+		"parserMessages": {
+			"a_MTBLS1.txt": [
+				{
+					"column": "",
+					"detail": ".",
+					"line": "",
+					"section": "",
+					"short": "test 1",
+					"type": "WARNING",
+				},
+				{
+					"column": "",
+					"detail": ".",
+					"line": "",
+					"section": "",
+					"short": "test 2",
+					"type": "WARNING",
+				},
+			],
+		},
 	}
 	count(result) == 0
 }
@@ -68,24 +70,26 @@ test_rule___100_300_001_02_violation_01 if {
 		"investigationFilePath": "i_Investigation.txt",
 		"assays": {"a_MTBLS1.txt": {}},
 		"investigation": {"studies": [{"fileName": "s_MTBLS1.txt", "studyAssays": {"assays": [{"fileName": "a_MTBLS1.txt"}]}}]},
-		"parserMessages": {"a_MTBLS1.txt": [
-			{
-				"column": "",
-				"detail": ".",
-				"line": "",
-				"section": "",
-				"short": "test 1",
-				"type": "ERROR",
-			},
-			{
-				"column": "",
-				"detail": ".",
-				"line": "",
-				"section": "",
-				"short": "test 2",
-				"type": "WARNING",
-			},
-		]},
+		"parserMessages": {
+			"a_MTBLS1.txt": [
+				{
+					"column": "",
+					"detail": ".",
+					"line": "",
+					"section": "",
+					"short": "test 1",
+					"type": "ERROR",
+				},
+				{
+					"column": "",
+					"detail": ".",
+					"line": "",
+					"section": "",
+					"short": "test 2",
+					"type": "WARNING",
+				},
+			],
+		},
 	}
 	count(result) == 1
 	some error in result
@@ -100,24 +104,26 @@ test_rule___100_300_001_02_violation_02 if {
 		"investigationFilePath": "i_Investigation.txt",
 		"assays": {"a_MTBLS1.txt": {}},
 		"investigation": {"studies": [{"fileName": "s_MTBLS1.txt", "studyAssays": {"assays": [{"fileName": "a_MTBLS1.txt"}]}}]},
-		"parserMessages": {"a_MTBLS1.txt": [
-			{
-				"column": "",
-				"detail": ".",
-				"line": "",
-				"section": "",
-				"short": "test 1",
-				"type": "ERROR",
-			},
-			{
-				"column": "",
-				"detail": ".",
-				"line": "",
-				"section": "",
-				"short": "test 2",
-				"type": "ERROR",
-			},
-		]},
+		"parserMessages": {
+			"a_MTBLS1.txt": [
+				{
+					"column": "",
+					"detail": ".",
+					"line": "",
+					"section": "",
+					"short": "test 1",
+					"type": "ERROR",
+				},
+				{
+					"column": "",
+					"detail": ".",
+					"line": "",
+					"section": "",
+					"short": "test 2",
+					"type": "ERROR",
+				},
+			],
+		},
 	}
 	count(result) == 1
 	some result_object in result

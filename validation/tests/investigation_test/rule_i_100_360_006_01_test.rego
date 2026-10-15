@@ -22,38 +22,50 @@ rule_i_100_360_006_01_test_cases := 1
 # description: study contact affiliation is valid.
 test_rule_i_100_360_006_01_no_violation_01 if {
 	result := rules.rule_i_100_360_006_01 with input as {
-		"investigation": {"studies": [{"identifier": "MTBLS1", "studyContacts": {"people": [
-			{
-				"lastName": "",
-				"firstName": "",
-				"midInitials": "",
-				"email": "",
-				"phone": "",
-				"fax": "",
-				"address": "",
-				"affiliation": "EMBL European Bioinformatics Institute",
-				"roles": [{
-					"term": "",
-					"termAccessionNumber": "",
-					"termSourceRef": "",
-				}],
-			},
-			{
-				"lastName": "",
-				"firstName": "",
-				"midInitials": "",
-				"email": "t",
-				"phone": "",
-				"fax": "",
-				"address": "",
-				"affiliation": "Cambridge University",
-				"roles": [{
-					"term": "",
-					"termAccessionNumber": "",
-					"termSourceRef": "",
-				}],
-			},
-		]}}]},
+		"investigation": {
+			"studies": [
+				{
+					"identifier": "MTBLS1", "studyContacts": {
+						"people": [
+							{
+								"lastName": "",
+								"firstName": "",
+								"midInitials": "",
+								"email": "",
+								"phone": "",
+								"fax": "",
+								"address": "",
+								"affiliation": "EMBL European Bioinformatics Institute",
+								"roles": [
+									{
+										"term": "",
+										"termAccessionNumber": "",
+										"termSourceRef": "",
+									},
+								],
+							},
+							{
+								"lastName": "",
+								"firstName": "",
+								"midInitials": "",
+								"email": "t",
+								"phone": "",
+								"fax": "",
+								"address": "",
+								"affiliation": "Cambridge University",
+								"roles": [
+									{
+										"term": "",
+										"termAccessionNumber": "",
+										"termSourceRef": "",
+									},
+								],
+							},
+						],
+					},
+				},
+			],
+		},
 		"investigationFilePath": "i_Investigation.txt",
 	}
 	count(result) == 0
@@ -64,68 +76,84 @@ test_rule_i_100_360_006_01_no_violation_01 if {
 # description: study contact affiliations are not valid.
 test_rule_i_100_360_006_01_violation_01 if {
 	result := rules.rule_i_100_360_006_01 with input as {
-		"investigation": {"studies": [{"identifier": "MTBLS1", "studyContacts": {"people": [
-			{
-				"lastName": "",
-				"firstName": "",
-				"midInitials": "",
-				"email": "",
-				"phone": "",
-				"fax": "",
-				"address": "",
-				"affiliation": "E",
-				"roles": [{
-					"term": "",
-					"termAccessionNumber": "",
-					"termSourceRef": "",
-				}],
-			},
-			{
-				"lastName": "",
-				"firstName": "",
-				"midInitials": "",
-				"email": "",
-				"phone": "",
-				"fax": "",
-				"address": "",
-				"affiliation": "Cambridge",
-				"roles": [{
-					"term": "",
-					"termAccessionNumber": "",
-					"termSourceRef": "",
-				}],
-			},
-			{
-				"lastName": "",
-				"firstName": "",
-				"midInitials": "",
-				"email": "",
-				"phone": "",
-				"fax": "",
-				"address": "",
-				"affiliation": "Cambridge1",
-				"roles": [{
-					"term": "",
-					"termAccessionNumber": "",
-					"termSourceRef": "",
-				}],
-			},
-			{
-				"lastName": "",
-				"firstName": "",
-				"midInitials": "",
-				"email": "",
-				"phone": "",
-				"fax": "",
-				"address": "",
-				"affiliation": "",
-				"roles": [{
-					"term": "",
-					"termAccessionNumber": "",
-					"termSourceRef": "",
-				}],
-			},
-		]}}]},
+		"investigation": {
+			"studies": [
+				{
+					"identifier": "MTBLS1", "studyContacts": {
+						"people": [
+							{
+								"lastName": "",
+								"firstName": "",
+								"midInitials": "",
+								"email": "",
+								"phone": "",
+								"fax": "",
+								"address": "",
+								"affiliation": "E",
+								"roles": [
+									{
+										"term": "",
+										"termAccessionNumber": "",
+										"termSourceRef": "",
+									},
+								],
+							},
+							{
+								"lastName": "",
+								"firstName": "",
+								"midInitials": "",
+								"email": "",
+								"phone": "",
+								"fax": "",
+								"address": "",
+								"affiliation": "Cambridge",
+								"roles": [
+									{
+										"term": "",
+										"termAccessionNumber": "",
+										"termSourceRef": "",
+									},
+								],
+							},
+							{
+								"lastName": "",
+								"firstName": "",
+								"midInitials": "",
+								"email": "",
+								"phone": "",
+								"fax": "",
+								"address": "",
+								"affiliation": "Cambridge1",
+								"roles": [
+									{
+										"term": "",
+										"termAccessionNumber": "",
+										"termSourceRef": "",
+									},
+								],
+							},
+							{
+								"lastName": "",
+								"firstName": "",
+								"midInitials": "",
+								"email": "",
+								"phone": "",
+								"fax": "",
+								"address": "",
+								"affiliation": "",
+								"roles": [
+									{
+										"term": "",
+										"termAccessionNumber": "",
+										"termSourceRef": "",
+									},
+								],
+							},
+						],
+					},
+				},
+			],
+		},
 		"investigationFilePath": "i_Investigation.txt",
 	}
 	count(result) == 2
@@ -136,38 +164,50 @@ test_rule_i_100_360_006_01_violation_01 if {
 # description: first contact's affiliation is empty.
 test_rule_i_100_360_006_01_violation_02 if {
 	result := rules.rule_i_100_360_006_01 with input as {
-		"investigation": {"studies": [{"identifier": "MTBLS1", "studyContacts": {"people": [
-			{
-				"lastName": "",
-				"firstName": "",
-				"midInitials": "",
-				"email": "",
-				"phone": "",
-				"fax": "",
-				"address": "",
-				"affiliation": "",
-				"roles": [{
-					"term": "",
-					"termAccessionNumber": "",
-					"termSourceRef": "",
-				}],
-			},
-			{
-				"lastName": "",
-				"firstName": "",
-				"midInitials": "",
-				"email": "",
-				"phone": "",
-				"fax": "",
-				"address": "",
-				"affiliation": "EU",
-				"roles": [{
-					"term": "",
-					"termAccessionNumber": "",
-					"termSourceRef": "",
-				}],
-			},
-		]}}]},
+		"investigation": {
+			"studies": [
+				{
+					"identifier": "MTBLS1", "studyContacts": {
+						"people": [
+							{
+								"lastName": "",
+								"firstName": "",
+								"midInitials": "",
+								"email": "",
+								"phone": "",
+								"fax": "",
+								"address": "",
+								"affiliation": "",
+								"roles": [
+									{
+										"term": "",
+										"termAccessionNumber": "",
+										"termSourceRef": "",
+									},
+								],
+							},
+							{
+								"lastName": "",
+								"firstName": "",
+								"midInitials": "",
+								"email": "",
+								"phone": "",
+								"fax": "",
+								"address": "",
+								"affiliation": "EU",
+								"roles": [
+									{
+										"term": "",
+										"termAccessionNumber": "",
+										"termSourceRef": "",
+									},
+								],
+							},
+						],
+					},
+				},
+			],
+		},
 		"investigationFilePath": "i_Investigation.txt",
 	}
 	count(result) == 1

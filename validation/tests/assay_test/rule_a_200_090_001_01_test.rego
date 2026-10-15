@@ -23,27 +23,31 @@ rule_a_200_090_001_01_test_cases := 1
 test_rule_a_200_090_001_01_no_violation_01 if {
 	result := rules.rule_a_200_090_001_01 with input as {
 		"investigationFilePath": "i_Investigation.txt",
-		"assays": {"a_MTBLS1.txt": {"assayTechnique": {"name": "LC-MS"}, "table": {
-			"rowOffset": 0, "totalRowCount": 4,
-			"headers": [
-				{"columnCategory": "", "columnStructure": "ADDITIONAL_COLUMN", "columnHeader": "Sample Name", "columnIndex": 0},
-				{"columnCategory": "", "columnStructure": "LINKED_COLUMN", "columnHeader": "Term Source REF", "columnIndex": 1},
-				{"columnCategory": "Protocol", "columnStructure": "", "columnHeader": "Protocol REF", "columnIndex": 2},
-				{"columnCategory": "Comment", "columnStructure": "", "columnHeader": "Comment[Sample]", "columnIndex": 4},
-				{"columnCategory": "Parameter Value", "columnStructure": "", "columnHeader": "Parameter Value[Age]", "columnIndex": 5},
-				{"columnCategory": "Parameter Value", "columnStructure": "", "columnHeader": "Parameter Value[Instrument]", "columnIndex": 8},
-				{"columnCategory": "Parameter Value", "columnStructure": "ONTOLOGY_COLUMN", "columnHeader": "Source Name", "columnIndex": 11},
-				{"columnCategory": "", "columnStructure": "SINGLE_COLUMN", "columnHeader": "Sample Name", "columnIndex": 14},
-			],
-			"columns": [
-				"Sample Name",
-				"Term Source REF",
-			],
-			"data": {
-				"Sample Name": ["1", "2", "3", "4"],
-				"Term Source REF": ["Metabolite Identification", "Metabolite Identification", "Metabolite Identification", "Metabolite Identification"],
+		"assays": {
+			"a_MTBLS1.txt": {
+				"assayTechnique": {"name": "LC-MS"}, "table": {
+					"rowOffset": 0, "totalRowCount": 4,
+					"headers": [
+						{"columnCategory": "", "columnStructure": "ADDITIONAL_COLUMN", "columnHeader": "Sample Name", "columnIndex": 0},
+						{"columnCategory": "", "columnStructure": "LINKED_COLUMN", "columnHeader": "Term Source REF", "columnIndex": 1},
+						{"columnCategory": "Protocol", "columnStructure": "", "columnHeader": "Protocol REF", "columnIndex": 2},
+						{"columnCategory": "Comment", "columnStructure": "", "columnHeader": "Comment[Sample]", "columnIndex": 4},
+						{"columnCategory": "Parameter Value", "columnStructure": "", "columnHeader": "Parameter Value[Age]", "columnIndex": 5},
+						{"columnCategory": "Parameter Value", "columnStructure": "", "columnHeader": "Parameter Value[Instrument]", "columnIndex": 8},
+						{"columnCategory": "Parameter Value", "columnStructure": "ONTOLOGY_COLUMN", "columnHeader": "Source Name", "columnIndex": 11},
+						{"columnCategory": "", "columnStructure": "SINGLE_COLUMN", "columnHeader": "Sample Name", "columnIndex": 14},
+					],
+					"columns": [
+						"Sample Name",
+						"Term Source REF",
+					],
+					"data": {
+						"Sample Name": ["1", "2", "3", "4"],
+						"Term Source REF": ["Metabolite Identification", "Metabolite Identification", "Metabolite Identification", "Metabolite Identification"],
+					},
+				},
 			},
-		}}},
+		},
 		"investigation": {"studies": [{"fileName": "s_MTBLS1.txt"}]},
 		"parserMessages": {"s_MTBLS1.txt": []},
 	}
@@ -57,27 +61,31 @@ test_rule_a_200_090_001_01_no_violation_01 if {
 test_rule_a_200_090_001_01_violation_01 if {
 	result := rules.rule_a_200_090_001_01 with input as {
 		"investigationFilePath": "i_Investigation.txt",
-		"assays": {"a_MTBLS1.txt": {"assayTechnique": {"name": "LC-MS"}, "table": {
-			"rowOffset": 0, "totalRowCount": 4,
-			"headers": [
-				{"columnCategory": "", "columnStructure": "ADDITIONAL_COLUMN", "columnHeader": "Sample Name", "columnIndex": 0},
-				{"columnCategory": "", "columnStructure": "LINKED_COLUMN", "columnHeader": "Term Source REF", "columnIndex": 1},
-				{"columnCategory": "Protocol", "columnStructure": "", "columnHeader": "Protocol REF", "columnIndex": 2},
-				{"columnCategory": "Comment", "columnStructure": "", "columnHeader": "Comment[Sample]", "columnIndex": 4},
-				{"columnCategory": "Parameter Value", "columnStructure": "", "columnHeader": "Parameter Value[Age]", "columnIndex": 5},
-				{"columnCategory": "Parameter Value", "columnStructure": "", "columnHeader": "Parameter Value[Instrument]", "columnIndex": 8},
-				{"columnCategory": "Parameter Value", "columnStructure": "ONTOLOGY_COLUMN", "columnHeader": "Source Name", "columnIndex": 11},
-				{"columnCategory": "", "columnStructure": "SINGLE_COLUMN", "columnHeader": "Sample Name2", "columnIndex": 14},
-			],
-			"columns": [
-				"Sample Name",
-				"Term Source REF",
-			],
-			"data": {
-				"Sample Name": ["1", "2 ", "3", " "],
-				"Term Source REF": ["Metabolite Identification ", "Metabolite Identification", "Metabolite Identification", "Metabolite Identification"],
+		"assays": {
+			"a_MTBLS1.txt": {
+				"assayTechnique": {"name": "LC-MS"}, "table": {
+					"rowOffset": 0, "totalRowCount": 4,
+					"headers": [
+						{"columnCategory": "", "columnStructure": "ADDITIONAL_COLUMN", "columnHeader": "Sample Name", "columnIndex": 0},
+						{"columnCategory": "", "columnStructure": "LINKED_COLUMN", "columnHeader": "Term Source REF", "columnIndex": 1},
+						{"columnCategory": "Protocol", "columnStructure": "", "columnHeader": "Protocol REF", "columnIndex": 2},
+						{"columnCategory": "Comment", "columnStructure": "", "columnHeader": "Comment[Sample]", "columnIndex": 4},
+						{"columnCategory": "Parameter Value", "columnStructure": "", "columnHeader": "Parameter Value[Age]", "columnIndex": 5},
+						{"columnCategory": "Parameter Value", "columnStructure": "", "columnHeader": "Parameter Value[Instrument]", "columnIndex": 8},
+						{"columnCategory": "Parameter Value", "columnStructure": "ONTOLOGY_COLUMN", "columnHeader": "Source Name", "columnIndex": 11},
+						{"columnCategory": "", "columnStructure": "SINGLE_COLUMN", "columnHeader": "Sample Name2", "columnIndex": 14},
+					],
+					"columns": [
+						"Sample Name",
+						"Term Source REF",
+					],
+					"data": {
+						"Sample Name": ["1", "2 ", "3", " "],
+						"Term Source REF": ["Metabolite Identification ", "Metabolite Identification", "Metabolite Identification", "Metabolite Identification"],
+					},
+				},
 			},
-		}}},
+		},
 		"investigation": {"studies": [{"fileName": "s_MTBLS1.txt"}]},
 		"parserMessages": {"s_MTBLS1.txt": []},
 	}

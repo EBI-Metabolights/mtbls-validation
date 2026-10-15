@@ -24,15 +24,17 @@ test_rule_i_100_330_003_01_no_violation_01 if {
 	input_01 := data.tests.data.inputs.minimum_01
 	input_data := json.patch(
 		input_01,
-		[{
-			"op": "replace",
-			"path": "/investigation/studies/0/studyFactors/factors/0/type",
-			"value": {
-				"term": "kilogram",
-				"termAccessionNumber": "http://purl.obolibrary.org/obo/UO_0000009",
-				"termSourceRef": "UO",
+		[
+			{
+				"op": "replace",
+				"path": "/investigation/studies/0/studyFactors/factors/0/type",
+				"value": {
+					"term": "kilogram",
+					"termAccessionNumber": "http://purl.obolibrary.org/obo/UO_0000009",
+					"termSourceRef": "UO",
+				},
 			},
-		}],
+		],
 	)
 
 	result := rules.rule_i_100_330_003_01 with input as input_data
@@ -46,15 +48,17 @@ test_rule_i_100_330_003_01_violation_01 if {
 	input_01 := data.tests.data.inputs.minimum_01
 	input_data := json.patch(
 		input_01,
-		[{
-			"op": "replace",
-			"path": "/investigation/studies/0/studyFactors/factors/0/type",
-			"value": {
-				"term": "",
-				"termAccessionNumber": "http://purl.obolibrary.org/obo/UO_0000009",
-				"termSourceRef": "UO",
+		[
+			{
+				"op": "replace",
+				"path": "/investigation/studies/0/studyFactors/factors/0/type",
+				"value": {
+					"term": "",
+					"termAccessionNumber": "http://purl.obolibrary.org/obo/UO_0000009",
+					"termSourceRef": "UO",
+				},
 			},
-		}],
+		],
 	)
 
 	result := rules.rule_i_100_330_003_01 with input as input_data

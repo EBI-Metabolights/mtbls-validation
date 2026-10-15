@@ -33,11 +33,13 @@ test_rule___100_100_100_06_no_violation_01 if {
 # description: There are multiple investigation files.
 test_rule___100_100_100_06_violation_01 if {
 	result := rules.rule___100_100_100_06 with input as {
-		"studyFolderMetadata": {"files": {
-			"i_Investigation.txt": {},
-			"i_investigation.txt": {},
-			"i_investigation2.txt": {},
-		}},
+		"studyFolderMetadata": {
+			"files": {
+				"i_Investigation.txt": {},
+				"i_investigation.txt": {},
+				"i_investigation2.txt": {},
+			},
+		},
 		"investigationFilePath": "i_Investigation.txt",
 	}
 	count(result) == 2
