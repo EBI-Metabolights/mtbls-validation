@@ -1,6 +1,6 @@
 {
     "rules": {
-        "validation_version": "v2.0.1",
+        "validation_version": "v2.0.2",
         "created_at": "2026-10-15T09:16:56.786409+00:00",
         "violations": [
             {

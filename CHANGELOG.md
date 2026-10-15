@@ -1,3 +1,9 @@
+## v2.0.2 (2026-10-15)
+
+### Fix
+
+- **submitter-fullname-check**: new rule is defined to check submitter fullname
+
 ## v2.0.1 (2026-10-15)
 
 ### Fix
