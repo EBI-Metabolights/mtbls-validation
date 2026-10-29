@@ -227,7 +227,7 @@
         "CHMO": {
             "sourceName": "CHMO",
             "sourceFile": "http://purl.obolibrary.org/obo/chmo.owl",
-            "sourceVersion": "2026-05-28",
+            "sourceVersion": "2026-05-27",
             "sourceDescription": "Chemical Methods Ontology",
             "sourceDetails": "CHMO, the chemical methods ontology, describes methods used to"
         },
@@ -479,7 +479,7 @@
         "EFO": {
             "sourceName": "EFO",
             "sourceFile": "http://www.ebi.ac.uk/efo/efo.owl",
-            "sourceVersion": "3.94.0",
+            "sourceVersion": "3.95.0",
             "sourceDescription": "Experimental Factor Ontology",
             "sourceDetails": "The Experimental Factor Ontology (EFO) provides a systematic description of many experimental variables available in EBI databases, and for projects such as the NHGRI-EBI GWAS catalog. It combines parts of several biological ontologies, such as UBERON anatomy, ChEBI chemical compounds, Cell Ontology and the Monarch Disease Ontology (MONDO). The scope of EFO is to support the annotation, analysis and visualization of data handled by many groups at the EBI and as the core ontology for Open Targets."
         },
@@ -514,7 +514,7 @@
         "EMRO": {
             "sourceName": "EMRO",
             "sourceFile": "http://purl.obolibrary.org/obo/emro.owl",
-            "sourceVersion": "2026-08-24",
+            "sourceVersion": "2026-10-15",
             "sourceDescription": "Emotion Response Ontology",
             "sourceDetails": "The Emotion Response Ontology represents emotions as behavioral responses."
         },
@@ -535,7 +535,7 @@
         "ENVO": {
             "sourceName": "ENVO",
             "sourceFile": "http://purl.obolibrary.org/obo/envo.owl",
-            "sourceVersion": "2026-06-26",
+            "sourceVersion": "2026-10-23",
             "sourceDescription": "The Environment Ontology",
             "sourceDetails": "ENVO is an ontology which represents knowledge about environments,environmental processes, ecosystems, habitats, and related entities"
         },
@@ -633,7 +633,7 @@
         "FLOPO": {
             "sourceName": "FLOPO",
             "sourceFile": "http://purl.obolibrary.org/obo/flopo.owl",
-            "sourceVersion": "2026-10-05",
+            "sourceVersion": "2026-10-25",
             "sourceDescription": "Flora Phenotype Ontology",
             "sourceDetails": "Traits and phenotypes of flowering plants occurring in digitized Floras"
         },
@@ -1095,7 +1095,7 @@
         "MRO": {
             "sourceName": "MRO",
             "sourceFile": "http://purl.obolibrary.org/obo/mro.owl",
-            "sourceVersion": "2026-09-15",
+            "sourceVersion": "2026-10-20",
             "sourceDescription": "MHC Restriction Ontology",
             "sourceDetails": "The MHC Restriction Ontology is an application ontology capturing how Major Histocompatibility Complex (MHC) restriction is defined in experiments, spanning exact protein complexes, individual protein chains, serotypes, haplotypes and mutant molecules, as well as evidence for MHC restrictions."
         },
@@ -1193,7 +1193,7 @@
         "OBA": {
             "sourceName": "OBA",
             "sourceFile": "http://purl.obolibrary.org/obo/oba.owl",
-            "sourceVersion": "2026-07-14",
+            "sourceVersion": "2026-10-10",
             "sourceDescription": "Ontology of Biological Attributes (OBA)",
             "sourceDetails": "A collection of biological attributes (traits) covering all kingdoms of life. Interoperable with VT (vertebrate trait ontology) and TO (plant trait ontology). Extends PATO."
         },
@@ -1410,7 +1410,7 @@
         "PAIN": {
             "sourceName": "PAIN",
             "sourceFile": "http://purl.obolibrary.org/obo/pain.owl",
-            "sourceVersion": "2026-10-01",
+            "sourceVersion": "2026-10-15",
             "sourceDescription": "The Pain Ontology",
             "sourceDetails": "An ontology that formalizes IASP's definition of pain as both an unpleasant physical and emotional experience, and it provides terms and axioms to represent the multidimensional aspects of pain, such as temporality, quality, extent, biological mechanism, and anatomical location."
         },
@@ -1690,7 +1690,7 @@
         "SIO": {
             "sourceName": "SIO",
             "sourceFile": "https://raw.githubusercontent.com/micheldumontier/semanticscience/master/ontology/sio/release/sio-release.owl",
-            "sourceVersion": "1.61",
+            "sourceVersion": "1.62",
             "sourceDescription": "Semanticscience Integrated Ontology",
             "sourceDetails": "The Semanticscience Integrated Ontology (SIO) provides a simple, integrated ontology of types and relations for rich description of objects, processes and their attributes."
         },
@@ -1802,7 +1802,7 @@
         "TFO": {
             "sourceName": "TFO",
             "sourceFile": "http://opendata.inrae.fr/PO2/Ontology/transformON.rdf",
-            "sourceVersion": "32.0",
+            "sourceVersion": "33.0",
             "sourceDescription": "TransformON",
             "sourceDetails": "A domain ontology on food and bioproduct processing and characterization that is a specialization of the PO2 ontology (Process and Observation Ontology)."
         },
@@ -1865,7 +1865,7 @@
         "UO": {
             "sourceName": "UO",
             "sourceFile": "http://purl.obolibrary.org/obo/uo.owl",
-            "sourceVersion": "2026-07-31",
+            "sourceVersion": "2026-10-12",
             "sourceDescription": "Units of measurement ontology",
             "sourceDetails": "Metrical units for use in conjunction with PATO"
         },
@@ -1879,7 +1879,7 @@
         "UPHENO": {
             "sourceName": "UPHENO",
             "sourceFile": "http://purl.obolibrary.org/obo/upheno.owl",
-            "sourceVersion": "2025-10-12",
+            "sourceVersion": "2026-10-19",
             "sourceDescription": "Unified Phenotype Ontology (uPheno)",
             "sourceDetails": "The uPheno ontology integrates multiple phenotype ontologies into a unified cross-species phenotype ontology."
         },
