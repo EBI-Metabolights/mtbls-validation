@@ -59,7 +59,7 @@
         "APO": {
             "sourceName": "APO",
             "sourceFile": "http://purl.obolibrary.org/obo/apo.owl",
-            "sourceVersion": "2026-09-30",
+            "sourceVersion": "2026-10-30",
             "sourceDescription": "Ascomycete Phenotype Ontology (APO)",
             "sourceDetails": "A structured controlled vocabulary for the phenotypes of Ascomycete fungi."
         },
@@ -206,7 +206,7 @@
         "CHEBI": {
             "sourceName": "CHEBI",
             "sourceFile": "http://purl.obolibrary.org/obo/chebi.owl",
-            "sourceVersion": "256",
+            "sourceVersion": "257",
             "sourceDescription": "Chemical Entities of Biological Interest",
             "sourceDetails": "A structured classification of molecular entities of biological interest focusing on 'small' chemical compounds."
         },
@@ -416,7 +416,7 @@
         "DOID": {
             "sourceName": "DOID",
             "sourceFile": "https://purl.obolibrary.org/obo/doid/translations/doid-international.owl",
-            "sourceVersion": "2026-09-30",
+            "sourceVersion": "2026-10-29",
             "sourceDescription": "Human Disease Ontology",
             "sourceDetails": "The Disease Ontology has been developed as a standardized ontology for human disease with the purpose of providing the biomedical community with consistent, reusable and sustainable descriptions of human disease terms, phenotype characteristics and related medical vocabulary disease concepts."
         },
@@ -598,21 +598,21 @@
         "FBbt": {
             "sourceName": "FBbt",
             "sourceFile": "http://purl.obolibrary.org/obo/fbbt.owl",
-            "sourceVersion": "2026-10-01",
+            "sourceVersion": "2026-11-02",
             "sourceDescription": "Drosophila gross anatomy",
             "sourceDetails": "An ontology representing the gross anatomy of Drosophila melanogaster."
         },
         "FBcv": {
             "sourceName": "FBcv",
             "sourceFile": "http://purl.obolibrary.org/obo/fbcv.owl",
-            "sourceVersion": "2026-10-01",
+            "sourceVersion": "2026-11-02",
             "sourceDescription": "FlyBase Controlled Vocabulary",
             "sourceDetails": "A structured controlled vocabulary used for various aspects of annotation by FlyBase."
         },
         "FBdv": {
             "sourceName": "FBdv",
             "sourceFile": "http://purl.obolibrary.org/obo/fbdv.owl",
-            "sourceVersion": "2026-09-30",
+            "sourceVersion": "2026-11-02",
             "sourceDescription": "Drosophila development",
             "sourceDetails": "A structured controlled vocabulary of the development of Drosophila melanogaster."
         },
@@ -738,7 +738,7 @@
         "GSSO": {
             "sourceName": "GSSO",
             "sourceFile": "http://purl.obolibrary.org/obo/gsso.owl",
-            "sourceVersion": "",
+            "sourceVersion": "2.0.11",
             "sourceDescription": "GSSO - the Gender, Sex, and Sexual Orientation ontology",
             "sourceDetails": "GSSO is the Gender, Sex, and Sex Orientation ontology, including terms related to gender identity and expression, sexual and romantic identity and orientation, and sexual and reproductive behavior."
         },
@@ -1060,7 +1060,7 @@
         "MONDO": {
             "sourceName": "MONDO",
             "sourceFile": "https://purl.obolibrary.org/obo/mondo/mondo-international.owl",
-            "sourceVersion": "2026-10-06",
+            "sourceVersion": "2026-11-03",
             "sourceDescription": "Mondo Disease Ontology",
             "sourceDetails": "A semi-automatically constructed ontology that merges in multiple disease resources to yield a coherent merged ontology."
         },
@@ -1074,7 +1074,7 @@
         "MP": {
             "sourceName": "MP",
             "sourceFile": "http://purl.obolibrary.org/obo/mp/mp-international.owl",
-            "sourceVersion": "2026-09-23",
+            "sourceVersion": "2026-10-29",
             "sourceDescription": "The Mammalian Phenotype Ontology",
             "sourceDetails": "The Mammalian Phenotype Ontology is being developed by Cynthia L. Smith, Susan M. Bello, Anna V. Anagnostopoulos, Carroll W. Goldsmith and Janan T. Eppig, as part of the Mouse Genome Database (MGD) Project, Mouse Genome Informatics (MGI), The Jackson Laboratory, Bar Harbor, ME. This file contains pre-coordinated phenotype terms, definitions and synonyms that can be used to describe mammalian phenotypes. The ontology is represented as a directed acyclic graph (DAG). It organizes phenotype terms into major biological system headers such as nervous system and respiratory system.  This ontology is currently under development. Weekly updates are available at the Mouse Genome Informatics (MGI) ftp site (ftp://ftp.informatics.jax.org/pub/reports/index.html#pheno) as well as the OBO Foundry site (http://obofoundry.org/). Japanese labels of MP were created by the MP Japanese Translation Project (https://github.com/dbcls/MP_Japanese). Questions, comments and suggestions are welcome, and should be directed to pheno@jax.org, Susan.Bello@jax.org or to GitHub tracker (https://github.com/mgijax/mammalian-phenotype-ontology/issues) MGD is funded by NIH/NHGRI grant HG000330."
         },
@@ -1249,7 +1249,7 @@
         "OHD": {
             "sourceName": "OHD",
             "sourceFile": "http://purl.obolibrary.org/obo/ohd.owl",
-            "sourceVersion": "2026-10-01",
+            "sourceVersion": "2026-11-04",
             "sourceDescription": "Oral Health and Disease Ontology",
             "sourceDetails": "The Oral Health and Disease Ontology is used for representing the diagnosis and treatment of dental maladies."
         },
@@ -1410,7 +1410,7 @@
         "PAIN": {
             "sourceName": "PAIN",
             "sourceFile": "http://purl.obolibrary.org/obo/pain.owl",
-            "sourceVersion": "2026-10-15",
+            "sourceVersion": "2026-11-04",
             "sourceDescription": "The Pain Ontology",
             "sourceDetails": "An ontology that formalizes IASP's definition of pain as both an unpleasant physical and emotional experience, and it provides terms and axioms to represent the multidimensional aspects of pain, such as temporality, quality, extent, biological mechanism, and anatomical location."
         },
@@ -1893,7 +1893,7 @@
         "VO": {
             "sourceName": "VO",
             "sourceFile": "http://purl.obolibrary.org/obo/vo.owl",
-            "sourceVersion": "2026-06-12",
+            "sourceVersion": "2026-11-02",
             "sourceDescription": "Vaccine Ontology",
             "sourceDetails": "The Vaccine Ontology (VO) is a community-based biomedical ontology in the domain of vaccines and vaccination. VO aims to standardize vaccine types and annotations, integrate various vaccine data, and support computer-assisted reasoning. The VO supports basic vaccine R&D and clinical vaccine usage. VO is being developed as a community-based ontology with support and collaborations from the vaccine and bio-ontology communities."
         },

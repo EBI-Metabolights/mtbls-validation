@@ -1303,7 +1303,7 @@
                     "min": 0
                 }
             },
-            "defaultSampleFileTemplate": "mhd-enabled",
+            "defaultSampleFileTemplate": "minimum",
             "defaultInvestigationFileTemplate": "minimum",
             "defaultStudyCategory": "other",
             "defaultDatasetLicense": "CC0 1.0 Universal",
