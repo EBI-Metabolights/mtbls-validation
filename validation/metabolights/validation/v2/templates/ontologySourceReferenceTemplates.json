@@ -59,7 +59,7 @@
         "APO": {
             "sourceName": "APO",
             "sourceFile": "http://purl.obolibrary.org/obo/apo.owl",
-            "sourceVersion": "2026-09-30",
+            "sourceVersion": "2026-10-30",
             "sourceDescription": "Ascomycete Phenotype Ontology (APO)",
             "sourceDetails": "A structured controlled vocabulary for the phenotypes of Ascomycete fungi."
         },
@@ -227,7 +227,7 @@
         "CHMO": {
             "sourceName": "CHMO",
             "sourceFile": "http://purl.obolibrary.org/obo/chmo.owl",
-            "sourceVersion": "2026-05-28",
+            "sourceVersion": "2026-05-27",
             "sourceDescription": "Chemical Methods Ontology",
             "sourceDetails": "CHMO, the chemical methods ontology, describes methods used to"
         },
@@ -416,7 +416,7 @@
         "DOID": {
             "sourceName": "DOID",
             "sourceFile": "https://purl.obolibrary.org/obo/doid/translations/doid-international.owl",
-            "sourceVersion": "2026-09-30",
+            "sourceVersion": "2026-10-29",
             "sourceDescription": "Human Disease Ontology",
             "sourceDetails": "The Disease Ontology has been developed as a standardized ontology for human disease with the purpose of providing the biomedical community with consistent, reusable and sustainable descriptions of human disease terms, phenotype characteristics and related medical vocabulary disease concepts."
         },
@@ -479,7 +479,7 @@
         "EFO": {
             "sourceName": "EFO",
             "sourceFile": "http://www.ebi.ac.uk/efo/efo.owl",
-            "sourceVersion": "3.94.0",
+            "sourceVersion": "3.95.0",
             "sourceDescription": "Experimental Factor Ontology",
             "sourceDetails": "The Experimental Factor Ontology (EFO) provides a systematic description of many experimental variables available in EBI databases, and for projects such as the NHGRI-EBI GWAS catalog. It combines parts of several biological ontologies, such as UBERON anatomy, ChEBI chemical compounds, Cell Ontology and the Monarch Disease Ontology (MONDO). The scope of EFO is to support the annotation, analysis and visualization of data handled by many groups at the EBI and as the core ontology for Open Targets."
         },
@@ -514,7 +514,7 @@
         "EMRO": {
             "sourceName": "EMRO",
             "sourceFile": "http://purl.obolibrary.org/obo/emro.owl",
-            "sourceVersion": "2026-08-24",
+            "sourceVersion": "2026-10-15",
             "sourceDescription": "Emotion Response Ontology",
             "sourceDetails": "The Emotion Response Ontology represents emotions as behavioral responses."
         },
@@ -535,7 +535,7 @@
         "ENVO": {
             "sourceName": "ENVO",
             "sourceFile": "http://purl.obolibrary.org/obo/envo.owl",
-            "sourceVersion": "2026-06-26",
+            "sourceVersion": "2026-10-23",
             "sourceDescription": "The Environment Ontology",
             "sourceDetails": "ENVO is an ontology which represents knowledge about environments,environmental processes, ecosystems, habitats, and related entities"
         },
@@ -598,21 +598,21 @@
         "FBbt": {
             "sourceName": "FBbt",
             "sourceFile": "http://purl.obolibrary.org/obo/fbbt.owl",
-            "sourceVersion": "2026-10-01",
+            "sourceVersion": "2026-11-02",
             "sourceDescription": "Drosophila gross anatomy",
             "sourceDetails": "An ontology representing the gross anatomy of Drosophila melanogaster."
         },
         "FBcv": {
             "sourceName": "FBcv",
             "sourceFile": "http://purl.obolibrary.org/obo/fbcv.owl",
-            "sourceVersion": "2026-10-01",
+            "sourceVersion": "2026-11-02",
             "sourceDescription": "FlyBase Controlled Vocabulary",
             "sourceDetails": "A structured controlled vocabulary used for various aspects of annotation by FlyBase."
         },
         "FBdv": {
             "sourceName": "FBdv",
             "sourceFile": "http://purl.obolibrary.org/obo/fbdv.owl",
-            "sourceVersion": "2026-09-30",
+            "sourceVersion": "2026-11-02",
             "sourceDescription": "Drosophila development",
             "sourceDetails": "A structured controlled vocabulary of the development of Drosophila melanogaster."
         },
@@ -633,7 +633,7 @@
         "FLOPO": {
             "sourceName": "FLOPO",
             "sourceFile": "http://purl.obolibrary.org/obo/flopo.owl",
-            "sourceVersion": "2026-10-05",
+            "sourceVersion": "2026-10-25",
             "sourceDescription": "Flora Phenotype Ontology",
             "sourceDetails": "Traits and phenotypes of flowering plants occurring in digitized Floras"
         },
@@ -1060,7 +1060,7 @@
         "MONDO": {
             "sourceName": "MONDO",
             "sourceFile": "https://purl.obolibrary.org/obo/mondo/mondo-international.owl",
-            "sourceVersion": "2026-10-06",
+            "sourceVersion": "2026-11-03",
             "sourceDescription": "Mondo Disease Ontology",
             "sourceDetails": "A semi-automatically constructed ontology that merges in multiple disease resources to yield a coherent merged ontology."
         },
@@ -1074,7 +1074,7 @@
         "MP": {
             "sourceName": "MP",
             "sourceFile": "http://purl.obolibrary.org/obo/mp/mp-international.owl",
-            "sourceVersion": "2026-09-23",
+            "sourceVersion": "2026-10-29",
             "sourceDescription": "The Mammalian Phenotype Ontology",
             "sourceDetails": "The Mammalian Phenotype Ontology is being developed by Cynthia L. Smith, Susan M. Bello, Anna V. Anagnostopoulos, Carroll W. Goldsmith and Janan T. Eppig, as part of the Mouse Genome Database (MGD) Project, Mouse Genome Informatics (MGI), The Jackson Laboratory, Bar Harbor, ME. This file contains pre-coordinated phenotype terms, definitions and synonyms that can be used to describe mammalian phenotypes. The ontology is represented as a directed acyclic graph (DAG). It organizes phenotype terms into major biological system headers such as nervous system and respiratory system.  This ontology is currently under development. Weekly updates are available at the Mouse Genome Informatics (MGI) ftp site (ftp://ftp.informatics.jax.org/pub/reports/index.html#pheno) as well as the OBO Foundry site (http://obofoundry.org/). Japanese labels of MP were created by the MP Japanese Translation Project (https://github.com/dbcls/MP_Japanese). Questions, comments and suggestions are welcome, and should be directed to pheno@jax.org, Susan.Bello@jax.org or to GitHub tracker (https://github.com/mgijax/mammalian-phenotype-ontology/issues) MGD is funded by NIH/NHGRI grant HG000330."
         },
@@ -1095,7 +1095,7 @@
         "MRO": {
             "sourceName": "MRO",
             "sourceFile": "http://purl.obolibrary.org/obo/mro.owl",
-            "sourceVersion": "2026-09-15",
+            "sourceVersion": "2026-10-20",
             "sourceDescription": "MHC Restriction Ontology",
             "sourceDetails": "The MHC Restriction Ontology is an application ontology capturing how Major Histocompatibility Complex (MHC) restriction is defined in experiments, spanning exact protein complexes, individual protein chains, serotypes, haplotypes and mutant molecules, as well as evidence for MHC restrictions."
         },
@@ -1193,7 +1193,7 @@
         "OBA": {
             "sourceName": "OBA",
             "sourceFile": "http://purl.obolibrary.org/obo/oba.owl",
-            "sourceVersion": "2026-07-14",
+            "sourceVersion": "2026-10-10",
             "sourceDescription": "Ontology of Biological Attributes (OBA)",
             "sourceDetails": "A collection of biological attributes (traits) covering all kingdoms of life. Interoperable with VT (vertebrate trait ontology) and TO (plant trait ontology). Extends PATO."
         },
@@ -1410,7 +1410,7 @@
         "PAIN": {
             "sourceName": "PAIN",
             "sourceFile": "http://purl.obolibrary.org/obo/pain.owl",
-            "sourceVersion": "2026-10-01",
+            "sourceVersion": "2026-10-15",
             "sourceDescription": "The Pain Ontology",
             "sourceDetails": "An ontology that formalizes IASP's definition of pain as both an unpleasant physical and emotional experience, and it provides terms and axioms to represent the multidimensional aspects of pain, such as temporality, quality, extent, biological mechanism, and anatomical location."
         },
@@ -1690,7 +1690,7 @@
         "SIO": {
             "sourceName": "SIO",
             "sourceFile": "https://raw.githubusercontent.com/micheldumontier/semanticscience/master/ontology/sio/release/sio-release.owl",
-            "sourceVersion": "1.61",
+            "sourceVersion": "1.62",
             "sourceDescription": "Semanticscience Integrated Ontology",
             "sourceDetails": "The Semanticscience Integrated Ontology (SIO) provides a simple, integrated ontology of types and relations for rich description of objects, processes and their attributes."
         },
@@ -1802,7 +1802,7 @@
         "TFO": {
             "sourceName": "TFO",
             "sourceFile": "http://opendata.inrae.fr/PO2/Ontology/transformON.rdf",
-            "sourceVersion": "32.0",
+            "sourceVersion": "33.0",
             "sourceDescription": "TransformON",
             "sourceDetails": "A domain ontology on food and bioproduct processing and characterization that is a specialization of the PO2 ontology (Process and Observation Ontology)."
         },
@@ -1865,7 +1865,7 @@
         "UO": {
             "sourceName": "UO",
             "sourceFile": "http://purl.obolibrary.org/obo/uo.owl",
-            "sourceVersion": "2026-07-31",
+            "sourceVersion": "2026-10-12",
             "sourceDescription": "Units of measurement ontology",
             "sourceDetails": "Metrical units for use in conjunction with PATO"
         },
@@ -1879,7 +1879,7 @@
         "UPHENO": {
             "sourceName": "UPHENO",
             "sourceFile": "http://purl.obolibrary.org/obo/upheno.owl",
-            "sourceVersion": "2025-10-12",
+            "sourceVersion": "2026-10-19",
             "sourceDescription": "Unified Phenotype Ontology (uPheno)",
             "sourceDetails": "The uPheno ontology integrates multiple phenotype ontologies into a unified cross-species phenotype ontology."
         },
@@ -1893,7 +1893,7 @@
         "VO": {
             "sourceName": "VO",
             "sourceFile": "http://purl.obolibrary.org/obo/vo.owl",
-            "sourceVersion": "2026-06-12",
+            "sourceVersion": "2026-11-02",
             "sourceDescription": "Vaccine Ontology",
             "sourceDetails": "The Vaccine Ontology (VO) is a community-based biomedical ontology in the domain of vaccines and vaccination. VO aims to standardize vaccine types and annotations, integrate various vaccine data, and support computer-assisted reasoning. The VO supports basic vaccine R&D and clinical vaccine usage. VO is being developed as a community-based ontology with support and collaborations from the vaccine and bio-ontology communities."
         },
