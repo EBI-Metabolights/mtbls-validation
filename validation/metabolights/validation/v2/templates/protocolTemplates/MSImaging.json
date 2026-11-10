@@ -159,7 +159,7 @@
                         "Instrument software",
                         "Instrument software version",
                         "Line scan direction",
-                        "Line scan sequence",
+                        "Linescan sequence",
                         "Scan pattern",
                         "Scan type",
                         "Number of scans"
@@ -462,10 +462,10 @@
                             "format": "Text",
                             "examples": []
                         },
-                        "Line scan sequence": {
+                        "Linescan sequence": {
                             "definition": "",
                             "type": {
-                                "term": "Line scan sequence",
+                                "term": "Linescan sequence",
                                 "termAccessionNumber": "",
                                 "termSourceRef": ""
                             },
@@ -766,7 +766,7 @@
                         "Instrument software",
                         "Instrument software version",
                         "Line scan direction",
-                        "Line scan sequence",
+                        "Linescan sequence",
                         "Scan pattern",
                         "Scan type",
                         "Number of scans"
@@ -1069,10 +1069,10 @@
                             "format": "Text",
                             "examples": []
                         },
-                        "Line scan sequence": {
+                        "Linescan sequence": {
                             "definition": "",
                             "type": {
-                                "term": "Line scan sequence",
+                                "term": "Linescan sequence",
                                 "termAccessionNumber": "",
                                 "termSourceRef": ""
                             },
