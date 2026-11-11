@@ -78,6 +78,11 @@
                     "term": "sea water",
                     "termAccessionNumber": "http://purl.obolibrary.org/obo/ENVO_00002149",
                     "termSourceRef": "ENVO"
+                },
+                {
+                    "term": "blank sample",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/NCBITaxon_2582415",
+                    "termSourceRef": "NCBITaxon"
                 }
             ],
             "unexpectedTerms": [
@@ -199,9 +204,9 @@
                     "termSourceRef": "ENVO"
                 },
                 {
-                    "term": "blank",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002304",
-                    "termSourceRef": "MTBLS"
+                    "term": "blank sample",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/NCBITaxon_2582415",
+                    "termSourceRef": "NCBITaxon"
                 },
                 {
                     "term": "reference compound",
