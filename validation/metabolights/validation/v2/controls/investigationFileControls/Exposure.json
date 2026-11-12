@@ -1,0 +1,58 @@
+{
+    "Exposure": [
+        {
+            "ruleName": "Exposure-01",
+            "fieldName": "Exposure",
+            "ontologies": [
+                "ECTO"
+            ],
+            "allowedParentOntologyTerms": null,
+            "description": "Environmental and experimental exposures.",
+            "selectionCriteria": {
+                "isaFileType": "investigation",
+                "studyCreatedAtOrAfter": null,
+                "studyCreatedBefore": null,
+                "studyCategoryFilter": null,
+                "templateVersionFilter": null,
+                "isaFileTemplateNameFilter": null,
+                "linkedFieldAndValueFilter": null
+            },
+            "termEnforcementLevel": "recommended",
+            "unexpectedTermEnforcementLevel": "not-applicable",
+            "validationType": "ontology-term-in-selected-ontologies",
+            "constraints": {},
+            "defaultValue": null,
+            "allowedMissingOntologyTerms": [],
+            "allowedOtherSources": [],
+            "allowedPlaceholders": [],
+            "terms": [
+                {
+                    "term": "exposure to smoking",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/ECTO_6000013",
+                    "termSourceRef": "ECTO"
+                },
+                {
+                    "term": "exposure to alcohol consumption",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/ECTO_0001082",
+                    "termSourceRef": "ECTO"
+                },
+                {
+                    "term": "exposure to ultraviolet radiation",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/ECTO_0000006",
+                    "termSourceRef": "ECTO"
+                },
+                {
+                    "term": "exposure to lipopolysaccharide",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/ECTO_9000215",
+                    "termSourceRef": "ECTO"
+                },
+                {
+                    "term": "exposure to lead",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/ECTO_9000945",
+                    "termSourceRef": "ECTO"
+                }
+            ],
+            "unexpectedTerms": []
+        }
+    ]
+}

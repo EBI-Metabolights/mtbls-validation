@@ -67,7 +67,7 @@
             "description": "Exposomics",
             "ontologyTerm": {
                 "term": "Exposomics",
-                "termAccessionNumber": "",
+                "termAccessionNumber": "http://edamontology.org/topic_4065",
                 "termSourceRef": "EDAM"
             }
         },
@@ -238,6 +238,13 @@
                 "description": "Terms describing the experimental or observational design of the study. e.g., Case-control, Cross-over, Longitudinal",
                 "isaFileType": "investigation",
                 "controlListKey": "Design"
+            },
+            "exposure": {
+                "name": "exposure",
+                "label": "Exposure",
+                "description": "Environmental and experimental exposures.",
+                "isaFileType": "investigation",
+                "controlListKey": "Exposure"
             }
         },
         "defaultDescriptorSources": {
@@ -1115,7 +1122,7 @@
                                 "Resolving power",
                                 "Resolving power m/z",
                                 "Line scan direction",
-                                "Line scan sequence",
+                                "Linescan sequence",
                                 "Scan pattern",
                                 "Scan type"
                             ]
@@ -1293,6 +1300,11 @@
                 "measurement-type": {
                     "visible": false,
                     "order": 130,
+                    "min": 0
+                },
+                "exposure": {
+                    "visible": true,
+                    "order": 10,
                     "min": 0
                 }
             },

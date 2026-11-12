@@ -42,8 +42,8 @@
                 },
                 {
                     "term": "Exposomics",
-                    "termAccessionNumber": "",
-                    "termSourceRef": ""
+                    "termAccessionNumber": "http://edamontology.org/topic_4065",
+                    "termSourceRef": "EDAM"
                 },
                 {
                     "term": "Fluxomics",
@@ -93,8 +93,8 @@
                 },
                 {
                     "term": "Exposomics",
-                    "termAccessionNumber": "",
-                    "termSourceRef": ""
+                    "termAccessionNumber": "http://edamontology.org/topic_4065",
+                    "termSourceRef": "EDAM"
                 },
                 {
                     "term": "Fluxomics",

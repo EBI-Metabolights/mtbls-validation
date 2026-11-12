@@ -69,14 +69,39 @@
                     "termSourceRef": "MS"
                 },
                 {
+                    "term": "XCMS",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/MS_1001582",
+                    "termSourceRef": "MS"
+                },
+                {
                     "term": "mzmine",
                     "termAccessionNumber": "http://purl.obolibrary.org/obo/MS_1002342",
+                    "termSourceRef": "MS"
+                },
+                {
+                    "term": "MS-DIAL",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/MS_1003082",
                     "termSourceRef": "MS"
                 },
                 {
                     "term": "OpenMS",
                     "termAccessionNumber": "http://purl.obolibrary.org/obo/MS_1003430",
                     "termSourceRef": "MS"
+                },
+                {
+                    "term": "Skyline",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/MS_1000922",
+                    "termSourceRef": "MS"
+                },
+                {
+                    "term": "MetaboAnalyst",
+                    "termAccessionNumber": "",
+                    "termSourceRef": ""
+                },
+                {
+                    "term": "SIRIUS",
+                    "termAccessionNumber": "",
+                    "termSourceRef": ""
                 }
             ],
             "unexpectedTerms": []
