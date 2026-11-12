@@ -21701,7 +21701,7 @@
                 },
                 "facility": {
                     "name": "facility",
-                    "label": "Facilities",
+                    "label": "Facility",
                     "description": "Core facility or service provider.",
                     "isaFileType": "investigation",
                     "controlListKey": "Organization"
