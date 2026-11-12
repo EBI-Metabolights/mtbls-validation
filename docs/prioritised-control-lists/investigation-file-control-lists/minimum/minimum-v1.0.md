@@ -378,8 +378,31 @@
 |---|------|--------------|----------------|
 | 1 | Metabolomics | EDAM | http://edamontology\.org/topic\_3172 |
 | 2 | Lipidomics | EDAM | http://edamontology\.org/topic\_0153 |
-| 3 | Exposomics |  |  |
+| 3 | Exposomics | EDAM | http://edamontology\.org/topic\_4065 |
 | 4 | Fluxomics | EDAM | http://edamontology\.org/topic\_3955 |
+
+## Exposure
+
+| Attribute | Value |
+|---|------|
+| Rule Name | Exposure\-01 |
+| Rule Description | Environmental and experimental exposures\. |
+| Applicable Study Categories | All |
+| Applicable Template Names | All |
+| Applicable Template Versions | All |
+| Validation Type | ontology-term-in-selected-ontologies |
+| Ontologies [Ordered] | ECTO |
+| Ontology Term Enforcement Level | recommended |
+
+### Recommended Terms
+
+| # |Term  | Term Source  | Term Accession |
+|---|------|--------------|----------------|
+| 1 | exposure to smoking | ECTO | http://purl\.obolibrary\.org/obo/ECTO\_6000013 |
+| 2 | exposure to alcohol consumption | ECTO | http://purl\.obolibrary\.org/obo/ECTO\_0001082 |
+| 3 | exposure to ultraviolet radiation | ECTO | http://purl\.obolibrary\.org/obo/ECTO\_0000006 |
+| 4 | exposure to lipopolysaccharide | ECTO | http://purl\.obolibrary\.org/obo/ECTO\_9000215 |
+| 5 | exposure to lead | ECTO | http://purl\.obolibrary\.org/obo/ECTO\_9000945 |
 
 ## Organization
 
@@ -394,6 +417,22 @@
 | Ontologies [Ordered] | ROR |
 | Allowed Placeholders | [MTBLS, http://www.ebi.ac.uk/metabolights/ontology/placeholder], [, ] |
 | Allowed Other Sources | [MTBLS, http://www.ebi.ac.uk/metabolights/ontology/MTBLS_], [wikidata, https://www.wikidata.org/wiki/], [ILX, http://uri.interlex.org/base/ilx_] |
+| Ontology Term Enforcement Level | recommended |
+
+### Recommended Terms
+
+| # |Term  | Term Source  | Term Accession |
+|---|------|--------------|----------------|
+| 1 | National Phenome Centre |  |  |
+| 2 | Phenome Centre Birmingham |  |  |
+| 3 | EMBL\-MCF |  |  |
+| 4 | MetaboHUB |  |  |
+| 5 | Francis Crick Institute \- Metabolomics STP |  |  |
+| 6 | Swedish Metabolomics Centre |  |  |
+| 7 | The Metabolomics Innovation Centre |  |  |
+| 8 | West Coast Metabolomics Center |  |  |
+| 9 | Metabolon |  |  |
+| 10 | MetWare |  |  |
 
 ## Study Publication Status
 
@@ -462,8 +501,13 @@
 |---|------|--------------|----------------|
 | 1 | ProteoWizard msconvert | MS | http://purl\.obolibrary\.org/obo/MS\_1002205 |
 | 2 | ProteoWizard msaccess | MS | http://purl\.obolibrary\.org/obo/MS\_1002208 |
-| 3 | mzmine | MS | http://purl\.obolibrary\.org/obo/MS\_1002342 |
-| 4 | OpenMS | MS | http://purl\.obolibrary\.org/obo/MS\_1003430 |
+| 3 | XCMS | MS | http://purl\.obolibrary\.org/obo/MS\_1001582 |
+| 4 | mzmine | MS | http://purl\.obolibrary\.org/obo/MS\_1002342 |
+| 5 | MS\-DIAL | MS | http://purl\.obolibrary\.org/obo/MS\_1003082 |
+| 6 | OpenMS | MS | http://purl\.obolibrary\.org/obo/MS\_1003430 |
+| 7 | Skyline | MS | http://purl\.obolibrary\.org/obo/MS\_1000922 |
+| 8 | MetaboAnalyst |  |  |
+| 9 | SIRIUS |  |  |
 
 ## Design
 

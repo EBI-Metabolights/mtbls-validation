@@ -10136,6 +10136,11 @@
                         "term": "sea water",
                         "termAccessionNumber": "http://purl.obolibrary.org/obo/ENVO_00002149",
                         "termSourceRef": "ENVO"
+                    },
+                    {
+                        "term": "blank sample",
+                        "termAccessionNumber": "http://purl.obolibrary.org/obo/NCBITaxon_2582415",
+                        "termSourceRef": "NCBITaxon"
                     }
                 ],
                 "unexpectedTerms": [
@@ -10257,14 +10262,14 @@
                         "termSourceRef": "ENVO"
                     },
                     {
-                        "term": "blank",
-                        "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002304",
-                        "termSourceRef": "MTBLS"
+                        "term": "blank sample",
+                        "termAccessionNumber": "http://purl.obolibrary.org/obo/NCBITaxon_2582415",
+                        "termSourceRef": "NCBITaxon"
                     },
                     {
                         "term": "reference compound",
-                        "termAccessionNumber": "http://purl.obolibrary.org/obo/MSIO_0000023",
-                        "termSourceRef": "MSIO"
+                        "termAccessionNumber": "http://purl.obolibrary.org/obo/CHEBI_747204",
+                        "termSourceRef": "CHEBI"
                     }
                 ],
                 "unexpectedTerms": [
@@ -12277,8 +12282,8 @@
                     },
                     {
                         "term": "Exposomics",
-                        "termAccessionNumber": "",
-                        "termSourceRef": ""
+                        "termAccessionNumber": "http://edamontology.org/topic_4065",
+                        "termSourceRef": "EDAM"
                     },
                     {
                         "term": "Fluxomics",
@@ -12328,13 +12333,69 @@
                     },
                     {
                         "term": "Exposomics",
-                        "termAccessionNumber": "",
-                        "termSourceRef": ""
+                        "termAccessionNumber": "http://edamontology.org/topic_4065",
+                        "termSourceRef": "EDAM"
                     },
                     {
                         "term": "Fluxomics",
                         "termAccessionNumber": "http://edamontology.org/topic_3955",
                         "termSourceRef": "EDAM"
+                    }
+                ],
+                "unexpectedTerms": []
+            }
+        ],
+        "Exposure": [
+            {
+                "ruleName": "Exposure-01",
+                "fieldName": "Exposure",
+                "ontologies": [
+                    "ECTO"
+                ],
+                "allowedParentOntologyTerms": null,
+                "description": "Environmental and experimental exposures.",
+                "selectionCriteria": {
+                    "isaFileType": "investigation",
+                    "studyCreatedAtOrAfter": null,
+                    "studyCreatedBefore": null,
+                    "studyCategoryFilter": null,
+                    "templateVersionFilter": null,
+                    "isaFileTemplateNameFilter": null,
+                    "linkedFieldAndValueFilter": null
+                },
+                "termEnforcementLevel": "recommended",
+                "unexpectedTermEnforcementLevel": "not-applicable",
+                "validationType": "ontology-term-in-selected-ontologies",
+                "constraints": {},
+                "defaultValue": null,
+                "allowedMissingOntologyTerms": [],
+                "allowedOtherSources": [],
+                "allowedPlaceholders": [],
+                "terms": [
+                    {
+                        "term": "exposure to smoking",
+                        "termAccessionNumber": "http://purl.obolibrary.org/obo/ECTO_6000013",
+                        "termSourceRef": "ECTO"
+                    },
+                    {
+                        "term": "exposure to alcohol consumption",
+                        "termAccessionNumber": "http://purl.obolibrary.org/obo/ECTO_0001082",
+                        "termSourceRef": "ECTO"
+                    },
+                    {
+                        "term": "exposure to ultraviolet radiation",
+                        "termAccessionNumber": "http://purl.obolibrary.org/obo/ECTO_0000006",
+                        "termSourceRef": "ECTO"
+                    },
+                    {
+                        "term": "exposure to lipopolysaccharide",
+                        "termAccessionNumber": "http://purl.obolibrary.org/obo/ECTO_9000215",
+                        "termSourceRef": "ECTO"
+                    },
+                    {
+                        "term": "exposure to lead",
+                        "termAccessionNumber": "http://purl.obolibrary.org/obo/ECTO_9000945",
+                        "termSourceRef": "ECTO"
                     }
                 ],
                 "unexpectedTerms": []
@@ -12388,7 +12449,58 @@
                         "termSourceRef": ""
                     }
                 ],
-                "terms": [],
+                "terms": [
+                    {
+                        "term": "National Phenome Centre",
+                        "termAccessionNumber": "",
+                        "termSourceRef": ""
+                    },
+                    {
+                        "term": "Phenome Centre Birmingham",
+                        "termAccessionNumber": "",
+                        "termSourceRef": ""
+                    },
+                    {
+                        "term": "EMBL-MCF",
+                        "termAccessionNumber": "",
+                        "termSourceRef": ""
+                    },
+                    {
+                        "term": "MetaboHUB",
+                        "termAccessionNumber": "",
+                        "termSourceRef": ""
+                    },
+                    {
+                        "term": "Francis Crick Institute - Metabolomics STP",
+                        "termAccessionNumber": "",
+                        "termSourceRef": ""
+                    },
+                    {
+                        "term": "Swedish Metabolomics Centre",
+                        "termAccessionNumber": "",
+                        "termSourceRef": ""
+                    },
+                    {
+                        "term": "The Metabolomics Innovation Centre",
+                        "termAccessionNumber": "",
+                        "termSourceRef": ""
+                    },
+                    {
+                        "term": "West Coast Metabolomics Center",
+                        "termAccessionNumber": "",
+                        "termSourceRef": ""
+                    },
+                    {
+                        "term": "Metabolon",
+                        "termAccessionNumber": "",
+                        "termSourceRef": ""
+                    },
+                    {
+                        "term": "MetWare",
+                        "termAccessionNumber": "",
+                        "termSourceRef": ""
+                    }
+                ],
                 "unexpectedTerms": []
             }
         ],
@@ -12776,14 +12888,39 @@
                         "termSourceRef": "MS"
                     },
                     {
+                        "term": "XCMS",
+                        "termAccessionNumber": "http://purl.obolibrary.org/obo/MS_1001582",
+                        "termSourceRef": "MS"
+                    },
+                    {
                         "term": "mzmine",
                         "termAccessionNumber": "http://purl.obolibrary.org/obo/MS_1002342",
+                        "termSourceRef": "MS"
+                    },
+                    {
+                        "term": "MS-DIAL",
+                        "termAccessionNumber": "http://purl.obolibrary.org/obo/MS_1003082",
                         "termSourceRef": "MS"
                     },
                     {
                         "term": "OpenMS",
                         "termAccessionNumber": "http://purl.obolibrary.org/obo/MS_1003430",
                         "termSourceRef": "MS"
+                    },
+                    {
+                        "term": "Skyline",
+                        "termAccessionNumber": "http://purl.obolibrary.org/obo/MS_1000922",
+                        "termSourceRef": "MS"
+                    },
+                    {
+                        "term": "MetaboAnalyst",
+                        "termAccessionNumber": "",
+                        "termSourceRef": ""
+                    },
+                    {
+                        "term": "SIRIUS",
+                        "termAccessionNumber": "",
+                        "termSourceRef": ""
                     }
                 ],
                 "unexpectedTerms": []

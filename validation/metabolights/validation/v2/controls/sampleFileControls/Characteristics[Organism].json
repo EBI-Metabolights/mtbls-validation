@@ -210,8 +210,8 @@
                 },
                 {
                     "term": "reference compound",
-                    "termAccessionNumber": "http://purl.obolibrary.org/obo/MSIO_0000023",
-                    "termSourceRef": "MSIO"
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/CHEBI_747204",
+                    "termSourceRef": "CHEBI"
                 }
             ],
             "unexpectedTerms": [
