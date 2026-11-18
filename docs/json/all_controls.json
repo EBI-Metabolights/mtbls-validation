@@ -10133,8 +10133,8 @@
                         "termSourceRef": "NCBITaxon"
                     },
                     {
-                        "term": "sea water",
-                        "termAccessionNumber": "http://purl.obolibrary.org/obo/ENVO_00002149",
+                        "term": "seawater",
+                        "termAccessionNumber": "http://purl.obolibrary.org/obo/ENVO_01001964",
                         "termSourceRef": "ENVO"
                     },
                     {
@@ -10257,8 +10257,8 @@
                         "termSourceRef": "NCBITaxon"
                     },
                     {
-                        "term": "sea water",
-                        "termAccessionNumber": "http://purl.obolibrary.org/obo/ENVO_00002149",
+                        "term": "seawater",
+                        "termAccessionNumber": "http://purl.obolibrary.org/obo/ENVO_01001964",
                         "termSourceRef": "ENVO"
                     },
                     {
@@ -12353,7 +12353,7 @@
                     "ECTO"
                 ],
                 "allowedParentOntologyTerms": null,
-                "description": "Environmental and experimental exposures.",
+                "description": "The act of subjecting someone or something to an influencing experience.e.g. exposure to cigarette smoke.",
                 "selectionCriteria": {
                     "isaFileType": "investigation",
                     "studyCreatedAtOrAfter": null,

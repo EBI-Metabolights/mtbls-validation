@@ -386,7 +386,7 @@
 | Attribute | Value |
 |---|------|
 | Rule Name | Exposure\-01 |
-| Rule Description | Environmental and experimental exposures\. |
+| Rule Description | The act of subjecting someone or something to an influencing experience\.e\.g\. exposure to cigarette smoke\. |
 | Applicable Study Categories | All |
 | Applicable Template Names | All |
 | Applicable Template Versions | All |

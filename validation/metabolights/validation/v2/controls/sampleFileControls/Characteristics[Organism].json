@@ -75,8 +75,8 @@
                     "termSourceRef": "NCBITaxon"
                 },
                 {
-                    "term": "sea water",
-                    "termAccessionNumber": "http://purl.obolibrary.org/obo/ENVO_00002149",
+                    "term": "seawater",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/ENVO_01001964",
                     "termSourceRef": "ENVO"
                 },
                 {
@@ -199,8 +199,8 @@
                     "termSourceRef": "NCBITaxon"
                 },
                 {
-                    "term": "sea water",
-                    "termAccessionNumber": "http://purl.obolibrary.org/obo/ENVO_00002149",
+                    "term": "seawater",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/ENVO_01001964",
                     "termSourceRef": "ENVO"
                 },
                 {

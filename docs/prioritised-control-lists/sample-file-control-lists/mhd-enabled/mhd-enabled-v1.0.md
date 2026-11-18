@@ -117,7 +117,8 @@
 | 5 | Vitis vinifera | NCBITaxon | http://purl\.obolibrary\.org/obo/NCBITaxon\_29760 |
 | 6 | Escherichia coli | NCBITaxon | http://purl\.obolibrary\.org/obo/NCBITaxon\_562 |
 | 7 | Trypanosoma brucei | NCBITaxon | http://purl\.obolibrary\.org/obo/NCBITaxon\_5691 |
-| 8 | sea water | ENVO | http://purl\.obolibrary\.org/obo/ENVO\_00002149 |
+| 8 | seawater | ENVO | http://purl\.obolibrary\.org/obo/ENVO\_01001964 |
+| 9 | blank sample | NCBITaxon | http://purl\.obolibrary\.org/obo/NCBITaxon\_2582415 |
 
 ## Characteristics\[Organism part\]
 

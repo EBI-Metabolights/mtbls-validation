@@ -7,7 +7,7 @@
                 "ECTO"
             ],
             "allowedParentOntologyTerms": null,
-            "description": "Environmental and experimental exposures.",
+            "description": "The act of subjecting someone or something to an influencing experience.e.g. exposure to cigarette smoke.",
             "selectionCriteria": {
                 "isaFileType": "investigation",
                 "studyCreatedAtOrAfter": null,

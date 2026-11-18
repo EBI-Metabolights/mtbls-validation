@@ -89,9 +89,9 @@
                     "termSourceRef": ""
                 },
                 {
-                    "term": "Metabolon",
-                    "termAccessionNumber": "",
-                    "termSourceRef": ""
+                    "term": "Metabolon (United States)",
+                    "termAccessionNumber": "https://ror.org/033qhvk72",
+                    "termSourceRef": "ROR"
                 },
                 {
                     "term": "MetWare",

@@ -231,6 +231,13 @@
             "sourceDescription": "Chemical Methods Ontology",
             "sourceDetails": "CHMO, the chemical methods ontology, describes methods used to"
         },
+        "CHR": {
+            "sourceName": "CHR",
+            "sourceFile": "https://raw.githubusercontent.com/monarch-initiative/monochrom/master/chr.owl",
+            "sourceVersion": "2025-10-15",
+            "sourceDescription": "Monochrom Ontology",
+            "sourceDetails": "Automatic translation of UCSC chromosome bands to OWL classes"
+        },
         "CIDO": {
             "sourceName": "CIDO",
             "sourceFile": "http://purl.obolibrary.org/obo/cido.owl",
@@ -248,7 +255,7 @@
         "CL": {
             "sourceName": "CL",
             "sourceFile": "http://purl.obolibrary.org/obo/cl.owl",
-            "sourceVersion": "2026-06-08",
+            "sourceVersion": "2026-11-13",
             "sourceDescription": "Cell Ontology",
             "sourceDetails": "An ontology of cell types."
         },
@@ -272,6 +279,13 @@
             "sourceVersion": "",
             "sourceDescription": "Clytia hemisphaerica Development and Anatomy Ontology (CLYH)",
             "sourceDetails": "Anatomy, development and life cycle stages - planula, polyp, medusa/jellyfish - of the cnidarian hydrozoan species, Clytia hemiphaerica."
+        },
+        "CMEO": {
+            "sourceName": "CMEO",
+            "sourceFile": "http://purl.obolibrary.org/obo/cmeo.owl",
+            "sourceVersion": "2026-11-04",
+            "sourceDescription": "Clinical Metadata Exploration Ontology",
+            "sourceDetails": "CMEO (Clinical Metadata Exploration Ontology) is an ontology for representing and querying study- and variable-level metadata from clinical cohort studies in a consistent, machine-interpretable way. CMEO models the semantics of data elements (variables) and their key metadata needed for cross-cohort discovery and harmonization - such as human-readable labels/definitions, domain/type information (e.g., condition, measurement, medication), permissible categorical values, units, visit/timepoint context, derivation/provenance (e.g., computed variables), and basic descriptive statistics. It is designed to support metadata-driven tasks including cohort cataloguing, feasibility assessment, study retrieval, and identification of compatible variables across studies - without requiring access to patient-level data.\n\nCMEO is intended to interoperate with controlled vocabularies and common clinical terminologies by linking data elements and value sets to external concept identifiers (e.g., OMOP concept IDs, SNOMED CT, LOINC, RxNorm/ATC, UCUM) while remaining model-agnostic (i.e., not tied to a single CDM)."
         },
         "CMO": {
             "sourceName": "CMO",
@@ -387,8 +401,8 @@
         },
         "DHBA": {
             "sourceName": "DHBA",
-            "sourceFile": "https://purl.brain-bican.org/ontology/dhbao/dhbao.owl",
-            "sourceVersion": "2025-11-13",
+            "sourceFile": "https://raw.githubusercontent.com/brain-bican/developing_human_brain_atlas_ontology/main/dhbao.owl",
+            "sourceVersion": "2026-11-06",
             "sourceDescription": "Developing Human Brain Atlas Ontology",
             "sourceDetails": "An application ontology built by combining ontologised versions of the Allen Institute Developing Human Brain Atlas (DHBA) Structure Graph mapped to Uberon."
         },
@@ -408,7 +422,7 @@
         },
         "DMBA": {
             "sourceName": "DMBA",
-            "sourceFile": "https://purl.brain-bican.org/ontology/dmbao/dmbao.owl",
+            "sourceFile": "https://raw.githubusercontent.com/brain-bican/developing_mouse_brain_atlas_ontology/main/dmbao.owl",
             "sourceVersion": "2025-02-10",
             "sourceDescription": "Developing Mouse Brain Atlas Ontology",
             "sourceDetails": "An application ontology built by combining ontologised versions of the Allen Institute Developing Mouse Brain Atlas (DMBA) StructureGraph mapped to Uberon."
@@ -479,7 +493,7 @@
         "EFO": {
             "sourceName": "EFO",
             "sourceFile": "http://www.ebi.ac.uk/efo/efo.owl",
-            "sourceVersion": "3.95.0",
+            "sourceVersion": "3.96.0",
             "sourceDescription": "Experimental Factor Ontology",
             "sourceDetails": "The Experimental Factor Ontology (EFO) provides a systematic description of many experimental variables available in EBI databases, and for projects such as the NHGRI-EBI GWAS catalog. It combines parts of several biological ontologies, such as UBERON anatomy, ChEBI chemical compounds, Cell Ontology and the Monarch Disease Ontology (MONDO). The scope of EFO is to support the annotation, analysis and visualization of data handled by many groups at the EBI and as the core ontology for Open Targets."
         },
@@ -514,7 +528,7 @@
         "EMRO": {
             "sourceName": "EMRO",
             "sourceFile": "http://purl.obolibrary.org/obo/emro.owl",
-            "sourceVersion": "2026-10-15",
+            "sourceVersion": "2026-11-09",
             "sourceDescription": "Emotion Response Ontology",
             "sourceDetails": "The Emotion Response Ontology represents emotions as behavioral responses."
         },
@@ -633,7 +647,7 @@
         "FLOPO": {
             "sourceName": "FLOPO",
             "sourceFile": "http://purl.obolibrary.org/obo/flopo.owl",
-            "sourceVersion": "2026-10-25",
+            "sourceVersion": "2026-11-15",
             "sourceDescription": "Flora Phenotype Ontology",
             "sourceDetails": "Traits and phenotypes of flowering plants occurring in digitized Floras"
         },
@@ -717,7 +731,7 @@
         "GNO": {
             "sourceName": "GNO",
             "sourceFile": "http://purl.obolibrary.org/obo/gno.owl",
-            "sourceVersion": "V2.7.0",
+            "sourceVersion": "V2.8.0",
             "sourceDescription": "Glycan Naming Ontology",
             "sourceDetails": "An ontology for glycans based on GlyTouCan, but organized by subsumption."
         },
@@ -765,7 +779,7 @@
         },
         "HBA": {
             "sourceName": "HBA",
-            "sourceFile": "https://purl.brain-bican.org/ontology/hbao/hbao.owl",
+            "sourceFile": "https://raw.githubusercontent.com/brain-bican/human_brain_atlas_ontology/main/hbao.owl",
             "sourceVersion": "2025-02-10",
             "sourceDescription": "Human Brain Atlas Ontology",
             "sourceDetails": "An application ontology built by combining ontologised versions of the Allen Institute Human Brain Atlas (HBA) Structure Graph mapped to Uberon."
@@ -940,8 +954,8 @@
         },
         "MBA": {
             "sourceName": "MBA",
-            "sourceFile": "https://purl.brain-bican.org/ontology/mbao/mbao.owl",
-            "sourceVersion": "2025-10-29",
+            "sourceFile": "https://raw.githubusercontent.com/brain-bican/mouse_brain_atlas_ontology/main/mbao.owl",
+            "sourceVersion": "2026-11-05",
             "sourceDescription": "Mouse Brain Atlas Ontology",
             "sourceDetails": "An application ontology built by combining ontologised versions of the Allen Institute Mouse Brain Atlas (MBA) StructureGraph mapped to Uberon."
         },
@@ -1137,7 +1151,7 @@
         "NCBITaxon": {
             "sourceName": "NCBITaxon",
             "sourceFile": "http://purl.obolibrary.org/obo/ncbitaxon.owl",
-            "sourceVersion": "2026-07-12",
+            "sourceVersion": "2026-11-09",
             "sourceDescription": "NCBI organismal classification",
             "sourceDetails": "An ontology representation of the NCBI organismal taxonomy"
         },
@@ -1277,7 +1291,7 @@
         "OM": {
             "sourceName": "OM",
             "sourceFile": "https://raw.githubusercontent.com/HajoRijgersberg/OM/master/om-2.0.rdf",
-            "sourceVersion": "2.0.59",
+            "sourceVersion": "2.0.60",
             "sourceDescription": "Ontology of units of Measure (OM)",
             "sourceDetails": "The Ontology of units of Measure (OM) 2.0 models concepts and relations important to scientific research. It has a strong focus on units, quantities, measures, and dimensions."
         },
@@ -1431,7 +1445,7 @@
         "PCL": {
             "sourceName": "PCL",
             "sourceFile": "http://purl.obolibrary.org/obo/pcl.owl",
-            "sourceVersion": "2025-07-07",
+            "sourceVersion": "2026-11-16",
             "sourceDescription": "Provisional Cell Ontology",
             "sourceDetails": "Cell types that are provisionally defined by experimental techniques such as single cell transcriptomics rather than a straightforward & coherent set of properties."
         },
@@ -1886,7 +1900,7 @@
         "VBO": {
             "sourceName": "VBO",
             "sourceFile": "http://purl.obolibrary.org/obo/vbo.owl",
-            "sourceVersion": "2026-04-15",
+            "sourceVersion": "2026-11-17",
             "sourceDescription": "Vertebrate Breed Ontology",
             "sourceDetails": "Vertebrate Breed Ontology is an ontology created to serve as a single computable resource for vertebrate breed names."
         },
@@ -1907,7 +1921,7 @@
         "VT": {
             "sourceName": "VT",
             "sourceFile": "http://purl.obolibrary.org/obo/vt.owl",
-            "sourceVersion": "",
+            "sourceVersion": "2026-11-06",
             "sourceDescription": "The Vertebrate Trait Ontology",
             "sourceDetails": "The Vertebrate Trait Ontology is a controlled vocabulary for the description of traits (measurable or observable characteristics) pertaining to the morphology, physiology, or development of vertebrate organisms."
         },
@@ -2005,7 +2019,7 @@
         "ZP": {
             "sourceName": "ZP",
             "sourceFile": "http://purl.obolibrary.org/obo/zp.owl",
-            "sourceVersion": "2026-10-08",
+            "sourceVersion": "2026-11-10",
             "sourceDescription": "Zebrafish Phenotype Ontology (ZP)",
             "sourceDetails": "The Zebrafish Phenotype Ontology formally defines all phenotypes of the Zebrafish model organism."
         },
@@ -2043,6 +2057,13 @@
             "sourceVersion": "2025-10-07",
             "sourceDescription": "HGNC Gene Group",
             "sourceDetails": "The HGNC (HUGO Gene Nomenclature Committee) provides an approved gene name and symbol (short-form abbreviation) for each known human gene. All approved symbols are stored in the HGNC database, and each symbol is unique. In addition, HGNC also provides a unique numerical ID to identify gene families, providing a display of curated hierarchical relationships between families. Licensed under CC0-1.0."
+        },
+        "homba": {
+            "sourceName": "homba",
+            "sourceFile": "https://github.com/brain-bican/harmonized_ontology_of_mammalian_brain_anatomy_ontology/releases/latest/download/homba.owl",
+            "sourceVersion": "2026-04-28",
+            "sourceDescription": "Harmonized Ontology of Mammalian Brain Anatomy",
+            "sourceDetails": "An ontology of mammalian brain anatomy harmonized across atlas and reference sources."
         },
         "mesh": {
             "sourceName": "mesh",

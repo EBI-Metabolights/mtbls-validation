@@ -242,7 +242,7 @@
             "exposure": {
                 "name": "exposure",
                 "label": "Exposure",
-                "description": "Environmental and experimental exposures.",
+                "description": "The act of subjecting someone or something to an influencing experience. e.g. exposure to cigarette smoke.",
                 "isaFileType": "investigation",
                 "controlListKey": "Exposure"
             }
