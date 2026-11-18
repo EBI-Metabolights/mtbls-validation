@@ -50,6 +50,11 @@
             "allowedPlaceholders": [],
             "terms": [
                 {
+                    "term": "normal",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/PATO_0000461",
+                    "termSourceRef": "MONDO"
+                },
+                {
                     "term": "breast cancer",
                     "termAccessionNumber": "http://purl.obolibrary.org/obo/MONDO_0007254",
                     "termSourceRef": "MONDO"
@@ -93,11 +98,6 @@
                     "term": "metabolic dysfunction-associated steatotic liver disease",
                     "termAccessionNumber": "http://purl.obolibrary.org/obo/MONDO_0013209",
                     "termSourceRef": "MONDO"
-                },
-                {
-                    "term": "normal",
-                    "termAccessionNumber": "http://purl.obolibrary.org/obo/PATO_0000461",
-                    "termSourceRef": "PATO"
                 }
             ],
             "unexpectedTerms": []
@@ -153,6 +153,11 @@
             "allowedPlaceholders": [],
             "terms": [
                 {
+                    "term": "normal",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/PATO_0000461",
+                    "termSourceRef": "MONDO"
+                },
+                {
                     "term": "breast cancer",
                     "termAccessionNumber": "http://purl.obolibrary.org/obo/MONDO_0007254",
                     "termSourceRef": "MONDO"
@@ -196,11 +201,6 @@
                     "term": "metabolic dysfunction-associated steatotic liver disease",
                     "termAccessionNumber": "http://purl.obolibrary.org/obo/MONDO_0013209",
                     "termSourceRef": "MONDO"
-                },
-                {
-                    "term": "normal",
-                    "termAccessionNumber": "http://purl.obolibrary.org/obo/PATO_0000461",
-                    "termSourceRef": "PATO"
                 }
             ],
             "unexpectedTerms": []

@@ -1,3 +1,42 @@
+## v2.3.1 (2026-11-18)
+
+### Fix
+
+- inconsistent version
+
+## v2.3.0 (2026-11-18)
+
+### Fix
+
+- sample sheet default
+- configuration switched to MHD legacy
+
+## v2.0.2 (2026-10-15)
+
+### Fix
+
+- **submitter-fullname-check**: new rule is defined to check submitter fullname
+
+## v2.0.1 (2026-10-15)
+
+### Fix
+
+- **missing-versioning-information**: version information is defined in pyproject.toml, scripts/__init__.py and configuration json file
+
+## v2.0.0 (2026-10-12)
+
+### Fix
+
+- update control lists and configuration
+- sample file name error
+- MHD default version is 1.0 for legacy studies
+- MHD related issues - normal cv term source is not valid. study description length must be greater than 149. URL error
+- rule___100_600_003_01 pattern is not valid
+- new validation rules check that files contain db study id
+- check db study id and investigation file study
+- submitter affiliation check
+- configuration update
+
 ## v2.2.2 (2026-10-15)
 
 ### Fix

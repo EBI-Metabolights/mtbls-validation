@@ -67,7 +67,7 @@
             "description": "Exposomics",
             "ontologyTerm": {
                 "term": "Exposomics",
-                "termAccessionNumber": "",
+                "termAccessionNumber": "http://edamontology.org/topic_4065",
                 "termSourceRef": "EDAM"
             }
         },
@@ -128,6 +128,11 @@
             "name": "EMBL-EBI terms of use",
             "version": "5th February 2024",
             "url": "https://www.ebi.ac.uk/about/terms-of-use/"
+        },
+        "CC BY 4.0": {
+            "name": "CC BY 4.0",
+            "version": "4.0",
+            "url": "https://creativecommons.org/licenses/by/4.0/"
         }
     },
     "descriptorConfiguration": {
@@ -202,7 +207,7 @@
             "software": {
                 "name": "software",
                 "label": "Software",
-                "description": "",
+                "description": "Used software in raw data processing and metabolite identification",
                 "isaFileType": "investigation",
                 "controlListKey": "Software"
             },
@@ -212,6 +217,34 @@
                 "description": "",
                 "isaFileType": "investigation",
                 "controlListKey": "Assay Acquisition Method"
+            },
+            "project": {
+                "name": "project",
+                "label": "Project",
+                "description": "Projects, cohorts, consortia, programmes or initiatives associated with the study.",
+                "isaFileType": "investigation",
+                "controlListKey": "Project"
+            },
+            "domain": {
+                "name": "domain",
+                "label": "Domain",
+                "description": "Research applications or areas addressed by the study. e.g., Toxicology, Nutritional science, Plant biology",
+                "isaFileType": "investigation",
+                "controlListKey": "Domain"
+            },
+            "design": {
+                "name": "design",
+                "label": "Design",
+                "description": "Terms describing the experimental or observational design of the study. e.g., Case-control, Cross-over, Longitudinal",
+                "isaFileType": "investigation",
+                "controlListKey": "Design"
+            },
+            "exposure": {
+                "name": "exposure",
+                "label": "Exposure",
+                "description": "The act of subjecting someone or something to an influencing experience. e.g. exposure to cigarette smoke.",
+                "isaFileType": "investigation",
+                "controlListKey": "Exposure"
             }
         },
         "defaultDescriptorSources": {
@@ -683,6 +716,12 @@
                 "mhdFileProfile": "https://metabolomicshub.github.io/mhd-model/schemas/v0_1/common-data-model-v0.1.ms-profile.json",
                 "announcementFileSchema": "https://metabolomicshub.github.io/mhd-model/schemas/v0_1/announcement-v0.1.schema.json",
                 "announcementFileProfile": "https://metabolomicshub.github.io/mhd-model/schemas/v0_1/announcement-v0.1.ms-profile.json"
+            },
+            "1.0": {
+                "fileSchema": "https://metabolomicshub.github.io/mhd-model/schemas/v1_0/common-data-model-v1.0.schema.json",
+                "mhdFileProfile": "https://metabolomicshub.github.io/mhd-model/schemas/v1_0/common-data-model-v1.0.ms-profile.json",
+                "announcementFileSchema": "https://metabolomicshub.github.io/mhd-model/schemas/v1_0/announcement-v1.0.schema.json",
+                "announcementFileProfile": "https://metabolomicshub.github.io/mhd-model/schemas/v1_0/announcement-v1.0.ms-profile.json"
             }
         },
         "legacy-profile": {
@@ -691,6 +730,12 @@
                 "mhdFileProfile": "https://metabolomicshub.github.io/mhd-model/schemas/v0_1/common-data-model-v0.1.legacy-profile.json",
                 "announcementFileSchema": "https://metabolomicshub.github.io/mhd-model/schemas/v0_1/announcement-v0.1.schema.json",
                 "announcementFileProfile": "https://metabolomicshub.github.io/mhd-model/schemas/v0_1/announcement-v0.1.legacy-profile.json"
+            },
+            "1.0": {
+                "fileSchema": "https://metabolomicshub.github.io/mhd-model/schemas/v1_0/common-data-model-v1.0.schema.json",
+                "mhdFileProfile": "https://metabolomicshub.github.io/mhd-model/schemas/v1_0/common-data-model-v1.0.legacy-profile.json",
+                "announcementFileSchema": "https://metabolomicshub.github.io/mhd-model/schemas/v1_0/announcement-v1.0.schema.json",
+                "announcementFileProfile": "https://metabolomicshub.github.io/mhd-model/schemas/v1_0/announcement-v1.0.legacy-profile.json"
             }
         }
     },
@@ -719,7 +764,8 @@
                 "NMR"
             ],
             "activeSampleFileTemplates": [
-                "minimum"
+                "minimum",
+                "mhd-enabled"
             ],
             "activeAssayFileTemplates": {
                 "LC-MS": {
@@ -1162,38 +1208,103 @@
                 }
             },
             "activeDatasetLicenses": [
-                "CC0 1.0 Universal"
+                "CC0 1.0 Universal",
+                "CC BY 4.0"
             ],
+            "supportedStudyCategoryClones": {
+                "ms-mhd-enabled": "ms-mhd-legacy",
+                "ms-mhd-legacy": "ms-mhd-legacy",
+                "nmr": "nmr",
+                "ms-imaging": "ms-imaging",
+                "ms-other": "ms-other"
+            },
             "activeMhdProfiles": {
                 "ms-mhd-enabled": {
                     "profileName": "ms-profile",
-                    "defaultVersion": "0.1",
+                    "defaultVersion": "1.0",
                     "activeVersions": [
-                        "0.1"
+                        "0.1",
+                        "1.0"
                     ]
                 },
                 "ms-mhd-legacy": {
                     "profileName": "legacy-profile",
-                    "defaultVersion": "0.1",
+                    "defaultVersion": "1.0",
                     "activeVersions": [
-                        "0.1"
+                        "0.1",
+                        "1.0"
                     ]
                 }
             },
             "activeStudyDesignDescriptorCategories": {
                 "disease": {
                     "visible": true,
-                    "order": 4,
+                    "order": 10,
+                    "min": 0
+                },
+                "project": {
+                    "visible": true,
+                    "order": 20,
+                    "min": 0
+                },
+                "domain": {
+                    "visible": true,
+                    "order": 30,
+                    "min": 0
+                },
+                "design": {
+                    "visible": false,
+                    "order": 40,
                     "min": 0
                 },
                 "software": {
-                    "visible": true,
-                    "order": 8,
+                    "visible": false,
+                    "order": 50,
                     "min": 0
                 },
                 "facility": {
                     "visible": true,
-                    "order": 9,
+                    "order": 60,
+                    "min": 0
+                },
+                "instrument": {
+                    "visible": false,
+                    "order": 70,
+                    "min": 0
+                },
+                "organism": {
+                    "visible": false,
+                    "order": 80,
+                    "min": 0
+                },
+                "organism-part": {
+                    "visible": false,
+                    "order": 90,
+                    "min": 0
+                },
+                "cell-type": {
+                    "visible": false,
+                    "order": 100,
+                    "min": 0
+                },
+                "sample-type": {
+                    "visible": false,
+                    "order": 110,
+                    "min": 0
+                },
+                "omics-type": {
+                    "visible": false,
+                    "order": 120,
+                    "min": 0
+                },
+                "measurement-type": {
+                    "visible": false,
+                    "order": 130,
+                    "min": 0
+                },
+                "exposure": {
+                    "visible": true,
+                    "order": 10,
                     "min": 0
                 }
             },

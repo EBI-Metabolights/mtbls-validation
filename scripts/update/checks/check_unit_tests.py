@@ -46,8 +46,8 @@ def get_unit_test_names() -> dict[str, dict[str, list[str]]]:
 def check_differences_between_rules_and_tests(force: bool = False):
     unit_tests = get_unit_test_names()
     rules = read_rules_from_excel()
-    rule_names = {x for x in rules.keys() if len(x) > 14}
-    test_names = {x for x in unit_tests.keys() if len(x) > 14}
+    rule_names = {x for x in rules if len(x) > 14}
+    test_names = {x for x in unit_tests if len(x) > 14}
     diff = list(rule_names.difference(test_names))
     if diff:
         diff.sort()

@@ -1,0 +1,336 @@
+{
+    "mhd-enabled": [
+        {
+            "fixedColumnCount": 12,
+            "description": "ISA-TAB Sample file with minimum columns.",
+            "version": "1.0",
+            "headers": [
+                {
+                    "columnStructure": "SINGLE_COLUMN",
+                    "columnCategory": "Basic",
+                    "columnHeader": "Source Name",
+                    "columnPrefix": "",
+                    "defaultValue": null,
+                    "defaultColumnIndex": 0,
+                    "minLength": 3,
+                    "maxLength": 128,
+                    "required": true,
+                    "description": "Unique source identifier of the Sample or simply repeat 'Sample Name'",
+                    "examples": [
+                        "Single standard",
+                        "Standard mix",
+                        "Blank",
+                        "QC1",
+                        "Sample1",
+                        "QC2",
+                        "Sample2"
+                    ]
+                },
+                {
+                    "columnStructure": "ONTOLOGY_COLUMN",
+                    "columnCategory": "Characteristics",
+                    "columnHeader": "Characteristics[Organism]",
+                    "columnPrefix": "Characteristics",
+                    "defaultValue": null,
+                    "defaultColumnIndex": 1,
+                    "minLength": 5,
+                    "maxLength": null,
+                    "required": true,
+                    "description": "A living entity",
+                    "examples": [
+                        "[reference compound, BAO, http://www.bioassayontology.org/bao#BAO_0002092]",
+                        "[blank sample, NCBITaxon, http://purl.obolibrary.org/obo/NCBITaxon_2582415]",
+                        "[Homo sapiens, NCBITaxon, http://purl.obolibrary.org/obo/NCBITaxon_9606]",
+                        "[Mus musculus, NCBITaxon, http://purl.obolibrary.org/obo/NCBITaxon_10090]"
+                    ]
+                },
+                {
+                    "columnStructure": "ONTOLOGY_COLUMN",
+                    "columnCategory": "Characteristics",
+                    "columnHeader": "Characteristics[Organism part]",
+                    "columnPrefix": "Characteristics",
+                    "defaultValue": null,
+                    "defaultColumnIndex": 4,
+                    "minLength": 3,
+                    "maxLength": null,
+                    "required": true,
+                    "description": "A portion of an organism",
+                    "examples": [
+                        "[pure substance, CHEBI, http://purl.obolibrary.org/obo/CHEBI_60003]",
+                        "[mixture, CHEBI, http://purl.obolibrary.org/obo/CHEBI_60004]",
+                        "[solvent, CHEBI, http://purl.obolibrary.org/obo/CHEBI_46787]",
+                        "[blood plasma, BTO, http://purl.obolibrary.org/obo/BTO_0000131]"
+                    ]
+                },
+                {
+                    "columnStructure": "ONTOLOGY_COLUMN",
+                    "columnCategory": "Characteristics",
+                    "columnHeader": "Characteristics[Variant]",
+                    "columnPrefix": "Characteristics",
+                    "defaultValue": null,
+                    "defaultColumnIndex": 7,
+                    "minLength": null,
+                    "maxLength": null,
+                    "required": false,
+                    "description": "Selected breed, strain, cultivar, etc (if available)",
+                    "examples": [
+                        "C57BL/6J"
+                    ]
+                },
+                {
+                    "columnStructure": "ONTOLOGY_COLUMN",
+                    "columnCategory": "Characteristics",
+                    "columnHeader": "Characteristics[Sample type]",
+                    "columnPrefix": "Characteristics",
+                    "defaultValue": null,
+                    "defaultColumnIndex": 10,
+                    "minLength": null,
+                    "maxLength": null,
+                    "required": false,
+                    "description": "Sample role in the experiment",
+                    "examples": [
+                        "[reference compound, MSIO, http://purl.obolibrary.org/obo/MSIO_0000023]",
+                        "[reference compound mix, MSIO, http://purl.obolibrary.org/obo/MSIO_0000024]",
+                        "[experimental sample, CHMO, http://purl.obolibrary.org/obo/CHMO_0002746]",
+                        "[pooled quality control sample, MTBLS, http://www.ebi.ac.uk/metabolights/ontology/MTBLS_001090]"
+                    ]
+                },
+                {
+                    "columnStructure": "ONTOLOGY_COLUMN",
+                    "columnCategory": "Characteristics",
+                    "columnHeader": "Characteristics[Disease]",
+                    "columnPrefix": "Characteristics",
+                    "defaultValue": null,
+                    "defaultColumnIndex": 13,
+                    "minLength": null,
+                    "maxLength": null,
+                    "required": false,
+                    "description": "Disease definition of the sample in the experiment",
+                    "examples": [
+                        "[COVID-19, MONDO, http://purl.obolibrary.org/obo/MONDO_0100096]",
+                        "[Alzheimer disease, MONDO, http://purl.obolibrary.org/obo/MONDO_0004975]"
+                    ]
+                },
+                {
+                    "columnStructure": "ONTOLOGY_COLUMN",
+                    "columnCategory": "Characteristics",
+                    "columnHeader": "Characteristics[Cell type]",
+                    "columnPrefix": "Characteristics",
+                    "defaultValue": null,
+                    "defaultColumnIndex": 16,
+                    "minLength": null,
+                    "maxLength": null,
+                    "required": false,
+                    "description": "Cell type of the sample in the experiment",
+                    "examples": [
+                        "[regulatory T cell, CL, http://purl.obolibrary.org/obo/CL_0000815]",
+                        "[plasma cell, CL, http://purl.obolibrary.org/obo/CL_0000786]",
+                        "[endothelial cell, CL, http://purl.obolibrary.org/obo/CL_0000115]"
+                    ]
+                },
+                {
+                    "columnStructure": "SINGLE_COLUMN",
+                    "columnCategory": "Protocol",
+                    "columnHeader": "Protocol REF",
+                    "columnPrefix": "",
+                    "defaultValue": "Sample collection",
+                    "defaultColumnIndex": 19,
+                    "minLength": 1,
+                    "maxLength": null,
+                    "required": true,
+                    "description": "Predetermined value: 'Sample Collection'.",
+                    "examples": [
+                        "Sample Collection"
+                    ]
+                },
+                {
+                    "columnStructure": "SINGLE_COLUMN",
+                    "columnCategory": "Basic",
+                    "columnHeader": "Sample Name",
+                    "columnPrefix": "",
+                    "defaultValue": null,
+                    "defaultColumnIndex": 20,
+                    "minLength": 3,
+                    "maxLength": 128,
+                    "required": true,
+                    "description": "Unique identifier from a particular source. Usually associated with an output spectral data filename.",
+                    "examples": [
+                        "Leucin standard",
+                        "Standard mix",
+                        "Blank",
+                        "QC1",
+                        "Sample1",
+                        "QC2",
+                        "Sample2"
+                    ]
+                }
+            ]
+        },
+        {
+            "fixedColumnCount": 12,
+            "description": "ISA-TAB Sample file with minimum columns.",
+            "version": "1.0",
+            "headers": [
+                {
+                    "columnStructure": "SINGLE_COLUMN",
+                    "columnCategory": "Basic",
+                    "columnHeader": "Source Name",
+                    "columnPrefix": "",
+                    "defaultValue": null,
+                    "defaultColumnIndex": 0,
+                    "minLength": 3,
+                    "maxLength": 128,
+                    "required": true,
+                    "description": "Unique source identifier of the Sample or simply repeat 'Sample Name'",
+                    "examples": [
+                        "Single standard",
+                        "Standard mix",
+                        "Blank",
+                        "QC1",
+                        "Sample1",
+                        "QC2",
+                        "Sample2"
+                    ]
+                },
+                {
+                    "columnStructure": "ONTOLOGY_COLUMN",
+                    "columnCategory": "Characteristics",
+                    "columnHeader": "Characteristics[Organism]",
+                    "columnPrefix": "Characteristics",
+                    "defaultValue": null,
+                    "defaultColumnIndex": 1,
+                    "minLength": 5,
+                    "maxLength": null,
+                    "required": true,
+                    "description": "A living entity",
+                    "examples": [
+                        "[reference compound, BAO, http://www.bioassayontology.org/bao#BAO_0002092]",
+                        "[blank sample, NCBITaxon, http://purl.obolibrary.org/obo/NCBITaxon_2582415]",
+                        "[Homo sapiens, NCBITaxon, http://purl.obolibrary.org/obo/NCBITaxon_9606]",
+                        "[Mus musculus, NCBITaxon, http://purl.obolibrary.org/obo/NCBITaxon_10090]"
+                    ]
+                },
+                {
+                    "columnStructure": "ONTOLOGY_COLUMN",
+                    "columnCategory": "Characteristics",
+                    "columnHeader": "Characteristics[Organism part]",
+                    "columnPrefix": "Characteristics",
+                    "defaultValue": null,
+                    "defaultColumnIndex": 4,
+                    "minLength": 3,
+                    "maxLength": null,
+                    "required": true,
+                    "description": "A portion of an organism",
+                    "examples": [
+                        "[pure substance, CHEBI, http://purl.obolibrary.org/obo/CHEBI_60003]",
+                        "[mixture, CHEBI, http://purl.obolibrary.org/obo/CHEBI_60004]",
+                        "[solvent, CHEBI, http://purl.obolibrary.org/obo/CHEBI_46787]",
+                        "[blood plasma, BTO, http://purl.obolibrary.org/obo/BTO_0000131]"
+                    ]
+                },
+                {
+                    "columnStructure": "ONTOLOGY_COLUMN",
+                    "columnCategory": "Characteristics",
+                    "columnHeader": "Characteristics[Variant]",
+                    "columnPrefix": "Characteristics",
+                    "defaultValue": null,
+                    "defaultColumnIndex": 7,
+                    "minLength": null,
+                    "maxLength": null,
+                    "required": false,
+                    "description": "Selected breed, strain, cultivar, etc (if available)",
+                    "examples": [
+                        "C57BL/6J"
+                    ]
+                },
+                {
+                    "columnStructure": "ONTOLOGY_COLUMN",
+                    "columnCategory": "Characteristics",
+                    "columnHeader": "Characteristics[Sample type]",
+                    "columnPrefix": "Characteristics",
+                    "defaultValue": null,
+                    "defaultColumnIndex": 10,
+                    "minLength": null,
+                    "maxLength": null,
+                    "required": false,
+                    "description": "Sample role in the experiment",
+                    "examples": [
+                        "[reference compound, MSIO, http://purl.obolibrary.org/obo/MSIO_0000023]",
+                        "[reference compound mix, MSIO, http://purl.obolibrary.org/obo/MSIO_0000024]",
+                        "[experimental sample, CHMO, http://purl.obolibrary.org/obo/CHMO_0002746]",
+                        "[pooled quality control sample, MTBLS, http://www.ebi.ac.uk/metabolights/ontology/MTBLS_001090]"
+                    ]
+                },
+                {
+                    "columnStructure": "ONTOLOGY_COLUMN",
+                    "columnCategory": "Characteristics",
+                    "columnHeader": "Characteristics[Disease]",
+                    "columnPrefix": "Characteristics",
+                    "defaultValue": null,
+                    "defaultColumnIndex": 13,
+                    "minLength": null,
+                    "maxLength": null,
+                    "required": false,
+                    "description": "Disease definition of the sample in the experiment",
+                    "examples": [
+                        "[COVID-19, MONDO, http://purl.obolibrary.org/obo/MONDO_0100096]",
+                        "[Alzheimer disease, MONDO, http://purl.obolibrary.org/obo/MONDO_0004975]"
+                    ]
+                },
+                {
+                    "columnStructure": "ONTOLOGY_COLUMN",
+                    "columnCategory": "Characteristics",
+                    "columnHeader": "Characteristics[Cell type]",
+                    "columnPrefix": "Characteristics",
+                    "defaultValue": null,
+                    "defaultColumnIndex": 16,
+                    "minLength": null,
+                    "maxLength": null,
+                    "required": false,
+                    "description": "Cell type of the sample in the experiment",
+                    "examples": [
+                        "[regulatory T cell, CL, http://purl.obolibrary.org/obo/CL_0000815]",
+                        "[plasma cell, CL, http://purl.obolibrary.org/obo/CL_0000786]",
+                        "[endothelial cell, CL, http://purl.obolibrary.org/obo/CL_0000115]"
+                    ]
+                },
+                {
+                    "columnStructure": "SINGLE_COLUMN",
+                    "columnCategory": "Protocol",
+                    "columnHeader": "Protocol REF",
+                    "columnPrefix": "",
+                    "defaultValue": "Sample collection",
+                    "defaultColumnIndex": 19,
+                    "minLength": 1,
+                    "maxLength": null,
+                    "required": true,
+                    "description": "Predetermined value: 'Sample Collection'.",
+                    "examples": [
+                        "Sample Collection"
+                    ]
+                },
+                {
+                    "columnStructure": "SINGLE_COLUMN",
+                    "columnCategory": "Basic",
+                    "columnHeader": "Sample Name",
+                    "columnPrefix": "",
+                    "defaultValue": null,
+                    "defaultColumnIndex": 20,
+                    "minLength": 3,
+                    "maxLength": 128,
+                    "required": true,
+                    "description": "Unique identifier from a particular source. Usually associated with an output spectral data filename.",
+                    "examples": [
+                        "Leucin standard",
+                        "Standard mix",
+                        "Blank",
+                        "QC1",
+                        "Sample1",
+                        "QC2",
+                        "Sample2"
+                    ]
+                }
+            ]
+        }
+    ]
+}

@@ -24,11 +24,14 @@ jobs:
         version: latest
     - name: Run OPA Tests
       run: opa test validation
+
     - name: Create bundle
       run: |
         cd validation
         opa build  --ignore tests --ignore input.json -o bundle.tar.gz .
+        opa build -t wasm  --ignore tests --ignore input.json -o metabolights.wasm .
         cd ..
+
     - name: Archive bundle
       uses: actions/upload-artifact@v4
       with:

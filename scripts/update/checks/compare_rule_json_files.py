@@ -1,8 +1,6 @@
 import json
+from collections import OrderedDict
 from pathlib import Path
-from typing import OrderedDict
-
-from scripts import models as models
 
 
 def compare_rules(
