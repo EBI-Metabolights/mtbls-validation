@@ -1,6 +1,6 @@
 [project]
 name = "mtbls-validation"
-version = "2.3.0"
+version = "2.3.1"
 description = "MetaboLights Validation Framework"
 authors = [{ name = "MetaboLights Team", email = "metabolights-help@ebi.ac.uk" }]
 requires-python = ">=3.12"
