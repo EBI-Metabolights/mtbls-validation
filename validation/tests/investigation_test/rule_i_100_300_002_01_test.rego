@@ -4,8 +4,8 @@ import data.metabolights.validation.v2.rules.phase1.violations as rules
 import rego.v1
 
 # METADATA
-# title: Study Identifier not valid.
-# description: Study Identifier should be valid format (e.g., MTBLS(positive_number) or REQ(datetime)).
+# title: Study Identifier does not match the database study id
+# description: Study Identifier must match the study id defined in MetaboLights database
 # custom:
 #  rule_id: rule_i_100_300_002_01
 #  type: ERROR

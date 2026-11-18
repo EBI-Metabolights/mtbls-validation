@@ -77,19 +77,19 @@
                     "termSourceRef": "NCIT"
                 },
                 {
-                    "term": "exometabolome",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000131",
-                    "termSourceRef": "MTBLS"
+                    "term": "Exometabolome",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/NCIT_C222306",
+                    "termSourceRef": "NCIT"
                 },
                 {
-                    "term": "endometabolome",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000125",
-                    "termSourceRef": "MTBLS"
+                    "term": "Endometabolome",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/NCIT_C222304",
+                    "termSourceRef": "NCIT"
                 },
                 {
-                    "term": "blank",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002304",
-                    "termSourceRef": "MTBLS"
+                    "term": "blank sample",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/NCBITaxon_2582415",
+                    "termSourceRef": "NCBITaxon"
                 }
             ],
             "unexpectedTerms": []
@@ -167,19 +167,19 @@
                     "termSourceRef": "NCIT"
                 },
                 {
-                    "term": "exometabolome",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000131",
-                    "termSourceRef": "MTBLS"
+                    "term": "Exometabolome",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/NCIT_C222306",
+                    "termSourceRef": "NCIT"
                 },
                 {
-                    "term": "endometabolome",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_000125",
-                    "termSourceRef": "MTBLS"
+                    "term": "Endometabolome",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/NCIT_C222304",
+                    "termSourceRef": "NCIT"
                 },
                 {
-                    "term": "blank",
-                    "termAccessionNumber": "http://www.ebi.ac.uk/metabolights/ontology/MTBLS_002304",
-                    "termSourceRef": "MTBLS"
+                    "term": "blank sample",
+                    "termAccessionNumber": "http://purl.obolibrary.org/obo/NCBITaxon_2582415",
+                    "termSourceRef": "NCBITaxon"
                 }
             ],
             "unexpectedTerms": []

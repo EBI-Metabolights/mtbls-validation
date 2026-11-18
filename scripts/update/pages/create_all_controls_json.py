@@ -3,7 +3,7 @@ from pathlib import Path
 
 from pydantic.alias_generators import to_snake
 
-from scripts import models as models
+from scripts import models
 
 
 def create_all_controls_json():

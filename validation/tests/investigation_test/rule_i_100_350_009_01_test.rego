@@ -8,7 +8,7 @@ import data.metabolights.validation.v2.rules.phase1.violations as rules
 import rego.v1
 
 # METADATA
-# title: Study Protocol Parameters Name not used in assay files.
+# title: Study Protocol Parameters Name not used in assay files
 # description: Study Protocol Parameters Name values in i_Investigation.txt must be referenced by at least one assay Parameter Value column.
 # custom:
 #  rule_id: rule_i_100_350_009_01

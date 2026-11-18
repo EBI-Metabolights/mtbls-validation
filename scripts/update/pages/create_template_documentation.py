@@ -2,7 +2,7 @@ from pathlib import Path
 
 from pydantic import BaseModel
 
-from scripts import models as models
+from scripts import models
 from scripts.update.pages.utils import (
     find_rule,
     get_controls,
@@ -316,7 +316,7 @@ def create_file_structure_documentation(
                         template_file_name = f"assay-file/{name}/a_template-{name}-metabolite_profiling-v{version}.txt"
                     templates_folder = Path("docs/template-files")
                     template_path = templates_folder / Path(template_file_name)
-                    zip_template_path = Path(f"{str(template_path)}.zip")
+                    zip_template_path = Path(f"{template_path!s}.zip")
                     # f.write("---\n")
                     # f.write("hide:\n")
                     # f.write("- navigation\n")
@@ -374,7 +374,7 @@ def create_file_structure_documentation(
                                 control_page_name = f"{name}-v{version}.md"
 
                                 control_page = (
-                                    f"[Controls](../../../{str(controls_root_path)}"
+                                    f"[Controls](../../../{controls_root_path!s}"
                                     f"/{control_list_folder}"
                                     f"/{name}"
                                     f"/{control_page_name}"
@@ -390,7 +390,7 @@ def create_file_structure_documentation(
                             constraints.append(f"MaxLength: {item.max_length}")
                         if item.default_value is not None:
                             constraints.append(
-                                escape(f"Default: {str(item.default_value)}")
+                                escape(f"Default: {item.default_value!s}")
                             )
                         if control_page:
                             if constraints:
@@ -474,7 +474,7 @@ def create_control_and_template_pages(template_settings: models.TemplateSettings
     )
 
     investigation_fields = [
-        x for x in investigation_controls.keys() if x not in investigation_common_fields
+        x for x in investigation_controls if x not in investigation_common_fields
     ]
     for version in template_settings.active_template_versions:
         template = template_settings.versions.get(version)

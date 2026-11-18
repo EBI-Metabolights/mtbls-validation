@@ -244,8 +244,8 @@ rule_i_100_300_001_02 contains result if {
 }
 
 # METADATA
-# title: Study Identifier not valid.
-# description: Study Identifier should be valid format (e.g., MTBLS(positive_number) or REQ(datetime)).
+# title: Study Identifier does not match the database study id
+# description: Study Identifier must match the study id defined in MetaboLights database
 # custom:
 #  rule_id: rule_i_100_300_002_01
 #  type: ERROR
@@ -257,6 +257,24 @@ rule_i_100_300_002_01 contains result if {
 	input.investigation.studies[i].identifier
 	not regex.match(pattern, input.investigation.studies[i].identifier)
 	msg := sprintf("Study identifier '%v' does not match pattern", [input.investigation.studies[i].identifier])
+	source := input.investigationFilePath
+	result := f.format(rego.metadata.rule(), msg, source)
+}
+
+# METADATA
+# title: Study Identifier do not match the database identifier.
+# description: Study Identifier must be same as the registered study id.
+# custom:
+#  rule_id: rule_i_100_300_002_02
+#  type: ERROR
+#  priority: CRITICAL
+#  section: investigation.studies
+rule_i_100_300_002_02 contains result if {
+	some study in input.investigation.studies
+	count(input.studyDbMetadata.studyId) > 0
+	study.identifier != input.studyDbMetadata.studyId
+
+	msg := sprintf("Study identifier '%v' does not match the database study id. Expected: %v", [study.identifier, input.studyDbMetadata.studyId])
 	source := input.investigationFilePath
 	result := f.format(rego.metadata.rule(), msg, source)
 }
@@ -316,15 +334,15 @@ rule_i_100_300_003_03 contains result if {
 }
 
 # METADATA
-# title: Study Description length less than 60 characters.
-# description: Study Description should be defined with length equal or greater than 60 characters. Please use abstract of first publication.
+# title: Study Description length less than 150 characters.
+# description: Study Description should be defined with length equal or greater than 150 characters. Please use abstract of first publication.
 # custom:
 #  rule_id: rule_i_100_300_004_01
 #  type: ERROR
 #  priority: HIGH
 #  section: investigation.studies
 rule_i_100_300_004_01 contains result if {
-	min_count = 60
+	min_count = 150
 	count(input.investigation.studies[i].description) < min_count
 	msg := sprintf("Study description should be at least %v characters for %v. Current length: '%v'", [min_count, input.investigation.studies[i].identifier, count(input.investigation.studies[i].description)])
 	source := input.investigationFilePath
@@ -1737,7 +1755,7 @@ rule_i_100_350_008_01 contains result if {
 }
 
 # METADATA
-# title: Study Protocol Parameters Name not used in assay files.
+# title: Study Protocol Parameters Name not used in assay files
 # description: Study Protocol Parameters Name values in i_Investigation.txt must be referenced by at least one assay Parameter Value column.
 # custom:
 #  rule_id: rule_i_100_350_009_01

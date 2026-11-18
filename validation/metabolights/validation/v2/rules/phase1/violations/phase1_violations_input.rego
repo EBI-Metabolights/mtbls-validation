@@ -661,3 +661,102 @@ rule___100_400_001_08 contains result if {
 	source := file
 	result := f.format(rego.metadata.rule(), msg, source)
 }
+
+# METADATA
+# title: Submitter affiliation length is too short.
+# description: Submitter affiliation length must be equal or greater than 9. Use full name of the affiliation such as European Bioinformatics Institute (Instead of EBI). Open user profile to update submitter affiliation.
+# custom:
+#  rule_id: rule___100_500_001_01
+#  type: ERROR
+#  priority: CRITICAL
+#  section: metabolites.general
+rule___100_500_001_01 contains result if {
+	some submitter in input.studyDbMetadata.submitters
+	affiliation := submitter.affiliation
+	count(affiliation) < 9
+	email := submitter.userName
+	msg := sprintf("Submitter ('%v') affiliation is too short: %v. Update submitter's profile.", [email, affiliation])
+	source := "Database"
+	result := f.format(rego.metadata.rule(), msg, source)
+}
+
+# METADATA
+# title: Submitter's first name or last name is too short
+# description: Submitter's first name and last name must be equal or greater than 2 characters. Submitter must login and update his/her profile.
+# custom:
+#  rule_id: rule___100_500_002_01
+#  type: ERROR
+#  priority: CRITICAL
+#  section: metabolites.general
+rule___100_500_002_01 contains result if {
+	some submitter in input.studyDbMetadata.submitters
+	user_fullname := sprintf("%v %s", [submitter.firstName, submitter.lastName])
+	count(user_fullname) < 5
+	email := submitter.userName
+	msg := sprintf("Submitter ('%v') name is too short: %v. Update submitter's profile.", [email, user_fullname])
+	source := "Database"
+	result := f.format(rego.metadata.rule(), msg, source)
+}
+
+# METADATA
+# title: Metabolite assignment file name not correct pattern.
+# description: Metabolite assignment file name must start with 'm_' and followed by study id, and have extension '.tsv'.
+# custom:
+#  rule_id: rule___100_600_001_01
+#  type: ERROR
+#  priority: CRITICAL
+#  section: metabolites.general
+rule___100_600_001_01 contains result if {
+	count(input.studyDbMetadata.studyId) > 0
+	pattern := sprintf(`^m_%v_.+\.tsv$`, [input.studyDbMetadata.studyId])
+	pattern_str := sprintf("m_%v_*.tsv", [input.studyDbMetadata.studyId])
+
+	count(input.metaboliteAssignments) > 0
+	some file_name, _ in input.metaboliteAssignments
+	not regex.match(pattern, file_name)
+	msg := sprintf("Invalid metabolite assignment file name '%v'. Expected: %v", [file_name, pattern_str])
+	source := file_name
+	result := f.format(rego.metadata.rule(), msg, source)
+}
+
+# METADATA
+# title: Assay file name not correct pattern.
+# description: Assay file name must start with 'a_' and followed by study id, and have extension '.txt'.
+# custom:
+#  rule_id: rule___100_600_002_01
+#  type: ERROR
+#  priority: CRITICAL
+#  section: metabolites.general
+rule___100_600_002_01 contains result if {
+	count(input.studyDbMetadata.studyId) > 0
+	pattern := sprintf(`^a_%v_.+\.txt$`, [input.studyDbMetadata.studyId])
+	pattern_str := sprintf("a_%v_*.txt", [input.studyDbMetadata.studyId])
+
+	count(input.assays) > 0
+	some file_name, _ in input.assays
+	not regex.match(pattern, file_name)
+	msg := sprintf("Invalid metabolite assignment file name '%v'. Expected: %v", [file_name, pattern_str])
+	source := file_name
+	result := f.format(rego.metadata.rule(), msg, source)
+}
+
+# METADATA
+# title: Sample file name not correct pattern.
+# description: Sample file name must start with 's_' and followed by study id, and have extension '.txt'.
+# custom:
+#  rule_id: rule___100_600_003_01
+#  type: ERROR
+#  priority: CRITICAL
+#  section: metabolites.general
+rule___100_600_003_01 contains result if {
+	count(input.studyDbMetadata.studyId) > 0
+	pattern := sprintf(`^s_%v\.txt$`, [input.studyDbMetadata.studyId])
+	pattern_str := sprintf("s_%v.txt", [input.studyDbMetadata.studyId])
+
+	count(input.samples) > 0
+	some file_name, _ in input.samples
+	not regex.match(pattern, file_name)
+	msg := sprintf("Invalid metabolite assignment file name '%v'. Expected: %v", [file_name, pattern_str])
+	source := file_name
+	result := f.format(rego.metadata.rule(), msg, source)
+}
