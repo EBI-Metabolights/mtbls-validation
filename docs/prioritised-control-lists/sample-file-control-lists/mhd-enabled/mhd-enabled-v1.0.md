@@ -147,7 +147,7 @@
 | 7 | Whole Organism | NCIT | http://purl\.obolibrary\.org/obo/NCIT\_C13413 |
 | 8 | Exometabolome | NCIT | http://purl\.obolibrary\.org/obo/NCIT\_C222306 |
 | 9 | Endometabolome | NCIT | http://purl\.obolibrary\.org/obo/NCIT\_C222304 |
-| 10 | blank sample | NCBITaxon | http://purl\.obolibrary\.org/obo/NCBITaxon\_2582415 |
+| 10 | blank sample | NCBITAXON | http://purl\.obolibrary\.org/obo/NCBITaxon\_2582415 |
 
 ## Characteristics\[Sample type\]
 

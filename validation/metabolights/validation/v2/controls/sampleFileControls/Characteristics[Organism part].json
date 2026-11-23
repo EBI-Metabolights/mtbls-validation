@@ -89,7 +89,7 @@
                 {
                     "term": "blank sample",
                     "termAccessionNumber": "http://purl.obolibrary.org/obo/NCBITaxon_2582415",
-                    "termSourceRef": "NCBITaxon"
+                    "termSourceRef": "NCBITAXON"
                 }
             ],
             "unexpectedTerms": []
@@ -179,7 +179,7 @@
                 {
                     "term": "blank sample",
                     "termAccessionNumber": "http://purl.obolibrary.org/obo/NCBITaxon_2582415",
-                    "termSourceRef": "NCBITaxon"
+                    "termSourceRef": "NCBITAXON"
                 }
             ],
             "unexpectedTerms": []

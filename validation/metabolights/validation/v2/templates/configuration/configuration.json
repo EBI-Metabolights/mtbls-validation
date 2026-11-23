@@ -1183,11 +1183,11 @@
             },
             "activeStudyCategories": {
                 "ms-mhd-enabled": {
-                    "visible": false,
+                    "visible": true,
                     "order": 1
                 },
                 "ms-mhd-legacy": {
-                    "visible": true,
+                    "visible": false,
                     "order": 2
                 },
                 "nmr": {
@@ -1212,8 +1212,8 @@
                 "CC BY 4.0"
             ],
             "supportedStudyCategoryClones": {
-                "ms-mhd-enabled": "ms-mhd-legacy",
-                "ms-mhd-legacy": "ms-mhd-legacy",
+                "ms-mhd-enabled": "ms-mhd-enabled",
+                "ms-mhd-legacy": "ms-mhd-enabled",
                 "nmr": "nmr",
                 "ms-imaging": "ms-imaging",
                 "ms-other": "ms-other"
@@ -1315,7 +1315,7 @@
                     "min": 0
                 }
             },
-            "defaultSampleFileTemplate": "minimum",
+            "defaultSampleFileTemplate": "mhd-enabled",
             "defaultInvestigationFileTemplate": "minimum",
             "defaultStudyCategory": "other",
             "defaultDatasetLicense": "CC0 1.0 Universal",

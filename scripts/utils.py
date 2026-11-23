@@ -203,7 +203,7 @@ def search_ols_term(
             # return docs[0].get("iri", None)
             return OntologyTerm(
                 term=docs[0].get("label", ""),
-                term_source_ref=docs[0].get("ontology_prefix", "") or "",
+                term_source_ref=docs[0].get("ontology_prefix", "").upper() or "",
                 term_accession_number=docs[0].get("iri", "") or "",
             )
         return None

@@ -175,7 +175,7 @@
 
 | # |Term  | Term Source  | Term Accession |
 |---|------|--------------|----------------|
-| 1 | UK Biobank | ror | https://ror\.org/02frzq211 |
+| 1 | UK Biobank | ROR | https://ror\.org/02frzq211 |
 | 2 | HoloFood |  |  |
 | 3 | PrecisionTox |  |  |
 | 4 | TREC |  |  |
@@ -431,7 +431,7 @@
 | 6 | Swedish Metabolomics Centre |  |  |
 | 7 | The Metabolomics Innovation Centre |  |  |
 | 8 | West Coast Metabolomics Center |  |  |
-| 9 | Metabolon |  |  |
+| 9 | Metabolon \(United States\) | ROR | https://ror\.org/033qhvk72 |
 | 10 | MetWare |  |  |
 
 ## Study Publication Status

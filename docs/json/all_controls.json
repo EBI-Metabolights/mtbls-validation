@@ -9835,7 +9835,7 @@
                     {
                         "term": "blank sample",
                         "termAccessionNumber": "http://purl.obolibrary.org/obo/NCBITaxon_2582415",
-                        "termSourceRef": "NCBITaxon"
+                        "termSourceRef": "NCBITAXON"
                     }
                 ],
                 "unexpectedTerms": []
@@ -9925,7 +9925,7 @@
                     {
                         "term": "blank sample",
                         "termAccessionNumber": "http://purl.obolibrary.org/obo/NCBITaxon_2582415",
-                        "termSourceRef": "NCBITaxon"
+                        "termSourceRef": "NCBITAXON"
                     }
                 ],
                 "unexpectedTerms": []
@@ -11266,7 +11266,7 @@
                     {
                         "term": "UK Biobank",
                         "termAccessionNumber": "https://ror.org/02frzq211",
-                        "termSourceRef": "ror"
+                        "termSourceRef": "ROR"
                     },
                     {
                         "term": "HoloFood",
@@ -12491,9 +12491,9 @@
                         "termSourceRef": ""
                     },
                     {
-                        "term": "Metabolon",
-                        "termAccessionNumber": "",
-                        "termSourceRef": ""
+                        "term": "Metabolon (United States)",
+                        "termAccessionNumber": "https://ror.org/033qhvk72",
+                        "termSourceRef": "ROR"
                     },
                     {
                         "term": "MetWare",

@@ -69,7 +69,7 @@ def update_control_list_json_files():
                         if not result_ontology:
                             print(f"{file.name} Ontology not found on OLS: {ontology}")
                         else:
-                            if str(result_ontology) != str(ontology):
+                            if str(result_ontology).lower() != str(ontology).lower():
                                 print(
                                     f"{file.name} Ontology accession is different. Current: {ontology}, on OLS: {result_ontology}"
                                 )

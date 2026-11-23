@@ -584,7 +584,7 @@
         "ExO": {
             "sourceName": "ExO",
             "sourceFile": "http://purl.obolibrary.org/obo/exo.owl",
-            "sourceVersion": "2025-08-29",
+            "sourceVersion": "2026-11-20",
             "sourceDescription": "Exposure ontology (ExO)",
             "sourceDetails": "ExO is intended to bridge the gap between exposure science and diverse environmental health disciplines including toxicology, epidemiology, disease surveillance, and epigenetics."
         },
@@ -647,7 +647,7 @@
         "FLOPO": {
             "sourceName": "FLOPO",
             "sourceFile": "http://purl.obolibrary.org/obo/flopo.owl",
-            "sourceVersion": "2026-11-15",
+            "sourceVersion": "2026-11-21",
             "sourceDescription": "Flora Phenotype Ontology",
             "sourceDetails": "Traits and phenotypes of flowering plants occurring in digitized Floras"
         },
@@ -1088,7 +1088,7 @@
         "MP": {
             "sourceName": "MP",
             "sourceFile": "http://purl.obolibrary.org/obo/mp/mp-international.owl",
-            "sourceVersion": "2026-10-29",
+            "sourceVersion": "2026-11-18",
             "sourceDescription": "The Mammalian Phenotype Ontology",
             "sourceDetails": "The Mammalian Phenotype Ontology is being developed by Cynthia L. Smith, Susan M. Bello, Anna V. Anagnostopoulos, Carroll W. Goldsmith and Janan T. Eppig, as part of the Mouse Genome Database (MGD) Project, Mouse Genome Informatics (MGI), The Jackson Laboratory, Bar Harbor, ME. This file contains pre-coordinated phenotype terms, definitions and synonyms that can be used to describe mammalian phenotypes. The ontology is represented as a directed acyclic graph (DAG). It organizes phenotype terms into major biological system headers such as nervous system and respiratory system.  This ontology is currently under development. Weekly updates are available at the Mouse Genome Informatics (MGI) ftp site (ftp://ftp.informatics.jax.org/pub/reports/index.html#pheno) as well as the OBO Foundry site (http://obofoundry.org/). Japanese labels of MP were created by the MP Japanese Translation Project (https://github.com/dbcls/MP_Japanese). Questions, comments and suggestions are welcome, and should be directed to pheno@jax.org, Susan.Bello@jax.org or to GitHub tracker (https://github.com/mgijax/mammalian-phenotype-ontology/issues) MGD is funded by NIH/NHGRI grant HG000330."
         },
@@ -1109,7 +1109,7 @@
         "MRO": {
             "sourceName": "MRO",
             "sourceFile": "http://purl.obolibrary.org/obo/mro.owl",
-            "sourceVersion": "2026-10-20",
+            "sourceVersion": "2026-11-18",
             "sourceDescription": "MHC Restriction Ontology",
             "sourceDetails": "The MHC Restriction Ontology is an application ontology capturing how Major Histocompatibility Complex (MHC) restriction is defined in experiments, spanning exact protein complexes, individual protein chains, serotypes, haplotypes and mutant molecules, as well as evidence for MHC restrictions."
         },
@@ -1221,7 +1221,7 @@
         "OBI": {
             "sourceName": "OBI",
             "sourceFile": "http://purl.obolibrary.org/obo/obi.owl",
-            "sourceVersion": "2026-07-27",
+            "sourceVersion": "2026-11-03",
             "sourceDescription": "Ontology for Biomedical Investigations",
             "sourceDetails": "An ontology for representing biomedical investigations, including study designs, the collection and preparation of the targets of investigation, assays, instrumentation and reagents used, as well as the data generated and the types of analysis performed on the data to reach conclusions, and their documentation."
         },
@@ -1263,7 +1263,7 @@
         "OHD": {
             "sourceName": "OHD",
             "sourceFile": "http://purl.obolibrary.org/obo/ohd.owl",
-            "sourceVersion": "2026-11-04",
+            "sourceVersion": "2026-11-18",
             "sourceDescription": "Oral Health and Disease Ontology",
             "sourceDetails": "The Oral Health and Disease Ontology is used for representing the diagnosis and treatment of dental maladies."
         },
