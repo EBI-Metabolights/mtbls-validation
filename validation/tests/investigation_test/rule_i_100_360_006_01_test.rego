@@ -52,7 +52,7 @@ test_rule_i_100_360_006_01_no_violation_01 if {
 								"phone": "",
 								"fax": "",
 								"address": "",
-								"affiliation": "Cambridge University",
+								"affiliation": "EU",
 								"roles": [
 									{
 										"term": "",
@@ -106,7 +106,7 @@ test_rule_i_100_360_006_01_violation_01 if {
 								"phone": "",
 								"fax": "",
 								"address": "",
-								"affiliation": "Cambridge",
+								"affiliation": "C",
 								"roles": [
 									{
 										"term": "",
@@ -194,7 +194,7 @@ test_rule_i_100_360_006_01_violation_02 if {
 								"phone": "",
 								"fax": "",
 								"address": "",
-								"affiliation": "EU",
+								"affiliation": "E",
 								"roles": [
 									{
 										"term": "",

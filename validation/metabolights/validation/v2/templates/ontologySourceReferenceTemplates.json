@@ -647,7 +647,7 @@
         "FLOPO": {
             "sourceName": "FLOPO",
             "sourceFile": "http://purl.obolibrary.org/obo/flopo.owl",
-            "sourceVersion": "2026-11-21",
+            "sourceVersion": "2026-11-23",
             "sourceDescription": "Flora Phenotype Ontology",
             "sourceDetails": "Traits and phenotypes of flowering plants occurring in digitized Floras"
         },
@@ -766,7 +766,7 @@
         "HANCESTRO": {
             "sourceName": "HANCESTRO",
             "sourceFile": "http://purl.obolibrary.org/obo/hancestro.owl",
-            "sourceVersion": "2025-10-14",
+            "sourceVersion": "2026-11-23",
             "sourceDescription": "Human Ancestry Ontology",
             "sourceDetails": "Human ancestry ontology for the NHGRI GWAS Catalog"
         },
