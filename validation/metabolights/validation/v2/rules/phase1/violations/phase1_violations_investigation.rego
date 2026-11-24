@@ -1989,7 +1989,7 @@ rule_i_100_360_004_02 contains result if {
 #  priority: HIGH
 #  section: investigation.studyContacts
 rule_i_100_360_006_01 contains result if {
-	min_count = 10
+	min_count = 2
 	some idx, person in input.investigation.studies[0].studyContacts.people
 	count(person.affiliation) > 0
 	count(person.affiliation) < min_count
